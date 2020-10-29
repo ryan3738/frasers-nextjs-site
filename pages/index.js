@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Date from '../components/date';
 import MenuSection from '../components/mention-section';
 import Image from 'next/image';
+import Navigation from '../components/navigation';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -19,11 +20,12 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
+      <Navigation></Navigation>
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section>
-        {/* <img src='/images/wild-boar-ragout.jpg' alt='wild boar' /> */}
+      <section id='about'>
+        <h2>This is the about section</h2>
         <Image
           src='/images/wild-boar-ragout.jpg'
           alt='wild boar'
@@ -31,6 +33,10 @@ export default function Home({ allPostsData }) {
           // height={500}
           unsized={true}
         />
+      </section>
+      <section id="menu">
+        {/* <img src='/images/wild-boar-ragout.jpg' alt='wild boar' /> */}
+        <h2>This is the menu section</h2>
         <MenuSection category='Starters' />
         <MenuSection category='Entrees' />
         <Image
@@ -40,6 +46,9 @@ export default function Home({ allPostsData }) {
           // height={500}
           unsized={true}
         />
+      </section>
+      <section id='contact'>
+        <h2>This is the contact section</h2>
       </section>
       {/* <section className={utilStyles.headingMd}>
         <p>
