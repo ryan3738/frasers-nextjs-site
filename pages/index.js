@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import MenuSection from '../components/mention-section';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -20,6 +21,13 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <section>
+<MenuSection category="Starters" />
+<MenuSection category="Entrees" />
+        {/* <h1>{content.title}</h1> */}
+        {/* <h2>{content.index.title}</h2> */}
+  {/* <div dangerouslySetInnerHTML={{__html: content.index.content}}></div> */}
+      </section>
       <section className={utilStyles.headingMd}>
         <p>
           Hello, I'm Ryan. I'm a web developer. You can contact me on{' '}
