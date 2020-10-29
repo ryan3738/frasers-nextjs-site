@@ -1,4 +1,4 @@
-export const menu = [
+[
   {
     "Token": "L5HH5GLJNWSVGPYP64ZCFJOC",
     "Item Name": "Tomato & Burrata",
@@ -26,7 +26,7 @@ export const menu = [
     "Price": 12,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "L5HH5GLJNWSVGPYP64ZCFJOC",
@@ -37,7 +37,7 @@ export const menu = [
     "Price": 26,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "D2CLK5QNRVVMOQNZTNHTS354",
@@ -48,7 +48,7 @@ export const menu = [
     "Price": 30,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "XGDSRMQQTZEFVZN26C3LYYSX",
@@ -59,7 +59,7 @@ export const menu = [
     "Price": 25,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "26DUZH5KEOZQ5W5J4MRSOPY7",
@@ -82,7 +82,7 @@ export const menu = [
     "Price": 10,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "QONDZFP7ZULJLNZNEAPYAB2R",
@@ -93,7 +93,7 @@ export const menu = [
     "Price": 7,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "KCDCUFIGEKEN2DS5BKFF33D6",
@@ -105,7 +105,7 @@ export const menu = [
     "Tax - Food Tax (8.9%)": "Y",
     "Description": "",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "GBN4WHNDF5UM3QK34QJZRJLQ",
@@ -151,7 +151,7 @@ export const menu = [
     "Price": 15,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "UMUYEGKMBLZLU4ZFRWB7TNLK",
@@ -268,7 +268,7 @@ export const menu = [
     "Price": 26,
     "Tax - Food Tax (8.9%)": "Y",
     "Modifier": "",
-    "Available": false
+    "Available": true
   },
   {
     "Token": "5U6JNXDXCZNOIL7S52ACEZSY",

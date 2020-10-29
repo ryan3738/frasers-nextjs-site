@@ -1,11 +1,11 @@
-import { menu } from '../public/data/menu';
+import menu from '../public/data/menu.json';
 
 const getMenuItem = (menu, category) => {
   return (
     <>
       <div>
         {menu
-          .filter((e) => e.Category === category)
+          .filter((e) => e.Category === category && e.Available === true)
           .map((data) => {
             return (
               <div key={data['Item Name']}>

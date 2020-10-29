@@ -24,11 +24,8 @@ export default function Home({ allPostsData }) {
       <section>
 <MenuSection category="Starters" />
 <MenuSection category="Entrees" />
-        {/* <h1>{content.title}</h1> */}
-        {/* <h2>{content.index.title}</h2> */}
-  {/* <div dangerouslySetInnerHTML={{__html: content.index.content}}></div> */}
       </section>
-      <section className={utilStyles.headingMd}>
+      {/* <section className={utilStyles.headingMd}>
         <p>
           Hello, I'm Ryan. I'm a web developer. You can contact me on{' '}
           <a href='https://twitter.com/ryan3738'>Twitter</a>.
@@ -53,7 +50,7 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
     </Layout>
   );
 }
