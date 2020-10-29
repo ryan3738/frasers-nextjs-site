@@ -5,6 +5,7 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 import MenuSection from '../components/mention-section';
+import Image from 'next/image';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -22,8 +23,23 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section>
-<MenuSection category="Starters" />
-<MenuSection category="Entrees" />
+        {/* <img src='/images/wild-boar-ragout.jpg' alt='wild boar' /> */}
+        <Image
+          src='/images/wild-boar-ragout.jpg'
+          alt='wild boar'
+          // width={500}
+          // height={500}
+          unsized={true}
+        />
+        <MenuSection category='Starters' />
+        <MenuSection category='Entrees' />
+        <Image
+          src='/images/wild-boar-ragout.jpg'
+          alt='wild boar'
+          // width={500}
+          // height={500}
+          unsized={true}
+        />
       </section>
       {/* <section className={utilStyles.headingMd}>
         <p>
