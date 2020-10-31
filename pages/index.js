@@ -7,12 +7,17 @@ import Date from '../components/date';
 import MenuSection from '../components/mention-section';
 import Image from 'next/image';
 import Navigation from '../components/navigation';
+import Hero from '../components/hero';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+  // const menuData = await menu.json();
+  // const menu = await import('../public/data/menu.json');
+  // const menu = await import('../public/data/menu.json');
   return {
     props: {
       allPostsData,
+      // menu,
     },
   };
 }
@@ -20,12 +25,14 @@ export async function getStaticProps() {
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
-      <Navigation></Navigation>
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Navigation />
+      <Hero />
       <section id='about'>
         <h2>This is the about section</h2>
+        <Double></Double>
         <Image
           src='/images/wild-boar-ragout.jpg'
           alt='wild boar'
@@ -34,7 +41,7 @@ export default function Home({ allPostsData }) {
           unsized={true}
         />
       </section>
-      <section id="menu">
+      <section id='menu'>
         {/* <img src='/images/wild-boar-ragout.jpg' alt='wild boar' /> */}
         <h2>This is the menu section</h2>
         <MenuSection category='Starters' />
