@@ -8,6 +8,7 @@ import MenuSection from '../components/mention-section';
 import Image from 'next/image';
 import Navigation from '../components/navigation';
 import Hero from '../components/hero';
+import Double from '../components/double';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
