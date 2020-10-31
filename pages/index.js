@@ -34,26 +34,12 @@ export default function Home({ allPostsData }) {
       <section id='about'>
         <h2>This is the about section</h2>
         <Double></Double>
-        <Image
-          src='/images/wild-boar-ragout.jpg'
-          alt='wild boar'
-          // width={500}
-          // height={500}
-          unsized={true}
-        />
       </section>
       <section id='menu'>
         {/* <img src='/images/wild-boar-ragout.jpg' alt='wild boar' /> */}
         <h2>This is the menu section</h2>
         <MenuSection category='Starters' />
         <MenuSection category='Entrees' />
-        <Image
-          src='/images/wild-boar-ragout.jpg'
-          alt='wild boar'
-          // width={500}
-          // height={500}
-          unsized={true}
-        />
       </section>
       <section id='contact'>
         <h2>This is the contact section</h2>

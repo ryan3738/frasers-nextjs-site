@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero(props) {
   return (
     <>
@@ -5,6 +7,11 @@ export default function Hero(props) {
         <div className='welcome-box'>
           <div>
             <div className='spaced-text'>Est. | 2006</div>
+            <Image
+              src='/images/frasers-logo.gif'
+              alt='frasers logo'
+              unsized={true}
+            />
             <title>Frasers</title>
             <h3>Home of exquisite tastes and service</h3>
             <p>

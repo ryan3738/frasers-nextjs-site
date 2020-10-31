@@ -7,7 +7,9 @@ export default function Double() {
         <Image
           src='/images/pig-were-back.jpg'
           alt="Pig holding a sign that says We're Back"
-          unsized={true}
+          height='612'
+          width='612'
+        //   unsized={true}
         />
       </div>
       <div id='event-text' className='about-item about-text'>
@@ -31,7 +33,9 @@ export default function Double() {
         <Image
           src='/images/frasers-enter-dining-room.jpg'
           alt='Frasers gourmet hideaway dining room'
-          unsized={true}
+          height='612'
+          width='612'
+          //   unsized={true}
         />
       </div>
 
@@ -49,7 +53,9 @@ export default function Double() {
         <Image
           src='/images/scott_fraser_square.jpg'
           alt='Scott Fraser holding a large salmon'
-          unsized={true}
+          height='612'
+          width='612'
+          //   unsized={true}
         />
       </div>
 
