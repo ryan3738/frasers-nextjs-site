@@ -9,6 +9,8 @@ import Image from 'next/image';
 import Navigation from '../components/navigation';
 import Hero from '../components/hero';
 import Double from '../components/double';
+import GalleryGrid from '../components/gallery-grid';
+import Contact from '../components/contact';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -32,17 +34,20 @@ export default function Home({ allPostsData }) {
       <Navigation />
       <Hero />
       <section id='about'>
-        <h2>This is the about section</h2>
+        <h2>ABOUT</h2>
         <Double></Double>
       </section>
-      <section id='menu'>
+      <section id='menu' className='menu-container'>
         {/* <img src='/images/wild-boar-ragout.jpg' alt='wild boar' /> */}
-        <h2>This is the menu section</h2>
+        <h2>MENU</h2>
         <MenuSection category='Starters' />
         <MenuSection category='Entrees' />
       </section>
+      <section>
+        <GalleryGrid></GalleryGrid>
+      </section>
       <section id='contact'>
-        <h2>This is the contact section</h2>
+        <Contact></Contact>
       </section>
       {/* <section className={utilStyles.headingMd}>
         <p>
@@ -70,6 +75,15 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section> */}
+      <style jsx>
+        {`
+          .menu-container {
+            justify-self: center;
+            width: 100vw;
+            max-width: 1200px;
+          }
+        `}
+      </style>
     </Layout>
   );
 }
