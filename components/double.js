@@ -9,7 +9,7 @@ export default function Double() {
           alt="Pig holding a sign that says We're Back"
           height='612'
           width='612'
-        //   unsized={true}
+          //   unsized={true}
         />
       </div>
       <div id='event-text' className='about-item about-text'>
@@ -71,6 +71,62 @@ export default function Double() {
           palate.
         </p>
       </div>
+      <style jsx>{`
+        .about-text {
+          /* padding-top: 4rem; */
+        }
+        .about-item {
+          margin: 0 10% 0;
+          text-align: left;
+        }
+
+        .about-item > img {
+          padding-top: 4rem;
+          object-fit: cover;
+          width: 100%;
+          max-height: 100%;
+        }
+        #happy-hour-pic {
+          grid-area: p1;
+        }
+
+        #happy-hour-text {
+          grid-area: t1;
+        }
+
+        #event-pic {
+          grid-area: p2;
+        }
+
+        #event-text {
+          grid-area: t2;
+        }
+
+        #about-pic {
+          grid-area: p3;
+        }
+
+        #about-text {
+          grid-area: t3;
+        }
+
+        #scott-pic {
+          grid-area: p4;
+        }
+
+        #scott-text {
+          grid-area: t4;
+        }
+
+        @media (min-width: 460px) {
+          .about-text {
+            padding-top: 4rem;
+          }
+          .about-item {
+            margin: 5vh 2vw;
+          }
+        }
+      `}</style>
     </>
   );
 }

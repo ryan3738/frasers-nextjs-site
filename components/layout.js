@@ -70,10 +70,10 @@ export default function Layout({ children, home }) {
         </div>
       )}
       <footer className={styles.footer}>
-        <span className={utilStyles.nowrap}>
+        <span className={utilStyles.noWrap}>
           © 2020 Frasers Gourmet Hideaway |&nbsp;
         </span>
-        <span className={utilStyles.nowrap}>
+        <span className={utilStyles.noWrap}>
           Built by:
           <a
             className={utilStyles.lightText}

@@ -51,6 +51,11 @@
   color: var(--color-white);
 }
 
-.nowrap {
+.noWrap {
   white-space: nowrap;
 }
+
+.spacedText {
+            letter-spacing: 0.5rem;
+            margin-bottom: 1rem;
+          }
