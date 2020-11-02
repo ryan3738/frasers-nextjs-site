@@ -18,13 +18,12 @@ export default function Navigation() {
       </div>
       <style jsx>
         {`
+        
           .nav-list {
             background: var(--color-darker);
-            // grid-area: h;
             position: sticky;
             top: 0;
             display: grid;
-            /* grid-gap: 5px; */
             grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
             grid-template-rows: 4em;
             justify-items: center;

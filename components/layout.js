@@ -33,33 +33,59 @@ export default function Layout({ children, home }) {
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
       <header className={styles.header}>
-        <Navigation />
         {home ? (
           <>
+            <Navigation />
             <Hero />
           </>
         ) : (
           <>
+            <div className='link'></div>
             <Link href='/'>
               <a>
                 <Image
+                  className='link'
                   src='/images/frasers-logo.gif'
                   alt='frasers logo'
                   unsized={true}
                 />
               </a>
             </Link>
+            <style jsx>
+              {`
+                .link {
+                  height: 5em;
+                }
+              `}
+            </style>
           </>
         )}
       </header>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
           <Link href='/'>
-            <a>← Back to home</a>
+            <a>← BACK TO HOME</a>
           </Link>
         </div>
       )}
+      <footer className={styles.footer}>
+        <span className={utilStyles.nowrap}>
+          © 2020 Frasers Gourmet Hideaway |&nbsp;
+        </span>
+        <span className={utilStyles.nowrap}>
+          Built by:
+          <a
+            className={utilStyles.lightText}
+            href='https://github.com/ryan3738'
+            target='_blank'
+            rel='noreferrer noopener'
+          >
+            {' '}
+            Ryan Fraser
+          </a>
+        </span>
+      </footer>
     </div>
   );
 }

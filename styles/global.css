@@ -1,10 +1,14 @@
 :root {
-  --color-black: #171717;
-  --color-darker: #1a1a1af6;
+  --color-black: black;
+  /* Have option for internet explorer without f6*/
+  /* --color-darker: #1a1a1af6; */
+  --color-darker: #1a1a1a;
   --color-dark: #38290b;
   --color-main: #daa53c;
   --color-light: #d4ba98;
   --color-white: #fffefd;
+  --color-facebook:#3b5998;
+  --color-instagram: #fb3958;
 }
 
 html {
@@ -55,6 +59,11 @@ progress {
 [hidden],
 template {
   display: none;
+}
+a {
+  text-decoration: none;
+  color: var(--color-main);
+  min-height: 48px;
 }
 a {
   background-color: transparent;

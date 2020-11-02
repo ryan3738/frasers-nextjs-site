@@ -48,5 +48,9 @@
 }
 
 .lightText {
-  color: #999;
+  color: var(--color-white);
+}
+
+.nowrap {
+  white-space: nowrap;
 }

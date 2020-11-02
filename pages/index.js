@@ -31,8 +31,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      {/* <Navigation /> */}
-      
+      {/* <Navigation /> */}      
       <section id='about'>
         <h2>ABOUT</h2>
         <Double></Double>
@@ -75,7 +74,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section> */}
-      <style jsx>
+      {/* <style jsx>
         {`
           .menu-container {
             justify-self: center;
@@ -84,7 +83,7 @@ export default function Home({ allPostsData }) {
             text-align: center;
           }
         `}
-      </style>
+      </style> */}
     </Layout>
   );
 }

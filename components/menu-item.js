@@ -1,4 +1,5 @@
 import menu from '../public/data/menu.json';
+import utilStyles from '../styles/utils.module.css';
 
 const getMenuItem = (menu, category) => {
   return (
@@ -9,9 +10,19 @@ const getMenuItem = (menu, category) => {
         .map((data) => {
           return (
             <div key={data['Item Name']} className='menu-item'>
-              <h3>{data['Item Name']}</h3>
+              <h4 className={utilStyles.lightText}>{data['Item Name']}</h4>
               <p dangerouslySetInnerHTML={{ __html: data.Description }}></p>
-              <h3>{data.Price}</h3>
+              <p className={utilStyles.lightText}>{data.Price}</p>
+              <style jsx>
+                {`
+                  .menu-item {
+                    text-align: left;
+                    border-radius: 7px;
+                    padding: 5%;
+                    background: var(--color-darker);
+                  }
+                `}
+              </style>
             </div>
           );
         })}
@@ -28,16 +39,8 @@ export default function MenuItem(props) {
           .menu-section {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-
             grid-gap: 20px;
             padding: 5%;
-          }
-
-          .menu-item {
-            text-align: left;
-            border-radius: 7px;
-            padding: 5%;
-            background: var(--color-darker);
           }
         `}
       </style>

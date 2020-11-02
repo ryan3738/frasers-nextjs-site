@@ -12,13 +12,8 @@ export default function FirstPost() {
       </Head>
       <h1>MENU</h1>
       <MenuSection category='Starters' />
-      {/* <MenuSection category='Entrees' /> */}
-      {/* <MenuSection category='Desserts' /> */}
-      <h2>
-        <Link href='/'>
-          <a>Back to home</a>
-        </Link>
-      </h2>
+      <MenuSection category='Entrees' />
+      <MenuSection category='Desserts' />
     </Layout>
   );
 }
