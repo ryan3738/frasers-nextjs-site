@@ -31,8 +31,8 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <Navigation />
-      <Hero />
+      {/* <Navigation /> */}
+      
       <section id='about'>
         <h2>ABOUT</h2>
         <Double></Double>
@@ -81,6 +81,7 @@ export default function Home({ allPostsData }) {
             justify-self: center;
             width: 100vw;
             max-width: 1200px;
+            text-align: center;
           }
         `}
       </style>

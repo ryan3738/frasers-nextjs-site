@@ -2,6 +2,9 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Hero from '../components/hero';
+import Image from 'next/image';
+import Navigation from '../components/navigation';
 
 const name = 'Frasers';
 export const siteTitle =
@@ -17,7 +20,7 @@ export default function Layout({ children, home }) {
           content='Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.'
         />
         <meta
-        name="keywords"
+          name='keywords'
           content='gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,'
         />
         <meta
@@ -29,35 +32,26 @@ export default function Layout({ children, home }) {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-      {/* <header className={styles.header}>
+      <header className={styles.header}>
+        <Navigation />
         {home ? (
           <>
-            <img
-              src='/images/profile.jpg'
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <Hero />
           </>
         ) : (
           <>
             <Link href='/'>
               <a>
-                <img
-                  src='/images/profile.jpg'
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
+                <Image
+                  src='/images/frasers-logo.gif'
+                  alt='frasers logo'
+                  unsized={true}
                 />
               </a>
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href='/'>
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
           </>
         )}
-      </header> */}
+      </header>
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
