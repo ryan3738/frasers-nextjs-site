@@ -6,7 +6,7 @@ export default function Navigation() {
     <>
       <div className='nav-bar'>
         <div className='nav-list'>
-          <BurgerCss />
+          {/* <BurgerCss /> */}
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>
           </Link>
@@ -39,7 +39,7 @@ export default function Navigation() {
         .nav-link {
           padding: 1em;
           margin: auto;
-          display: none;
+          /* display: none; */
         }
 
         .nav-list a:hover {
