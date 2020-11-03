@@ -9,6 +9,7 @@
   --color-white: #fffefd;
   --color-facebook:#3b5998;
   --color-instagram: #fb3958;
+  --screen-small: 460px;
 }
 
 html {

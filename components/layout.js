@@ -63,18 +63,17 @@ export default function Layout({ children, home }) {
         </div>
       )}
       <footer className={styles.footer}>
-        <span className={utilStyles.noWrap}>
-          © 2020 Frasers Gourmet Hideaway |&nbsp;
+        <span>
+          © 2020 Frasers Gourmet Hideaway |
         </span>
         <span className={utilStyles.noWrap}>
-          Built by:
+          &nbsp;Built by:&nbsp;
           <a
             className={utilStyles.lightText}
             href='https://github.com/ryan3738'
             target='_blank'
             rel='noreferrer noopener'
           >
-            {' '}
             Ryan Fraser
           </a>
         </span>

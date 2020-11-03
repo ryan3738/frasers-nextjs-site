@@ -61,8 +61,8 @@ export default function Double() {
       </div>
 
       <div id='scott-text' className='about-item about-text'>
-        <h3 className='light-text about-text'>CHEF SCOTT FRASER</h3>
-        <p className='about-text'>
+        <h3 className={utilStyles.lightText}>CHEF SCOTT FRASER</h3>
+        <p>
           is a Pierre Dubrulle Culinary School graduate and understands the
           importance of food. After graduating he spent years honing his skills
           working at the finest French restaurants in Vancouver, BC. For the
@@ -86,6 +86,11 @@ export default function Double() {
           width: 100%;
           max-height: 100%;
         }
+
+        .about-text {
+            margin: 1rem 10% 5rem;
+          }
+
         #happy-hour-pic {
           grid-area: p1;
         }
@@ -120,7 +125,7 @@ export default function Double() {
 
         @media (min-width: 460px) {
           .about-text {
-            padding-top: 4rem;
+            /* padding-top: 4rem; */
           }
           .about-item {
             margin: 5vh 2vw;
