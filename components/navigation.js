@@ -72,6 +72,7 @@ export default function Navigation() {
         .nav-link {
           padding: 1em;
           margin: auto;
+          display: none;
         }
 
         .nav-list a:hover {
@@ -115,6 +116,8 @@ export default function Navigation() {
           padding-bottom: 5px;
         }
         .hamburger-menu__wrapper {
+          padding: 1em;
+          margin: auto;
           position: relative;
           height: 100%;
           overflow: hidden;
@@ -165,8 +168,17 @@ export default function Navigation() {
           margin-top: 60px;
         }
         .hidden-text {
-          color: var(--color-darker);
-          opacity: 0;
+          visibility: hidden;
+          /* color: var(--color-darker); */
+          /* opacity: 0; */
+        }
+        @media (min-width: 460px) {
+          .hamburger-menu__wrapper {
+            display: none;
+          }
+          .nav-link {
+            display: block;
+          }
         }
       `}</style>
     </>
