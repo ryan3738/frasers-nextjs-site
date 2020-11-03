@@ -10,17 +10,17 @@ const getMenuItem = (menu, category) => {
         .map((data) => {
           return (
             <div key={data['Item Name']} className='menu-item'>
-              <h4 className={utilStyles.lightText}>{data['Item Name']}</h4>
+              <h3 className={utilStyles.lightText}>{data['Item Name']}</h3>
               <p dangerouslySetInnerHTML={{ __html: data.Description }}></p>
               <p className={utilStyles.lightText}>{data.Price}</p>
               <style jsx>{`
-                  .menu-item {
-                    text-align: left;
-                    border-radius: 7px;
-                    padding: 5%;
-                    background: var(--color-darker);
-                  }
-                `}</style>
+                .menu-item {
+                  text-align: left;
+                  border-radius: 7px;
+                  padding: 5%;
+                  background: var(--color-darker);
+                }
+              `}</style>
             </div>
           );
         })}

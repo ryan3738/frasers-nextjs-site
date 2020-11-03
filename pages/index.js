@@ -32,11 +32,11 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section id='about' className='about-container'>
-        <h2 className='about-header hidden-header'>ABOUT</h2>
+        <h1 className='about-header hidden-header'>ABOUT</h1>
         <Double />
       </section>
       <section id='menu' className='menu-container'>
-        <h2 className='hidden-header'>MENU</h2>
+        <h1 className='hidden-header'>MENU</h1>
         <MenuSection category='Starters' />
         <MenuSection category='Entrees' />
       </section>
@@ -44,6 +44,9 @@ export default function Home({ allPostsData }) {
         <GalleryGrid />
       </section>
       <section id='contact'>
+        <div className='contact-header'>
+          <h1 className={utilStyles.lightText}>CONTACT US</h1>
+        </div>
         <Contact></Contact>
       </section>
       <style jsx>{`
@@ -80,6 +83,9 @@ export default function Home({ allPostsData }) {
           width: 100vw;
           max-width: 1200px;
           place-self: center;
+        }
+        .contact-header {
+          padding: 3rem 0 0;
         }
         @media (min-width: 460px) {
           .about-container {

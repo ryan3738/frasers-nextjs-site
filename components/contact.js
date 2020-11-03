@@ -4,9 +4,9 @@ import Social from './social';
 export default function Contact() {
   return (
     <>
-      <div className='contact-header'>
-        <h2 className={utilStyles.lightText}>CONTACT US</h2>
-      </div>
+      {/* <div className='contact-header'> */}
+        {/* <h3 className={utilStyles.lightText}>CONTACT US</h3> */}
+      {/* </div> */}
       <div className='contact-content'>
         <div id='contact-info'>
           <h3>LOCATION</h3>
@@ -52,13 +52,13 @@ export default function Contact() {
         </div>
       </div>
       <style jsx>{`
-        .contact-container {
+        /* .contact-container {
           display: flex;
           flex-direction: column;
-        }
-        .contact-header {
+        } */
+        /* .contact-header {
           padding: 3rem 0 0;
-        }
+        } */
         .contact-content {
           display: flex;
           flex-flow: row wrap;
