@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import utilStyles from '../styles/utils.module.css';
 
 export default function Double() {
   return (
@@ -14,13 +15,13 @@ export default function Double() {
       </div>
       <div id='event-text' className='about-item about-text'>
         <p>
-          <h3 className='light-text'>FRASERS DINE IN IS BACK!</h3>
+          <h3 className={utilStyles.lightText}>FRASERS DINE IN IS BACK!</h3>
           <h4>
             OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED.
             CALL TO PLACE A TAKEOUT ORDER.
           </h4>
         </p>
-        <p className='light-text'>
+        <p className={utilStyles.lightText}>
           There are many guidelines for us to follow as well as guidelines for
           our customers to follow. Face masks will be mandatory for entry to the
           restaurant. Additonal safety precautions and requirements will be
@@ -40,8 +41,8 @@ export default function Double() {
       </div>
 
       <div id='about-text' className='about-item about-text'>
+        <h3 className={utilStyles.lightText}>FRASERS GOURMET HIDEAWAY</h3>
         <p>
-          <h3 className='light-text'>FRASERS GOURMET HIDEAWAY</h3>
           is owned and operated by Chef Scott Fraser. Inside the rightly named
           gourmet hideaway, guests will notice a relaxing environment where food
           and drinks are the focal point. Come enjoy a seasonal menu of the
@@ -60,8 +61,8 @@ export default function Double() {
       </div>
 
       <div id='scott-text' className='about-item about-text'>
-        <p>
-          <h3 className='light-text'>CHEF SCOTT FRASER</h3>
+        <h3 className='light-text about-text'>CHEF SCOTT FRASER</h3>
+        <p className='about-text'>
           is a Pierre Dubrulle Culinary School graduate and understands the
           importance of food. After graduating he spent years honing his skills
           working at the finest French restaurants in Vancouver, BC. For the
@@ -72,9 +73,8 @@ export default function Double() {
         </p>
       </div>
       <style jsx>{`
-        .about-text {
-          /* padding-top: 4rem; */
-        }
+.light-text =   {utilStyles.lightText}
+
         .about-item {
           margin: 0 10% 0;
           text-align: left;

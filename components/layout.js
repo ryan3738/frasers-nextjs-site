@@ -51,13 +51,6 @@ export default function Layout({ children, home }) {
                 />
               </a>
             </Link>
-            <style jsx>
-              {`
-                .link {
-                  height: 5em;
-                }
-              `}
-            </style>
           </>
         )}
       </header>
@@ -86,6 +79,13 @@ export default function Layout({ children, home }) {
           </a>
         </span>
       </footer>
+      <style jsx>
+        {`
+          .link {
+            height: 5em;
+          }
+        `}
+      </style>
     </div>
   );
 }

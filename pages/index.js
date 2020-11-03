@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
-import MenuSection from '../components/mention-section';
+import MenuSection from '../components/menu-section';
 import Image from 'next/image';
 import Navigation from '../components/navigation';
 import Hero from '../components/hero';
@@ -75,40 +75,46 @@ export default function Home({ allPostsData }) {
         </ul>
       </section> */}
       <style jsx>{`
+        .about-container {
+          display: grid;
+          justify-content: center;
+          align-content: center;
+          grid-template-columns: 0.25em repeat(10, minmax(10px, 108px)) 0.25em;
+          grid-row: repeat(8, minmax(200px, 500px));
+          max-width: 1200px;
+          place-self: center;
+          /* background-color: var(--color-darker); */
+          grid-template-areas:
+            'h h h h h h h h h h h h'
+            '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
+            '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .'
+            '. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .'
+            '. t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 .'
+            '. p3 p3 p3 p3 p3 p3 p3 p3 p3 p3 .'
+            '. t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 .'
+            '. p4 p4 p4 p4 p4 p4 p4 p4 p4 p4 .'
+            '. t4 t4 t4 t4 t4 t4 t4 t4 t4 t4 .';
+        }
+
+        .about-header {
+          grid-area: h;
+          padding: 3rem 0 0;
+        }
+        .menu-container {
+          max-width: 1200px;
+          place-self: center;
+        }
+        @media (min-width: 460px) {
           .about-container {
-            display: grid;
-            justify-content: center;
-            align-content: center;
-            grid-template-columns: 0.25em repeat(10, minmax(10px, 108px)) 0.25em;
-            grid-row: repeat(8, minmax(200px, 500px));
-            /* background-color: var(--color-darker); */
             grid-template-areas:
               'h h h h h h h h h h h h'
-              '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
-              '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .'
-              '. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .'
-              '. t2 t2 t2 t2 t2 t2 t2 t2 t2 t2 .'
-              '. p3 p3 p3 p3 p3 p3 p3 p3 p3 p3 .'
-              '. t3 t3 t3 t3 t3 t3 t3 t3 t3 t3 .'
-              '. p4 p4 p4 p4 p4 p4 p4 p4 p4 p4 .'
-              '. t4 t4 t4 t4 t4 t4 t4 t4 t4 t4 .';
+              '. p1 p1 p1 p1 p1 t1 t1 t1 t1 t1 .'
+              '. t2 t2 t2 t2 t2 p2 p2 p2 p2 p2 .'
+              '. p3 p3 p3 p3 p3 t3 t3 t3 t3 t3 .'
+              '. t4 t4 t4 t4 t4 p4 p4 p4 p4 p4 .';
           }
-
-          .about-header {
-            grid-area: h;
-            padding: 3rem 0 0;
-          }
-          @media (min-width: 460px) {
-            .about-container {
-              grid-template-areas:
-                'h h h h h h h h h h h h'
-                '. p1 p1 p1 p1 p1 t1 t1 t1 t1 t1 .'
-                '. t2 t2 t2 t2 t2 p2 p2 p2 p2 p2 .'
-                '. p3 p3 p3 p3 p3 t3 t3 t3 t3 t3 .'
-                '. t4 t4 t4 t4 t4 p4 p4 p4 p4 p4 .';
-            }
-          }
-        `}</style>
+        }
+      `}</style>
     </Layout>
   );
 }

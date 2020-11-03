@@ -76,6 +76,7 @@ export default function Hero(props) {
         /* margin: 10%; */
       }
         .welcome-container {
+          margin-top: 4em;
           display: grid;
           justify-content: center;
           align-content: center;
