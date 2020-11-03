@@ -13,16 +13,14 @@ const getMenuItem = (menu, category) => {
               <h4 className={utilStyles.lightText}>{data['Item Name']}</h4>
               <p dangerouslySetInnerHTML={{ __html: data.Description }}></p>
               <p className={utilStyles.lightText}>{data.Price}</p>
-              <style jsx>
-                {`
+              <style jsx>{`
                   .menu-item {
                     text-align: left;
                     border-radius: 7px;
                     padding: 5%;
                     background: var(--color-darker);
                   }
-                `}
-              </style>
+                `}</style>
             </div>
           );
         })}

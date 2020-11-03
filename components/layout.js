@@ -14,6 +14,7 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
+        <html lang='en' />
         <link rel='icon' href='/favicon.ico' />
         <meta
           name='description'
@@ -23,14 +24,14 @@ export default function Layout({ children, home }) {
           name='keywords'
           content='gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,'
         />
-        <meta
+        {/* <meta
           property='og:image'
           content={`https://og-image.now.sh/${encodeURI(
             siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name='og:title' content={siteTitle} />
-        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:card' content='summary_large_image' /> */}
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -63,9 +64,7 @@ export default function Layout({ children, home }) {
         </div>
       )}
       <footer className={styles.footer}>
-        <span>
-          © 2020 Frasers Gourmet Hideaway |
-        </span>
+        <span>© 2020 Frasers Gourmet Hideaway |</span>
         <span className={utilStyles.noWrap}>
           &nbsp;Built by:&nbsp;
           <a

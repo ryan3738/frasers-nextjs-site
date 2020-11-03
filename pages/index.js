@@ -33,7 +33,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <section id='about' className='about-container'>
         <h2 className='about-header hidden-header'>ABOUT</h2>
-        <Double></Double>
+        <Double />
       </section>
       <section id='menu' className='menu-container'>
         <h2 className='hidden-header'>MENU</h2>
