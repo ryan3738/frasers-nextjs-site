@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
 import GalleryGrid from '../components/gallery-grid';
+import Image from 'next/image';
 
 export default function Gallery() {
   return (
@@ -9,12 +10,10 @@ export default function Gallery() {
         <title>Gallery</title>
       </Head>
       <section>
-        <h1>This is the Gallery</h1>
+        <h1>Gallery</h1>
         <GalleryGrid />
       </section>
-      <style jsx>{`
-      
-      `}</style>
+      <style jsx>{``}</style>
     </Layout>
   );
 }
