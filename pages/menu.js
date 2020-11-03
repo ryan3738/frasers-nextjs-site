@@ -16,6 +16,7 @@ export default function FirstPost() {
       </section>
       <style jsx>{`
         .menu-container {
+          width: 100vw;
           max-width: 1200px;
           place-self: center;
         }

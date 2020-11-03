@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
         <MenuSection category='Entrees' />
       </section>
       <section>
-        <GalleryGrid></GalleryGrid>
+        <GalleryGrid />
       </section>
       <section id='contact'>
         <Contact></Contact>
@@ -76,13 +76,14 @@ export default function Home({ allPostsData }) {
       </section> */}
       <style jsx>{`
         .about-container {
+          width: 100vw;
+          max-width: 1200px;
+          place-self: center;
           display: grid;
           justify-content: center;
           align-content: center;
           grid-template-columns: 0.25em repeat(10, minmax(10px, 108px)) 0.25em;
           grid-row: repeat(8, minmax(200px, 500px));
-          max-width: 1200px;
-          place-self: center;
           /* background-color: var(--color-darker); */
           grid-template-areas:
             'h h h h h h h h h h h h'
@@ -101,6 +102,7 @@ export default function Home({ allPostsData }) {
           padding: 3rem 0 0;
         }
         .menu-container {
+          width: 100vw;
           max-width: 1200px;
           place-self: center;
         }
