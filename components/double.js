@@ -14,14 +14,13 @@ export default function Double() {
         />
       </div>
       <div id='event-text' className='about-item about-text'>
-        <p>
-          <h3 className={utilStyles.lightText}>FRASERS DINE IN IS BACK!</h3>
-          <h4>
-            OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED.
-            CALL TO PLACE A TAKEOUT ORDER.
-          </h4>
-        </p>
-        <p className={utilStyles.lightText}>
+        <h3 className='alt-text-color'>FRASERS DINE IN IS BACK!</h3>
+        <h4 className='alt-text-color'>
+          OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED.
+          CALL TO PLACE A TAKEOUT ORDER.
+        </h4>
+
+        <p className='alt-text-color'>
           There are many guidelines for us to follow as well as guidelines for
           our customers to follow. Face masks will be mandatory for entry to the
           restaurant. Additonal safety precautions and requirements will be
@@ -41,8 +40,8 @@ export default function Double() {
       </div>
 
       <div id='about-text' className='about-item about-text'>
-        <h3 className={utilStyles.lightText}>FRASERS GOURMET HIDEAWAY</h3>
-        <p>
+        <h3 className='alt-text-color'>FRASERS GOURMET HIDEAWAY</h3>
+        <p className='alt-text-color'>
           is owned and operated by Chef Scott Fraser. Inside the rightly named
           gourmet hideaway, guests will notice a relaxing environment where food
           and drinks are the focal point. Come enjoy a seasonal menu of the
@@ -61,8 +60,8 @@ export default function Double() {
       </div>
 
       <div id='scott-text' className='about-item about-text'>
-        <h3 className={utilStyles.lightText}>CHEF SCOTT FRASER</h3>
-        <p>
+        <h3 className='alt-text-color'>CHEF SCOTT FRASER</h3>
+        <p className='alt-text-color'>
           is a Pierre Dubrulle Culinary School graduate and understands the
           importance of food. After graduating he spent years honing his skills
           working at the finest French restaurants in Vancouver, BC. For the
@@ -89,6 +88,11 @@ export default function Double() {
 
         .about-text {
             margin: 1rem 10% 5rem;
+            
+          }
+
+        .alt-text-color:nth-child(odd) {
+          color: var(--color-white);
           }
 
         #happy-hour-pic {
