@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import BurgerCss from './burger-css';
+import { slide as Menu } from 'react-burger-menu';
 
-export default function Navigation() {
+export default function Navigation(props) {
+  
+  
   return (
     <>
       <div className='nav-bar'>

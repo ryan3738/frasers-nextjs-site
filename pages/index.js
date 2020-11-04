@@ -26,6 +26,7 @@ import Contact from '../components/contact';
 // }
 
 export default function Home({ allPostsData }) {
+
   return (
     <Layout home>
       <Head>
