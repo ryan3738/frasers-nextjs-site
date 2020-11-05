@@ -22,6 +22,8 @@ import Button from '../components/button'
 //   };
 // }
 
+//branch test
+
 export default function Home({ allPostsData, open, setOpen }) {
   return (
     <Layout home open={open} setOpen={setOpen}>
