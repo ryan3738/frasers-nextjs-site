@@ -35,7 +35,7 @@ export default function Double() {
           alt='Frasers gourmet hideaway dining room'
           height='612'
           width='612'
-            // unsized={true}
+          // unsized={true}
         />
       </div>
 
@@ -128,9 +128,9 @@ export default function Double() {
         }
 
         @media (min-width: 460px) {
-          .about-text {
+          /* .about-text { */
             /* padding-top: 4rem; */
-          }
+          /* } */
           .about-item {
             margin: 5vh 2vw;
           }

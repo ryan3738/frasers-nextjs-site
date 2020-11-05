@@ -20,8 +20,6 @@ export default function Navigation({ open, setOpen }) {
           <BurgerMenu open={open} setOpen={setOpen} />
         </div>
         <nav className='nav-list'>
-          {/* <BurgerCss /> */}
-
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>
           </Link>
