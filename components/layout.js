@@ -59,13 +59,7 @@ export default function Layout({ children, home, open, setOpen }) {
         )}
       </header>
       <main className={styles.main}>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href='/'>
-            <a>← BACK TO HOME</a>
-          </Link>
-        </div>
-      )}
+
       <footer className={styles.footer}>
         <span className={utilStyles.noWrap}>
           © 2020 Frasers Gourmet Hideaway |
@@ -82,10 +76,15 @@ export default function Layout({ children, home, open, setOpen }) {
           </a>
         </span>
         <nav className='nav-list'>
+          {!home && (
+            <Link href='/'>
+              <a className='nav-link'>HOME</a>
+            </Link>
+          )}
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>
           </Link>
-          <Link href='/'>
+          <Link href='/menu'>
             <a className='nav-link'>MENU</a>
           </Link>
           <Link href='/#contact'>
@@ -99,9 +98,11 @@ export default function Layout({ children, home, open, setOpen }) {
             height: 5em;
           }
           .nav-link {
+            // font-size: 0.5rem;
             padding: 1em;
             margin: auto;
             text-decoration: underline;
+            white-space: nowrap;
           }
         `}
       </style>

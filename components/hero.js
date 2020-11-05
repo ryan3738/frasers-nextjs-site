@@ -6,7 +6,7 @@ export default function Hero(props) {
     <>
       <div id='welcome' className='welcome-container'>
         <div className='welcome-box'>
-          <p className='scroll-text'>scroll down</p>
+          <p className='scroll-text'>SCROLL DOWN</p>
           <div className='welcome-inner-box'>
             {/* <!-- <div class="welcome-contents"> --> */}
             <p className={utilStyles.spacedText}>Est. | 2006</p>

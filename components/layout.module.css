@@ -21,15 +21,16 @@
 
 .header {
   width: 100%;  
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
 .footer {
-  height: 5em;
+  height: auto;
   width: 100vw;
   background-color: var(--color-darker);
+  padding: 1rem; 
   /* white-space: no-wrap; */
 }
 
@@ -42,7 +43,8 @@
   width: 8rem;
   height: 8rem;
 }
+*/
 
-.backToHome {
-  margin: 3rem 0 0;
-} */
+/* .backToHome {
+  margin: 1rem 0 0;
+}  */
