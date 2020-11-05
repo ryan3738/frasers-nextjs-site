@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Hero from '../components/hero';
 import Image from 'next/image';
 import Navigation from '../components/navigation';
+import Button from '../components/button';
 
 const name = 'Frasers';
 export const siteTitle =
@@ -59,15 +60,13 @@ export default function Layout({ children, home, open, setOpen }) {
         )}
       </header>
       <main className={styles.main}>{children}</main>
-
+      {!home && <Button buttonText='<== HOME' buttonLink='/'></Button>}
       <footer className={styles.footer}>
-        <span className={utilStyles.noWrap}>
-          © 2020 Frasers Gourmet Hideaway |
-        </span>
-        <span className={utilStyles.noWrap}>
+        <span className='no-wrap'>© 2020 Frasers Gourmet Hideaway |</span>
+        <span className='no-wrap'>
           &nbsp;Built by:&nbsp;
           <a
-            className={utilStyles.lightText}
+            className='light-text'
             href='https://github.com/ryan3738'
             target='_blank'
             rel='noreferrer noopener'
@@ -76,15 +75,13 @@ export default function Layout({ children, home, open, setOpen }) {
           </a>
         </span>
         <nav className='nav-list'>
-          {!home && (
-            <Link href='/'>
-              <a className='nav-link'>HOME</a>
-            </Link>
-          )}
+          <Link href='/'>
+            <a className='nav-link'>HOME</a>
+          </Link>
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>
           </Link>
-          <Link href='/menu'>
+          <Link href='/#menu'>
             <a className='nav-link'>MENU</a>
           </Link>
           <Link href='/#contact'>
@@ -92,20 +89,36 @@ export default function Layout({ children, home, open, setOpen }) {
           </Link>
         </nav>
       </footer>
-      <style jsx>
-        {`
-          .nav-spacer {
-            height: 5em;
-          }
-          .nav-link {
-            // font-size: 0.5rem;
-            padding: 1em;
-            margin: auto;
-            text-decoration: underline;
-            white-space: nowrap;
-          }
-        `}
-      </style>
+      <style jsx>{`
+        .light-text {
+          color: var(--color-white);
+        }
+
+        .no-wrap {
+          white-space: nowrap;
+        }
+
+        .nav-spacer {
+          height: 5em;
+        }
+        .nav-link {
+          /* font-size: 0.5rem; */
+          padding: 1em;
+          margin: auto;
+          text-decoration: underline;
+          white-space: nowrap;
+        }
+        .nav-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+          grid-template-rows: 4em;
+          justify-items: center;
+          padding: 0% 2%;
+          background: var(--color-darker);
+          position: sticky;
+          top: 0;
+        }
+      `}</style>
     </div>
   );
 }

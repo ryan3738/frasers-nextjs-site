@@ -30,7 +30,7 @@
   height: auto;
   width: 100vw;
   background-color: var(--color-darker);
-  padding: 1rem; 
+  padding: 1em; 
   /* white-space: no-wrap; */
 }
 

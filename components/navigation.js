@@ -5,6 +5,7 @@ import Burger from './burger';
 import BurgerMenu from './burger-menu';
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks/hooks';
+// import NavList from './nav-list'
 
 export default function Navigation({ open, setOpen }) {
   const node = useRef();
@@ -19,6 +20,7 @@ export default function Navigation({ open, setOpen }) {
           </div>
           <BurgerMenu open={open} setOpen={setOpen} />
         </div>
+        {/* <NavList></NavList> */}
         <nav className='nav-list'>
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>

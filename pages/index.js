@@ -7,6 +7,7 @@ import MenuSection from '../components/menu-section';
 import Double from '../components/double';
 import GalleryGrid from '../components/gallery-grid';
 import Contact from '../components/contact';
+import Button from '../components/button'
 
 // export async function getStaticProps() {
 //   const allPostsData = getSortedPostsData();
@@ -35,6 +36,7 @@ export default function Home({ allPostsData, open, setOpen }) {
         <h1 className='hidden-header'>MENU</h1>
         <MenuSection category='Starters' />
         <MenuSection category='Entrees' />
+        <Button buttonText='SEE FULL MENU ==>' buttonLink='/menu' />
       </section>
       <section>
         <GalleryGrid />

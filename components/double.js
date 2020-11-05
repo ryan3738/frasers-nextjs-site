@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import utilStyles from '../styles/utils.module.css';
+import Button from './button';
 
 export default function Double() {
   return (
@@ -70,10 +70,9 @@ export default function Double() {
           Pacific Northwest for steaks, seafood, and more served with a creative
           palate.
         </p>
+        <Button buttonText='Learn More' buttonLink='/about' />
       </div>
       <style jsx>{`
-.light-text =   {utilStyles.lightText}
-
         .about-item {
           margin: 0 10% 0;
           text-align: left;
@@ -87,13 +86,12 @@ export default function Double() {
         }
 
         .about-text {
-            margin: 1rem 10% 5rem;
-            
-          }
+          margin: 1rem 10% 5rem;
+        }
 
         .alt-text-color:nth-child(odd) {
           color: var(--color-white);
-          }
+        }
 
         #happy-hour-pic {
           grid-area: p1;
@@ -129,13 +127,13 @@ export default function Double() {
 
         @media (min-width: 460px) {
           /* .about-text { */
-            /* padding-top: 4rem; */
+          /* padding-top: 4rem; */
           /* } */
           .about-item {
             margin: 5vh 2vw;
           }
         }
       `}</style>
-    </>
+      </>
   );
 }
