@@ -10,7 +10,7 @@ const name = 'Frasers';
 export const siteTitle =
   'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, open, setOpen }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -36,7 +36,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Navigation />
+            <Navigation open={open} setOpen={setOpen} />
             <Hero />
           </>
         ) : (
@@ -48,7 +48,7 @@ export default function Layout({ children, home }) {
                   className='link'
                   src='/images/frasers-logo.gif'
                   alt='frasers logo'
-                  unsized={true}
+                  // unsized={true}
                 />
               </a>
             </Link>

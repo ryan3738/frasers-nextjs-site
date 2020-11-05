@@ -1,14 +1,18 @@
 import Link from 'next/link';
 import BurgerCss from './burger-css';
-import { slide as Menu } from 'react-burger-menu';
+// import { slide as Menu } from 'react-burger-menu';
+import Burger from './burger';
+import BurgerMenu from './burger-menu';
 
-export default function Navigation(props) {
-  
-  
+export default function Navigation({ open, setOpen }) {
   return (
     <>
       <div className='nav-bar'>
-        <div className='nav-list'>
+        <nav className='nav-list'>
+          <div>
+            <Burger open={open} setOpen={setOpen} />
+            <BurgerMenu open={open} setOpen={setOpen} />
+          </div>
           {/* <BurgerCss /> */}
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>
@@ -19,7 +23,7 @@ export default function Navigation(props) {
           <Link href='/#contact'>
             <a className='nav-link'>CONTACT</a>
           </Link>
-        </div>
+        </nav>
       </div>
       <style jsx>{`
         .nav-bar {

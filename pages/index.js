@@ -2,12 +2,8 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 // import { getSortedPostsData } from '../lib/posts';
-import Link from 'next/link';
 import Date from '../components/date';
 import MenuSection from '../components/menu-section';
-import Image from 'next/image';
-import Navigation from '../components/navigation';
-import Hero from '../components/hero';
 import Double from '../components/double';
 import GalleryGrid from '../components/gallery-grid';
 import Contact from '../components/contact';
@@ -25,10 +21,9 @@ import Contact from '../components/contact';
 //   };
 // }
 
-export default function Home({ allPostsData }) {
-
+export default function Home({ allPostsData, open, setOpen }) {
   return (
-    <Layout home>
+    <Layout home open={open} setOpen={setOpen}>
       <Head>
         <title>{siteTitle}</title>
       </Head>
