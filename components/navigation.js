@@ -7,19 +7,21 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks/hooks';
 
 export default function Navigation({ open, setOpen }) {
-
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
 
   return (
     <>
       <div className='nav-bar'>
-        <nav className='nav-list'>
+        <div className='burger'>
           <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
-            <BurgerMenu open={open} setOpen={setOpen} />
           </div>
+          <BurgerMenu open={open} setOpen={setOpen} />
+        </div>
+        <nav className='nav-list'>
           {/* <BurgerCss /> */}
+
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>
           </Link>
@@ -39,14 +41,7 @@ export default function Navigation({ open, setOpen }) {
           position: fixed;
         }
         .nav-list {
-          background: var(--color-darker);
-          position: sticky;
-          top: 0;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-          grid-template-rows: 4em;
-          justify-items: center;
-          padding: 0% 2%;
+          display: none;
         }
 
         .nav-link {
@@ -61,8 +56,18 @@ export default function Navigation({ open, setOpen }) {
         }
 
         @media (min-width: 460px) {
-          .nav-link {
-            display: block;
+          .burger {
+            display: none;
+          }
+          .nav-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+            grid-template-rows: 4em;
+            justify-items: center;
+            padding: 0% 2%;
+            background: var(--color-darker);
+            position: sticky;
+            top: 0;
           }
         }
       `}</style>
