@@ -5,11 +5,11 @@ export default function Contact() {
   return (
     <>
       {/* <div className='contact-header'> */}
-        {/* <h3 className={utilStyles.lightText}>CONTACT US</h3> */}
+      {/* <h3 className={utilStyles.lightText}>CONTACT US</h3> */}
       {/* </div> */}
       <div className='contact-content'>
         <div id='contact-info'>
-          <h3>LOCATION</h3>
+          <h2>LOCATION</h2>
           <p>
             <span className={utilStyles.lightText}>
               1191 SE DOCK ST STE 101
@@ -20,7 +20,7 @@ export default function Contact() {
               <a href='tel:13602791231'>360-279-1231</a>
               <br />
               <br />
-              <h3>
+              <b>
                 <a
                   href='https://www.google.com/maps/dir//Frasers+Gourmet+Hideaway+1191+SE+Dock+St+STE+101,+Oak+Harbor,+WA+98277'
                   target='_blank'
@@ -28,7 +28,7 @@ export default function Contact() {
                 >
                   Get Directions
                 </a>
-              </h3>
+              </b>
             </span>
           </p>
         </div>

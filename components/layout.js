@@ -41,14 +41,17 @@ export default function Layout({ children, home, open, setOpen }) {
           </>
         ) : (
           <>
-            <div className='link'></div>
+            <div className='nav-spacer'></div>
             <Link href='/'>
               <a>
-                <Image
+                <img
                   className='link'
                   src='/images/frasers-logo.gif'
                   alt='frasers logo'
-                  // unsized={true}
+                  height='104'
+                  width='228'
+                  // layout='fixed'
+                  // unsized='true'
                 />
               </a>
             </Link>
@@ -64,7 +67,9 @@ export default function Layout({ children, home, open, setOpen }) {
         </div>
       )}
       <footer className={styles.footer}>
-        <span>© 2020 Frasers Gourmet Hideaway |</span>
+        <span className={utilStyles.noWrap}>
+          © 2020 Frasers Gourmet Hideaway |
+        </span>
         <span className={utilStyles.noWrap}>
           &nbsp;Built by:&nbsp;
           <a
@@ -76,11 +81,27 @@ export default function Layout({ children, home, open, setOpen }) {
             Ryan Fraser
           </a>
         </span>
+        <nav className='nav-list'>
+          <Link href='/#about'>
+            <a className='nav-link'>ABOUT</a>
+          </Link>
+          <Link href='/'>
+            <a className='nav-link'>MENU</a>
+          </Link>
+          <Link href='/#contact'>
+            <a className='nav-link'>CONTACT</a>
+          </Link>
+        </nav>
       </footer>
       <style jsx>
         {`
-          .link {
+          .nav-spacer {
             height: 5em;
+          }
+          .nav-link {
+            padding: 1em;
+            margin: auto;
+            text-decoration: underline;
           }
         `}
       </style>
