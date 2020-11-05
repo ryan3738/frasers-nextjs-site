@@ -3,13 +3,19 @@ import BurgerCss from './burger-css';
 // import { slide as Menu } from 'react-burger-menu';
 import Burger from './burger';
 import BurgerMenu from './burger-menu';
+import React, { useState, useRef } from 'react';
+import { useOnClickOutside } from '../hooks/hooks';
 
 export default function Navigation({ open, setOpen }) {
+
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
     <>
       <div className='nav-bar'>
         <nav className='nav-list'>
-          <div>
+          <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
             <BurgerMenu open={open} setOpen={setOpen} />
           </div>
