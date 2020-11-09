@@ -1,7 +1,7 @@
 import gallery from '../public/data/gallery-grid.json';
 import Image from 'next/image';
 
-const getGalleryItem = (gallery, category) => {
+const getGalleryItem = (gallery) => {
   return (
     <>
       <div className='gallery-container'>
@@ -11,14 +11,14 @@ const getGalleryItem = (gallery, category) => {
           .map((data) => {
             return (
               <div
-                key={data['Image Alt']}
+                key={data.imageAlt}
                 id='image-div'
-                className={data['Image Size']}
+                className={data.imageSize}
               >
                 <img
                   className='image'
-                  src={'/' + data['Image Path']}
-                  alt={data['Image Alt']}
+                  src={data.imageSource}
+                  alt={data.imageAlt}
                   // height='612'
                   // width='612'
                   // unsized='true'
@@ -67,41 +67,5 @@ const getGalleryItem = (gallery, category) => {
 };
 
 export default function GalleryGrid() {
-  return (
-    <>
-      {getGalleryItem(gallery)}
-      {/* <div className='big'>
-          <img
-            src='/images/scott_fraser_square.jpg'
-            alt='lobster tail paella'
-          />
-        </div> */}
-
-      <style jsx>{`
-        /* .gallery-container {
-          margin-top: 2rem;
-          grid-area: c5;
-          display: grid;
-          grid-gap: 5px;
-          grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-          grid-auto-rows: 120px;
-          grid-auto-flow: dense;
-        }
-
-        .gallery-container > div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 2rem;
-          color: #ffeead;
-        }
-
-        .gallery-container > div > img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        } */
-      `}</style>
-    </>
-  );
+  return <>{getGalleryItem(gallery)}</>;
 }

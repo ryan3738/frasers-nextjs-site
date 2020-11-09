@@ -30,7 +30,8 @@ export default function Home({ allPostsData, open, setOpen }) {
       </Head>
       <section id='about' className='container'>
         <h1 className='header hidden-header'>ABOUT</h1>
-        <Double />
+        <Double category="special"/>
+        <Double category="about"/>
         <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' />
       </section>
       <section id='menu' className='container'>
@@ -49,16 +50,16 @@ export default function Home({ allPostsData, open, setOpen }) {
         <Contact></Contact>
       </section>
       <style jsx>{`
-        .hidden-header {
-          visibility: hidden;
-        }
         .header {
           padding: 5rem 0 0;
+        }
+        .hidden-header {
+          padding: 0;
+          visibility: hidden;
         }
         .container {
           width: 100vw;
           max-width: 1200px;
-          place-self: center;
         }
         @media (min-width: 460px) {
         }

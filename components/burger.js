@@ -24,7 +24,7 @@ export default function Burger({ open, setOpen }) {
             height: 2rem;
             background: var(--color-darker);
             border: 0;
-            box-shadow: 0 0 0 7px var(--color-darker);
+            /* box-shadow: 0 0 0 7px var(--color-darker); */
             cursor: pointer;
             padding: 0;
             z-index: 10;

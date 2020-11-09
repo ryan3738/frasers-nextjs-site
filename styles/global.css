@@ -1,8 +1,8 @@
 :root {
   --color-black: black;
   /* Have option for internet explorer without f6*/
-  /* --color-darker: #1a1a1af6; */
   --color-darker: #1a1a1a;
+  --color-darker: #1a1a1af6;
   --color-dark: #38290b;
   --color-main: #daa53c;
   --color-light: #d4ba98;
