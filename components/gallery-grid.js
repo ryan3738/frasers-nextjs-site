@@ -67,41 +67,5 @@ const getGalleryItem = (gallery) => {
 };
 
 export default function GalleryGrid() {
-  return (
-    <>
-      {getGalleryItem(gallery)}
-      {/* <div className='big'>
-          <img
-            src='/images/scott_fraser_square.jpg'
-            alt='lobster tail paella'
-          />
-        </div> */}
-
-      <style jsx>{`
-        /* .gallery-container {
-          margin-top: 2rem;
-          grid-area: c5;
-          display: grid;
-          grid-gap: 5px;
-          grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-          grid-auto-rows: 120px;
-          grid-auto-flow: dense;
-        }
-
-        .gallery-container > div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 2rem;
-          color: #ffeead;
-        }
-
-        .gallery-container > div > img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        } */
-      `}</style>
-    </>
-  );
+  return <>{getGalleryItem(gallery)}</>;
 }
