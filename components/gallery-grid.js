@@ -21,7 +21,7 @@ const getGalleryItem = (gallery, category) => {
                   alt={data['Image Alt']}
                   // height='612'
                   // width='612'
-                  unsized={true}
+                  // unsized='true'
                 />
               </div>
             );
