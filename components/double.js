@@ -20,11 +20,17 @@ const getDoubleItem = (double, category) => {
               </div>
               <div className='double-item double-text left'>
                 <h3 className='alternating-color'>{data.title}</h3>
-                <h4 className='alternating-color'>{data.subTitle}</h4>
+                {data.subTitle ? (
+                  <h4 className='alternating-color'>{data.subTitle}</h4>
+                ) : (
+                  ''
+                )}
 
                 <p className='alternating-color'>{data.content}</p>
               </div>
               <style jsx>{`
+
+              
                 .double-container {
                   display: grid;
                   justify-content: center;

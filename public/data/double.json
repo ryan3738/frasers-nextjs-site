@@ -2,11 +2,11 @@
   {
     "title": "SPECIAL",
     "category": "special",
-    "subTitle": "OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED. CALL TO PLACE A TAKEOUT ORDER.",
-    "content": "There are many guidelines for us to follow as well as guidelines for our customers to follow. Face masks will be mandatory for entry to the restaurant. Additonal safety precautions and requirements will be posted. We appreciate your cooperation in this endeavor to help us keep our customers and staff safe.",
+    "subTitle": "Special subtitle",
+    "content": "This is a special!!!",
     "imageLeft": false,
-    "imageSource": "/images/pig-were-back.jpg",
-    "imageAlt": "Pig holding a sign that says We're Back"
+    "imageSource": "/images/rhubarb-margarita-mayhem-square.jpg",
+    "imageAlt": "Rhubarb Margarita Special"
   },
   {
     "title": "FRASERS DINE IN IS BACK!",
