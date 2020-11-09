@@ -1,7 +1,7 @@
 import gallery from '../public/data/gallery-grid.json';
 import Image from 'next/image';
 
-const getGalleryItem = (gallery, category) => {
+const getGalleryItem = (gallery) => {
   return (
     <>
       <div className='gallery-container'>
@@ -11,14 +11,14 @@ const getGalleryItem = (gallery, category) => {
           .map((data) => {
             return (
               <div
-                key={data['Image Alt']}
+                key={data.imageAlt}
                 id='image-div'
-                className={data['Image Size']}
+                className={data.imageSize}
               >
                 <img
                   className='image'
-                  src={'/' + data['Image Path']}
-                  alt={data['Image Alt']}
+                  src={data.imageSource}
+                  alt={data.imageAlt}
                   // height='612'
                   // width='612'
                   // unsized='true'

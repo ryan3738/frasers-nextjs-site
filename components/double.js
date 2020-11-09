@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Double() {
+export default function Double({title, content, imageSource, imageAlt}) {
   return (
     <>
       <div className='about-container'>
@@ -84,7 +84,6 @@ export default function Double() {
           grid-row: repeat(8, minmax(200px, 500px));
           /* background-color: var(--color-darker); */
           grid-template-areas:
-            'h h h h h h h h h h h h'
             '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
             '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .'
             '. p2 p2 p2 p2 p2 p2 p2 p2 p2 p2 .'
@@ -156,7 +155,6 @@ export default function Double() {
           }
           .about-container {
             grid-template-areas:
-              'h h h h h h h h h h h h'
               '. p1 p1 p1 p1 p1 t1 t1 t1 t1 t1 .'
               '. t2 t2 t2 t2 t2 p2 p2 p2 p2 p2 .'
               '. p3 p3 p3 p3 p3 t3 t3 t3 t3 t3 .'

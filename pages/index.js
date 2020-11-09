@@ -49,11 +49,12 @@ export default function Home({ allPostsData, open, setOpen }) {
         <Contact></Contact>
       </section>
       <style jsx>{`
-        .hidden-header {
-          visibility: hidden;
-        }
         .header {
           padding: 5rem 0 0;
+        }
+        .hidden-header {
+          padding: 0;
+          visibility: hidden;
         }
         .container {
           width: 100vw;

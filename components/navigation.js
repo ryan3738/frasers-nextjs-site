@@ -39,15 +39,26 @@ export default function Navigation({ open, setOpen }) {
           left: 0;
           z-index: 999;
           position: fixed;
+          background: var(--color-darker);
         }
         .nav-list {
           display: none;
+        }
+        .nav-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+          grid-template-rows: 4em;
+          justify-items: center;
+          padding: 0% 2%;
+          /* background: var(--color-darker); */
+          position: sticky;
+          top: 0;
         }
 
         .nav-link {
           padding: 1em;
           margin: auto;
-          /* display: none; */
+          display: none;
         }
 
         .nav-list a:hover {
@@ -59,15 +70,10 @@ export default function Navigation({ open, setOpen }) {
           .burger {
             display: none;
           }
-          .nav-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-            grid-template-rows: 4em;
-            justify-items: center;
-            padding: 0% 2%;
-            background: var(--color-darker);
-            position: sticky;
-            top: 0;
+          .nav-link {
+            padding: 1em;
+            margin: auto;
+            display: block;
           }
         }
       `}</style>
