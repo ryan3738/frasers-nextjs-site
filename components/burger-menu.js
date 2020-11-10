@@ -31,7 +31,7 @@ export default function BurgerMenu({ open }) {
           position: absolute;
           top: 0;
           right: 0;
-          transition: transform 0.3s ease-in-out;
+          transition: transform 0.2s ease-in-out;
         }
 
         @media (max-width: 460px) {

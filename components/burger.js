@@ -38,7 +38,7 @@ export default function Burger({ open, setOpen }) {
             height: 0.25rem;
             background: var(--color-main);
             border-radius: 10px;
-            transition: all 0.3s linear;
+            transition: all 0.2s linear;
             position: relative;
             transform-origin: 1px;
           }

@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import BurgerCss from './burger-css';
-// import { slide as Menu } from 'react-burger-menu';
 import Burger from './burger';
 import BurgerMenu from './burger-menu';
 import React, { useState, useRef } from 'react';
@@ -15,6 +13,11 @@ export default function Navigation({ open, setOpen }) {
     <>
       <div className='nav-bar'>
         <div className='burger'>
+          {/* <div>
+            <Link href='/'>
+              <a className='title'>FRASERS</a>
+            </Link>
+          </div> */}
           <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
           </div>
@@ -22,6 +25,9 @@ export default function Navigation({ open, setOpen }) {
         </div>
         {/* <NavList></NavList> */}
         <nav className='nav-list'>
+          <Link href='/'>
+            <a className='title'>FRASERS</a>
+          </Link>
           <Link href='/#about'>
             <a className='nav-link'>ABOUT</a>
           </Link>
@@ -34,6 +40,11 @@ export default function Navigation({ open, setOpen }) {
         </nav>
       </div>
       <style jsx>{`
+        .title {
+          padding: 0.5em;
+          font-size: 2.2rem;
+          color: var(--color-white);
+        }
         .nav-bar {
           right: 0;
           left: 0;
@@ -42,23 +53,12 @@ export default function Navigation({ open, setOpen }) {
           background: var(--color-darker);
         }
         .nav-list {
-          display: none;
-        }
-        .nav-list {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-          grid-template-rows: 4em;
-          justify-items: center;
-          padding: 0% 2%;
-          /* background: var(--color-darker); */
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          height: 4em;
           position: sticky;
           top: 0;
-        }
-
-        .nav-link {
-          padding: 1em;
-          margin: auto;
-          display: none;
         }
 
         .nav-list a:hover {
@@ -66,8 +66,14 @@ export default function Navigation({ open, setOpen }) {
           color: var(--color-black);
         }
 
+        .nav-link {
+          display: none;
+        }
         @media (min-width: 460px) {
           .burger {
+            display: none;
+          }
+          .title {
             display: none;
           }
           .nav-link {
