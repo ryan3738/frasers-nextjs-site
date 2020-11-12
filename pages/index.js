@@ -30,8 +30,8 @@ export default function Home({ allPostsData, open, setOpen }) {
       </Head>
       <section id='about' className='container'>
         <h1 className='header hidden-header'>ABOUT</h1>
-        <Double category="special"/>
-        <Double category="about"/>
+        <Double category='special' />
+        <Double category='about' />
         <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' />
       </section>
       <section id='menu' className='container'>
