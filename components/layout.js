@@ -62,7 +62,7 @@ export default function Layout({ children, home, open, setOpen }) {
       <main className={styles.main}>{children}</main>
       {!home && <Button buttonText='<== HOME' buttonLink='/'></Button>}
       <footer className={styles.footer}>
-        <span className='no-wrap'>© 2020 Frasers Gourmet Hideaway |</span>
+        <span>© 2020 Frasers Gourmet Hideaway |</span>
         <span className='no-wrap'>
           &nbsp;Built by:&nbsp;
           <a
