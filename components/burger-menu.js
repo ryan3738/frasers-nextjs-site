@@ -54,7 +54,7 @@ export default function BurgerMenu({ open }) {
         }
 
         a:hover {
-          color: var(--high-emphasis-text);
+          color: var(--medium-emphasis-text);
         }
       `}</style>
       <style jsx>{`

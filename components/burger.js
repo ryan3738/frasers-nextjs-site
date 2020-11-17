@@ -36,7 +36,6 @@ export default function Burger({ open, setOpen }) {
           div {
             width: 2rem;
             height: 0.25rem;
-            background: var(--primary-color);
             border-radius: 10px;
             transition: all 0.2s linear;
             position: relative;
@@ -46,7 +45,9 @@ export default function Burger({ open, setOpen }) {
         {/* animation styles */}
         <style jsx>{`
           div {
-            background: ${open ? 'var(--white-color)' : 'var(--primary-color)'};
+            background: ${open
+              ? 'var(--medium-emphasis-text)'
+              : 'var(--primary-color)'};
           }
 
           .top-bun {

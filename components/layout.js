@@ -149,8 +149,8 @@ export default function Layout({ children, home, open, setOpen }) {
           --black-color: #0B0A0A;
           --background-color: var(--black-color);
           --surface-color: rgba(255, 255, 255, 0.03);
-          --primary-color: #daa53c;
-          --primary-color-desaturated: #FFE082;
+          --primary-color: #c6a938;
+          --primary-color-desaturated: #f3e08d;
           /* Have option for internet explorer without f6*/
           --secondary-color: #1a1a1a;
           --white-color: #ffffffDE;
@@ -161,8 +161,6 @@ export default function Layout({ children, home, open, setOpen }) {
           --medium-emphasis-text: #ffffff99;
           /* 38% */
           --text-disabled: #ffffff61;
-          
-
           --color-facebook: #3b5998;
           --color-instagram: #fb3958;
           --small-screen: 460px;
