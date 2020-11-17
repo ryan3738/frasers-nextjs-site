@@ -33,6 +33,7 @@ export default function Home({ allPostsData }) {
         <Double category='special' />
         <Double category='about' />
         <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' />
+        
       </section>
       <section id='menu' className='container'>
         <h1 className='header hidden-header'>MENU</h1>
