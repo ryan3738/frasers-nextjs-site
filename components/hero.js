@@ -92,13 +92,14 @@ export default function Hero(props) {
           width: minmax(240px, auto);
           padding: 10%;
           grid-area: w;
-          background: var(--black-color);
-          opacity: .97;
+          background: var(--background-color);
+          opacity: 0.97;
         }
 
         .welcome-inner-box {
           outline: thin solid var(--primary-color);
           padding: 10%;
+          /*background: var(--background-color);*/
         }
 
         .welcome-logo {
@@ -116,9 +117,13 @@ export default function Hero(props) {
         }
         @media (min-width: 460px) {
           .welcome-container {
-            background-image: url('images/calamari-blue-cheese-sauce.jpg');
+            
         }
       `}</style>
     </>
   );
+}
+
+{
+  /* background-image: url('images/calamari-blue-cheese-sauce.jpg'); */
 }

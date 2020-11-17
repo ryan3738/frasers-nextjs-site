@@ -17,7 +17,7 @@ const getMenuItem = (menu, category) => {
                   text-align: left;
                   border-radius: 7px;
                   padding: 5%;
-                  background: var(--background-color);
+                  background: var(--surface-color);
                 }
                 .primary-color {
                   color: var(--primary-color);

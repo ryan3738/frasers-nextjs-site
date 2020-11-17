@@ -47,7 +47,7 @@ export default function Home({ allPostsData, open, setOpen }) {
         <div className='header'>
           <h1 className={utilStyles.lightText}>CONTACT US</h1>
         </div>
-        <Contact></Contact>
+        <Contact />
       </section>
       <style jsx>{`
         .header {
@@ -60,7 +60,7 @@ export default function Home({ allPostsData, open, setOpen }) {
         .container {
           width: 100vw;
           max-width: 1200px;
-          background-color: var(--background-color);
+          background-color: var(--surface-color);
           /* background: var(--background-color); */
         }
         @media (min-width: 460px) {

@@ -61,14 +61,14 @@ export default function Contact() {
         } */
         .contact-content {
           display: flex;
-          flex-flow: row wrap;
-          justify-content: space-evenly;
-          align-items: flex-start;
+          flex-direction: column;
+          align-items: center;
+          padding: 2rem 1rem;
         }
         .social-media-container {
           display: flex;
           flex-direction: column;
-          justify-content: flex-start;
+          /* justify-content: flex-start; */
           /* align-items: flex-start; */
           margin: 10px;
         }
