@@ -29,6 +29,8 @@ export default function BurgerMenu({ open }) {
 
         @media (max-width: 460px) {
           width: 100%;
+          font-size: 1.5rem;
+          text-align: center;
         }
 
         a {
@@ -40,10 +42,6 @@ export default function BurgerMenu({ open }) {
           /* color: var(--secondary-color); */
           text-decoration: none;
           transition: color 0.3s linear;
-        }
-        @media (max-width: 460px) {
-          font-size: 1.5rem;
-          text-align: center;
         }
       `}</style>
       <style jsx>{`

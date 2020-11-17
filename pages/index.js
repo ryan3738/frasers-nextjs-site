@@ -24,7 +24,7 @@ import Button from '../components/button';
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout>
+    <Layout home>
       <Head>
         <title>{siteTitle}</title>
       </Head>
