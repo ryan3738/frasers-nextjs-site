@@ -114,13 +114,9 @@ export default function Hero(props) {
         }
         @media (min-width: 460px) {
           .welcome-container {
-            
+            background-image: url('images/calamari-blue-cheese-sauce.jpg');
         }
       `}</style>
     </>
   );
-}
-
-{
-  /* background-image: url('images/calamari-blue-cheese-sauce.jpg'); */
 }
