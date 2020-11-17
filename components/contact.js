@@ -11,7 +11,7 @@ export default function Contact() {
         <div id='contact-info'>
           <h2>LOCATION</h2>
           <p>
-            <span className={utilStyles.lightText}>
+            <span className='medium-emphasis'>
               1191 SE DOCK ST STE 101
               <br />
               OAK HARBOR, WA 98277
@@ -59,6 +59,7 @@ export default function Contact() {
         /* .contact-header {
           padding: 3rem 0 0;
         } */
+
         .contact-content {
           display: flex;
           flex-direction: column;

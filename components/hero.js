@@ -37,29 +37,30 @@ export default function Hero(props) {
               <strong> CALL FOR TAKEOUT</strong>
             </p>
 
-            <h4 className='primary-color'>SEATING TIMES</h4>
+            <h4>SEATING TIMES</h4>
 
             {/* <!-- <p> <strong>CLOSED</strong> <br>9/8/20 to 9/9/20</p><br> --> */}
             <p>
-              <strong className='primary-color'>TUE - THUR</strong> <br />
-              {/* <!-- <span style="white-space: nowrap;"> --> */}
-              4:30 | 5:00 | 5:30 | 7:00 | 7:30
-              {/* <!-- </span> --> */}
+              <strong>TUE - THUR</strong> <br />
+              <span className='medium-emphasis'>
+                4:30 | 5:00 | 5:30 | 7:00 | 7:30
+              </span>
               <br />
               <br />
             </p>
             <p>
-              <strong className='primary-color'>FRI - SAT</strong>
+              <strong>FRI - SAT</strong>
               <br />
-              {/* <!-- <span style="white-space: nowrap;"> --> */}
-              4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00
-              {/* <!-- </span> --> */}
+              <span className='medium-emphasis'>
+                4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00
+              </span>
               <br />
               <br />
             </p>
             <p>
               {' '}
-              <strong className='primary-color'>Sun - Mon</strong> | CLOSED
+              <strong>Sun - Mon</strong> |{' '}
+              <span className='medium-emphasis'>CLOSED</span>
               <br />
             </p>
             {/* <!-- </div> --> */}
@@ -67,10 +68,6 @@ export default function Hero(props) {
         </div>
       </div>
       <style jsx>{`
-
-        .primary-color{
-          color : var(--primary-color);
-        }
         .welcome-container {
           display: grid;
           justify-content: center;

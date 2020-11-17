@@ -150,17 +150,18 @@ export default function Layout({ children, home, open, setOpen }) {
           --background-color: var(--black-color);
           --surface-color: rgba(255, 255, 255, 0.03);
           --primary-color: #daa53c;
-          --primary-color-desat: #FFE082;
+          --primary-color-desaturated: #FFE082;
           /* Have option for internet explorer without f6*/
           --secondary-color: #1a1a1a;
-          --white-color: var(--text-high-emphasis);
+          --white-color: #ffffffDE;
+          --text-color: var(--white-color);
           /* 87% */
-          --text-high-emphasis: #ffffffDE;
+          --high-emphasis-text: #ffffffDE;
           /* 60% */
-          --text-med-emphasis: #ffffff99;
+          --medium-emphasis-text: #ffffff99;
           /* 38% */
           --text-disabled: #ffffff61;
-          --text-color: var(--white-color);
+          
 
           --color-facebook: #3b5998;
           --color-instagram: #fb3958;
@@ -176,7 +177,7 @@ export default function Layout({ children, home, open, setOpen }) {
           padding: 0;
           margin: 0;
           font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-          color: var(--text-color);
+          color: var(--high-emphasis-text);
           background-color: var(--black-color);
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
@@ -400,7 +401,7 @@ export default function Layout({ children, home, open, setOpen }) {
         h4,
         h5,
         h6 {
-          color: var(--primary-color);
+          color: var(--primary-color-desaturated);
           text-transform: uppercase;          
         }
 
@@ -806,6 +807,10 @@ export default function Layout({ children, home, open, setOpen }) {
           html {
             font-size: 100%;
           }
+        }
+
+        .medium-emphasis{
+          color: var(--medium-emphasis-text);
         }
       `}</style>
     </div>

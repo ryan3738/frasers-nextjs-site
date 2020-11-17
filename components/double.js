@@ -21,12 +21,11 @@ const getDoubleItem = (double, category) => {
               <div className='double-item double-text left'>
                 <h3 className='primary-color'>{data.title}</h3>
                 {data.subTitle ? <h4 className=''>{data.subTitle}</h4> : ''}
-
-                <p>{data.content}</p>
+                <p className='medium-emphasis'>{data.content}</p>
               </div>
               <style jsx>{`
                 .primary-color {
-                  color: var(--primary-color);
+                  color: var(--primary-color-desaturated);
                 }
 
                 .double-container {
@@ -36,7 +35,7 @@ const getDoubleItem = (double, category) => {
                   grid-template-columns: 0.25em repeat(10, minmax(10px, 108px)) 0.25em;
                   grid-row: repeat(8, minmax(200px, 500px));
                   grid-row: repeat(2, minmax(200px, 500px));
-                  /* background-color: var(--secondary-color); */
+
                   grid-template-areas:
                     '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
                     '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .';
@@ -61,6 +60,9 @@ const getDoubleItem = (double, category) => {
                 .double-text {
                   margin: 1rem 10% 5rem;
                   grid-area: t1;
+                  background-color: var(--surface-color);
+                  padding: 1rem;
+                  border-radius: 7px;
                 }
 
                 /* .alternating-color:nth-child(odd) {

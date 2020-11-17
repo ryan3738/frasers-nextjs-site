@@ -20,7 +20,7 @@ const getMenuItem = (menu, category) => {
                   background: var(--surface-color);
                 }
                 .primary-color {
-                  color: var(--primary-color);
+                  color: var(--primary-color-desaturated);
                 }
               `}</style>
             </div>

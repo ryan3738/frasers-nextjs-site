@@ -26,7 +26,7 @@ export default function Button({ buttonText, buttonLink }) {
           background-color: var(--primary-color);
           border: 2px solid var(--primary-color);
           border-radius: 5px;
-          color: var(--background-color);
+          color: var(--black-color);
           /* display: block; */
           /* padding: 0 5px; */
           margin: 10px 0;
@@ -39,8 +39,9 @@ export default function Button({ buttonText, buttonLink }) {
         button:hover {
           animation-name: background-color;
           animation-duration: 500ms;
-          background-color: var(--secondary-color);
-          color: var(--white-color);
+          background-color: var(--surface-color);
+          border-color: var(--surface-color);
+          color: var(--high-emphasis-text);
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;

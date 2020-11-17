@@ -24,7 +24,7 @@ export default function BurgerMenu({ open }) {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          background: var(--secondary-color);
+          background: var(--background-color);
           height: 100vh;
           text-align: right;
           padding: 2rem;
@@ -54,7 +54,7 @@ export default function BurgerMenu({ open }) {
         }
 
         a:hover {
-          color: var(--secondary-color);
+          color: var(--high-emphasis-text);
         }
       `}</style>
       <style jsx>{`

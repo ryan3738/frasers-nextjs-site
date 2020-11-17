@@ -45,13 +45,14 @@ export default function Home({ allPostsData, open, setOpen }) {
       </section>
       <section id='contact'>
         <div className='header'>
-          <h1 className={utilStyles.lightText}>CONTACT US</h1>
+          <h1>CONTACT US</h1>
         </div>
         <Contact />
       </section>
       <style jsx>{`
         .header {
           padding: 5rem 0 0;
+          color: var(--primary-color-desaturated);
         }
         .hidden-header {
           padding: 0;

@@ -22,7 +22,7 @@ export default function Burger({ open, setOpen }) {
             justify-content: space-around;
             width: 2rem;
             height: 2rem;
-            background: var(--secondary-color);
+            background: var(--background-color);
             border: 0;
             /* box-shadow: 0 0 0 7px var(--secondary-color); */
             cursor: pointer;
