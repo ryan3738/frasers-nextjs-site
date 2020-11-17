@@ -38,22 +38,13 @@ export default function Layout({ children, home, open, setOpen }) {
         {home ? (
           <>
             <Navigation open={open} setOpen={setOpen} />
+            <div className='nav-spacer'></div>
             <Hero />
           </>
         ) : (
           <>
+            <Navigation open={open} setOpen={setOpen} />
             <div className='nav-spacer'></div>
-            <Link href='/'>
-              <a>
-                <img
-                  className='link'
-                  src='/images/frasers-logo.gif'
-                  alt='frasers logo'
-                  height='104'
-                  width='228'
-                />
-              </a>
-            </Link>
           </>
         )}
       </header>
@@ -118,20 +109,20 @@ export default function Layout({ children, home, open, setOpen }) {
         .footer {
           height: auto;
           width: 100vw;
-          background-color: var(--secondary-color);
+          background-color: var(--background-color);
           padding: 1em;
           /* white-space: no-wrap; */
         }
-        .light-text {
+        /* .light-text {
           color: var(--text-color);
-        }
+        } */
 
         .no-wrap {
           white-space: nowrap;
         }
 
         .nav-spacer {
-          height: 5em;
+          height: 4em;
         }
         .nav-link {
           /* font-size: 0.5rem; */
@@ -154,17 +145,25 @@ export default function Layout({ children, home, open, setOpen }) {
 
       <style global jsx>{`
         :root {
-          --white-color: #fffefd;
-          --black-color: black;
-          --background-color: var(--black-color);
+          
+          --black-color: #0B0A0A;
+          --background-color: rgba(255, 255, 255, 0.02);
           --primary-color: #daa53c;
+          --primary-color-desat: #FFE082;
           /* Have option for internet explorer without f6*/
           --secondary-color: #1a1a1a;
-          --secondary-color: #1a1a1af6;
+          --white-color: var(--text-high-emphasis);
+          /* 87% */
+          --text-high-emphasis: #ffffffDE;
+          /* 60% */
+          --text-med-emphasis: #ffffff99;
+          /* 38% */
+          --text-disabled: #ffffff61;
           --text-color: var(--white-color);
+
           --color-facebook: #3b5998;
           --color-instagram: #fb3958;
-          --screen-small: 460px;
+          --small-screen: 460px;
         }
 
         html {
@@ -176,8 +175,8 @@ export default function Layout({ children, home, open, setOpen }) {
           padding: 0;
           margin: 0;
           font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-          color: var(--primary-color);
-          background-color: var(--background-color);
+          color: var(--text-color);
+          background-color: var(--black-color);
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           text-align: center;
@@ -381,19 +380,7 @@ export default function Layout({ children, home, open, setOpen }) {
         *:after {
           box-sizing: inherit;
         }
-        body {
-          /* color: hsla(0, 0%, 0%, 0.8); */
-          color: var(--primary-color);
-          background: var(--background-color);
-          font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-          /* font-family: georgia, serif; */
-          font-weight: normal;
-          word-wrap: break-word;
-          font-kerning: normal;
-          -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-          -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-          -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-          font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+        
         }
         img {
           max-width: 100%;
@@ -412,7 +399,8 @@ export default function Layout({ children, home, open, setOpen }) {
         h4,
         h5,
         h6 {
-          text-transform: uppercase;
+          color: var(--primary-color);
+          text-transform: uppercase;          
         }
 
         h1 {
@@ -580,6 +568,7 @@ export default function Layout({ children, home, open, setOpen }) {
           padding-right: 0;
           padding-top: 0;
           margin-bottom: 1.45rem;
+          color: var(--text-color);
         }
         figure {
           margin-left: 0;

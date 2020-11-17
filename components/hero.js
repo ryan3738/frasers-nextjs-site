@@ -6,7 +6,6 @@ export default function Hero(props) {
     <>
       <div id='welcome' className='welcome-container'>
         <div className='welcome-box'>
-          <p className='scroll-text'>SCROLL DOWN</p>
           <div className='welcome-inner-box'>
             {/* <!-- <div class="welcome-contents"> --> */}
             <p className={utilStyles.spacedText}>Est. | 2006</p>
@@ -38,11 +37,11 @@ export default function Hero(props) {
               <strong> CALL FOR TAKEOUT</strong>
             </p>
 
-            <h4>SEATING TIMES</h4>
+            <h4 className='primary-color'>SEATING TIMES</h4>
 
             {/* <!-- <p> <strong>CLOSED</strong> <br>9/8/20 to 9/9/20</p><br> --> */}
             <p>
-              <strong>TUE - THUR</strong> <br />
+              <strong className='primary-color'>TUE - THUR</strong> <br />
               {/* <!-- <span style="white-space: nowrap;"> --> */}
               4:30 | 5:00 | 5:30 | 7:00 | 7:30
               {/* <!-- </span> --> */}
@@ -50,7 +49,7 @@ export default function Hero(props) {
               <br />
             </p>
             <p>
-              <strong>FRI - SAT</strong>
+              <strong className='primary-color'>FRI - SAT</strong>
               <br />
               {/* <!-- <span style="white-space: nowrap;"> --> */}
               4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00
@@ -60,7 +59,7 @@ export default function Hero(props) {
             </p>
             <p>
               {' '}
-              <strong>Sun - Mon</strong> | CLOSED
+              <strong className='primary-color'>Sun - Mon</strong> | CLOSED
               <br />
             </p>
             {/* <!-- </div> --> */}
@@ -68,15 +67,11 @@ export default function Hero(props) {
         </div>
       </div>
       <style jsx>{`
-      .scroll-text{
-        font-size: 0.5rem;
-        margin: 1% 0 1%;
-        /* position: absolute; */
-        /* padding: 10%; */
-        /* margin: 10%; */
-      }
+
+        .primary-color{
+          color : var(--primary-color);
+        }
         .welcome-container {
-          margin-top: 4em;
           display: grid;
           justify-content: center;
           align-content: center;
@@ -95,9 +90,10 @@ export default function Hero(props) {
 
         .welcome-box {
           width: minmax(240px, auto);
-          padding: 0 10% 10%;
+          padding: 10%;
           grid-area: w;
-          background: var(--secondary-color);
+          background: var(--black-color);
+          opacity: .97;
         }
 
         .welcome-inner-box {
@@ -114,7 +110,7 @@ export default function Hero(props) {
 
         .title {
           /* font-size: 3rem; */
-          color: var(--main-white);
+          color: var(--primary-color);
           text-align: center;
           display: none;
         }

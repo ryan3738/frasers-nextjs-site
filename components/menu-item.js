@@ -1,5 +1,4 @@
 import menu from '../public/data/menu.json';
-import utilStyles from '../styles/utils.module.css';
 
 const getMenuItem = (menu, category) => {
   return (
@@ -10,15 +9,18 @@ const getMenuItem = (menu, category) => {
         .map((data) => {
           return (
             <div key={data['Item Name']} className='menu-item'>
-              <h3 className={utilStyles.lightText}>{data['Item Name']}</h3>
+              <h3 className='primary-color'>{data['Item Name']}</h3>
               <p dangerouslySetInnerHTML={{ __html: data.Description }}></p>
-              <p className={utilStyles.lightText}>{data.Price}</p>
+              <p className='primary-color'>{data.Price}</p>
               <style jsx>{`
                 .menu-item {
                   text-align: left;
                   border-radius: 7px;
                   padding: 5%;
-                  background: var(--secondary-color);
+                  background: var(--background-color);
+                }
+                .primary-color {
+                  color: var(--primary-color);
                 }
               `}</style>
             </div>

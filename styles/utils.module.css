@@ -48,7 +48,11 @@
 }
 
 .lightText {
-  color: var(--text-color);
+  color: var(--primary-color);
+}
+
+.primaryColorText {
+  color: var(--primary-color);
 }
 
 .noWrap {

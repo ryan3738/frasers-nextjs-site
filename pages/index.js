@@ -60,6 +60,8 @@ export default function Home({ allPostsData, open, setOpen }) {
         .container {
           width: 100vw;
           max-width: 1200px;
+          background-color: var(--background-color);
+          /* background: var(--background-color); */
         }
         @media (min-width: 460px) {
         }

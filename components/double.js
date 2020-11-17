@@ -19,18 +19,16 @@ const getDoubleItem = (double, category) => {
                 />
               </div>
               <div className='double-item double-text left'>
-                <h3 className='alternating-color'>{data.title}</h3>
-                {data.subTitle ? (
-                  <h4 className='alternating-color'>{data.subTitle}</h4>
-                ) : (
-                  ''
-                )}
+                <h3 className='primary-color'>{data.title}</h3>
+                {data.subTitle ? <h4 className=''>{data.subTitle}</h4> : ''}
 
-                <p className='alternating-color'>{data.content}</p>
+                <p>{data.content}</p>
               </div>
               <style jsx>{`
+                .primary-color {
+                  color: var(--primary-color);
+                }
 
-              
                 .double-container {
                   display: grid;
                   justify-content: center;
@@ -65,9 +63,9 @@ const getDoubleItem = (double, category) => {
                   grid-area: t1;
                 }
 
-                .alternating-color:nth-child(odd) {
+                /* .alternating-color:nth-child(odd) {
                   color: var(--white-color);
-                }
+                } */
 
                 @media (min-width: 460px) {
                   /* .double-text { */

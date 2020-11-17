@@ -50,7 +50,8 @@ export default function Navigation({ open, setOpen }) {
           left: 0;
           z-index: 999;
           position: fixed;
-          background: var(--secondary-color);
+          background: var(--black-color);
+          opacity: .97;
         }
         .nav-list {
           display: flex;
@@ -62,7 +63,7 @@ export default function Navigation({ open, setOpen }) {
         }
 
         .nav-list a:hover {
-          background: var(--color-light);
+          background: var(--primary-color);
           color: var(--background-color);
         }
 

@@ -19,7 +19,7 @@ export default function MenuSection(props) {
           place-self: center;
         } */
         .line {
-          border: 0.5px solid var(--color-light);
+          border: 0.5px solid var(--primary-color);
           width: 100%;
           height: 0px;
         }

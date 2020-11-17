@@ -22,7 +22,7 @@ export default function NavList() {
         }
 
         .nav-list a:hover {
-          background: var(--color-light);
+          background: var(--primary-color);
           color: var(--background-color);
         }
 
