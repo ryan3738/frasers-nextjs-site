@@ -13,7 +13,7 @@ export default function Social(props) {
           width: 45px;
           height: 45px;
           vertical-align: center;
-          background-color: var(--color-main);
+          background-color: var(--primary-color);
           border-radius: 5px;
           grid-column: 1/2;
           margin: 5px;

@@ -23,10 +23,10 @@ export default function Button({ buttonText, buttonLink }) {
           -moz-appearance: none;
           appearance: none;
           cursor: pointer;
-          background-color: var(--color-main);
-          border: 2px solid var(--color-main);
+          background-color: var(--primary-color);
+          border: 2px solid var(--primary-color);
           border-radius: 5px;
-          color: var(--color-black);
+          color: var(--background-color);
           /* display: block; */
           /* padding: 0 5px; */
           margin: 10px 0;
@@ -39,8 +39,8 @@ export default function Button({ buttonText, buttonLink }) {
         button:hover {
           animation-name: background-color;
           animation-duration: 500ms;
-          background-color: var(--color-darker);
-          color: var(--color-white);
+          background-color: var(--secondary-color);
+          color: var(--white-color);
           -webkit-appearance: none;
           -moz-appearance: none;
           appearance: none;

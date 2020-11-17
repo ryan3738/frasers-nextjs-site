@@ -29,7 +29,7 @@
 .footer {
   height: auto;
   width: 100vw;
-  background-color: var(--color-darker);
+  background-color: var(--secondary-color);
   padding: 1em; 
   /* white-space: no-wrap; */
 }

@@ -22,9 +22,9 @@ export default function Burger({ open, setOpen }) {
             justify-content: space-around;
             width: 2rem;
             height: 2rem;
-            background: var(--color-darker);
+            background: var(--secondary-color);
             border: 0;
-            /* box-shadow: 0 0 0 7px var(--color-darker); */
+            /* box-shadow: 0 0 0 7px var(--secondary-color); */
             cursor: pointer;
             padding: 0;
             z-index: 10;
@@ -36,17 +36,17 @@ export default function Burger({ open, setOpen }) {
           div {
             width: 2rem;
             height: 0.25rem;
-            background: var(--color-main);
+            background: var(--primary-color);
             border-radius: 10px;
             transition: all 0.2s linear;
             position: relative;
             transform-origin: 1px;
           }
         `}</style>
-
-        <style animation jsx>{`
+        {/* animation styles */}
+        <style jsx>{`
           div {
-            background: ${open ? 'var(--color-white)' : 'var(--color-main)'};
+            background: ${open ? 'var(--white-color)' : 'var(--primary-color)'};
           }
 
           .top-bun {

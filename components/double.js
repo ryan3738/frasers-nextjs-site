@@ -38,7 +38,7 @@ const getDoubleItem = (double, category) => {
                   grid-template-columns: 0.25em repeat(10, minmax(10px, 108px)) 0.25em;
                   grid-row: repeat(8, minmax(200px, 500px));
                   grid-row: repeat(2, minmax(200px, 500px));
-                  /* background-color: var(--color-darker); */
+                  /* background-color: var(--secondary-color); */
                   grid-template-areas:
                     '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
                     '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .';
@@ -66,7 +66,7 @@ const getDoubleItem = (double, category) => {
                 }
 
                 .alternating-color:nth-child(odd) {
-                  color: var(--color-white);
+                  color: var(--white-color);
                 }
 
                 @media (min-width: 460px) {

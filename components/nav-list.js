@@ -23,7 +23,7 @@ export default function NavList() {
 
         .nav-list a:hover {
           background: var(--color-light);
-          color: var(--color-black);
+          color: var(--background-color);
         }
 
         @media (min-width: 460px) {
@@ -36,7 +36,7 @@ export default function NavList() {
             grid-template-rows: 4em;
             justify-items: center;
             padding: 0% 2%;
-            background: var(--color-darker);
+            background: var(--secondary-color);
             position: sticky;
             top: 0;
           }

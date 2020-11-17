@@ -43,14 +43,14 @@ export default function Navigation({ open, setOpen }) {
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
-          color: var(--color-white);
+          color: var(--white-color);
         }
         .nav-bar {
           right: 0;
           left: 0;
           z-index: 999;
           position: fixed;
-          background: var(--color-darker);
+          background: var(--secondary-color);
         }
         .nav-list {
           display: flex;
@@ -63,7 +63,7 @@ export default function Navigation({ open, setOpen }) {
 
         .nav-list a:hover {
           background: var(--color-light);
-          color: var(--color-black);
+          color: var(--background-color);
         }
 
         .nav-link {

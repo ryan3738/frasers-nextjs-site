@@ -1,3 +1,4 @@
+/* This file is not being used anymore. Styles moved to layout.js */
 :root {
   --color-black: black;
   /* Have option for internet explorer without f6*/
@@ -10,6 +11,11 @@
   --color-facebook:#3b5998;
   --color-instagram: #fb3958;
   --screen-small: 460px;
+
+  --background-color: black;
+  --primary-color: #daa53c;
+  --secondary-color: #1a1a1af6;
+  --text-color: #fffefd;
 }
 
 html {
@@ -21,8 +27,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  color: var(--color-main);
-  background-color: var(--color-black);
+  color: var(--primary-color);
+  background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -63,7 +69,7 @@ template {
 }
 a {
   text-decoration: none;
-  color: var(--color-main);
+  color: var(--primary-color);
   min-height: 48px;
 }
 a {
@@ -230,8 +236,8 @@ html {
 }
 body {
   /* color: hsla(0, 0%, 0%, 0.8); */
-  color: var(--color-main);
-  background: var(--color-black);
+  color: var(--primary-color);
+  background: var(--background-color);
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   /* font-family: georgia, serif; */
   font-weight: normal;

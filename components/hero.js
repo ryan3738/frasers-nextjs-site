@@ -90,18 +90,18 @@ export default function Hero(props) {
           background-repeat: no-repeat;
           background-size: cover;
           background-image: none;
-          background-color: var(--color-black);
+          background-color: var(--background-color);
         }
 
         .welcome-box {
           width: minmax(240px, auto);
           padding: 0 10% 10%;
           grid-area: w;
-          background: var(--color-darker);
+          background: var(--secondary-color);
         }
 
         .welcome-inner-box {
-          outline: thin solid var(--color-main);
+          outline: thin solid var(--primary-color);
           padding: 10%;
         }
 

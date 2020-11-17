@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from './layout.module.css';
+// import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Hero from '../components/hero';
@@ -118,12 +118,12 @@ export default function Layout({ children, home, open, setOpen }) {
         .footer {
           height: auto;
           width: 100vw;
-          background-color: var(--color-darker);
+          background-color: var(--secondary-color);
           padding: 1em;
           /* white-space: no-wrap; */
         }
         .light-text {
-          color: var(--color-white);
+          color: var(--text-color);
         }
 
         .no-wrap {
@@ -146,7 +146,7 @@ export default function Layout({ children, home, open, setOpen }) {
           grid-template-rows: 4em;
           justify-items: center;
           padding: 0% 2%;
-          background: var(--color-darker);
+          background: var(--secondary-color);
           position: sticky;
           top: 0;
         }
@@ -154,14 +154,14 @@ export default function Layout({ children, home, open, setOpen }) {
 
       <style global jsx>{`
         :root {
-          --color-black: black;
+          --white-color: #fffefd;
+          --black-color: black;
+          --background-color: var(--black-color);
+          --primary-color: #daa53c;
           /* Have option for internet explorer without f6*/
-          --color-darker: #1a1a1a;
-          --color-darker: #1a1a1af6;
-          --color-dark: #38290b;
-          --color-main: #daa53c;
-          --color-light: #d4ba98;
-          --color-white: #fffefd;
+          --secondary-color: #1a1a1a;
+          --secondary-color: #1a1a1af6;
+          --text-color: var(--white-color);
           --color-facebook: #3b5998;
           --color-instagram: #fb3958;
           --screen-small: 460px;
@@ -176,8 +176,8 @@ export default function Layout({ children, home, open, setOpen }) {
           padding: 0;
           margin: 0;
           font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-          color: var(--color-main);
-          background-color: var(--color-black);
+          color: var(--primary-color);
+          background-color: var(--background-color);
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           text-align: center;
@@ -218,7 +218,7 @@ export default function Layout({ children, home, open, setOpen }) {
         }
         a {
           text-decoration: none;
-          color: var(--color-main);
+          color: var(--primary-color);
           min-height: 48px;
         }
         a {
@@ -383,8 +383,8 @@ export default function Layout({ children, home, open, setOpen }) {
         }
         body {
           /* color: hsla(0, 0%, 0%, 0.8); */
-          color: var(--color-main);
-          background: var(--color-black);
+          color: var(--primary-color);
+          background: var(--background-color);
           font-family: 'Open Sans', Arial, Helvetica, sans-serif;
           /* font-family: georgia, serif; */
           font-weight: normal;
