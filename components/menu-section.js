@@ -14,13 +14,15 @@ export default function MenuSection(props) {
           /* margin: 0 auto 4rem auto; */
         }
 
-        /* .menu-container {
-          max-width: 1200px;
-          place-self: center;
-        } */
+        .menu-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+
         .line {
           border: 0.5px solid var(--primary-color);
-          width: 100%;
+          width: 80%;
           height: 0px;
         }
       `}</style>

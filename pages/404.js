@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import styles from '../components/layout.module.css';
 import Layout from '../components/layout';
 
 // pages/404.js

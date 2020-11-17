@@ -147,7 +147,7 @@ export default function Layout({ children, home, open, setOpen }) {
         :root {
           
           --black-color: #0B0A0A;
-          --background-color: rgba(255, 255, 255, 0.02);
+          --background-color: rgba(255, 255, 255, 0.03);
           --primary-color: #daa53c;
           --primary-color-desat: #FFE082;
           /* Have option for internet explorer without f6*/
