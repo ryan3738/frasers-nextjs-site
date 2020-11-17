@@ -96,7 +96,6 @@ export default function Hero(props) {
         .welcome-inner-box {
           outline: thin solid var(--primary-color);
           padding: 10%;
-          /*background: var(--background-color);*/
         }
 
         .welcome-logo {

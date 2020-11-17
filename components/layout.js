@@ -2,10 +2,11 @@ import Head from 'next/head';
 // import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Hero from '../components/hero';
+import Hero from './hero';
 import Image from 'next/image';
-import Navigation from '../components/navigation';
-import Button from '../components/button';
+import NavBar from './nav-bar';
+import Button from './button';
+import NavList from './nav-list';
 
 const name = 'Frasers';
 export const siteTitle =
@@ -37,13 +38,13 @@ export default function Layout({ children, home, open, setOpen }) {
       <header className='header'>
         {home ? (
           <>
-            <Navigation open={open} setOpen={setOpen} />
+            <NavBar open={open} setOpen={setOpen} />
             <div className='nav-spacer'></div>
             <Hero />
           </>
         ) : (
           <>
-            <Navigation open={open} setOpen={setOpen} />
+            <NavBar open={open} setOpen={setOpen} />
             <div className='nav-spacer'></div>
           </>
         )}
@@ -64,18 +65,7 @@ export default function Layout({ children, home, open, setOpen }) {
           </a>
         </span>
         <nav className='nav-list'>
-          <Link href='/'>
-            <a className='nav-link'>HOME</a>
-          </Link>
-          <Link href='/#about'>
-            <a className='nav-link'>ABOUT</a>
-          </Link>
-          <Link href='/#menu'>
-            <a className='nav-link'>MENU</a>
-          </Link>
-          <Link href='/#contact'>
-            <a className='nav-link'>CONTACT</a>
-          </Link>
+          <NavList />
         </nav>
       </footer>
       <style jsx>{`
@@ -132,14 +122,8 @@ export default function Layout({ children, home, open, setOpen }) {
           white-space: nowrap;
         }
         .nav-list {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-          grid-template-rows: 4em;
-          justify-items: center;
-          padding: 0% 2%;
-          background: var(--secondary-color);
-          position: sticky;
-          top: 0;
+          display: flex;
+          flex-wrap: wrap;
         }
       `}</style>
 

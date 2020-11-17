@@ -3,9 +3,9 @@ import Burger from './burger';
 import BurgerMenu from './burger-menu';
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks/hooks';
-// import NavList from './nav-list'
+import NavList from './nav-list';
 
-export default function Navigation({ open, setOpen }) {
+export default function NavBar({ open, setOpen }) {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
 
@@ -28,15 +28,7 @@ export default function Navigation({ open, setOpen }) {
           <Link href='/'>
             <a className='title'>FRASERS</a>
           </Link>
-          <Link href='/#about'>
-            <a className='nav-link'>ABOUT</a>
-          </Link>
-          <Link href='/#menu'>
-            <a className='nav-link'>MENU</a>
-          </Link>
-          <Link href='/#contact'>
-            <a className='nav-link'>CONTACT</a>
-          </Link>
+          <NavList showOnLarge />
         </nav>
       </div>
       <style jsx>{`
@@ -50,8 +42,8 @@ export default function Navigation({ open, setOpen }) {
           left: 0;
           z-index: 999;
           position: fixed;
-          background: var(--black-color);
-          opacity: .97;
+          background: var(--background-color);
+          opacity: 0.97;
         }
         .nav-list {
           display: flex;
@@ -63,24 +55,16 @@ export default function Navigation({ open, setOpen }) {
         }
 
         .nav-list a:hover {
-          background: var(--primary-color);
+          background: var(--primary-color-desaturated);
           color: var(--background-color);
         }
 
-        .nav-link {
-          display: none;
-        }
         @media (min-width: 460px) {
           .burger {
             display: none;
           }
           .title {
             display: none;
-          }
-          .nav-link {
-            padding: 1em;
-            margin: auto;
-            display: block;
           }
         }
       `}</style>
