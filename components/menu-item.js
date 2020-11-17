@@ -15,9 +15,11 @@ const getMenuItem = (menu, category) => {
               <style jsx>{`
                 .menu-item {
                   text-align: left;
+                  border-color: var(--primary-color-desaturated);
                   border-radius: 7px;
                   padding: 5%;
                   background: var(--surface-color);
+                  border-color: var(--primary-color-desaturated);
                 }
                 .primary-color {
                   color: var(--primary-color-desaturated);

@@ -22,9 +22,9 @@ import Button from '../components/button';
 //   };
 // }
 
-export default function Home({ allPostsData, open, setOpen }) {
+export default function Home({ allPostsData }) {
   return (
-    <Layout home open={open} setOpen={setOpen}>
+    <Layout>
       <Head>
         <title>{siteTitle}</title>
       </Head>

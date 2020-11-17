@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 
 // pages/404.js
-export default function Custom404({ open, setOpen }) {
+export default function Custom404() {
   return (
     <>
-      <Layout open={open} setOpen={setOpen}>
+      <Layout>
         <div>
           <h1>404 - Page Not Found</h1>
           <Image

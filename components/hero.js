@@ -37,7 +37,7 @@ export default function Hero(props) {
               <strong> CALL FOR TAKEOUT</strong>
             </p>
 
-            <h4>SEATING TIMES</h4>
+            <h4 >SEATING TIMES</h4>
 
             {/* <!-- <p> <strong>CLOSED</strong> <br>9/8/20 to 9/9/20</p><br> --> */}
             <p>
@@ -94,7 +94,7 @@ export default function Hero(props) {
         }
 
         .welcome-inner-box {
-          outline: thin solid var(--primary-color);
+          outline: thin solid var(--primary-color-desaturated);
           padding: 10%;
         }
 

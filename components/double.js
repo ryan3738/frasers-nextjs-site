@@ -42,7 +42,7 @@ const getDoubleItem = (double, category) => {
                 }
 
                 .double-item {
-                  margin: 0 10% 0;
+                  margin: 0 20px 0;
                   text-align: left;
                 }
 
@@ -58,7 +58,7 @@ const getDoubleItem = (double, category) => {
                 }
 
                 .double-text {
-                  margin: 1rem 10% 5rem;
+                  margin: 1rem 20px 5rem;
                   grid-area: t1;
                   background-color: var(--surface-color);
                   padding: 1rem;

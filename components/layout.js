@@ -4,7 +4,6 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Hero from './hero';
 import Image from 'next/image';
-import NavBar from './nav-bar';
 import Button from './button';
 import NavList from './nav-list';
 
@@ -12,7 +11,7 @@ const name = 'Frasers';
 export const siteTitle =
   'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
 
-export default function Layout({ children, home, open, setOpen }) {
+export default function Layout({ children, home}) {
   return (
     <div className='container'>
       <Head>
@@ -38,13 +37,11 @@ export default function Layout({ children, home, open, setOpen }) {
       <header className='header'>
         {home ? (
           <>
-            <NavBar open={open} setOpen={setOpen} />
             <div className='nav-spacer'></div>
             <Hero />
           </>
         ) : (
           <>
-            <NavBar open={open} setOpen={setOpen} />
             <div className='nav-spacer'></div>
           </>
         )}

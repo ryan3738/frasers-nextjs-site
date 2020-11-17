@@ -5,7 +5,7 @@ import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks/hooks';
 import NavList from './nav-list';
 
-export default function NavBar({ open, setOpen }) {
+export default function NavBar({ children, open, setOpen }) {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
 
@@ -31,6 +31,7 @@ export default function NavBar({ open, setOpen }) {
           <NavList showOnLarge />
         </nav>
       </div>
+      {children}
       <style jsx>{`
         .title {
           padding: 0.5em;

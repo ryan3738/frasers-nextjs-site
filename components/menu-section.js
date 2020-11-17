@@ -21,7 +21,7 @@ export default function MenuSection(props) {
         }
 
         .line {
-          border: 0.5px solid var(--primary-color);
+          border: 0.5px solid var(--primary-color-desaturated);
           width: 100%;
           height: 0px;
         }
