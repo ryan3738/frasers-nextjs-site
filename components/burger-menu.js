@@ -10,7 +10,7 @@ export default function BurgerMenu({ open }) {
   return (
     <>
       <nav className='styled-menu'>
-        <NavList />
+        <NavList burgerMenuLink />
       </nav>
       <style jsx>{`
         .styled-menu {
@@ -19,7 +19,7 @@ export default function BurgerMenu({ open }) {
           justify-content: center;
           background: var(--background-color);
           height: 100vh;
-          text-align: right;
+          /* text-align: right; */
           padding: 2rem;
           position: absolute;
           top: 0;
@@ -44,10 +44,6 @@ export default function BurgerMenu({ open }) {
         @media (max-width: 460px) {
           font-size: 1.5rem;
           text-align: center;
-        }
-
-        a:hover {
-          color: var(--medium-emphasis-text);
         }
       `}</style>
       <style jsx>{`
