@@ -39,19 +39,23 @@ export default function Double({
         ) : (
           <>
             <div className='double-item double-text double-right'>
-              <h2 className='alternating-color'>{rightTitle}</h2>
-              <h3 className='alternating-color'>{rightSubtitle}</h3>
-              <div className='alternating-color'>{rightText}</div>
+              <h2 className='primary-color'>{rightTitle}</h2>
+              <h3>{rightSubtitle}</h3>
+              <div className='medium-emphasis'>{rightText}</div>
             </div>
           </>
         )}
 
         <div className='double-item double-text double-left'>
-          <h2 className='alternating-color'>{title}</h2>
-          <h3 className='alternating-color'>{subtitle}</h3>
-          <div className='alternating-color'>{children}</div>
+          <h2 className='primary-color'>{title}</h2>
+          <h3 >{subtitle}</h3>
+          <div className='medium-emphasis'>{children}</div>
         </div>
         <style jsx>{`
+          .primary-color {
+            color: var(--primary-color-desaturated);
+          }
+
           .double-container {
             display: grid;
             justify-content: center;

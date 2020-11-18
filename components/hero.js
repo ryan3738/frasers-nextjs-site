@@ -18,6 +18,7 @@ export default function Hero(props) {
               layout='responsive'
               width={228}
               height={104}
+              priority={true}
             />
 
             {/* <!-- <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> --> */}

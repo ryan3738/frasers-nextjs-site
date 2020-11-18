@@ -19,9 +19,10 @@ const getGalleryItem = (gallery) => {
                   className='image'
                   src={data.imageSource}
                   alt={data.imageAlt}
-                  layout='intrinsic'
+                  // layout='fill'
                   height='612'
                   width='612'
+                  // unoptimized={true}
                   // unsized='true'
                 />
               </div>
