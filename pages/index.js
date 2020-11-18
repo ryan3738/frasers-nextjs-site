@@ -4,10 +4,11 @@ import utilStyles from '../styles/utils.module.css';
 // import { getSortedPostsData } from '../lib/posts';
 import Date from '../components/date';
 import MenuSection from '../components/menu-section';
-import Double from '../components/double';
+import Double from '../components/double.tsx';
 import GalleryGrid from '../components/gallery-grid';
 import Contact from '../components/contact';
 import Button from '../components/button';
+import doubleItems from '../public/data/double.json';
 
 // export async function getStaticProps() {
 //   const allPostsData = getSortedPostsData();
@@ -30,10 +31,26 @@ export default function Home({ allPostsData }) {
       </Head>
       <section id='about' className='container'>
         <h1 className='header hidden-header'>ABOUT</h1>
-        <Double category='special' />
-        <Double category='about' />
+        {/* <Double category='special' /> */}
+        {/* <Double category='about' /> */}
+        <Double
+          title='Special'
+          subtitle='Special subtitle'
+          imageSource='/images/rhubarb-margarita-mayhem-square.jpg'
+          imageAlt='Rhubarb Margarita Special'
+        >
+          This is a special!!!
+        </Double>
+        <Double
+          title='Special'
+          subtitle='Special subtitle'
+          imageSource='/images/rhubarb-margarita-mayhem-square.jpg'
+          imageAlt='Rhubarb Margarita Special'
+          imageLeft
+        >
+          This is a special!!!
+        </Double>
         <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' />
-        
       </section>
       <section id='menu' className='container'>
         <h1 className='header hidden-header'>MENU</h1>
