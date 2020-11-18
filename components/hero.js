@@ -8,13 +8,16 @@ export default function Hero(props) {
         <div className='welcome-box'>
           <div className='welcome-inner-box'>
             {/* <!-- <div class="welcome-contents"> --> */}
-            <p className={utilStyles.spacedText}>Est. | 2006</p>
+            <p className='spaced-text'>Est. | 2006</p>
             <h1 className='title'>FRASERS</h1>
 
-            <img
+            <Image
               className='welcome-logo'
-              src='images/frasers-logo.gif'
+              src='/images/frasers-logo.png'
               alt='Frasers Gourmet Hideaway Logo'
+              layout='responsive'
+              width={228}
+              height={104}
             />
 
             {/* <!-- <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> --> */}
@@ -37,7 +40,7 @@ export default function Hero(props) {
               <strong> CALL FOR TAKEOUT</strong>
             </p>
 
-            <h4 >SEATING TIMES</h4>
+            <h4>SEATING TIMES</h4>
 
             {/* <!-- <p> <strong>CLOSED</strong> <br>9/8/20 to 9/9/20</p><br> --> */}
             <p>
@@ -45,7 +48,6 @@ export default function Hero(props) {
               <span className='medium-emphasis'>
                 4:30 | 5:00 | 5:30 | 7:00 | 7:30
               </span>
-              <br />
               <br />
             </p>
             <p>
@@ -55,10 +57,8 @@ export default function Hero(props) {
                 4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00
               </span>
               <br />
-              <br />
             </p>
             <p>
-              {' '}
               <strong>Sun - Mon</strong> |{' '}
               <span className='medium-emphasis'>CLOSED</span>
               <br />
@@ -111,9 +111,14 @@ export default function Hero(props) {
           text-align: center;
           display: none;
         }
+        .spaced-text {
+          letter-spacing: 0.5rem;
+          margin-bottom: 1rem;
+        }
         @media (min-width: 460px) {
           .welcome-container {
             background-image: url('images/calamari-blue-cheese-sauce.jpg');
+          }
         }
       `}</style>
     </>

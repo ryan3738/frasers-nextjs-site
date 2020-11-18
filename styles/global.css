@@ -1,22 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local('.SFNSText-Light'), local('.HelveticaNeueDeskInterface-Light'),
+    local('.LucidaGrandeUI'), local('Ubuntu Light'), local('Segoe UI Light'),
+    local('Roboto-Light'), local('DroidSans'), local('Tahoma');
+}
 
-html {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+html,
+body {
+  /* font-family: system; */
+  /* font-family: 'Open Sans', Arial, Helvetica, sans-serif; */
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
-body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   color: var(--high-emphasis-text);
   background-color: var(--black-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  /* text-justify: center; */
   font-size: 100%;
   line-height: 1.5rem;
+  letter-spacing: 0.03125em;
 }
 article,
 aside,
@@ -201,7 +211,7 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  /* font: 112.5%/1.45em 'Open Sans', Arial, Helvetica, sans-serif; */
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -246,8 +256,8 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
