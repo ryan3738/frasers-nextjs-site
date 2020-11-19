@@ -1,16 +1,13 @@
-[
-    {
-        "Address": "1191 SE Dock St #101 Oak Harbor, WA 98277",
-        "Phone-Number": "360-320-3117",
-        "Hours": {
-            "Sunday": "Closed",
-            "Monday": "Closed",
-            "Tuesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
-            "Wednesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
-            "Thursday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
-            "Friday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00",
-            "Saturday" : "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00"
-        }
-
+{
+    "Address": "1191 SE Dock St #101 Oak Harbor, WA 98277",
+    "Phone-Number": "360-320-3117",
+    "Hours": {
+        "Sunday": "Closed",
+        "Monday": "Closed",
+        "Tuesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Wednesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Thursday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Friday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00",
+        "Saturday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00"
     }
-]
+}
