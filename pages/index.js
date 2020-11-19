@@ -116,9 +116,7 @@ export default function Home({ allPostsData }) {
           @media (min-width: 460px) {
           }
         `}</style>
-        
       </Layout>
-      
     </>
   );
 }
