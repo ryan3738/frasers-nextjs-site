@@ -7,9 +7,8 @@
 // };
 // next.config.js
 
-
-//For netlify hosting support
-// module.exports = {
-//   // Target must be serverless
-//   target: "serverless",
-// };
+// For netlify hosting support
+module.exports = {
+  // Target must be serverless
+  target: 'serverless',
+};
