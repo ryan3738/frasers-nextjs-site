@@ -1,0 +1,36 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+  # site_domain: https://localhost:3000
+
+# This line should *not* be indented
+# uncomment to add editorial workflow
+# publish_mode: editorial_workflow
+
+# This line should *not* be indented
+media_folder: "/images/uploads" # Media files will be stored in the repo under images/uploads
+
+
+collections:
+  - label: "Content"
+  name: "content"
+  files:
+    - label: "Site Configuration"
+      name: "site-config"
+      file: "public\data\config.json"
+      fields:
+        - {label: Title, name: title, widget: string}
+        - {label: Intro, name: intro, widget: markdown}
+
+
+
+
+
+
+  - name: "site-config" # Used in routes, e.g., /admin/collections/blog
+    label: "Site Configuration" # Used in the UI
+    files: "public\data\config.json" # The path to the folder where the documents are stored
+
+    fields: # The fields for each document, usually in front matter
+      - {label: "Address", name: "Address", widget: "string", default: "put address here"}
+      - {label: "Phone-Number", name: "Phone Number", widget: "string"}
