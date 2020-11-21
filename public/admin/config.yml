@@ -15,3 +15,19 @@ collections:
         fields:
           - { label: Address, name: address, widget: string }
           - { label: Phone Number, name: phoneNumber, widget: string }
+      - label: 'Menu'
+        name: 'Menu'
+        file: '/public/data/menu.json'
+        fields:
+          - { label: Menu, name: menu, widget: list }
+      - label: 'Double Contents'
+        name: 'DoubleContents'
+        file: '/public/data/double.json'
+        fields:
+          - label: 'Double'
+            name: ''
+            widget: 'list'
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Title, name: title, widget: string }
