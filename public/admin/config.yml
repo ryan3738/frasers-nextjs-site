@@ -45,7 +45,7 @@ collections:
             name: menu
             widget: list
             add_to_top: true
-            label_singular: add new menu item
+            label_singular: new menu item
             summary: '{{fields.name}} - {{fields.description}} - {{fields.price}}'
             fields:
               - { label: Name, name: itemName, widget: string }
