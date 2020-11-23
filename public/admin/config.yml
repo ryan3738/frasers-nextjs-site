@@ -1,4 +1,7 @@
 backend:
+  # test cms layout locally
+  # name: test-repo
+  # use cms layout from github
   name: git-gateway
   branch: main
 
@@ -38,4 +41,8 @@ collections:
         name: 'Menu'
         file: '/public/data/menu.json'
         fields:
-          - { label: Menu, name: menu, widget: list }
+          - label: The Menu
+            name: menu
+            widget: list
+            fields:
+              - { label: Name, name: itemName, widget: string }

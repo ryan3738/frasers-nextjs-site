@@ -1,7 +1,7 @@
 [
   {
     "Token": "L5HH5GLJNWSVGPYP64ZCFJOC",
-    "Item Name": "Tomato & Burrata",
+    "itemName": "Tomato & Burrata",
     "Description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, baba ghanoush ",
     "Category": "Starters",
     "Modifier": "",
@@ -10,7 +10,7 @@
   },
   {
     "Token": "L5HH5GLJNWSVGPYP64ZCFJOC",
-    "Item Name": "Example",
+    "itemName": "Example",
     "Description": "This is an example item, please do not delete :)",
     "Category": "Entrees",
     "Modifier": "Add Info -40",
@@ -19,7 +19,7 @@
   },
   {
     "Token": "EJGRZ33IPFSKGIXZRP3DG2IT",
-    "Item Name": "BEEF & CHORIZO EMPANADAS",
+    "itemName": "BEEF & CHORIZO EMPANADAS",
     "Description": "Rice & black bean salad, chimichurro aioli",
     "Category": "Starters",
     "Variation Name": "Regular",
@@ -30,7 +30,7 @@
   },
   {
     "Token": "L5HH5GLJNWSVGPYP64ZCFJOC",
-    "Item Name": "BEEF BURGUNDY",
+    "itemName": "BEEF BURGUNDY",
     "Description": "Braised beef medallions in a red wine reduction, house made buttered noodles",
     "Category": "Entrees",
     "Variation Name": "Regular",
@@ -41,7 +41,7 @@
   },
   {
     "Token": "D2CLK5QNRVVMOQNZTNHTS354",
-    "Item Name": "BEEF TENDERLOIN",
+    "itemName": "BEEF TENDERLOIN",
     "Description": "Bacon wrapped brie filled filet, scalloped potatoes, veg, peppercorn sauce",
     "Category": "Entrees",
     "Variation Name": "Regular",
@@ -52,7 +52,7 @@
   },
   {
     "Token": "XGDSRMQQTZEFVZN26C3LYYSX",
-    "Item Name": "BRAISED SMOKED KUROBUTA PORK SHANK",
+    "itemName": "BRAISED SMOKED KUROBUTA PORK SHANK",
     "Description": "Spätzle, currywurst, pickled red cabbage, mustard sauce",
     "Category": "Entrees",
     "Variation Name": "Regular",
@@ -63,7 +63,7 @@
   },
   {
     "Token": "26DUZH5KEOZQ5W5J4MRSOPY7",
-    "Item Name": "BURIED CANE CABERNET SAUVIGNON, WA",
+    "itemName": "BURIED CANE CABERNET SAUVIGNON, WA",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 26,
@@ -75,7 +75,7 @@
   },
   {
     "Token": "7MKAPSUPUKQAR2MJC5DMFWIZ",
-    "Item Name": "CAESAR SALAD",
+    "itemName": "CAESAR SALAD",
     "Description": "Chopped romaine lettuce, crispy prosciutto, fried capers, Parmesan<br /> -GF",
     "Category": "Starters",
     "Variation Name": "Regular",
@@ -86,7 +86,7 @@
   },
   {
     "Token": "QONDZFP7ZULJLNZNEAPYAB2R",
-    "Item Name": "CHOCOLATE GRAND MARNIER CAKE",
+    "itemName": "CHOCOLATE GRAND MARNIER CAKE",
     "Description": "Flourless chocolate Grand Marnier mousse cake with hazelnut crust dusted with cocoa powder<br /> -GF",
     "Category": "Desserts",
     "Variation Name": "Regular",
@@ -97,7 +97,7 @@
   },
   {
     "Token": "KCDCUFIGEKEN2DS5BKFF33D6",
-    "Item Name": "CHRISTOPHER MICHAEL PINOT NOIR, OR",
+    "itemName": "CHRISTOPHER MICHAEL PINOT NOIR, OR",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 21,
@@ -109,7 +109,7 @@
   },
   {
     "Token": "GBN4WHNDF5UM3QK34QJZRJLQ",
-    "Item Name": "CIPRESSO ROSE, IT",
+    "itemName": "CIPRESSO ROSE, IT",
     "Category": "White Wine",
     "Variation Name": "Regular",
     "Price": 24,
@@ -121,7 +121,7 @@
   },
   {
     "Token": "EHUVYIRSTHUW7KY7UX3KOJKO",
-    "Item Name": "DR. LOOSEN RIESLING, Germany",
+    "itemName": "DR. LOOSEN RIESLING, Germany",
     "Category": "White Wine",
     "Variation Name": "Regular",
     "Price": 21,
@@ -133,7 +133,7 @@
   },
   {
     "Token": "LGZKATQIMKNQHFHWOZSEGV6U",
-    "Item Name": "DRY GARLIC BABY BACK RIBS",
+    "itemName": "DRY GARLIC BABY BACK RIBS",
     "Description": "Baby back ribs covered with a dry garlic bbq sauce <br />-GF",
     "Category": "Starters",
     "Variation Name": "Regular",
@@ -144,7 +144,7 @@
   },
   {
     "Token": "OFVMRO35B72AXLXMOP5SBYXG",
-    "Item Name": "DUNGENESS CRAB CAKES",
+    "itemName": "DUNGENESS CRAB CAKES",
     "Description": "Fried dungeness crab cakes",
     "Category": "Starters",
     "Variation Name": "Regular",
@@ -155,7 +155,7 @@
   },
   {
     "Token": "UMUYEGKMBLZLU4ZFRWB7TNLK",
-    "Item Name": "ECLIPTIC \"CAPELLA\" PORTER 16oz",
+    "itemName": "ECLIPTIC \"CAPELLA\" PORTER 16oz",
     "Category": "Beer",
     "Variation Name": "16oz",
     "Price": 5,
@@ -167,7 +167,7 @@
   },
   {
     "Token": "YLT6C7YZKUPOM4EQ47GXVMQS",
-    "Item Name": "ECLIPTIC, IPA 12oz",
+    "itemName": "ECLIPTIC, IPA 12oz",
     "Category": "Beer",
     "Variation Name": "12oz",
     "Price": 3,
@@ -179,7 +179,7 @@
   },
   {
     "Token": "CTIXZT7HGUCRMEP6FVFTRPLT",
-    "Item Name": "ERATH PINOT GRIS, OR",
+    "itemName": "ERATH PINOT GRIS, OR",
     "Category": "White Wine",
     "Variation Name": "750ml",
     "Price": 21,
@@ -191,7 +191,7 @@
   },
   {
     "Token": "HOG6G5SX2X6MKBCPHXQVKRRR",
-    "Item Name": "FONDUE FOR TWO",
+    "itemName": "FONDUE FOR TWO",
     "Description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread<br />-Vegetarian",
     "Category": "Starters",
     "Variation Name": "Regular",
@@ -202,7 +202,7 @@
   },
   {
     "Token": "4P54AUCPOTH2FGPNSCHKNELM",
-    "Item Name": "FRESH STRAWBERRIES, PASSIONFRUIT SABAYON",
+    "itemName": "FRESH STRAWBERRIES, PASSIONFRUIT SABAYON",
     "Description": "Fresh sliced strawberries in an almond cookie shell topped with a passionfruit sabayon",
     "Category": "Desserts",
     "Variation Name": "Regular",
@@ -213,7 +213,7 @@
   },
   {
     "Token": "2GHPDIYD6WE4QBMQJGFUVQWQ",
-    "Item Name": "GORDON ESTATE CHARDONNAY, WA",
+    "itemName": "GORDON ESTATE CHARDONNAY, WA",
     "Category": "White Wine",
     "Variation Name": "750ml",
     "Price": 21,
@@ -225,7 +225,7 @@
   },
   {
     "Token": "HIGMJRYJMDBIU6YGR2PSPLTJ",
-    "Item Name": "INTRINSIC 52% CAB/44% MALBEC, WA",
+    "itemName": "INTRINSIC 52% CAB/44% MALBEC, WA",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 30,
@@ -237,7 +237,7 @@
   },
   {
     "Token": "XVB2SRKP3QI36TLPMJC767UM",
-    "Item Name": "KLINKER BRICK WINERY LODI OLD VINE ZINFANDEL, CA",
+    "itemName": "KLINKER BRICK WINERY LODI OLD VINE ZINFANDEL, CA",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 29,
@@ -249,7 +249,7 @@
   },
   {
     "Token": "HNNREP2C4RPNGZ7524EAP4WV",
-    "Item Name": "MARYHILL VIOGNER, WA",
+    "itemName": "MARYHILL VIOGNER, WA",
     "Category": "White Wine",
     "Variation Name": "Regular",
     "Price": 24,
@@ -261,7 +261,7 @@
   },
   {
     "Token": "NGMSPR7VIQ55O2NMXELX3TKG",
-    "Item Name": "NORTH AFRICAN SEAFOOD STEW",
+    "itemName": "NORTH AFRICAN SEAFOOD STEW",
     "Description": "Prawns, scallops, snapper, mussels, coconut african spiced curry, couscous",
     "Category": "Entrees",
     "Variation Name": "Regular",
@@ -272,7 +272,7 @@
   },
   {
     "Token": "5U6JNXDXCZNOIL7S52ACEZSY",
-    "Item Name": "ORIN SWIFT \"8 YEARS IN THE DESERT\", ZINFANDEL BLEND, CA",
+    "itemName": "ORIN SWIFT \"8 YEARS IN THE DESERT\", ZINFANDEL BLEND, CA",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 42,
@@ -284,7 +284,7 @@
   },
   {
     "Token": "ZFZ3MZIT2MFIRAZCHYKEWHIA",
-    "Item Name": "ORIN SWIFT \"ABSTRACT\" SYRAH PETITE SYRAH GRENACHE, NAPA",
+    "itemName": "ORIN SWIFT \"ABSTRACT\" SYRAH PETITE SYRAH GRENACHE, NAPA",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 40,
@@ -296,7 +296,7 @@
   },
   {
     "Token": "L62RCMXFAZDY7WNR7HYU5EWP",
-    "Item Name": "ORIN SWIFT CHARDONNAY, CA",
+    "itemName": "ORIN SWIFT CHARDONNAY, CA",
     "Category": "White Wine",
     "Variation Name": "750ml",
     "Price": 31,
@@ -308,7 +308,7 @@
   },
   {
     "Token": "DJHFMK22ERKE6IWMMLQAE2MK",
-    "Item Name": "PFRIEM PILSNER 12oz",
+    "itemName": "PFRIEM PILSNER 12oz",
     "Category": "Beer",
     "Variation Name": "12oz",
     "Price": 3,
@@ -320,7 +320,7 @@
   },
   {
     "Token": "3CIFPN7IHEUF2XBEYCUDJWRU",
-    "Item Name": "RACK OF LAMB",
+    "itemName": "RACK OF LAMB",
     "Description": "Rosemary roasted baby potatoes, maple glazed vegetables, peppercorn cream sauce<br /> -GF",
     "Category": "Entrees",
     "Variation Name": "Regular",
@@ -331,7 +331,7 @@
   },
   {
     "Token": "7RMH5RGF5677AYMSJDICWUY7",
-    "Item Name": "ROMBAUER SAUVIGNON BLANC, CA",
+    "itemName": "ROMBAUER SAUVIGNON BLANC, CA",
     "Category": "White Wine",
     "Variation Name": "750ml",
     "Price": 26,
@@ -343,7 +343,7 @@
   },
   {
     "Token": "RYN5YB7LGKD6LCRNZ2SHNDPV",
-    "Item Name": "SAMUEL SMITH NUT BROWN ALE 12oz",
+    "itemName": "SAMUEL SMITH NUT BROWN ALE 12oz",
     "Category": "Beer",
     "Variation Name": "12oz",
     "Price": 3,
@@ -355,7 +355,7 @@
   },
   {
     "Token": "L2GFWXXORDS7DPEEGSESZL3I",
-    "Item Name": "SCUTTLEBUTT AMBER 12oz",
+    "itemName": "SCUTTLEBUTT AMBER 12oz",
     "Category": "Beer",
     "Variation Name": "12oz",
     "Price": 3,
@@ -367,7 +367,7 @@
   },
   {
     "Token": "UGQWFEBUGTWNIFUTXXX2KN76",
-    "Item Name": "SEAFOOD CHOWDER",
+    "itemName": "SEAFOOD CHOWDER",
     "Description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
     "Category": "Starters",
     "Variation Name": "Regular",
@@ -378,7 +378,7 @@
   },
   {
     "Token": "23EU6BTVYQOQQWTIWELEFSSP",
-    "Item Name": "SEAFOOD LASAGNA",
+    "itemName": "SEAFOOD LASAGNA",
     "Description": "Dungeness crab, bay shrimp, lobster cream sauce",
     "Category": "Entrees",
     "Variation Name": "Quantity",
@@ -389,7 +389,7 @@
   },
   {
     "Token": "2RW4H5FV6XXYY276JBUJOAEW",
-    "Item Name": "STRAWBERRY RHUBARB & GOAT CHEESE TARTLET",
+    "itemName": "STRAWBERRY RHUBARB & GOAT CHEESE TARTLET",
     "Description": "Creamy goat cheese tartlet topped with a strawberry rhubarb compote",
     "Category": "Desserts",
     "Variation Name": "Regular",
@@ -400,7 +400,7 @@
   },
   {
     "Token": "BIRDNLVIY42JIHSCH3JN4F53",
-    "Item Name": "TEST CAKE",
+    "itemName": "TEST CAKE",
     "Description": "Do not order this item. It does not taste good. Also, it does not exist. Why are you ordering free cake anyways?",
     "Category": "Desserts",
     "Variation Name": "Regular",
@@ -411,7 +411,7 @@
   },
   {
     "Token": "BBRC2OVUARXP5KPX6KVUOFTZ",
-    "Item Name": "THE EYRIE VINEYARDS PINOT NOIR, OR",
+    "itemName": "THE EYRIE VINEYARDS PINOT NOIR, OR",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 40,
@@ -423,7 +423,7 @@
   },
   {
     "Token": "PX6CK3URBE5HKETCCWKBV6CM",
-    "Item Name": "TIRAMISU",
+    "itemName": "TIRAMISU",
     "Description": "Coffee-soaked ladyfingers and mascarpone cream dusted with cocoa powder",
     "Category": "Desserts",
     "Variation Name": "Regular",
@@ -434,7 +434,7 @@
   },
   {
     "Token": "55YX2HWYG4BJTH4DA4RQ3YKL",
-    "Item Name": "TOWNSEND VORTEX BORDEAUX BLEND, WA",
+    "itemName": "TOWNSEND VORTEX BORDEAUX BLEND, WA",
     "Category": "Red Wine",
     "Variation Name": "750ml",
     "Price": 26,
@@ -446,7 +446,7 @@
   },
   {
     "Token": "EKM5TT7FUH2IMITFSPY2DMQ4",
-    "Item Name": "VEGETABLE GNOCCHI",
+    "itemName": "VEGETABLE GNOCCHI",
     "Description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce<br /> -Vegetarian",
     "Category": "Entrees",
     "Variation Name": "Regular",
@@ -457,7 +457,7 @@
   },
   {
     "Token": "JHPR6AKAODOKXAJAMLARNEDO",
-    "Item Name": "VEGETABLE LASAGNA",
+    "itemName": "VEGETABLE LASAGNA",
     "Description": "Layers of pasta and grilled vegetables, tomato, smoked mozzarella",
     "Category": "Entrees",
     "Variation Name": "Regular",
@@ -468,7 +468,7 @@
   },
   {
     "Token": "MRRHOLVLY6O2GVVIU3KX7UAL",
-    "Item Name": "VIETTA MOSCATO D'ASTI, IT",
+    "itemName": "VIETTA MOSCATO D'ASTI, IT",
     "Category": "White Wine",
     "Variation Name": "750ml",
     "Price": 26,
@@ -480,7 +480,7 @@
   },
   {
     "Token": "MO5CQYGVVM4IMMD2B3NBFGIE",
-    "Item Name": "VIETTA MOSCATO D'ASTI, IT",
+    "itemName": "VIETTA MOSCATO D'ASTI, IT",
     "Category": "White Wine",
     "Variation Name": "375ml",
     "Price": 15,
@@ -492,7 +492,7 @@
   },
   {
     "Token": "GZPRWKF6ULBXW3PA4OUEBI3H",
-    "Item Name": "YOUNG GREENS SEASONAL SALAD",
+    "itemName": "YOUNG GREENS SEASONAL SALAD",
     "Description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette<br /> -GF -Vegetarian",
     "Category": "Starters",
     "Variation Name": "Regular",

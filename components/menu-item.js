@@ -8,8 +8,8 @@ const getMenuItem = (menu, category) => {
         //   .filter((e) => e.Available === true)
         .map((data) => {
           return (
-            <div key={data['Item Name']} className='menu-item'>
-              <h3 className='primary-color'>{data['Item Name']}</h3>
+            <div key={data['itemName']} className='menu-item'>
+              <h3 className='primary-color'>{data['itemName']}</h3>
               <p dangerouslySetInnerHTML={{ __html: data.Description }}></p>
               <p className='primary-color'>{data.Price}</p>
               <style jsx>{`
