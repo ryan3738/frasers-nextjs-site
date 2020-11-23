@@ -9,14 +9,6 @@
       "available": true
     },
     {
-      "itemName": "Example",
-      "description": "This is an example item, please do not delete :)",
-      "category": "Starters",
-      "price": 10,
-      "modifier": "Add Info -40",
-      "available": false
-    },
-    {
       "itemName": "BEEF & CHORIZO EMPANADAS",
       "description": "Rice & black bean salad, chimichurro aioli",
       "category": "Starters",
@@ -319,6 +311,14 @@
       "category": "Starters",
       "price": 8,
       "modifier": "",
+      "available": false
+    },
+    {
+      "itemName": "Example",
+      "description": "This is an example item, please do not delete :)",
+      "category": "Starters",
+      "price": 10,
+      "modifier": "Add Info",
       "available": false
     }
   ]
