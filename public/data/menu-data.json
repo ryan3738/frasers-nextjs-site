@@ -58,10 +58,10 @@
     },
     {
       "itemName": "CAESAR SALAD",
-      "description": "Chopped romaine lettuce, crispy prosciutto, fried capers, Parmesan<br /> -GF",
+      "description": "Romaine, crispy prosciutto, fried capers, parmesan black olive hemp tuille",
       "category": "Starters",
-      "modifier": "",
-      "price": 10,
+      "modifier": "Add Smoked Mussels 4",
+      "price": 12,
       "available": true
     },
     {
