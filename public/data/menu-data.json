@@ -22,7 +22,7 @@
       "category": "Starters",
       "price": 12,
       "modifier": "",
-      "available": true
+      "available": false
     },
     {
       "itemName": "BEEF BURGUNDY",
