@@ -41,12 +41,16 @@ collections:
         name: 'Menu'
         file: '/public/data/menu-data.json'
         fields:
+          - label: Category
+            name: Category
+            widget: object
+            fields:
+              - { label: Category, name: category, widget: list }
           - label: Menu
             name: menu
             widget: list
             add_to_top: true
             label_singular: new menu item
-            filter: { field: 'category', value: 'Entrees' }
             fields:
               - { label: Name, name: itemName, widget: string }
               - {
