@@ -49,7 +49,12 @@ collections:
             summary: '{{fields.name}} - {{fields.description}} - {{fields.price}}'
             fields:
               - { label: Name, name: itemName, widget: string }
-              - { label: Description, name: description, widget: string }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: string,
+                  required: false,
+                }
               - {
                   label: Category,
                   name: category,
