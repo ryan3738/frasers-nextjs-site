@@ -9,9 +9,20 @@ const getMenuItem = (menuData, category) => {
         .map((data) => {
           return (
             <div key={data['itemName']} className='menu-item'>
-              <h3 className='primary-color'>{data['itemName']}</h3>
-              <p dangerouslySetInnerHTML={{ __html: data.description }}></p>
-              <p className='primary-color'>{data.price}</p>
+              <h3 className='primary-color'>{data.itemName}</h3>
+              <div dangerouslySetInnerHTML={{ __html: data.description }}></div>
+              <br />
+              <div className='primary-color'>{data.price}</div>
+
+              {data.modifier ? (
+                <div>
+                  <br />
+                  {data.modifier}&nbsp;
+                  <span className='primary-color'>{data.modifierPrice}</span>
+                </div>
+              ) : (
+                ''
+              )}
               <style jsx>{`
                 .menu-item {
                   text-align: left;
