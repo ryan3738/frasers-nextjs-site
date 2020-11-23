@@ -5,7 +5,7 @@ const getMenuItem = (menuData, category) => {
     <>
       {menuData.menu
         .filter((e) => e.category === category)
-        //   .filter((e) => e.available === true)
+        .filter((e) => e.available === true)
         .map((data) => {
           return (
             <div key={data['itemName']} className='menu-item'>
