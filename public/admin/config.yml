@@ -41,9 +41,10 @@ collections:
         name: 'Menu'
         file: '/public/data/menu-data.json'
         fields:
-          - label: The Menu
+          - label: Menu
             name: menu
             widget: list
+            summary: '{{fields.name}} - {{fields.description}} - {{fields.price}}'
             fields:
               - { label: Name, name: itemName, widget: string }
               - { label: Description, name: description, widget: string }
