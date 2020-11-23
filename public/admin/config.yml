@@ -47,7 +47,12 @@ collections:
             summary: '{{fields.name}} - {{fields.description}} - {{fields.price}}'
             fields:
               - { label: Name, name: itemName, widget: string }
-              - { label: Description, name: description, widget: string }
+              - {
+                  label: Description,
+                  name: description,
+                  widget: select,
+                  options: ['Starters', 'Entrees', 'Dessert'],
+                }
               - { label: Category, name: category, widget: string }
               - { label: Modifier, name: modifier, widget: string }
               - { label: Price, name: price, widget: number }
