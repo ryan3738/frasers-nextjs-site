@@ -1,0 +1,20 @@
+{
+    "address": {
+        "street": "1191 SE Dock St",
+        "street2": "#101",
+        "city": "Oak Harbor",
+        "state": "WA",
+        "zipCode": "98277"
+    },
+    "phoneNumber": "360-320-3117",
+    "email": "",
+    "hours": {
+        "Sunday": "Closed",
+        "Monday": "Closed",
+        "Tuesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Wednesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Thursday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Friday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00",
+        "Saturday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00"
+    }
+}

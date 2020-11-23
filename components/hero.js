@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import siteData from '../public/data/site-data.json';
 import utilStyles from '../styles/utils.module.css';
 
 export default function Hero(props) {
