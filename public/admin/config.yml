@@ -31,3 +31,6 @@ collections:
               - { label: Title, name: title, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Title, name: title, widget: string }
+  - label: 'Menu'
+    name: 'menu'
+    files:
