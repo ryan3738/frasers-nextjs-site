@@ -47,3 +47,7 @@ collections:
             fields:
               - { label: Name, name: itemName, widget: string }
               - { label: Description, name: description, widget: string }
+              - { label: Category, name: category, widget: string }
+              - { label: Modifier, name: modifier, widget: string }
+              - { label: Price, name: price, widget: number }
+              - { label: Available, name: available, widget: boolean }
