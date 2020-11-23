@@ -34,3 +34,8 @@ collections:
   - label: 'Menu'
     name: 'menu'
     files:
+      - label: 'Menu'
+        name: 'Menu'
+        file: '/public/data/menu.json'
+        fields:
+          - { label: Menu, name: menu, widget: list }
