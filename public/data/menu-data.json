@@ -1,4 +1,11 @@
 {
+  "Category": {
+    "category": [
+      "Starters",
+      "Entrees",
+      "Desserts"
+    ]
+  },
   "menu": [
     {
       "itemName": "Tomato & Burrata",
