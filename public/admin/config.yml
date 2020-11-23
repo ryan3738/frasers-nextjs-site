@@ -39,10 +39,11 @@ collections:
     files:
       - label: 'Menu'
         name: 'Menu'
-        file: '/public/data/menu.json'
+        file: '/public/data/menu-data.json'
         fields:
           - label: The Menu
             name: menu
             widget: list
             fields:
               - { label: Name, name: itemName, widget: string }
+              - { label: Description, name: description, widget: string }

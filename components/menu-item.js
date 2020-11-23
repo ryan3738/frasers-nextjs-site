@@ -1,17 +1,17 @@
-import menu from '../public/data/menu.json';
+import menuData from '../public/data/menu-data.json';
 
-const getMenuItem = (menu, category) => {
+const getMenuItem = (menuData, category) => {
   return (
     <>
-      {menu
-        .filter((e) => e.Category === category)
-        //   .filter((e) => e.Available === true)
+      {menuData.menu
+        .filter((e) => e.category === category)
+        //   .filter((e) => e.available === true)
         .map((data) => {
           return (
             <div key={data['itemName']} className='menu-item'>
               <h3 className='primary-color'>{data['itemName']}</h3>
-              <p dangerouslySetInnerHTML={{ __html: data.Description }}></p>
-              <p className='primary-color'>{data.Price}</p>
+              <p dangerouslySetInnerHTML={{ __html: data.description }}></p>
+              <p className='primary-color'>{data.price}</p>
               <style jsx>{`
                 .menu-item {
                   text-align: left;
@@ -35,7 +35,9 @@ const getMenuItem = (menu, category) => {
 export default function MenuItem(props) {
   return (
     <div>
-      <div className='menu-section'>{getMenuItem(menu, props.category)}</div>
+      <div className='menu-section'>
+        {getMenuItem(menuData, props.category)}
+      </div>
       <style jsx>
         {`
           .menu-section {
