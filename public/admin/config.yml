@@ -62,4 +62,9 @@ collections:
                   hint: add a modifier and it's price,
                 }
               - { label: Price, name: price, widget: number }
-              - { label: Available, name: available, widget: boolean }
+              - {
+                  label: Available,
+                  name: available,
+                  widget: boolean,
+                  hint: Select "Available" to show on website,
+                }
