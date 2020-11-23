@@ -46,7 +46,7 @@ collections:
             widget: list
             add_to_top: true
             label_singular: new menu item
-            summary: '{{fields.name}} - {{fields.description}} - {{fields.price}}'
+            filter: { field: 'category', value: 'Entrees' }
             fields:
               - { label: Name, name: itemName, widget: string }
               - {
