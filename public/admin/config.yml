@@ -61,14 +61,22 @@ collections:
                   widget: select,
                   options: ['Starters', 'Entrees', 'Desserts'],
                 }
+
+              - { label: Price, name: price, widget: number }
               - {
                   label: Modifier,
                   name: modifier,
                   widget: string,
                   required: false,
-                  hint: Add a modifier and it's price,
+                  hint: Add a modifier description,
                 }
-              - { label: Price, name: price, widget: number }
+              - {
+                  label: Modifier Price,
+                  name: modifierPrice,
+                  widget: number,
+                  required: false,
+                  hint: Add the modifier price,
+                }
               - {
                   label: Available,
                   name: available,
