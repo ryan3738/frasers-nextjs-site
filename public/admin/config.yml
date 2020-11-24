@@ -43,7 +43,6 @@ collections:
         name: 'menu'
         file: '/public/data/menu-data.json'
         sortable_fields: [category]
-          - lable: 
         fields:
           - label: Category
             name: Category
