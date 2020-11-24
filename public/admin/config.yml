@@ -6,14 +6,15 @@ backend:
   branch: main
 
 publish_mode: editorial_workflow
-display_url: https://frasers-nextjs.vercel.app/
+site_url: https://frasers-nextjs.vercel.app/
+display_url: Frasers Website
 logo_url: https://frasers-nextjs.vercel.app/images/frasers-logo.png
 
 media_folder: 'public/images'
 public_folder: '/images'
 
 collections:
-  - label: 'Content'
+  - label: 'Site Content'
     name: 'content'
     files:
       - label: 'Site Configuration'
@@ -39,8 +40,10 @@ collections:
       #   files:
 
       - label: 'Menu'
-        name: 'Menu'
+        name: 'menu'
         file: '/public/data/menu-data.json'
+        sortable_fields: [category]
+          - lable: 
         fields:
           - label: Category
             name: Category

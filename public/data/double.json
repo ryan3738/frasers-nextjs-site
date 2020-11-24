@@ -1,5 +1,6 @@
-[
-  {
+{
+  "section": "special"
+    {
     "title": "SPECIAL",
     "category": "special",
     "subTitle": "Special subtitle",
@@ -8,7 +9,8 @@
     "imageSource": "/images/rhubarb-margarita-mayhem-square.jpg",
     "imageAlt": "Rhubarb Margarita Special"
   },
-  {
+  "section": "announcement"  
+    {
     "title": "FRASERS DINE IN IS BACK!",
     "category": "special",
     "subTitle": "OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED. CALL TO PLACE A TAKEOUT ORDER.",
@@ -36,3 +38,4 @@
     "imageAlt": "Scott Fraser holding a large salmon"
   }
 ]
+}
