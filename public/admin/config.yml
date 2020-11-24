@@ -7,6 +7,7 @@ backend:
 
 publish_mode: editorial_workflow
 display_url: https://frasers-nextjs.vercel.app/
+logo_url: https://frasers-nextjs.vercel.app/images/frasers-logo.png
 
 media_folder: 'public/images'
 public_folder: '/images'
