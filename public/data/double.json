@@ -1,41 +1,40 @@
 {
-  "section": "special"
-    {
-    "title": "SPECIAL",
-    "category": "special",
-    "subTitle": "Special subtitle",
-    "content": "This is a special!!!",
-    "imageLeft": false,
-    "imageSource": "/images/rhubarb-margarita-mayhem-square.jpg",
-    "imageAlt": "Rhubarb Margarita Special"
-  },
-  "section": "announcement"  
-    {
-    "title": "FRASERS DINE IN IS BACK!",
-    "category": "special",
-    "subTitle": "OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED. CALL TO PLACE A TAKEOUT ORDER.",
-    "content": "There are many guidelines for us to follow as well as guidelines for our customers to follow. Face masks will be mandatory for entry to the restaurant. Additonal safety precautions and requirements will be posted. We appreciate your cooperation in this endeavor to help us keep our customers and staff safe.",
-    "imageLeft": true,
-    "imageSource": "/images/pig-were-back.jpg",
-    "imageAlt": "Pig holding a sign that says We're Back"
-  },
-  {
-    "title": "FRASERS GOURMET HIDEAWAY",
-    "category": "about",
-    "subTitle": "",
-    "content": "is owned and operated by Chef Scott Fraser. Inside the rightly named gourmet hideaway, guests will notice a relaxing environment where food and drinks are the focal point. Come enjoy a seasonal menu of the freshest local Northwest ingredients. Pair this with a vibrant West Coast wine, handcrafted cocktail, or a nice cold beer.",
-    "imageLeft": false,
-    "imageSource": "/images/frasers-enter-dining-room.jpg",
-    "imageAlt": "Frasers gourmet hideaway dining room"
-  },
-  {
-    "title": "CHEF SCOTT FRASER",
-    "category": "about",
-    "subTitle": "",
-    "content": "is a Pierre Dubrulle Culinary School graduate and understands the importance of food. After graduating he spent years honing his skills working at the finest French restaurants in Vancouver, BC. For the past 30 years, he has worked to establish Frasers Gourmet Hideaway as not only a hometown favorite, but a culinary destination in the Pacific Northwest for steaks, seafood, and more served with a creative palate.",
-    "imageLeft": true,
-    "imageSource": "/images/scott_fraser_square.jpg",
-    "imageAlt": "Scott Fraser holding a large salmon"
+  "content": {
+    "special": {
+      "title": "SPECIAL",
+      "category": "special",
+      "subTitle": "Special subtitle",
+      "content": "This is a special!!!",
+      "imageLeft": false,
+      "imageSource": "/images/rhubarb-margarita-mayhem-square.jpg",
+      "imageAlt": "Rhubarb Margarita Special"
+    },
+    "announcement": {
+      "title": "FRASERS DINE IN IS BACK!",
+      "category": "special",
+      "subTitle": "OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED. CALL TO PLACE A TAKEOUT ORDER.",
+      "content": "There are many guidelines for us to follow as well as guidelines for our customers to follow. Face masks will be mandatory for entry to the restaurant. Additonal safety precautions and requirements will be posted. We appreciate your cooperation in this endeavor to help us keep our customers and staff safe.",
+      "imageLeft": true,
+      "imageSource": "/images/pig-were-back.jpg",
+      "imageAlt": "Pig holding a sign that says We're Back"
+    },
+    "aboutBusiness": {
+      "title": "FRASERS GOURMET HIDEAWAY",
+      "category": "about",
+      "subTitle": "",
+      "content": "is owned and operated by Chef Scott Fraser. Inside the rightly named gourmet hideaway, guests will notice a relaxing environment where food and drinks are the focal point. Come enjoy a seasonal menu of the freshest local Northwest ingredients. Pair this with a vibrant West Coast wine, handcrafted cocktail, or a nice cold beer.",
+      "imageLeft": false,
+      "imageSource": "/images/frasers-enter-dining-room.jpg",
+      "imageAlt": "Frasers gourmet hideaway dining room"
+    },
+    "aboutOwner": {
+      "title": "CHEF SCOTT FRASER",
+      "category": "about",
+      "subTitle": "",
+      "content": "is a Pierre Dubrulle Culinary School graduate and understands the importance of food. After graduating he spent years honing his skills working at the finest French restaurants in Vancouver, BC. For the past 30 years, he has worked to establish Frasers Gourmet Hideaway as not only a hometown favorite, but a culinary destination in the Pacific Northwest for steaks, seafood, and more served with a creative palate.",
+      "imageLeft": true,
+      "imageSource": "/images/scott_fraser_square.jpg",
+      "imageAlt": "Scott Fraser holding a large salmon"
+    }
   }
-]
 }
