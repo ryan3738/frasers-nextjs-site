@@ -14,6 +14,34 @@ media_folder: 'public/images'
 public_folder: '/images'
 
 collections:
+  - label: 'Announcements'
+    name: 'announcements'
+    folder: 'posts'
+    create: true
+    fields:
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'announcement',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Subtitle',
+          name: 'subtitle',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Image', name: 'imageSource', widget: 'image' }
+      - {
+          label: 'Image Alt Text',
+          name: 'imageAlt',
+          widget: 'string',
+          hint: Enter alternative text to describe the image to visitors who are unable to see them,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
   - label: 'Site Content'
     name: 'content'
     files:
