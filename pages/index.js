@@ -2,28 +2,31 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 // import { getSortedPostsData } from '../lib/posts';
-import Date from '../components/date';
+// import Date from '../components/date';
 import MenuSection from '../components/menu-section';
 import Double from '../components/double.tsx';
 import GalleryGrid from '../components/gallery-grid';
 import Contact from '../components/contact';
 import Button from '../components/button';
-import doubleItems from '../public/data/double.json';
+// import doubleItems from '../public/data/double.json';
+import { getDoubleData } from '../lib/posts';
 
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData();
-//   // const menuData = await menu.json();
-//   // const menu = await import('../public/data/menu.json');
-//   // const menu = await import('../public/data/menu.json');
-//   return {
-//     props: {
-//       allPostsData,
-//       // menu,??
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  // const allPostsData = getSortedPostsData();
+  const aboutOwnerData = await getDoubleData('public/data/about-owner.md');
+  const aboutBusinessData = await getDoubleData(
+    'public/data/about-business.md'
+  );
 
-export default function Home({ allPostsData }) {
+  return {
+    props: {
+      aboutOwnerData,
+      aboutBusinessData,
+    },
+  };
+}
+
+export default function Home({ aboutOwnerData, aboutBusinessData }) {
   return (
     <>
       <Layout home>
@@ -57,29 +60,27 @@ export default function Home({ allPostsData }) {
             us keep our customers and staff safe.
           </Double>
           <Double
-            title='FRASERS GOURMET HIDEAWAY'
-            imageSource='/images/frasers-enter-dining-room.jpg'
-            imageAlt='Frasers gourmet hideaway dining room'
+            title={aboutBusinessData.title}
+            subtitle={aboutBusinessData.subtitle}
+            imageSource={aboutBusinessData.imageSource}
+            imageAlt={aboutBusinessData.imageAlt}
           >
-            is owned and operated by Chef Scott Fraser. Inside the rightly named
-            gourmet hideaway, guests will notice a relaxing environment where
-            food and drinks are the focal point. Come enjoy a seasonal menu of
-            the freshest local Northwest ingredients. Pair this with a vibrant
-            West Coast wine, handcrafted cocktail, or a nice cold beer.
+            <div
+              dangerouslySetInnerHTML={{
+                __html: aboutBusinessData.contentHtml,
+              }}
+            />
           </Double>
           <Double
-            title='CHEF SCOTT FRASER'
-            imageSource='/images/scott_fraser_square.jpg'
-            imageAlt='Scott Fraser holding a large salmon'
+            title={aboutOwnerData.title}
+            subtitle={aboutOwnerData.subtitle}
+            imageSource={aboutOwnerData.imageSource}
+            imageAlt={aboutOwnerData.imageAlt}
             imageLeft
           >
-            is a Pierre Dubrulle Culinary School graduate and understands the
-            importance of food. After graduating he spent years honing his
-            skills working at the finest French restaurants in Vancouver, BC.
-            For the past 30 years, he has worked to establish Frasers Gourmet
-            Hideaway as not only a hometown favorite, but a culinary destination
-            in the Pacific Northwest for steaks, seafood, and more served with a
-            creative palate.
+            <div
+              dangerouslySetInnerHTML={{ __html: aboutOwnerData.contentHtml }}
+            />
           </Double>
           <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' />
         </section>

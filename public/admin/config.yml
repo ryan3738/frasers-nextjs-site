@@ -24,6 +24,23 @@ collections:
           - { label: Address, name: address, widget: string }
           - { label: Phone Number, name: phoneNumber, widget: string }
 
+      - label: 'About Business'
+        name: 'aboutBusiness'
+        file: '/public/data/about-business.md'
+        fields:
+          - {
+              label: 'Layout',
+              name: 'layout',
+              widget: 'hidden',
+              default: 'about',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Image', name: 'imageSource', widget: 'image' }
+          - { label: 'Image Alt Text', name: 'imageAlt', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
       - label: 'About Owner'
         name: 'aboutOwner'
         file: '/public/data/about-owner.md'
