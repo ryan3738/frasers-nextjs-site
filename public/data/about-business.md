@@ -1,6 +1,6 @@
 ---
 title: FRASERS GOURMET HIDEAWAY
-date: 2020-11-25T08:00:00.000Z
+date: '2020-11-25T08:00:00.000Z'
 imageSource: /images/frasers-enter-dining-room.jpg
 imageAlt: Frasers gourmet hideaway dining room
 ---

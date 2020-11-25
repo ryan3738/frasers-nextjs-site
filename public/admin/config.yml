@@ -41,7 +41,7 @@ collections:
               widget: 'string',
               required: false,
             }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Publish Date', name: 'date', widget: 'date' }
           - { label: 'Image', name: 'imageSource', widget: 'image' }
           - {
               label: 'Image Alt Text',
@@ -68,7 +68,7 @@ collections:
               widget: 'string',
               required: false,
             }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Publish Date', name: 'date', widget: 'date' }
           - { label: 'Image', name: 'imageSource', widget: 'image' }
           - {
               label: 'Image Alt Text',

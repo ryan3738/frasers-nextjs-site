@@ -17,16 +17,25 @@ export async function getStaticProps() {
   const aboutBusinessData = await getDoubleData(
     'public/data/about-business.md'
   );
+  const announcement1Data = await getDoubleData('posts/announcement1.md');
+  const announcement2Data = await getDoubleData('posts/announcement2.md');
 
   return {
     props: {
       aboutOwnerData,
       aboutBusinessData,
+      announcement1Data,
+      announcement2Data,
     },
   };
 }
 
-export default function Home({ aboutOwnerData, aboutBusinessData }) {
+export default function Home({
+  aboutOwnerData,
+  aboutBusinessData,
+  announcement1Data,
+  announcement2Data,
+}) {
   return (
     <>
       <Layout home>
@@ -36,28 +45,30 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
         </Head>
         <section id='about' className='container'>
           <h1 className='header hidden-header'>ABOUT</h1>
-          {/* <Double category='special' /> */}
-          {/* <Double category='about' /> */}
           <Double
-            title='Special'
-            subtitle='Special subtitle'
-            imageSource='/images/rhubarb-margarita-mayhem-square.jpg'
-            imageAlt='Rhubarb Margarita Special'
+            title={announcement1Data.title}
+            subtitle={announcement1Data.subtitle}
+            imageSource={announcement1Data.imageSource}
+            imageAlt={announcement1Data.imageAlt}
           >
-            This is a special!!!
+            <div
+              dangerouslySetInnerHTML={{
+                __html: announcement1Data.contentHtml,
+              }}
+            />
           </Double>
           <Double
-            title='FRASERS DINE IN IS BACK!'
-            subtitle='OUR DINING ROOM IS OPEN FOR SERVICE. RESERVATIONS ARE RECOMMENDED. CALL TO PLACE A TAKEOUT ORDER.'
-            imageSource='/images/pig-were-back.jpg'
-            imageAlt="Pig holding a sign that says We're Back"
+            title={announcement2Data.title}
+            subtitle={announcement2Data.subtitle}
+            imageSource={announcement2Data.imageSource}
+            imageAlt={announcement2Data.imageAlt}
             imageLeft
           >
-            There are many guidelines for us to follow as well as guidelines for
-            our customers to follow. Face masks will be mandatory for entry to
-            the restaurant. Additonal safety precautions and requirements will
-            be posted. We appreciate your cooperation in this endeavor to help
-            us keep our customers and staff safe.
+            <div
+              dangerouslySetInnerHTML={{
+                __html: announcement2Data.contentHtml,
+              }}
+            />
           </Double>
           <Double
             title={aboutBusinessData.title}
