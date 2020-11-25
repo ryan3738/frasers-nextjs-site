@@ -47,7 +47,7 @@ collections:
               label: 'Image Alt Text',
               name: 'imageAlt',
               widget: 'string',
-              hint: Enter alternative text to describe image to visitors who are unable to see them,
+              hint: Enter alternative text to describe the image to visitors who are unable to see them,
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -74,7 +74,7 @@ collections:
               label: 'Image Alt Text',
               name: 'imageAlt',
               widget: 'string',
-              hint: Enter alternative text to describe image to visitors who are unable to see them,
+              hint: Enter alternative text to describe the image to visitors who are unable to see them,
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
