@@ -7,7 +7,7 @@ backend:
 
 publish_mode: editorial_workflow
 site_url: https://frasers-admin.netlify.app/
-display_url: Frasers Website
+# display_url: Frasers Website
 # logo_url: https://frasers-nextjs.vercel.app/images/frasers-logo.png
 
 media_folder: 'public/images'
@@ -24,20 +24,17 @@ collections:
           - { label: Address, name: address, widget: string }
           - { label: Phone Number, name: phoneNumber, widget: string }
 
-      - label: 'Double Contents'
-        name: 'DoubleContents'
-        file: '/public/data/double.json'
+      - label: 'About Owner'
+        name: 'aboutOwner'
+        file: '/public/data/about-owner.md'
         fields:
-          - label: 'Double'
-            name: ''
-            widget: 'list'
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Title, name: title, widget: string }
-              - { label: Title, name: title, widget: string }
-      # - label: 'Menu'
-      #   name: 'menu'
-      #   files:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "about"}
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+          - { label: 'Image', name: 'imageSource', widget: 'image' }
+          - { label: 'Image Alt Text', name: 'imageAlt', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
 
       - label: 'Menu'
         name: 'menu'
