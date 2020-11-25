@@ -10,6 +10,7 @@ import Contact from '../components/contact';
 import Button from '../components/button';
 // import doubleItems from '../public/data/double.json';
 import { getDoubleData } from '../lib/posts';
+import announcementPath from '../public/data/site-data.json';
 
 export async function getStaticProps() {
   // const allPostsData = getSortedPostsData();
@@ -17,8 +18,8 @@ export async function getStaticProps() {
   const aboutBusinessData = await getDoubleData(
     'public/data/about-business.md'
   );
-  const announcement1Data = await getDoubleData('posts/announcement1.md');
-  const announcement2Data = await getDoubleData('posts/announcement2.md');
+  const announcement1Data = await getDoubleData(announcementPath.announcement1);
+  const announcement2Data = await getDoubleData(announcementPath.announcement2);
 
   return {
     props: {
