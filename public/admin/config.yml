@@ -47,7 +47,7 @@ collections:
     files:
       - label: 'Site Configuration'
         name: 'site-config'
-        file: '/public/data/config.json'
+        file: '/public/data/site-data.json'
         fields:
           - { label: Address, name: address, widget: string }
           - { label: Phone Number, name: phoneNumber, widget: string }
