@@ -17,10 +17,6 @@ collections:
   - label: 'Site Content'
     name: 'content'
     files:
-      - label: 'Announcement Selection'
-        name: 'announcementSelection'
-        file: '/public/data/site-data.md'
-
       - label: 'Business Info'
         name: 'business-info'
         file: '/public/data/site-data.json'
