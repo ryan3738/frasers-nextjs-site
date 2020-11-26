@@ -14,38 +14,27 @@ media_folder: 'public/images'
 public_folder: '/images'
 
 collections:
-  - label: 'Announcements'
-    name: 'announcements'
-    label_singular: Announcement
-    folder: 'posts'
-    create: true
-    fields:
-      - {
-          label: 'Layout',
-          name: 'layout',
-          widget: 'hidden',
-          default: 'announcement',
-        }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - {
-          label: 'Subtitle',
-          name: 'subtitle',
-          widget: 'string',
-          required: false,
-        }
-      - { label: 'Publish Date', name: 'date', widget: 'date' }
-      - { label: 'Image', name: 'imageSource', widget: 'image' }
-      - {
-          label: 'Image Alt Text',
-          name: 'imageAlt',
-          widget: 'string',
-          hint: Enter alternative text to describe the image to visitors who are unable to see them,
-        }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-
   - label: 'Site Content'
     name: 'content'
     files:
+      - label: 'Announcement Selection'
+        name: 'announcementSelection'
+        file: '/public/data/site-data.md'
+
+      - label: 'Business Info'
+        name: 'business-info'
+        file: '/public/data/site-data.json'
+        fields:
+          - { label: Address, name: address, widget: string }
+          - { label: Phone Number, name: phoneNumber, widget: string }
+
+      - label: 'Announcement Selection'
+        name: 'announcementSelection'
+        file: '/public/data/site-data.json'
+        fields:
+          - { label: Announcement 1, name: announcement1, widget: string }
+          - { label: Announcement 2, name: announcement2, widget: string }
+
       - label: 'About Business'
         name: 'aboutBusiness'
         file: '/public/data/about-business.md'
@@ -152,9 +141,31 @@ collections:
                   hint: Select "Available" to show on website,
                 }
 
-      - label: 'Site Configuration'
-        name: 'site-config'
-        file: '/public/data/site-data.json'
-        fields:
-          - { label: Address, name: address, widget: string }
-          - { label: Phone Number, name: phoneNumber, widget: string }
+  - label: 'Announcements'
+    name: 'announcements'
+    label_singular: Announcement
+    folder: 'posts'
+    create: true
+    fields:
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'announcement',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Subtitle',
+          name: 'subtitle',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Image', name: 'imageSource', widget: 'image' }
+      - {
+          label: 'Image Alt Text',
+          name: 'imageAlt',
+          widget: 'string',
+          hint: Enter alternative text to describe the image to visitors who are unable to see them,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
