@@ -26,6 +26,14 @@ collections:
           - { label: Phone Number, name: phoneNumber, widget: string }
           - { label: Announcement 1, name: announcement1, widget: string }
           - { label: Announcement 2, name: announcement2, widget: string }
+          - {
+              label: Announcement 2,
+              name: announcement2,
+              widget: relation,
+              collection: announcements,
+              value_field: slug,
+              search_field: title,
+            }
 
       - label: 'About Frasers'
         name: 'aboutBusiness'
