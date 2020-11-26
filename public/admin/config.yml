@@ -16,6 +16,7 @@ public_folder: '/images'
 collections:
   - label: 'Announcements'
     name: 'announcements'
+    label_singular: Announcement
     folder: 'posts'
     create: true
     fields:
@@ -45,13 +46,6 @@ collections:
   - label: 'Site Content'
     name: 'content'
     files:
-      - label: 'Site Configuration'
-        name: 'site-config'
-        file: '/public/data/site-data.json'
-        fields:
-          - { label: Address, name: address, widget: string }
-          - { label: Phone Number, name: phoneNumber, widget: string }
-
       - label: 'About Business'
         name: 'aboutBusiness'
         file: '/public/data/about-business.md'
@@ -157,3 +151,10 @@ collections:
                   widget: boolean,
                   hint: Select "Available" to show on website,
                 }
+
+      - label: 'Site Configuration'
+        name: 'site-config'
+        file: '/public/data/site-data.json'
+        fields:
+          - { label: Address, name: address, widget: string }
+          - { label: Phone Number, name: phoneNumber, widget: string }
