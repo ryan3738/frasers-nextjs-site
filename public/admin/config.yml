@@ -34,6 +34,13 @@ collections:
               value_field: slug,
               search_field: title,
             }
+          - {
+              label: Announcement 2,
+              name: announcement2,
+              widget: file,
+              media_library: /posts/,
+              allow_multiple: false,
+            }
 
       - label: 'About Frasers'
         name: 'aboutBusiness'
