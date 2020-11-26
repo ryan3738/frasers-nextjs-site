@@ -22,23 +22,23 @@ collections:
         name: 'business-info'
         file: '/public/data/site-data.json'
         fields:
-          - { label: Address, name: address, widget: string }
-          - { label: Phone Number, name: phoneNumber, widget: string }
-          - { label: Announcement 1, name: announcement1, widget: string }
-          - { label: Announcement 2, name: announcement2, widget: string }
+          - { label: 'Address', name: 'address', widget: 'string' }
+          - { label: 'Phone Number', name: 'phoneNumber', widget: 'string' }
+          - { label: 'Announcement 1', name: 'announcement1', widget: 'string' }
+          - { label: 'Announcement 2', name: 'announcement2', widget: 'string' }
           - {
-              label: Announcement 2,
-              name: announcement2,
-              widget: relation,
-              collection: announcements,
-              value_field: slug,
-              search_field: title,
+              label: 'Announcement 2',
+              name: 'announcement2',
+              widget: 'relation',
+              collection: 'announcements',
+              value_field: 'slug',
+              search_field: 'title',
             }
           - {
-              label: Announcement 2,
-              name: announcement2,
-              widget: file,
-              media_library: /posts/,
+              label: 'Announcement 2',
+              name: 'announcement2',
+              widget: 'file',
+              media_library: '/posts/',
               allow_multiple: false,
             }
 
@@ -65,7 +65,7 @@ collections:
               label: 'Image Alt Text',
               name: 'imageAlt',
               widget: 'string',
-              hint: Enter alternative text to describe the image to visitors who are unable to see them,
+              hint: 'Enter alternative text to describe the image to visitors who are unable to see them',
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -99,11 +99,11 @@ collections:
       - label: 'Menu'
         name: 'menu'
         file: '/public/data/menu-data.json'
-        sortable_fields: [category]
+        sortable_fields: ['category']
         fields:
-          - label: Category
-            name: Category
-            widget: object
+          - label: 'Category'
+            name: 'Category'
+            widget: 'object'
             fields:
               - { label: Category, name: category, widget: list }
           - label: Menu
