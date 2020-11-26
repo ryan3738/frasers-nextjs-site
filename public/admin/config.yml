@@ -31,8 +31,8 @@ collections:
               name: 'announcement2',
               widget: 'relation',
               collection: 'announcements',
-              value_field: 'slug',
-              search_field: 'title',
+              value_field: '{{slug}}',
+              search_field: ['title', 'date'],
             }
           - {
               label: 'Announcement 2',
