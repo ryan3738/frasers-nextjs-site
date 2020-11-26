@@ -6,7 +6,7 @@ backend:
   branch: main
 
 publish_mode: editorial_workflow
-site_url: https://frasers-admin.netlify.app/
+# site_url: https://frasers-admin.netlify.app/
 # display_url: Frasers Website
 # logo_url: https://frasers-nextjs.vercel.app/images/frasers-logo.png
 
@@ -92,7 +92,7 @@ collections:
               label: 'Image Alt Text',
               name: 'imageAlt',
               widget: 'string',
-              hint: Enter alternative text to describe the image to visitors who are unable to see them,
+              hint: 'Enter alternative text to describe the image to visitors who are unable to see them',
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
 
@@ -105,52 +105,52 @@ collections:
             name: 'Category'
             widget: 'object'
             fields:
-              - { label: Category, name: category, widget: list }
-          - label: Menu
-            name: menu
-            widget: list
+              - { label: 'Category', name: 'category', widget: 'list' }
+          - label: 'Menu'
+            name: 'menu'
+            widget: 'list'
             add_to_top: true
-            label_singular: new menu item
+            label_singular: 'new menu item'
             fields:
-              - { label: Name, name: itemName, widget: string }
+              - { label: 'Name', name: 'itemName', widget: 'string' }
               - {
-                  label: Description,
-                  name: description,
-                  widget: text,
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'text',
                   required: false,
                 }
               - {
-                  label: Category,
-                  name: category,
-                  widget: select,
+                  label: 'Category',
+                  name: 'category',
+                  widget: 'select',
                   options: ['Starters', 'Entrees', 'Desserts'],
                 }
 
-              - { label: Price, name: price, widget: number }
+              - { label: 'Price', name: 'price', widget: 'number' }
               - {
-                  label: Modifier,
-                  name: modifier,
-                  widget: string,
+                  label: 'Modifier',
+                  name: 'modifier',
+                  widget: 'string',
                   required: false,
-                  hint: Add a modifier description,
+                  hint: 'Add a modifier description',
                 }
               - {
-                  label: Modifier Price,
-                  name: modifierPrice,
-                  widget: number,
+                  label: 'Modifier Price',
+                  name: 'modifierPrice',
+                  widget: 'number',
                   required: false,
-                  hint: Add the modifier price,
+                  hint: 'Add the modifier price',
                 }
               - {
-                  label: Available,
-                  name: available,
-                  widget: boolean,
-                  hint: Select "Available" to show on website,
+                  label: 'Available',
+                  name: 'available',
+                  widget: 'boolean',
+                  hint: 'Select "Available" to show on website',
                 }
 
   - label: 'Announcements'
     name: 'announcements'
-    label_singular: Announcement
+    label_singular: 'Announcement'
     folder: 'posts'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -174,6 +174,6 @@ collections:
           label: 'Image Alt Text',
           name: 'imageAlt',
           widget: 'string',
-          hint: Enter alternative text to describe the image to visitors who are unable to see them,
+          hint: 'Enter alternative text to describe the image to visitors who are unable to see them',
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
