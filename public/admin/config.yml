@@ -38,7 +38,7 @@ collections:
               label: 'Announcement 2',
               name: 'announcement2',
               widget: 'file',
-              media_library: '/posts/',
+              # media_library: '/posts/',
               # allow_multiple: false,
             }
 
