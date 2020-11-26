@@ -39,7 +39,7 @@ collections:
               name: 'announcement2',
               widget: 'file',
               media_library: '/posts/',
-              allow_multiple: false,
+              # allow_multiple: false,
             }
 
       - label: 'About Frasers'
