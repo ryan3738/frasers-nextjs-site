@@ -8,10 +8,10 @@ export default function Social(props) {
           // style='max-width:100%; max-height: auto;'
           src={props.img}
           alt={props.alt}
-          layout='responsive'
+          layout='fixed'
           objectFit='cover'
-          height='100'
-          width='100'
+          height='45'
+          width='45'
           quality='100'
         />
       </a>
