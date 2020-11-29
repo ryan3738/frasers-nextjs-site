@@ -13,16 +13,16 @@ const getGalleryItem = (gallery) => {
               <div
                 key={data.imageAlt}
                 id='image-div'
-                className={data.imageSize}
+                // className={data.imageSize}
               >
-                <img
+                <Image
                   className='image'
                   src={data.imageSource}
                   alt={data.imageAlt}
-                  // layout='fill'
-                  // objectFit='cover'
-                  // height='250'
-                  // width='250'
+                  layout='responsive'
+                  objectFit='cover'
+                  height='612'
+                  width='612'
                   // unoptimized={true}
                   // unsized='true'
                 />
@@ -31,6 +31,24 @@ const getGalleryItem = (gallery) => {
           })}
       </div>
       <style jsx>{`
+        .gallery-container {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-content: stretch;
+          justify-content: center;
+        }
+
+        #image-div {
+          display: inline-block;
+          height: auto;
+          max-width:350px;
+          width: 100vw;
+          border: 0px solid red;
+          padding: 5px;
+        }
+      `}</style>
+      {/* <style jsx>{`
         .gallery-container {
           margin-top: 2rem;
           display: grid;
@@ -63,7 +81,7 @@ const getGalleryItem = (gallery) => {
           grid-column: span 2;
           grid-row: span 2;
         }
-      `}</style>
+      `}</style> */}
     </>
   );
 };
