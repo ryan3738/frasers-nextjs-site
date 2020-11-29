@@ -38,13 +38,13 @@ export default function Contact() {
           <div className='social-media-contents'>
             <Social
               href='https://www.instagram.com/frasersgourmethideaway/'
-              img='images/instagram-logo.png'
+              img='/images/instagram-logo.png'
               alt='frasers instagram'
               color='--color-instagram'
             />
             <Social
               href='http://facebook.com/frasersgh'
-              img='images/facebook-logo.png'
+              img='/images/facebook-logo.png'
               alt='frasers facebook'
               color='--color-facebook'
             />

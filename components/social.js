@@ -1,11 +1,18 @@
+import Image from 'next/image';
+
 export default function Social(props) {
   return (
     <div className='social'>
       <a href={props.href} target='_blank' rel='noreferrer noopener'>
-        <img
+        <Image
           // style='max-width:100%; max-height: auto;'
           src={props.img}
           alt={props.alt}
+          layout='responsive'
+          objectFit='cover'
+          height='100'
+          width='100'
+          quality='100'
         />
       </a>
       <style jsx>{`
