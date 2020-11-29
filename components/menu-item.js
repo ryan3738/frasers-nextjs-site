@@ -54,7 +54,7 @@ export default function MenuItem(props) {
           .menu-section {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-            grid-gap: 20px;
+            grid-gap: 5px;
             padding: 5%;
           }
         `}

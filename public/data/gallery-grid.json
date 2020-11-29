@@ -1,138 +1,137 @@
 [
   {
-    "imageSource": "/images/lobster_tail_paella.jpg",
+    "imageSource": "/images/gallery-grid/lobster_tail_paella.jpg",
     "imageAlt": "lobster tail paella",
     "imageSize": "big"
   },
   {
-    "imageSource": "/images/pork_rillettes.jpg",
+    "imageSource": "/images/gallery-grid/pork_rillettes.jpg",
     "imageAlt": "pork rilletes",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/wine-takeout-bag.jpg",
+    "imageSource": "/images/gallery-grid/wine-takeout-bag.jpg",
     "imageAlt": "wine takeout bag with frasers logo",
     "imageSize": "vertical"
   },
   {
-    "imageSource": "/images/wild_boar.jpg",
+    "imageSource": "/images/gallery-grid/wild_boar.jpg",
     "imageAlt": "wild boar with broccolini",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/fanny_bay_oysters.jpg",
+    "imageSource": "/images/gallery-grid/fanny_bay_oysters.jpg",
     "imageAlt": "raw fanny bay oysters",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/samosa.jpg",
+    "imageSource": "/images/gallery-grid/samosa.jpg",
     "imageAlt": "samosa appetizer",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/beef_pork_cheek_burger.jpg",
+    "imageSource": "/images/gallery-grid/beef_pork_cheek_burger.jpg",
     "imageAlt": "beef pork cheek burger",
     "imageSize": "big"
   },
   {
-    "imageSource": "/images/ahi_poke.jpg",
+    "imageSource": "/images/gallery-grid/ahi_poke.jpg",
     "imageAlt": "ahi poke appetizer",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/crab-claw.jpg",
+    "imageSource": "/images/gallery-grid/crab-claw.jpg",
     "imageAlt": "crab claw appetizer",
     "imageSize": "vertical"
   },
   {
-    "imageSource": "/images/bananas_foster.jpg",
+    "imageSource": "/images/gallery-grid/bananas_foster.jpg",
     "imageAlt": "bananas foster dessert",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/meyer-lemon-tart.jpg",
+    "imageSource": "/images/gallery-grid/meyer-lemon-tart.jpg",
     "imageAlt": "meyer lemon tart dessert",
     "imageSize": "big"
   },
   {
-    "imageSource": "/images/profiterole-pumpkin-ice-cream.jpg",
+    "imageSource": "/images/gallery-grid/profiterole-pumpkin-ice-cream.jpg",
     "imageAlt": "profiterole with pumpkin ice creem",
     "imageSize": "horizontal"
   },
   {
-    "imageSource": "/images/ramos_gin_fizz.jpg",
+    "imageSource": "/images/gallery-grid/ramos_gin_fizz.jpg",
     "imageAlt": "ramos gin fiz drink",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/lamb.jpg",
+    "imageSource": "/images/gallery-grid/lamb.jpg",
     "imageAlt": "rack of lamb entree",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/wild-boar-ragout.jpg",
+    "imageSource": "/images/gallery-grid/wild-boar-ragout.jpg",
     "imageAlt": "wild boar ragout",
     "imageSize": "horizontal"
   },
   {
-    "imageSource": "/images/cappuccino.jpg",
+    "imageSource": "/images/gallery-grid/cappuccino.jpg",
     "imageAlt": "cappuccino in a mug",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/squash-blossom.jpg",
+    "imageSource": "/images/gallery-grid/squash-blossom.jpg",
     "imageAlt": "squash blossom appetizer",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/escargot.jpg",
+    "imageSource": "/images/gallery-grid/escargot.jpg",
     "imageAlt": "escargot appetizer",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/mustache-biscuit.jpg",
+    "imageSource": "/images/gallery-grid/mustache-biscuit.jpg",
     "imageAlt": "biscuit with mustache design",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/neah-bay-salmon-blueberry-beurre-blanc.jpeg",
+    "imageSource": "/images/gallery-grid/neah-bay-salmon-blueberry-beurre-blanc.jpeg",
     "imageAlt": "neah bay salmon bluebeery beurre blanc",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/fish-lentils-sauce.jpg",
+    "imageSource": "/images/gallery-grid/fish-lentils-sauce.jpg",
     "imageAlt": "fish lentils sauce",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/nehi_cocktail.jpg",
+    "imageSource": "/images/gallery-grid/nehi_cocktail.jpg",
     "imageAlt": "nehi cocktail",
     "imageSize": "big"
   },
   {
-    "imageSource": "/images/pan_seared_venison.jpg",
+    "imageSource": "/images/gallery-grid/pan_seared_venison.jpg",
     "imageAlt": "pan seared venison",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/pan_seared_wild_ling_cod.jpg",
+    "imageSource": "/images/gallery-grid/pan_seared_wild_ling_cod.jpg",
     "imageAlt": "pan seared wild ling cod",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/frasers_art.jpg",
+    "imageSource": "/images/gallery-grid/frasers_art.jpg",
     "imageAlt": "art hanging at frasers gourmet hideaway",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/albacore_tuna.jpg",
+    "imageSource": "/images/gallery-grid/albacore_tuna.jpg",
     "imageAlt": "albacore tuna entree",
     "imageSize": "small"
   },
   {
-    "imageSource": "/images/ice-cream-strawberrry-rhubarb.jpg",
+    "imageSource": "/images/gallery-grid/ice-cream-strawberrry-rhubarb.jpg",
     "imageAlt": "strawberry rhubarb dessert",
     "imageSize": "small"
   }
-
 ]

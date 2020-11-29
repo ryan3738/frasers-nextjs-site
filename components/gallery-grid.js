@@ -20,8 +20,9 @@ const getGalleryItem = (gallery) => {
                   src={data.imageSource}
                   alt={data.imageAlt}
                   // layout='fill'
-                  height='612'
-                  width='612'
+                  // objectFit='cover'
+                  // height='250'
+                  // width='250'
                   // unoptimized={true}
                   // unsized='true'
                 />
@@ -32,7 +33,6 @@ const getGalleryItem = (gallery) => {
       <style jsx>{`
         .gallery-container {
           margin-top: 2rem;
-          grid-area: c5;
           display: grid;
           grid-gap: 5px;
           grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
