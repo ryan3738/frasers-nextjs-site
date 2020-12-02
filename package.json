@@ -1,5 +1,12 @@
 {
-  "name": "learn-starter",
+  "name": "frasers-nextjs-site",
+  "author": "Ryan Fraser",
+  "description": "A website for Frasers Gourmet Hideaway",
+  "keywords": [
+    "website",
+    "nextjs",
+    "restaurant"
+  ],
   "version": "0.1.0",
   "private": true,
   "scripts": {
