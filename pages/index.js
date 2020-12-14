@@ -50,8 +50,8 @@ export default function Home({
             <Double
               title='FRASERS TAKEOUT'
               // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
-              imageSource={announcement1Data.imageSource}
-              imageAlt={announcement1Data.imageAlt}
+              imageSource='/images/wine-takeout-bag-square.jpg'
+              imageAlt='Picture of frasers gourmet hideaway takeout bag and a glass of wine'
             >
               <div>
                 <ul>
@@ -81,8 +81,8 @@ export default function Home({
             <Double
               title='TEMPORARILY CLOSED'
               subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
-              imageSource={announcement1Data.imageSource}
-              imageAlt={announcement1Data.imageAlt}
+              imageSource='/images/gift-card-square.jpg'
+              imageAlt='frasers gift card closeup'
               imageLeft
             >
               <div>
@@ -156,7 +156,7 @@ export default function Home({
           }
           .double-wrapper {
             display: flex;
-            flex-wrap: wrap;            
+            flex-wrap: wrap;
             justify-content: center;
           }
 

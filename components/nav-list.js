@@ -78,7 +78,7 @@ export default function NavList(props) {
           display: none;
         }
 
-        @media (min-width: 460px) {
+        @media (min-width: 769px) {
           .show-on-large {
             display: block;
           }

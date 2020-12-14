@@ -59,7 +59,7 @@ export default function Double({
           .double-container {
             display: flex;
             flex-direction: column;
-            max-width: 600px;
+            max-width: 612px;
           }
 
           .double-item {

@@ -28,7 +28,8 @@ const getDoubleItem = (double, category) => {
                   color: var(--primary-color-desaturated);
                 }
 
-                .double-container {
+                 {
+                  /* .double-container {
                   display: grid;
                   justify-content: center;
                   align-content: center;
@@ -39,6 +40,7 @@ const getDoubleItem = (double, category) => {
                   grid-template-areas:
                     '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
                     '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .';
+                } */
                 }
 
                 .double-item {
@@ -69,11 +71,14 @@ const getDoubleItem = (double, category) => {
                   color: var(--white-color);
                 } */
 
-                @media (min-width: 460px) {
-                  /* .double-text { */
-                  /* padding-top: 4rem; */
-                  /* } */
-                  .double-item {
+                 {
+                  /* @media (min-width: 460px) { */
+                }
+                /* .double-text { */
+                /* padding-top: 4rem; */
+                /* } */
+                 {
+                  /* .double-item {
                     margin: 5vh 2vw;
                   }
                   .double-container {
@@ -86,6 +91,7 @@ const getDoubleItem = (double, category) => {
                   .double-text {
                     grid-area: ${data.imageLeft ? 'r' : 'l'};
                   }
+                } */
                 }
               `}</style>
             </div>

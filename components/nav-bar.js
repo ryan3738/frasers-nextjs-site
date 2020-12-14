@@ -68,7 +68,7 @@ export default function NavBar({ children, open, setOpen }) {
           color: var(--background-color);
         }
 
-        @media (min-width: 460px) {
+        @media (min-width: 769px) {
           .burger {
             display: none;
           }
