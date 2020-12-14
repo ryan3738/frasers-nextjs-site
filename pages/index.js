@@ -43,6 +43,14 @@ export default function Home({
         <Head>
           <title>{siteTitle}</title>
           <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
+          <meta
+            name='description'
+            content='Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.'
+          />
+          <meta
+            name='keywords'
+            content='gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,'
+          />
         </Head>
         <section id='about' className='container'>
           <h1 className='header hidden-header'>ABOUT</h1>
