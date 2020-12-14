@@ -63,7 +63,7 @@ export default function Double({
           }
 
           .double-item {
-            margin: 0 5% 0;
+            margin: 0 10px 0;
             text-align: left;
           }
 
@@ -74,7 +74,7 @@ export default function Double({
             max-height: 100%;
           }
           .double-text {
-            margin: 1rem 5% 5rem;
+            margin: 5px 10px 5rem;
             background: var(--surface-color);
             padding: 1.5rem;
             height: 100%;
