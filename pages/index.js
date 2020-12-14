@@ -89,6 +89,8 @@ export default function Home({
                 buttonText='ORDER ONLINE'
                 buttonLink='https://frasersgh.square.site/'
               />
+              <br />
+              <br />
               <div>
                 Check back or follow us on Facebook for updates on dine-in and
                 takeout.
