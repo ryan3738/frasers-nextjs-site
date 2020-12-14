@@ -130,6 +130,35 @@ hr {
   height: 0;
   overflow: visible;
 }
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  color: var(--black-color);
+  /* display: block; */
+  padding: 5px;
+  margin: 10px 5px;
+  /* width: 80%; */
+  /* max-height: 48px; */
+  /* max-width: 220px; */
+  /* padding: 5%; */
+}
+
+button:hover {
+  animation-name: background-color;
+  animation-duration: 500ms;
+  background-color: var(--surface-color);
+  border-color: var(--surface-color);
+  color: var(--high-emphasis-text);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 button,
 input,
 optgroup,
@@ -137,6 +166,7 @@ select,
 textarea {
   font: inherit;
   margin: 0;
+  padding: 5px;
 }
 optgroup {
   font-weight: 700;

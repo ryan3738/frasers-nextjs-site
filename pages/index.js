@@ -47,29 +47,50 @@ export default function Home({
         <section id='about' className='container'>
           <h1 className='header hidden-header'>ABOUT</h1>
           <Double
-            title={announcement1Data.title}
-            subtitle={announcement1Data.subtitle}
+            title='FRASERS TAKEOUT'
+            // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
             imageSource={announcement1Data.imageSource}
             imageAlt={announcement1Data.imageAlt}
           >
-            <div
-              dangerouslySetInnerHTML={{
-                __html: announcement1Data.contentHtml,
-              }}
+            <div>
+              <ul>
+                <li>Precooked Ready to Reheat Meals</li>
+                <li>Place orders by Thursday at 6 pm</li>
+                <li>Pickup Saturday from 2-4 pm</li>
+                <li>Place Orders Online</li>
+                <li>Or Call 360 279-1231</li>
+              </ul>
+            </div>
+            <Button
+              buttonText='ORDER ONLINE'
+              buttonLink='https://frasersgh.square.site/'
             />
+            <br />
+            <br />
+            <br />
+            <h4>Sign up for our newsletter to receive updates</h4>
+            <Button
+              buttonText='SIGN UP'
+              buttonLink='https://squareup.com/outreach/sgPDT7/subscribe'
+            />
+            <br />
+            <br />
+            <p>We respect your privacy</p>
           </Double>
           <Double
-            title={announcement2Data.title}
-            subtitle={announcement2Data.subtitle}
-            imageSource={announcement2Data.imageSource}
-            imageAlt={announcement2Data.imageAlt}
+            title='TEMPORARILY CLOSED'
+            subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
+            imageSource={announcement1Data.imageSource}
+            imageAlt={announcement1Data.imageAlt}
             imageLeft
           >
-            <div
-              dangerouslySetInnerHTML={{
-                __html: announcement2Data.contentHtml,
-              }}
-            />
+            <div>
+              Check back or follow us on Facebook for updates on dine-in and
+              takeout.
+              <br />
+              <br />
+              Thank you for your support!
+            </div>
           </Double>
           <Double
             title={aboutBusinessData.title}
@@ -94,13 +115,13 @@ export default function Home({
               dangerouslySetInnerHTML={{ __html: aboutOwnerData.contentHtml }}
             />
           </Double>
-          <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' />
+          {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
         </section>
         <section id='menu' className='container'>
           <h1 className='header hidden-header'>MENU</h1>
-          <MenuSection category='Starters' />
-          <MenuSection category='Entrees' />
-          <Button buttonText='SEE FULL MENU ==>' buttonLink='/menu' />
+          {/* <MenuSection category='Starters' /> */}
+          {/* <MenuSection category='Entrees' /> */}
+          {/* <Button buttonText='SEE FULL MENU ==>' buttonLink='/menu' /> */}
         </section>
         <section>
           <GalleryGrid />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Button from './button';
 
 export default function NavList(props) {
   return (
@@ -39,6 +40,16 @@ export default function NavList(props) {
           Contact
         </a>
       </Link>
+      <div
+        className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+          'burgerMenuLink' in props && 'burger-menu-link'
+        }`}
+      >
+        <Button
+          buttonText='ORDER ONLINE'
+          buttonLink='https://frasersgh.square.site/'
+        />
+      </div>
       <style jsx>{`
         .nav-link {
           text-transform: uppercase;

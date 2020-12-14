@@ -1,5 +1,6 @@
 import utilStyles from '../styles/utils.module.css';
 import Social from './social';
+import Button from './button';
 
 export default function Contact() {
   return (
@@ -34,6 +35,14 @@ export default function Contact() {
         </div>
 
         <div className='social-media-container'>
+          <h3>Sign up for our newsletter to receive updates</h3>
+          <Button
+            buttonText='SIGN UP'
+            buttonLink='https://squareup.com/outreach/sgPDT7/subscribe'
+          />
+          <br />
+          <br />
+          <p>We respect your privacy</p>
           <h3>For specials and event info follow us on social media</h3>
           <div className='social-media-contents'>
             <Social
