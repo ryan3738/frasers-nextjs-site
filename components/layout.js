@@ -15,6 +15,21 @@ export default function Layout({ children, home }) {
   return (
     <div className='container'>
       <Head>
+        /* Global site tag (gtag.js) - Google Analytics */
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E'
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YS529TE94E');
+            `,
+          }}
+        />
         <html lang='en' />
         <link rel='icon' href='/favicon.ico' />
         <meta
@@ -25,6 +40,24 @@ export default function Layout({ children, home }) {
           name='keywords'
           content='gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,'
         />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/apple-touch-icon.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/favicon-16x16.png'
+        />
+        <link rel='manifest' href='/site.webmanifest' />
         {/* <meta
           property='og:image'
           content={`https://og-image.now.sh/${encodeURI(

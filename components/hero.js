@@ -25,7 +25,7 @@ export default function Hero(props) {
 
             {/* <!-- <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> --> */}
             <br />
-            {/* <a
+            <a
               href='https://www.google.com/maps/dir//Frasers+Gourmet+Hideaway+1191+SE+Dock+St+STE+101,+Oak+Harbor,+WA+98277'
               target='_blank'
               rel='noreferrer noopener'
@@ -33,7 +33,9 @@ export default function Hero(props) {
               1191 SE Dock St #101
               <br />
               Oak Harbor, WA 98277
-            </a> */}
+            </a>
+            <br />
+            <br />
             <h2>Now Serving Takeout!</h2>
             <Button
               buttonText='ORDER ONLINE'
