@@ -144,6 +144,7 @@ export default function Layout({ children, home }) {
           --color-facebook: #3b5998;
           --color-instagram: #fb3958;
           --small-screen: 460px;
+          --medium-screen: 769px;
         }
 
         /* media queries */

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Button from './button';
+import Image from 'next/image';
 
 export default function NavList(props) {
   return (
@@ -61,6 +62,12 @@ export default function NavList(props) {
           color: var(--medium-emphasis-text);
           background: var(--primary-color-desaturated);
           color: var(--background-color);
+        }
+        .welcome-logo {
+          max-width: 100%;
+          max-height: auto;
+          margin: auto;
+          display: block;
         }
       `}</style>
       <style jsx>{`

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import siteData from '../public/data/site-data.json';
 import utilStyles from '../styles/utils.module.css';
+import Button from './button';
 
 export default function Hero(props) {
   return (
@@ -11,20 +12,20 @@ export default function Hero(props) {
             {/* <!-- <div class="welcome-contents"> --> */}
             <p className='spaced-text'>Est. | 2006</p>
             <h1 className='title'>FRASERS</h1>
-
-            <Image
-              className='welcome-logo'
-              src='/images/frasers-logo.png'
-              alt='Frasers Gourmet Hideaway Logo'
-              layout='responsive'
-              width={228}
-              height={104}
-              priority={true}
-            />
+            <div className='welcome-logo'>
+              <Image
+                src='/images/frasers-logo.png'
+                alt='Frasers Gourmet Hideaway Logo'
+                layout='responsive'
+                width={228}
+                height={104}
+                priority={true}
+              />
+            </div>
 
             {/* <!-- <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> --> */}
             <br />
-            <a
+            {/* <a
               href='https://www.google.com/maps/dir//Frasers+Gourmet+Hideaway+1191+SE+Dock+St+STE+101,+Oak+Harbor,+WA+98277'
               target='_blank'
               rel='noreferrer noopener'
@@ -32,20 +33,25 @@ export default function Hero(props) {
               1191 SE Dock St #101
               <br />
               Oak Harbor, WA 98277
-            </a>
+            </a> */}
+            <h2>Now Serving Takeout!</h2>
+            <Button
+              buttonText='ORDER ONLINE'
+              buttonLink='https://frasersgh.square.site/'
+            />
             <br />
             <br />
             <a href='tel:13602791231'>360-279-1231</a>
             <br />
             <br />
-            <p>
+            {/* <p>
               <strong> CALL FOR TAKEOUT</strong>
             </p>
 
-            <h4>SEATING TIMES</h4>
+            <h4>SEATING TIMES</h4> */}
 
             {/* <!-- <p> <strong>CLOSED</strong> <br>9/8/20 to 9/9/20</p><br> --> */}
-            <p>
+            {/* <p>
               <strong>TUE - THUR</strong> <br />
               <span className='medium-emphasis'>
                 4:30 | 5:00 | 5:30 | 7:00 | 7:30
@@ -64,7 +70,7 @@ export default function Hero(props) {
               <strong>Sun - Mon</strong> |{' '}
               <span className='medium-emphasis'>CLOSED</span>
               <br />
-            </p>
+            </p> */}
             {/* <!-- </div> --> */}
           </div>
         </div>
@@ -88,11 +94,15 @@ export default function Hero(props) {
         }
 
         .welcome-box {
-          width: minmax(240px, auto);
           padding: 10%;
           grid-area: w;
           background: var(--background-color);
           opacity: 0.97;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-width: 250px;
         }
 
         .welcome-inner-box {

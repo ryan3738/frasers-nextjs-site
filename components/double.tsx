@@ -57,16 +57,9 @@ export default function Double({
           }
 
           .double-container {
-            display: grid;
-            justify-content: center;
-            align-content: center;
-            grid-template-columns: 0.25em repeat(10, minmax(10px, 108px)) 0.25em;
-            grid-row: repeat(8, minmax(200px, 500px));
-            grid-row: repeat(2, minmax(200px, 500px));
-            /* background-color: var(--color-darker); */
-            grid-template-areas:
-              '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
-              '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .';
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
           }
 
           .double-item {
@@ -95,24 +88,7 @@ export default function Double({
             color: var(--color-white);
           }
 
-          @media (min-width: 460px) {
-            /* .double-text { */
-            /* padding-top: 4rem; */
-            /* } */
-            .double-item {
-              margin: 5vh 2vw;
-            }
-            .double-container {
-              grid-template-areas: '. l l l l l r r r r r .';
-            }
-            .double-right {
-              grid-area: ${imageLeft ? 'l' : 'r'};
-            }
-
-            .double-left {
-              grid-area: ${imageLeft ? 'r' : 'l'};
-            }
-          }
+          
         `}</style>
       </div>
     </>

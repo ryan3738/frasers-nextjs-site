@@ -46,75 +46,77 @@ export default function Home({
         </Head>
         <section id='about' className='container'>
           <h1 className='header hidden-header'>ABOUT</h1>
-          <Double
-            title='FRASERS TAKEOUT'
-            // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
-            imageSource={announcement1Data.imageSource}
-            imageAlt={announcement1Data.imageAlt}
-          >
-            <div>
-              <ul>
-                <li>Precooked Ready to Reheat Meals</li>
-                <li>Place orders by Thursday at 6 pm</li>
-                <li>Pickup Saturday from 2-4 pm</li>
-                <li>Place Orders Online</li>
-                <li>Or Call 360 279-1231</li>
-              </ul>
-            </div>
-            <Button
-              buttonText='ORDER ONLINE'
-              buttonLink='https://frasersgh.square.site/'
-            />
-            <br />
-            <br />
-            <br />
-            <h4>Sign up for our newsletter to receive updates</h4>
-            <Button
-              buttonText='SIGN UP'
-              buttonLink='https://squareup.com/outreach/sgPDT7/subscribe'
-            />
-            <br />
-            <br />
-            <p>We respect your privacy</p>
-          </Double>
-          <Double
-            title='TEMPORARILY CLOSED'
-            subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
-            imageSource={announcement1Data.imageSource}
-            imageAlt={announcement1Data.imageAlt}
-            imageLeft
-          >
-            <div>
-              Check back or follow us on Facebook for updates on dine-in and
-              takeout.
+          <div className='double-wrapper'>
+            <Double
+              title='FRASERS TAKEOUT'
+              // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
+              imageSource={announcement1Data.imageSource}
+              imageAlt={announcement1Data.imageAlt}
+            >
+              <div>
+                <ul>
+                  <li>Precooked Ready to Reheat Meals</li>
+                  <li>Place orders by Thursday at 6 pm</li>
+                  <li>Pickup Saturday from 2-4 pm</li>
+                  <li>Place Orders Online</li>
+                  <li>Or Call 360 279-1231</li>
+                </ul>
+              </div>
+              <Button
+                buttonText='ORDER ONLINE'
+                buttonLink='https://frasersgh.square.site/'
+              />
               <br />
               <br />
-              Thank you for your support!
-            </div>
-          </Double>
-          <Double
-            title={aboutBusinessData.title}
-            subtitle={aboutBusinessData.subtitle}
-            imageSource={aboutBusinessData.imageSource}
-            imageAlt={aboutBusinessData.imageAlt}
-          >
-            <div
-              dangerouslySetInnerHTML={{
-                __html: aboutBusinessData.contentHtml,
-              }}
-            />
-          </Double>
-          <Double
-            title={aboutOwnerData.title}
-            subtitle={aboutOwnerData.subtitle}
-            imageSource={aboutOwnerData.imageSource}
-            imageAlt={aboutOwnerData.imageAlt}
-            imageLeft
-          >
-            <div
-              dangerouslySetInnerHTML={{ __html: aboutOwnerData.contentHtml }}
-            />
-          </Double>
+              <br />
+              <h4>Sign up for our newsletter to receive updates</h4>
+              <Button
+                buttonText='SIGN UP'
+                buttonLink='https://squareup.com/outreach/sgPDT7/subscribe'
+              />
+              <br />
+              <br />
+              <p>We respect your privacy</p>
+            </Double>
+            <Double
+              title='TEMPORARILY CLOSED'
+              subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
+              imageSource={announcement1Data.imageSource}
+              imageAlt={announcement1Data.imageAlt}
+              imageLeft
+            >
+              <div>
+                Check back or follow us on Facebook for updates on dine-in and
+                takeout.
+                <br />
+                <br />
+                Thank you for your support!
+              </div>
+            </Double>
+            <Double
+              title={aboutBusinessData.title}
+              subtitle={aboutBusinessData.subtitle}
+              imageSource={aboutBusinessData.imageSource}
+              imageAlt={aboutBusinessData.imageAlt}
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: aboutBusinessData.contentHtml,
+                }}
+              />
+            </Double>
+            <Double
+              title={aboutOwnerData.title}
+              subtitle={aboutOwnerData.subtitle}
+              imageSource={aboutOwnerData.imageSource}
+              imageAlt={aboutOwnerData.imageAlt}
+              imageLeft
+            >
+              <div
+                dangerouslySetInnerHTML={{ __html: aboutOwnerData.contentHtml }}
+              />
+            </Double>
+          </div>
           {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
         </section>
         <section id='menu' className='container'>
@@ -136,6 +138,10 @@ export default function Home({
           .header {
             padding: 5rem 0 0;
             color: var(--primary-color-desaturated);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
           }
           .hidden-header {
             padding: 0;
@@ -143,10 +149,17 @@ export default function Home({
           }
           .container {
             width: 100vw;
-            max-width: 1200px;
+            max-width: 1224px;
             background-color: var(--surface-color);
+
             /* background: var(--background-color); */
           }
+          .double-wrapper {
+            display: flex;
+            flex-wrap: wrap;            
+            justify-content: center;
+          }
+
           @media (min-width: 460px) {
           }
         `}</style>

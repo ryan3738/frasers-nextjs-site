@@ -4,6 +4,7 @@ import BurgerMenu from './burger-menu';
 import React, { useState, useRef } from 'react';
 import { useOnClickOutside } from '../hooks/hooks';
 import NavList from './nav-list';
+import Image from 'next/image';
 
 export default function NavBar({ children, open, setOpen }) {
   const node = useRef();
@@ -28,11 +29,18 @@ export default function NavBar({ children, open, setOpen }) {
           <Link href='/'>
             <a className='title'>FRASERS</a>
           </Link>
+
           <NavList showOnLarge />
         </nav>
       </div>
       {children}
       <style jsx>{`
+        .welcome-logo {
+          position: absolute;
+          top: 0.5rem;
+          left: 1rem;
+          width: 6rem;
+        }
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
