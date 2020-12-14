@@ -79,12 +79,16 @@ export default function Home({
               <p>We respect your privacy</p>
             </Double>
             <Double
-              title='TEMPORARILY CLOSED'
+              title='DINE IN TEMPORARILY CLOSED'
               subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
               imageSource='/images/gift-card-square.jpg'
               imageAlt='frasers gift card closeup'
               imageLeft
             >
+              <Button
+                buttonText='ORDER ONLINE'
+                buttonLink='https://frasersgh.square.site/'
+              />
               <div>
                 Check back or follow us on Facebook for updates on dine-in and
                 takeout.
