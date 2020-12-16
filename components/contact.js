@@ -1,6 +1,7 @@
 import utilStyles from '../styles/utils.module.css';
 import Social from './social';
 import Button from './button';
+import siteData from '../public/data/site-data.json';
 
 export default function Contact() {
   return (
@@ -13,17 +14,17 @@ export default function Contact() {
           <h2>LOCATION</h2>
           <p>
             <span className='medium-emphasis'>
-              1191 SE DOCK ST STE 101
+              {`${siteData.address.street} ${siteData.address.street2}`}
               <br />
-              OAK HARBOR, WA 98277
+              {`${siteData.address.city}, ${siteData.address.state} ${siteData.address.zipCode}`}
               <br />
               <br />
-              <a href='tel:13602791231'>360-279-1231</a>
+              <a href='tel:13602791231'>{siteData.phoneNumber}</a>
               <br />
               <br />
               <b>
                 <a
-                  href='https://www.google.com/maps/dir//Frasers+Gourmet+Hideaway+1191+SE+Dock+St+STE+101,+Oak+Harbor,+WA+98277'
+                  href={siteData.address.directions}
                   target='_blank'
                   rel='noreferrer noopener'
                 >

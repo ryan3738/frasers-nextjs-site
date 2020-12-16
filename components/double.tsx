@@ -11,6 +11,7 @@ export default function Double({
   rightText,
   rightTitle,
   rightSubtitle,
+  id,
   }: {
   children: React.ReactNode
   title: string
@@ -21,10 +22,12 @@ export default function Double({
   rightText: string
   rightTitle: string
   rightSubtitle: string
+  id: string
 }) {
   return (
     <>
       <div className='double-container'>
+        <a className='anchor' id={id}></a>
         {imageSource ? (
           <>
             <div className='double-item double-right'>
@@ -41,7 +44,7 @@ export default function Double({
             <div className='double-item double-text double-right'>
               <h2 className='primary-color'>{rightTitle}</h2>
               <h3>{rightSubtitle}</h3>
-              <div className='medium-emphasis'>{rightText}</div>
+              <div className='medium-emphasis' dangerouslySetInnerHTML={{ __html: rightText }}></div>
             </div>
           </>
         )}
@@ -52,6 +55,12 @@ export default function Double({
           <div className='medium-emphasis'>{children}</div>
         </div>
         <style jsx>{`
+          a.anchor {
+            display: block;
+            position: relative;
+            top: -50px;
+            visibility: hidden;
+          }
           .primary-color {
             color: var(--primary-color-desaturated);
           }
@@ -63,8 +72,9 @@ export default function Double({
           }
 
           .double-item {
-            margin: 0 10px 0;
             text-align: left;
+            margin: 0 10px 0;
+            
           }
 
           .double-item > img {

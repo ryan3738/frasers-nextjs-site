@@ -26,13 +26,13 @@ export default function Hero(props) {
             {/* <!-- <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> --> */}
             <br />
             <a
-              href='https://www.google.com/maps/dir//Frasers+Gourmet+Hideaway+1191+SE+Dock+St+STE+101,+Oak+Harbor,+WA+98277'
+              href={siteData.address.directions}
               target='_blank'
               rel='noreferrer noopener'
             >
-              1191 SE Dock St #101
+              {`${siteData.address.street} ${siteData.address.street2}`}
               <br />
-              Oak Harbor, WA 98277
+              {`${siteData.address.city}, ${siteData.address.state} ${siteData.address.zipCode}`}
             </a>
             <br />
             <br />
@@ -43,7 +43,7 @@ export default function Hero(props) {
             />
             <br />
             <br />
-            <a href='tel:13602791231'>360-279-1231</a>
+            <a href={`tel:${siteData.phoneNumber}`}>{siteData.phoneNumber}</a>
             <br />
             <br />
             {/* <p>

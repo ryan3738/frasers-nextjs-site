@@ -672,3 +672,7 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
+
+.nowrap{
+  white-space: nowrap;
+}

@@ -11,6 +11,7 @@ import Button from '../components/button';
 // import doubleItems from '../public/data/double.json';
 import { getDoubleData } from '../lib/posts';
 import announcementPath from '../public/data/site-data.json';
+import siteData from '../public/data/site-data.json';
 
 export async function getStaticProps() {
   // const allPostsData = getSortedPostsData();
@@ -44,10 +45,13 @@ export default function Home({
           <title>{siteTitle}</title>
           <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
         </Head>
-        <section id='about' className='container'>
-          <h1 className='header hidden-header'>ABOUT</h1>
+        <section className='container'>
+          <h1 className='header hidden-header-off'>
+            Dine In Service Temporarily Closed
+          </h1>
           <div className='double-wrapper'>
             <Double
+              id='takeout'
               title='FRASERS TAKEOUT'
               // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
               imageSource='/images/wine-takeout-bag-square.jpg'
@@ -59,12 +63,12 @@ export default function Home({
                   <li>Place orders by Thursday at 6 pm</li>
                   <li>Pickup Saturday from 2-4 pm</li>
                   <li>Place Orders Online</li>
-                  <li>Or Call 360 279-1231</li>
+                  <li>Or Call {siteData.phoneNumber}</li>
                 </ul>
               </div>
               <Button
                 buttonText='ORDER ONLINE'
-                buttonLink='https://frasersgh.square.site/'
+                buttonLink='https://frasersgh.square.site/s/order?location=11ea7f380b303525a95a0cc47a2aeaec'
               />
               <br />
               <br />
@@ -79,27 +83,127 @@ export default function Home({
               <p>We respect your privacy</p>
             </Double>
             <Double
-              title='DINE IN TEMPORARILY CLOSED'
-              subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
+              id='gift-cards'
+              title='Gift Cards Available'
+              subtitle=''
               imageSource='/images/gift-card-square.jpg'
               imageAlt='frasers gift card closeup'
               imageLeft
             >
-              <Button
-                buttonText='ORDER ONLINE'
-                buttonLink='https://frasersgh.square.site/'
-              />
-              <br />
-              <br />
               <div>
-                Check back or follow us on Facebook for updates on dine-in and
-                takeout.
+                To purchase a gift card please visit our online store or call us
+                at <span className='nowrap'>{siteData.phoneNumber}</span>
                 <br />
                 <br />
-                Thank you for your support!
+                <Button
+                  buttonText='ORDER GIFT CARDS ONLINE'
+                  buttonLink='https://frasersgh.square.site/product/gift-card/88'
+                />
+                <br />
+                <br />
+                Happy Holidays and thank you for your support!
               </div>
             </Double>
             <Double
+              id='christmas'
+              title='FOUR COURSE CHRISTMAS DINNER'
+              subtitle='$55 Per Person'
+              imageSource='/images/happy-holidays-pig-square.jpg'
+              imageAlt='Pig holding happy holidays sign'
+            >
+              <div>
+                <ul className='special-menu'>
+                  <li>
+                    <strong>TOMATO BURRATA SALAD</strong>
+                    <p>
+                      Oven-roasted tomatoes, burrata mozzarella, pickled
+                      asparagus, prosciutto, baba ghanouj
+                    </p>
+                  </li>
+                  <li>
+                    <strong>SMOKED ONION SOUP</strong>
+                    <p>
+                      Applewood smoked Walla Walla Onions, crème fraîche, crispy
+                      shallots
+                    </p>
+                  </li>
+                  <li>
+                    <strong>SRF KUROBUTA PORK CHOP</strong>
+                    <p>
+                      Spaetzle, asparagus, pickled red cabbage, Dijonnaise cream
+                      sauce
+                    </p>
+                    <b>OR</b>
+                    <br />
+                    <br />
+                    <strong>TEXAS LONG BONE SHORT RIB</strong>
+                    <p>
+                      Tender giant bone-in short rib, garlic mash, vegetables,
+                      braising reduction
+                    </p>
+                  </li>
+                  <li>
+                    <strong>SWEET POTATO PECAN PIE</strong>
+                    <p>Caramel sauce, maple whip</p>
+                  </li>
+                  <Button
+                    buttonText='PREORDER NOW'
+                    buttonLink='https://frasersgh.square.site/s/order?location=11eb3e6701092dad964a0cc47a2ae124'
+                  />
+                </ul>
+              </div>
+            </Double>
+            {/* <a className='anchor' id='new-years'></a> */}
+            <Double
+              id='new-years'
+              title={`Four Course NEW YEAR'S EVE DINNER`}
+              subtitle='$65 Per Person'
+              imageSource='/images/new-years-square.jpg'
+              imageAlt='Fireworks in the night sky'
+            >
+              <div>
+                <ul className='special-menu'>
+                  <li>
+                    <strong>DUCK & PHEASANT PATE</strong>
+                    <p>
+                      Blackberry mustard, pickled vegetables, tapioca ink chips
+                    </p>
+                  </li>
+                  <li>
+                    <strong>CIOPPINO</strong>
+                    <p>
+                      Prawns, scallops, octopus, crab, tomato saffron seafood
+                      broth
+                    </p>
+                  </li>
+                  <li>
+                    <strong>CORNISH GAME HEN</strong>
+                    <p>
+                      Wild mushroom mousse, Butternut squash orzo, asparagus,
+                      sauce Forestiere
+                    </p>
+                    <b>OR</b>
+                    <br />
+                    <br />
+                    <strong>FILET MIGNON</strong>
+                    <p>
+                      Brie stuffed wrapped in prosciutto, garlic mash, veg,
+                      braising reduction
+                    </p>
+                  </li>
+                  <li>
+                    <strong>CHOCOLATE TARTE</strong>
+                    <p>Hazelnut mousse, white chocolate pips, tuille</p>
+                  </li>
+                  <Button
+                    buttonText='PREORDER NOW'
+                    buttonLink='https://frasersgh.square.site/s/order?location=11eb3e7a2d8bba1b964a0cc47a2ae124'
+                  />
+                </ul>
+              </div>
+            </Double>
+            <Double
+              id='about'
               title={aboutBusinessData.title}
               subtitle={aboutBusinessData.subtitle}
               imageSource={aboutBusinessData.imageSource}
@@ -111,6 +215,7 @@ export default function Home({
                 }}
               />
             </Double>
+
             <Double
               title={aboutOwnerData.title}
               subtitle={aboutOwnerData.subtitle}
@@ -119,7 +224,9 @@ export default function Home({
               imageLeft
             >
               <div
-                dangerouslySetInnerHTML={{ __html: aboutOwnerData.contentHtml }}
+                dangerouslySetInnerHTML={{
+                  __html: aboutOwnerData.contentHtml,
+                }}
               />
             </Double>
           </div>
@@ -127,7 +234,6 @@ export default function Home({
         </section>
         <section id='menu' className='container'>
           <h1 className='header hidden-header'>MENU</h1>
-          {/* <MenuSection category='Starters' /> */}
           {/* <MenuSection category='Entrees' /> */}
           {/* <Button buttonText='SEE FULL MENU ==>' buttonLink='/menu' /> */}
         </section>
@@ -166,6 +272,19 @@ export default function Home({
             justify-content: center;
           }
 
+          .special-menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: var(--surface-color);
+            padding: 10px;
+            border-radius: 7px;
+          }
+          .special-menu li {
+            background-color: var(--surface-color);
+            padding: 10px;
+            border-radius: 7px;
+          }
           @media (min-width: 460px) {
           }
         `}</style>
