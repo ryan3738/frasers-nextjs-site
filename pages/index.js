@@ -125,7 +125,7 @@ export default function Home({
                     <p>Caramel sauce, maple whip</p>
                   </li>
                   <Button
-                    buttonText='PREORDER NOW'
+                    buttonText='ORDER NOW'
                     buttonLink='https://frasersgh.square.site/s/order?location=11eb3e6701092dad964a0cc47a2ae124'
                   />
                 </ul>
