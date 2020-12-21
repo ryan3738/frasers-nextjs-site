@@ -1,0 +1,24 @@
+{
+    "address": {
+        "street": "1191 SE Dock St",
+        "street2": "#101",
+        "city": "Oak Harbor",
+        "state": "WA",
+        "zipCode": "98277",
+        "directions": "https://www.google.com/maps/dir//Frasers+Gourmet+Hideaway+1191+SE+Dock+St+STE+101,+Oak+Harbor,+WA+98277"
+    },
+    "phoneNumber": "360-279-1231",
+    "email": "",
+    "hours": {
+        "Sunday": "Closed",
+        "Monday": "Closed",
+        "Tuesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Wednesday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Thursday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30",
+        "Friday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00",
+        "Saturday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00"
+    },
+    "announcement1": "posts/announcement1.md",
+    "announcement2": "posts/announcement2.md"
+}
+

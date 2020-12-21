@@ -1,0 +1,5 @@
+# Next-on-Netlify Redirects
+/  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/_next/data/-Jsa-4OttcerizK5WXkbY/index.json  /.netlify/functions/next_index  200!  Cookie=__prerender_bypass,__next_preview_data
+/api/hello  /.netlify/functions/next_api_hello  200
+/*  /:splat  200

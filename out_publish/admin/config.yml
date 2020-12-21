@@ -1,0 +1,179 @@
+backend:
+  # test cms layout locally
+  # name: test-repo
+  # use cms layout from github
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+# site_url: https://frasers-admin.netlify.app/
+# display_url: Frasers Website
+# logo_url: https://frasers-nextjs.vercel.app/images/frasers-logo.png
+
+media_folder: 'public/images'
+public_folder: '/images'
+
+collections:
+  - label: 'Site Content'
+    name: 'content'
+    delete: false
+    files:
+      - label: 'Site Info'
+        name: 'business-info'
+        file: '/public/data/site-data.json'
+        fields:
+          - { label: 'Address', name: 'address', widget: 'string' }
+          - { label: 'Phone Number', name: 'phoneNumber', widget: 'string' }
+          - { label: 'Announcement 1', name: 'announcement1', widget: 'string' }
+          - { label: 'Announcement 2', name: 'announcement2', widget: 'string' }
+          - {
+              label: 'Announcement 2',
+              name: 'announcement2',
+              widget: 'relation',
+              collection: 'announcements',
+              value_field: '{{slug}}',
+              search_field: ['title', 'date'],
+            }
+          - {
+              label: 'Announcement 2',
+              name: 'announcement2',
+              widget: 'file',
+              # media_library: '/posts/',
+              # allow_multiple: false,
+            }
+
+      - label: 'About Frasers'
+        name: 'aboutBusiness'
+        file: '/public/data/about-business.md'
+        fields:
+          - {
+              label: 'Layout',
+              name: 'layout',
+              widget: 'hidden',
+              default: 'about',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+              label: 'Subtitle',
+              name: 'subtitle',
+              widget: 'string',
+              required: false,
+            }
+          - { label: 'Publish Date', name: 'date', widget: 'date' }
+          - { label: 'Image', name: 'imageSource', widget: 'image' }
+          - {
+              label: 'Image Alt Text',
+              name: 'imageAlt',
+              widget: 'string',
+              hint: 'Enter alternative text to describe the image to visitors who are unable to see them',
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+      - label: 'About Scott'
+        name: 'aboutOwner'
+        file: '/public/data/about-owner.md'
+        fields:
+          - {
+              label: 'Layout',
+              name: 'layout',
+              widget: 'hidden',
+              default: 'about',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - {
+              label: 'Subtitle',
+              name: 'subtitle',
+              widget: 'string',
+              required: false,
+            }
+          - { label: 'Publish Date', name: 'date', widget: 'date' }
+          - { label: 'Image', name: 'imageSource', widget: 'image' }
+          - {
+              label: 'Image Alt Text',
+              name: 'imageAlt',
+              widget: 'string',
+              hint: 'Enter alternative text to describe the image to visitors who are unable to see them',
+            }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+      - label: 'Menu'
+        name: 'menu'
+        file: '/public/data/menu-data.json'
+        sortable_fields: ['category']
+        fields:
+          - label: 'Category'
+            name: 'Category'
+            widget: 'object'
+            fields:
+              - { label: 'Category', name: 'category', widget: 'list' }
+          - label: 'Menu'
+            name: 'menu'
+            widget: 'list'
+            add_to_top: true
+            label_singular: 'new menu item'
+            fields:
+              - { label: 'Name', name: 'itemName', widget: 'string' }
+              - {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'text',
+                  required: false,
+                }
+              - {
+                  label: 'Category',
+                  name: 'category',
+                  widget: 'select',
+                  options: ['Starters', 'Entrees', 'Desserts'],
+                }
+
+              - { label: 'Price', name: 'price', widget: 'number' }
+              - {
+                  label: 'Modifier',
+                  name: 'modifier',
+                  widget: 'string',
+                  required: false,
+                  hint: 'Add a modifier description',
+                }
+              - {
+                  label: 'Modifier Price',
+                  name: 'modifierPrice',
+                  widget: 'number',
+                  required: false,
+                  hint: 'Add the modifier price',
+                }
+              - {
+                  label: 'Available',
+                  name: 'available',
+                  widget: 'boolean',
+                  hint: 'Select "Available" to show on website',
+                }
+
+  - label: 'Announcements'
+    name: 'announcements'
+    label_singular: 'Announcement'
+    folder: 'posts'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'hidden',
+          default: 'announcement',
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Subtitle',
+          name: 'subtitle',
+          widget: 'string',
+          required: false,
+        }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
+      - { label: 'Image', name: 'imageSource', widget: 'image' }
+      - {
+          label: 'Image Alt Text',
+          name: 'imageAlt',
+          widget: 'string',
+          hint: 'Enter alternative text to describe the image to visitors who are unable to see them',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

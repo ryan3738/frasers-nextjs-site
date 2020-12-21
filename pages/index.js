@@ -50,7 +50,7 @@ export default function Home({
             Dine In Service Temporarily Closed
           </h1>
           <div className='double-wrapper'>
-            <Double
+            {/* <Double
               id='takeout'
               title='FRASERS TAKEOUT'
               // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
@@ -81,29 +81,7 @@ export default function Home({
               <br />
               <br />
               <p>We respect your privacy</p>
-            </Double>
-            <Double
-              id='gift-cards'
-              title='Gift Cards Available'
-              subtitle=''
-              imageSource='/images/gift-card-square.jpg'
-              imageAlt='frasers gift card closeup'
-              imageLeft
-            >
-              <div>
-                To purchase a gift card please visit our online store or call us
-                at <span className='nowrap'>{siteData.phoneNumber}</span>
-                <br />
-                <br />
-                <Button
-                  buttonText='ORDER GIFT CARDS ONLINE'
-                  buttonLink='https://frasersgh.square.site/product/gift-card/88'
-                />
-                <br />
-                <br />
-                Happy Holidays and thank you for your support!
-              </div>
-            </Double>
+            </Double> */}
             <Double
               id='christmas'
               title='FOUR COURSE CHRISTMAS DINNER'
@@ -153,6 +131,29 @@ export default function Home({
                 </ul>
               </div>
             </Double>
+            <Double
+              id='gift-cards'
+              title='Gift Cards Available'
+              subtitle=''
+              imageSource='/images/gift-card-square.jpg'
+              imageAlt='frasers gift card closeup'
+              imageLeft
+            >
+              <div>
+                To purchase a gift card please visit our online store or call us
+                at <span className='nowrap'>{siteData.phoneNumber}</span>
+                <br />
+                <br />
+                <Button
+                  buttonText='ORDER GIFT CARDS ONLINE'
+                  buttonLink='https://frasersgh.square.site/product/gift-card/88'
+                />
+                <br />
+                <br />
+                Happy Holidays and thank you for your support!
+              </div>
+            </Double>
+
             {/* <a className='anchor' id='new-years'></a> */}
             <Double
               id='new-years'
