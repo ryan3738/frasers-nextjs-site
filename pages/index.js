@@ -43,7 +43,7 @@ export default function Home({
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
-          <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>
+          {/* <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script> */}
         </Head>
         <section className='container'>
           <h1 className='header hidden-header-off'>
