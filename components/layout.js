@@ -11,10 +11,26 @@ const name = 'Frasers';
 export const siteTitle =
   'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
 
+const theme = {
+  maxWidth: '1200px',
+  smallScreen: '460px',
+  mediumScreen: '769px',
+};
+
 export default function Layout({ children, home }) {
   return (
     <div className='container'>
       <Head>
+        {/* <html lang='en' /> */}
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta
+          name='description'
+          content='Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.'
+        />
+        <meta
+          name='keywords'
+          content='gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,'
+        />
         /* Global site tag (gtag.js) - Google Analytics */
         <script
           async
@@ -29,15 +45,6 @@ export default function Layout({ children, home }) {
               gtag('config', 'G-YS529TE94E');
             `,
           }}
-        />
-        <html lang='en' />
-        <meta
-          name='description'
-          content='Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.'
-        />
-        <meta
-          name='keywords'
-          content='gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,'
         />
         <link rel='icon' href='/favicon.ico' />
         <link
@@ -181,7 +188,7 @@ export default function Layout({ children, home }) {
         }
 
         /* media queries */
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: ${theme.smallScreen}) {
           html {
             font-size: 100%;
           }
