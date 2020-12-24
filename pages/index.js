@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import PropTypes from 'prop-types'
 import Layout, { siteTitle } from '../components/layout'
 // import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
@@ -293,4 +294,11 @@ export default function Home({
       </Layout>
     </>
   )
+}
+
+Home.propTypes = {
+  aboutOwnerData: PropTypes.string,
+  aboutBusinessData: PropTypes.string,
+  announcement1Data: PropTypes.string,
+  announcement2Data: PropTypes.string,
 }

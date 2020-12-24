@@ -3,7 +3,7 @@ import Social from './social'
 import Button from './button'
 import siteData from '../public/data/site-data.json'
 
-export default function Contact () {
+export default function Contact() {
   return (
     <>
       {/* <div className='contact-header'> */}

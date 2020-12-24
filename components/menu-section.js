@@ -1,11 +1,11 @@
 import MenuItem from './menu-item'
 
-export default function MenuSection (props) {
+export default function MenuSection(category) {
   return (
     <div className="menu-container">
-      <h2 className="menu-header">{props.category}</h2>
-      <div className="line"></div>
-      <MenuItem category={props.category} />
+      <h2 className="menu-header">{category}</h2>
+      <div className="line" />
+      <MenuItem category={category} />
       <style jsx>{`
         .menu-header {
           display: inline-block;

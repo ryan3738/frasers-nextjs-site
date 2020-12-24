@@ -2,6 +2,7 @@ import Head from 'next/head'
 // import styles from './layout.module.css';
 // import utilStyles from '../styles/utils.module.css'
 // import Link from 'next/link'
+import PropTypes from 'prop-types'
 import Hero from './hero'
 // import Image from 'next/image'
 import Button from './button'
@@ -14,10 +15,10 @@ export const siteTitle =
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
-  mediumScreen: '769px'
+  mediumScreen: '769px',
 }
 
-export default function Layout ({ children, home }) {
+export default function Layout({ children, home }) {
   return (
     <div className="container">
       <Head>
@@ -43,7 +44,7 @@ export default function Layout ({ children, home }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-YS529TE94E');
-            `
+            `,
           }}
         />
         <link rel="icon" href="/favicon.ico" />
@@ -77,17 +78,17 @@ export default function Layout ({ children, home }) {
       <header className="header">
         {home ? (
           <>
-            <div className="nav-spacer"></div>
+            <div className="nav-spacer" />
             <Hero />
           </>
         ) : (
           <>
-            <div className="nav-spacer"></div>
+            <div className="nav-spacer" />
           </>
         )}
       </header>
       <main className="main">{children}</main>
-      {!home && <Button buttonText="<== HOME" buttonLink="/"></Button>}
+      {!home && <Button buttonText="<== HOME" buttonLink="/" />}
       <footer className="footer">
         <span>© 2020 Frasers Gourmet Hideaway |</span>
         <span className="no-wrap">
@@ -200,4 +201,8 @@ export default function Layout ({ children, home }) {
       `}</style>
     </div>
   )
+}
+Layout.propTypes = {
+  children: PropTypes.element,
+  home: PropTypes.bool,
 }

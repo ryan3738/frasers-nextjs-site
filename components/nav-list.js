@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Button from './button'
 // import Image from 'next/image'
 
-export default function NavList (props) {
+export default function NavList(props) {
   return (
     <>
       <Link href="/">

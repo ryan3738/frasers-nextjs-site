@@ -1,54 +1,48 @@
 import menuData from '../public/data/menu-data.json'
 
-const getMenuItem = (menuData, category) => {
-  return (
-    <>
-      {menuData.menu
-        .filter((e) => e.category === category)
-        .filter((e) => e.available === true)
-        .map((data) => {
-          return (
-            <div key={data.itemName} className="menu-item">
-              <h3 className="primary-color">{data.itemName}</h3>
-              <div dangerouslySetInnerHTML={{ __html: data.description }}></div>
+const getMenuItem = ({ category }) => (
+  <>
+    {menuData.menu
+      .filter((e) => e.category === category)
+      .filter((e) => e.available === true)
+      .map((data) => (
+        <div key={data.itemName} className="menu-item">
+          <h3 className="primary-color">{data.itemName}</h3>
+          <div dangerouslySetInnerHTML={{ __html: data.description }} />
+          <br />
+          <div className="primary-color">{data.price}</div>
+
+          {data.modifier ? (
+            <div>
               <br />
-              <div className="primary-color">{data.price}</div>
-
-              {data.modifier ? (
-                <div>
-                  <br />
-                  {data.modifier}&nbsp;
-                  <span className="primary-color">{data.modifierPrice}</span>
-                </div>
-              ) : (
-                ''
-              )}
-              <style jsx>{`
-                .menu-item {
-                  text-align: left;
-                  border-color: var(--primary-color-desaturated);
-                  border-radius: 7px;
-                  padding: 5%;
-                  background: var(--surface-color);
-                  border-color: var(--primary-color-desaturated);
-                }
-                .primary-color {
-                  color: var(--primary-color-desaturated);
-                }
-              `}</style>
+              {data.modifier}&nbsp;
+              <span className="primary-color">{data.modifierPrice}</span>
             </div>
-          )
-        })}
-    </>
-  )
-}
+          ) : (
+            ''
+          )}
+          <style jsx>{`
+            .menu-item {
+              text-align: left;
+              border-color: var(--primary-color-desaturated);
+              border-radius: 7px;
+              padding: 5%;
+              background: var(--surface-color);
+              border-color: var(--primary-color-desaturated);
+            }
+            .primary-color {
+              color: var(--primary-color-desaturated);
+            }
+          `}</style>
+        </div>
+      ))}
+  </>
+)
 
-export default function MenuItem (props) {
+export default function MenuItem(category) {
   return (
     <div>
-      <div className="menu-section">
-        {getMenuItem(menuData, props.category)}
-      </div>
+      <div className="menu-section">{getMenuItem(menuData, category)}</div>
       <style jsx>
         {`
           .menu-section {

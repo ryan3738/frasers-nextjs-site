@@ -1,12 +1,12 @@
 import Link from 'next/link'
+import React, { useState, useRef } from 'react'
+// import Image from 'next/image'
 import Burger from './burger'
 import BurgerMenu from './burger-menu'
-import React, { useState, useRef } from 'react'
 import { useOnClickOutside } from '../hooks/hooks'
 import NavList from './nav-list'
-import Image from 'next/image'
 
-export default function NavBar ({ children, open, setOpen }) {
+export default function NavBar({ children, open, setOpen }) {
   const node = useRef()
   useOnClickOutside(node, () => setOpen(false))
 
