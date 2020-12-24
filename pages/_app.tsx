@@ -1,7 +1,8 @@
-import '../styles/global.css';
 import React, { useState } from 'react';
-import NavBar from '../components/nav-bar';
 import { AppProps } from 'next/app';
+
+import NavBar from '../components/nav-bar';
+import '../styles/global.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [open, setOpen] = useState(false);
