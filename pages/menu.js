@@ -1,18 +1,18 @@
-import Head from 'next/head';
-import Layout from '../components/layout';
-import MenuSection from '../components/menu-section';
+import Head from 'next/head'
+import Layout from '../components/layout'
+import MenuSection from '../components/menu-section'
 
-export default function Menu() {
+export default function Menu () {
   return (
     <Layout>
       <Head>
         <title>MENU</title>
       </Head>
-      <section className='menu-container'>
+      <section className="menu-container">
         <h1>MENU</h1>
-        <MenuSection category='Starters' />
-        <MenuSection category='Entrees' />
-        <MenuSection category='Desserts' />
+        <MenuSection category="Starters" />
+        <MenuSection category="Entrees" />
+        <MenuSection category="Desserts" />
       </section>
       <style jsx>{`
         .menu-container {
@@ -22,5 +22,5 @@ export default function Menu() {
         }
       `}</style>
     </Layout>
-  );
+  )
 }

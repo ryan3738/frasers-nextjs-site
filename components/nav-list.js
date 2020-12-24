@@ -1,11 +1,11 @@
-import Link from 'next/link';
-import Button from './button';
-import Image from 'next/image';
+import Link from 'next/link'
+import Button from './button'
+// import Image from 'next/image'
 
-export default function NavList(props) {
+export default function NavList (props) {
   return (
     <>
-      <Link href='/'>
+      <Link href="/">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
@@ -25,7 +25,7 @@ export default function NavList(props) {
         </a>
       </Link> */}
 
-      <Link href='/#christmas'>
+      <Link href="/#christmas">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
@@ -34,7 +34,7 @@ export default function NavList(props) {
           Christmas Menu
         </a>
       </Link>
-      <Link href='/#gift-cards'>
+      <Link href="/#gift-cards">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
@@ -43,7 +43,7 @@ export default function NavList(props) {
           Gift Cards
         </a>
       </Link>
-      <Link href='/#new-years'>
+      <Link href="/#new-years">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
@@ -52,7 +52,7 @@ export default function NavList(props) {
           New Year's Menu
         </a>
       </Link>
-      <Link href='/#about'>
+      <Link href="/#about">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
@@ -61,7 +61,7 @@ export default function NavList(props) {
           ABOUT
         </a>
       </Link>
-      <Link href='/#contact'>
+      <Link href="/#contact">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
@@ -77,8 +77,8 @@ export default function NavList(props) {
         }`}
       >
         <Button
-          buttonText='ORDER ONLINE'
-          buttonLink='https://frasersgh.square.site/'
+          buttonText="ORDER ONLINE"
+          buttonLink="https://frasersgh.square.site/"
         />
       </div>
       <style jsx>{`
@@ -115,5 +115,5 @@ export default function NavList(props) {
         }
       `}</style>
     </>
-  );
+  )
 }

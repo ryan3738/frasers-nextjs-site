@@ -1,40 +1,40 @@
-import Head from 'next/head';
+import Head from 'next/head'
 // import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
-import Hero from './hero';
-import Image from 'next/image';
-import Button from './button';
-import NavList from './nav-list';
+// import utilStyles from '../styles/utils.module.css'
+// import Link from 'next/link'
+import Hero from './hero'
+// import Image from 'next/image'
+import Button from './button'
+import NavList from './nav-list'
 
-const name = 'Frasers';
+const name = 'Frasers'
 export const siteTitle =
-  'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
+  'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest'
 
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
-  mediumScreen: '769px',
-};
+  mediumScreen: '769px'
+}
 
-export default function Layout({ children, home }) {
+export default function Layout ({ children, home }) {
   return (
-    <div className='container'>
+    <div className="container">
       <Head>
         {/* <html lang='en' /> */}
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
-          name='description'
-          content='Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.'
+          name="description"
+          content="Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients."
         />
         <meta
-          name='keywords'
-          content='gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,'
+          name="keywords"
+          content="gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,"
         />
-        /* Global site tag (gtag.js) - Google Analytics */
+        {/* Global site tag (gtag.js) - Google Analytics */}
         <script
           async
-          src='https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E'
+          src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -43,28 +43,28 @@ export default function Layout({ children, home }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-YS529TE94E');
-            `,
+            `
           }}
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
         <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/apple-touch-icon.png'
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
         />
         <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/favicon-32x32.png'
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
         />
         <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/favicon-16x16.png'
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
         />
-        <link rel='manifest' href='/site.webmanifest' />
+        <link rel="manifest" href="/site.webmanifest" />
         {/* <meta
           property='og:image'
           content={`https://og-image.now.sh/${encodeURI(
@@ -74,34 +74,34 @@ export default function Layout({ children, home }) {
         <meta name='og:title' content={siteTitle} />
         <meta name='twitter:card' content='summary_large_image' /> */}
       </Head>
-      <header className='header'>
+      <header className="header">
         {home ? (
           <>
-            <div className='nav-spacer'></div>
+            <div className="nav-spacer"></div>
             <Hero />
           </>
         ) : (
           <>
-            <div className='nav-spacer'></div>
+            <div className="nav-spacer"></div>
           </>
         )}
       </header>
-      <main className='main'>{children}</main>
-      {!home && <Button buttonText='<== HOME' buttonLink='/'></Button>}
-      <footer className='footer'>
+      <main className="main">{children}</main>
+      {!home && <Button buttonText="<== HOME" buttonLink="/"></Button>}
+      <footer className="footer">
         <span>© 2020 Frasers Gourmet Hideaway |</span>
-        <span className='no-wrap'>
+        <span className="no-wrap">
           &nbsp;Built by:&nbsp;
           <a
-            className='light-text'
-            href='https://github.com/ryan3738'
-            target='_blank'
-            rel='noreferrer noopener'
+            className="light-text"
+            href="https://github.com/ryan3738"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             Ryan Fraser
           </a>
         </span>
-        <nav className='nav-list'>
+        <nav className="nav-list">
           <NavList />
         </nav>
       </footer>
@@ -199,5 +199,5 @@ export default function Layout({ children, home }) {
         }
       `}</style>
     </div>
-  );
+  )
 }

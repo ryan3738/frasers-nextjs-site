@@ -673,6 +673,6 @@ pre tt:after {
   content: '';
 }
 
-.nowrap{
+.nowrap {
   white-space: nowrap;
 }

@@ -1,10 +1,10 @@
-import MenuItem from './menu-item';
+import MenuItem from './menu-item'
 
-export default function MenuSection(props) {
+export default function MenuSection (props) {
   return (
-    <div className='menu-container'>
-      <h2 className='menu-header'>{props.category}</h2>
-      <div className='line'></div>
+    <div className="menu-container">
+      <h2 className="menu-header">{props.category}</h2>
+      <div className="line"></div>
       <MenuItem category={props.category} />
       <style jsx>{`
         .menu-header {
@@ -27,5 +27,5 @@ export default function MenuSection(props) {
         }
       `}</style>
     </div>
-  );
+  )
 }

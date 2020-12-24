@@ -1,19 +1,19 @@
-import Link from 'next/link';
-import Burger from './burger';
-import BurgerMenu from './burger-menu';
-import React, { useState, useRef } from 'react';
-import { useOnClickOutside } from '../hooks/hooks';
-import NavList from './nav-list';
-import Image from 'next/image';
+import Link from 'next/link'
+import Burger from './burger'
+import BurgerMenu from './burger-menu'
+import React, { useState, useRef } from 'react'
+import { useOnClickOutside } from '../hooks/hooks'
+import NavList from './nav-list'
+import Image from 'next/image'
 
-export default function NavBar({ children, open, setOpen }) {
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
+export default function NavBar ({ children, open, setOpen }) {
+  const node = useRef()
+  useOnClickOutside(node, () => setOpen(false))
 
   return (
     <>
-      <div className='nav-bar'>
-        <div className='burger'>
+      <div className="nav-bar">
+        <div className="burger">
           {/* <div>
             <Link href='/'>
               <a className='title'>FRASERS</a>
@@ -25,9 +25,9 @@ export default function NavBar({ children, open, setOpen }) {
           <BurgerMenu open={open} setOpen={setOpen} />
         </div>
         {/* <NavList></NavList> */}
-        <nav className='nav-list'>
-          <Link href='/'>
-            <a className='title'>FRASERS</a>
+        <nav className="nav-list">
+          <Link href="/">
+            <a className="title">FRASERS</a>
           </Link>
 
           <NavList showOnLarge />
@@ -78,5 +78,5 @@ export default function NavBar({ children, open, setOpen }) {
         }
       `}</style>
     </>
-  );
+  )
 }

@@ -1,22 +1,22 @@
-import Image from 'next/image';
-import siteData from '../public/data/site-data.json';
-import utilStyles from '../styles/utils.module.css';
-import Button from './button';
+import Image from 'next/image'
+import siteData from '../public/data/site-data.json'
+// import utilStyles from '../styles/utils.module.css'
+import Button from './button'
 
-export default function Hero(props) {
+export default function Hero (props) {
   return (
     <>
-      <div id='welcome' className='welcome-container'>
-        <div className='welcome-box'>
-          <div className='welcome-inner-box'>
+      <div id="welcome" className="welcome-container">
+        <div className="welcome-box">
+          <div className="welcome-inner-box">
             {/* <!-- <div class="welcome-contents"> --> */}
-            <p className='spaced-text'>Est. | 2006</p>
-            <h1 className='title'>FRASERS</h1>
-            <div className='welcome-logo'>
+            <p className="spaced-text">Est. | 2006</p>
+            <h1 className="title">FRASERS</h1>
+            <div className="welcome-logo">
               <Image
-                src='/images/frasers-logo.png'
-                alt='Frasers Gourmet Hideaway Logo'
-                layout='responsive'
+                src="/images/frasers-logo.png"
+                alt="Frasers Gourmet Hideaway Logo"
+                layout="responsive"
                 width={228}
                 height={104}
                 priority={true}
@@ -27,8 +27,8 @@ export default function Hero(props) {
             <br />
             <a
               href={siteData.address.directions}
-              target='_blank'
-              rel='noreferrer noopener'
+              target="_blank"
+              rel="noreferrer noopener"
             >
               {`${siteData.address.street} ${siteData.address.street2}`}
               <br />
@@ -38,8 +38,8 @@ export default function Hero(props) {
             <br />
             <h2>Now Serving Takeout!</h2>
             <Button
-              buttonText='ORDER ONLINE'
-              buttonLink='https://frasersgh.square.site/'
+              buttonText="ORDER ONLINE"
+              buttonLink="https://frasersgh.square.site/"
             />
             <br />
             <br />
@@ -136,5 +136,5 @@ export default function Hero(props) {
         }
       `}</style>
     </>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import menuData from '../public/data/menu-data.json';
+import menuData from '../public/data/menu-data.json'
 
 const getMenuItem = (menuData, category) => {
   return (
@@ -8,17 +8,17 @@ const getMenuItem = (menuData, category) => {
         .filter((e) => e.available === true)
         .map((data) => {
           return (
-            <div key={data['itemName']} className='menu-item'>
-              <h3 className='primary-color'>{data.itemName}</h3>
+            <div key={data.itemName} className="menu-item">
+              <h3 className="primary-color">{data.itemName}</h3>
               <div dangerouslySetInnerHTML={{ __html: data.description }}></div>
               <br />
-              <div className='primary-color'>{data.price}</div>
+              <div className="primary-color">{data.price}</div>
 
               {data.modifier ? (
                 <div>
                   <br />
                   {data.modifier}&nbsp;
-                  <span className='primary-color'>{data.modifierPrice}</span>
+                  <span className="primary-color">{data.modifierPrice}</span>
                 </div>
               ) : (
                 ''
@@ -37,16 +37,16 @@ const getMenuItem = (menuData, category) => {
                 }
               `}</style>
             </div>
-          );
+          )
         })}
     </>
-  );
-};
+  )
+}
 
-export default function MenuItem(props) {
+export default function MenuItem (props) {
   return (
     <div>
-      <div className='menu-section'>
+      <div className="menu-section">
         {getMenuItem(menuData, props.category)}
       </div>
       <style jsx>
@@ -60,5 +60,5 @@ export default function MenuItem(props) {
         `}
       </style>
     </div>
-  );
+  )
 }

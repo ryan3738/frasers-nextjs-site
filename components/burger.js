@@ -1,17 +1,17 @@
-import { bool, func } from 'prop-types';
+import { bool, func } from 'prop-types'
 
 Burger.propTypes = {
   open: bool.isRequired,
-  setOpen: func.isRequired,
-};
+  setOpen: func.isRequired
+}
 
-export default function Burger({ open, setOpen }) {
+export default function Burger ({ open, setOpen }) {
   return (
     <>
-      <div className='styled-burger' open={open} onClick={() => setOpen(!open)}>
-        <div className='top-bun' />
-        <div className='patty' />
-        <div className='bottom-bun' />
+      <div className="styled-burger" open={open} onClick={() => setOpen(!open)}>
+        <div className="top-bun" />
+        <div className="patty" />
+        <div className="bottom-bun" />
         <style jsx>{`
           .styled-burger {
             position: absolute;
@@ -65,5 +65,5 @@ export default function Burger({ open, setOpen }) {
         `}</style>
       </div>
     </>
-  );
+  )
 }

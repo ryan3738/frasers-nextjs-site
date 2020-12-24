@@ -1,4 +1,4 @@
-import doubleItems from '../public/data/double.json';
+// import doubleItems from '../public/data/double.json';
 import Image from 'next/image';
 
 export default function Double({
@@ -12,17 +12,17 @@ export default function Double({
   rightTitle,
   rightSubtitle,
   id,
-  }: {
-  children: React.ReactNode
-  title: string
-  subtitle: string
-  imageSource: string
-  imageAlt: string
-  imageLeft: string
-  rightText: string
-  rightTitle: string
-  rightSubtitle: string
-  id: string
+}: {
+  children: React.ReactNode;
+  title: string;
+  subtitle: string;
+  imageSource: string;
+  imageAlt: string;
+  imageLeft: string;
+  rightText: string;
+  rightTitle: string;
+  rightSubtitle: string;
+  id: string;
 }) {
   return (
     <>
@@ -44,14 +44,17 @@ export default function Double({
             <div className='double-item double-text double-right'>
               <h2 className='primary-color'>{rightTitle}</h2>
               <h3>{rightSubtitle}</h3>
-              <div className='medium-emphasis' dangerouslySetInnerHTML={{ __html: rightText }}></div>
+              <div
+                className='medium-emphasis'
+                dangerouslySetInnerHTML={{ __html: rightText }}
+              ></div>
             </div>
           </>
         )}
 
         <div className='double-item double-text double-left'>
           <h2 className='primary-color'>{title}</h2>
-          <h3 >{subtitle}</h3>
+          <h3>{subtitle}</h3>
           <div className='medium-emphasis'>{children}</div>
         </div>
         <style jsx>{`
@@ -74,7 +77,6 @@ export default function Double({
           .double-item {
             text-align: left;
             margin: 0 10px 0;
-            
           }
 
           .double-item > img {
@@ -100,8 +102,6 @@ export default function Double({
           .alternating-color:nth-child(odd) {
             color: var(--color-white);
           }
-
-          
         `}</style>
       </div>
     </>

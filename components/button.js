@@ -1,9 +1,9 @@
-export default function Button({ buttonText, buttonLink }) {
+export default function Button ({ buttonText, buttonLink }) {
   return (
     <>
       <a href={buttonLink}>
-        <button className='button-text'>
-          <span className='button-text'>{buttonText}</span>
+        <button className="button-text">
+          <span className="button-text">{buttonText}</span>
         </button>
       </a>
 
@@ -18,8 +18,7 @@ export default function Button({ buttonText, buttonLink }) {
           /* margin: 1%; */
           /* padding: 1%; */
         }
-        
       `}</style>
     </>
-  );
+  )
 }

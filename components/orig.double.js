@@ -1,5 +1,5 @@
-import doubleItems from '../public/data/double.json';
-import Image from 'next/image';
+import doubleItems from '../public/data/double.json'
+import Image from 'next/image'
 
 const getDoubleItem = (double, category) => {
   return (
@@ -9,19 +9,19 @@ const getDoubleItem = (double, category) => {
         //   .filter((e) => e.Available === true)
         .map((data) => {
           return (
-            <div key={data.title} className='double-container'>
-              <div className='double-item double-pic right'>
+            <div key={data.title} className="double-container">
+              <div className="double-item double-pic right">
                 <Image
                   src={data.imageSource}
                   alt={data.imageAlt}
-                  height='612'
-                  width='612'
+                  height="612"
+                  width="612"
                 />
               </div>
-              <div className='double-item double-text left'>
-                <h3 className='primary-color'>{data.title}</h3>
-                {data.subTitle ? <h4 className=''>{data.subTitle}</h4> : ''}
-                <p className='medium-emphasis'>{data.content}</p>
+              <div className="double-item double-text left">
+                <h3 className="primary-color">{data.title}</h3>
+                {data.subTitle ? <h4 className="">{data.subTitle}</h4> : ''}
+                <p className="medium-emphasis">{data.content}</p>
               </div>
               <style jsx>{`
                 .primary-color {
@@ -95,12 +95,12 @@ const getDoubleItem = (double, category) => {
                 }
               `}</style>
             </div>
-          );
+          )
         })}
     </>
-  );
-};
+  )
+}
 
-export default function Double({ category }) {
-  return <>{getDoubleItem(doubleItems, category)}</>;
+export default function Double ({ category }) {
+  return <>{getDoubleItem(doubleItems, category)}</>
 }

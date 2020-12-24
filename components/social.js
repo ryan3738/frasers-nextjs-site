@@ -1,18 +1,18 @@
-import Image from 'next/image';
+import Image from 'next/image'
 
-export default function Social(props) {
+export default function Social (props) {
   return (
-    <div className='social'>
-      <a href={props.href} target='_blank' rel='noreferrer noopener'>
+    <div className="social">
+      <a href={props.href} target="_blank" rel="noreferrer noopener">
         <Image
           // style='max-width:100%; max-height: auto;'
           src={props.img}
           alt={props.alt}
-          layout='fixed'
-          objectFit='cover'
-          height='45'
-          width='45'
-          quality='100'
+          layout="fixed"
+          objectFit="cover"
+          height="45"
+          width="45"
+          quality="100"
         />
       </a>
       <style jsx>{`
@@ -32,5 +32,5 @@ export default function Social(props) {
         }
       `}</style>
     </div>
-  );
+  )
 }

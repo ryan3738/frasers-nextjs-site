@@ -1,10 +1,10 @@
-import gallery from '../public/data/gallery-grid.json';
-import Image from 'next/image';
+import gallery from '../public/data/gallery-grid.json'
+import Image from 'next/image'
 
 const getGalleryItem = (gallery) => {
   return (
     <>
-      <div className='gallery-container'>
+      <div className="gallery-container">
         {gallery
           // .filter((e) => e.Category === category)
           //   .filter((e) => e.Available === true)
@@ -12,22 +12,22 @@ const getGalleryItem = (gallery) => {
             return (
               <div
                 key={data.imageAlt}
-                id='image-div'
+                id="image-div"
                 // className={data.imageSize}
               >
                 <Image
-                  className='image'
+                  className="image"
                   src={data.imageSource}
                   alt={data.imageAlt}
-                  layout='responsive'
-                  objectFit='cover'
-                  height='612'
-                  width='612'
+                  layout="responsive"
+                  objectFit="cover"
+                  height="612"
+                  width="612"
                   // unoptimized={true}
                   // unsized='true'
                 />
               </div>
-            );
+            )
           })}
       </div>
       <style jsx>{`
@@ -42,7 +42,7 @@ const getGalleryItem = (gallery) => {
         #image-div {
           display: inline-block;
           height: auto;
-          max-width:350px;
+          max-width: 350px;
           width: 100vw;
           border: 0px solid red;
           padding: 5px;
@@ -83,9 +83,9 @@ const getGalleryItem = (gallery) => {
         }
       `}</style> */}
     </>
-  );
-};
+  )
+}
 
-export default function GalleryGrid() {
-  return <>{getGalleryItem(gallery)}</>;
+export default function GalleryGrid () {
+  return <>{getGalleryItem(gallery)}</>
 }

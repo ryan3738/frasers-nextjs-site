@@ -1,10 +1,6 @@
 {
   "Category": {
-    "category": [
-      "Starters",
-      "Entrees",
-      "Desserts"
-    ]
+    "category": ["Starters", "Entrees", "Desserts"]
   },
   "menu": [
     {
