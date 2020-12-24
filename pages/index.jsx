@@ -1,42 +1,42 @@
-import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
+import Head from 'next/head'
+import Layout, { siteTitle } from '../components/layout'
+// import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';
-import MenuSection from '../components/menu-section';
-import Double from '../components/double.tsx';
-import GalleryGrid from '../components/gallery-grid';
-import Contact from '../components/contact';
-import Button from '../components/button';
+// import MenuSection from '../components/menu-section'
+import Double from '../components/double.tsx'
+import GalleryGrid from '../components/gallery-grid'
+import Contact from '../components/contact'
+import Button from '../components/button'
 // import doubleItems from '../public/data/double.json';
-import { getDoubleData } from '../lib/posts';
-import announcementPath from '../public/data/site-data.json';
-import siteData from '../public/data/site-data.json';
+import { getDoubleData } from '../lib/posts'
+// import announcementPath from '../public/data/site-data.json'
+import siteData from '../public/data/site-data.json'
 
-export async function getStaticProps() {
+export async function getStaticProps () {
   // const allPostsData = getSortedPostsData();
-  const aboutOwnerData = await getDoubleData('public/data/about-owner.md');
+  const aboutOwnerData = await getDoubleData('public/data/about-owner.md')
   const aboutBusinessData = await getDoubleData(
     'public/data/about-business.md'
-  );
-  const announcement1Data = await getDoubleData(announcementPath.announcement1);
-  const announcement2Data = await getDoubleData(announcementPath.announcement2);
+  )
+  const announcement1Data = await getDoubleData(siteData.announcement1)
+  const announcement2Data = await getDoubleData(siteData.announcement2)
 
   return {
     props: {
       aboutOwnerData,
       aboutBusinessData,
       announcement1Data,
-      announcement2Data,
-    },
-  };
+      announcement2Data
+    }
+  }
 }
 
-export default function Home({
+export default function Home ({
   aboutOwnerData,
   aboutBusinessData,
   announcement1Data,
-  announcement2Data,
+  announcement2Data
 }) {
   return (
     <>
@@ -45,11 +45,11 @@ export default function Home({
           <title>{siteTitle}</title>
           {/* <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script> */}
         </Head>
-        <section className='container'>
-          <h1 className='header hidden-header-off'>
+        <section className="container">
+          <h1 className="header hidden-header-off">
             Dine In Service Temporarily Closed
           </h1>
-          <div className='double-wrapper'>
+          <div className="double-wrapper">
             {/* <Double
               id='takeout'
               title='FRASERS TAKEOUT'
@@ -83,14 +83,14 @@ export default function Home({
               <p>We respect your privacy</p>
             </Double> */}
             <Double
-              id='christmas'
-              title='FOUR COURSE CHRISTMAS DINNER'
-              subtitle='$55 Per Person'
-              imageSource='/images/2020-christmas-takeout-square.jpeg'
-              imageAlt='Pig holding happy holidays sign'
+              id="christmas"
+              title="FOUR COURSE CHRISTMAS DINNER"
+              subtitle="$55 Per Person"
+              imageSource="/images/2020-christmas-takeout-square.jpeg"
+              imageAlt="Christmas takeout dinner"
             >
               <div>
-                <ul className='special-menu'>
+                <ul className="special-menu">
                   <li>
                     <strong>TOMATO BURRATA SALAD</strong>
                     <p>
@@ -124,29 +124,31 @@ export default function Home({
                     <strong>SWEET POTATO PECAN PIE</strong>
                     <p>Caramel sauce, maple whip</p>
                   </li>
-                  <Button
-                    buttonText='ORDER NOW'
-                    buttonLink='https://frasersgh.square.site/s/order?location=11eb3e6701092dad964a0cc47a2ae124'
-                  />
+                  <li>
+                    <Button
+                      buttonText="ORDER NOW"
+                      buttonLink="https://frasersgh.square.site/s/order?location=11eb3e6701092dad964a0cc47a2ae124"
+                    />
+                  </li>
                 </ul>
               </div>
             </Double>
             <Double
-              id='gift-cards'
-              title='Gift Cards Available'
-              subtitle=''
-              imageSource='/images/gift-card-square.jpg'
-              imageAlt='frasers gift card closeup'
+              id="gift-cards"
+              title="Gift Cards Available"
+              subtitle=""
+              imageSource="/images/gift-card-square.jpg"
+              imageAlt="frasers gift card closeup"
               imageLeft
             >
               <div>
                 To purchase a gift card please visit our online store or call us
-                at <span className='nowrap'>{siteData.phoneNumber}</span>
+                at <span className="nowrap">{siteData.phoneNumber}</span>
                 <br />
                 <br />
                 <Button
-                  buttonText='ORDER GIFT CARDS ONLINE'
-                  buttonLink='https://frasersgh.square.site/product/gift-card/88'
+                  buttonText="ORDER GIFT CARDS ONLINE"
+                  buttonLink="https://frasersgh.square.site/product/gift-card/88"
                 />
                 <br />
                 <br />
@@ -156,14 +158,14 @@ export default function Home({
 
             {/* <a className='anchor' id='new-years'></a> */}
             <Double
-              id='new-years'
-              title={`Four Course NEW YEAR'S EVE DINNER`}
-              subtitle='$65 Per Person'
-              imageSource='/images/new-years-square.jpg'
-              imageAlt='Fireworks in the night sky'
+              id="new-years"
+              title={"Four Course NEW YEAR'S EVE DINNER"}
+              subtitle="$65 Per Person"
+              imageSource="/images/new-years-square.jpg"
+              imageAlt="Fireworks in the night sky"
             >
               <div>
-                <ul className='special-menu'>
+                <ul className="special-menu">
                   <li>
                     <strong>DUCK & PHEASANT PATE</strong>
                     <p>
@@ -196,15 +198,17 @@ export default function Home({
                     <strong>CHOCOLATE TARTE</strong>
                     <p>Hazelnut mousse, white chocolate pips, tuille</p>
                   </li>
-                  <Button
-                    buttonText='PREORDER NOW'
-                    buttonLink='https://frasersgh.square.site/s/order?location=11eb3e7a2d8bba1b964a0cc47a2ae124'
-                  />
+                  <li>
+                    <Button
+                      buttonText="PREORDER NOW"
+                      buttonLink="https://frasersgh.square.site/s/order?location=11eb3e7a2d8bba1b964a0cc47a2ae124"
+                    />
+                  </li>
                 </ul>
               </div>
             </Double>
             <Double
-              id='about'
+              id="about"
               title={aboutBusinessData.title}
               subtitle={aboutBusinessData.subtitle}
               imageSource={aboutBusinessData.imageSource}
@@ -212,7 +216,7 @@ export default function Home({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutBusinessData.contentHtml,
+                  __html: aboutBusinessData.contentHtml
                 }}
               />
             </Double>
@@ -226,23 +230,23 @@ export default function Home({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutOwnerData.contentHtml,
+                  __html: aboutOwnerData.contentHtml
                 }}
               />
             </Double>
           </div>
           {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
         </section>
-        <section id='menu' className='container'>
-          <h1 className='header hidden-header'>MENU</h1>
+        <section id="menu" className="container">
+          <h1 className="header hidden-header">MENU</h1>
           {/* <MenuSection category='Entrees' /> */}
           {/* <Button buttonText='SEE FULL MENU ==>' buttonLink='/menu' /> */}
         </section>
         <section>
           <GalleryGrid />
         </section>
-        <section id='contact'>
-          <div className='header'>
+        <section id="contact">
+          <div className="header">
             <h1>CONTACT US</h1>
           </div>
           <Contact />
@@ -291,5 +295,5 @@ export default function Home({
         `}</style>
       </Layout>
     </>
-  );
+  )
 }
