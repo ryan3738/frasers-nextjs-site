@@ -1,5 +1,5 @@
 // import doubleItems from '../public/data/double.json';
-import Image from 'next/image';
+import Image from 'next/image'
 
 export default function Double({
   children,
@@ -13,49 +13,49 @@ export default function Double({
   rightSubtitle,
   id,
 }: {
-  children: React.ReactNode;
-  title: string;
-  subtitle: string;
-  imageSource: string;
-  imageAlt: string;
-  imageLeft: string;
-  rightText: string;
-  rightTitle: string;
-  rightSubtitle: string;
-  id: string;
+  children: React.ReactNode
+  title: string
+  subtitle: string
+  imageSource: string
+  imageAlt: string
+  imageLeft: string
+  rightText: string
+  rightTitle: string
+  rightSubtitle: string
+  id: string
 }) {
   return (
     <>
-      <div className='double-container'>
-        <a className='anchor' id={id}></a>
+      <div className="double-container">
+        <a className="anchor" id={id} />
         {imageSource ? (
           <>
-            <div className='double-item double-right'>
+            <div className="double-item double-right">
               <Image
                 src={imageSource}
                 alt={imageAlt}
-                height='612'
-                width='612'
+                height="612"
+                width="612"
               />
             </div>
           </>
         ) : (
           <>
-            <div className='double-item double-text double-right'>
-              <h2 className='primary-color'>{rightTitle}</h2>
+            <div className="double-item double-text double-right">
+              <h2 className="primary-color">{rightTitle}</h2>
               <h3>{rightSubtitle}</h3>
               <div
-                className='medium-emphasis'
+                className="medium-emphasis"
                 dangerouslySetInnerHTML={{ __html: rightText }}
-              ></div>
+               />
             </div>
           </>
         )}
 
-        <div className='double-item double-text double-left'>
-          <h2 className='primary-color'>{title}</h2>
+        <div className="double-item double-text double-left">
+          <h2 className="primary-color">{title}</h2>
           <h3>{subtitle}</h3>
-          <div className='medium-emphasis'>{children}</div>
+          <div className="medium-emphasis">{children}</div>
         </div>
         <style jsx>{`
           a.anchor {
@@ -105,5 +105,5 @@ export default function Double({
         `}</style>
       </div>
     </>
-  );
+  )
 }

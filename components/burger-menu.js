@@ -2,11 +2,7 @@
 import { bool } from 'prop-types'
 import NavList from './nav-list'
 
-BurgerMenu.propTypes = {
-  open: bool.isRequired
-}
-
-export default function BurgerMenu ({ open }) {
+export default function BurgerMenu({ open }) {
   return (
     <>
       <nav className="styled-menu">
@@ -52,4 +48,8 @@ export default function BurgerMenu ({ open }) {
       `}</style>
     </>
   )
+}
+
+BurgerMenu.propTypes = {
+  open: bool.isRequired,
 }

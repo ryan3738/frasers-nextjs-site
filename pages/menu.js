@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import MenuSection from '../components/menu-section'
 
-export default function Menu () {
+export default function Menu() {
   return (
     <Layout>
       <Head>

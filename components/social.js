@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import PropTypes from 'prop-types'
 
 export default function Social (props) {
   return (
@@ -33,4 +34,10 @@ export default function Social (props) {
       `}</style>
     </div>
   )
+}
+Social.propTypes = {
+  href: PropTypes.string,
+  img: PropTypes.string,
+  alt: PropTypes.string,
+  color: PropTypes.string
 }

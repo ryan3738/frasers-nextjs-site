@@ -14,7 +14,8 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-on-netlify",
-    "export": "npm run build && next export"
+    "export": "npm run build && next export",
+    "lint": "eslint . --ext .ts"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -22,6 +23,7 @@
     "gray-matter": "^4.0.2",
     "next": "^10.0.3",
     "next-on-netlify": "^2.6.0",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "remark": "^13.0.0",
@@ -37,6 +39,7 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.1.0",
     "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-html": "^6.1.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-node": "^11.1.0",

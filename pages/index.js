@@ -13,12 +13,10 @@ import { getDoubleData } from '../lib/posts'
 // import announcementPath from '../public/data/site-data.json'
 import siteData from '../public/data/site-data.json'
 
-export async function getStaticProps () {
+export async function getStaticProps() {
   // const allPostsData = getSortedPostsData();
   const aboutOwnerData = await getDoubleData('public/data/about-owner.md')
-  const aboutBusinessData = await getDoubleData(
-    'public/data/about-business.md'
-  )
+  const aboutBusinessData = await getDoubleData('public/data/about-business.md')
   const announcement1Data = await getDoubleData(siteData.announcement1)
   const announcement2Data = await getDoubleData(siteData.announcement2)
 
@@ -27,16 +25,16 @@ export async function getStaticProps () {
       aboutOwnerData,
       aboutBusinessData,
       announcement1Data,
-      announcement2Data
-    }
+      announcement2Data,
+    },
   }
 }
 
-export default function Home ({
+export default function Home({
   aboutOwnerData,
   aboutBusinessData,
   announcement1Data,
-  announcement2Data
+  announcement2Data,
 }) {
   return (
     <>
@@ -216,7 +214,7 @@ export default function Home ({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutBusinessData.contentHtml
+                  __html: aboutBusinessData.contentHtml,
                 }}
               />
             </Double>
@@ -230,7 +228,7 @@ export default function Home ({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutOwnerData.contentHtml
+                  __html: aboutOwnerData.contentHtml,
                 }}
               />
             </Double>
@@ -276,7 +274,6 @@ export default function Home ({
             flex-wrap: wrap;
             justify-content: center;
           }
-
           .special-menu {
             list-style-type: none;
             padding: 0;

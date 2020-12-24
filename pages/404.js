@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Layout from '../components/layout'
 
 // pages/404.js
-export default function Custom404 () {
+export default function Custom404() {
   return (
     <>
       <Layout>

@@ -1,11 +1,6 @@
 import { bool, func } from 'prop-types'
 
-Burger.propTypes = {
-  open: bool.isRequired,
-  setOpen: func.isRequired
-}
-
-export default function Burger ({ open, setOpen }) {
+export default function Burger({ open, setOpen }) {
   return (
     <>
       <div className="styled-burger" open={open} onClick={() => setOpen(!open)}>
@@ -66,4 +61,8 @@ export default function Burger ({ open, setOpen }) {
       </div>
     </>
   )
+}
+Burger.propTypes = {
+  open: bool.isRequired,
+  setOpen: func.isRequired,
 }
