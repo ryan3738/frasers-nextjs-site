@@ -86,7 +86,7 @@ export default function Home({
               id='christmas'
               title='FOUR COURSE CHRISTMAS DINNER'
               subtitle='$55 Per Person'
-              imageSource='/images/happy-holidays-pig-square.jpg'
+              imageSource='/images/2020-christmas-takeout-square.jpeg'
               imageAlt='Pig holding happy holidays sign'
             >
               <div>
