@@ -1,54 +1,51 @@
-import gallery from '../public/data/gallery-grid.json'
 import Image from 'next/image'
+import gallery from '../public/data/gallery-grid.json'
 
-const getGalleryItem = (gallery) => {
-  return (
-    <>
-      <div className="gallery-container">
-        {gallery
-          // .filter((e) => e.Category === category)
-          //   .filter((e) => e.Available === true)
-          .map((data) => {
-            return (
-              <div
-                key={data.imageAlt}
-                id="image-div"
-                // className={data.imageSize}
-              >
-                <Image
-                  className="image"
-                  src={data.imageSource}
-                  alt={data.imageAlt}
-                  layout="responsive"
-                  objectFit="cover"
-                  height="612"
-                  width="612"
-                  // unoptimized={true}
-                  // unsized='true'
-                />
-              </div>
-            )
-          })}
-      </div>
-      <style jsx>{`
-        .gallery-container {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-content: stretch;
-          justify-content: center;
-        }
+const getGalleryItem = () => (
+  <>
+    <div className="gallery-container">
+      {gallery
+        // .filter((e) => e.Category === category)
+        //   .filter((e) => e.Available === true)
+        .map((data) => (
+          <div
+            key={data.imageAlt}
+            id="image-div"
+            // className={data.imageSize}
+          >
+            <Image
+              className="image"
+              src={data.imageSource}
+              alt={data.imageAlt}
+              layout="responsive"
+              objectFit="cover"
+              height="612"
+              width="612"
+              // unoptimized={true}
+              // unsized='true'
+            />
+          </div>
+        ))}
+    </div>
+    <style jsx>{`
+      .gallery-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: center;
+      }
 
-        #image-div {
-          display: inline-block;
-          height: auto;
-          max-width: 350px;
-          width: 100vw;
-          border: 0px solid red;
-          padding: 5px;
-        }
-      `}</style>
-      {/* <style jsx>{`
+      #image-div {
+        display: inline-block;
+        height: auto;
+        max-width: 350px;
+        width: 100vw;
+        border: 0px solid red;
+        padding: 5px;
+      }
+    `}</style>
+    {/* <style jsx>{`
         .gallery-container {
           margin-top: 2rem;
           display: grid;
@@ -82,10 +79,9 @@ const getGalleryItem = (gallery) => {
           grid-row: span 2;
         }
       `}</style> */}
-    </>
-  )
-}
+  </>
+)
 
-export default function GalleryGrid () {
+export default function GalleryGrid() {
   return <>{getGalleryItem(gallery)}</>
 }
