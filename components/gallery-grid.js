@@ -19,8 +19,8 @@ const getGalleryItem = () => (
               alt={data.imageAlt}
               layout="responsive"
               objectFit="cover"
-              height="612"
-              width="612"
+              height="560"
+              width="560"
               // unoptimized={true}
               // unsized='true'
             />
@@ -39,7 +39,7 @@ const getGalleryItem = () => (
       #image-div {
         display: inline-block;
         height: auto;
-        max-width: 350px;
+        max-width: 360px;
         width: 100vw;
         border: 0px solid red;
         padding: 5px;

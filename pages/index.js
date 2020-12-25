@@ -1,5 +1,8 @@
 import Head from 'next/head'
+import React from 'react'
 import PropTypes from 'prop-types'
+
+import Image from 'next/image'
 import Layout, { siteTitle } from '../components/layout'
 // import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
@@ -13,6 +16,7 @@ import Button from '../components/button'
 import { getDoubleData } from '../lib/posts'
 // import announcementPath from '../public/data/site-data.json'
 import siteData from '../public/data/site-data.json'
+import ImageLightBox from '../components/image-light-box'
 
 export async function getStaticProps() {
   // const allPostsData = getSortedPostsData();
@@ -45,9 +49,11 @@ export default function Home({
           {/* <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script> */}
         </Head>
         <section className="container">
+          <a className="anchor" id="christmas" />
           <h1 className="header hidden-header-off">
-            Dine In Service Temporarily Closed
+            Christmas Four Course Plating
           </h1>
+          <ImageLightBox />
           <div className="double-wrapper">
             {/* <Double
               id='takeout'
@@ -85,8 +91,8 @@ export default function Home({
               id="christmas"
               title="FOUR COURSE CHRISTMAS DINNER"
               subtitle="$55 Per Person"
-              imageSource="/images/2020-christmas-takeout-square.jpeg"
-              imageAlt="Christmas takeout dinner"
+              imageSource="/images/happy-holidays-pig-square.jpg"
+              imageAlt="Frasers pig happy holidays"
             >
               <div>
                 <ul className="special-menu">
@@ -258,6 +264,7 @@ export default function Home({
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: 5px;
           }
           .hidden-header {
             padding: 0;
@@ -265,7 +272,7 @@ export default function Home({
           }
           .container {
             width: 100vw;
-            max-width: 1224px;
+            max-width: 1120px;
             background-color: var(--surface-color);
 
             /* background: var(--background-color); */

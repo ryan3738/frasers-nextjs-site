@@ -31,12 +31,7 @@ export default function Double({
         {imageSource ? (
           <>
             <div className="double-item double-right">
-              <Image
-                src={imageSource}
-                alt={imageAlt}
-                height="612"
-                width="612"
-              />
+              <Image src={imageSource} alt={imageAlt} height="560" width="560" />
             </div>
           </>
         ) : (
@@ -44,10 +39,7 @@ export default function Double({
             <div className="double-item double-text double-right">
               <h2 className="primary-color">{rightTitle}</h2>
               <h3>{rightSubtitle}</h3>
-              <div
-                className="medium-emphasis"
-                dangerouslySetInnerHTML={{ __html: rightText }}
-               />
+              <div className="medium-emphasis" dangerouslySetInnerHTML={{ __html: rightText }} />
             </div>
           </>
         )}
@@ -71,7 +63,7 @@ export default function Double({
           .double-container {
             display: flex;
             flex-direction: column;
-            max-width: 612px;
+            max-width: 560px;
           }
 
           .double-item {

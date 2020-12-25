@@ -3,7 +3,7 @@ import siteData from '../public/data/site-data.json'
 // import utilStyles from '../styles/utils.module.css'
 import Button from './button'
 
-export default function Hero (props) {
+export default function Hero(props) {
   return (
     <>
       <div id="welcome" className="welcome-container">
@@ -19,7 +19,7 @@ export default function Hero (props) {
                 layout="responsive"
                 width={228}
                 height={104}
-                priority={true}
+                priority
               />
             </div>
 
