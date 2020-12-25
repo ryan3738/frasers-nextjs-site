@@ -14,8 +14,7 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-on-netlify",
-    "export": "npm run build && next export",
-    "lint": "eslint . --ext .ts"
+    "export": "npm run build && next export"
   },
   "dependencies": {
     "classnames": "^2.2.6",

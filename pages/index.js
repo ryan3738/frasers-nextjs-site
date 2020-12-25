@@ -88,7 +88,7 @@ export default function Home({
               <p>We respect your privacy</p>
             </Double> */}
             <Double
-              id="christmas"
+              // id="christmas"
               title="FOUR COURSE CHRISTMAS DINNER"
               subtitle="$55 Per Person"
               imageSource="/images/happy-holidays-pig-square.jpg"

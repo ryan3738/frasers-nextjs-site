@@ -1,6 +1,6 @@
 import menuData from '../public/data/menu-data.json'
 
-const getMenuItem = ({ category }) => (
+const getMenuItem = ({ menuData, category }) => (
   <>
     {menuData.menu
       .filter((e) => e.category === category)
