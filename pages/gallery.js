@@ -13,7 +13,6 @@ export default function Gallery() {
         <h1>Gallery</h1>
         <GalleryGrid />
       </section>
-      <style jsx />
     </Layout>
   )
 }
