@@ -88,10 +88,6 @@ export default function Hero(props) {
             '. . .'
             '. w .'
             '. . .';
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-image: none;
           background-color: var(--background-color);
           background-image: url('images/stars.png');
         }
@@ -100,6 +96,8 @@ export default function Hero(props) {
           padding: 10%;
           grid-area: w;
           background: var(--background-color);
+          background-image: url('images/stars.png');
+          background-position: center center;
           opacity: 0.97;
           display: flex;
           flex-direction: column;
