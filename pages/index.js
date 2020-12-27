@@ -275,7 +275,6 @@ export default function Home({
             width: 100vw;
             max-width: 1120px;
             background-color: var(--surface-color);
-
             /* background: var(--background-color); */
           }
           .double-wrapper {

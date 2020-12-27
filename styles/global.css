@@ -21,6 +21,7 @@ body {
   margin: 0;
   color: var(--high-emphasis-text);
   background-color: var(--black-color);
+  background-image: url('../public/images/stars.png');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

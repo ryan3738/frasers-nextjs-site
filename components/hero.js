@@ -93,6 +93,7 @@ export default function Hero(props) {
           background-size: cover;
           background-image: none;
           background-color: var(--background-color);
+          background-image: url('images/stars.png');
         }
 
         .welcome-box {
@@ -131,6 +132,10 @@ export default function Hero(props) {
         }
         @media (min-width: 460px) {
           .welcome-container {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: none;
             background-image: url('images/calamari-blue-cheese-sauce.jpg');
           }
         }
