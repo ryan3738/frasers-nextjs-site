@@ -11,33 +11,42 @@ export default function ImageLightBox() {
             <img
               src="/images/2020-christmas-takeout.jpeg"
               alt="Christmas four course meal"
+              loading="lazy"
             />
           </div>
           <div className="image">
             <img
               src="/images/tomato-burrata-salad.jpeg"
               alt="Tomato burrata salad"
+              loading="lazy"
             />
           </div>
           <div className="image">
-            <img src="/images/smoked-onion-soup.jpeg" alt="Smoked onion soup" />
+            <img
+              src="/images/smoked-onion-soup.jpeg"
+              alt="Smoked onion soup"
+              loading="lazy"
+            />
           </div>
           <div className="image">
             <img
               src="/images/srf-kurobuta-pork-chop.jpeg"
               alt="Kurobuta pork chop"
+              loading="lazy"
             />
           </div>
           <div className="image">
             <img
               src="/images/texas-long-bone-short-rib-christmas.jpeg"
               alt="Texax long bone short ribs"
+              loading="lazy"
             />
           </div>
           <div className="image">
             <img
               src="/images/sweet-potato-pecan-pie.jpeg"
               alt="Sweet potato pecan pie"
+              loading="lazy"
             />
           </div>
         </div>

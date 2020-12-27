@@ -49,119 +49,11 @@ export default function Home({
           {/* <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script> */}
         </Head>
         <section className="container">
-          <a className="anchor" id="christmas" />
-          <h1 className="header hidden-header-off">
+          {/* <h1 className="header hidden-header-off">
             Christmas Four Course Plating
           </h1>
-          <ImageLightBox />
+          <ImageLightBox /> */}
           <div className="double-wrapper">
-            {/* <Double
-              id='takeout'
-              title='FRASERS TAKEOUT'
-              // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
-              imageSource='/images/wine-takeout-bag-square.jpg'
-              imageAlt='Picture of frasers gourmet hideaway takeout bag and a glass of wine'
-            >
-              <div>
-                <ul>
-                  <li>Precooked Ready to Reheat Meals</li>
-                  <li>Place orders by Thursday at 6 pm</li>
-                  <li>Pickup Saturday from 2-4 pm</li>
-                  <li>Place Orders Online</li>
-                  <li>Or Call {siteData.phoneNumber}</li>
-                </ul>
-              </div>
-              <Button
-                buttonText='ORDER ONLINE'
-                buttonLink='https://frasersgh.square.site/s/order?location=11ea7f380b303525a95a0cc47a2aeaec'
-              />
-              <br />
-              <br />
-              <br />
-              <h4>Sign up for our newsletter to receive updates</h4>
-              <Button
-                buttonText='SIGN UP'
-                buttonLink='https://squareup.com/outreach/sgPDT7/subscribe'
-              />
-              <br />
-              <br />
-              <p>We respect your privacy</p>
-            </Double> */}
-            <Double
-              // id="christmas"
-              title="FOUR COURSE CHRISTMAS DINNER"
-              subtitle="$55 Per Person"
-              imageSource="/images/happy-holidays-pig-square.jpg"
-              imageAlt="Frasers pig happy holidays"
-            >
-              <div>
-                <ul className="special-menu">
-                  <li>
-                    <strong>TOMATO BURRATA SALAD</strong>
-                    <p>
-                      Oven-roasted tomatoes, burrata mozzarella, pickled
-                      asparagus, prosciutto, baba ghanouj
-                    </p>
-                  </li>
-                  <li>
-                    <strong>SMOKED ONION SOUP</strong>
-                    <p>
-                      Applewood smoked Walla Walla Onions, crème fraîche, crispy
-                      shallots
-                    </p>
-                  </li>
-                  <li>
-                    <strong>SRF KUROBUTA PORK CHOP</strong>
-                    <p>
-                      Spaetzle, asparagus, pickled red cabbage, Dijonnaise cream
-                      sauce
-                    </p>
-                    <b>OR</b>
-                    <br />
-                    <br />
-                    <strong>TEXAS LONG BONE SHORT RIB</strong>
-                    <p>
-                      Tender giant bone-in short rib, garlic mash, vegetables,
-                      braising reduction
-                    </p>
-                  </li>
-                  <li>
-                    <strong>SWEET POTATO PECAN PIE</strong>
-                    <p>Caramel sauce, maple whip</p>
-                  </li>
-                  <li>
-                    <Button
-                      buttonText="ORDER NOW"
-                      buttonLink="https://frasersgh.square.site/s/order?location=11eb3e6701092dad964a0cc47a2ae124"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </Double>
-            <Double
-              id="gift-cards"
-              title="Gift Cards Available"
-              subtitle=""
-              imageSource="/images/gift-card-square.jpg"
-              imageAlt="frasers gift card closeup"
-              imageLeft
-            >
-              <div>
-                To purchase a gift card please visit our online store or call us
-                at <span className="nowrap">{siteData.phoneNumber}</span>
-                <br />
-                <br />
-                <Button
-                  buttonText="ORDER GIFT CARDS ONLINE"
-                  buttonLink="https://frasersgh.square.site/product/gift-card/88"
-                />
-                <br />
-                <br />
-                Happy Holidays and thank you for your support!
-              </div>
-            </Double>
-
-            {/* <a className='anchor' id='new-years'></a> */}
             <Double
               id="new-years"
               title={"Four Course NEW YEAR'S EVE DINNER"}
@@ -208,6 +100,115 @@ export default function Home({
                       buttonText="PREORDER NOW"
                       buttonLink="https://frasersgh.square.site/s/order?location=11eb3e7a2d8bba1b964a0cc47a2ae124"
                     />
+                  </li>
+                </ul>
+              </div>
+            </Double>
+
+            {/* <Double
+              id='takeout'
+              title='FRASERS TAKEOUT'
+              // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
+              imageSource='/images/wine-takeout-bag-square.jpg'
+              imageAlt='Picture of frasers gourmet hideaway takeout bag and a glass of wine'
+            >
+              <div>
+                <ul>
+                  <li>Precooked Ready to Reheat Meals</li>
+                  <li>Place orders by Thursday at 6 pm</li>
+                  <li>Pickup Saturday from 2-4 pm</li>
+                  <li>Place Orders Online</li>
+                  <li>Or Call {siteData.phoneNumber}</li>
+                </ul>
+              </div>
+              <Button
+                buttonText='ORDER ONLINE'
+                buttonLink='https://frasersgh.square.site/s/order?location=11ea7f380b303525a95a0cc47a2aeaec'
+              />
+              <br />
+              <br />
+              <br />
+              <h4>Sign up for our newsletter to receive updates</h4>
+              <Button
+                buttonText='SIGN UP'
+                buttonLink='https://squareup.com/outreach/sgPDT7/subscribe'
+              />
+              <br />
+              <br />
+              <p>We respect your privacy</p>
+            </Double> */}
+            <Double
+              id="gift-cards"
+              title="Gift Cards Available"
+              subtitle=""
+              imageSource="/images/gift-card-square.jpg"
+              imageAlt="frasers gift card closeup"
+              imageLeft
+            >
+              <div>
+                To purchase a gift card please visit our online store or call us
+                at <span className="nowrap">{siteData.phoneNumber}</span>
+                <br />
+                <br />
+                <Button
+                  buttonText="ORDER GIFT CARDS ONLINE"
+                  buttonLink="https://frasersgh.square.site/product/gift-card/88"
+                />
+                <br />
+                <br />
+                Happy Holidays and thank you for your support!
+              </div>
+            </Double>
+
+            {/* <a className='anchor' id='new-years'></a> */}
+          </div>
+          <a className="anchor" id="christmas" />
+          <h2 className="header hidden-header-off">
+            Christmas Four Course Plating
+          </h2>
+          <ImageLightBox />
+          <div className="double-wrapper">
+            <Double
+              // id="christmas"
+              title="FOUR COURSE CHRISTMAS DINNER"
+              subtitle="$55 Per Person"
+              imageSource="/images/happy-holidays-pig-square.jpg"
+              imageAlt="Frasers pig happy holidays"
+            >
+              <div>
+                <ul className="special-menu">
+                  <li>
+                    <strong>TOMATO BURRATA SALAD</strong>
+                    <p>
+                      Oven-roasted tomatoes, burrata mozzarella, pickled
+                      asparagus, prosciutto, baba ghanouj
+                    </p>
+                  </li>
+                  <li>
+                    <strong>SMOKED ONION SOUP</strong>
+                    <p>
+                      Applewood smoked Walla Walla Onions, crème fraîche, crispy
+                      shallots
+                    </p>
+                  </li>
+                  <li>
+                    <strong>SRF KUROBUTA PORK CHOP</strong>
+                    <p>
+                      Spaetzle, asparagus, pickled red cabbage, Dijonnaise cream
+                      sauce
+                    </p>
+                    <b>OR</b>
+                    <br />
+                    <br />
+                    <strong>TEXAS LONG BONE SHORT RIB</strong>
+                    <p>
+                      Tender giant bone-in short rib, garlic mash, vegetables,
+                      braising reduction
+                    </p>
+                  </li>
+                  <li>
+                    <strong>SWEET POTATO PECAN PIE</strong>
+                    <p>Caramel sauce, maple whip</p>
                   </li>
                 </ul>
               </div>
