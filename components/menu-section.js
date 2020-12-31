@@ -1,6 +1,6 @@
 import MenuItem from './menu-item'
 
-export default function MenuSection(category) {
+export default function MenuSection({ category }) {
   return (
     <div className="menu-container">
       <h2 className="menu-header">{category}</h2>

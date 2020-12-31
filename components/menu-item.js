@@ -1,6 +1,6 @@
 import menuData from '../public/data/menu-data.json'
 
-const getMenuItem = ({ menuData, category }) => (
+const getMenuItem = ({ category }) => (
   <>
     {menuData.menu
       .filter((e) => e.category === category)
@@ -42,7 +42,7 @@ const getMenuItem = ({ menuData, category }) => (
 export default function MenuItem(category) {
   return (
     <div>
-      <div className="menu-section">{getMenuItem(menuData, category)}</div>
+      <div className="menu-section">{getMenuItem(category)}</div>
       <style jsx>
         {`
           .menu-section {

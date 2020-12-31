@@ -323,6 +323,66 @@
       "price": 10,
       "modifier": "Add Info",
       "available": false
+    },
+    {
+      "itemName": "DUCK & PHEASANT PATE",
+      "description": "Blackberry mustard, pickled vegetables, tapioca ink chips",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-duck-pheasant-pate.jpg",
+      "imageAlt": "",
+      "category": "Starters",
+      "price": null,
+      "modifier": "",
+      "available": false
+    },
+    {
+      "itemName": "CIOPPINO",
+      "description": "Prawns, scallops, octopus, crab, tomato saffron seafood broth",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-cioppino.jpg",
+      "imageAlt": "",
+      "category": "Starters",
+      "price": null,
+      "modifier": "",
+      "available": false
+    },
+    {
+      "itemName": "CORNISH GAME HEN",
+      "description": "Wild mushroom mousse, Butternut squash orzo, asparagus, sauce Forestiere",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-cornish-game-hen.jpg",
+      "imageAlt": "",
+      "category": "Entrees",
+      "price": null,
+      "modifier": "",
+      "available": false
+    },
+    {
+      "itemName": "FILET MIGNON",
+      "description": "Brie stuffed wrapped in prosciutto, garlic mash, veg, braising reduction",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-filet-mignon.jpg",
+      "imageAlt": "",
+      "category": "Entrees",
+      "price": null,
+      "modifier": "",
+      "available": false
+    },
+    {
+      "itemName": "CHOCOLATE TARTE",
+      "description": "Hazelnut mousse, white chocolate pips, tuille",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-chocolate-tarte.jpg",
+      "imageAlt": "",
+      "category": "Desserts",
+      "price": null,
+      "modifier": "",
+      "available": false
     }
   ]
 }
