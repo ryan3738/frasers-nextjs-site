@@ -152,6 +152,10 @@ export default function Layout({ children, home }) {
         .nav-spacer {
           height: 4em;
         }
+
+        .nav-padding {
+          padding: 4em 0 0;
+        }
         .nav-link {
           /* font-size: 0.5rem; */
           padding: 1em;

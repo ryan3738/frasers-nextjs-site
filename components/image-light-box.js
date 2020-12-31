@@ -9,43 +9,36 @@ export default function ImageLightBox() {
         <div className="photo-grid">
           <div className="image">
             <img
-              src="/images/2020-christmas-takeout.jpeg"
-              alt="Christmas four course meal"
+              src="/images/new-years-duck-pheasant-pate.jpg"
+              alt="Duck & Pheasant Pate | blackberry mustard, pickled vegetables, tapioca ink chips"
               loading="lazy"
             />
           </div>
           <div className="image">
             <img
-              src="/images/tomato-burrata-salad.jpeg"
-              alt="Tomato burrata salad"
+              src="/images/new-years-cioppino.jpg"
+              alt="Seafood Cioppino | Prawns, scallops, octopus, crab, tomato saffron seafood broth"
               loading="lazy"
             />
           </div>
           <div className="image">
             <img
-              src="/images/smoked-onion-soup.jpeg"
-              alt="Smoked onion soup"
+              src="/images/new-years-cornish-game-hen.jpg"
+              alt="Cornish Game Hen | wild mushroom mousse, butternut squash orzo, asparagus, sauce forestiere"
               loading="lazy"
             />
           </div>
           <div className="image">
             <img
-              src="/images/srf-kurobuta-pork-chop.jpeg"
-              alt="Kurobuta pork chop"
+              src="/images/new-years-filet-mignon.jpg"
+              alt="Filet Mignon | brie stuffed wrapped in prosciutto, garlic mash, veg, braising reduction"
               loading="lazy"
             />
           </div>
           <div className="image">
             <img
-              src="/images/texas-long-bone-short-rib-christmas.jpeg"
-              alt="Texax long bone short ribs"
-              loading="lazy"
-            />
-          </div>
-          <div className="image">
-            <img
-              src="/images/sweet-potato-pecan-pie.jpeg"
-              alt="Sweet potato pecan pie"
+              src="/images/new-years-chocolate-tarte.jpg"
+              alt="Chocolate Tarte | hazelnut mousse, white chocolate pips, tuille"
               loading="lazy"
             />
           </div>

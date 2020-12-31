@@ -46,16 +46,15 @@ export default function Home({
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
-          {/* <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script> */}
         </Head>
         <section className="container">
-          {/* <h1 className="header hidden-header-off">
-            Christmas Four Course Plating
-          </h1>
-          <ImageLightBox /> */}
+          <h2 id="new-years" className="anchor header hidden-header-off">
+            New Year's Eve Four Course Plating
+          </h2>
+          <ImageLightBox />
           <div className="double-wrapper">
             <Double
-              id="new-years"
+              // id="new-years"
               title={"Four Course NEW YEAR'S EVE DINNER"}
               subtitle="$65 Per Person"
               imageSource="/images/new-years-square.jpg"
@@ -159,17 +158,11 @@ export default function Home({
                 Happy Holidays and thank you for your support!
               </div>
             </Double>
-
-            {/* <a className='anchor' id='new-years'></a> */}
           </div>
-          <a className="anchor" id="christmas" />
-          <h2 className="header hidden-header-off">
-            Christmas Four Course Plating
-          </h2>
-          <ImageLightBox />
+          {/* <a className="anchor" id="christmas" /> */}
           <div className="double-wrapper">
             <Double
-              // id="christmas"
+              id="christmas"
               title="FOUR COURSE CHRISTMAS DINNER"
               subtitle="$55 Per Person"
               imageSource="/images/happy-holidays-pig-square.jpg"

@@ -30,7 +30,7 @@ export default function NavList(props) {
             'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
-          New Year's Menu
+          New Year's Plating
         </a>
       </Link>
 
@@ -40,7 +40,7 @@ export default function NavList(props) {
             'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
-          Christmas Plating
+          Christmas Menu
         </a>
       </Link>
       <Link href="/#gift-cards">
