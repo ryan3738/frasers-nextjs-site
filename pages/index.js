@@ -146,10 +146,12 @@ export default function Home({
             >
               <div>
                 <p>
-                  The Frasers staff will be taking some time off to take a much
-                  needed break. Stay tuned for updates on when we will be
-                  reopening. Happy New Year & thank you so much for all of your
-                  support!
+                  Frasers will be closing for a bit starting January 3rd to
+                  allow our staff to take a much-needed break. Stay tuned for
+                  updates on when we will be reopening. We hope everyone had a
+                  good holiday season and was able to safely connect with
+                  friends and family. Happy New Year & thank you so much for all
+                  of your support!
                 </p>
                 {/* <Button
                   buttonText="ORDER GIFT CARDS ONLINE"

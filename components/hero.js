@@ -36,7 +36,7 @@ export default function Hero(props) {
             </a>
             <br />
             <br />
-            <h2>Frasers is Closed The Week of January 3rd</h2>
+            <h2>Frasers is Closed Starting The Week of January 3rd</h2>
             <Button buttonText="LEARN MORE" buttonLink="/#announcement" />
             <br />
             <br />
