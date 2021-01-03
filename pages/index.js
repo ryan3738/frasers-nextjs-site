@@ -137,25 +137,24 @@ export default function Home({
               <p>We respect your privacy</p>
             </Double> */}
             <Double
-              id="gift-cards"
-              title="Gift Cards Available"
-              subtitle=""
-              imageSource="/images/gift-card-square.jpg"
-              imageAlt="frasers gift card closeup"
+              id="announcement"
+              title="Frasers Closed"
+              subtitle="Starting January 3rd"
+              imageSource="/images/closed-square.jpg"
+              imageAlt="closed sign in window"
               imageLeft
             >
               <div>
-                To purchase a gift card please visit our online store or call us
-                at <span className="nowrap">{siteData.phoneNumber}</span>
-                <br />
-                <br />
-                <Button
+                <p>
+                  The Frasers staff will be taking some time off to take a much
+                  needed break. Stay tuned for updates on when we will be
+                  reopening. Happy New Year & thank you so much for all of your
+                  support!
+                </p>
+                {/* <Button
                   buttonText="ORDER GIFT CARDS ONLINE"
                   buttonLink="https://frasersgh.square.site/product/gift-card/88"
-                />
-                <br />
-                <br />
-                Happy Holidays and thank you for your support!
+                /> */}
               </div>
             </Double>
           </div>
@@ -298,8 +297,8 @@ export default function Home({
 }
 
 Home.propTypes = {
-  aboutOwnerData: PropTypes.string,
-  aboutBusinessData: PropTypes.string,
-  announcement1Data: PropTypes.string,
-  announcement2Data: PropTypes.string,
+  aboutOwnerData: PropTypes.object,
+  aboutBusinessData: PropTypes.object,
+  announcement1Data: PropTypes.object,
+  announcement2Data: PropTypes.object,
 }

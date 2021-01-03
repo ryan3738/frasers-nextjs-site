@@ -36,11 +36,8 @@ export default function Hero(props) {
             </a>
             <br />
             <br />
-            <h2>Now Serving Takeout!</h2>
-            <Button
-              buttonText="ORDER ONLINE"
-              buttonLink="https://frasersgh.square.site/"
-            />
+            <h2>Frasers is Closed The Week of January 3rd</h2>
+            <Button buttonText="LEARN MORE" buttonLink="/#announcement" />
             <br />
             <br />
             <a href={`tel:${siteData.phoneNumber}`}>{siteData.phoneNumber}</a>
