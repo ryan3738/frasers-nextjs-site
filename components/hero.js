@@ -39,7 +39,7 @@ export default function Hero(props) {
             <h2>TAKEOUT NOW AVAILABLE</h2>
             <Button
               buttonText="ORDER ONLINE"
-              buttonLink="https://frasersgh.square.site/"
+              buttonLink={siteData.websites.onlineStore}
             />
             <br />
             <br />

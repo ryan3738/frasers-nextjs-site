@@ -2,12 +2,12 @@ import Head from 'next/head'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Image from 'next/image'
+// import Image from 'next/image'
 import Layout, { siteTitle } from '../components/layout'
 // import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';
-import MenuSection from '../components/menu-section'
+// import MenuSection from '../components/menu-section'
 import Double from '../components/double.tsx'
 import GalleryGrid from '../components/gallery-grid'
 import Contact from '../components/contact'
@@ -16,7 +16,7 @@ import Button from '../components/button'
 import { getDoubleData } from '../lib/posts'
 // import announcementPath from '../public/data/site-data.json'
 import siteData from '../public/data/site-data.json'
-import ImageLightBox from '../components/image-light-box'
+// import ImageLightBox from '../components/image-light-box'
 
 export async function getStaticProps() {
   // const allPostsData = getSortedPostsData();
@@ -71,7 +71,7 @@ export default function Home({
               </div>
               <Button
                 buttonText="ORDER ONLINE"
-                buttonLink="https://frasersgh.square.site/"
+                buttonLink={siteData.websites.onlineStore}
               />
               <br />
               <br />

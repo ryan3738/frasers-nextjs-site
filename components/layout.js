@@ -8,6 +8,7 @@ import Hero from './hero'
 import Button from './button'
 import NavList from './nav-list'
 
+
 const name = 'Frasers'
 export const siteTitle =
   'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest'

@@ -19,5 +19,11 @@
     "Saturday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00"
   },
   "announcement1": "posts/announcement1.md",
-  "announcement2": "posts/announcement2.md"
+  "announcement2": "posts/announcement2.md",
+  "websites": {
+    "onlineStore": "https://frasersgh.square.site/s/order/?location=11ea7f380b303525a95a0cc47a2aeaec",
+    "facebook": "",
+    "instagram": "",
+    "mailingListSignup": ""
+  }
 }

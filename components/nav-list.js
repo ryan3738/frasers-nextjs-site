@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Button from './button'
+import siteData from '../public/data/site-data.json'
 // import Image from 'next/image'
 
 export default function NavList(props) {
@@ -78,7 +79,7 @@ export default function NavList(props) {
       >
         <Button
           buttonText="ORDER ONLINE"
-          buttonLink="https://frasersgh.square.site/"
+          buttonLink={siteData.websites.onlineStore}
         />
       </div>
       <style jsx>{`
