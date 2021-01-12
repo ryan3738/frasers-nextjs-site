@@ -71,7 +71,7 @@ export default function Home({
               </div>
               <Button
                 buttonText="ORDER ONLINE"
-                buttonLink="https://frasersgh.square.site/s/order?location=11ea7f380b303525a95a0cc47a2aeaec"
+                buttonLink="https://frasersgh.square.site/"
               />
               <br />
               <br />
