@@ -63,7 +63,7 @@ export default function Home({
               <div>
                 <ul>
                   <li>Precooked Ready to Reheat Meals</li>
-                  <li>Place orders by Thursday at 6 pm</li>
+                  <li>Place orders by Thursday at 11 pm</li>
                   <li>Pickup Saturday from 2-4 pm</li>
                   <li>Place Orders Online</li>
                   <li>Or Call {siteData.phoneNumber}</li>
