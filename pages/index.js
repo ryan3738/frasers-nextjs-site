@@ -86,7 +86,7 @@ export default function Home({
               <p>We respect your privacy</p>
             </Double>
             <Double
-              id="valentine"
+              id="valentines"
               title="Four Course VALENTINE'S DINNER"
               subtitle="$65 Per Person"
               imageSource="/images/chocolate-covered-strawberry-bombe-square.jpg"

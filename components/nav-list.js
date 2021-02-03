@@ -35,16 +35,16 @@ export default function NavList(props) {
         </a>
       </Link> */}
 
-      {/* <Link href="/#christmas">
+      <Link href="/#valentines">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
-          Christmas Menu
+          Valentine's Special
         </a>
-      </Link> */}
-      {/* <Link href="/#gift-cards">
+      </Link>
+      <Link href="/#gift-cards">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
             'burgerMenuLink' in props && 'burger-menu-link'
@@ -52,7 +52,7 @@ export default function NavList(props) {
         >
           Gift Cards
         </a>
-      </Link> */}
+      </Link>
       <Link href="/#about">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
