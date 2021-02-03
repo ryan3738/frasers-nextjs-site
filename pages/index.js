@@ -85,7 +85,72 @@ export default function Home({
               <br />
               <p>We respect your privacy</p>
             </Double>
-
+            <Double
+              id="valentine"
+              title="Four Course VALENTINE'S DINNER"
+              subtitle="$65 Per Person"
+              imageSource="/images/chocolate-covered-strawberry-bombe-square.jpg"
+              imageAlt="Chocolate covered strawberry bombe with chocolate heart"
+            >
+              <div>
+                <ul className="special-menu">
+                  <li>
+                    <strong>WARM GOAT CHEESE SALAD</strong>
+                    <p>
+                      Cypress Grove aged goat cheese, arugula, cipollini onions
+                    </p>
+                  </li>
+                  <li>
+                    <strong>BRAISED SHORT RIB & BEET SOUP</strong>
+                    <p>Crème Fraiche, Parmesan heart</p>
+                  </li>
+                  <li>
+                    <strong>WAGYU FLAT IRON STEAK</strong>
+                    <p>
+                      Potato pave, wild mushroom bread pudding, veg, Brandy
+                      peppercorn sauce
+                    </p>
+                    <b>OR</b>
+                    <br />
+                    <br />
+                    <strong>SEAFOOD PAELLA</strong>
+                    <p>
+                      Scallops, prawns, lobster, clams, mussels, Spanish rice,
+                      chorizo cream sauce
+                    </p>
+                  </li>
+                  <li>
+                    <strong>DARK CHOCOLATE PATE</strong>
+                    <p>Cherry Compote, meringue, chocolate pretzels</p>
+                  </li>
+                  <li>
+                    <Button
+                      buttonText="ORDER NOW"
+                      buttonLink="https://frasersgh.square.site/valentines-day?location=11ea7f380b303525a95a0cc47a2aeaec"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </Double>
+            <Double
+              id="gift-cards"
+              title="Gift Cards Available"
+              subtitle=""
+              imageSource="/images/gift-card-square.jpg"
+              imageAlt="frasers gift card closeup"
+              imageLeft
+            >
+              <div>
+                To purchase a gift card please visit our online store or call us
+                at <span className="nowrap">{siteData.phoneNumber}</span>
+                <br />
+                <br />
+                <Button
+                  buttonText="ORDER GIFT CARDS ONLINE"
+                  buttonLink="https://frasersgh.square.site/product/gift-card/88"
+                />
+              </div>
+            </Double>
             <Double
               id="about"
               title={aboutBusinessData.title}
