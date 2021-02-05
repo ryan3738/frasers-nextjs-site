@@ -8,7 +8,6 @@ import Hero from './hero'
 import Button from './button'
 import NavList from './nav-list'
 
-
 const name = 'Frasers'
 export const siteTitle =
   'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest'
@@ -125,7 +124,7 @@ export default function Layout({ children, home }) {
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 100vw;
+          width: 100%;
         }
 
         .header {
@@ -137,7 +136,7 @@ export default function Layout({ children, home }) {
 
         .footer {
           height: auto;
-          width: 100vw;
+          width: 100%;
           background-color: var(--surface-color);
           padding: 1em;
           /* white-space: no-wrap; */
@@ -167,6 +166,7 @@ export default function Layout({ children, home }) {
         .nav-list {
           display: flex;
           flex-wrap: wrap;
+          width: 100%;
         }
       `}</style>
 
@@ -208,6 +208,6 @@ export default function Layout({ children, home }) {
   )
 }
 Layout.propTypes = {
-  children: PropTypes.element,
+  children: PropTypes.any,
   home: PropTypes.bool,
 }

@@ -53,6 +53,7 @@ export default function NavBar({ children, open, setOpen }) {
           position: fixed;
           background: var(--background-color);
           opacity: 0.97;
+          width: 100%;
         }
         .nav-list {
           display: flex;

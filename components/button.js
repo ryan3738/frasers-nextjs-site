@@ -2,7 +2,7 @@ export default function Button({ buttonText, buttonLink }) {
   return (
     <>
       <a href={buttonLink}>
-        <button className="button-text">
+        <button type="button" className="button-text">
           <span className="button-text">{buttonText}</span>
         </button>
       </a>
