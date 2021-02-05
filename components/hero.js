@@ -90,6 +90,7 @@ export default function Hero(props) {
             '. . .';
           background-color: var(--background-color);
           background-image: url('images/stars.png');
+          width: 100%;
         }
 
         .welcome-box {

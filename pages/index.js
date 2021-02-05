@@ -210,7 +210,7 @@ export default function Home({
             visibility: hidden;
           }
           .container {
-            width: 100vw;
+            width: 100%;
             max-width: 1120px;
             background-color: var(--surface-color);
             /* background: var(--background-color); */

@@ -23,7 +23,7 @@ export default function Layout({ children, home }) {
     <div className="container">
       <Head>
         {/* <html lang='en' /> */}
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
           content="Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients."
@@ -197,6 +197,7 @@ export default function Layout({ children, home }) {
         @media only screen and (max-width: ${theme.smallScreen}) {
           html {
             font-size: 100%;
+            width: 100vw;
           }
         }
 

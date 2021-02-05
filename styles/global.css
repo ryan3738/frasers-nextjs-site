@@ -10,6 +10,7 @@
 html {
   box-sizing: border-box;
   overflow-y: scroll;
+  
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -29,7 +30,8 @@ html, body {
   font-size: 100%;
   line-height: 1.5rem;
   letter-spacing: 0.03125em;
-  width: 100vw;
+  width: 100%;
+  
 }
 article,
 aside,
