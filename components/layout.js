@@ -16,6 +16,7 @@ const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
   mediumScreen: '769px',
+  largeScreen: '1008px',
 }
 
 export default function Layout({ children, home }) {
@@ -192,17 +193,16 @@ export default function Layout({ children, home }) {
           --small-screen: 460px;
           --medium-screen: 769px;
         }
-
-        /* media queries */
-        @media only screen and (max-width: ${theme.smallScreen}) {
-          html {
-            font-size: 100%;
-            width: 100vw;
-          }
-        }
-
         .medium-emphasis {
           color: var(--medium-emphasis-text);
+        }
+
+        /* media queries */
+        @media only screen and (min-width: ${theme.largeScreen}) {
+          html,
+          body {
+            font-size: 112.5%;
+          }
         }
       `}</style>
     </div>
