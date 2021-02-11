@@ -82,6 +82,7 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
+    globals: { React: 'writable' },
     radix: 0,
     'no-shadow': [
       2,
