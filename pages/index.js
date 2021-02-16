@@ -57,8 +57,8 @@ export default function Home({
               id="takeout"
               title="Now Open for Dine In Service!"
               subtitle='To make reservations call us at 360-279-1231 '
-              imageSource="/images/wine-takeout-bag-square.jpg"
-              imageAlt="Picture of frasers gourmet hideaway takeout bag and a glass of wine"
+              imageSource="/images/pig-were-back.jpg"
+              imageAlt="Pig holding a sign that says were back"
             >
               <div>
                 <h3>Takeout Still Available</h3>
