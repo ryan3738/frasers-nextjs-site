@@ -55,6 +55,32 @@ export default function Home({
           <div className="double-wrapper">
             <Double
               id="takeout"
+              title="Now Open for Dine In Service!"
+              subtitle='To make reservations call us at 360-279-1231 '
+              imageSource="/images/wine-takeout-bag-square.jpg"
+              imageAlt="Picture of frasers gourmet hideaway takeout bag and a glass of wine"
+            >
+              <div>
+                <h3>Takeout Still Available</h3>
+                  <p>Call {siteData.phoneNumber} during normal business hours to place an order</p>
+              </div>
+              {/* <Button
+                buttonText="ORDER ONLINE"
+                buttonLink={siteData.websites.onlineStore}
+              /> */}
+              <br />
+              <br />
+              <h4>Sign up for our newsletter to receive future updates</h4>
+              <Button
+                buttonText="SIGN UP"
+                buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
+              />
+              <br />
+              <br />
+              <p>We respect your privacy</p>
+            </Double>
+            {/* <Double
+              id="takeout"
               title="FRASERS TAKEOUT"
               // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
               imageSource="/images/wine-takeout-bag-square.jpg"
@@ -84,8 +110,8 @@ export default function Home({
               <br />
               <br />
               <p>We respect your privacy</p>
-            </Double>
-            <Double
+            </Double> */}
+            {/* <Double
               id="valentines"
               title="Four Course VALENTINE'S DINNER"
               subtitle="$65 Per Person"
@@ -131,7 +157,7 @@ export default function Home({
                   </li>
                 </ul>
               </div>
-            </Double>
+            </Double> */}
             <Double
               id="gift-cards"
               title="Gift Cards Available"

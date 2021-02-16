@@ -36,21 +36,21 @@ export default function Hero(props) {
             </a>
             <br />
             <br />
-            <h2>TAKEOUT NOW AVAILABLE</h2>
-            <Button
+            <h2>Dine In Opens This Thursday February, 18th</h2>
+            <h2>Call To Make a Reservation</h2>
+            {/* <Button
               buttonText="ORDER ONLINE"
               buttonLink={siteData.websites.onlineStore}
-            />
-            <br />
+            /> */}
             <br />
             <a href={`tel:${siteData.phoneNumber}`}>{siteData.phoneNumber}</a>
             <br />
             <br />
-            {/* <p>
+            <p>
               <strong> CALL FOR TAKEOUT</strong>
             </p>
 
-            <h4>SEATING TIMES</h4> */}
+            {/* <h4>SEATING TIMES</h4> */}
 
             {/* <!-- <p> <strong>CLOSED</strong> <br>9/8/20 to 9/9/20</p><br> --> */}
             {/* <p>
