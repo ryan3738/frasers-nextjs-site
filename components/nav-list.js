@@ -77,10 +77,10 @@ export default function NavList(props) {
           'burgerMenuLink' in props && 'burger-menu-link'
         }`}
       >
-        <Button
+        {/* <Button
           buttonText="ORDER ONLINE"
           buttonLink={siteData.websites.onlineStore}
-        />
+        /> */}
       </div>
       <style jsx>{`
         .nav-link {
