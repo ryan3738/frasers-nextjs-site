@@ -56,7 +56,7 @@ export default function Home({
             <Double
               id="takeout"
               title="Now Open for Dine In Service!"
-              subtitle='To make reservations call us at 360-279-1231 '
+              subtitle='To make a reservation call us at 360-279-1231 '
               imageSource="/images/pig-were-back.jpg"
               imageAlt="Pig holding a sign that says were back"
             >

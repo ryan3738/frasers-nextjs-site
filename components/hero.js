@@ -36,7 +36,7 @@ export default function Hero(props) {
             </a>
             <br />
             <br />
-            <h2>Dine In Opens This Thursday February, 18th</h2>
+            <h2>Dine In Opens Thursday February, 18th</h2>
             <h2>Call To Make a Reservation</h2>
             {/* <Button
               buttonText="ORDER ONLINE"
