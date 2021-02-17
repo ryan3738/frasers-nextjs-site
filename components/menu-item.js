@@ -8,8 +8,8 @@ const getMenuItem = ({ category }) => (
       .map((data) => (
         <div key={data.itemName} className="menu-item">
           <h3 className="primary-color">{data.itemName}</h3>
-          <div dangerouslySetInnerHTML={{ __html: data.description }} />
-          <br />
+          {data.description ? (<><div dangerouslySetInnerHTML={{ __html: data.description }}/><br/></>) : ('')}
+
           <div className="primary-color">{data.price}</div>
           {data.modifier ? (
             <>
