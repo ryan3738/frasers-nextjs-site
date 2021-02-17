@@ -11,16 +11,23 @@ const getMenuItem = ({ category }) => (
           <div dangerouslySetInnerHTML={{ __html: data.description }} />
           <br />
           <div className="primary-color">{data.price}</div>
-
           {data.modifier ? (
-            <div>
-              <br />
+            <>
               {data.modifier}&nbsp;
               <span className="primary-color">{data.modifierPrice}</span>
-            </div>
+              <br/>
+            </>
           ) : (
             ''
           )}
+
+          {data.dietaryPreferences ? (
+            <>
+
+            <br/>
+            <div className="dietary-preferences">{data.dietaryPreferences}</div>
+            </>
+          ) : ('')}
           <style jsx>{`
             .menu-item {
               text-align: left;
@@ -32,6 +39,11 @@ const getMenuItem = ({ category }) => (
             }
             .primary-color {
               color: var(--primary-color-desaturated);
+            }
+            .dietary-preferences{
+              font-size: 0.78405rem;
+              line-height: 1.1;
+              text-transform: uppercase;
             }
           `}</style>
         </div>

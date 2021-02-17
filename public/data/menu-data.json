@@ -29,11 +29,12 @@
     },
     {
       "itemName": "BEEF TENDERLOIN",
-      "description": "Grilled 7oz filet mignon, garlic mashed potatoes, vegetables, horseradish butter | GF",
+      "description": "Grilled 7oz filet mignon, garlic mashed potatoes, vegetables, horseradish butter",
       "category": "Entrees",
       "price": 36,
       "modifier": "ADD SURF",
       "modifierPrice": 12,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -47,11 +48,12 @@
     },
     {
       "itemName": "VEGETABLE GNOCCHI",
-      "description": "| Vegetarian",
+      "description": "",
       "category": "Entrees",
       "price": 24,
       "modifier": "",
       "modifierPrice": null,
+      "dietaryPreferences": "Vegetarian",
       "available": true
     },
     {
@@ -83,11 +85,12 @@
     },
     {
       "itemName": "TEXAS LONG BONE SHORT RIB",
-      "description": "Braised short rib, potato & pepper saute, grainy mustard & bacon greens | GF",
+      "description": "Braised short rib, potato & pepper saute, grainy mustard & bacon greens",
       "category": "Entrees",
       "price": 34,
       "modifier": "",
       "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -159,29 +162,32 @@
     },
     {
       "itemName": "DRY GARLIC BABY BACK RIBS",
-      "description": "Baby back ribs covered with a dry garlic bbq sauce | GF",
+      "description": "Baby back ribs covered with a dry garlic bbq sauce",
       "category": "Starters",
       "price": 15,
       "modifier": "",
       "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
       "itemName": "CALAMARI",
-      "description": "GF",
+      "description": "",
       "category": "Starters",
       "price": 15,
       "modifier": "",
       "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
       "itemName": "Pen Cove Mussels",
-      "description": "GF",
+      "description": "",
       "category": "Starters",
       "price": 15,
       "modifier": "",
       "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -218,10 +224,11 @@
     },
     {
       "itemName": "GARLIC & BRIE FONDUE FOR TWO",
-      "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread | Vegetarian",
+      "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread",
       "category": "Starters",
       "price": 18,
       "modifier": "",
+      "dietaryPreferences": "Vegetarian",
       "available": true
     },
     {
@@ -306,18 +313,20 @@
     },
     {
       "itemName": "RACK OF LAMB",
-      "description": "Pistachio Crusted Lamb Rack, Garlic Mashed Potatoes, Mix Vegetables | GF",
+      "description": "Pistachio crusted lamb rack, garlic mashed potatoes, & mixed vegetables",
       "category": "Entrees",
       "price": 36,
       "modifier": "",
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
       "itemName": "SCALLOPS",
-      "description": "Vegetable Risotto, Dill Beurre Blanc, & a Chili Oil | GF",
+      "description": "Vegetable risotto, dill beurre blanc, & a chili oil",
       "category": "Entrees",
       "price": 36,
       "modifier": "",
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -410,11 +419,12 @@
     },
     {
       "itemName": "YOUNG GREENS SEASONAL SALAD",
-      "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette | GF | Vegetarian",
+      "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette",
       "category": "Starters",
       "price": 8,
       "modifier": "",
       "modifierPrice": null,
+      "dietaryPreferences": "Gluten-Free | Vegetarian",
       "available": true
     },
     {
