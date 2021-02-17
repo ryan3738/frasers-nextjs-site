@@ -15,6 +15,15 @@ export default function NavList(props) {
           Home
         </a>
       </Link>
+      <Link href="/#menu">
+        <a
+          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+            'burgerMenuLink' in props && 'burger-menu-link'
+          }`}
+        >
+          Menu
+        </a>
+      </Link>
 
       {/* <Link href='/#takeout'>
         <a

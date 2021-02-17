@@ -7,7 +7,7 @@ import Layout, { siteTitle } from '../components/layout'
 // import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';
-// import MenuSection from '../components/menu-section'
+import MenuSection from '../components/menu-section'
 import Double from '../components/double.tsx'
 import GalleryGrid from '../components/gallery-grid'
 import Contact from '../components/contact'
@@ -35,7 +35,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({
+export default function HomePage({
   aboutOwnerData,
   aboutBusinessData,
   announcement1Data,
@@ -208,8 +208,8 @@ export default function Home({
         </section>
         <section id="menu" className="container">
           <h1 className="header hidden-header">MENU</h1>
-          {/* <MenuSection category="Entrees" /> */}
-          {/* <MenuSection category="Starters" /> */}
+          <MenuSection category="Starters" />
+          <MenuSection category="Entrees" />
           {/* <Button buttonText="SEE FULL MENU ==>" buttonLink="/menu" /> */}
         </section>
         <section>
@@ -267,7 +267,7 @@ export default function Home({
   )
 }
 
-Home.propTypes = {
+HomePage.propTypes = {
   aboutOwnerData: PropTypes.object,
   aboutBusinessData: PropTypes.object,
   announcement1Data: PropTypes.object,

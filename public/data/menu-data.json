@@ -25,14 +25,87 @@
       "category": "Entrees",
       "price": 26,
       "modifier": "",
-      "available": true
+      "available": false
     },
     {
       "itemName": "BEEF TENDERLOIN",
-      "description": "Bacon wrapped brie filled filet, scalloped potatoes, veg, peppercorn sauce",
+      "description": "Grilled 7oz filet mignon, garlic mashed potatoes, vegetables, horseradish butter | GF",
       "category": "Entrees",
-      "price": 30,
+      "price": 36,
+      "modifier": "ADD SURF",
+      "modifierPrice": 12,
+      "available": true
+    },
+    {
+      "itemName": "RED SNAPPER",
+      "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & a tomato caper sauce",
+      "category": "Entrees",
+      "price": 27,
       "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "VEGETABLE GNOCCHI",
+      "description": "| Vegetarian",
+      "category": "Entrees",
+      "price": 24,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "CRAB & SHRIMP LASAGNA",
+      "description": "Dungeness crab, shrimp, & a lobster cream sauce",
+      "category": "Entrees",
+      "price": 32,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "SMOKED PORK SHANK GNOCCHI CARBONARA",
+      "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & a parmesan cream sauce",
+      "category": "Entrees",
+      "price": 28,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "USDA PRIME ANGUS SPENCER STEAK",
+      "description": "Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & a green peppercorn sauce",
+      "category": "Entrees",
+      "price": 38,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "TEXAS LONG BONE SHORT RIB",
+      "description": "Braised short rib, potato & pepper saute, grainy mustard & bacon greens | GF",
+      "category": "Entrees",
+      "price": 34,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "DUCK BREAST",
+      "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & a marsala cream reduction",
+      "category": "Entrees",
+      "price": 34,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "CHICKEN & WAFFLES",
+      "description": "Buttermilk fried Jidori Chicken, chilli cheese waffle, & a truffle honey butter",
+      "category": "Entrees",
+      "price": 26,
+      "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -56,8 +129,8 @@
       "description": "Romaine, crispy prosciutto, fried capers, parmesan black olive hemp tuille",
       "category": "Starters",
       "price": 13,
-      "modifier": "Add Smoked Mussels",
-      "modifierPrice": 4,
+      "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -66,7 +139,7 @@
       "category": "Desserts",
       "price": 7,
       "modifier": "",
-      "available": true
+      "available": false
     },
     {
       "itemName": "CHRISTOPHER MICHAEL PINOT NOIR, OR",
@@ -74,7 +147,7 @@
       "category": "Red Wine",
       "price": 21,
       "modifier": "",
-      "available": true
+      "available": false
     },
     {
       "itemName": "DR. LOOSEN RIESLING, Germany",
@@ -86,11 +159,30 @@
     },
     {
       "itemName": "DRY GARLIC BABY BACK RIBS",
-      "description": "Baby back ribs covered with a dry garlic bbq sauce <br />-GF",
+      "description": "Baby back ribs covered with a dry garlic bbq sauce | GF",
       "category": "Starters",
-      "price": 12,
+      "price": 15,
       "modifier": "",
-      "available": false
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "CALAMARI",
+      "description": "GF",
+      "category": "Starters",
+      "price": 15,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
+    },
+    {
+      "itemName": "Pen Cove Mussels",
+      "description": "GF",
+      "category": "Starters",
+      "price": 15,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
     },
     {
       "itemName": "DUNGENESS CRAB CAKES",
@@ -98,7 +190,7 @@
       "category": "Starters",
       "price": 15,
       "modifier": "",
-      "available": true
+      "available": false
     },
     {
       "itemName": "ECLIPTIC \"CAPELLA\" PORTER 16oz",
@@ -125,12 +217,12 @@
       "available": false
     },
     {
-      "itemName": "FONDUE FOR TWO",
-      "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread<br />-Vegetarian",
+      "itemName": "GARLIC & BRIE FONDUE FOR TWO",
+      "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread | Vegetarian",
       "category": "Starters",
-      "price": 15,
+      "price": 18,
       "modifier": "",
-      "available": false
+      "available": true
     },
     {
       "itemName": "FRESH STRAWBERRIES, PASSIONFRUIT SABAYON",
@@ -178,7 +270,7 @@
       "category": "Entrees",
       "price": 26,
       "modifier": "",
-      "available": true
+      "available": false
     },
     {
       "itemName": "ORIN SWIFT \"8 YEARS IN THE DESERT\", ZINFANDEL BLEND, CA",
@@ -214,11 +306,19 @@
     },
     {
       "itemName": "RACK OF LAMB",
-      "description": "Rosemary roasted baby potatoes, maple glazed vegetables, peppercorn cream sauce<br /> -GF",
+      "description": "Pistachio Crusted Lamb Rack, Garlic Mashed Potatoes, Mix Vegetables | GF",
       "category": "Entrees",
-      "price": 30,
+      "price": 36,
       "modifier": "",
-      "available": false
+      "available": true
+    },
+    {
+      "itemName": "SCALLOPS",
+      "description": "Vegetable Risotto, Dill Beurre Blanc, & a Chili Oil | GF",
+      "category": "Entrees",
+      "price": 36,
+      "modifier": "",
+      "available": true
     },
     {
       "itemName": "ROMBAUER SAUVIGNON BLANC, CA",
@@ -248,9 +348,9 @@
       "itemName": "SEAFOOD CHOWDER",
       "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
       "category": "Starters",
-      "price": 10,
+      "price": 12,
       "modifier": "",
-      "available": false
+      "available": true
     },
     {
       "itemName": "SEAFOOD LASAGNA",
@@ -286,7 +386,7 @@
     },
     {
       "itemName": "TIRAMISU",
-      "description": "Coffee-soaked ladyfingers and mascarpone cream dusted with cocoa powder",
+      "description": "Coffee-soaked ladyfingers & mascarpone cream dusted with cocoa powder",
       "category": "Desserts",
       "price": 7,
       "modifier": "",
@@ -302,7 +402,7 @@
     },
     {
       "itemName": "VEGETABLE LASAGNA",
-      "description": "Layers of pasta and grilled vegetables, tomato, smoked mozzarella",
+      "description": "Layers of pasta & grilled vegetables, tomato, smoked mozzarella",
       "category": "Entrees",
       "price": 20,
       "modifier": "",
@@ -310,11 +410,12 @@
     },
     {
       "itemName": "YOUNG GREENS SEASONAL SALAD",
-      "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette<br /> -GF -Vegetarian",
+      "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette | GF | Vegetarian",
       "category": "Starters",
       "price": 8,
       "modifier": "",
-      "available": false
+      "modifierPrice": null,
+      "available": true
     },
     {
       "itemName": "Example",
