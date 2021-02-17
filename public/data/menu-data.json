@@ -5,7 +5,7 @@
   "menu": [
     {
       "itemName": "Tomato & Burrata",
-      "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, baba ghanoush",
+      "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
       "category": "Starters",
       "price": 15,
       "modifier": "",
@@ -39,7 +39,7 @@
     },
     {
       "itemName": "RED SNAPPER",
-      "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & a tomato caper sauce",
+      "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
       "category": "Entrees",
       "price": 27,
       "modifier": "",
@@ -58,7 +58,7 @@
     },
     {
       "itemName": "CRAB & SHRIMP LASAGNA",
-      "description": "Dungeness crab, shrimp, & a lobster cream sauce",
+      "description": "Dungeness crab, shrimp, & lobster cream sauce",
       "category": "Entrees",
       "price": 32,
       "modifier": "",
@@ -67,7 +67,7 @@
     },
     {
       "itemName": "SMOKED PORK SHANK GNOCCHI CARBONARA",
-      "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & a parmesan cream sauce",
+      "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
       "category": "Entrees",
       "price": 28,
       "modifier": "",
@@ -76,7 +76,7 @@
     },
     {
       "itemName": "USDA PRIME ANGUS SPENCER STEAK",
-      "description": "Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & a green peppercorn sauce",
+      "description": "Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
       "category": "Entrees",
       "price": 38,
       "modifier": "",
@@ -95,7 +95,7 @@
     },
     {
       "itemName": "DUCK BREAST",
-      "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & a marsala cream reduction",
+      "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & marsala cream reduction",
       "category": "Entrees",
       "price": 34,
       "modifier": "",
@@ -104,7 +104,7 @@
     },
     {
       "itemName": "CHICKEN & WAFFLES",
-      "description": "Buttermilk fried Jidori Chicken, chilli cheese waffle, & a truffle honey butter",
+      "description": "Buttermilk fried Jidori Chicken, chilli cheese waffle, & truffle honey butter",
       "category": "Entrees",
       "price": 26,
       "modifier": "",
@@ -129,7 +129,7 @@
     },
     {
       "itemName": "CAESAR SALAD",
-      "description": "Romaine, crispy prosciutto, fried capers, parmesan black olive hemp tuille",
+      "description": "Romaine, crispy prosciutto, fried capers, & parmesan black olive hemp tuille",
       "category": "Starters",
       "price": 13,
       "modifier": "",
@@ -322,7 +322,7 @@
     },
     {
       "itemName": "SCALLOPS",
-      "description": "Vegetable risotto, dill beurre blanc, & a chili oil",
+      "description": "Vegetable risotto, dill beurre blanc, & chili oil",
       "category": "Entrees",
       "price": 36,
       "modifier": "",
