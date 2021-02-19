@@ -117,7 +117,7 @@
       "category": "Entrees",
       "price": 25,
       "modifier": "",
-      "available": true
+      "available": false
     },
     {
       "itemName": "BURIED CANE CABERNET SAUVIGNON, WA",
