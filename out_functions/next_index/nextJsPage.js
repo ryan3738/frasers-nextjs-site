@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "WKrh");
+/******/ 	return __webpack_require__(__webpack_require__.s = "0OK2");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -7250,144 +7250,6 @@ module.exports = __webpack_require__("lPUs")
 
 /***/ }),
 
-/***/ "+lMf":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Hero; });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("nKUr");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("MX0m");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("Aiso");
-/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("Xz0h");
-var _public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t("Xz0h", 1);
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("a3/r");
-
-
-
-
-
- // import utilStyles from '../styles/utils.module.css'
-
-
-function Hero(props) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-      id: "welcome",
-      className: "jsx-3305845251" + " " + "welcome-container",
-      children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-        className: "jsx-3305845251" + " " + "welcome-box",
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
-          className: "jsx-3305845251" + " " + "welcome-inner-box",
-          children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("p", {
-            className: "jsx-3305845251" + " " + "spaced-text",
-            children: "Est. | 2006"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-            className: "jsx-3305845251"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h1", {
-            className: "jsx-3305845251" + " " + "title",
-            children: "FRASERS"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
-            className: "jsx-3305845251" + " " + "welcome-logo",
-            children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(next_image__WEBPACK_IMPORTED_MODULE_2___default.a, {
-              src: "/images/frasers-logo.png",
-              alt: "Frasers Gourmet Hideaway Logo",
-              layout: "responsive",
-              width: 228,
-              height: 104,
-              priority: true
-            })
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-            className: "jsx-3305845251"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("a", {
-            href: _public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.address.directions,
-            target: "_blank",
-            rel: "noreferrer noopener",
-            className: "jsx-3305845251",
-            children: [`${_public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.address.street} ${_public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.address.street2}`, /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), `${_public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.address.city}, ${_public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.address.state} ${_public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.address.zipCode}`]
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-            className: "jsx-3305845251"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-            className: "jsx-3305845251"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("h3", {
-            className: "jsx-3305845251",
-            children: "Call To Make a Reservation"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("p", {
-            className: "jsx-3305845251",
-            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("strong", {
-              className: "jsx-3305845251",
-              children: " CALL FOR TAKEOUT"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            })]
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
-            href: `tel:${_public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.phoneNumber}`,
-            className: "jsx-3305845251",
-            children: _public_data_site_data_json__WEBPACK_IMPORTED_MODULE_3__.phoneNumber
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-            className: "jsx-3305845251"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-            className: "jsx-3305845251"
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("p", {
-            className: "jsx-3305845251",
-            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("strong", {
-              className: "jsx-3305845251",
-              children: "TUE - SAT"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {
-              className: "jsx-3305845251" + " " + 'medium-emphasis',
-              children: "OPEN AT 4:30"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("strong", {
-              className: "jsx-3305845251",
-              children: "TUE - THURS"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {
-              className: "jsx-3305845251" + " " + 'medium-emphasis',
-              children: "LAST SEATING AT 7:30"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("strong", {
-              className: "jsx-3305845251",
-              children: "FRI - SAT"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("br", {
-              className: "jsx-3305845251"
-            }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {
-              className: "jsx-3305845251" + " " + 'medium-emphasis',
-              children: "LAST SEATING AT 8:00"
-            })]
-          }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("p", {
-            className: "jsx-3305845251",
-            children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("strong", {
-              className: "jsx-3305845251",
-              children: "SUN - MON"
-            }), " |", ' ', /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {
-              className: "jsx-3305845251" + " " + 'medium-emphasis',
-              children: "CLOSED"
-            })]
-          })]
-        })
-      })
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      id: "3305845251",
-      children: [".welcome-container.jsx-3305845251{display:grid;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;grid-template-columns:2vw auto 2vw;grid-template-rows:1fr 50fr 1fr;grid-template-areas: '. . .' '. w .' '. . .';background-color:var(--background-color);background-image:url('images/stars.png');width:100%;}", ".welcome-box.jsx-3305845251{padding:1rem;grid-area:w;background:var(--background-color);background-image:url('images/stars.png');background-position:center center;opacity:0.97;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;min-width:250px;}", ".welcome-inner-box.jsx-3305845251{outline:thin solid var(--primary-color-desaturated);padding:1rem;}", ".welcome-logo.jsx-3305845251{max-width:100%;max-height:auto;margin:auto;display:block;}", ".title.jsx-3305845251{color:var(--primary-color);text-align:center;display:none;}", ".spaced-text.jsx-3305845251{-webkit-letter-spacing:0.5rem;-moz-letter-spacing:0.5rem;-ms-letter-spacing:0.5rem;letter-spacing:0.5rem;margin-bottom:0;}", "@media (min-width:460px){.welcome-container.jsx-3305845251{background-position:center center;background-repeat:no-repeat;background-size:cover;background-image:none;background-image:url('images/calamari-blue-cheese-sauce.jpg');}}"]
-    })]
-  });
-}
-
-/***/ }),
-
 /***/ "+wdc":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8545,6 +8407,416 @@ try {
   module.exports = __webpack_require__("P7XM");
 }
 
+
+/***/ }),
+
+/***/ "0OK2":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticParams", function() { return unstable_getStaticParams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getServerProps", function() { return unstable_getServerProps; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
+/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
+
+    
+    
+    
+    const {isResSent} = __webpack_require__("g/15");
+
+    
+    const { processEnv } = __webpack_require__("fXeI")
+    processEnv([{"path":".env.local","contents":"NEXTAUTH_URL=http://localhost:3000\r\nDATABASE_URL=mongodb+srv://sick:CZL5os1Sel690u8R@sickcluster.ngzru.mongodb.net/sickfits?retryWrites=true&w=majority\r\n# EMAIL_SERVER=smtp://username:password@smtp.example.com:587\r\n# EMAIL_FROM=norbert80@ethereal.email\r\nGITHUB_ID=087b279986438a596790\r\nGITHUB_SECRET=9f13c115b3317d88a59144505e5ba129203bee8b\r\nNEXTAUTH_SECRET=LUH3qZuzEZRFDR5AEqUFF6BPFD2r76\r\nEMAIL_SERVER_USER=kenny.hyatt@ethereal.email\r\nEMAIL_SERVER_PASSWORD=kkvNJPPYcdFD1mxMVu\r\nEMAIL_SERVER_HOST=smtp.ethereal.email\r\nEMAIL_SERVER_PORT=587\r\nEMAIL_FROM=kenny.hyatt@ethereal.email"}])
+  
+    
+    const runtimeConfig = {}
+    const {parse: parseUrl, format: formatUrl} = __webpack_require__("bzos")
+    const {parse: parseQs} = __webpack_require__("8xkj")
+    const { renderToHTML } = __webpack_require__("/bjS");
+    const { tryGetPreviewData } = __webpack_require__("PCLx");
+    const { denormalizePagePath } = __webpack_require__("wkBG")
+    const { setLazyProp, getCookieParser } = __webpack_require__("PCLx")
+    const {sendPayload} = __webpack_require__("KyNf");
+    const {getRedirectStatus} = __webpack_require__("FwDC");
+    const {PERMANENT_REDIRECT_STATUS} = __webpack_require__("w7wo")
+    const buildManifest = __webpack_require__("LZ9C");
+    const reactLoadableManifest = __webpack_require__("67Bq");
+    const { normalizeLocalePath } = __webpack_require__("3wub")
+    const i18n = {}
+
+    const appMod = __webpack_require__("cha2")
+    let App = appMod.default || appMod.then && appMod.then(mod => mod.default);
+
+    
+    
+    const { rewrites } = __webpack_require__("Skye")
+    const { pathToRegexp, default: pathMatch } = __webpack_require__("N6Fi")
+  
+
+    const compMod = __webpack_require__("RNiq")
+
+    let Component = compMod.default || compMod.then && compMod.then(mod => mod.default)
+    /* harmony default export */ __webpack_exports__["default"] = (Component);
+    let getStaticProps = compMod['getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['getStaticProp' + 's'])
+    let getStaticPaths = compMod['getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['getStaticPath' + 's'])
+    let getServerSideProps = compMod['getServerSideProp' + 's'] || compMod.then && compMod.then(mod => mod['getServerSideProp' + 's'])
+
+    // kept for detecting legacy exports
+    const unstable_getStaticParams = compMod['unstable_getStaticParam' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticParam' + 's'])
+    const unstable_getStaticProps = compMod['unstable_getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticProp' + 's'])
+    const unstable_getStaticPaths = compMod['unstable_getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticPath' + 's'])
+    const unstable_getServerProps = compMod['unstable_getServerProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getServerProp' + 's'])
+
+    
+    
+    
+    const getCustomRouteMatcher = pathMatch(true)
+    const prepareDestination = __webpack_require__("6mnf").default
+
+    function handleRewrites(parsedUrl) {
+      for (const rewrite of rewrites) {
+        const matcher = getCustomRouteMatcher(rewrite.source)
+        const params = matcher(parsedUrl.pathname)
+
+        if (params) {
+          const { parsedDestination } = prepareDestination(
+            rewrite.destination,
+            params,
+            parsedUrl.query,
+            true
+          )
+
+          Object.assign(parsedUrl.query, parsedDestination.query)
+          delete parsedDestination.query
+
+          Object.assign(parsedUrl, parsedDestination)
+
+          let fsPathname = parsedUrl.pathname
+
+          
+
+          
+
+          if (fsPathname === '/'){
+            break
+          }
+          
+        }
+      }
+
+      return parsedUrl
+    }
+  
+
+    let config = compMod['confi' + 'g'] || (compMod.then && compMod.then(mod => mod['confi' + 'g'])) || {}
+    const _app = App
+    async function renderReqToHTML(req, res, renderMode, _renderOpts, _params) {
+      let Document
+      let Error
+      let notFoundMod
+      ;[
+        getStaticProps,
+        getServerSideProps,
+        getStaticPaths,
+        Component,
+        App,
+        config,
+        { default: Document },
+        { default: Error },
+        notFoundMod, 
+      ] = await Promise.all([
+        getStaticProps,
+        getServerSideProps,
+        getStaticPaths,
+        Component,
+        App,
+        config,
+        __webpack_require__("VDXt"),
+        __webpack_require__("/a9y"),
+        __webpack_require__("uNx/"),
+      ])
+
+      const fromExport = renderMode === 'export' || renderMode === true;
+      const nextStartMode = renderMode === 'passthrough'
+      let hasValidParams = true
+
+      
+
+      setLazyProp({ req }, 'cookies', getCookieParser(req))
+
+      const options = {
+        App,
+        Document,
+        buildManifest,
+        getStaticProps,
+        getServerSideProps,
+        getStaticPaths,
+        reactLoadableManifest,
+        canonicalBase: "",
+        buildId: "IsLdhDUBxaHi06AkV8DHf",
+        assetPrefix: "",
+        runtimeConfig: runtimeConfig.publicRuntimeConfig || {},
+        previewProps: {previewModeId:"a7e2017bc95dfa5513a6b6e0c41db5ad",previewModeSigningKey:"9b1ae1e040e6feb83469c3de987d2fdc8b8480214b1bbe8033d5cf797743570d",previewModeEncryptionKey:"78669aca060b44be4fadc80147aa33fd0d484efcb9c0f56a4f6dab33a89eca42"},
+        env: process.env,
+        basePath: "",
+        ..._renderOpts
+      }
+      let _nextData = false
+      let parsedUrl
+
+      try {
+        // We need to trust the dynamic route params from the proxy
+        // to ensure we are using the correct values
+        const trustQuery = !getStaticProps && req.headers['x-vercel-id']
+        let parsedUrl = parseUrl(req.url, true)
+        let routeNoAssetPath = parsedUrl.pathname
+        const origQuery = Object.assign({}, parsedUrl.query)
+
+        parsedUrl = handleRewrites(parsedUrl)
+
+        
+
+        // remove ?amp=1 from request URL if rendering for export
+        if (fromExport && parsedUrl.query.amp) {
+          const queryNoAmp = Object.assign({}, origQuery)
+          delete queryNoAmp.amp
+
+          req.url = formatUrl({
+            ...parsedUrl,
+            search: undefined,
+            query: queryNoAmp
+          })
+        }
+
+        if (parsedUrl.pathname.match(/_next\/data/)) {
+          const {
+            default: getRouteNoAssetPath,
+          } = __webpack_require__("1Ej0");
+          _nextData = true;
+          parsedUrl.pathname = getRouteNoAssetPath(
+            parsedUrl.pathname.replace(
+              new RegExp('/_next/data/IsLdhDUBxaHi06AkV8DHf/'),
+              '/'
+            ),
+            '.json'
+          );
+          routeNoAssetPath = parsedUrl.pathname
+        }
+
+        
+      const i18n = {}
+      const detectedLocale = undefined
+      const defaultLocale = undefined
+      const locales = undefined
+    
+
+        if (parsedUrl.query.nextInternalLocale) {
+          detectedLocale = parsedUrl.query.nextInternalLocale
+          delete parsedUrl.query.nextInternalLocale
+        }
+
+        const renderOpts = Object.assign(
+          {
+            Component,
+            pageConfig: config,
+            nextExport: fromExport,
+            isDataReq: _nextData,
+            locale: detectedLocale,
+            locales,
+            defaultLocale: i18n.defaultLocale,
+          },
+          options,
+        )
+
+        
+
+        const params = {};
+
+        const nowParams = null;
+
+        // make sure to set renderOpts to the correct params e.g. _params
+        // if provided from worker or params if we're parsing them here
+        renderOpts.params = _params || params
+
+        // make sure to normalize req.url on Vercel to strip dynamic params
+        // from the query which are added during routing
+        
+
+        // normalize request URL/asPath for fallback/revalidate pages since the
+        // proxy sets the request URL to the output's path for fallback pages
+        
+
+        // make sure to normalize asPath for revalidate and _next/data requests
+        // since the asPath should match what is shown on the client
+        if (
+          !fromExport &&
+          (getStaticProps || getServerSideProps)
+        ) {
+          
+
+          parsedUrl.pathname = denormalizePagePath(parsedUrl.pathname)
+          renderOpts.resolvedUrl = formatUrl({
+            ...parsedUrl,
+            query: origQuery
+          })
+
+          // For getServerSideProps we need to ensure we use the original URL
+          // and not the resolved URL to prevent a hydration mismatch on asPath
+          renderOpts.resolvedAsPath = getServerSideProps
+            ? formatUrl({
+              ...parsedUrl,
+              pathname: routeNoAssetPath,
+              query: origQuery,
+            })
+            : renderOpts.resolvedUrl
+        }
+
+        const isFallback = parsedUrl.query.__nextFallback
+
+        const previewData = tryGetPreviewData(req, res, options.previewProps)
+        const isPreviewMode = previewData !== false
+        if (false) {}
+        let result = await renderToHTML(req, res, "/", Object.assign({}, getStaticProps ? { ...(parsedUrl.query.amp ? { amp: '1' } : {}) } : parsedUrl.query, nowParams ? nowParams : params, _params, isFallback ? { __nextFallback: 'true' } : {}), renderOpts)
+
+        if (!renderMode) {
+          if (_nextData || getStaticProps || getServerSideProps) {
+            if (renderOpts.isNotFound) {
+              res.statusCode = 404
+
+              const NotFoundComponent = notFoundMod.default
+
+              const errPathname = "/404"
+
+              const result = await renderToHTML(req, res, errPathname, parsedUrl.query, Object.assign({}, options, {
+                getStaticProps: notFoundMod.getStaticProps,
+                getStaticPaths: undefined,
+                getServerSideProps: undefined,
+                Component: NotFoundComponent,
+                err: undefined,
+                locale: detectedLocale,
+                locales,
+                defaultLocale,
+              }))
+
+              sendPayload(req, res, result, 'html', true, {
+                private: isPreviewMode,
+                stateful: !!getServerSideProps,
+                revalidate: renderOpts.revalidate,
+              })
+              return null
+            } else if (renderOpts.isRedirect && !_nextData) {
+              const redirect = {
+                destination: renderOpts.pageData.pageProps.__N_REDIRECT,
+                statusCode: renderOpts.pageData.pageProps.__N_REDIRECT_STATUS,
+                basePath: renderOpts.pageData.pageProps.__N_REDIRECT_BASE_PATH
+              }
+              const statusCode = getRedirectStatus(redirect)
+
+              if (false) {}
+
+              if (statusCode === PERMANENT_REDIRECT_STATUS) {
+                res.setHeader('Refresh', `0;url=${redirect.destination}`)
+              }
+
+              res.statusCode = statusCode
+              res.setHeader('Location', redirect.destination)
+              res.end()
+              return null
+            } else {
+              sendPayload(req, res, _nextData ? JSON.stringify(renderOpts.pageData) : result, _nextData ? 'json' : 'html', true, {
+                private: isPreviewMode,
+                stateful: !!getServerSideProps,
+                revalidate: renderOpts.revalidate,
+              })
+              return null
+            }
+          }
+        } else if (isPreviewMode) {
+          res.setHeader(
+            'Cache-Control',
+            'private, no-cache, no-store, max-age=0, must-revalidate'
+          )
+        }
+
+        if (renderMode) return { html: result, renderOpts }
+        return result
+      } catch (err) {
+        if (!parsedUrl) {
+          parsedUrl = parseUrl(req.url, true)
+        }
+
+        if (err.code === 'ENOENT') {
+          res.statusCode = 404
+        } else if (err.code === 'DECODE_FAILED') {
+          // TODO: better error?
+          res.statusCode = 400
+        } else {
+          console.error('Unhandled error during request:', err)
+
+          // Backwards compat (call getInitialProps in custom error):
+          try {
+            await renderToHTML(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+              getStaticProps: undefined,
+              getStaticPaths: undefined,
+              getServerSideProps: undefined,
+              Component: Error,
+              err: err,
+              // Short-circuit rendering:
+              isDataReq: true
+            }))
+          } catch (underErrorErr) {
+            console.error('Failed call /_error subroutine, continuing to crash function:', underErrorErr)
+          }
+
+          // Throw the error to crash the serverless function
+          if (isResSent(res)) {
+            console.error('!!! WARNING !!!')
+            console.error(
+              'Your function crashed, but closed the response before allowing the function to exit.\n' +
+              'This may cause unexpected behavior for the next request.'
+            )
+            console.error('!!! WARNING !!!')
+          }
+          throw err
+        }
+
+        const result = await renderToHTML(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
+          getStaticProps: undefined,
+          getStaticPaths: undefined,
+          getServerSideProps: undefined,
+          Component: Error,
+          err: res.statusCode === 404 ? undefined : err
+        }))
+        return result
+      }
+    }
+    async function render (req, res) {
+      try {
+        await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"])()
+        const html = await renderReqToHTML(req, res)
+        if (html) {
+          sendPayload(req, res, html, 'html', {generateEtags: true, poweredByHeader: true})
+        }
+      } catch(err) {
+        console.error(err)
+        await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"])(err)
+        // Throw the error to crash the serverless function
+        throw err
+      }
+    }
+  
 
 /***/ }),
 
@@ -14761,17 +15033,160 @@ function tokenizeAtxHeading(effects, ok, nok) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export siteTitle */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Layout; });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("nKUr");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("MX0m");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("8Kt/");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("+lMf");
-/* harmony import */ var _button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("a3/r");
-/* harmony import */ var _nav_list__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__("r+5k");
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "b", function() { return /* binding */ siteTitle; });
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ Layout; });
+
+// UNUSED EXPORTS: siteName
+
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__("nKUr");
+
+// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
+var style = __webpack_require__("MX0m");
+var style_default = /*#__PURE__*/__webpack_require__.n(style);
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/lib/head.js
+var head = __webpack_require__("8Kt/");
+var head_default = /*#__PURE__*/__webpack_require__.n(head);
+
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__("Aiso");
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+
+// EXTERNAL MODULE: ./public/data/site-data.json
+var site_data = __webpack_require__("Xz0h");
+
+// EXTERNAL MODULE: ./components/button.js
+var components_button = __webpack_require__("a3/r");
+
+// CONCATENATED MODULE: ./components/hero.js
+
+
+
+
+
+ // import utilStyles from '../styles/utils.module.css'
+
+
+function Hero(props) {
+  return /*#__PURE__*/Object(jsx_runtime["jsxs"])(jsx_runtime["Fragment"], {
+    children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("div", {
+      id: "welcome",
+      className: "jsx-3305845251" + " " + "welcome-container",
+      children: /*#__PURE__*/Object(jsx_runtime["jsx"])("div", {
+        className: "jsx-3305845251" + " " + "welcome-box",
+        children: /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
+          className: "jsx-3305845251" + " " + "welcome-inner-box",
+          children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+            className: "jsx-3305845251" + " " + "spaced-text",
+            children: "Est. | 2006"
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+            className: "jsx-3305845251"
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("h1", {
+            className: "jsx-3305845251" + " " + "title",
+            children: "FRASERS"
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("div", {
+            className: "jsx-3305845251" + " " + "welcome-logo",
+            children: /*#__PURE__*/Object(jsx_runtime["jsx"])(image_default.a, {
+              src: "/images/frasers-logo.png",
+              alt: "Frasers Gourmet Hideaway Logo",
+              layout: "responsive",
+              width: 228,
+              height: 104,
+              priority: true
+            })
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+            className: "jsx-3305845251"
+          }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("a", {
+            href: site_data.address.directions,
+            target: "_blank",
+            rel: "noreferrer noopener",
+            className: "jsx-3305845251",
+            children: [`${site_data.address.street} ${site_data.address.street2}`, /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), `${site_data.address.city}, ${site_data.address.state} ${site_data.address.zipCode}`]
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+            className: "jsx-3305845251"
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+            className: "jsx-3305845251"
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("h3", {
+            className: "jsx-3305845251",
+            children: "Call To Make a Reservation"
+          }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("p", {
+            className: "jsx-3305845251",
+            children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("strong", {
+              className: "jsx-3305845251",
+              children: " CALL FOR TAKEOUT"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            })]
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
+            href: `tel:${site_data.phoneNumber}`,
+            className: "jsx-3305845251",
+            children: site_data.phoneNumber
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+            className: "jsx-3305845251"
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+            className: "jsx-3305845251"
+          }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("p", {
+            className: "jsx-3305845251",
+            children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("strong", {
+              className: "jsx-3305845251",
+              children: "TUE - SAT"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("span", {
+              className: "jsx-3305845251" + " " + 'medium-emphasis',
+              children: "OPEN AT 4:30"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("strong", {
+              className: "jsx-3305845251",
+              children: "TUE - THURS"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("span", {
+              className: "jsx-3305845251" + " " + 'medium-emphasis',
+              children: "LAST SEATING AT 7:30"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("strong", {
+              className: "jsx-3305845251",
+              children: "FRI - SAT"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3305845251"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("span", {
+              className: "jsx-3305845251" + " " + 'medium-emphasis',
+              children: "LAST SEATING AT 8:00"
+            })]
+          }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("p", {
+            className: "jsx-3305845251",
+            children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("strong", {
+              className: "jsx-3305845251",
+              children: "SUN - MON"
+            }), " |", ' ', /*#__PURE__*/Object(jsx_runtime["jsx"])("span", {
+              className: "jsx-3305845251" + " " + 'medium-emphasis',
+              children: "CLOSED"
+            })]
+          })]
+        })
+      })
+    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
+      id: "3305845251",
+      children: [".welcome-container.jsx-3305845251{display:grid;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;grid-template-columns:2vw auto 2vw;grid-template-rows:1fr 50fr 1fr;grid-template-areas: '. . .' '. w .' '. . .';background-color:var(--background-color);background-image:url('images/stars.png');width:100%;}", ".welcome-box.jsx-3305845251{padding:1rem;grid-area:w;background:var(--background-color);background-image:url('images/stars.png');background-position:center center;opacity:0.97;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;min-width:250px;}", ".welcome-inner-box.jsx-3305845251{outline:thin solid var(--primary-color-desaturated);padding:1rem;}", ".welcome-logo.jsx-3305845251{max-width:100%;max-height:auto;margin:auto;display:block;}", ".title.jsx-3305845251{color:var(--primary-color);text-align:center;display:none;}", ".spaced-text.jsx-3305845251{-webkit-letter-spacing:0.5rem;-moz-letter-spacing:0.5rem;-ms-letter-spacing:0.5rem;letter-spacing:0.5rem;margin-bottom:0;}", "@media (min-width:460px){.welcome-container.jsx-3305845251{background-position:center center;background-repeat:no-repeat;background-size:cover;background-image:none;background-image:url('images/calamari-blue-cheese-sauce.jpg');}}"]
+    })]
+  });
+}
+// EXTERNAL MODULE: ./components/nav-list.js
+var nav_list = __webpack_require__("r+5k");
+
+// CONCATENATED MODULE: ./components/layout.js
 
 
 
@@ -14784,7 +15199,7 @@ function tokenizeAtxHeading(effects, ok, nok) {
 
 
 
-const name = 'Frasers';
+const siteName = 'Frasers';
 const siteTitle = 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
 const theme = {
   maxWidth: '1200px',
@@ -14796,26 +15211,26 @@ function Layout({
   children,
   home
 }) {
-  return /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("div", {
+  return /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
     className: "jsx-3774360392" + " " + "container",
-    children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+    children: [/*#__PURE__*/Object(jsx_runtime["jsxs"])(head_default.a, {
+      children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1.0",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("meta", {
         name: "description",
         content: "Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("meta", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("meta", {
         name: "keywords",
         content: "gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("script", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("script", {
         async: true,
         src: "https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("script", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("script", {
         dangerouslySetInnerHTML: {
           __html: `
               window.dataLayer = window.dataLayer || [];
@@ -14825,71 +15240,71 @@ function Layout({
             `
         },
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
         rel: "icon",
         href: "/favicon.ico",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
         rel: "apple-touch-icon",
         sizes: "180x180",
         href: "/apple-touch-icon.png",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
         href: "/favicon-32x32.png",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
         href: "/favicon-16x16.png",
         className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("link", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
         rel: "manifest",
         href: "/site.webmanifest",
         className: "jsx-3774360392"
       })]
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("header", {
+    }), /*#__PURE__*/Object(jsx_runtime["jsx"])("header", {
       className: "jsx-3774360392" + " " + "header",
-      children: home ? /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-        children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+      children: home ? /*#__PURE__*/Object(jsx_runtime["jsxs"])(jsx_runtime["Fragment"], {
+        children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("div", {
           className: "jsx-3774360392" + " " + "nav-spacer"
-        }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_Hero__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], {})]
-      }) : /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("div", {
+        }), /*#__PURE__*/Object(jsx_runtime["jsx"])(Hero, {})]
+      }) : /*#__PURE__*/Object(jsx_runtime["jsx"])(jsx_runtime["Fragment"], {
+        children: /*#__PURE__*/Object(jsx_runtime["jsx"])("div", {
           className: "jsx-3774360392" + " " + "nav-spacer"
         })
       })
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("main", {
+    }), /*#__PURE__*/Object(jsx_runtime["jsx"])("main", {
       className: "jsx-3774360392" + " " + "main",
       children: children
-    }), !home && /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_button__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], {
+    }), !home && /*#__PURE__*/Object(jsx_runtime["jsx"])(components_button["a" /* default */], {
       buttonText: "<== HOME",
       buttonLink: "/"
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("footer", {
+    }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("footer", {
       className: "jsx-3774360392" + " " + "footer",
-      children: [/*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("span", {
+      children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("span", {
         className: "jsx-3774360392",
         children: "\xA9 2020 Frasers Gourmet Hideaway |"
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsxs"])("span", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("span", {
         className: "jsx-3774360392" + " " + "no-wrap",
-        children: ["\xA0Built by:\xA0", /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("a", {
+        children: ["\xA0Built by:\xA0", /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
           href: "https://github.com/ryan3738",
           target: "_blank",
           rel: "noreferrer noopener",
           className: "jsx-3774360392" + " " + "light-text",
           children: "Ryan Fraser"
         })]
-      }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])("nav", {
+      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("nav", {
         className: "jsx-3774360392" + " " + "nav-list",
-        children: /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(_nav_list__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"], {})
+        children: /*#__PURE__*/Object(jsx_runtime["jsx"])(nav_list["a" /* default */], {})
       })]
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
       id: "3470964110",
       children: [".container.jsx-3774360392{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;margin:0 auto;}", ".main.jsx-3774360392{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}", ".header.jsx-3774360392{width:100%;}", ".footer.jsx-3774360392{height:auto;width:100%;background-color:var(--surface-color);padding:1em;}", ".no-wrap.jsx-3774360392{white-space:nowrap;}", ".nav-spacer.jsx-3774360392{height:4em;}", ".nav-padding.jsx-3774360392{padding:4em 0 0;}", ".nav-link.jsx-3774360392{padding:1em;margin:auto;-webkit-text-decoration:underline;text-decoration:underline;white-space:nowrap;}", ".nav-list.jsx-3774360392{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;}"]
-    }), /*#__PURE__*/Object(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__["jsx"])(styled_jsx_style__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
       id: "478426255",
       children: [":root{--black-color:#0b0a0a;--background-color:var(--black-color);--surface-color:rgba(255,255,255,0.03);--primary-color:#c6a938;--primary-color-desaturated:#f3e08d;--secondary-color:#1a1a1a;--white-color:#ffffffde;--text-color:var(--white-color);--high-emphasis-text:#ffffffde;--medium-emphasis-text:#ffffff99;--text-disabled:#ffffff61;--color-facebook:#3b5998;--color-instagram:#fb3958;--small-screen:460px;--medium-screen:769px;}", ".medium-emphasis{color:var(--medium-emphasis-text);}", `@media only screen and (min-width:${theme.largeScreen}){html,body{font-size:112.5%;}}`]
     })]
@@ -20384,7 +20799,7 @@ function extension(config, extension) {
 /***/ "LZ9C":
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-555defa4e62ba07d4446.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/ZoNKMwZEtUxII84KhTS1Q/_buildManifest.js\",\"static/ZoNKMwZEtUxII84KhTS1Q/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.5c299214bb33a64530db.js\",\"static/chunks/pages/index-26fd03ac7a89bc885ae3.js\"],\"/404\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.5c299214bb33a64530db.js\",\"static/chunks/pages/404-8de9ba5d5c3e54f2dcf3.js\"],\"/_app\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/dbf3ce33.7574244a13df6c6b15bf.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/css/37fe93143dd003f59b24.css\",\"static/chunks/pages/_app-1f00a6b9f477cf832342.js\"],\"/_error\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/pages/_error-28a5c0187bb3a2bf6777.js\"],\"/about\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.5c299214bb33a64530db.js\",\"static/chunks/pages/about-83828e10bf6a6ff3b10c.js\"],\"/gallery\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.5c299214bb33a64530db.js\",\"static/chunks/pages/gallery-226d04039657c5d1fa9a.js\"],\"/menu\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.5c299214bb33a64530db.js\",\"static/chunks/pages/menu-2ccd7e1f62682056a875.js\"]},\"ampFirstPages\":[]}");
+module.exports = JSON.parse("{\"polyfillFiles\":[\"static/chunks/polyfills-555defa4e62ba07d4446.js\"],\"devFiles\":[],\"ampDevFiles\":[],\"lowPriorityFiles\":[\"static/IsLdhDUBxaHi06AkV8DHf/_buildManifest.js\",\"static/IsLdhDUBxaHi06AkV8DHf/_ssgManifest.js\"],\"pages\":{\"/\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.bfdc9ff91381ab3179e6.js\",\"static/chunks/pages/index-0380bd87852660fe5070.js\"],\"/404\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.bfdc9ff91381ab3179e6.js\",\"static/chunks/pages/404-2e0c1cf3fd572a8866b6.js\"],\"/_app\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/dbf3ce33.7574244a13df6c6b15bf.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/css/37fe93143dd003f59b24.css\",\"static/chunks/pages/_app-1f00a6b9f477cf832342.js\"],\"/_error\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/pages/_error-28a5c0187bb3a2bf6777.js\"],\"/about\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.bfdc9ff91381ab3179e6.js\",\"static/chunks/pages/about-e44d2714db5bc6e51e6c.js\"],\"/gallery\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.bfdc9ff91381ab3179e6.js\",\"static/chunks/pages/gallery-48dad9470d9157d5db9f.js\"],\"/menu\":[\"static/chunks/main-f4828ed3f90825f21806.js\",\"static/chunks/webpack-e067438c4cf4ef2ef178.js\",\"static/chunks/framework.2113c6061a2f456066a1.js\",\"static/chunks/commons.69a1f4db22ce0f3daf57.js\",\"static/chunks/2678a0a2d184324bf2e32c7cc43cec98d7cc97fd.077388b90b9b2eb62138.js\",\"static/chunks/e3582affac5353dd0df676d9c3e24c12aece4514.bfdc9ff91381ab3179e6.js\",\"static/chunks/pages/menu-46e4f077b0db2cd23c9f.js\"]},\"ampFirstPages\":[]}");
 
 /***/ }),
 
@@ -22911,289 +23326,6 @@ __webpack_require__.d(__webpack_exports__, "default", function() { return /* bin
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__("nKUr");
 
-// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
-var style = __webpack_require__("MX0m");
-var style_default = /*#__PURE__*/__webpack_require__.n(style);
-
-// EXTERNAL MODULE: ./node_modules/next/dist/next-server/lib/head.js
-var head = __webpack_require__("8Kt/");
-var head_default = /*#__PURE__*/__webpack_require__.n(head);
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__("q1tI");
-
-// EXTERNAL MODULE: ./components/Hero.js
-var Hero = __webpack_require__("+lMf");
-
-// EXTERNAL MODULE: ./components/button.js
-var components_button = __webpack_require__("a3/r");
-
-// EXTERNAL MODULE: ./components/nav-list.js
-var nav_list = __webpack_require__("r+5k");
-
-// CONCATENATED MODULE: ./components/Layout.js
-
-
-
-
- // import styles from './layout.module.css';
-// import utilStyles from '../styles/utils.module.css'
-// import Link from 'next/link'
-
- // import Image from 'next/image'
-
-
-
-const Layout_name = 'Frasers';
-const siteTitle = 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
-const theme = {
-  maxWidth: '1200px',
-  smallScreen: '460px',
-  mediumScreen: '769px',
-  largeScreen: '1008px'
-};
-function Layout({
-  children,
-  home
-}) {
-  return /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
-    className: "jsx-3774360392" + " " + "container",
-    children: [/*#__PURE__*/Object(jsx_runtime["jsxs"])(head_default.a, {
-      children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("meta", {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1.0",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("meta", {
-        name: "description",
-        content: "Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("meta", {
-        name: "keywords",
-        content: "gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("script", {
-        async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("script", {
-        dangerouslySetInnerHTML: {
-          __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YS529TE94E');
-            `
-        },
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
-        rel: "icon",
-        href: "/favicon.ico",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
-        rel: "apple-touch-icon",
-        sizes: "180x180",
-        href: "/apple-touch-icon.png",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "32x32",
-        href: "/favicon-32x32.png",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: "/favicon-16x16.png",
-        className: "jsx-3774360392"
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("link", {
-        rel: "manifest",
-        href: "/site.webmanifest",
-        className: "jsx-3774360392"
-      })]
-    }), /*#__PURE__*/Object(jsx_runtime["jsx"])("header", {
-      className: "jsx-3774360392" + " " + "header",
-      children: home ? /*#__PURE__*/Object(jsx_runtime["jsxs"])(jsx_runtime["Fragment"], {
-        children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("div", {
-          className: "jsx-3774360392" + " " + "nav-spacer"
-        }), /*#__PURE__*/Object(jsx_runtime["jsx"])(Hero["a" /* default */], {})]
-      }) : /*#__PURE__*/Object(jsx_runtime["jsx"])(jsx_runtime["Fragment"], {
-        children: /*#__PURE__*/Object(jsx_runtime["jsx"])("div", {
-          className: "jsx-3774360392" + " " + "nav-spacer"
-        })
-      })
-    }), /*#__PURE__*/Object(jsx_runtime["jsx"])("main", {
-      className: "jsx-3774360392" + " " + "main",
-      children: children
-    }), !home && /*#__PURE__*/Object(jsx_runtime["jsx"])(components_button["a" /* default */], {
-      buttonText: "<== HOME",
-      buttonLink: "/"
-    }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("footer", {
-      className: "jsx-3774360392" + " " + "footer",
-      children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("span", {
-        className: "jsx-3774360392",
-        children: "\xA9 2020 Frasers Gourmet Hideaway |"
-      }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("span", {
-        className: "jsx-3774360392" + " " + "no-wrap",
-        children: ["\xA0Built by:\xA0", /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-          href: "https://github.com/ryan3738",
-          target: "_blank",
-          rel: "noreferrer noopener",
-          className: "jsx-3774360392" + " " + "light-text",
-          children: "Ryan Fraser"
-        })]
-      }), /*#__PURE__*/Object(jsx_runtime["jsx"])("nav", {
-        className: "jsx-3774360392" + " " + "nav-list",
-        children: /*#__PURE__*/Object(jsx_runtime["jsx"])(nav_list["a" /* default */], {})
-      })]
-    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
-      id: "3470964110",
-      children: [".container.jsx-3774360392{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding:0;margin:0 auto;}", ".main.jsx-3774360392{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;}", ".header.jsx-3774360392{width:100%;}", ".footer.jsx-3774360392{height:auto;width:100%;background-color:var(--surface-color);padding:1em;}", ".no-wrap.jsx-3774360392{white-space:nowrap;}", ".nav-spacer.jsx-3774360392{height:4em;}", ".nav-padding.jsx-3774360392{padding:4em 0 0;}", ".nav-link.jsx-3774360392{padding:1em;margin:auto;-webkit-text-decoration:underline;text-decoration:underline;white-space:nowrap;}", ".nav-list.jsx-3774360392{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;}"]
-    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
-      id: "478426255",
-      children: [":root{--black-color:#0b0a0a;--background-color:var(--black-color);--surface-color:rgba(255,255,255,0.03);--primary-color:#c6a938;--primary-color-desaturated:#f3e08d;--secondary-color:#1a1a1a;--white-color:#ffffffde;--text-color:var(--white-color);--high-emphasis-text:#ffffffde;--medium-emphasis-text:#ffffff99;--text-disabled:#ffffff61;--color-facebook:#3b5998;--color-instagram:#fb3958;--small-screen:460px;--medium-screen:769px;}", ".medium-emphasis{color:var(--medium-emphasis-text);}", `@media only screen and (min-width:${theme.largeScreen}){html,body{font-size:112.5%;}}`]
-    })]
-  });
-}
-// EXTERNAL MODULE: ./components/menu-section.js + 1 modules
-var menu_section = __webpack_require__("gWV5");
-
-// EXTERNAL MODULE: ./components/double.tsx
-var components_double = __webpack_require__("uRP9");
-
-// EXTERNAL MODULE: ./components/gallery-grid.js
-var gallery_grid = __webpack_require__("zwFs");
-
-// EXTERNAL MODULE: ./node_modules/next/image.js
-var next_image = __webpack_require__("Aiso");
-var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
-
-// CONCATENATED MODULE: ./components/social.js
-
-
-
-
-function Social({
-  href,
-  img,
-  alt,
-  color
-}) {
-  return /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
-    className: style_default.a.dynamic([["4030891239", [color]]]) + " " + "social",
-    children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-      href: href,
-      target: "_blank",
-      rel: "noreferrer noopener",
-      className: style_default.a.dynamic([["4030891239", [color]]]),
-      children: /*#__PURE__*/Object(jsx_runtime["jsx"])(image_default.a // style='max-width:100%; max-height: auto;'
-      , {
-        src: img,
-        alt: alt,
-        layout: "fixed",
-        objectFit: "cover",
-        height: "45",
-        width: "45",
-        quality: "100"
-      })
-    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
-      id: "4030891239",
-      dynamic: [color],
-      children: [".social.__jsx-style-dynamic-selector{width:45px;height:45px;vertical-align:center;background-color:var(--primary-color);border-radius:5px;grid-column:1/2;margin:5px;}", `.social.__jsx-style-dynamic-selector:hover{-webkit-animation-name:social-button-__jsx-style-dynamic-selector;animation-name:social-button-__jsx-style-dynamic-selector;-webkit-animation-duration:500ms;animation-duration:500ms;background-color:var(${color});}`]
-    })]
-  });
-}
-// EXTERNAL MODULE: ./public/data/site-data.json
-var site_data = __webpack_require__("Xz0h");
-
-// CONCATENATED MODULE: ./components/contact.js
-
-
-
-
-// import utilStyles from '../styles/utils.module.css'
-
-
-
-function Contact() {
-  return /*#__PURE__*/Object(jsx_runtime["jsxs"])(jsx_runtime["Fragment"], {
-    children: [/*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
-      className: "jsx-3302004538" + " " + "contact-content",
-      children: [/*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
-        id: "contact-info",
-        className: "jsx-3302004538",
-        children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("h2", {
-          className: "jsx-3302004538",
-          children: "LOCATION"
-        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
-          className: "jsx-3302004538",
-          children: /*#__PURE__*/Object(jsx_runtime["jsxs"])("span", {
-            className: "jsx-3302004538" + " " + "medium-emphasis",
-            children: [`${site_data.address.street} ${site_data.address.street2}`, /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
-              className: "jsx-3302004538"
-            }), `${site_data.address.city}, ${site_data.address.state} ${site_data.address.zipCode}`, /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
-              className: "jsx-3302004538"
-            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
-              className: "jsx-3302004538"
-            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-              href: "tel:13602791231",
-              className: "jsx-3302004538",
-              children: site_data.phoneNumber
-            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
-              className: "jsx-3302004538"
-            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
-              className: "jsx-3302004538"
-            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("b", {
-              className: "jsx-3302004538",
-              children: /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
-                href: site_data.address.directions,
-                target: "_blank",
-                rel: "noreferrer noopener",
-                className: "jsx-3302004538",
-                children: "Get Directions"
-              })
-            })]
-          })
-        })]
-      }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
-        className: "jsx-3302004538" + " " + "social-media-container",
-        children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("h3", {
-          className: "jsx-3302004538",
-          children: "Sign up for our newsletter to receive updates"
-        }), /*#__PURE__*/Object(jsx_runtime["jsx"])(components_button["a" /* default */], {
-          buttonText: "SIGN UP",
-          buttonLink: "https://squareup.com/outreach/sgPDT7/subscribe"
-        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
-          className: "jsx-3302004538"
-        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
-          className: "jsx-3302004538"
-        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
-          className: "jsx-3302004538",
-          children: "We respect your privacy"
-        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("h3", {
-          className: "jsx-3302004538",
-          children: "For specials and event info follow us on social media"
-        }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
-          className: "jsx-3302004538" + " " + "social-media-contents",
-          children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(Social, {
-            href: "https://www.instagram.com/frasersgourmethideaway/",
-            img: "/images/instagram-logo.png",
-            alt: "frasers instagram",
-            color: "--color-instagram"
-          }), /*#__PURE__*/Object(jsx_runtime["jsx"])(Social, {
-            href: "http://facebook.com/frasersgh",
-            img: "/images/facebook-logo.png",
-            alt: "frasers facebook",
-            color: "--color-facebook"
-          })]
-        })]
-      })]
-    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
-      id: "3302004538",
-      children: [".contact-content.jsx-3302004538{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:2rem 1rem;}", ".social-media-container.jsx-3302004538{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:10px;}", ".social-media-contents.jsx-3302004538{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}"]
-    })]
-  });
-}
 // EXTERNAL MODULE: external "fs"
 var external_fs_ = __webpack_require__("mw/K");
 var external_fs_default = /*#__PURE__*/__webpack_require__.n(external_fs_);
@@ -23303,7 +23435,163 @@ async function getDoubleData(fullPath) {
     contentHtml
   }, matterResult.data);
 }
-// CONCATENATED MODULE: ./pages/index.js
+// EXTERNAL MODULE: ./public/data/site-data.json
+var site_data = __webpack_require__("Xz0h");
+
+// EXTERNAL MODULE: ./node_modules/styled-jsx/style.js
+var style = __webpack_require__("MX0m");
+var style_default = /*#__PURE__*/__webpack_require__.n(style);
+
+// EXTERNAL MODULE: ./node_modules/next/dist/next-server/lib/head.js
+var head = __webpack_require__("8Kt/");
+var head_default = /*#__PURE__*/__webpack_require__.n(head);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__("q1tI");
+
+// EXTERNAL MODULE: ./components/layout.js + 1 modules
+var layout = __webpack_require__("CafY");
+
+// EXTERNAL MODULE: ./components/double.tsx
+var components_double = __webpack_require__("uRP9");
+
+// EXTERNAL MODULE: ./components/gallery-grid.js
+var gallery_grid = __webpack_require__("zwFs");
+
+// EXTERNAL MODULE: ./node_modules/next/image.js
+var next_image = __webpack_require__("Aiso");
+var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+
+// CONCATENATED MODULE: ./components/social.js
+
+
+
+
+function Social({
+  href,
+  img,
+  alt,
+  color
+}) {
+  return /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
+    className: style_default.a.dynamic([["4030891239", [color]]]) + " " + "social",
+    children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
+      href: href,
+      target: "_blank",
+      rel: "noreferrer noopener",
+      className: style_default.a.dynamic([["4030891239", [color]]]),
+      children: /*#__PURE__*/Object(jsx_runtime["jsx"])(image_default.a // style='max-width:100%; max-height: auto;'
+      , {
+        src: img,
+        alt: alt,
+        layout: "fixed",
+        objectFit: "cover",
+        height: "45",
+        width: "45",
+        quality: "100"
+      })
+    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
+      id: "4030891239",
+      dynamic: [color],
+      children: [".social.__jsx-style-dynamic-selector{width:45px;height:45px;vertical-align:center;background-color:var(--primary-color);border-radius:5px;grid-column:1/2;margin:5px;}", `.social.__jsx-style-dynamic-selector:hover{-webkit-animation-name:social-button-__jsx-style-dynamic-selector;animation-name:social-button-__jsx-style-dynamic-selector;-webkit-animation-duration:500ms;animation-duration:500ms;background-color:var(${color});}`]
+    })]
+  });
+}
+// EXTERNAL MODULE: ./components/button.js
+var components_button = __webpack_require__("a3/r");
+
+// CONCATENATED MODULE: ./components/contact.js
+
+
+
+
+// import utilStyles from '../styles/utils.module.css'
+
+
+
+function Contact() {
+  return /*#__PURE__*/Object(jsx_runtime["jsxs"])(jsx_runtime["Fragment"], {
+    children: [/*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
+      className: "jsx-3302004538" + " " + "contact-content",
+      children: [/*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
+        id: "contact-info",
+        className: "jsx-3302004538",
+        children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("h2", {
+          className: "jsx-3302004538",
+          children: "LOCATION"
+        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+          className: "jsx-3302004538",
+          children: /*#__PURE__*/Object(jsx_runtime["jsxs"])("span", {
+            className: "jsx-3302004538" + " " + "medium-emphasis",
+            children: [`${site_data.address.street} ${site_data.address.street2}`, /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3302004538"
+            }), `${site_data.address.city}, ${site_data.address.state} ${site_data.address.zipCode}`, /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3302004538"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3302004538"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
+              href: "tel:13602791231",
+              className: "jsx-3302004538",
+              children: site_data.phoneNumber
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3302004538"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+              className: "jsx-3302004538"
+            }), /*#__PURE__*/Object(jsx_runtime["jsx"])("b", {
+              className: "jsx-3302004538",
+              children: /*#__PURE__*/Object(jsx_runtime["jsx"])("a", {
+                href: site_data.address.directions,
+                target: "_blank",
+                rel: "noreferrer noopener",
+                className: "jsx-3302004538",
+                children: "Get Directions"
+              })
+            })]
+          })
+        })]
+      }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
+        className: "jsx-3302004538" + " " + "social-media-container",
+        children: [/*#__PURE__*/Object(jsx_runtime["jsx"])("h3", {
+          className: "jsx-3302004538",
+          children: "Sign up for our newsletter to receive updates"
+        }), /*#__PURE__*/Object(jsx_runtime["jsx"])(components_button["a" /* default */], {
+          buttonText: "SIGN UP",
+          buttonLink: "https://squareup.com/outreach/sgPDT7/subscribe"
+        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+          className: "jsx-3302004538"
+        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("br", {
+          className: "jsx-3302004538"
+        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("p", {
+          className: "jsx-3302004538",
+          children: "We respect your privacy"
+        }), /*#__PURE__*/Object(jsx_runtime["jsx"])("h3", {
+          className: "jsx-3302004538",
+          children: "For specials and event info follow us on social media"
+        }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("div", {
+          className: "jsx-3302004538" + " " + "social-media-contents",
+          children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(Social, {
+            href: "https://www.instagram.com/frasersgourmethideaway/",
+            img: "/images/instagram-logo.png",
+            alt: "frasers instagram",
+            color: "--color-instagram"
+          }), /*#__PURE__*/Object(jsx_runtime["jsx"])(Social, {
+            href: "http://facebook.com/frasersgh",
+            img: "/images/facebook-logo.png",
+            alt: "frasers facebook",
+            color: "--color-facebook"
+          })]
+        })]
+      })]
+    }), /*#__PURE__*/Object(jsx_runtime["jsx"])(style_default.a, {
+      id: "3302004538",
+      children: [".contact-content.jsx-3302004538{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:2rem 1rem;}", ".social-media-container.jsx-3302004538{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin:10px;}", ".social-media-contents.jsx-3302004538{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}"]
+    })]
+  });
+}
+// EXTERNAL MODULE: ./components/menu-section.js + 1 modules
+var menu_section = __webpack_require__("gWV5");
+
+// CONCATENATED MODULE: ./components/home.js
 
 
 
@@ -23314,45 +23602,30 @@ async function getDoubleData(fullPath) {
  // import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';
+// import MenuSection from '../components/menu-section'
 
 
 
 
 
  // import doubleItems from '../public/data/double.json';
-
- // import announcementPath from '../public/data/site-data.json'
+// import announcementPath from '../public/data/site-data.json'
 
  // import ImageLightBox from '../components/image-light-box'
 
-async function getStaticProps() {
-  // const allPostsData = getSortedPostsData();
-  const aboutOwnerData = await getDoubleData('public/data/about-owner.md');
-  const aboutBusinessData = await getDoubleData('public/data/about-business.md');
-  const announcement1Data = await getDoubleData(site_data.announcement1);
-  const announcement2Data = await getDoubleData(site_data.announcement2);
-  return {
-    props: {
-      aboutOwnerData,
-      aboutBusinessData,
-      announcement1Data,
-      announcement2Data
-    }
-  };
-}
-function HomePage({
+function Home({
   aboutOwnerData,
   aboutBusinessData,
   announcement1Data,
   announcement2Data
 }) {
   return /*#__PURE__*/Object(jsx_runtime["jsx"])(jsx_runtime["Fragment"], {
-    children: /*#__PURE__*/Object(jsx_runtime["jsxs"])(Layout, {
+    children: /*#__PURE__*/Object(jsx_runtime["jsxs"])(layout["a" /* default */], {
       home: true,
       children: [/*#__PURE__*/Object(jsx_runtime["jsx"])(head_default.a, {
         children: /*#__PURE__*/Object(jsx_runtime["jsx"])("title", {
           className: "jsx-1997140461",
-          children: siteTitle
+          children: layout["b" /* siteTitle */]
         })
       }), /*#__PURE__*/Object(jsx_runtime["jsxs"])("section", {
         className: "jsx-1997140461" + " " + "container",
@@ -23470,6 +23743,40 @@ function HomePage({
         id: "1997140461",
         children: [".header.jsx-1997140461{padding:5rem 0 0;color:var(--primary-color-desaturated);display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;margin:5px;}", ".hidden-header.jsx-1997140461{padding:0;visibility:hidden;}", ".container.jsx-1997140461{width:100%;max-width:1120px;background-color:var(--surface-color);}", ".double-wrapper.jsx-1997140461{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}", ".special-menu.jsx-1997140461{list-style-type:none;padding:0;margin:0;background-color:var(--surface-color);padding:10px;border-radius:7px;}", ".special-menu.jsx-1997140461 li.jsx-1997140461{background-color:var(--surface-color);padding:10px;border-radius:7px;}", "@media (min-width:460px){}"]
       })]
+    })
+  });
+}
+// CONCATENATED MODULE: ./pages/index.js
+
+
+
+
+
+async function getStaticProps() {
+  // const allPostsData = getSortedPostsData();
+  const aboutOwnerData = await getDoubleData('public/data/about-owner.md');
+  const aboutBusinessData = await getDoubleData('public/data/about-business.md');
+  const announcement1Data = await getDoubleData(site_data.announcement1);
+  const announcement2Data = await getDoubleData(site_data.announcement2);
+  return {
+    props: {
+      aboutOwnerData,
+      aboutBusinessData,
+      announcement1Data,
+      announcement2Data
+    }
+  };
+}
+function HomePage({
+  aboutOwnerData,
+  aboutBusinessData,
+  announcement1Data,
+  announcement2Data
+}) {
+  return /*#__PURE__*/Object(jsx_runtime["jsx"])(jsx_runtime["Fragment"], {
+    children: /*#__PURE__*/Object(jsx_runtime["jsx"])(Home, {
+      aboutOwnerData: aboutOwnerData,
+      aboutBusinessData: aboutBusinessData
     })
   });
 }
@@ -26600,416 +26907,6 @@ function all(h, parent) {
   return values
 }
 
-
-/***/ }),
-
-/***/ "WKrh":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticProps", function() { return getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStaticPaths", function() { return getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getServerSideProps", function() { return getServerSideProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticParams", function() { return unstable_getStaticParams; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticProps", function() { return unstable_getStaticProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getStaticPaths", function() { return unstable_getStaticPaths; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unstable_getServerProps", function() { return unstable_getServerProps; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_app", function() { return _app; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "renderReqToHTML", function() { return renderReqToHTML; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
-/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
-
-    
-    
-    
-    const {isResSent} = __webpack_require__("g/15");
-
-    
-    const { processEnv } = __webpack_require__("fXeI")
-    processEnv([{"path":".env.local","contents":"NEXTAUTH_URL=http://localhost:3000\r\nDATABASE_URL=mongodb+srv://sick:CZL5os1Sel690u8R@sickcluster.ngzru.mongodb.net/sickfits?retryWrites=true&w=majority\r\n# EMAIL_SERVER=smtp://username:password@smtp.example.com:587\r\n# EMAIL_FROM=norbert80@ethereal.email\r\nGITHUB_ID=087b279986438a596790\r\nGITHUB_SECRET=9f13c115b3317d88a59144505e5ba129203bee8b\r\nNEXTAUTH_SECRET=LUH3qZuzEZRFDR5AEqUFF6BPFD2r76\r\nEMAIL_SERVER_USER=kenny.hyatt@ethereal.email\r\nEMAIL_SERVER_PASSWORD=kkvNJPPYcdFD1mxMVu\r\nEMAIL_SERVER_HOST=smtp.ethereal.email\r\nEMAIL_SERVER_PORT=587\r\nEMAIL_FROM=kenny.hyatt@ethereal.email"}])
-  
-    
-    const runtimeConfig = {}
-    const {parse: parseUrl, format: formatUrl} = __webpack_require__("bzos")
-    const {parse: parseQs} = __webpack_require__("8xkj")
-    const { renderToHTML } = __webpack_require__("/bjS");
-    const { tryGetPreviewData } = __webpack_require__("PCLx");
-    const { denormalizePagePath } = __webpack_require__("wkBG")
-    const { setLazyProp, getCookieParser } = __webpack_require__("PCLx")
-    const {sendPayload} = __webpack_require__("KyNf");
-    const {getRedirectStatus} = __webpack_require__("FwDC");
-    const {PERMANENT_REDIRECT_STATUS} = __webpack_require__("w7wo")
-    const buildManifest = __webpack_require__("LZ9C");
-    const reactLoadableManifest = __webpack_require__("67Bq");
-    const { normalizeLocalePath } = __webpack_require__("3wub")
-    const i18n = {}
-
-    const appMod = __webpack_require__("cha2")
-    let App = appMod.default || appMod.then && appMod.then(mod => mod.default);
-
-    
-    
-    const { rewrites } = __webpack_require__("Skye")
-    const { pathToRegexp, default: pathMatch } = __webpack_require__("N6Fi")
-  
-
-    const compMod = __webpack_require__("RNiq")
-
-    let Component = compMod.default || compMod.then && compMod.then(mod => mod.default)
-    /* harmony default export */ __webpack_exports__["default"] = (Component);
-    let getStaticProps = compMod['getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['getStaticProp' + 's'])
-    let getStaticPaths = compMod['getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['getStaticPath' + 's'])
-    let getServerSideProps = compMod['getServerSideProp' + 's'] || compMod.then && compMod.then(mod => mod['getServerSideProp' + 's'])
-
-    // kept for detecting legacy exports
-    const unstable_getStaticParams = compMod['unstable_getStaticParam' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticParam' + 's'])
-    const unstable_getStaticProps = compMod['unstable_getStaticProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticProp' + 's'])
-    const unstable_getStaticPaths = compMod['unstable_getStaticPath' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getStaticPath' + 's'])
-    const unstable_getServerProps = compMod['unstable_getServerProp' + 's'] || compMod.then && compMod.then(mod => mod['unstable_getServerProp' + 's'])
-
-    
-    
-    
-    const getCustomRouteMatcher = pathMatch(true)
-    const prepareDestination = __webpack_require__("6mnf").default
-
-    function handleRewrites(parsedUrl) {
-      for (const rewrite of rewrites) {
-        const matcher = getCustomRouteMatcher(rewrite.source)
-        const params = matcher(parsedUrl.pathname)
-
-        if (params) {
-          const { parsedDestination } = prepareDestination(
-            rewrite.destination,
-            params,
-            parsedUrl.query,
-            true
-          )
-
-          Object.assign(parsedUrl.query, parsedDestination.query)
-          delete parsedDestination.query
-
-          Object.assign(parsedUrl, parsedDestination)
-
-          let fsPathname = parsedUrl.pathname
-
-          
-
-          
-
-          if (fsPathname === '/'){
-            break
-          }
-          
-        }
-      }
-
-      return parsedUrl
-    }
-  
-
-    let config = compMod['confi' + 'g'] || (compMod.then && compMod.then(mod => mod['confi' + 'g'])) || {}
-    const _app = App
-    async function renderReqToHTML(req, res, renderMode, _renderOpts, _params) {
-      let Document
-      let Error
-      let notFoundMod
-      ;[
-        getStaticProps,
-        getServerSideProps,
-        getStaticPaths,
-        Component,
-        App,
-        config,
-        { default: Document },
-        { default: Error },
-        notFoundMod, 
-      ] = await Promise.all([
-        getStaticProps,
-        getServerSideProps,
-        getStaticPaths,
-        Component,
-        App,
-        config,
-        __webpack_require__("VDXt"),
-        __webpack_require__("/a9y"),
-        __webpack_require__("uNx/"),
-      ])
-
-      const fromExport = renderMode === 'export' || renderMode === true;
-      const nextStartMode = renderMode === 'passthrough'
-      let hasValidParams = true
-
-      
-
-      setLazyProp({ req }, 'cookies', getCookieParser(req))
-
-      const options = {
-        App,
-        Document,
-        buildManifest,
-        getStaticProps,
-        getServerSideProps,
-        getStaticPaths,
-        reactLoadableManifest,
-        canonicalBase: "",
-        buildId: "ZoNKMwZEtUxII84KhTS1Q",
-        assetPrefix: "",
-        runtimeConfig: runtimeConfig.publicRuntimeConfig || {},
-        previewProps: {previewModeId:"627672136840124e8a600f893a2e5336",previewModeSigningKey:"10e4c087ed0c2a8df52c5f69dbe43f6ef4845010adb88e42b5843e04878eac1e",previewModeEncryptionKey:"cb5fa4d45f40b980dd3914c587dc7e2c4ae93731d582053e93a1793e3ed508f1"},
-        env: process.env,
-        basePath: "",
-        ..._renderOpts
-      }
-      let _nextData = false
-      let parsedUrl
-
-      try {
-        // We need to trust the dynamic route params from the proxy
-        // to ensure we are using the correct values
-        const trustQuery = !getStaticProps && req.headers['x-vercel-id']
-        let parsedUrl = parseUrl(req.url, true)
-        let routeNoAssetPath = parsedUrl.pathname
-        const origQuery = Object.assign({}, parsedUrl.query)
-
-        parsedUrl = handleRewrites(parsedUrl)
-
-        
-
-        // remove ?amp=1 from request URL if rendering for export
-        if (fromExport && parsedUrl.query.amp) {
-          const queryNoAmp = Object.assign({}, origQuery)
-          delete queryNoAmp.amp
-
-          req.url = formatUrl({
-            ...parsedUrl,
-            search: undefined,
-            query: queryNoAmp
-          })
-        }
-
-        if (parsedUrl.pathname.match(/_next\/data/)) {
-          const {
-            default: getRouteNoAssetPath,
-          } = __webpack_require__("1Ej0");
-          _nextData = true;
-          parsedUrl.pathname = getRouteNoAssetPath(
-            parsedUrl.pathname.replace(
-              new RegExp('/_next/data/ZoNKMwZEtUxII84KhTS1Q/'),
-              '/'
-            ),
-            '.json'
-          );
-          routeNoAssetPath = parsedUrl.pathname
-        }
-
-        
-      const i18n = {}
-      const detectedLocale = undefined
-      const defaultLocale = undefined
-      const locales = undefined
-    
-
-        if (parsedUrl.query.nextInternalLocale) {
-          detectedLocale = parsedUrl.query.nextInternalLocale
-          delete parsedUrl.query.nextInternalLocale
-        }
-
-        const renderOpts = Object.assign(
-          {
-            Component,
-            pageConfig: config,
-            nextExport: fromExport,
-            isDataReq: _nextData,
-            locale: detectedLocale,
-            locales,
-            defaultLocale: i18n.defaultLocale,
-          },
-          options,
-        )
-
-        
-
-        const params = {};
-
-        const nowParams = null;
-
-        // make sure to set renderOpts to the correct params e.g. _params
-        // if provided from worker or params if we're parsing them here
-        renderOpts.params = _params || params
-
-        // make sure to normalize req.url on Vercel to strip dynamic params
-        // from the query which are added during routing
-        
-
-        // normalize request URL/asPath for fallback/revalidate pages since the
-        // proxy sets the request URL to the output's path for fallback pages
-        
-
-        // make sure to normalize asPath for revalidate and _next/data requests
-        // since the asPath should match what is shown on the client
-        if (
-          !fromExport &&
-          (getStaticProps || getServerSideProps)
-        ) {
-          
-
-          parsedUrl.pathname = denormalizePagePath(parsedUrl.pathname)
-          renderOpts.resolvedUrl = formatUrl({
-            ...parsedUrl,
-            query: origQuery
-          })
-
-          // For getServerSideProps we need to ensure we use the original URL
-          // and not the resolved URL to prevent a hydration mismatch on asPath
-          renderOpts.resolvedAsPath = getServerSideProps
-            ? formatUrl({
-              ...parsedUrl,
-              pathname: routeNoAssetPath,
-              query: origQuery,
-            })
-            : renderOpts.resolvedUrl
-        }
-
-        const isFallback = parsedUrl.query.__nextFallback
-
-        const previewData = tryGetPreviewData(req, res, options.previewProps)
-        const isPreviewMode = previewData !== false
-        if (false) {}
-        let result = await renderToHTML(req, res, "/", Object.assign({}, getStaticProps ? { ...(parsedUrl.query.amp ? { amp: '1' } : {}) } : parsedUrl.query, nowParams ? nowParams : params, _params, isFallback ? { __nextFallback: 'true' } : {}), renderOpts)
-
-        if (!renderMode) {
-          if (_nextData || getStaticProps || getServerSideProps) {
-            if (renderOpts.isNotFound) {
-              res.statusCode = 404
-
-              const NotFoundComponent = notFoundMod.default
-
-              const errPathname = "/404"
-
-              const result = await renderToHTML(req, res, errPathname, parsedUrl.query, Object.assign({}, options, {
-                getStaticProps: notFoundMod.getStaticProps,
-                getStaticPaths: undefined,
-                getServerSideProps: undefined,
-                Component: NotFoundComponent,
-                err: undefined,
-                locale: detectedLocale,
-                locales,
-                defaultLocale,
-              }))
-
-              sendPayload(req, res, result, 'html', true, {
-                private: isPreviewMode,
-                stateful: !!getServerSideProps,
-                revalidate: renderOpts.revalidate,
-              })
-              return null
-            } else if (renderOpts.isRedirect && !_nextData) {
-              const redirect = {
-                destination: renderOpts.pageData.pageProps.__N_REDIRECT,
-                statusCode: renderOpts.pageData.pageProps.__N_REDIRECT_STATUS,
-                basePath: renderOpts.pageData.pageProps.__N_REDIRECT_BASE_PATH
-              }
-              const statusCode = getRedirectStatus(redirect)
-
-              if (false) {}
-
-              if (statusCode === PERMANENT_REDIRECT_STATUS) {
-                res.setHeader('Refresh', `0;url=${redirect.destination}`)
-              }
-
-              res.statusCode = statusCode
-              res.setHeader('Location', redirect.destination)
-              res.end()
-              return null
-            } else {
-              sendPayload(req, res, _nextData ? JSON.stringify(renderOpts.pageData) : result, _nextData ? 'json' : 'html', true, {
-                private: isPreviewMode,
-                stateful: !!getServerSideProps,
-                revalidate: renderOpts.revalidate,
-              })
-              return null
-            }
-          }
-        } else if (isPreviewMode) {
-          res.setHeader(
-            'Cache-Control',
-            'private, no-cache, no-store, max-age=0, must-revalidate'
-          )
-        }
-
-        if (renderMode) return { html: result, renderOpts }
-        return result
-      } catch (err) {
-        if (!parsedUrl) {
-          parsedUrl = parseUrl(req.url, true)
-        }
-
-        if (err.code === 'ENOENT') {
-          res.statusCode = 404
-        } else if (err.code === 'DECODE_FAILED') {
-          // TODO: better error?
-          res.statusCode = 400
-        } else {
-          console.error('Unhandled error during request:', err)
-
-          // Backwards compat (call getInitialProps in custom error):
-          try {
-            await renderToHTML(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-              getStaticProps: undefined,
-              getStaticPaths: undefined,
-              getServerSideProps: undefined,
-              Component: Error,
-              err: err,
-              // Short-circuit rendering:
-              isDataReq: true
-            }))
-          } catch (underErrorErr) {
-            console.error('Failed call /_error subroutine, continuing to crash function:', underErrorErr)
-          }
-
-          // Throw the error to crash the serverless function
-          if (isResSent(res)) {
-            console.error('!!! WARNING !!!')
-            console.error(
-              'Your function crashed, but closed the response before allowing the function to exit.\n' +
-              'This may cause unexpected behavior for the next request.'
-            )
-            console.error('!!! WARNING !!!')
-          }
-          throw err
-        }
-
-        const result = await renderToHTML(req, res, "/_error", parsedUrl.query, Object.assign({}, options, {
-          getStaticProps: undefined,
-          getStaticPaths: undefined,
-          getServerSideProps: undefined,
-          Component: Error,
-          err: res.statusCode === 404 ? undefined : err
-        }))
-        return result
-      }
-    }
-    async function render (req, res) {
-      try {
-        await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"])()
-        const html = await renderReqToHTML(req, res)
-        if (html) {
-          sendPayload(req, res, html, 'html', {generateEtags: true, poweredByHeader: true})
-        }
-      } catch(err) {
-        console.error(err)
-        await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"])(err)
-        // Throw the error to crash the serverless function
-        throw err
-      }
-    }
-  
 
 /***/ }),
 
