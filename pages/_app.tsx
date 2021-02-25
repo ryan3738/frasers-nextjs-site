@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AppProps } from 'next/app'
 import SimpleReactLightbox from 'simple-react-lightbox'
-import NavBar from '../components/nav-bar'
+import NavBar from '../components/NavBar'
 import '../styles/global.css'
 
 export default function App({ Component, pageProps }: AppProps) {

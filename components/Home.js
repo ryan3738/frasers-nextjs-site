@@ -8,11 +8,11 @@ import Layout, { siteTitle } from './Layout'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';
 // import MenuSection from '../components/menu-section'
-import Double from './double.tsx'
-import GalleryGrid from './gallery-grid'
-import Contact from './contact'
-import Button from './button'
-import MenuSection from './menu-section'
+import Double from './Double.tsx'
+import GalleryGrid from './GalleryGrid'
+import Contact from './Contact'
+import Button from './Button'
+import MenuSection from './MenuSection'
 // import doubleItems from '../public/data/double.json';
 
 // import announcementPath from '../public/data/site-data.json'

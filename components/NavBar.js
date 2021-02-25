@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React, { useState, useRef } from 'react'
 // import Image from 'next/image'
-import Burger from './burger'
-import BurgerMenu from './burger-menu'
+import Burger from './Burger'
+import BurgerMenu from './BurgerMenu'
 import { useOnClickOutside } from '../hooks/hooks'
-import NavList from './nav-list'
+import NavList from './NavList'
 
 export default function NavBar({ children, open, setOpen }) {
   const node = useRef()

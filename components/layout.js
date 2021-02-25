@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import Hero from './Hero'
 // import Image from 'next/image'
 import Button from './Button'
-import NavList from './nav-list'
+import NavList from './NavList'
 
 export const siteName = 'Frasers'
 export const siteTitle =

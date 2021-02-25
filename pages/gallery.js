@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import GalleryGrid from '../components/gallery-grid'
+import GalleryGrid from '../components/GalleryGrid'
 // import Image from 'next/image'
 
 export default function GalleryPage() {

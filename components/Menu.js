@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from './Layout'
-import MenuSection from './menu-section'
+import MenuSection from './MenuSection'
 
 export default function Menu() {
   return (
