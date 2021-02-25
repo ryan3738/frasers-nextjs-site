@@ -3,7 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // import Image from 'next/image'
-import Layout, { siteTitle } from './layout'
+import Layout, { siteTitle } from './Layout'
 // import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';

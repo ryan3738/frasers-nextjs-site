@@ -1,6 +1,6 @@
 // This file is not working for some reason...
 import Head from 'next/head'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import MenuSection from '../components/menu-section'
 
 export default function MenuPage() {
