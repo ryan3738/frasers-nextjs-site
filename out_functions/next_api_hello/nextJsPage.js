@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "x04f");
+/******/ 	return __webpack_require__(__webpack_require__.s = "uj1Q");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -7225,6 +7225,129 @@ StripBOMWrapper.prototype.end = function() {
 
 /***/ }),
 
+/***/ "uj1Q":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
+/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
+/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
+
+      
+      
+      
+
+      
+    const { processEnv } = __webpack_require__("fXeI")
+    processEnv([{"path":".env.local","contents":"NEXTAUTH_URL=http://localhost:3000\r\nDATABASE_URL=mongodb+srv://sick:CZL5os1Sel690u8R@sickcluster.ngzru.mongodb.net/sickfits?retryWrites=true&w=majority\r\n# EMAIL_SERVER=smtp://username:password@smtp.example.com:587\r\n# EMAIL_FROM=norbert80@ethereal.email\r\nGITHUB_ID=087b279986438a596790\r\nGITHUB_SECRET=9f13c115b3317d88a59144505e5ba129203bee8b\r\nNEXTAUTH_SECRET=LUH3qZuzEZRFDR5AEqUFF6BPFD2r76\r\nEMAIL_SERVER_USER=kenny.hyatt@ethereal.email\r\nEMAIL_SERVER_PASSWORD=kkvNJPPYcdFD1mxMVu\r\nEMAIL_SERVER_HOST=smtp.ethereal.email\r\nEMAIL_SERVER_PORT=587\r\nEMAIL_FROM=kenny.hyatt@ethereal.email"}])
+  
+      
+      const runtimeConfig = {}
+      
+      const { parse: parseUrl } = __webpack_require__("bzos")
+      const { apiResolver } = __webpack_require__("PCLx")
+      const { normalizeLocalePath } = __webpack_require__("3wub")
+      const i18n = {}
+
+      
+    const { rewrites } = __webpack_require__("Skye")
+    const { pathToRegexp, default: pathMatch } = __webpack_require__("N6Fi")
+  
+
+      
+
+      
+
+      
+    const getCustomRouteMatcher = pathMatch(true)
+    const prepareDestination = __webpack_require__("6mnf").default
+
+    function handleRewrites(parsedUrl) {
+      for (const rewrite of rewrites) {
+        const matcher = getCustomRouteMatcher(rewrite.source)
+        const params = matcher(parsedUrl.pathname)
+
+        if (params) {
+          const { parsedDestination } = prepareDestination(
+            rewrite.destination,
+            params,
+            parsedUrl.query,
+            true
+          )
+
+          Object.assign(parsedUrl.query, parsedDestination.query)
+          delete parsedDestination.query
+
+          Object.assign(parsedUrl, parsedDestination)
+
+          let fsPathname = parsedUrl.pathname
+
+          
+
+          
+
+          if (fsPathname === '/api/hello'){
+            break
+          }
+          
+        }
+      }
+
+      return parsedUrl
+    }
+  
+
+      /* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
+        try {
+          await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"])()
+
+          // We need to trust the dynamic route params from the proxy
+          // to ensure we are using the correct values
+          const trustQuery = req.headers['x-vercel-id']
+          const parsedUrl = handleRewrites(parseUrl(req.url, true))
+
+          if (parsedUrl.query.nextInternalLocale) {
+            detectedLocale = parsedUrl.query.nextInternalLocale
+            delete parsedUrl.query.nextInternalLocale
+          }
+
+          let hasValidParams = true
+
+          
+          
+
+          const params = {}
+
+          const resolver = await __webpack_require__("Nxiy")
+          await apiResolver(
+            req,
+            res,
+            Object.assign({}, parsedUrl.query, params ),
+            resolver,
+            {previewModeId:"627672136840124e8a600f893a2e5336",previewModeSigningKey:"10e4c087ed0c2a8df52c5f69dbe43f6ef4845010adb88e42b5843e04878eac1e",previewModeEncryptionKey:"cb5fa4d45f40b980dd3914c587dc7e2c4ae93731d582053e93a1793e3ed508f1"},
+            true,
+            next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"]
+          )
+        } catch (err) {
+          console.error(err)
+          await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"])(err)
+
+          // TODO: better error for DECODE_FAILED?
+          if (err.code === 'DECODE_FAILED') {
+            res.statusCode = 400
+            res.end('Bad Request')
+          } else {
+            // Throw the error to crash the serverless function
+            throw err
+          }
+        }
+      });
+    
+
+/***/ }),
+
 /***/ "vv4h":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7336,129 +7459,6 @@ exports.OPTIMIZED_FONT_PROVIDERS = OPTIMIZED_FONT_PROVIDERS;
 "use strict";
 exports.__esModule=true;exports.normalizePathSep=normalizePathSep;exports.denormalizePagePath=denormalizePagePath;function normalizePathSep(path){return path.replace(/\\/g,'/');}function denormalizePagePath(page){page=normalizePathSep(page);if(page.startsWith('/index/')){page=page.slice(6);}else if(page==='/index'){page='/';}return page;}
 //# sourceMappingURL=denormalize-page-path.js.map
-
-/***/ }),
-
-/***/ "x04f":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("GX0O");
-/* harmony import */ var next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("KqAr");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fkL1");
-/* harmony import */ var next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_dist_next_server_server_node_polyfill_fetch__WEBPACK_IMPORTED_MODULE_2__);
-
-      
-      
-      
-
-      
-    const { processEnv } = __webpack_require__("fXeI")
-    processEnv([{"path":".env.local","contents":"NEXTAUTH_URL=http://localhost:3000\r\nDATABASE_URL=mongodb+srv://sick:CZL5os1Sel690u8R@sickcluster.ngzru.mongodb.net/sickfits?retryWrites=true&w=majority\r\n# EMAIL_SERVER=smtp://username:password@smtp.example.com:587\r\n# EMAIL_FROM=norbert80@ethereal.email\r\nGITHUB_ID=087b279986438a596790\r\nGITHUB_SECRET=9f13c115b3317d88a59144505e5ba129203bee8b\r\nNEXTAUTH_SECRET=LUH3qZuzEZRFDR5AEqUFF6BPFD2r76\r\nEMAIL_SERVER_USER=kenny.hyatt@ethereal.email\r\nEMAIL_SERVER_PASSWORD=kkvNJPPYcdFD1mxMVu\r\nEMAIL_SERVER_HOST=smtp.ethereal.email\r\nEMAIL_SERVER_PORT=587\r\nEMAIL_FROM=kenny.hyatt@ethereal.email"}])
-  
-      
-      const runtimeConfig = {}
-      
-      const { parse: parseUrl } = __webpack_require__("bzos")
-      const { apiResolver } = __webpack_require__("PCLx")
-      const { normalizeLocalePath } = __webpack_require__("3wub")
-      const i18n = {}
-
-      
-    const { rewrites } = __webpack_require__("Skye")
-    const { pathToRegexp, default: pathMatch } = __webpack_require__("N6Fi")
-  
-
-      
-
-      
-
-      
-    const getCustomRouteMatcher = pathMatch(true)
-    const prepareDestination = __webpack_require__("6mnf").default
-
-    function handleRewrites(parsedUrl) {
-      for (const rewrite of rewrites) {
-        const matcher = getCustomRouteMatcher(rewrite.source)
-        const params = matcher(parsedUrl.pathname)
-
-        if (params) {
-          const { parsedDestination } = prepareDestination(
-            rewrite.destination,
-            params,
-            parsedUrl.query,
-            true
-          )
-
-          Object.assign(parsedUrl.query, parsedDestination.query)
-          delete parsedDestination.query
-
-          Object.assign(parsedUrl, parsedDestination)
-
-          let fsPathname = parsedUrl.pathname
-
-          
-
-          
-
-          if (fsPathname === '/api/hello'){
-            break
-          }
-          
-        }
-      }
-
-      return parsedUrl
-    }
-  
-
-      /* harmony default export */ __webpack_exports__["default"] = (async (req, res) => {
-        try {
-          await Object(next_plugin_loader_middleware_on_init_server___WEBPACK_IMPORTED_MODULE_0__["default"])()
-
-          // We need to trust the dynamic route params from the proxy
-          // to ensure we are using the correct values
-          const trustQuery = req.headers['x-vercel-id']
-          const parsedUrl = handleRewrites(parseUrl(req.url, true))
-
-          if (parsedUrl.query.nextInternalLocale) {
-            detectedLocale = parsedUrl.query.nextInternalLocale
-            delete parsedUrl.query.nextInternalLocale
-          }
-
-          let hasValidParams = true
-
-          
-          
-
-          const params = {}
-
-          const resolver = await __webpack_require__("Nxiy")
-          await apiResolver(
-            req,
-            res,
-            Object.assign({}, parsedUrl.query, params ),
-            resolver,
-            {previewModeId:"d566088021b95573e14034afd5708eb6",previewModeSigningKey:"16ec5b3d1d06b507aa5f78dd6edfbbdaab4a2f9a1f58d44b835292d8e4f4b9ea",previewModeEncryptionKey:"bf6e446d905b8766168d90ed520bc39fe7b85736c0a7f2e705508205a1025d72"},
-            true,
-            next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"]
-          )
-        } catch (err) {
-          console.error(err)
-          await Object(next_plugin_loader_middleware_on_error_server___WEBPACK_IMPORTED_MODULE_1__["default"])(err)
-
-          // TODO: better error for DECODE_FAILED?
-          if (err.code === 'DECODE_FAILED') {
-            res.statusCode = 400
-            res.end('Bad Request')
-          } else {
-            // Throw the error to crash the serverless function
-            throw err
-          }
-        }
-      });
-    
 
 /***/ }),
 
