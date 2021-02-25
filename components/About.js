@@ -7,7 +7,7 @@ export default function Contact(props) {
   return (
     <>
       <Double
-        id="about"
+            id="about"
         title={aboutBusinessData.title}
         subtitle={aboutBusinessData.subtitle}
         imageSource={aboutBusinessData.imageSource}
