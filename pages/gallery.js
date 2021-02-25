@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import GalleryGrid from '../components/gallery-grid'
 // import Image from 'next/image'
 
-export default function Gallery() {
+export default function GalleryPage() {
   return (
     <Layout>
       <Head>

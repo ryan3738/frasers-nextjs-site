@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Double from '../components/double.tsx'
 
-export default function About() {
+export default function AboutPage() {
   return (
     <Layout>
       <Head>
