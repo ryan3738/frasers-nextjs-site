@@ -3,15 +3,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 // import Image from 'next/image'
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle } from './layout'
 // import utilStyles from '../styles/utils.module.css'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';
 // import MenuSection from '../components/menu-section'
 import Double from '../components/double.tsx'
-import GalleryGrid from '../components/gallery-grid'
-import Contact from '../components/contact'
-import Button from '../components/button'
+import GalleryGrid from './gallery-grid'
+import Contact from './contact'
+import Button from './button'
 // import doubleItems from '../public/data/double.json';
 import { getDoubleData } from '../lib/posts'
 // import announcementPath from '../public/data/site-data.json'

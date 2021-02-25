@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import {Layout} from '../components/Layout'
+import Layout from '../components/layout'
 import Double from '../components/double.tsx'
 
 export default function AboutPage() {

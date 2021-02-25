@@ -3,14 +3,13 @@ import Head from 'next/head'
 // import utilStyles from '../styles/utils.module.css'
 // import Link from 'next/link'
 import PropTypes from 'prop-types'
-import Hero from './Hero'
+import Hero from './hero'
 // import Image from 'next/image'
 import Button from './button'
 import NavList from './nav-list'
 
 export const siteName = 'Frasers'
 export const siteTitle = 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest'
-export {Layout};
 
 const theme = {
   maxWidth: '1200px',
