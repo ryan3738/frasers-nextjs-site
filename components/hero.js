@@ -36,11 +36,10 @@ export default function Hero(props) {
             </a>
             <br />
             <br />
+            <h3>Call To Make a Reservation</h3>
             <p>
               <strong> CALL FOR TAKEOUT</strong>
               <br/>
-              <br/>
-            <h3>Call To Make a Reservation</h3>
             </p>
             {/* <Button
               buttonText="ORDER ONLINE"
@@ -93,7 +92,7 @@ export default function Hero(props) {
           align-content: center;
           grid-template-columns: 2vw auto 2vw;
           grid-template-rows: 1fr 50fr 1fr;
-          
+
           grid-template-areas:
             '. . .'
             '. w .'
