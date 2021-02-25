@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
+import {Layout} from '../components/Layout'
 import GalleryGrid from '../components/gallery-grid'
 // import Image from 'next/image'
 

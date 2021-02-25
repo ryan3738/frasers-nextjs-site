@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Layout from '../components/Layout'
+import {Layout} from '../components/Layout'
 
 // pages/404.js
 export default function Custom404() {
