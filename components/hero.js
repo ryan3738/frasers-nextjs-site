@@ -11,6 +11,7 @@ export default function Hero(props) {
           <div className="welcome-inner-box">
             {/* <!-- <div class="welcome-contents"> --> */}
             <p className="spaced-text">Est. | 2006</p>
+            <br/>
             <h1 className="title">FRASERS</h1>
             <div className="welcome-logo">
               <Image
@@ -22,9 +23,8 @@ export default function Hero(props) {
                 priority
               />
             </div>
-
-            {/* <!-- <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> --> */}
-            <br />
+            <br/>
+            {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}
             <a
               href={siteData.address.directions}
               target="_blank"
@@ -36,43 +36,52 @@ export default function Hero(props) {
             </a>
             <br />
             <br />
-            <h2>Dine In Opens Thursday February, 18th</h2>
-            <h2>Call To Make a Reservation</h2>
+            <p>
+              <strong> CALL FOR TAKEOUT</strong>
+              <br/>
+              <br/>
+            <h3>Call To Make a Reservation</h3>
+            </p>
             {/* <Button
               buttonText="ORDER ONLINE"
               buttonLink={siteData.websites.onlineStore}
             /> */}
-            <br />
             <a href={`tel:${siteData.phoneNumber}`}>{siteData.phoneNumber}</a>
             <br />
             <br />
-            <p>
-              <strong> CALL FOR TAKEOUT</strong>
-            </p>
-
-            {/* <h4>SEATING TIMES</h4> */}
-
-            {/* <!-- <p> <strong>CLOSED</strong> <br>9/8/20 to 9/9/20</p><br> --> */}
+            {/* <strong>TUE - SAT</strong> <br /> */}
+            {/* <p> <strong>CLOSED</strong> <br/>9/8/20 to 9/9/20</p><br/> */}
             {/* <p>
-              <strong>TUE - THUR</strong> <br />
               <span className='medium-emphasis'>
                 4:30 | 5:00 | 5:30 | 7:00 | 7:30
               </span>
               <br />
-            </p>
+            </p> */}
             <p>
+              <strong>TUE - SAT</strong>
+              <br />
+              <span className='medium-emphasis'>
+                OPEN AT 4:30
+              </span>
+              <br/>
+              <br/>
+              <strong>TUE - THURS</strong>
+              <br />
+              <span className='medium-emphasis'>
+                LAST SEATING AT 7:30
+              </span>
+              <br/>
+              <br/>
               <strong>FRI - SAT</strong>
               <br />
               <span className='medium-emphasis'>
-                4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00
+                LAST SEATING AT 8:00
               </span>
-              <br />
             </p>
             <p>
-              <strong>Sun - Mon</strong> |{' '}
+              <strong>SUN - MON</strong> |{' '}
               <span className='medium-emphasis'>CLOSED</span>
-              <br />
-            </p> */}
+            </p>
             {/* <!-- </div> --> */}
           </div>
         </div>
@@ -83,7 +92,8 @@ export default function Hero(props) {
           justify-content: center;
           align-content: center;
           grid-template-columns: 2vw auto 2vw;
-          grid-template-rows: 1fr 20fr 1fr;
+          grid-template-rows: 1fr 50fr 1fr;
+          
           grid-template-areas:
             '. . .'
             '. w .'
@@ -94,7 +104,7 @@ export default function Hero(props) {
         }
 
         .welcome-box {
-          padding: 10%;
+          padding: 1rem;
           grid-area: w;
           background: var(--background-color);
           background-image: url('images/stars.png');
@@ -109,7 +119,7 @@ export default function Hero(props) {
 
         .welcome-inner-box {
           outline: thin solid var(--primary-color-desaturated);
-          padding: 10%;
+          padding: 1rem;
         }
 
         .welcome-logo {
@@ -127,7 +137,7 @@ export default function Hero(props) {
         }
         .spaced-text {
           letter-spacing: 0.5rem;
-          margin-bottom: 1rem;
+          margin-bottom: 0;
         }
         @media (min-width: 460px) {
           .welcome-container {
