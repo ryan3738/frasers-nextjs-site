@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { getDoubleData } from '../lib/posts'
 import siteData from '../public/data/site-data.json'
-import Home from '../components/home'
+import Home from '../components/Home'
 
 export async function getStaticProps() {
   // const allPostsData = getSortedPostsData();
