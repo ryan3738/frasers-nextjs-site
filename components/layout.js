@@ -8,9 +8,9 @@ import Hero from './Hero'
 import Button from './button'
 import NavList from './nav-list'
 
-const name = 'Frasers'
-export const siteTitle =
-  'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest'
+export const siteName = 'Frasers'
+export const siteTitle = 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest'
+export {Layout};
 
 const theme = {
   maxWidth: '1200px',
