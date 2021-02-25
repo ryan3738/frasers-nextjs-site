@@ -1,15 +1,18 @@
 import Head from 'next/head'
-import Layout from '../components/Layout'
-import Double from '../components/double.tsx'
+import Layout from './Layout'
+import MenuSection from './menu-section'
 
-export default function AboutPage() {
+export default function Menu() {
   return (
     <Layout>
       <Head>
         <title>MENU</title>
       </Head>
       <section className="menu-container">
-        <Double category="about" />
+        <h1>MENU</h1>
+        <MenuSection category="Starters" />
+        <MenuSection category="Entrees" />
+        <MenuSection category="Desserts" />
       </section>
       <style jsx>{`
         .menu-container {

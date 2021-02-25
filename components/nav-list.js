@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Button from './button'
+import Button from './Button'
 import siteData from '../public/data/site-data.json'
 // import Image from 'next/image'
 
