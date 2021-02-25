@@ -13,27 +13,12 @@ import GalleryGrid from './gallery-grid'
 import Contact from './contact'
 import Button from './button'
 // import doubleItems from '../public/data/double.json';
-import { getDoubleData } from '../lib/posts'
+
 // import announcementPath from '../public/data/site-data.json'
 import siteData from '../public/data/site-data.json'
 // import ImageLightBox from '../components/image-light-box'
 
-export async function getStaticProps() {
-    // const allPostsData = getSortedPostsData();
-    const aboutOwnerData = await getDoubleData('public/data/about-owner.md')
-    const aboutBusinessData = await getDoubleData('public/data/about-business.md')
-    const announcement1Data = await getDoubleData(siteData.announcement1)
-    const announcement2Data = await getDoubleData(siteData.announcement2)
 
-    return {
-        props: {
-            aboutOwnerData,
-            aboutBusinessData,
-            announcement1Data,
-            announcement2Data,
-        },
-    }
-}
 
 export default function Home({
     aboutOwnerData,
