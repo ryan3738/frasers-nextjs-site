@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import React from 'react'
 import PropTypes from 'prop-types'
 
 // import Image from 'next/image'
@@ -8,63 +7,65 @@ import Layout, { siteTitle } from './layout'
 // import { getSortedPostsData } from '../lib/posts';
 // import Date from '../components/date';
 // import MenuSection from '../components/menu-section'
-import Double from '../components/double.tsx'
+import Double from './double.tsx'
 import GalleryGrid from './gallery-grid'
 import Contact from './contact'
 import Button from './button'
+import MenuSection from './menu-section'
 // import doubleItems from '../public/data/double.json';
 
 // import announcementPath from '../public/data/site-data.json'
 import siteData from '../public/data/site-data.json'
 // import ImageLightBox from '../components/image-light-box'
 
-
-
 export default function Home({
-    aboutOwnerData,
-    aboutBusinessData,
-    announcement1Data,
-    announcement2Data,
+  aboutOwnerData,
+  aboutBusinessData,
+  announcement1Data,
+  announcement2Data,
 }) {
-    return (
-        <>
-            <Layout home>
-                <Head>
-                    <title>{siteTitle}</title>
-                </Head>
-                <section className="container">
-                    <h2 id="about" className="anchor hidden-header">
-                        About
+  return (
+    <>
+      <Layout home>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
+        <section className="container">
+          <h2 id="about" className="anchor hidden-header">
+            About
           </h2>
-                    {/* <ImageLightBox /> */}
-                    <div className="double-wrapper">
-                        <Double
-                            id="takeout"
-                            title="Now Open for Dine In Service!"
-                            subtitle='To make a reservation call us at 360-279-1231 '
-                            imageSource="/images/pig-were-back.jpg"
-                            imageAlt="Pig holding a sign that says were back"
-                        >
-                            <div>
-                                <h3>Takeout Still Available</h3>
-                                <p>Call {siteData.phoneNumber} during normal business hours to place an order</p>
-                            </div>
-                            {/* <Button
+          {/* <ImageLightBox /> */}
+          <div className="double-wrapper">
+            <Double
+              id="takeout"
+              title="Now Open for Dine In Service!"
+              subtitle="To make a reservation call us at 360-279-1231 "
+              imageSource="/images/pig-were-back.jpg"
+              imageAlt="Pig holding a sign that says were back"
+            >
+              <div>
+                <h3>Takeout Still Available</h3>
+                <p>
+                  Call {siteData.phoneNumber} during normal business hours to
+                  place an order
+                </p>
+              </div>
+              {/* <Button
                 buttonText="ORDER ONLINE"
                 buttonLink={siteData.websites.onlineStore}
               /> */}
-                            <br />
-                            <br />
-                            <h4>Sign up for our newsletter to receive future updates</h4>
-                            <Button
-                                buttonText="SIGN UP"
-                                buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
-                            />
-                            <br />
-                            <br />
-                            <p>We respect your privacy</p>
-                        </Double>
-                        {/* <Double
+              <br />
+              <br />
+              <h4>Sign up for our newsletter to receive future updates</h4>
+              <Button
+                buttonText="SIGN UP"
+                buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
+              />
+              <br />
+              <br />
+              <p>We respect your privacy</p>
+            </Double>
+            {/* <Double
               id="takeout"
               title="FRASERS TAKEOUT"
               // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
@@ -96,7 +97,7 @@ export default function Home({
               <br />
               <p>We respect your privacy</p>
             </Double> */}
-                        {/* <Double
+            {/* <Double
               id="valentines"
               title="Four Course VALENTINE'S DINNER"
               subtitle="$65 Per Person"
@@ -143,70 +144,70 @@ export default function Home({
                 </ul>
               </div>
             </Double> */}
-                        <Double
-                            id="gift-cards"
-                            title="Gift Cards Available"
-                            subtitle=""
-                            imageSource="/images/gift-card-square.jpg"
-                            imageAlt="frasers gift card closeup"
-                            imageLeft
-                        >
-                            <div>
-                                To purchase a gift card please visit our online store or call us
+            <Double
+              id="gift-cards"
+              title="Gift Cards Available"
+              subtitle=""
+              imageSource="/images/gift-card-square.jpg"
+              imageAlt="frasers gift card closeup"
+              imageLeft
+            >
+              <div>
+                To purchase a gift card please visit our online store or call us
                 at <span className="nowrap">{siteData.phoneNumber}</span>
-                                <br />
-                                <br />
-                                <Button
-                                    buttonText="ORDER GIFT CARDS ONLINE"
-                                    buttonLink="https://frasersgh.square.site/product/gift-card/88"
-                                />
-                            </div>
-                        </Double>
-                        <Double
-                            id="about"
-                            title={aboutBusinessData.title}
-                            subtitle={aboutBusinessData.subtitle}
-                            imageSource={aboutBusinessData.imageSource}
-                            imageAlt={aboutBusinessData.imageAlt}
-                        >
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: aboutBusinessData.contentHtml,
-                                }}
-                            />
-                        </Double>
-                        <Double
-                            title={aboutOwnerData.title}
-                            subtitle={aboutOwnerData.subtitle}
-                            imageSource={aboutOwnerData.imageSource}
-                            imageAlt={aboutOwnerData.imageAlt}
-                            imageLeft
-                        >
-                            <div
-                                dangerouslySetInnerHTML={{
-                                    __html: aboutOwnerData.contentHtml,
-                                }}
-                            />
-                        </Double>
-                    </div>
-                    {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
-                </section>
-                <section id="menu" className="container">
-                    <h1 className="header hidden-header">MENU</h1>
-                    {/* <MenuSection category="Entrees" /> */}
-                    {/* <MenuSection category="Starters" /> */}
-                    {/* <Button buttonText="SEE FULL MENU ==>" buttonLink="/menu" /> */}
-                </section>
-                <section>
-                    <GalleryGrid />
-                </section>
-                <section id="contact">
-                    <div className="header">
-                        <h1>CONTACT US</h1>
-                    </div>
-                    <Contact />
-                </section>
-                <style jsx>{`
+                <br />
+                <br />
+                <Button
+                  buttonText="ORDER GIFT CARDS ONLINE"
+                  buttonLink="https://frasersgh.square.site/product/gift-card/88"
+                />
+              </div>
+            </Double>
+            <Double
+              id="about"
+              title={aboutBusinessData.title}
+              subtitle={aboutBusinessData.subtitle}
+              imageSource={aboutBusinessData.imageSource}
+              imageAlt={aboutBusinessData.imageAlt}
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: aboutBusinessData.contentHtml,
+                }}
+              />
+            </Double>
+            <Double
+              title={aboutOwnerData.title}
+              subtitle={aboutOwnerData.subtitle}
+              imageSource={aboutOwnerData.imageSource}
+              imageAlt={aboutOwnerData.imageAlt}
+              imageLeft
+            >
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: aboutOwnerData.contentHtml,
+                }}
+              />
+            </Double>
+          </div>
+          {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
+        </section>
+        <section id="menu" className="container">
+          <h1 className="header hidden-header">MENU</h1>
+          <MenuSection category="Starters" />
+          <MenuSection category="Entrees" />
+          {/* <Button buttonText="SEE FULL MENU ==>" buttonLink="/menu" /> */}
+        </section>
+        <section>
+          <GalleryGrid />
+        </section>
+        <section id="contact">
+          <div className="header">
+            <h1>CONTACT US</h1>
+          </div>
+          <Contact />
+        </section>
+        <style jsx>{`
           .header {
             padding: 5rem 0 0;
             color: var(--primary-color-desaturated);
@@ -247,14 +248,14 @@ export default function Home({
           @media (min-width: 460px) {
           }
         `}</style>
-            </Layout>
-        </>
-    )
+      </Layout>
+    </>
+  )
 }
 
 Home.propTypes = {
-    aboutOwnerData: PropTypes.object,
-    aboutBusinessData: PropTypes.object,
-    announcement1Data: PropTypes.object,
-    announcement2Data: PropTypes.object,
+  aboutOwnerData: PropTypes.object,
+  aboutBusinessData: PropTypes.object,
+  announcement1Data: PropTypes.object,
+  announcement2Data: PropTypes.object,
 }
