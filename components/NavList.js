@@ -65,8 +65,9 @@ export default function NavList(props) {
       </Link>
       <Link href="/#gift-cards">
         <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${'burgerMenuLink' in props && 'burger-menu-link'
-            }`}
+          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+            'burgerMenuLink' in props && 'burger-menu-link'
+          }`}
         >
           Gift Cards
         </a>
@@ -81,16 +82,16 @@ export default function NavList(props) {
         </a>
       </Link>
 
-      <div
+      {/* <div
         className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
           'burgerMenuLink' in props && 'burger-menu-link'
         }`}
       >
-        {/* <Button
+        <Button
           buttonText="ORDER ONLINE"
           buttonLink={siteData.websites.onlineStore}
-        /> */}
-      </div>
+        />
+      </div> */}
       <style jsx>{`
         .nav-link {
           text-transform: uppercase;
