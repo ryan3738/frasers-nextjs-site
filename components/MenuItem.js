@@ -8,14 +8,21 @@ const getMenuItem = ({ category }) => (
       .map((data) => (
         <div key={data.itemName} className="menu-item">
           <h3 className="primary-color">{data.itemName}</h3>
-          {data.description ? (<><div dangerouslySetInnerHTML={{ __html: data.description }}/><br/></>) : ('')}
+          {data.description ? (
+            <>
+              <div dangerouslySetInnerHTML={{ __html: data.description }} />
+              <br />
+            </>
+          ) : (
+            ''
+          )}
 
           <div className="primary-color">{data.price}</div>
           {data.modifier ? (
             <>
               {data.modifier}&nbsp;
               <span className="primary-color">{data.modifierPrice}</span>
-              <br/>
+              <br />
             </>
           ) : (
             ''
@@ -23,11 +30,14 @@ const getMenuItem = ({ category }) => (
 
           {data.dietaryPreferences ? (
             <>
-
-            <br/>
-            <div className="dietary-preferences">{data.dietaryPreferences}</div>
+              <br />
+              <div className="dietary-preferences">
+                {data.dietaryPreferences}
+              </div>
             </>
-          ) : ('')}
+          ) : (
+            ''
+          )}
           <style jsx>{`
             .menu-item {
               text-align: left;
@@ -40,7 +50,7 @@ const getMenuItem = ({ category }) => (
             .primary-color {
               color: var(--primary-color-desaturated);
             }
-            .dietary-preferences{
+            .dietary-preferences {
               font-size: 0.78405rem;
               line-height: 1.1;
               text-transform: uppercase;
