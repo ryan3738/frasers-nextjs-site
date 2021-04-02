@@ -104,7 +104,16 @@
     },
     {
       "itemName": "CHICKEN & WAFFLES",
-      "description": "Buttermilk fried Jidori Chicken, chilli cheese waffle, & truffle honey butter",
+      "description": "Buttermilk fried Jidori chicken breast, chilli cheese waffle, & truffle honey butter",
+      "category": "Entrees",
+      "price": 26,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": false
+    },
+    {
+      "itemName": "CHICKEN & Southern Cast Iron Spoonbread",
+      "description": "Buttermilk fried Jidori chicken breast, fire roasted green chili & corn spoonbread, truffle honey butter",
       "category": "Entrees",
       "price": 26,
       "modifier": "",
