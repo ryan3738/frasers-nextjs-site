@@ -11,6 +11,14 @@
       "modifier": "",
       "available": true
     },
+        {
+      "itemName": "Duck Liver Pate",
+      "description": "Homemade duck liver pate served with pear compote and crostinis",
+      "category": "Starters",
+      "price": 14,
+      "modifier": "",
+      "available": true
+    },
     {
       "itemName": "BEEF & CHORIZO EMPANADAS",
       "description": "Rice & black bean salad, chimichurro aioli",
