@@ -40,7 +40,7 @@
       "itemName": "BEEF TENDERLOIN",
       "description": "Grilled 7oz filet mignon, garlic mashed potatoes, vegetables, horseradish butter",
       "category": "Entrees",
-      "price": 36,
+      "price": 37,
       "modifier": "ADD SURF",
       "modifierPrice": 12,
       "dietaryPreferences": "Gluten-free",
@@ -69,7 +69,7 @@
       "itemName": "CRAB & SHRIMP LASAGNA",
       "description": "Dungeness crab, shrimp, & lobster cream sauce",
       "category": "Entrees",
-      "price": 32,
+      "price": 34,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -78,7 +78,7 @@
       "itemName": "SMOKED PORK SHANK GNOCCHI CARBONARA",
       "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
       "category": "Entrees",
-      "price": 28,
+      "price": 29,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -87,7 +87,7 @@
       "itemName": "USDA PRIME ANGUS SPENCER STEAK",
       "description": "Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
       "category": "Entrees",
-      "price": 38,
+      "price": 39,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -96,7 +96,7 @@
       "itemName": "TEXAS LONG BONE SHORT RIB",
       "description": "Braised short rib, potato & pepper saute, grainy mustard & bacon greens",
       "category": "Entrees",
-      "price": 34,
+      "price": 36,
       "modifier": "",
       "modifierPrice": null,
       "dietaryPreferences": "Gluten-free",
@@ -106,7 +106,7 @@
       "itemName": "DUCK BREAST",
       "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & marsala cream reduction",
       "category": "Entrees",
-      "price": 34,
+      "price": 35,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -333,7 +333,7 @@
       "itemName": "RACK OF LAMB",
       "description": "Pistachio crusted lamb rack, garlic mashed potatoes, & mixed vegetables",
       "category": "Entrees",
-      "price": 36,
+      "price": 37,
       "modifier": "",
       "dietaryPreferences": "Gluten-free",
       "available": true
@@ -342,7 +342,7 @@
       "itemName": "SCALLOPS",
       "description": "Vegetable risotto, dill beurre blanc, & chili oil",
       "category": "Entrees",
-      "price": 36,
+      "price": 37,
       "modifier": "",
       "dietaryPreferences": "Gluten-free",
       "available": true
