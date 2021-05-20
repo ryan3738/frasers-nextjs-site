@@ -154,8 +154,8 @@ export default function Home({
               imageLeft
             >
               <div>
-                To purchase a gift card please visit our online store or call us
-                at <span className="nowrap">{siteData.phoneNumber}</span>
+                To purchase a gift card please call us at{' '}
+                <span className="nowrap">{siteData.phoneNumber}</span>
                 <br />
                 <br />
                 <Button
