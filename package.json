@@ -13,7 +13,6 @@
     "dev": "next dev -p 3100",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-on-netlify",
     "export": "npm run build && next export"
   },
   "dependencies": {
