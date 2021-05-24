@@ -20,7 +20,7 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.16.1",
     "gray-matter": "^4.0.2",
-    "next": "^10.2.2",
+    "next": "^10.0.3",
     "next-on-netlify": "^2.6.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
