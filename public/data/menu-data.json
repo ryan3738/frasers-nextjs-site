@@ -153,6 +153,15 @@
       "modifier": "",
       "modifierPrice": null,
       "available": true
+    }, 
+    {
+      "itemName": "GOAT CHEESE SALAD",
+      "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
+      "category": "Starters",
+      "price": 15,
+      "modifier": "",
+      "modifierPrice": null,
+      "available": true
     },
     {
       "itemName": "CHOCOLATE GRAND MARNIER CAKE",
@@ -180,7 +189,7 @@
     },
     {
       "itemName": "DRY GARLIC BABY BACK RIBS",
-      "description": "Baby back ribs covered with a dry garlic bbq sauce",
+      "description": "Baby back ribs, crispy garlic, blackberry mustard sauce",
       "category": "Starters",
       "price": 17,
       "modifier": "",
@@ -190,7 +199,7 @@
     },
     {
       "itemName": "CALAMARI",
-      "description": "",
+      "description": "Fried calamari steaks with serrano chiles and blue cheese dipping sauce",
       "category": "Starters",
       "price": 16,
       "modifier": "",
@@ -214,7 +223,7 @@
       "category": "Starters",
       "price": 19,
       "modifier": "",
-      "available": false
+      "available": true
     },
     {
       "itemName": "ECLIPTIC \"CAPELLA\" PORTER 16oz",
