@@ -153,7 +153,7 @@
       "modifier": "",
       "modifierPrice": null,
       "available": true
-    }, 
+    },
     {
       "itemName": "GOAT CHEESE SALAD",
       "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
@@ -431,7 +431,6 @@
     {
       "itemName": "VEGETABLE GNOCCHI",
       "description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce<br /> -Vegetarian",
-
       "category": "Entrees",
       "price": 20,
       "modifier": "",
@@ -471,7 +470,7 @@
       "imageSource": "/images/new-years-duck-pheasant-pate.jpg",
       "imageAlt": "",
       "category": "Starters",
-      "price": null,
+      "price": 1,
       "modifier": "",
       "available": false
     },
@@ -483,7 +482,7 @@
       "imageSource": "/images/new-years-cioppino.jpg",
       "imageAlt": "",
       "category": "Starters",
-      "price": null,
+      "price": 1,
       "modifier": "",
       "available": false
     },
@@ -495,7 +494,7 @@
       "imageSource": "/images/new-years-cornish-game-hen.jpg",
       "imageAlt": "",
       "category": "Entrees",
-      "price": null,
+      "price": 1,
       "modifier": "",
       "available": false
     },
@@ -507,7 +506,7 @@
       "imageSource": "/images/new-years-filet-mignon.jpg",
       "imageAlt": "",
       "category": "Entrees",
-      "price": null,
+      "price": 1,
       "modifier": "",
       "available": false
     },
@@ -519,7 +518,7 @@
       "imageSource": "/images/new-years-chocolate-tarte.jpg",
       "imageAlt": "",
       "category": "Desserts",
-      "price": null,
+      "price": 1,
       "modifier": "",
       "available": false
     }
