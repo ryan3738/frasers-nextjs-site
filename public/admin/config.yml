@@ -6,9 +6,9 @@ backend:
   branch: main
 
 # publish_mode: editorial_workflow
-# site_url: https://frasers-admin.netlify.app/
-# display_url: Frasers Website
-# logo_url: https://frasers-nextjs.vercel.app/images/frasers-logo.png
+site_url: https://frasersgh.com/
+display_url: Frasers Website
+logo_url: https://frasersgh.com/images/frasers-logo.png
 
 media_folder: 'public/images'
 public_folder: '/images'
