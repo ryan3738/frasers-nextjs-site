@@ -45,7 +45,12 @@ collections:
       - label: 'Menu'
         name: 'menuData'
         file: '/public/data/menu-data.json'
-        sortable_fields: ['category']
+        sortable_fields: ['category', 'available', 'itemName']
+        view_filters:
+          - label: "Name"
+            field: itemName
+          - label: "Category"
+            field: category
         fields:
         #   - label: 'Categories'
         #     name: 'Category'
@@ -86,14 +91,6 @@ collections:
                   hint: 'Add the modifier price',
                   widget: 'number',
                 }
-              # - {
-              #   label: 'Dietary Preferences',
-              #   name: 'dietaryPreferences',
-              #   required: false,
-              #   hint: 'Add dietary preferences',
-              #   widget: 'string',
-              #   multiple: true,
-              #   }
               - {
                 label: 'Dietary Preferences',
                 name: 'dietaryPreferences',
