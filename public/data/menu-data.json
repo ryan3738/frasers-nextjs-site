@@ -434,7 +434,7 @@
     },
     {
       "itemName": "VEGETABLE GNOCCHI",
-      "description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce<br /> -Vegetarian",
+      "description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce",
       "category": "Entrees",
       "price": 20,
       "modifier": "",
@@ -455,7 +455,7 @@
       "price": 10,
       "modifier": "",
       "modifierPrice": null,
-      "dietaryPreferences": "Gluten-Free | Vegetarian",
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
