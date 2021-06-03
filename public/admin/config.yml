@@ -134,7 +134,7 @@ collections:
           - label: 'Menu'
             name: 'menu'
             widget: 'list'
-            summary: '{{fields.price}} - {{fields.category}} - {{fields.available}}'
+            summary: '{{fields.itemName}} - {{fields.price}} - {{fields.category}} - {{fields.available}}'
             add_to_top: true
             label_singular: 'new menu item'
             fields:
