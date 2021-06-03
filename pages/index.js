@@ -23,8 +23,8 @@ export async function getStaticProps() {
 export default function HomePage({
   aboutOwnerData,
   aboutBusinessData,
-  announcement1Data,
-  announcement2Data,
+  // announcement1Data,
+  // announcement2Data,
 }) {
   return (
     <>
@@ -39,6 +39,6 @@ export default function HomePage({
 HomePage.propTypes = {
   aboutOwnerData: PropTypes.object,
   aboutBusinessData: PropTypes.object,
-  announcement1Data: PropTypes.object,
-  announcement2Data: PropTypes.object,
+  // announcement1Data: PropTypes.object,
+  // announcement2Data: PropTypes.object,
 }
