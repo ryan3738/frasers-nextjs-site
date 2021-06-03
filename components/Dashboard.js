@@ -6,7 +6,7 @@ export default function Dashboard() {
   return (
     <Layout>
       <Head>
-        <title>DASHBOARD | {siteTitle}</title>
+        <title>Dashboard | {siteTitle}</title>
         <meta name="robots" content="noindex" />
       </Head>
       <div className="contact-content">
