@@ -94,6 +94,12 @@ collections:
                 hint: 'Add dietary preferences',
                 }
               - {
+                label: 'Dietary Preferences',
+                name: 'dietaryPreferences',
+                widget: 'select',
+                options: ['Gluten-Free', 'Vegetarian'],
+              }
+              - {
                   label: 'Available',
                   name: 'available',
                   widget: 'boolean',
