@@ -14,6 +14,73 @@ media_folder: 'public/images'
 public_folder: '/images'
 
 collections:
+  - label: 'Menu'
+    name: 'menuItems'
+    delete: false
+    sortable_fields: ['category', 'available', 'itemName']
+    # view_filters:
+    #   - label: "Name"
+    #     field: itemName
+    #   - label: "Category"
+    #     field: category
+    view_groups:
+      - label: Name
+        field: itemName
+      - label: Category
+        field: category
+    file: '/public/data/menu-data-test.json'
+    fields:
+      - label: 'Menu'
+        name: 'menu'
+        widget: 'list'
+        add_to_top: true
+        label_singular: 'new menu item'
+        fields:
+          - { label: 'Name', name: 'itemName', widget: 'string' }
+          - {
+              label: 'Description',
+              name: 'description',
+              required: false,
+              widget: 'text',
+            }
+          - {
+              label: 'Category',
+              name: 'category',
+              widget: 'select',
+              options: ['Starters', 'Entrees', 'Desserts'],
+            }
+          - { label: 'Price', name: 'price', widget: 'number' }
+          - {
+              label: 'Modifier',
+              name: 'modifier',
+              required: false,
+              hint: 'Add a modifier description',
+              widget: 'string',
+            }
+          - {
+              label: 'Modifier Price',
+              name: 'modifierPrice',
+              required: false,
+              hint: 'Add the modifier price',
+              widget: 'number',
+            }
+          - {
+            label: 'Dietary Preferences',
+            name: 'dietaryPreferences',
+            required: false,
+            widget: 'select',
+            multiple: true,
+            options: ['Gluten-Free', 'Vegetarian'],
+          }
+          - {
+              label: 'Available',
+              name: 'available',
+              hint: 'Select "Available" to show on website',
+              widget: 'boolean',
+              default: false,
+            }
+
+collections:
   - label: 'Site Content'
     name: 'content'
     delete: false
