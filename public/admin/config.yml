@@ -86,14 +86,14 @@ collections:
                   required: false,
                   hint: 'Add the modifier price',
                 }
-              - {
-                label: 'Dietary Preferences',
-                name: 'dietaryPreferences',
-                widget: 'string',
-                required: false,
-                multiple: true,
-                hint: 'Add dietary preferences',
-                }
+              # - {
+              #   label: 'Dietary Preferences',
+              #   name: 'dietaryPreferences',
+              #   widget: 'string',
+              #   required: false,
+              #   multiple: true,
+              #   hint: 'Add dietary preferences',
+              #   }
               - {
                 label: 'Dietary Preferences',
                 name: 'dietaryPreferences',
