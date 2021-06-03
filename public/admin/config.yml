@@ -17,6 +17,17 @@ collections:
   - label: 'Site Content'
     name: 'content'
     delete: false
+    sortable_fields: ['category', 'available', 'itemName']
+    view_filters:
+      - label: "Name"
+        field: itemName
+      - label: "Category"
+        field: category
+    view_groups:
+      - label: Name
+        field: itemName
+      - label: Category
+        field: category
     files:
   #     - label: 'Site Info'
   #       name: 'business-info'
@@ -45,17 +56,6 @@ collections:
       - label: 'Menu'
         name: 'menuData'
         file: '/public/data/menu-data.json'
-        sortable_fields: ['category', 'available', 'itemName']
-        view_filters:
-          - label: "Name"
-            field: itemName
-          - label: "Category"
-            field: category
-        view_groups:
-          - label: Name
-            field: itemName
-          - label: Category
-            field: category
         fields:
         #   - label: 'Categories'
         #     name: 'Category'
