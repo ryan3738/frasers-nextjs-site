@@ -18,11 +18,11 @@ collections:
     name: 'content'
     delete: false
     sortable_fields: ['category', 'available', 'itemName']
-    view_filters:
-      - label: "Name"
-        field: itemName
-      - label: "Category"
-        field: category
+    # view_filters:
+    #   - label: "Name"
+    #     field: itemName
+    #   - label: "Category"
+    #     field: category
     view_groups:
       - label: Name
         field: itemName
