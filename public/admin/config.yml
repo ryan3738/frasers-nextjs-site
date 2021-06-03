@@ -47,7 +47,7 @@ collections:
         file: '/public/data/menu-data.json'
         sortable_fields: ['category']
         fields:
-          - label: 'Category'
+          - label: 'Categories'
             name: 'Category'
             widget: 'object'
             fields:
@@ -91,6 +91,7 @@ collections:
                 name: 'dietaryPreferences',
                 widget: 'string',
                 required: false,
+                multiple: true,
                 hint: 'Add dietary preferences',
                 }
               - {
