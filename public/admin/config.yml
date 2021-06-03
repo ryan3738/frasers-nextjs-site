@@ -42,6 +42,64 @@ collections:
               # allow_multiple: false,
             }
 
+      - label: 'Menu'
+        name: 'menu'
+        file: '/public/data/menu-data.json'
+        sortable_fields: ['category']
+        fields:
+          - label: 'Category'
+            name: 'Category'
+            widget: 'object'
+            fields:
+              - { label: 'Category', name: 'category', widget: 'list' }
+          - label: 'Menu'
+            name: 'menu'
+            widget: 'list'
+            add_to_top: true
+            label_singular: 'new menu item'
+            fields:
+              - { label: 'Name', name: 'itemName', widget: 'string' }
+              - {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'text',
+                  required: false,
+                }
+              - {
+                  label: 'Category',
+                  name: 'category',
+                  widget: 'select',
+                  options: ['Starters', 'Entrees', 'Desserts'],
+                }
+              - { label: 'Price', name: 'price', widget: 'number' }
+              - {
+                  label: 'Modifier',
+                  name: 'modifier',
+                  widget: 'string',
+                  required: false,
+                  hint: 'Add a modifier description',
+                }
+              - {
+                  label: 'Modifier Price',
+                  name: 'modifierPrice',
+                  widget: 'number',
+                  required: false,
+                  hint: 'Add the modifier price',
+                }
+              - {
+                label: 'Dietary Preferences',
+                name: 'dietaryPreferences',
+                widget: 'string',
+                required: false,
+                hint: 'Add dietary preferences',
+                }
+              - {
+                  label: 'Available',
+                  name: 'available',
+                  widget: 'boolean',
+                  hint: 'Select "Available" to show on website',
+                }
+
       - label: 'About Frasers'
         name: 'aboutBusiness'
         file: '/public/data/about-business.md'
@@ -95,65 +153,6 @@ collections:
               hint: 'Enter alternative text to describe the image to visitors who are unable to see them',
             }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-
-      - label: 'Menu'
-        name: 'menu'
-        file: '/public/data/menu-data.json'
-        sortable_fields: ['category']
-        fields:
-          - label: 'Category'
-            name: 'Category'
-            widget: 'object'
-            fields:
-              - { label: 'Category', name: 'category', widget: 'list' }
-          - label: 'Menu'
-            name: 'menu'
-            widget: 'list'
-            add_to_top: true
-            label_singular: 'new menu item'
-            fields:
-              - { label: 'Name', name: 'itemName', widget: 'string' }
-              - {
-                  label: 'Description',
-                  name: 'description',
-                  widget: 'text',
-                  required: false,
-                }
-              - {
-                  label: 'Category',
-                  name: 'category',
-                  widget: 'select',
-                  options: ['Starters', 'Entrees', 'Desserts'],
-                }
-
-              - { label: 'Price', name: 'price', widget: 'number' }
-              - {
-                  label: 'Modifier',
-                  name: 'modifier',
-                  widget: 'string',
-                  required: false,
-                  hint: 'Add a modifier description',
-                }
-              - {
-                  label: 'Dietary Preferences',
-                  name: 'dietaryPreferences',
-                  widget: 'string',
-                  required: false,
-                  hint: 'Add dietary preferences',
-                }
-              - {
-                  label: 'Modifier Price',
-                  name: 'modifierPrice',
-                  widget: 'number',
-                  required: false,
-                  hint: 'Add the modifier price',
-                }
-              - {
-                  label: 'Available',
-                  name: 'available',
-                  widget: 'boolean',
-                  hint: 'Select "Available" to show on website',
-                }
 
   - label: 'Announcements'
     name: 'announcements'
