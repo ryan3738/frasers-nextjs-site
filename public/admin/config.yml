@@ -135,6 +135,13 @@ collections:
                   hint: 'Add a modifier description',
                 }
               - {
+                  label: 'Dietary Preferences',
+                  name: 'dietaryPreferences',
+                  widget: 'string',
+                  required: false,
+                  hint: 'Add dietary preferences',
+                }
+              - {
                   label: 'Modifier Price',
                   name: 'modifierPrice',
                   widget: 'number',
