@@ -62,8 +62,8 @@ collections:
               - {
                   label: 'Description',
                   name: 'description',
-                  widget: 'text',
                   required: false,
+                  widget: 'text',
                 }
               - {
                   label: 'Category',
@@ -75,28 +75,29 @@ collections:
               - {
                   label: 'Modifier',
                   name: 'modifier',
-                  widget: 'string',
                   required: false,
                   hint: 'Add a modifier description',
+                  widget: 'string',
                 }
               - {
                   label: 'Modifier Price',
                   name: 'modifierPrice',
-                  widget: 'number',
                   required: false,
                   hint: 'Add the modifier price',
+                  widget: 'number',
                 }
               # - {
               #   label: 'Dietary Preferences',
               #   name: 'dietaryPreferences',
-              #   widget: 'string',
               #   required: false,
-              #   multiple: true,
               #   hint: 'Add dietary preferences',
+              #   widget: 'string',
+              #   multiple: true,
               #   }
               - {
                 label: 'Dietary Preferences',
                 name: 'dietaryPreferences',
+                required: false,
                 widget: 'select',
                 multiple: true,
                 options: ['Gluten-Free', 'Vegetarian'],
@@ -104,8 +105,9 @@ collections:
               - {
                   label: 'Available',
                   name: 'available',
-                  widget: 'boolean',
                   hint: 'Select "Available" to show on website',
+                  widget: 'boolean',
+                  default: false,
                 }
 
       # - label: 'About Frasers'
