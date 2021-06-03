@@ -45,7 +45,7 @@ collections:
       - label: 'Menu'
         name: 'menuData'
         file: '/public/data/menu-data.json'
-        # sortable_fields: ['category']
+        sortable_fields: ['category']
         fields:
         #   - label: 'Categories'
         #     name: 'Category'
