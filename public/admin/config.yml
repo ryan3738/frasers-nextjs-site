@@ -14,6 +14,8 @@ media_folder: 'public/images'
 public_folder: '/images'
 
 collections:
+
+# Test Collection
   - label: 'Menu'
     name: 'menuItems'
     delete: false
@@ -80,7 +82,7 @@ collections:
               default: false,
             }
 
-collections:
+# Main Site Content Collection
   - label: 'Site Content'
     name: 'content'
     delete: false
