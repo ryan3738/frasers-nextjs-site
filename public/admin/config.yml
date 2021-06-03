@@ -6,8 +6,8 @@ backend:
   branch: main
 
 # publish_mode: editorial_workflow
-site_url: https://frasersgh.com/
-display_url: Frasers Website
+# site_url: https://frasersgh.com/
+# display_url: Frasers Website
 logo_url: https://frasersgh.com/images/frasers-logo.png
 
 media_folder: 'public/images'
@@ -134,6 +134,7 @@ collections:
           - label: 'Menu'
             name: 'menu'
             widget: 'list'
+            summary: '{{fields.price}} - {{fields.category}} - {{fields.available}}'
             add_to_top: true
             label_singular: 'new menu item'
             fields:
