@@ -14,8 +14,6 @@
 /out/
 /out_functions
 /out_publish
-out_publish
-out_functions
 
 # production
 /build
