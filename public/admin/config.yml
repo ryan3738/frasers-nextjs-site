@@ -45,13 +45,13 @@ collections:
       - label: 'Menu'
         name: 'menuData'
         file: '/public/data/menu-data.json'
-        sortable_fields: ['category']
-        fields:
-          - label: 'Categories'
-            name: 'Category'
-            widget: 'object'
-            fields:
-              - { label: 'Category', name: 'category', widget: 'list' }
+        # sortable_fields: ['category']
+        # fields:
+        #   - label: 'Categories'
+        #     name: 'Category'
+        #     widget: 'object'
+        #     fields:
+        #       - { label: 'Category', name: 'category', widget: 'list' }
           - label: 'Menu'
             name: 'menu'
             widget: 'list'
