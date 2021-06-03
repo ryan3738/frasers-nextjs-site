@@ -3,8 +3,7 @@
     "category": [
       "Starters",
       "Entrees",
-      "Desserts",
-      "Test"
+      "Desserts"
     ]
   },
   "menu": [
@@ -14,6 +13,7 @@
       "category": "Starters",
       "price": 15,
       "modifier": "",
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -47,6 +47,7 @@
       "price": 39,
       "modifier": "ADD SURF",
       "modifierPrice": 12,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -55,6 +56,7 @@
       "category": "Entrees",
       "price": 27,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -63,6 +65,8 @@
       "category": "Entrees",
       "price": 24,
       "modifier": "",
+      "modifierPrice": null,
+      "dietaryPreferences": "Vegetarian",
       "available": true
     },
     {
@@ -71,6 +75,7 @@
       "category": "Entrees",
       "price": 34,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -79,6 +84,7 @@
       "category": "Entrees",
       "price": 29,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -87,6 +93,7 @@
       "category": "Entrees",
       "price": 48,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -95,6 +102,8 @@
       "category": "Entrees",
       "price": 38,
       "modifier": "",
+      "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -103,6 +112,7 @@
       "category": "Entrees",
       "price": 35,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -111,6 +121,7 @@
       "category": "Entrees",
       "price": 26,
       "modifier": "",
+      "modifierPrice": null,
       "available": false
     },
     {
@@ -119,6 +130,7 @@
       "category": "Entrees",
       "price": 27,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -143,6 +155,7 @@
       "category": "Starters",
       "price": 13,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -151,6 +164,7 @@
       "category": "Starters",
       "price": 15,
       "modifier": "",
+      "modifierPrice": null,
       "available": true
     },
     {
@@ -183,6 +197,8 @@
       "category": "Starters",
       "price": 17,
       "modifier": "",
+      "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -191,6 +207,8 @@
       "category": "Starters",
       "price": 16,
       "modifier": "",
+      "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -199,6 +217,8 @@
       "category": "Starters",
       "price": 15,
       "modifier": "",
+      "modifierPrice": null,
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -239,6 +259,7 @@
       "category": "Starters",
       "price": 18,
       "modifier": "",
+      "dietaryPreferences": "Vegetarian",
       "available": true
     },
     {
@@ -327,6 +348,7 @@
       "category": "Entrees",
       "price": 37,
       "modifier": "",
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -335,6 +357,7 @@
       "category": "Entrees",
       "price": 37,
       "modifier": "",
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
@@ -431,6 +454,8 @@
       "category": "Starters",
       "price": 10,
       "modifier": "",
+      "modifierPrice": null,
+      "dietaryPreferences": "Gluten-Free | Vegetarian",
       "available": true
     },
     {
@@ -444,6 +469,10 @@
     {
       "itemName": "DUCK & PHEASANT PATE",
       "description": "Blackberry mustard, pickled vegetables, tapioca ink chips",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-duck-pheasant-pate.jpg",
+      "imageAlt": "",
       "category": "Starters",
       "price": 1,
       "modifier": "",
@@ -452,6 +481,10 @@
     {
       "itemName": "CIOPPINO",
       "description": "Prawns, scallops, octopus, crab, tomato saffron seafood broth",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-cioppino.jpg",
+      "imageAlt": "",
       "category": "Starters",
       "price": 1,
       "modifier": "",
@@ -460,6 +493,10 @@
     {
       "itemName": "CORNISH GAME HEN",
       "description": "Wild mushroom mousse, Butternut squash orzo, asparagus, sauce Forestiere",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-cornish-game-hen.jpg",
+      "imageAlt": "",
       "category": "Entrees",
       "price": 1,
       "modifier": "",
@@ -468,6 +505,10 @@
     {
       "itemName": "FILET MIGNON",
       "description": "Brie stuffed wrapped in prosciutto, garlic mash, veg, braising reduction",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-filet-mignon.jpg",
+      "imageAlt": "",
       "category": "Entrees",
       "price": 1,
       "modifier": "",
@@ -476,6 +517,10 @@
     {
       "itemName": "CHOCOLATE TARTE",
       "description": "Hazelnut mousse, white chocolate pips, tuille",
+      "menu": "New Years Takeout",
+      "date": "2020-12-30",
+      "imageSource": "/images/new-years-chocolate-tarte.jpg",
+      "imageAlt": "",
       "category": "Desserts",
       "price": 1,
       "modifier": "",
