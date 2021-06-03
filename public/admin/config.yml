@@ -98,6 +98,7 @@ collections:
                 label: 'Dietary Preferences',
                 name: 'dietaryPreferences',
                 widget: 'select',
+                multiple: true,
                 options: ['Gluten-Free', 'Vegetarian'],
               }
               - {
