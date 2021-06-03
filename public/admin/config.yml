@@ -51,6 +51,11 @@ collections:
             field: itemName
           - label: "Category"
             field: category
+        view_groups:
+          - label: Name
+            field: itemName
+          - label: Category
+            field: category
         fields:
         #   - label: 'Categories'
         #     name: 'Category'
