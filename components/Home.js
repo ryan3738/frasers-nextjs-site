@@ -30,6 +30,7 @@ export default function Home({
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <section className="container">
           <h2 id="about" className="anchor hidden-header">
