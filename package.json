@@ -16,6 +16,7 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^3.4.0",
     "classnames": "^2.3.1",
     "date-fns": "^2.21.3",
     "gray-matter": "^4.0.3",
