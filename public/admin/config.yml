@@ -40,13 +40,15 @@ collections:
             widget: 'string'
           - label: 'Hours'
             name: 'hoursSummary'
+            hint: 'Hours will be listed on website in the order they appear here.'
             widget: 'list'
+            summary: '{{fields.days}} - {{fields.hours}}'
             allow_add: true
             add_to_top: true
             fields:
               - label: 'Days/Dates'
                 name: 'days'
-                hint: 'Enter days or dates for hours'
+                hint: 'Enter days or dates'
                 widget: 'string'
               - label: 'Times'
                 name: 'hours'
