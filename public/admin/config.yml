@@ -38,7 +38,7 @@ collections:
           # - label: 'Phone Number'
           #   name: 'phoneNumber'
           #   widget: 'string'
-          - label: 'Hours'
+          - label: 'Hours Summary Items'
             name: 'hoursSummary'
             hint: 'Hours will be listed on website in the order they appear here.'
             widget: 'list'
