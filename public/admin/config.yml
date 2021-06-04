@@ -43,6 +43,7 @@ collections:
             hint: 'Hours will be listed on website in the order they appear here.'
             widget: 'list'
             summary: '{{fields.days}} - {{fields.hours}}'
+            minimize_collapsed: false
             allow_add: true
             add_to_top: true
             fields:
