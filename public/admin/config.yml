@@ -35,9 +35,9 @@ collections:
         file: '/public/data/site-data.json'
         fields:
           # - { label: 'Address', name: 'address', widget: 'string' }
-          - label: 'Phone Number'
-            name: 'phoneNumber'
-            widget: 'string'
+          # - label: 'Phone Number'
+          #   name: 'phoneNumber'
+          #   widget: 'string'
           - label: 'Hours'
             name: 'hoursSummary'
             hint: 'Hours will be listed on website in the order they appear here.'
