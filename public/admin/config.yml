@@ -43,6 +43,13 @@ collections:
             widget: 'list'
             allow_add: true
             add_to_top: true
+            fields:
+              - label: 'Days'
+                name: 'days'
+                widget: 'string'
+              - label: 'Times'
+                name: 'hours'
+                widget: 'string'
 
           # - { label: 'Announcement 1', name: 'announcement1', widget: 'string' }
           # - { label: 'Announcement 2', name: 'announcement2', widget: 'string' }
