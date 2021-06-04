@@ -44,11 +44,13 @@ collections:
             allow_add: true
             add_to_top: true
             fields:
-              - label: 'Days'
+              - label: 'Days/Dates'
                 name: 'days'
+                hint: 'Enter days or dates for hours'
                 widget: 'string'
               - label: 'Times'
                 name: 'hours'
+                hint: 'Enter opening times, closing times, closed, etc'
                 widget: 'string'
 
           # - { label: 'Announcement 1', name: 'announcement1', widget: 'string' }
@@ -103,20 +105,21 @@ collections:
                   label: 'Modifier',
                   name: 'modifier',
                   required: false,
-                  hint: 'Add a modifier description',
+                  hint: 'Enter a modifier description',
                   widget: 'string',
                 }
               - {
                   label: 'Modifier Price',
                   name: 'modifierPrice',
                   required: false,
-                  hint: 'Add the modifier price',
+                  hint: 'Enter the modifier price',
                   widget: 'number',
                 }
               - {
                 label: 'Dietary Preferences',
                 name: 'dietaryPreferences',
                 required: false,
+                hint: 'Select from the list of dietary preferences',
                 widget: 'select',
                 multiple: true,
                 options: ['Gluten-Free', 'Vegetarian'],
@@ -124,7 +127,7 @@ collections:
               - {
                   label: 'Available',
                   name: 'available',
-                  hint: 'Select "Available" to show on website',
+                  hint: 'Select "Available" to display on the website',
                   widget: 'boolean',
                   default: false,
                 }
