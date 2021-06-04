@@ -30,29 +30,31 @@ collections:
     #   - label: Category
     #     field: category
     files:
-  #     - label: 'Site Info'
-  #       name: 'business-info'
-  #       file: '/public/data/site-data.json'
-  #       fields:
-  #         - { label: 'Address', name: 'address', widget: 'string' }
-  #         - { label: 'Phone Number', name: 'phoneNumber', widget: 'string' }
-  #         - { label: 'Announcement 1', name: 'announcement1', widget: 'string' }
-  #         - { label: 'Announcement 2', name: 'announcement2', widget: 'string' }
-  #         - {
-  #             label: 'Announcement 2',
-  #             name: 'announcement2',
-  #             widget: 'relation',
-  #             collection: 'announcements',
-  #             value_field: '{{slug}}',
-  #             search_field: ['title', 'date'],
-  #           }
-  #         - {
-  #             label: 'Announcement 2',
-  #             name: 'announcement2',
-  #             widget: 'file',
-  #             # media_library: '/posts/',
-  #             # allow_multiple: false,
-  #           }
+      - label: 'Site Info'
+        name: 'business-info'
+        file: '/public/data/site-data.json'
+        fields:
+          # - { label: 'Address', name: 'address', widget: 'string' }
+          - { label: 'Phone Number', name: 'phoneNumber', widget: 'string' }
+
+
+          # - { label: 'Announcement 1', name: 'announcement1', widget: 'string' }
+          # - { label: 'Announcement 2', name: 'announcement2', widget: 'string' }
+          # - {
+          #     label: 'Announcement 2',
+          #     name: 'announcement2',
+          #     widget: 'relation',
+          #     collection: 'announcements',
+          #     value_field: '{{slug}}',
+          #     search_field: ['title', 'date'],
+          #   }
+          # - {
+          #     label: 'Announcement 2',
+          #     name: 'announcement2',
+          #     widget: 'file',
+          #     # media_library: '/posts/',
+          #     # allow_multiple: false,
+          #   }
 
       - label: 'Menu'
         name: 'menuData'
