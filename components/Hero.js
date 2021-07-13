@@ -1,7 +1,5 @@
 import Image from 'next/image'
 import siteData from '../public/data/site-data.json'
-// import utilStyles from '../styles/utils.module.css'
-import Button from './Button'
 
 export default function Hero(props) {
   return (
@@ -9,9 +7,8 @@ export default function Hero(props) {
       <div id="welcome" className="welcome-container">
         <div className="welcome-box">
           <div className="welcome-inner-box">
-            {/* <!-- <div class="welcome-contents"> --> */}
             <p className="spaced-text">Est. | 2006</p>
-            <br/>
+            <br />
             <h1 className="title">FRASERS</h1>
             <div className="welcome-logo">
               <Image
@@ -23,7 +20,7 @@ export default function Hero(props) {
                 priority
               />
             </div>
-            <br/>
+            <br />
             {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}
             <a
               href={siteData.address.directions}
@@ -39,7 +36,7 @@ export default function Hero(props) {
             <h3>Call To Make a Reservation</h3>
             <p>
               <strong> CALL FOR TAKEOUT</strong>
-              <br/>
+              <br />
             </p>
             {/* <Button
               buttonText="ORDER ONLINE"
@@ -48,40 +45,19 @@ export default function Hero(props) {
             <a href={`tel:${siteData.phoneNumber}`}>{siteData.phoneNumber}</a>
             <br />
             <br />
-            {/* <strong>TUE - SAT</strong> <br /> */}
-            {/* <p> <strong>CLOSED</strong> <br/>9/8/20 to 9/9/20</p><br/> */}
-            {/* <p>
-              <span className='medium-emphasis'>
-                4:30 | 5:00 | 5:30 | 7:00 | 7:30
-              </span>
-              <br />
-            </p> */}
-            <p>
-              <strong>TUE - SAT</strong>
-              <br />
-              <span className='medium-emphasis'>
-                OPEN AT 4:30
-              </span>
-              <br/>
-              <br/>
-              <strong>TUE - THURS</strong>
-              <br />
-              <span className='medium-emphasis'>
-                LAST SEATING AT 7:30
-              </span>
-              <br/>
-              <br/>
-              <strong>FRI - SAT</strong>
-              <br />
-              <span className='medium-emphasis'>
-                LAST SEATING AT 8:00
-              </span>
-            </p>
-            <p>
-              <strong>SUN - MON</strong> |{' '}
-              <span className='medium-emphasis'>CLOSED</span>
-            </p>
-            {/* <!-- </div> --> */}
+            <div>
+              {siteData.hoursSummary.map((item) => (
+                <div>
+                  <div>
+                    <strong>{item.days}</strong>
+                  </div>
+                  <div>
+                    <span className="medium-emphasis">{item.hours}</span>
+                  </div>
+                  <br />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

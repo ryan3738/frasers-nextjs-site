@@ -11,28 +11,46 @@ export default function Contact() {
       {/* </div> */}
       <div className="contact-content">
         <div id="contact-info">
-          <h2>LOCATION</h2>
-          <p>
-            <span className="medium-emphasis">
-              {`${siteData.address.street} ${siteData.address.street2}`}
-              <br />
-              {`${siteData.address.city}, ${siteData.address.state} ${siteData.address.zipCode}`}
-              <br />
-              <br />
-              <a href="tel:13602791231">{siteData.phoneNumber}</a>
-              <br />
-              <br />
-              <b>
-                <a
-                  href={siteData.address.directions}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  Get Directions
-                </a>
-              </b>
-            </span>
-          </p>
+          <div>
+            <h2>LOCATION</h2>
+            <p>
+              <span className="medium-emphasis">
+                {`${siteData.address.street} ${siteData.address.street2}`}
+                <br />
+                {`${siteData.address.city}, ${siteData.address.state} ${siteData.address.zipCode}`}
+                <br />
+                <br />
+                <a href="tel:13602791231">{siteData.phoneNumber}</a>
+                <br />
+                <br />
+                <b>
+                  <a
+                    href={siteData.address.directions}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    Get Directions
+                  </a>
+                </b>
+              </span>
+            </p>
+          </div>
+          <div>
+            <h2>HOURS</h2>
+            <div>
+              {siteData.hoursSummary.map((item) => (
+                <div>
+                  <div>
+                    <strong>{item.days}</strong>
+                  </div>
+                  <div>
+                    <span className="medium-emphasis">{item.hours}</span>
+                  </div>
+                  <br />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="social-media-container">
@@ -76,11 +94,17 @@ export default function Contact() {
           align-items: center;
           padding: 2rem 1rem;
         }
+        #contact-info {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-around;
+          align-content: space-around;
+          width: 100%;
+          height: auto;
+        }
         .social-media-container {
           display: flex;
           flex-direction: column;
-          /* justify-content: flex-start; */
-          /* align-items: flex-start; */
           margin: 10px;
         }
         .social-media-contents {

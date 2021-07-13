@@ -30,6 +30,7 @@ export default function Home({
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <section className="container">
           <h2 id="about" className="anchor hidden-header">
@@ -154,8 +155,8 @@ export default function Home({
               imageLeft
             >
               <div>
-                To purchase a gift card please visit our online store or call us
-                at <span className="nowrap">{siteData.phoneNumber}</span>
+                To purchase a gift card please call us at{' '}
+                <span className="nowrap">{siteData.phoneNumber}</span>
                 <br />
                 <br />
                 <Button

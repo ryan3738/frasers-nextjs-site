@@ -1,6 +1,10 @@
 {
   "Category": {
-    "category": ["Starters", "Entrees", "Desserts"]
+    "category": [
+      "Starters",
+      "Entrees",
+      "Desserts"
+    ]
   },
   "menu": [
     {
@@ -8,6 +12,15 @@
       "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
       "category": "Starters",
       "price": 15,
+      "modifier": "",
+      "dietaryPreferences": "Gluten-free | Vegetarian",
+      "available": true
+    },
+    {
+      "itemName": "Duck Liver Pate",
+      "description": "Homemade duck liver pate served with pear compote and crostinis",
+      "category": "Starters",
+      "price": 14,
       "modifier": "",
       "available": true
     },
@@ -60,7 +73,7 @@
       "itemName": "CRAB & SHRIMP LASAGNA",
       "description": "Dungeness crab, shrimp, & lobster cream sauce",
       "category": "Entrees",
-      "price": 32,
+      "price": 34,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -69,7 +82,7 @@
       "itemName": "SMOKED PORK SHANK GNOCCHI CARBONARA",
       "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
       "category": "Entrees",
-      "price": 28,
+      "price": 29,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -97,7 +110,7 @@
       "itemName": "DUCK BREAST",
       "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & marsala cream reduction",
       "category": "Entrees",
-      "price": 34,
+      "price": 35,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -144,7 +157,7 @@
       "modifier": "",
       "modifierPrice": null,
       "available": true
-    }, 
+    },
     {
       "itemName": "GOAT CHEESE SALAD",
       "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
@@ -342,7 +355,7 @@
       "itemName": "SCALLOPS",
       "description": "Vegetable risotto, dill beurre blanc, & chili oil",
       "category": "Entrees",
-      "price": 36,
+      "price": 37,
       "modifier": "",
       "dietaryPreferences": "Gluten-free",
       "available": true
@@ -375,7 +388,7 @@
       "itemName": "SEAFOOD CHOWDER",
       "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
       "category": "Starters",
-      "price": 12,
+      "price": 13,
       "modifier": "",
       "available": true
     },
@@ -421,8 +434,7 @@
     },
     {
       "itemName": "VEGETABLE GNOCCHI",
-      "description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce<br /> -Vegetarian",
-
+      "description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce",
       "category": "Entrees",
       "price": 20,
       "modifier": "",
@@ -443,76 +455,68 @@
       "price": 10,
       "modifier": "",
       "modifierPrice": null,
-      "dietaryPreferences": "Gluten-Free | Vegetarian",
+      "dietaryPreferences": "Gluten-free",
       "available": true
     },
     {
-      "itemName": "Example",
-      "description": "This is an example item, please do not delete :)",
-      "category": "Starters",
-      "price": 10,
-      "modifier": "Add Info",
-      "available": false
-    },
-    {
-      "itemName": "DUCK & PHEASANT PATE",
-      "description": "Blackberry mustard, pickled vegetables, tapioca ink chips",
-      "menu": "New Years Takeout",
+      "price": 1,
+      "available": false,
+      "imageAlt": "",
       "date": "2020-12-30",
       "imageSource": "/images/new-years-duck-pheasant-pate.jpg",
-      "imageAlt": "",
-      "category": "Starters",
-      "price": null,
       "modifier": "",
-      "available": false
+      "description": "Blackberry mustard, pickled vegetables, tapioca ink chips",
+      "itemName": "DUCK & PHEASANT PATE",
+      "category": "Starters",
+      "menu": "New Years Takeout"
     },
     {
-      "itemName": "CIOPPINO",
-      "description": "Prawns, scallops, octopus, crab, tomato saffron seafood broth",
-      "menu": "New Years Takeout",
+      "price": 1,
+      "available": false,
+      "imageAlt": "",
       "date": "2020-12-30",
       "imageSource": "/images/new-years-cioppino.jpg",
-      "imageAlt": "",
-      "category": "Starters",
-      "price": null,
       "modifier": "",
-      "available": false
+      "description": "Prawns, scallops, octopus, crab, tomato saffron seafood broth",
+      "itemName": "CIOPPINO",
+      "category": "Starters",
+      "menu": "New Years Takeout"
     },
     {
-      "itemName": "CORNISH GAME HEN",
-      "description": "Wild mushroom mousse, Butternut squash orzo, asparagus, sauce Forestiere",
-      "menu": "New Years Takeout",
+      "price": 1,
+      "available": false,
+      "imageAlt": "",
       "date": "2020-12-30",
       "imageSource": "/images/new-years-cornish-game-hen.jpg",
-      "imageAlt": "",
-      "category": "Entrees",
-      "price": null,
       "modifier": "",
-      "available": false
+      "description": "Wild mushroom mousse, Butternut squash orzo, asparagus, sauce Forestiere",
+      "itemName": "CORNISH GAME HEN",
+      "category": "Entrees",
+      "menu": "New Years Takeout"
     },
     {
-      "itemName": "FILET MIGNON",
-      "description": "Brie stuffed wrapped in prosciutto, garlic mash, veg, braising reduction",
-      "menu": "New Years Takeout",
+      "price": 1,
+      "available": false,
+      "imageAlt": "",
       "date": "2020-12-30",
       "imageSource": "/images/new-years-filet-mignon.jpg",
-      "imageAlt": "",
-      "category": "Entrees",
-      "price": null,
       "modifier": "",
-      "available": false
+      "description": "Brie stuffed wrapped in prosciutto, garlic mash, veg, braising reduction",
+      "itemName": "FILET MIGNON",
+      "category": "Entrees",
+      "menu": "New Years Takeout"
     },
     {
-      "itemName": "CHOCOLATE TARTE",
-      "description": "Hazelnut mousse, white chocolate pips, tuille",
-      "menu": "New Years Takeout",
+      "price": 1,
+      "available": false,
+      "imageAlt": "",
       "date": "2020-12-30",
       "imageSource": "/images/new-years-chocolate-tarte.jpg",
-      "imageAlt": "",
-      "category": "Desserts",
-      "price": null,
       "modifier": "",
-      "available": false
+      "description": "Hazelnut mousse, white chocolate pips, tuille",
+      "itemName": "CHOCOLATE TARTE",
+      "category": "Desserts",
+      "menu": "New Years Takeout"
     }
   ]
 }

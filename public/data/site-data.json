@@ -18,6 +18,27 @@
     "Friday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00",
     "Saturday": "4:30 | 5:00 | 5:30 | 7:00 | 7:30 | 8:00"
   },
+  "hoursSummary": [
+    {"days": "JUNE 27 - JULY 12",
+    "hours": "CLOSED"
+    },
+    {
+      "days": "TUE - SAT",
+      "hours": "OPEN AT 4:30"
+    },
+    {
+      "days": "TUE - THURS",
+      "hours": "LAST SEATING AT 7:30"
+    },
+    {
+      "days": "FRI - SAT",
+      "hours": "LAST SEATING AT 8:00"
+    },
+    {
+      "days": "SUN - MON",
+      "hours": "CLOSED"
+    }
+  ],
   "announcement1": "posts/announcement1.md",
   "announcement2": "posts/announcement2.md",
   "websites": {
