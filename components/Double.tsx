@@ -1,5 +1,5 @@
 // import doubleItems from '../public/data/double.json';
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Double({
   children,
@@ -13,16 +13,16 @@ export default function Double({
   rightSubtitle,
   id,
 }: {
-  children: React.ReactNode
-  title: string
-  subtitle: string
-  imageSource: string
-  imageAlt: string
-  imageLeft: string
-  rightText: string
-  rightTitle: string
-  rightSubtitle: string
-  id: string
+  children: React.ReactNode;
+  title: string;
+  subtitle: string;
+  imageSource: string;
+  imageAlt: string;
+  imageLeft: string;
+  rightText: string;
+  rightTitle: string;
+  rightSubtitle: string;
+  id: string;
 }) {
   return (
     <>

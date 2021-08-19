@@ -1,23 +1,13 @@
-import Head from 'next/head'
-import React from 'react'
-import PropTypes from 'prop-types'
-
-// import Image from 'next/image'
-import Layout, { siteTitle } from './Layout'
-// import utilStyles from '../styles/utils.module.css'
-// import { getSortedPostsData } from '../lib/posts';
-// import Date from '../components/date';
-// import MenuSection from '../components/menu-section'
-import Double from './Double.tsx'
-import GalleryGrid from './GalleryGrid'
-import Contact from './Contact'
-import Button from './Button'
-import MenuSection from './MenuSection'
-// import doubleItems from '../public/data/double.json';
-
-// import announcementPath from '../public/data/site-data.json'
-import siteData from '../public/data/site-data.json'
-// import ImageLightBox from '../components/image-light-box'
+import Head from 'next/head';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Layout, { siteTitle } from './Layout';
+import Double from './Double.tsx';
+import GalleryGrid from './GalleryGrid';
+import Contact from './Contact';
+import Button from './Button';
+import MenuSection from './MenuSection';
+import siteData from '../public/data/site-data.json';
 
 export default function Home({
   aboutOwnerData,
@@ -173,7 +163,7 @@ export default function Home({
         `}</style>
       </Layout>
     </>
-  )
+  );
 }
 
 Home.propTypes = {
@@ -181,4 +171,4 @@ Home.propTypes = {
   aboutBusinessData: PropTypes.object,
   announcement1Data: PropTypes.object,
   announcement2Data: PropTypes.object,
-}
+};

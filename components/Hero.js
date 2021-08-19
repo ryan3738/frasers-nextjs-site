@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import siteData from '../public/data/site-data.json'
+import Image from 'next/image';
+import siteData from '../public/data/site-data.json';
 
 export default function Hero(props) {
   return (
@@ -125,5 +125,5 @@ export default function Hero(props) {
         }
       `}</style>
     </>
-  )
+  );
 }

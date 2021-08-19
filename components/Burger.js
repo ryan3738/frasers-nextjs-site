@@ -1,4 +1,4 @@
-import { bool, func } from 'prop-types'
+import { bool, func } from 'prop-types';
 
 export default function Burger({ open, setOpen }) {
   return (
@@ -60,9 +60,9 @@ export default function Burger({ open, setOpen }) {
         `}</style>
       </div>
     </>
-  )
+  );
 }
 Burger.propTypes = {
   open: bool.isRequired,
   setOpen: func.isRequired,
-}
+};

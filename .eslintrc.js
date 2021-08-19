@@ -104,6 +104,7 @@ module.exports = {
         trailingComma: 'es5',
         singleQuote: true,
         printWidth: 80,
+        semi: true,
         // below line only for windows users facing CLRF and eslint prettier error
         // non windows users feel free to delete it
         endOfLine: 'auto',
@@ -137,7 +138,7 @@ module.exports = {
         'plugin:react/recommended', // React rules
         'plugin:react-hooks/recommended', // React hooks rules
         'plugin:jsx-a11y/recommended', // Accessibility rules
-        'prettier/@typescript-eslint', // Prettier plugin
+        'prettier/prettier', // Prettier plugin
         'plugin:prettier/recommended', // Prettier recommended rules
       ],
       rules: {
@@ -165,4 +166,4 @@ module.exports = {
       },
     },
   ],
-}
+};

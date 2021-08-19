@@ -1,7 +1,7 @@
 // import utilStyles from '../styles/utils.module.css'
-import Social from './Social'
-import Button from './Button'
-import siteData from '../public/data/site-data.json'
+import Social from './Social';
+import Button from './Button';
+import siteData from '../public/data/site-data.json';
 
 export default function Contact() {
   return (
@@ -114,5 +114,5 @@ export default function Contact() {
         }
       `}</style>
     </>
-  )
+  );
 }

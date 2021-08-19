@@ -1,4 +1,4 @@
-import MenuItem from './MenuItem'
+import MenuItem from './MenuItem';
 
 export default function MenuSection({ category }) {
   return (
@@ -27,5 +27,5 @@ export default function MenuSection({ category }) {
         }
       `}</style>
     </div>
-  )
+  );
 }

@@ -20,5 +20,5 @@ export default function Button({ buttonText, buttonLink }) {
         }
       `}</style>
     </>
-  )
+  );
 }

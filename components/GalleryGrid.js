@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import gallery from '../public/data/gallery-grid.json'
+import Image from 'next/image';
+import gallery from '../public/data/gallery-grid.json';
 
 const getGalleryItem = () => (
   <>
@@ -21,8 +21,8 @@ const getGalleryItem = () => (
               objectFit="cover"
               height="560"
               width="560"
-              // unoptimized={true}
-              // unsized='true'
+              placeholder="blur"
+              blurDataURL="/public/favicon-32x32.png"
             />
           </div>
         ))}
@@ -80,8 +80,8 @@ const getGalleryItem = () => (
         }
       `}</style> */}
   </>
-)
+);
 
 export default function GalleryGrid() {
-  return <>{getGalleryItem(gallery)}</>
+  return <>{getGalleryItem(gallery)}</>;
 }

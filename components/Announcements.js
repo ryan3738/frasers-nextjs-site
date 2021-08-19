@@ -144,5 +144,5 @@ export default function Announcements(props) {
         }
       `}</style>
     </>
-  )
+  );
 }

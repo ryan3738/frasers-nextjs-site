@@ -1,35 +1,33 @@
-import doubleItems from '../public/data/double.json'
-import Image from 'next/image'
+import Image from 'next/image';
+import doubleItems from '../public/data/double.json';
 
-const getDoubleItem = (double, category) => {
-  return (
-    <>
-      {double
-        .filter((e) => e.category === category)
-        //   .filter((e) => e.Available === true)
-        .map((data) => {
-          return (
-            <div key={data.title} className="double-container">
-              <div className="double-item double-pic right">
-                <Image
-                  src={data.imageSource}
-                  alt={data.imageAlt}
-                  height="612"
-                  width="612"
-                />
-              </div>
-              <div className="double-item double-text left">
-                <h3 className="primary-color">{data.title}</h3>
-                {data.subTitle ? <h4 className="">{data.subTitle}</h4> : ''}
-                <p className="medium-emphasis">{data.content}</p>
-              </div>
-              <style jsx>{`
-                .primary-color {
-                  color: var(--primary-color-desaturated);
-                }
+const getDoubleItem = (double, category) => (
+  <>
+    {double
+      .filter((e) => e.category === category)
+      //   .filter((e) => e.Available === true)
+      .map((data) => (
+        <div key={data.title} className="double-container">
+          <div className="double-item double-pic right">
+            <Image
+              src={data.imageSource}
+              alt={data.imageAlt}
+              height="612"
+              width="612"
+            />
+          </div>
+          <div className="double-item double-text left">
+            <h3 className="primary-color">{data.title}</h3>
+            {data.subTitle ? <h4 className="">{data.subTitle}</h4> : ''}
+            <p className="medium-emphasis">{data.content}</p>
+          </div>
+          <style jsx>{`
+            .primary-color {
+              color: var(--primary-color-desaturated);
+            }
 
-                 {
-                  /* .double-container {
+             {
+              /* .double-container {
                   display: grid;
                   justify-content: center;
                   align-content: center;
@@ -41,44 +39,44 @@ const getDoubleItem = (double, category) => {
                     '. p1 p1 p1 p1 p1 p1 p1 p1 p1 p1 .'
                     '. t1 t1 t1 t1 t1 t1 t1 t1 t1 t1 .';
                 } */
-                }
+            }
 
-                .double-item {
-                  margin: 0 20px 0;
-                  text-align: left;
-                }
+            .double-item {
+              margin: 0 20px 0;
+              text-align: left;
+            }
 
-                .double-item > img {
-                  padding-top: 4rem;
-                  object-fit: cover;
-                  width: 100%;
-                  max-height: 100%;
-                }
+            .double-item > img {
+              padding-top: 4rem;
+              object-fit: cover;
+              width: 100%;
+              max-height: 100%;
+            }
 
-                .double-pic {
-                  grid-area: p1;
-                }
+            .double-pic {
+              grid-area: p1;
+            }
 
-                .double-text {
-                  margin: 1rem 20px 5rem;
-                  grid-area: t1;
-                  background-color: var(--surface-color);
-                  padding: 1rem;
-                  border-radius: 7px;
-                }
+            .double-text {
+              margin: 1rem 20px 5rem;
+              grid-area: t1;
+              background-color: var(--surface-color);
+              padding: 1rem;
+              border-radius: 7px;
+            }
 
-                /* .alternating-color:nth-child(odd) {
+            /* .alternating-color:nth-child(odd) {
                   color: var(--white-color);
                 } */
 
-                 {
-                  /* @media (min-width: 460px) { */
-                }
-                /* .double-text { */
-                /* padding-top: 4rem; */
-                /* } */
-                 {
-                  /* .double-item {
+             {
+              /* @media (min-width: 460px) { */
+            }
+            /* .double-text { */
+            /* padding-top: 4rem; */
+            /* } */
+             {
+              /* .double-item {
                     margin: 5vh 2vw;
                   }
                   .double-container {
@@ -92,15 +90,13 @@ const getDoubleItem = (double, category) => {
                     grid-area: ${data.imageLeft ? 'r' : 'l'};
                   }
                 } */
-                }
-              `}</style>
-            </div>
-          )
-        })}
-    </>
-  )
-}
+            }
+          `}</style>
+        </div>
+      ))}
+  </>
+);
 
-export default function Double ({ category }) {
-  return <>{getDoubleItem(doubleItems, category)}</>
+export default function Double({ category }) {
+  return <>{getDoubleItem(doubleItems, category)}</>;
 }

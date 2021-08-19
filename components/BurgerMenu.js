@@ -1,6 +1,6 @@
 // import Link from 'next/link'
-import { bool } from 'prop-types'
-import NavList from './NavList'
+import { bool } from 'prop-types';
+import NavList from './NavList';
 
 export default function BurgerMenu({ open }) {
   return (
@@ -47,9 +47,9 @@ export default function BurgerMenu({ open }) {
         }
       `}</style>
     </>
-  )
+  );
 }
 
 BurgerMenu.propTypes = {
   open: bool.isRequired,
-}
+};
