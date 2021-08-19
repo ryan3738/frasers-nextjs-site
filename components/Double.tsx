@@ -1,5 +1,5 @@
 // import doubleItems from '../public/data/double.json';
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Double({
   children,
@@ -31,7 +31,12 @@ export default function Double({
         {imageSource ? (
           <>
             <div className="double-item double-right">
-              <Image src={imageSource} alt={imageAlt} height="560" width="560" />
+              <Image
+                src={imageSource}
+                alt={imageAlt}
+                height="560"
+                width="560"
+              />
             </div>
           </>
         ) : (
@@ -39,7 +44,10 @@ export default function Double({
             <div className="double-item double-text double-right">
               <h2 className="primary-color">{rightTitle}</h2>
               <h3>{rightSubtitle}</h3>
-              <div className="medium-emphasis" dangerouslySetInnerHTML={{ __html: rightText }} />
+              <div
+                className="medium-emphasis"
+                dangerouslySetInnerHTML={{ __html: rightText }}
+              />
             </div>
           </>
         )}
@@ -97,5 +105,5 @@ export default function Double({
         `}</style>
       </div>
     </>
-  )
+  );
 }
