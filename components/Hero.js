@@ -47,7 +47,7 @@ export default function Hero(props) {
             <br />
             <div>
               {siteData.hoursSummary.map((item) => (
-                <div>
+                <div key={item.days}>
                   <div>
                     <strong>{item.days}</strong>
                   </div>

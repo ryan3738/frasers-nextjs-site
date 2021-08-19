@@ -39,7 +39,7 @@ export default function Contact() {
             <h2>HOURS</h2>
             <div>
               {siteData.hoursSummary.map((item) => (
-                <div>
+                <div key={item.days}>
                   <div>
                     <strong>{item.days}</strong>
                   </div>
