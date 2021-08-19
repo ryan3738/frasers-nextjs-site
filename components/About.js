@@ -1,7 +1,6 @@
 // import utilStyles from '../styles/utils.module.css'
-import Social from './social';
-import Button from './Button';
-import siteData from '../public/data/site-data.json';
+
+import Double from './orig.double';
 
 export default function Contact(props) {
   return (

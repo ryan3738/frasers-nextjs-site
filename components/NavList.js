@@ -1,7 +1,4 @@
-import Link from 'next/link'
-import Button from './Button'
-import siteData from '../public/data/site-data.json'
-// import Image from 'next/image'
+import Link from 'next/link';
 
 export default function NavList(props) {
   return (
@@ -126,5 +123,5 @@ export default function NavList(props) {
         }
       `}</style>
     </>
-  )
+  );
 }
