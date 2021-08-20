@@ -3,7 +3,12 @@ import { bool, func } from 'prop-types';
 export default function Burger({ open, setOpen }) {
   return (
     <>
-      <div className="styled-burger" open={open} onClick={() => setOpen(!open)}>
+      <button
+        type="button"
+        className="styled-burger"
+        open={open}
+        onClick={() => setOpen(!open)}
+      >
         <div className="top-bun" />
         <div className="patty" />
         <div className="bottom-bun" />
@@ -58,7 +63,7 @@ export default function Burger({ open, setOpen }) {
             transform: ${open ? 'rotate(-45deg)' : 'rotate(0)'};
           }
         `}</style>
-      </div>
+      </button>
     </>
   );
 }
