@@ -94,10 +94,15 @@ export default function NavList(props) {
           text-transform: uppercase;
           padding: 1em;
           margin: auto;
+          font-weight: 600;
         }
-
+        a {
+          transition: all 0.3s ease-in-out;
+        }
         a:hover {
-          color: var(--medium-emphasis-text);
+           {
+            /* color: var(--medium-emphasis-text); */
+          }
           background: var(--primary-color-desaturated);
           color: var(--background-color);
         }

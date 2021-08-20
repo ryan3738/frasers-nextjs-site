@@ -9,15 +9,7 @@ export default function MenuSection({ category }) {
       <style jsx>{`
         .menu-header {
           display: inline-block;
-          /* max-width: 640px; */
           padding: 3rem 0 0;
-          /* margin: 0 auto 4rem auto; */
-        }
-
-        .menu-container {
-          /* display: flex;
-        flex-direction: column;
-        align-items: center;*/
         }
 
         .line {

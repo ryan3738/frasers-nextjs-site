@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import siteData from '../public/data/site-data.json';
 
-export default function Hero(props) {
+export default function Hero() {
   return (
     <>
       <div id="welcome" className="welcome-container">

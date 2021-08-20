@@ -1,5 +1,5 @@
 // import doubleItems from '../public/data/double.json';
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Double({
   children,
@@ -23,7 +23,7 @@ export default function Double({
   rightTitle: string;
   rightSubtitle: string;
   id: string;
-}) {
+}): JSX.Element {
   return (
     <>
       <div className="double-container">

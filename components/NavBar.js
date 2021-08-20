@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 // import Image from 'next/image'
 import Burger from './Burger';
 import BurgerMenu from './BurgerMenu';
@@ -62,11 +62,6 @@ export default function NavBar({ children, open, setOpen }) {
           height: 4em;
           position: sticky;
           top: 0;
-        }
-
-        .nav-list a:hover {
-          background: var(--primary-color-desaturated);
-          color: var(--background-color);
         }
 
         @media (min-width: 769px) {
