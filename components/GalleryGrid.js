@@ -66,6 +66,7 @@ const getGalleryItem = () => (
         height: 100%;
         background: var(--background-color);
         opacity: 0;
+        transition: all 0.3s ease-in-out;
       }
       #image-div:active .image-overlay,
       #image-div:hover .image-overlay {
@@ -93,6 +94,7 @@ const getGalleryItem = () => (
         color: var(-high-emphasis-text);
         font-weight: bold;
         opacity: 0;
+        transition: all 0.3s ease-in-out;
       }
     `}</style>
     {/* <style jsx>{`
