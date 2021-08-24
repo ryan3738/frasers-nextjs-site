@@ -6,9 +6,6 @@ import siteData from '../public/data/site-data.json';
 export default function Contact() {
   return (
     <>
-      {/* <div className='contact-header'> */}
-      {/* <h3 className={utilStyles.lightText}>CONTACT US</h3> */}
-      {/* </div> */}
       <div className="contact-content">
         <div id="contact-info">
           <div>
@@ -80,14 +77,6 @@ export default function Contact() {
         </div>
       </div>
       <style jsx>{`
-        /* .contact-container {
-          display: flex;
-          flex-direction: column;
-        } */
-        /* .contact-header {
-          padding: 3rem 0 0;
-        } */
-
         .contact-content {
           display: flex;
           flex-direction: column;
