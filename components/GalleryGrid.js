@@ -43,7 +43,6 @@ const getGalleryItem = () => (
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 400;
       }
       #image-div {
         position: relative;
