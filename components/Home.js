@@ -106,17 +106,22 @@ export default function Home({
           {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
         </section>
         <section id="menu" className="container">
-          <h1 className="header hidden-header">MENU</h1>
+          <div className="header">
+            <h1>MENU</h1>
+          </div>
           <MenuSection category="Starters" />
           <MenuSection category="Entrees" />
           {/* <Button buttonText="SEE FULL MENU ==>" buttonLink="/menu" /> */}
         </section>
         <section>
+          <div className="header">
+            <h1>Gallery</h1>
+          </div>
           <GalleryGrid />
         </section>
         <section id="contact">
           <div className="header">
-            <h1>CONTACT US</h1>
+            <h1>CONTACT</h1>
           </div>
           <Contact />
         </section>
@@ -129,6 +134,14 @@ export default function Home({
             align-items: center;
             justify-content: center;
             margin: 5px;
+          }
+
+          .header h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 3rem;
+            transform: scale(1, 1.25);
+            opacity: 0.8;
           }
           .hidden-header {
             padding: 0;
