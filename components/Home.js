@@ -120,7 +120,7 @@ export default function Home({
           <GalleryGrid />
         </section>
         <section id="contact">
-          <div className="header">
+          <div className="header hidden-header">
             <h1>CONTACT</h1>
           </div>
           <Contact />
@@ -137,10 +137,10 @@ export default function Home({
           }
 
           .header h1 {
-            font-size: 4rem;
             font-weight: bold;
-            line-height: 3rem;
-            transform: scale(1, 1.25);
+            font-size: calc(2rem + 2vw + 2vh);
+            letter-spacing: 0.05em;
+            font-weight: bold;
             opacity: 0.8;
           }
           .hidden-header {
