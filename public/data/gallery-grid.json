@@ -11,7 +11,7 @@
   },
   {
     "imageSource": "/images/gallery-grid/wine-takeout-bag.jpg",
-    "imageAlt": "wine takeout bag with frasers logo",
+    "imageAlt": "wine takeout bag",
     "imageSize": "vertical"
   },
   {
@@ -26,7 +26,7 @@
   },
   {
     "imageSource": "/images/gallery-grid/samosa.jpg",
-    "imageAlt": "samosa appetizer",
+    "imageAlt": "samosas",
     "imageSize": "small"
   },
   {
@@ -36,12 +36,12 @@
   },
   {
     "imageSource": "/images/gallery-grid/ahi_poke.jpg",
-    "imageAlt": "ahi poke appetizer",
+    "imageAlt": "ahi poke",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/crab-claw.jpg",
-    "imageAlt": "crab claw appetizer",
+    "imageAlt": "crab claw",
     "imageSize": "vertical"
   },
   {
@@ -51,7 +51,7 @@
   },
   {
     "imageSource": "/images/gallery-grid/meyer-lemon-tart.jpg",
-    "imageAlt": "meyer lemon tart dessert",
+    "imageAlt": "meyer lemon tart",
     "imageSize": "big"
   },
   {
@@ -61,12 +61,12 @@
   },
   {
     "imageSource": "/images/gallery-grid/ramos_gin_fizz.jpg",
-    "imageAlt": "ramos gin fiz drink",
+    "imageAlt": "ramos gin fiz",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/lamb.jpg",
-    "imageAlt": "rack of lamb entree",
+    "imageAlt": "rack of lamb",
     "imageSize": "small"
   },
   {
@@ -76,32 +76,32 @@
   },
   {
     "imageSource": "/images/gallery-grid/cappuccino.jpg",
-    "imageAlt": "cappuccino in a mug",
+    "imageAlt": "cappuccino",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/squash-blossom.jpg",
-    "imageAlt": "squash blossom appetizer",
+    "imageAlt": "squash blossoms",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/escargot.jpg",
-    "imageAlt": "escargot appetizer",
+    "imageAlt": "escargot ",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/mustache-biscuit.jpg",
-    "imageAlt": "biscuit with mustache design",
+    "imageAlt": "beef stew",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/neah-bay-salmon-blueberry-beurre-blanc.jpeg",
-    "imageAlt": "neah bay salmon bluebeery beurre blanc",
+    "imageAlt": "neah bay salmon with bluebeery beurre blanc",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/fish-lentils-sauce.jpg",
-    "imageAlt": "fish lentils sauce",
+    "imageAlt": "ahlibut with lentils",
     "imageSize": "small"
   },
   {
@@ -121,17 +121,17 @@
   },
   {
     "imageSource": "/images/gallery-grid/frasers_art.jpg",
-    "imageAlt": "art hanging at frasers gourmet hideaway",
+    "imageAlt": "art at frasers",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/albacore_tuna.jpg",
-    "imageAlt": "albacore tuna entree",
+    "imageAlt": "albacore tuna",
     "imageSize": "small"
   },
   {
     "imageSource": "/images/gallery-grid/ice-cream-strawberrry-rhubarb.jpg",
-    "imageAlt": "strawberry rhubarb dessert",
+    "imageAlt": "strawberry rhubarb",
     "imageSize": "small"
   }
 ]

@@ -1,4 +1,4 @@
-import menuData from '../public/data/menu-data.json'
+import menuData from '../public/data/menu-data.json';
 
 const getMenuItem = ({ category }) => (
   <>
@@ -59,7 +59,7 @@ const getMenuItem = ({ category }) => (
         </div>
       ))}
   </>
-)
+);
 
 export default function MenuItem(category) {
   return (
@@ -76,5 +76,5 @@ export default function MenuItem(category) {
         `}
       </style>
     </div>
-  )
+  );
 }

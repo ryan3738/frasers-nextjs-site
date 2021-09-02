@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Layout from './Layout'
-import MenuSection from './MenuSection'
+import Head from 'next/head';
+import Layout from './Layout';
+import MenuSection from './MenuSection';
 
 export default function Menu() {
   return (
@@ -22,5 +22,5 @@ export default function Menu() {
         }
       `}</style>
     </Layout>
-  )
+  );
 }

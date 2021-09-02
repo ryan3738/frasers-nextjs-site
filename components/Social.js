@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import PropTypes from 'prop-types'
+import Image from 'next/image';
+import PropTypes from 'prop-types';
 
 export default function Social({ href, img, alt, color }) {
   return (
@@ -33,11 +33,11 @@ export default function Social({ href, img, alt, color }) {
         }
       `}</style>
     </div>
-  )
+  );
 }
 Social.propTypes = {
   href: PropTypes.string,
   img: PropTypes.string,
   alt: PropTypes.string,
   color: PropTypes.string,
-}
+};

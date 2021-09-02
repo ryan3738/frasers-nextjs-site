@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Button from './Button'
-import Layout, { siteTitle } from './Layout'
+import Head from 'next/head';
+import Button from './Button';
+import Layout, { siteTitle } from './Layout';
 
 export default function Dashboard() {
   return (
@@ -20,14 +20,6 @@ export default function Dashboard() {
         </div>
       </div>
       <style jsx>{`
-        /* .contact-container {
-          display: flex;
-          flex-direction: column;
-        } */
-        /* .contact-header {
-          padding: 3rem 0 0;
-        } */
-
         .contact-content {
           display: flex;
           flex-direction: column;
@@ -48,5 +40,5 @@ export default function Dashboard() {
         }
       `}</style>
     </Layout>
-  )
+  );
 }

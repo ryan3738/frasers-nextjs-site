@@ -1,7 +1,4 @@
-import Link from 'next/link'
-import Button from './Button'
-import siteData from '../public/data/site-data.json'
-// import Image from 'next/image'
+import Link from 'next/link';
 
 export default function NavList(props) {
   return (
@@ -97,10 +94,15 @@ export default function NavList(props) {
           text-transform: uppercase;
           padding: 1em;
           margin: auto;
+          font-weight: 600;
         }
-
+        a {
+          transition: all 0.3s ease-in-out;
+        }
         a:hover {
-          color: var(--medium-emphasis-text);
+           {
+            /* color: var(--medium-emphasis-text); */
+          }
           background: var(--primary-color-desaturated);
           color: var(--background-color);
         }
@@ -126,5 +128,5 @@ export default function NavList(props) {
         }
       `}</style>
     </>
-  )
+  );
 }

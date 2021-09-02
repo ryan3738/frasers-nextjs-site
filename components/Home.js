@@ -1,23 +1,13 @@
-import Head from 'next/head'
-import React from 'react'
-import PropTypes from 'prop-types'
-
-// import Image from 'next/image'
-import Layout, { siteTitle } from './Layout'
-// import utilStyles from '../styles/utils.module.css'
-// import { getSortedPostsData } from '../lib/posts';
-// import Date from '../components/date';
-// import MenuSection from '../components/menu-section'
-import Double from './Double.tsx'
-import GalleryGrid from './GalleryGrid'
-import Contact from './Contact'
-import Button from './Button'
-import MenuSection from './MenuSection'
-// import doubleItems from '../public/data/double.json';
-
-// import announcementPath from '../public/data/site-data.json'
-import siteData from '../public/data/site-data.json'
-// import ImageLightBox from '../components/image-light-box'
+import Head from 'next/head';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Layout, { siteTitle } from './Layout';
+import Double from './Double.tsx';
+import GalleryGrid from './GalleryGrid';
+import Contact from './Contact';
+import Button from './Button';
+import MenuSection from './MenuSection';
+import siteData from '../public/data/site-data.json';
 
 export default function Home({
   aboutOwnerData,
@@ -67,85 +57,6 @@ export default function Home({
               <br />
               <p>We respect your privacy</p>
             </Double>
-            {/* <Double
-              id="takeout"
-              title="FRASERS TAKEOUT"
-              // subtitle='To purchase a gift card please visit our online store or call us at 360-279-1231 '
-              imageSource="/images/wine-takeout-bag-square.jpg"
-              imageAlt="Picture of frasers gourmet hideaway takeout bag and a glass of wine"
-            >
-              <div>
-                <ul>
-                  <li>Precooked Ready to Reheat Meals</li>
-                  <li>Place orders by Thursday at 10 pm</li>
-                  <li>Pickup Saturday from 2-4 pm</li>
-                  <li>Place Orders Online</li>
-                  <li>Or Call {siteData.phoneNumber}</li>
-                </ul>
-              </div>
-              <Button
-                buttonText="ORDER ONLINE"
-                buttonLink={siteData.websites.onlineStore}
-              />
-              <br />
-              <br />
-              <br />
-              <h4>Sign up for our newsletter to receive updates</h4>
-              <Button
-                buttonText="SIGN UP"
-                buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
-              />
-              <br />
-              <br />
-              <p>We respect your privacy</p>
-            </Double> */}
-            {/* <Double
-              id="valentines"
-              title="Four Course VALENTINE'S DINNER"
-              subtitle="$65 Per Person"
-              imageSource="/images/chocolate-covered-strawberry-bombe-square.jpg"
-              imageAlt="Chocolate covered strawberry bombe with chocolate heart"
-            >
-              <div>
-                <ul className="special-menu">
-                  <li>
-                    <strong>WARM GOAT CHEESE SALAD</strong>
-                    <p>
-                      Cypress Grove aged goat cheese, arugula, cipollini onions
-                    </p>
-                  </li>
-                  <li>
-                    <strong>BRAISED SHORT RIB & BEET SOUP</strong>
-                    <p>Crème Fraiche, Parmesan heart</p>
-                  </li>
-                  <li>
-                    <strong>WAGYU FLAT IRON STEAK</strong>
-                    <p>
-                      Potato pave, wild mushroom bread pudding, veg, Brandy
-                      peppercorn sauce
-                    </p>
-                    <b>OR</b>
-                    <br />
-                    <br />
-                    <strong>SEAFOOD PAELLA</strong>
-                    <p>
-                      Scallops, prawns, lobster, clams, mussels, Spanish rice,
-                      chorizo cream sauce
-                    </p>
-                  </li>
-                  <li>
-                    <strong>DARK CHOCOLATE PATE</strong>
-                    <p>Cherry Compote, meringue, chocolate pretzels</p>
-                  </li>
-                  <li>
-                    <Button
-                      buttonText="ORDER NOW"
-                      buttonLink="https://frasersgh.square.site/valentines-day?location=11ea7f380b303525a95a0cc47a2aeaec"
-                    />
-                  </li>
-                </ul>
-              </div>
-            </Double> */}
             <Double
               id="gift-cards"
               title="Gift Cards Available"
@@ -252,7 +163,7 @@ export default function Home({
         `}</style>
       </Layout>
     </>
-  )
+  );
 }
 
 Home.propTypes = {
@@ -260,4 +171,4 @@ Home.propTypes = {
   aboutBusinessData: PropTypes.object,
   announcement1Data: PropTypes.object,
   announcement2Data: PropTypes.object,
-}
+};

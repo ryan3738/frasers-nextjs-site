@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import { SRLWrapper, useLightbox } from 'simple-react-lightbox'
-import gallery from '../public/data/gallery-grid.json'
+import { SRLWrapper } from 'simple-react-lightbox';
 
 export default function ImageLightBox() {
   return (
@@ -64,5 +62,5 @@ export default function ImageLightBox() {
         }
       `}</style>
     </>
-  )
+  );
 }

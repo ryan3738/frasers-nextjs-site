@@ -1,14 +1,11 @@
 // import utilStyles from '../styles/utils.module.css'
-import Social from './Social'
-import Button from './Button'
-import siteData from '../public/data/site-data.json'
+import Social from './Social';
+import Button from './Button';
+import siteData from '../public/data/site-data.json';
 
 export default function Contact() {
   return (
     <>
-      {/* <div className='contact-header'> */}
-      {/* <h3 className={utilStyles.lightText}>CONTACT US</h3> */}
-      {/* </div> */}
       <div className="contact-content">
         <div id="contact-info">
           <div>
@@ -39,7 +36,7 @@ export default function Contact() {
             <h2>HOURS</h2>
             <div>
               {siteData.hoursSummary.map((item) => (
-                <div>
+                <div key={item.days}>
                   <div>
                     <strong>{item.days}</strong>
                   </div>
@@ -80,14 +77,6 @@ export default function Contact() {
         </div>
       </div>
       <style jsx>{`
-        /* .contact-container {
-          display: flex;
-          flex-direction: column;
-        } */
-        /* .contact-header {
-          padding: 3rem 0 0;
-        } */
-
         .contact-content {
           display: flex;
           flex-direction: column;
@@ -114,5 +103,5 @@ export default function Contact() {
         }
       `}</style>
     </>
-  )
+  );
 }

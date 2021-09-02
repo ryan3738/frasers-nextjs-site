@@ -1,14 +1,14 @@
-import Link from 'next/link'
-import React, { useState, useRef } from 'react'
+import Link from 'next/link';
+import React, { useRef } from 'react';
 // import Image from 'next/image'
-import Burger from './Burger'
-import BurgerMenu from './BurgerMenu'
-import { useOnClickOutside } from '../hooks/hooks'
-import NavList from './NavList'
+import Burger from './Burger';
+import BurgerMenu from './BurgerMenu';
+import { useOnClickOutside } from '../hooks/hooks';
+import NavList from './NavList';
 
 export default function NavBar({ children, open, setOpen }) {
-  const node = useRef()
-  useOnClickOutside(node, () => setOpen(false))
+  const node = useRef();
+  useOnClickOutside(node, () => setOpen(false));
 
   return (
     <>
@@ -64,11 +64,6 @@ export default function NavBar({ children, open, setOpen }) {
           top: 0;
         }
 
-        .nav-list a:hover {
-          background: var(--primary-color-desaturated);
-          color: var(--background-color);
-        }
-
         @media (min-width: 769px) {
           .burger {
             display: none;
@@ -79,5 +74,5 @@ export default function NavBar({ children, open, setOpen }) {
         }
       `}</style>
     </>
-  )
+  );
 }

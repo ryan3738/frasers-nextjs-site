@@ -1,23 +1,18 @@
-import Head from 'next/head'
-// import styles from './layout.module.css';
-// import utilStyles from '../styles/utils.module.css'
-// import Link from 'next/link'
-import PropTypes from 'prop-types'
-import Hero from './Hero'
-// import Image from 'next/image'
-import Button from './Button'
-import NavList from './NavList'
+import Head from 'next/head';
+import PropTypes from 'prop-types';
+import Hero from './Hero';
+import NavList from './NavList';
 
-export const siteName = 'Frasers'
+export const siteName = 'Frasers';
 export const siteTitle =
-  'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest'
+  'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
 
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
   mediumScreen: '769px',
   largeScreen: '1008px',
-}
+};
 
 export default function Layout({ children, home }) {
   return (
@@ -205,9 +200,9 @@ export default function Layout({ children, home }) {
         }
       `}</style>
     </div>
-  )
+  );
 }
 Layout.propTypes = {
   children: PropTypes.any,
   home: PropTypes.bool,
-}
+};

@@ -1,4 +1,7 @@
-export default function Announcements(props) {
+import Button from './Button';
+import Double from './Double.tsx';
+
+export default function Announcements() {
   return (
     <>
       <Double
@@ -144,5 +147,5 @@ export default function Announcements(props) {
         }
       `}</style>
     </>
-  )
+  );
 }
