@@ -11,7 +11,7 @@
       "itemName": "Tomato & Burrata",
       "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
       "category": "Starters",
-      "price": 15,
+      "price": 16,
       "modifier": "",
       "dietaryPreferences": "Gluten-free | Vegetarian",
       "available": true
@@ -20,7 +20,7 @@
       "itemName": "Duck Liver Pate",
       "description": "Homemade duck liver pate served with pear compote and crostinis",
       "category": "Starters",
-      "price": 14,
+      "price": 16,
       "modifier": "",
       "available": true
     },
@@ -44,7 +44,7 @@
       "itemName": "BEEF TENDERLOIN",
       "description": "Grilled 7oz filet mignon, garlic mashed potatoes, vegetables, horseradish butter",
       "category": "Entrees",
-      "price": 39,
+      "price": 41,
       "modifier": "ADD SURF",
       "modifierPrice": 12,
       "dietaryPreferences": "Gluten-free",
@@ -88,10 +88,10 @@
       "available": true
     },
     {
-      "itemName": "USDA DRY AGED ANGUS SPENCER STEAK",
-      "description": "16oz Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
+      "itemName": "USDA PRIME ANGUS SPENCER STEAK",
+      "description": "12oz Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
       "category": "Entrees",
-      "price": 48,
+      "price": 44,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -162,7 +162,7 @@
       "itemName": "GOAT CHEESE SALAD",
       "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
       "category": "Starters",
-      "price": 15,
+      "price": 16,
       "modifier": "",
       "modifierPrice": null,
       "available": true
@@ -195,7 +195,7 @@
       "itemName": "DRY GARLIC BABY BACK RIBS",
       "description": "Baby back ribs, crispy garlic, blackberry mustard sauce",
       "category": "Starters",
-      "price": 17,
+      "price": 18,
       "modifier": "",
       "modifierPrice": null,
       "dietaryPreferences": "Gluten-free",
@@ -215,7 +215,7 @@
       "itemName": "Penn Cove Mussels",
       "description": "Steamed local mussels in a fragrant curry cream broth",
       "category": "Starters",
-      "price": 15,
+      "price": 16,
       "modifier": "",
       "modifierPrice": null,
       "dietaryPreferences": "Gluten-free",
@@ -225,7 +225,7 @@
       "itemName": "DUNGENESS CRAB CAKES",
       "description": "Fried dungeness crab cakes",
       "category": "Starters",
-      "price": 19,
+      "price": 20,
       "modifier": "",
       "available": true
     },
@@ -257,7 +257,7 @@
       "itemName": "GARLIC & BRIE FONDUE FOR TWO",
       "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread",
       "category": "Starters",
-      "price": 18,
+      "price": 20,
       "modifier": "",
       "dietaryPreferences": "Vegetarian",
       "available": true
@@ -346,7 +346,7 @@
       "itemName": "RACK OF LAMB",
       "description": "Pistachio crusted lamb rack, garlic mashed potatoes, & mixed vegetables",
       "category": "Entrees",
-      "price": 37,
+      "price": 39,
       "modifier": "",
       "dietaryPreferences": "Gluten-free",
       "available": true
@@ -388,7 +388,7 @@
       "itemName": "SEAFOOD CHOWDER",
       "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
       "category": "Starters",
-      "price": 13,
+      "price": 14,
       "modifier": "",
       "available": true
     },
@@ -452,7 +452,7 @@
       "itemName": "YOUNG GREENS SEASONAL SALAD",
       "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette",
       "category": "Starters",
-      "price": 10,
+      "price": 11,
       "modifier": "",
       "modifierPrice": null,
       "dietaryPreferences": "Gluten-free",
