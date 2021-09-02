@@ -11,7 +11,7 @@
       "itemName": "Tomato & Burrata",
       "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
       "category": "Starters",
-      "price": 15,
+      "price": 16,
       "modifier": "",
       "dietaryPreferences": "Gluten-free | Vegetarian",
       "available": true
@@ -20,7 +20,7 @@
       "itemName": "Duck Liver Pate",
       "description": "Homemade duck liver pate served with pear compote and crostinis",
       "category": "Starters",
-      "price": 14,
+      "price": 16,
       "modifier": "",
       "available": true
     },
@@ -88,8 +88,8 @@
       "available": true
     },
     {
-      "itemName": "USDA NEW YORK STRIP LOIN STEAK",
-      "description": "10oz Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
+      "itemName": "USDA PRIME ANGUS SPENCER STEAK",
+      "description": "12oz Prime ribeye, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
       "category": "Entrees",
       "price": 44,
       "modifier": "",
@@ -215,7 +215,7 @@
       "itemName": "Penn Cove Mussels",
       "description": "Steamed local mussels in a fragrant curry cream broth",
       "category": "Starters",
-      "price": 15,
+      "price": 16,
       "modifier": "",
       "modifierPrice": null,
       "dietaryPreferences": "Gluten-free",
@@ -388,7 +388,7 @@
       "itemName": "SEAFOOD CHOWDER",
       "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
       "category": "Starters",
-      "price": 13,
+      "price": 14,
       "modifier": "",
       "available": true
     },
@@ -452,7 +452,7 @@
       "itemName": "YOUNG GREENS SEASONAL SALAD",
       "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette",
       "category": "Starters",
-      "price": 10,
+      "price": 11,
       "modifier": "",
       "modifierPrice": null,
       "dietaryPreferences": "Gluten-free",
