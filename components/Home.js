@@ -8,6 +8,7 @@ import Contact from './Contact';
 import Button from './Button';
 import MenuSection from './MenuSection';
 import siteData from '../public/data/site-data.json';
+import styles from '../styles/styles.module.css';
 
 export default function Home({
   aboutOwnerData,
@@ -23,7 +24,7 @@ export default function Home({
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <section className="container">
-          <h2 id="about" className="anchor hidden-header">
+          <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
             About
           </h2>
           {/* <ImageLightBox /> */}
@@ -106,7 +107,7 @@ export default function Home({
           {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
         </section>
         <section id="menu" className="container">
-          <div className="header">
+          <div className={styles.header}>
             <h1>MENU</h1>
           </div>
           <MenuSection category="Starters" />
@@ -114,39 +115,18 @@ export default function Home({
           {/* <Button buttonText="SEE FULL MENU ==>" buttonLink="/menu" /> */}
         </section>
         <section>
-          <div className="header">
+          <div className={styles.header}>
             <h1>Gallery</h1>
           </div>
           <GalleryGrid />
         </section>
         <section id="contact">
-          <div className="header hidden-header">
+          <div className={`${styles.header} ${styles.hiddenHeader}`}>
             <h1>CONTACT</h1>
           </div>
           <Contact />
         </section>
         <style jsx>{`
-          .header {
-            padding: 5rem 0 0;
-            color: var(--primary-color-desaturated);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 5px;
-          }
-
-          .header h1 {
-            font-weight: bold;
-            font-size: calc(2rem + 2vw + 2vh);
-            letter-spacing: 0.05em;
-            font-weight: bold;
-            opacity: 0.8;
-          }
-          .hidden-header {
-            padding: 0;
-            visibility: hidden;
-          }
           .container {
             width: 100%;
             max-width: 1120px;

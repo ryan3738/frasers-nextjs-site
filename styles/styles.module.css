@@ -1,0 +1,22 @@
+.header {
+    padding: 2rem 0 0;
+    color: var(--primary-color-desaturated);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+.header h1 {
+    font-weight: bold;
+    font-size: calc(2rem + 2vw + 2vh);
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.hiddenHeader {
+    padding: 0;
+    visibility: hidden;
+}
