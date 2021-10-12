@@ -3,9 +3,9 @@
 A Next.js website for Fraser's Gourmet Hideaway Restaurant with a responsive menu page and a CMS and Authentication.
 
 ## Description
-An in-depth paragraph about your project and overview of use.
-## Getting Started
 
+This is a website for Fraser Gourmet Hideaway coded using Next.js, React.js, Javscript, Typescript, NextAuth, & Netflify CMS.
+## Getting Started
 
 1. Clone the repository locally
 2. Navigate to the root directory
@@ -24,18 +24,16 @@ An in-depth paragraph about your project and overview of use.
 
 ## Next Steps
 
-    How/where to download your program
+    Make changes to the website info in the public folder or the components
     Any modifications needed to be made to files/folders
 
-## Executing program
+## Deploy
 
-    How to run the program
-    Step-by-step bullets
+The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-code blocks for commands
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
 
 
-This is a website for Fraser Gourmet Hideaway coded using Next.js, React.js, Javscript, Typescript, NextAuth, & Netflify CMS.
