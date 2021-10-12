@@ -69,12 +69,12 @@ export default function Home({
               <div>
                 To purchase a gift card please call us at{' '}
                 <span className="nowrap">{siteData.phoneNumber}</span>
-                <br />
+                {/* <br />
                 <br />
                 <Button
                   buttonText="ORDER GIFT CARDS ONLINE"
                   buttonLink="https://frasersgh.square.site/product/gift-card/88"
-                />
+                /> */}
               </div>
             </Double>
             <Double
