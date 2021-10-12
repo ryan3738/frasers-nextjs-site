@@ -7,22 +7,19 @@ An in-depth paragraph about your project and overview of use.
 ## Getting Started
 
 
-    1. Clone the repository locally
-    2. Navigate to the root directory
-    3. Install dependencies
+1. Clone the repository locally
+2. Navigate to the root directory
+3. Install dependencies
 
         npm install
         # or
         yarn
-
-
-    4. Run the development server
-
+4. Run the development server
+   
         npm run dev
         # or
         yarn dev
-
-    5. Open http://localhost:3100 with your browser to see the website
+5. Open http://localhost:3100 with your browser to see the website
 
 
 ## Next Steps
