@@ -1,1 +1,1 @@
-This is a NextJs website for Frasers Gourmet Hideaway
+This is a website for Fraser Gourmet Hideaway coded using Next.js, React.js, Javscript, Typescript, NextAuth, & Netflify CMS.
