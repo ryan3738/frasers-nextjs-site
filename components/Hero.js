@@ -33,7 +33,7 @@ export default function Hero() {
             </a>
             <br />
             <br />
-            <h3>Call To Make a Reservation</h3>
+            <h3>Reservations Recommended</h3>
             <p>
               <strong> CALL FOR TAKEOUT</strong>
               <br />
@@ -46,17 +46,20 @@ export default function Hero() {
             <br />
             <br />
             <div>
-              {siteData.hoursSummary.map((item) => (
-                <div key={item.days}>
-                  <div>
-                    <strong>{item.days}</strong>
+              <h3>HOURS</h3>
+              <div>
+                {siteData.hoursSummary.map((item) => (
+                  <div key={item.days}>
+                    <div>
+                      <strong>{item.days}</strong>
+                    </div>
+                    <div>
+                      <span className="medium-emphasis">{item.hours}</span>
+                    </div>
+                    <br />
                   </div>
-                  <div>
-                    <span className="medium-emphasis">{item.hours}</span>
-                  </div>
-                  <br />
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
