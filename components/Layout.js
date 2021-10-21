@@ -1,3 +1,4 @@
+import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Hero from './Hero';
@@ -10,6 +11,7 @@ export const meta = {
       'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
     keywords: 'restaurant, steak, seafood, whidbey',
     cardImage: '/android-chrome-512x512.png',
+    url: 'https://frasersgh.com',
   };
 
 const theme = {
@@ -21,6 +23,7 @@ const theme = {
 
 
 export default function Layout({ children, home, }) {
+  const router = useRouter();
   return (
     <div className="container">
       <Head>
@@ -33,9 +36,9 @@ export default function Layout({ children, home, }) {
         {/* Open Graph */}
         <meta
           property="og:url"
-          content={`https://bellingham3d.com${router.asPath}`}
+          content={meta.url+router.asPath}
         />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="restaurant" />
         <meta property="og:site_name" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
