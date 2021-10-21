@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 import Hero from './Hero';
 import NavList from './NavList';
 
-export const siteName = 'Frasers';
-export const siteTitle =
-  'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest';
+export const meta = {
+    name: 'Frasers',
+    title: 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest',
+    description:
+      'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
+    keywords: 'restaurant, steak, seafood, whidbey',
+    cardImage: '/android-chrome-512x512.png',
+  };
 
 const theme = {
   maxWidth: '1200px',
@@ -14,20 +19,33 @@ const theme = {
   largeScreen: '1008px',
 };
 
-export default function Layout({ children, home }) {
+
+export default function Layout({ children, home, }) {
   return (
     <div className="container">
       <Head>
         {/* <html lang='en' /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <title>{meta.title}</title> */}
+        <meta name="description" content={meta.description} />
+        <meta name="keywords" content={meta.keywords} />
+        {/* Social media information */}
+        {/* Open Graph */}
         <meta
-          name="description"
-          content="Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients."
+          property="og:url"
+          content={`https://bellingham3d.com${router.asPath}`}
         />
-        <meta
-          name="keywords"
-          content="gourmet, best, northwest, restaurant, steak, seafood, pasta, dessert, fine, dining, dinner, happy, hour, cocktail, wine, beer, oak, harbor, whidbey, island, washington, wa, dine in, dine-in, takeout, table, service,"
-        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:image" content={meta.cardImage} />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="website" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content={meta.cardImage} />
         {/* Global site tag (gtag.js) - Google Analytics */}
         <script
           async
@@ -62,14 +80,6 @@ export default function Layout({ children, home }) {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        {/* <meta
-          property='og:image'
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name='og:title' content={siteTitle} />
-        <meta name='twitter:card' content='summary_large_image' /> */}
       </Head>
       <header className="header">
         {home ? (

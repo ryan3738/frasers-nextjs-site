@@ -1,12 +1,12 @@
 import Head from 'next/head';
 import Button from './Button';
-import Layout, { siteTitle } from './Layout';
+import Layout, { meta } from './Layout';
 
 export default function Dashboard() {
   return (
     <Layout>
       <Head>
-        <title>Dashboard | {siteTitle}</title>
+        <title>Dashboard | {meta.title}</title>
         <meta name="robots" content="noindex" />
       </Head>
       <div className="contact-content">

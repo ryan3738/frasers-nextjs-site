@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Layout, { siteTitle } from './Layout';
+import Layout, { meta } from './Layout';
 import Double from './Double.tsx';
 import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
@@ -20,7 +20,7 @@ export default function Home({
     <>
       <Layout home>
         <Head>
-          <title>{siteTitle}</title>
+          <title>{meta.title}</title>
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <section className="container">
