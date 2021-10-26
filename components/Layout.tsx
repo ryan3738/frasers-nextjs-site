@@ -1,9 +1,13 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import Hero from './Hero';
 import NavList from './NavList';
 import Script from 'next/script';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  home: boolean
+}
 
 export const meta = {
   name: 'Frasers',
@@ -22,7 +26,7 @@ const theme = {
   largeScreen: '1008px'
 };
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home }: LayoutProps) {
   const router = useRouter();
   return (
     <div className="container">
@@ -210,7 +214,3 @@ export default function Layout({ children, home }) {
     </div>
   );
 }
-Layout.propTypes = {
-  children: PropTypes.any,
-  home: PropTypes.bool
-};
