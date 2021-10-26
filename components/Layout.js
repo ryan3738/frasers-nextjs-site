@@ -3,26 +3,26 @@ import Head from 'next/head';
 import PropTypes from 'prop-types';
 import Hero from './Hero';
 import NavList from './NavList';
+import Script from 'next/script';
 
 export const meta = {
-    name: 'Frasers',
-    title: 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest',
-    description:
-      'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
-    keywords: 'restaurant, steak, seafood, whidbey',
-    cardImage: '/android-chrome-512x512.png',
-    url: 'https://frasersgh.com',
-  };
+  name: 'Frasers',
+  title: 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest',
+  description:
+    'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
+  keywords: 'restaurant, steak, seafood, whidbey',
+  cardImage: '/android-chrome-512x512.png',
+  url: 'https://frasersgh.com'
+};
 
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
   mediumScreen: '769px',
-  largeScreen: '1008px',
+  largeScreen: '1008px'
 };
 
-
-export default function Layout({ children, home, }) {
+export default function Layout({ children, home }) {
   const router = useRouter();
   return (
     <div className="container">
@@ -34,10 +34,7 @@ export default function Layout({ children, home, }) {
         <meta name="keywords" content={meta.keywords} />
         {/* Social media information */}
         {/* Open Graph */}
-        <meta
-          property="og:url"
-          content={meta.url+router.asPath}
-        />
+        <meta property="og:url" content={meta.url + router.asPath} />
         <meta property="og:type" content="restaurant" />
         <meta property="og:site_name" content={meta.title} />
         <meta property="og:description" content={meta.description} />
@@ -50,20 +47,6 @@ export default function Layout({ children, home, }) {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.cardImage} />
         {/* Global site tag (gtag.js) - Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YS529TE94E');
-            `,
-          }}
-        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -96,6 +79,18 @@ export default function Layout({ children, home, }) {
           </>
         )}
       </header>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YS529TE94E');
+            `}
+      </Script>
       <main className="main">{children}</main>
       <footer className="footer">
         <span>© 2020 Frasers Gourmet Hideaway |</span>
@@ -217,5 +212,5 @@ export default function Layout({ children, home, }) {
 }
 Layout.propTypes = {
   children: PropTypes.any,
-  home: PropTypes.bool,
+  home: PropTypes.bool
 };
