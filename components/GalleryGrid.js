@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import gallery from '../public/data/gallery-grid.json';
 
-const getGalleryItem = () => (
+const getGalleryItem = galleryArray => (
   <>
     <div className="gallery-container">
-      {gallery
+      {galleryArray
         // .filter((e) => e.Category === category)
-        //   .filter((e) => e.Available === true)
-        .map((data) => (
+        // .filter((e) => e.Available === true)
+        .map(data => (
           <div
             key={data.imageAlt}
             id="image-div"
