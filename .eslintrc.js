@@ -99,8 +99,18 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
+
+    'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/anchor-is-valid': [
+      'warn',
+      {
+        aspects: ['invalidHref'],
+      },
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'prettier/prettier': [
-      'error',
+      1,
       {
         printWidth: 80,
         trailingComma: 'es5',
@@ -113,15 +123,6 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    'jsx-a11y/href-no-hash': 'off',
-    'jsx-a11y/anchor-is-valid': [
-      'warn',
-      {
-        aspects: ['invalidHref'],
-      },
-    ],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
   },
   plugins: ['html', 'prettier', 'react-hooks'],
   overrides: [
