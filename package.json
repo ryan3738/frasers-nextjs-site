@@ -17,7 +17,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^3.9.2",
     "classnames": "^2.3.1",
     "date-fns": "^2.25.0",
     "gray-matter": "^4.0.3",
