@@ -1,12 +1,15 @@
 import Link from 'next/link';
 
-export default function NavList(props) {
+const showOnNavBar = 'show-on-large';
+const showInBurgerMenu = 'burger-menu-link';
+
+export default function NavList(properties) {
   return (
     <>
       <Link href="/">
         <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
+          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
+            'burgerMenuLink' in properties && showInBurgerMenu
           }`}
         >
           Home
@@ -14,47 +17,18 @@ export default function NavList(props) {
       </Link>
       <Link href="/menu">
         <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
+          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
+            'burgerMenuLink' in properties && showInBurgerMenu
           }`}
         >
           Menu
         </a>
       </Link>
 
-      {/* <Link href='/#takeout'>
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          Takeout
-        </a>
-      </Link> */}
-      {/* <Link href="/#new-years">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          New Year's Plating
-        </a>
-      </Link> */}
-
-      {/* <Link href="/#valentines">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          Valentine's Special
-        </a>
-      </Link> */}
-
       <Link href="/#about">
         <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
+          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
+            'burgerMenuLink' in properties && showInBurgerMenu
           }`}
         >
           ABOUT
@@ -62,8 +36,8 @@ export default function NavList(props) {
       </Link>
       <Link href="/#gift-cards">
         <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
+          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
+            'burgerMenuLink' in properties && showInBurgerMenu
           }`}
         >
           Gift Cards
@@ -71,8 +45,8 @@ export default function NavList(props) {
       </Link>
       <Link href="/#contact">
         <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
+          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
+            'burgerMenuLink' in properties && showInBurgerMenu
           }`}
         >
           Contact
@@ -80,8 +54,8 @@ export default function NavList(props) {
       </Link>
 
       {/* <div
-        className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-          'burgerMenuLink' in props && 'burger-menu-link'
+        className={`nav-link ${'showOnLarge' in props && showOnNavBar} ${
+          'burgerMenuLink' in props && showInBurgerMenu
         }`}
       >
         <Button
