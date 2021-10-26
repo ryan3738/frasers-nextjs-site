@@ -15,7 +15,6 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
       <Layout home>
         <Head>
           <title>{meta.title}</title>
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <section className="container">
           <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
