@@ -12,7 +12,6 @@ module.exports = {
     node: true,
     es6: true
   },
-  plugins: ['simple-import-sort'],
   settings: {
     react: {
       version: 'detect'
@@ -33,7 +32,6 @@ module.exports = {
     'no-console': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'simple-import-sort/sort': 'off',
     'unicorn/filename-case': 'off'
   }
 };
