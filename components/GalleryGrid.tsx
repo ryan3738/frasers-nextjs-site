@@ -8,7 +8,7 @@ interface ImageProps {
   size: string;
 }
 
-const getGalleryItem = (galleryArray: [ImageProps] | []) => (
+const getGalleryItem = (galleryArray: [ImageProps]) => (
   <>
     <div className="gallery-container">
       {galleryArray
