@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import PropTypes from 'prop-types';
 import Layout, { meta } from './Layout';
 import Double from './Double.tsx';
 import GalleryGrid from './GalleryGrid';
@@ -10,12 +9,7 @@ import MenuSection from './MenuSection';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 
-export default function Home({
-  aboutOwnerData,
-  aboutBusinessData,
-  announcement1Data,
-  announcement2Data
-}) {
+export default function Home({ aboutOwnerData, aboutBusinessData }) {
   return (
     <>
       <Layout home>
@@ -158,10 +152,3 @@ export default function Home({
     </>
   );
 }
-
-Home.propTypes = {
-  aboutOwnerData: PropTypes.object,
-  aboutBusinessData: PropTypes.object,
-  announcement1Data: PropTypes.object,
-  announcement2Data: PropTypes.object
-};

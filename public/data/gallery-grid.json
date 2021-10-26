@@ -1,6 +1,6 @@
-{"images": [
+ [
   {
-    "src": "/images/gallery-grid/lobster_tail_paella.jpg",
+    "src": "",
     "alt": "lobster tail paella",
     "size": "big"
   },
@@ -135,4 +135,3 @@
     "size": "small"
   }
 ]
-}

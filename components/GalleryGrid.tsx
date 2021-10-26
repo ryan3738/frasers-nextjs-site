@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import {images} from '../public/data/gallery-grid.json';
+import images from '../public/data/gallery-grid.json';
+
 
 interface ImageProps {
   src: string;
@@ -7,17 +8,17 @@ interface ImageProps {
   size: string;
 }
 
-const getGalleryItem = (galleryArray: [ImageProps]) => (
+const getGalleryItem = (galleryArray: [ImageProps] | []) => (
   <>
     <div className="gallery-container">
       {galleryArray
         // .filter((e) => e.Category === category)
         // .filter((e) => e.Available === true)
         .map(data => (
-          <div
+          data.src && (<div
             key={data.alt}
             id="image-div"
-            // className={data.imageSize}
+            // className={data.size}
           >
             <div className="image-overlay"> </div>
             <div className="overlay-text">{data.alt}</div>
@@ -32,7 +33,7 @@ const getGalleryItem = (galleryArray: [ImageProps]) => (
               // placeholder="blur"
               // blurDataURL="/public/favicon-32x32.png"
             />
-          </div>
+          </div>)
         ))}
     </div>
     <style jsx>{`
