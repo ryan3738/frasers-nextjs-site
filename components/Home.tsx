@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import Layout, { meta } from './Layout';
-import Double from './Double.tsx';
+import Double from './Double';
 import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
 import Button from './Button';
@@ -143,8 +143,6 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
             background-color: var(--surface-color);
             padding: 10px;
             border-radius: 7px;
-          }
-          @media (min-width: 460px) {
           }
         `}</style>
       </Layout>
