@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Hero from './Hero';
 import NavList from './NavList';
 import Script from 'next/script';
+import { useState } from 'react';
+import NavBar from './NavBar'
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -27,8 +29,10 @@ const theme = {
 };
 
 export default function Layout({ children, home }: LayoutProps) {
+  const [open, setOpen] = useState(false);
   const router = useRouter();
   return (
+    <NavBar open={open} setOpen={setOpen}>
     <div className="container">
       <Head>
         {/* <html lang='en' /> */}
@@ -62,13 +66,13 @@ export default function Layout({ children, home }: LayoutProps) {
           type="image/png"
           sizes="32x32"
           href="/favicon-32x32.png"
-        />
+          />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
           href="/favicon-16x16.png"
-        />
+          />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <header className="header">
@@ -86,14 +90,14 @@ export default function Layout({ children, home }: LayoutProps) {
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
         strategy="afterInteractive"
-      />
+        />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-YS529TE94E');
-            `}
+              `}
       </Script>
       <main className="main">{children}</main>
       <footer className="footer">
@@ -105,7 +109,7 @@ export default function Layout({ children, home }: LayoutProps) {
             href="https://github.com/ryan3738"
             target="_blank"
             rel="noreferrer noopener"
-          >
+            >
             Ryan Fraser
           </a>
         </span>
@@ -212,5 +216,6 @@ export default function Layout({ children, home }: LayoutProps) {
         }
       `}</style>
     </div>
+            </NavBar>
   );
 }
