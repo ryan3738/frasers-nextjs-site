@@ -24,9 +24,11 @@ export default function BurgerMenu({ open }) {
         }
 
         @media (max-width: var(--medium-screen)) {
-          width: 100%;
-          font-size: 1.5rem;
-          text-align: center;
+          .styled-menu {
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+          }
         }
 
         a {
@@ -51,5 +53,5 @@ export default function BurgerMenu({ open }) {
 }
 
 BurgerMenu.propTypes = {
-  open: bool.isRequired,
+  open: bool.isRequired
 };
