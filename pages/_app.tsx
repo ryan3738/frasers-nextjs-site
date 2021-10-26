@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const [open, setOpen] = useState(false);
   return (
     <NavBar open={open} setOpen={setOpen}>
-      <Component {...pageProps} open={open} setOpen={setOpen} />
+      <Component {...pageProps} />
     </NavBar>
   );
 }
