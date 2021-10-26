@@ -14,7 +14,7 @@ export default function Home({
   aboutOwnerData,
   aboutBusinessData,
   announcement1Data,
-  announcement2Data,
+  announcement2Data
 }) {
   return (
     <>
@@ -86,7 +86,7 @@ export default function Home({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutBusinessData.contentHtml,
+                  __html: aboutBusinessData.contentHtml
                 }}
               />
             </Double>
@@ -99,7 +99,7 @@ export default function Home({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutOwnerData.contentHtml,
+                  __html: aboutOwnerData.contentHtml
                 }}
               />
             </Double>
@@ -163,5 +163,5 @@ Home.propTypes = {
   aboutOwnerData: PropTypes.object,
   aboutBusinessData: PropTypes.object,
   announcement1Data: PropTypes.object,
-  announcement2Data: PropTypes.object,
+  announcement2Data: PropTypes.object
 };

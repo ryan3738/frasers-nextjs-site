@@ -1,7 +1,13 @@
 import Image from 'next/image';
-import gallery from '../public/data/gallery-grid.json';
+import {images} from '../public/data/gallery-grid.json';
 
-const getGalleryItem = galleryArray => (
+interface ImageProps {
+  src: string;
+  alt: string;
+  size: string;
+}
+
+const getGalleryItem = (galleryArray: [ImageProps]) => (
   <>
     <div className="gallery-container">
       {galleryArray
@@ -9,16 +15,16 @@ const getGalleryItem = galleryArray => (
         // .filter((e) => e.Available === true)
         .map(data => (
           <div
-            key={data.imageAlt}
+            key={data.alt}
             id="image-div"
             // className={data.imageSize}
           >
             <div className="image-overlay"> </div>
-            <div className="overlay-text">{data.imageAlt}</div>
+            <div className="overlay-text">{data.alt}</div>
             <Image
               className="image"
-              src={data.imageSource}
-              alt={data.imageAlt}
+              src={data.src}
+              alt={data.alt}
               layout="responsive"
               objectFit="cover"
               height="560"
@@ -134,5 +140,5 @@ const getGalleryItem = galleryArray => (
 );
 
 export default function GalleryGrid() {
-  return <>{getGalleryItem(gallery)}</>;
+  return <>{getGalleryItem(images)}</>;
 }

@@ -1,137 +1,138 @@
-[
+{"images": [
   {
-    "imageSource": "/images/gallery-grid/lobster_tail_paella.jpg",
-    "imageAlt": "lobster tail paella",
-    "imageSize": "big"
+    "src": "/images/gallery-grid/lobster_tail_paella.jpg",
+    "alt": "lobster tail paella",
+    "size": "big"
   },
   {
-    "imageSource": "/images/gallery-grid/pork_rillettes.jpg",
-    "imageAlt": "pork rillettes",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/pork_rillettes.jpg",
+    "alt": "pork rillettes",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/wine-takeout-bag.jpg",
-    "imageAlt": "wine takeout bag",
-    "imageSize": "vertical"
+    "src": "/images/gallery-grid/wine-takeout-bag.jpg",
+    "alt": "wine takeout bag",
+    "size": "vertical"
   },
   {
-    "imageSource": "/images/gallery-grid/wild_boar.jpg",
-    "imageAlt": "wild boar with broccolini",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/wild_boar.jpg",
+    "alt": "wild boar with broccolini",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/fanny_bay_oysters.jpg",
-    "imageAlt": "raw fanny bay oysters",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/fanny_bay_oysters.jpg",
+    "alt": "raw fanny bay oysters",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/samosa.jpg",
-    "imageAlt": "samosas",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/samosa.jpg",
+    "alt": "samosas",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/beef_pork_cheek_burger.jpg",
-    "imageAlt": "beef pork cheek burger",
-    "imageSize": "big"
+    "src": "/images/gallery-grid/beef_pork_cheek_burger.jpg",
+    "alt": "beef pork cheek burger",
+    "size": "big"
   },
   {
-    "imageSource": "/images/gallery-grid/ahi_poke.jpg",
-    "imageAlt": "ahi poke",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/ahi_poke.jpg",
+    "alt": "ahi poke",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/crab-claw.jpg",
-    "imageAlt": "crab claw",
-    "imageSize": "vertical"
+    "src": "/images/gallery-grid/crab-claw.jpg",
+    "alt": "crab claw",
+    "size": "vertical"
   },
   {
-    "imageSource": "/images/gallery-grid/bananas_foster.jpg",
-    "imageAlt": "bananas foster",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/bananas_foster.jpg",
+    "alt": "bananas foster",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/meyer-lemon-tart.jpg",
-    "imageAlt": "meyer lemon tart",
-    "imageSize": "big"
+    "src": "/images/gallery-grid/meyer-lemon-tart.jpg",
+    "alt": "meyer lemon tart",
+    "size": "big"
   },
   {
-    "imageSource": "/images/gallery-grid/profiterole-pumpkin-ice-cream.jpg",
-    "imageAlt": "profiterole with pumpkin ice cream",
-    "imageSize": "horizontal"
+    "src": "/images/gallery-grid/profiterole-pumpkin-ice-cream.jpg",
+    "alt": "profiterole with pumpkin ice cream",
+    "size": "horizontal"
   },
   {
-    "imageSource": "/images/gallery-grid/ramos_gin_fizz.jpg",
-    "imageAlt": "ramos gin fiz",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/ramos_gin_fizz.jpg",
+    "alt": "ramos gin fiz",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/lamb.jpg",
-    "imageAlt": "rack of lamb",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/lamb.jpg",
+    "alt": "rack of lamb",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/wild-boar-ragout.jpg",
-    "imageAlt": "wild boar ragout",
-    "imageSize": "horizontal"
+    "src": "/images/gallery-grid/wild-boar-ragout.jpg",
+    "alt": "wild boar ragout",
+    "size": "horizontal"
   },
   {
-    "imageSource": "/images/gallery-grid/cappuccino.jpg",
-    "imageAlt": "cappuccino",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/cappuccino.jpg",
+    "alt": "cappuccino",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/squash-blossom.jpg",
-    "imageAlt": "squash blossoms",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/squash-blossom.jpg",
+    "alt": "squash blossoms",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/escargot.jpg",
-    "imageAlt": "escargot ",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/escargot.jpg",
+    "alt": "escargot ",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/mustache-biscuit.jpg",
-    "imageAlt": "beef stew",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/mustache-biscuit.jpg",
+    "alt": "beef stew",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/neah-bay-salmon-blueberry-beurre-blanc.jpeg",
-    "imageAlt": "neah bay salmon with bluebeery beurre blanc",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/neah-bay-salmon-blueberry-beurre-blanc.jpeg",
+    "alt": "neah bay salmon with bluebeery beurre blanc",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/fish-lentils-sauce.jpg",
-    "imageAlt": "halibut with lentils",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/fish-lentils-sauce.jpg",
+    "alt": "halibut with lentils",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/nehi_cocktail.jpg",
-    "imageAlt": "nehi cocktail",
-    "imageSize": "big"
+    "src": "/images/gallery-grid/nehi_cocktail.jpg",
+    "alt": "nehi cocktail",
+    "size": "big"
   },
   {
-    "imageSource": "/images/gallery-grid/pan_seared_venison.jpg",
-    "imageAlt": "pan seared venison",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/pan_seared_venison.jpg",
+    "alt": "pan seared venison",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/pan_seared_wild_ling_cod.jpg",
-    "imageAlt": "pan seared wild ling cod",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/pan_seared_wild_ling_cod.jpg",
+    "alt": "pan seared wild ling cod",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/frasers_art.jpg",
-    "imageAlt": "art at frasers",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/frasers_art.jpg",
+    "alt": "art at frasers",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/albacore_tuna.jpg",
-    "imageAlt": "albacore tuna",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/albacore_tuna.jpg",
+    "alt": "albacore tuna",
+    "size": "small"
   },
   {
-    "imageSource": "/images/gallery-grid/ice-cream-strawberrry-rhubarb.jpg",
-    "imageAlt": "strawberry rhubarb",
-    "imageSize": "small"
+    "src": "/images/gallery-grid/ice-cream-strawberrry-rhubarb.jpg",
+    "alt": "strawberry rhubarb",
+    "size": "small"
   }
 ]
+}
