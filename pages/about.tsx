@@ -9,7 +9,6 @@ export default function AboutPage() {
         <title>MENU</title>
       </Head>
       <section className="menu-container">
-        <Double category="about" />
       </section>
       <style jsx>{`
         .menu-container {
