@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import images from '../public/data/gallery-grid.json';
+// import images from '../public/data/gallery-grid.json';
 
 
 interface ImageProps {
@@ -8,8 +8,14 @@ interface ImageProps {
   size: string;
 }
 
-const getGalleryItem = (galleryArray) => (
+interface GridProps {
+  images: ImageProps[];
+}
+
+
+const getGalleryItem = (galleryArray:ImageProps[]) => (
   <>
+  {console.log('galleryArray', galleryArray)}
     <div className="gallery-container">
       {galleryArray
         // .filter((e) => e.Category === category)
@@ -140,6 +146,6 @@ const getGalleryItem = (galleryArray) => (
   </>
 );
 
-export default function GalleryGrid(images) {
+export default function GalleryGrid({ images }: GridProps) {
   return <>{getGalleryItem(images)}</>;
 }
