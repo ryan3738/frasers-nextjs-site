@@ -15,7 +15,6 @@ interface GridProps {
 
 const getGalleryItem = (galleryArray:ImageProps[]) => (
   <>
-  {console.log('galleryArray', galleryArray)}
     <div className="gallery-container">
       {galleryArray
         // .filter((e) => e.Category === category)
