@@ -8,7 +8,7 @@ import NavBar from './NavBar'
 
 interface LayoutProps {
   children: React.ReactNode;
-  home: boolean
+  home?: boolean
 }
 
 export const meta = {
