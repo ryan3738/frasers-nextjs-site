@@ -8,7 +8,7 @@ interface ImageProps {
   size: string;
 }
 
-const getGalleryItem = (galleryArray: [ImageProps]) => (
+const getGalleryItem = (galleryArray) => (
   <>
     <div className="gallery-container">
       {galleryArray
@@ -140,6 +140,6 @@ const getGalleryItem = (galleryArray: [ImageProps]) => (
   </>
 );
 
-export default function GalleryGrid(images: [ImageProps]) {
+export default function GalleryGrid(images) {
   return <>{getGalleryItem(images)}</>;
 }
