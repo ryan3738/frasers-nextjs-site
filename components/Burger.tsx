@@ -6,7 +6,6 @@ export default function Burger({ open, setOpen }) {
       <button
         type="button"
         className="styled-burger"
-        open={open}
         onClick={() => setOpen(!open)}
       >
         <div className="top-bun" />
