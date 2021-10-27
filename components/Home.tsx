@@ -8,6 +8,7 @@ import Button from './Button';
 import MenuSection from './MenuSection';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
+import images from '../public/data/gallery-grid.json';
 
 export default function Home({ aboutOwnerData, aboutBusinessData }) {
   return (
@@ -111,7 +112,7 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
           <div className={styles.header}>
             <h1>Gallery</h1>
           </div>
-          <GalleryGrid />
+          <GalleryGrid images={images} />
         </section>
         <section id="contact">
           <div className={`${styles.header} ${styles.hiddenHeader}`}>

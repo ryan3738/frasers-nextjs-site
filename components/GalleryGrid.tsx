@@ -140,6 +140,6 @@ const getGalleryItem = (galleryArray: [ImageProps]) => (
   </>
 );
 
-export default function GalleryGrid() {
+export default function GalleryGrid(images: [ImageProps]) {
   return <>{getGalleryItem(images)}</>;
 }
