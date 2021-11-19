@@ -6,7 +6,9 @@ import BurgerMenu from './BurgerMenu';
 import { useOnClickOutside } from '../hooks/hooks';
 import NavList from './NavList';
 
-
+interface NavBarProps {
+  
+}
 
 export default function NavBar({ children, open, setOpen }) {
   const node = useRef();
