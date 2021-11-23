@@ -1,24 +1,36 @@
 import Image from 'next/image';
-import gallery from '../public/data/gallery-grid.json';
+// import images from '../public/data/gallery-grid.json';
 
-const getGalleryItem = () => (
+
+interface ImageProps {
+  src: string;
+  alt: string;
+  size: string;
+}
+
+interface GridProps {
+  images: ImageProps[];
+}
+
+
+const getGalleryItem = (galleryArray:ImageProps[]) => (
   <>
     <div className="gallery-container">
-      {gallery
+      {galleryArray
         // .filter((e) => e.Category === category)
-        //   .filter((e) => e.Available === true)
-        .map((data) => (
-          <div
-            key={data.imageAlt}
+        // .filter((e) => e.Available === true)
+        .map(data => (
+          data.src && (<div
+            key={data.alt}
             id="image-div"
-            // className={data.imageSize}
+            // className={data.size}
           >
             <div className="image-overlay"> </div>
-            <div className="overlay-text">{data.imageAlt}</div>
+            <div className="overlay-text">{data.alt}</div>
             <Image
               className="image"
-              src={data.imageSource}
-              alt={data.imageAlt}
+              src={data.src}
+              alt={data.alt}
               layout="responsive"
               objectFit="cover"
               height="560"
@@ -26,7 +38,7 @@ const getGalleryItem = () => (
               // placeholder="blur"
               // blurDataURL="/public/favicon-32x32.png"
             />
-          </div>
+          </div>)
         ))}
     </div>
     <style jsx>{`
@@ -133,6 +145,6 @@ const getGalleryItem = () => (
   </>
 );
 
-export default function GalleryGrid() {
-  return <>{getGalleryItem(gallery)}</>;
+export default function GalleryGrid({ images }: GridProps) {
+  return <>{getGalleryItem(images)}</>;
 }

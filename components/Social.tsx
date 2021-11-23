@@ -39,5 +39,5 @@ Social.propTypes = {
   href: PropTypes.string,
   img: PropTypes.string,
   alt: PropTypes.string,
-  color: PropTypes.string,
+  color: PropTypes.string
 };

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import Double from '../components/Double.tsx'
+import Double from '../components/Double'
 
 export default function AboutPage() {
   return (
@@ -9,7 +9,6 @@ export default function AboutPage() {
         <title>MENU</title>
       </Head>
       <section className="menu-container">
-        <Double category="about" />
       </section>
       <style jsx>{`
         .menu-container {

@@ -18,11 +18,11 @@ export default function Double({
   subtitle: string;
   imageSource: string;
   imageAlt: string;
-  imageLeft: string;
-  rightText: string;
-  rightTitle: string;
-  rightSubtitle: string;
-  id: string;
+  imageLeft?: boolean;
+  rightText?: string;
+  rightTitle?: string;
+  rightSubtitle?: string;
+  id?: string;
 }): JSX.Element {
   return (
     <>

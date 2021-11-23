@@ -1,5 +1,5 @@
 import Button from './Button';
-import Double from './Double.tsx';
+import Double from './Double';
 
 export default function Announcements() {
   return (

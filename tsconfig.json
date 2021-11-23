@@ -12,8 +12,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/double.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/double.js", "lib/posts.js", "lib/posts.js", "lib/posts.js", "lib/posts.js"],
   "exclude": ["node_modules"]
 }
