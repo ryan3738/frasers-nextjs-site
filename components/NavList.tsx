@@ -62,12 +62,6 @@ export default function NavList(props): JSX.Element {
           background: var(--primary-color-desaturated);
           color: var(--background-color);
         }
-        .welcome-logo {
-          max-width: 100%;
-          max-height: auto;
-          margin: auto;
-          display: block;
-        }
       `}</style>
       <style jsx>{`
         .burger-menu-link {

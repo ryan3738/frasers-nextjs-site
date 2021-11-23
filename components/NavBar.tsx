@@ -53,12 +53,7 @@ export default function NavBar({
       </div>
       {children}
       <style jsx>{`
-        .welcome-logo {
-          position: absolute;
-          top: 0.5rem;
-          left: 1rem;
-          width: 6rem;
-        }
+
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
