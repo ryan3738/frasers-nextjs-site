@@ -3,7 +3,7 @@ import { useRef } from 'react';
 // import Image from 'next/image'
 import Burger from './Burger';
 import BurgerMenu from './BurgerMenu';
-import { useOnClickOutside } from '../hooks/hooks';
+import { useOnClickOutside } from '../hooks/useOnClickOutside';
 import NavList from './NavList';
 
 interface NavBarProps {
