@@ -35,7 +35,6 @@ export default function Layout({ children, home }: LayoutProps) {
     <NavBar open={open} setOpen={setOpen}>
     <div className="container">
       <Head>
-        {/* <html lang='en' /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <title>{meta.title}</title> */}
         <meta name="description" content={meta.description} />
