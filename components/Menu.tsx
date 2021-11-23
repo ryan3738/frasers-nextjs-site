@@ -15,7 +15,7 @@ export default function Menu() {
         </div>
         <MenuSection category="Starters" />
         <MenuSection category="Entrees" />
-        <div className="nav">HELLO</div>
+       
       </section>
       <style jsx>{`
         .menu-container {
