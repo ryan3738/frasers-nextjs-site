@@ -1,8 +1,7 @@
 // import Link from 'next/link'
-import { bool } from 'prop-types';
 import NavList from './NavList';
 
-export default function BurgerMenu({ open }) {
+export default function BurgerMenu({ open }: {open: boolean}) {
   return (
     <>
       <nav className="styled-menu">
@@ -51,7 +50,3 @@ export default function BurgerMenu({ open }) {
     </>
   );
 }
-
-BurgerMenu.propTypes = {
-  open: bool.isRequired,
-};

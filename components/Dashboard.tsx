@@ -13,10 +13,10 @@ export default function Dashboard() {
         <div id="contact-info">
           <h2>Dashboard</h2>
           <p>Click below to edit site details</p>
-          <Button
+          {/* <Button
             buttonText="Edit Site Data"
             buttonLink="https://frasers-admin.netlify.app/admin/index.html"
-          />
+          /> */}
         </div>
       </div>
       <style jsx>{`

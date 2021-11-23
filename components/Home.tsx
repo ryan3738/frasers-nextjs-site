@@ -1,27 +1,21 @@
 import Head from 'next/head';
 import React from 'react';
-import PropTypes from 'prop-types';
 import Layout, { meta } from './Layout';
-import Double from './Double.tsx';
+import Double from './Double';
 import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
 import Button from './Button';
 import MenuSection from './MenuSection';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
+import images from '../public/data/gallery-grid.json';
 
-export default function Home({
-  aboutOwnerData,
-  aboutBusinessData,
-  announcement1Data,
-  announcement2Data,
-}) {
+export default function Home({ aboutOwnerData, aboutBusinessData }) {
   return (
     <>
       <Layout home>
         <Head>
           <title>{meta.title}</title>
-          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Head>
         <section className="container">
           <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
@@ -86,7 +80,7 @@ export default function Home({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutBusinessData.contentHtml,
+                  __html: aboutBusinessData.contentHtml
                 }}
               />
             </Double>
@@ -99,7 +93,7 @@ export default function Home({
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutOwnerData.contentHtml,
+                  __html: aboutOwnerData.contentHtml
                 }}
               />
             </Double>
@@ -118,7 +112,7 @@ export default function Home({
           <div className={styles.header}>
             <h1>Gallery</h1>
           </div>
-          <GalleryGrid />
+          <GalleryGrid images={images} />
         </section>
         <section id="contact">
           <div className={`${styles.header} ${styles.hiddenHeader}`}>
@@ -151,17 +145,8 @@ export default function Home({
             padding: 10px;
             border-radius: 7px;
           }
-          @media (min-width: 460px) {
-          }
         `}</style>
       </Layout>
     </>
   );
 }
-
-Home.propTypes = {
-  aboutOwnerData: PropTypes.object,
-  aboutBusinessData: PropTypes.object,
-  announcement1Data: PropTypes.object,
-  announcement2Data: PropTypes.object,
-};

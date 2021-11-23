@@ -25,6 +25,7 @@ export default function Double({
   rightSubtitle,
   id,
 }: DoubleProps): JSX.Element {
+
   return (
     <>
       <div className="double-container">

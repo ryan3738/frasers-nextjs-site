@@ -1,30 +1,38 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import Hero from './Hero';
 import NavList from './NavList';
+import Script from 'next/script';
+import { useState } from 'react';
+import NavBar from './NavBar'
+
+interface LayoutProps {
+  children: React.ReactNode;
+  home?: boolean
+}
 
 export const meta = {
-    name: 'Frasers',
-    title: 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest',
-    description:
-      'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
-    keywords: 'restaurant, steak, seafood, whidbey',
-    cardImage: '/android-chrome-512x512.png',
-    url: 'https://frasersgh.com',
-  };
+  name: 'Frasers',
+  title: 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest',
+  description:
+    'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
+  keywords: 'restaurant, steak, seafood, whidbey',
+  cardImage: '/android-chrome-512x512.png',
+  url: 'https://frasersgh.com'
+};
 
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
   mediumScreen: '769px',
-  largeScreen: '1008px',
+  largeScreen: '1008px'
 };
 
-
-export default function Layout({ children, home, }) {
+export default function Layout({ children, home }: LayoutProps) {
+  const [open, setOpen] = useState(false);
   const router = useRouter();
   return (
+    <NavBar open={open} setOpen={setOpen}>
     <div className="container">
       <Head>
         {/* <html lang='en' /> */}
@@ -34,10 +42,7 @@ export default function Layout({ children, home, }) {
         <meta name="keywords" content={meta.keywords} />
         {/* Social media information */}
         {/* Open Graph */}
-        <meta
-          property="og:url"
-          content={meta.url+router.asPath}
-        />
+        <meta property="og:url" content={meta.url + router.asPath} />
         <meta property="og:type" content="restaurant" />
         <meta property="og:site_name" content={meta.title} />
         <meta property="og:description" content={meta.description} />
@@ -50,20 +55,6 @@ export default function Layout({ children, home, }) {
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.cardImage} />
         {/* Global site tag (gtag.js) - Google Analytics */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YS529TE94E');
-            `,
-          }}
-        />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -75,13 +66,13 @@ export default function Layout({ children, home, }) {
           type="image/png"
           sizes="32x32"
           href="/favicon-32x32.png"
-        />
+          />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
           href="/favicon-16x16.png"
-        />
+          />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <header className="header">
@@ -96,6 +87,18 @@ export default function Layout({ children, home, }) {
           </>
         )}
       </header>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
+        strategy="afterInteractive"
+        />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YS529TE94E');
+              `}
+      </Script>
       <main className="main">{children}</main>
       <footer className="footer">
         <span>© 2020 Frasers Gourmet Hideaway |</span>
@@ -106,7 +109,7 @@ export default function Layout({ children, home, }) {
             href="https://github.com/ryan3738"
             target="_blank"
             rel="noreferrer noopener"
-          >
+            >
             Ryan Fraser
           </a>
         </span>
@@ -213,9 +216,6 @@ export default function Layout({ children, home, }) {
         }
       `}</style>
     </div>
+            </NavBar>
   );
 }
-Layout.propTypes = {
-  children: PropTypes.any,
-  home: PropTypes.bool,
-};

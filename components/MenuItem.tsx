@@ -3,9 +3,9 @@ import menuData from '../public/data/menu-data.json';
 const getMenuItem = ({ category }) => (
   <>
     {menuData.menu
-      .filter((e) => e.category === category)
-      .filter((e) => e.available === true)
-      .map((data) => (
+      .filter(item => item.category === category)
+      .filter(item => item.available === true)
+      .map(data => (
         <div key={data.itemName} className="menu-item">
           <h3 className="primary-color">{data.itemName}</h3>
           {data.description ? (
