@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "importHelpers": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
