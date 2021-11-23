@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from './Layout';
 import MenuSection from './MenuSection';
 import styles from '../styles/styles.module.css';
+import NavBar from './NavBar';
 
 export default function Menu() {
   return (
@@ -16,6 +17,7 @@ export default function Menu() {
         <MenuSection category="Starters" />
         <MenuSection category="Entrees" />
         <div className="nav">HELLO</div>
+        <NavBar position='sticky' location='bottom' />
       </section>
       <style jsx>{`
         .menu-container {
