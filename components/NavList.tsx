@@ -1,53 +1,31 @@
 import Link from 'next/link';
 
-export default function NavList(props): JSX.Element {
+export interface NavLinks {
+  href: string;
+  text: string;
+}
+
+interface NavListProps {
+  links: NavLinks[];
+  showOnLarge?: boolean;
+  burgerMenuLink?: boolean;
+}
+
+export default function NavList({links, showOnLarge, burgerMenuLink}: NavListProps): JSX.Element {
   return (
     <>
-      <Link href="/">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
+{
+  links?.map((link) => (
+    <Link key={link.text} href={link.href}>
+      <a
+        className={`nav-link ${showOnLarge && 'show-on-large'} ${burgerMenuLink && 'burger-menu-link'
           }`}
-        >
-          Home
-        </a>
-      </Link>
-      <Link href="/menu">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          Menu
-        </a>
-      </Link>
-      <Link href="/#about">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          ABOUT
-        </a>
-      </Link>
-      <Link href="/#gift-cards">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          Gift Cards
-        </a>
-      </Link>
-      <Link href="/#contact">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          Contact
-        </a>
-      </Link>
+      >
+       {link.text}
+      </a>
+    </Link>
+  ))
+}
       <style jsx>{`
         .nav-link {
           text-transform: uppercase;

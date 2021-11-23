@@ -1,11 +1,15 @@
-// import Link from 'next/link'
-import NavList from './NavList';
+import NavList, { NavLinks } from './NavList';
 
-export default function BurgerMenu({ open }: {open: boolean}) {
+interface BurgerMenuProps {
+  open: boolean
+  links: NavLinks[]
+}
+
+export default function BurgerMenu({ open, links }: BurgerMenuProps) {
   return (
     <>
       <nav className="styled-menu">
-        <NavList burgerMenuLink />
+        <NavList links={links} burgerMenuLink />
       </nav>
       <style jsx>{`
         .styled-menu {
@@ -14,7 +18,6 @@ export default function BurgerMenu({ open }: {open: boolean}) {
           justify-content: center;
           background: var(--background-color);
           height: 100vh;
-          /* text-align: right; */
           padding: 2rem;
           position: absolute;
           top: 0;

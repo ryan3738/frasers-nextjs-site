@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import { useRef } from 'react';
-// import Image from 'next/image'
 import Burger from './Burger';
 import BurgerMenu from './BurgerMenu';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
-import NavList from './NavList';
+import NavList, { NavLinks } from './NavList';
 
 interface NavBarProps {
   children?: React.ReactNode;
+  links?: NavLinks[];
+  burgerLinks?: NavLinks[];
+  showHomeLink?: boolean;
   open?: boolean;
   setOpen?: (value: boolean) => void;
   location?: 'top' | 'bottom';
@@ -16,6 +18,9 @@ interface NavBarProps {
 
 export default function NavBar({
   children,
+  links,
+  burgerLinks,
+  showHomeLink = true,
   open,
   setOpen,
   position='fixed'  ,
@@ -27,17 +32,23 @@ export default function NavBar({
   return (
     <>
       <div className="nav-bar">
-        {/* <div className="burger">
-          <div ref={node}>
-            <Burger open={open} setOpen={setOpen} />
-          </div>
-          <BurgerMenu open={open} />
-        </div> */}
+        {
+          burgerLinks && (
+            <div className="burger">
+              <div ref={node}>
+                <Burger open={open} setOpen={setOpen} />
+              </div>
+                <BurgerMenu links={burgerLinks}   open={open} />
+            </div>
+          )
+        }
         <nav className="nav-list">
+          {showHomeLink &&
           <Link href="/">
             <a className="title">FRASERS</a>
           </Link>
-          <NavList showOnLarge />
+          }
+          <NavList links={links} showOnLarge={burgerLinks && true} />
         </nav>
       </div>
       {children}
