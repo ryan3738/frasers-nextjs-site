@@ -100,9 +100,6 @@ export default function NavList(props) {
           transition: all 0.3s ease-in-out;
         }
         a:hover {
-           {
-            /* color: var(--medium-emphasis-text); */
-          }
           background: var(--primary-color-desaturated);
           color: var(--background-color);
         }
