@@ -6,31 +6,20 @@ import BurgerMenu from './BurgerMenu';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 import NavList from './NavList';
 
-enum Location {
-  Top = 'top',
-  Bottom = 'bottom',
-}
-
-enum Position {
-  Fixed = 'fixed',
-  Sticky = 'sticky',
-  Static= 'static',
-}
-
 interface NavBarProps {
-  children: React.ReactNode;
-  open: boolean;
-  setOpen: (value: boolean) => void;
-  location?: Location;
-  position?: Position;
+  children?: React.ReactNode;
+  open?: boolean;
+  setOpen?: (value: boolean) => void;
+  location?: 'top' | 'bottom';
+  position?: 'fixed' | 'sticky' | 'static';
 }
 
 export default function NavBar({
   children,
   open,
   setOpen,
-  position=Position.Fixed,
-  location=Location.Top,
+  position='fixed'  ,
+  location='top',
 }: NavBarProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -38,12 +27,12 @@ export default function NavBar({
   return (
     <>
       <div className="nav-bar">
-        <div className="burger">
+        {/* <div className="burger">
           <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
           </div>
           <BurgerMenu open={open} />
-        </div>
+        </div> */}
         <nav className="nav-list">
           <Link href="/">
             <a className="title">FRASERS</a>
