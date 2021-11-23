@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function NavList(props) {
+export default function NavList(props): JSX.Element {
   return (
     <>
       <Link href="/">
