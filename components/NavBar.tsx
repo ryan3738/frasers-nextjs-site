@@ -6,16 +6,31 @@ import BurgerMenu from './BurgerMenu';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 import NavList from './NavList';
 
+enum Location {
+  Top = 'top',
+  Bottom = 'bottom',
+}
+
+enum Position {
+  Fixed = 'fixed',
+  Sticky = 'sticky',
+  Static= 'static',
+}
+
 interface NavBarProps {
   children: React.ReactNode;
   open: boolean;
   setOpen: (value: boolean) => void;
+  location?: Location;
+  position?: Position;
 }
 
 export default function NavBar({
   children,
   open,
   setOpen,
+  position=Position.Fixed,
+  location=Location.Top,
 }: NavBarProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -24,22 +39,15 @@ export default function NavBar({
     <>
       <div className="nav-bar">
         <div className="burger">
-          {/* <div>
-            <Link href='/'>
-              <a className='title'>FRASERS</a>
-            </Link>
-          </div> */}
           <div ref={node}>
             <Burger open={open} setOpen={setOpen} />
           </div>
           <BurgerMenu open={open} />
         </div>
-        {/* <NavList></NavList> */}
         <nav className="nav-list">
           <Link href="/">
             <a className="title">FRASERS</a>
           </Link>
-
           <NavList showOnLarge />
         </nav>
       </div>
@@ -57,10 +65,10 @@ export default function NavBar({
           color: var(--white-color);
         }
         .nav-bar {
-          top: 0;
+          ${location}: 0;
           left: 0;
           z-index: 999;
-          position: fixed;
+          position: ${position};
           background: var(--background-color);
           opacity: 0.97;
           width: 100%;
@@ -70,7 +78,6 @@ export default function NavBar({
           justify-content: left;
           align-items: center;
           height: 4em;
-          position: sticky;
           top: 0;
         }
 
