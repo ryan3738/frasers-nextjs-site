@@ -21,36 +21,6 @@ export default function NavList(props) {
           Menu
         </a>
       </Link>
-
-      {/* <Link href='/#takeout'>
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          Takeout
-        </a>
-      </Link> */}
-      {/* <Link href="/#new-years">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          New Year's Plating
-        </a>
-      </Link> */}
-
-      {/* <Link href="/#valentines">
-        <a
-          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-            'burgerMenuLink' in props && 'burger-menu-link'
-          }`}
-        >
-          Valentine's Special
-        </a>
-      </Link> */}
-
       <Link href="/#about">
         <a
           className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
@@ -78,17 +48,6 @@ export default function NavList(props) {
           Contact
         </a>
       </Link>
-
-      {/* <div
-        className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
-          'burgerMenuLink' in props && 'burger-menu-link'
-        }`}
-      >
-        <Button
-          buttonText="ORDER ONLINE"
-          buttonLink={siteData.websites.onlineStore}
-        />
-      </div> */}
       <style jsx>{`
         .nav-link {
           text-transform: uppercase;
