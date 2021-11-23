@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/double.js"
+, "pages/404.js"    "components/double.js"
   ],
   "exclude": [
     "node_modules"
