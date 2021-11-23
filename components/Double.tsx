@@ -10,7 +10,7 @@ interface DoubleProps {
   rightText?: string;
   rightTitle?: string;
   rightSubtitle?: string;
-  id: string;
+  id?: string;
 }
 
 export default function Double({
