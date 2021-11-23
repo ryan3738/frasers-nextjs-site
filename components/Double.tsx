@@ -6,10 +6,10 @@ interface DoubleProps {
   subtitle: string;
   imageSource: string;
   imageAlt: string;
-  imageLeft?: string;
-  rightText: string;
-  rightTitle: string;
-  rightSubtitle: string;
+  imageLeft?: boolean;
+  rightText?: string;
+  rightTitle?: string;
+  rightSubtitle?: string;
   id: string;
 }
 
