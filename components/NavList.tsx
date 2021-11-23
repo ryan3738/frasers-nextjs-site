@@ -1,16 +1,12 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from 'next/link';
 
-const showOnNavBar = 'show-on-large';
-const showInBurgerMenu = 'burger-menu-link';
-
-export default function NavList(properties) {
+export default function NavList(props): JSX.Element {
   return (
     <>
       <Link href="/">
         <a
-          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
-            'burgerMenuLink' in properties && showInBurgerMenu
+          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+            'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
           Home
@@ -18,18 +14,17 @@ export default function NavList(properties) {
       </Link>
       <Link href="/menu">
         <a
-          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
-            'burgerMenuLink' in properties && showInBurgerMenu
+          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+            'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
           Menu
         </a>
       </Link>
-
       <Link href="/#about">
         <a
-          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
-            'burgerMenuLink' in properties && showInBurgerMenu
+          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+            'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
           ABOUT
@@ -37,8 +32,8 @@ export default function NavList(properties) {
       </Link>
       <Link href="/#gift-cards">
         <a
-          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
-            'burgerMenuLink' in properties && showInBurgerMenu
+          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+            'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
           Gift Cards
@@ -46,24 +41,13 @@ export default function NavList(properties) {
       </Link>
       <Link href="/#contact">
         <a
-          className={`nav-link ${'showOnLarge' in properties && showOnNavBar} ${
-            'burgerMenuLink' in properties && showInBurgerMenu
+          className={`nav-link ${'showOnLarge' in props && 'show-on-large'} ${
+            'burgerMenuLink' in props && 'burger-menu-link'
           }`}
         >
           Contact
         </a>
       </Link>
-
-      {/* <div
-        className={`nav-link ${'showOnLarge' in props && showOnNavBar} ${
-          'burgerMenuLink' in props && showInBurgerMenu
-        }`}
-      >
-        <Button
-          buttonText="ORDER ONLINE"
-          buttonLink={siteData.websites.onlineStore}
-        />
-      </div> */}
       <style jsx>{`
         .nav-link {
           text-transform: uppercase;

@@ -1,6 +1,12 @@
 import MenuItem from './MenuItem';
 
-export default function MenuSection({ category }) {
+interface MenuSectionProps {
+  category: string;
+}
+
+export default function MenuSection({
+  category,
+}: MenuSectionProps): JSX.Element {
   return (
     <div className="menu-container">
       <h2 className="menu-header">{category}</h2>

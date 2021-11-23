@@ -1,5 +1,4 @@
 // import Link from 'next/link'
-import { bool } from 'prop-types';
 import NavList from './NavList';
 
 export default function BurgerMenu({ open }: {open: boolean}) {

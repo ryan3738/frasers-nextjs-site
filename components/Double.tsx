@@ -1,5 +1,17 @@
-// import doubleItems from '../public/data/double.json';
 import Image from 'next/image';
+
+interface DoubleProps {
+  children: React.ReactNode;
+  title: string;
+  subtitle: string;
+  imageSource: string;
+  imageAlt: string;
+  imageLeft?: boolean;
+  rightText?: string;
+  rightTitle?: string;
+  rightSubtitle?: string;
+  id?: string;
+}
 
 export default function Double({
   children,
@@ -12,18 +24,8 @@ export default function Double({
   rightTitle,
   rightSubtitle,
   id,
-}: {
-  children: React.ReactNode;
-  title: string;
-  subtitle: string;
-  imageSource: string;
-  imageAlt: string;
-  imageLeft?: boolean;
-  rightText?: string;
-  rightTitle?: string;
-  rightSubtitle?: string;
-  id?: string;
-}): JSX.Element {
+}: DoubleProps): JSX.Element {
+
   return (
     <>
       <div className="double-container">

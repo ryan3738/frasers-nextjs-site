@@ -1,12 +1,22 @@
 import Link from 'next/link';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 // import Image from 'next/image'
 import Burger from './Burger';
 import BurgerMenu from './BurgerMenu';
-import { useOnClickOutside } from '../hooks/hooks';
+import { useOnClickOutside } from '../hooks/useOnClickOutside';
 import NavList from './NavList';
 
-export default function NavBar({ children, open, setOpen }) {
+interface NavBarProps {
+  children: React.ReactNode;
+  open: boolean;
+  setOpen: (value: boolean) => void;
+}
+
+export default function NavBar({
+  children,
+  open,
+  setOpen,
+}: NavBarProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
 
@@ -47,7 +57,7 @@ export default function NavBar({ children, open, setOpen }) {
           color: var(--white-color);
         }
         .nav-bar {
-          right: 0;
+          top: 0;
           left: 0;
           z-index: 999;
           position: fixed;

@@ -1,12 +1,22 @@
 import Image from 'next/image';
-import PropTypes from 'prop-types';
 
-export default function Social({ href, img, alt, color }) {
+interface SocialProps {
+  href: string;
+  img: string;
+  alt: string;
+  color: string;
+}
+
+export default function Social({
+  href,
+  img,
+  alt,
+  color,
+}: SocialProps): JSX.Element {
   return (
     <div className="social">
-      <a href={href} target="_blank" rel="noreferrer noopener">
+      <a title={alt} href={href} target="_blank" rel="noreferrer noopener">
         <Image
-          // style='max-width:100%; max-height: auto;'
           src={img}
           alt={alt}
           layout="fixed"
@@ -35,9 +45,4 @@ export default function Social({ href, img, alt, color }) {
     </div>
   );
 }
-Social.propTypes = {
-  href: PropTypes.string,
-  img: PropTypes.string,
-  alt: PropTypes.string,
-  color: PropTypes.string
-};
+
