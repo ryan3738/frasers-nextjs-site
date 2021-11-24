@@ -15,6 +15,5 @@ export const Menu = ({categories, pathName}:MenuProps) => {
             {categories.map((category) => <MenuSection key={category} category={category}/>)}
             <NavBar showHomeLink={false} links={links} position='sticky' location='bottom' />
         </>
-
        )
 }
