@@ -103,7 +103,7 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <Menu pathName='' categories={['Starters', 'Entrees']} />
+          <Menu pathName='/' categories={['Starters', 'Entrees']} />
         </section>
         <section>
           <div className={styles.header}>

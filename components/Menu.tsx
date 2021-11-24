@@ -8,7 +8,7 @@ interface MenuProps {
 
 export const Menu = ({categories, pathName}:MenuProps) => {
     const links = categories.map(category => {
-        return { href: `${pathName}/#${category}`, text: category}});
+        return { href: `${pathName}#${category}`, text: category}});
     console.log('LINKS', links);
    return (
         <>
