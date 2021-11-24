@@ -28,8 +28,7 @@ export default function Double({
 
   return (
     <>
-      <div className="double-container">
-        <a className="anchor" id={id} />
+      <div id={id} className="double-container">
         {imageSource ? (
           <>
             <div className="double-item double-right">
@@ -60,20 +59,16 @@ export default function Double({
           <div className="medium-emphasis">{children}</div>
         </div>
         <style jsx>{`
-          a.anchor {
-            display: block;
-            position: relative;
-            top: -50px;
-            visibility: hidden;
-          }
-          .primary-color {
-            color: var(--primary-color-desaturated);
-          }
+
 
           .double-container {
             display: flex;
             flex-direction: column;
             max-width: 560px;
+            margin: 4rem 0 0;
+          }
+          .primary-color {
+            color: var(--primary-color-desaturated);
           }
 
           .double-item {

@@ -21,6 +21,30 @@ export const meta = {
   url: 'https://frasersgh.com'
 };
 
+const navigationLinks = [
+  {
+    text: 'Home',
+    href: '/'
+  },
+  {
+    text: 'Menu',
+    href: '/menu'
+  },
+  {
+    text: 'About',
+    href: '/#about'
+  },
+  {
+    text: 'Gift Cards',
+    href: '/#gift-cards'
+  },
+  {
+    text: 'Contact',
+    href: '/#contact'
+  }
+
+]
+
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
@@ -32,10 +56,9 @@ export default function Layout({ children, home }: LayoutProps) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   return (
-    <NavBar open={open} setOpen={setOpen}>
+    <NavBar links={navigationLinks} burgerLinks={navigationLinks} open={open} setOpen={setOpen}>
     <div className="container">
       <Head>
-        {/* <html lang='en' /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <title>{meta.title}</title> */}
         <meta name="description" content={meta.description} />
@@ -114,7 +137,7 @@ export default function Layout({ children, home }: LayoutProps) {
           </a>
         </span>
         <nav className="nav-list">
-          <NavList />
+          <NavList  links={navigationLinks} />
         </nav>
       </footer>
       <style jsx>{`

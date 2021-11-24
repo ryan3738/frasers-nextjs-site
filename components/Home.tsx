@@ -5,10 +5,10 @@ import Double from './Double';
 import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
 import Button from './Button';
-import MenuSection from './MenuSection';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
+import { Menu } from './Menu';
 
 export default function Home({ aboutOwnerData, aboutBusinessData }) {
   return (
@@ -21,7 +21,6 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
           <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
             About
           </h2>
-          {/* <ImageLightBox /> */}
           <div className="double-wrapper">
             <Double
               id="takeout"
@@ -104,9 +103,7 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <MenuSection category="Starters" />
-          <MenuSection category="Entrees" />
-          {/* <Button buttonText="SEE FULL MENU ==>" buttonLink="/menu" /> */}
+          <Menu pathName='/' categories={['Starters', 'Entrees']} />
         </section>
         <section>
           <div className={styles.header}>

@@ -8,7 +8,7 @@ export default function MenuSection({
   category,
 }: MenuSectionProps): JSX.Element {
   return (
-    <div className="menu-container">
+    <div id={category} className="menu-container">
       <h2 className="menu-header">{category}</h2>
       <div className="line" />
       <MenuItem category={category} />

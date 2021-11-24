@@ -1,21 +1,30 @@
 import Link from 'next/link';
 import { useRef } from 'react';
-// import Image from 'next/image'
 import Burger from './Burger';
 import BurgerMenu from './BurgerMenu';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
-import NavList from './NavList';
+import NavList, { NavLinks } from './NavList';
 
 interface NavBarProps {
-  children: React.ReactNode;
-  open: boolean;
-  setOpen: (value: boolean) => void;
+  children?: React.ReactNode;
+  links?: NavLinks[];
+  burgerLinks?: NavLinks[];
+  showHomeLink?: boolean;
+  open?: boolean;
+  setOpen?: (value: boolean) => void;
+  location?: 'top' | 'bottom';
+  position?: 'fixed' | 'sticky' | 'static';
 }
 
 export default function NavBar({
   children,
+  links,
+  burgerLinks,
+  showHomeLink = true,
   open,
   setOpen,
+  position='fixed'  ,
+  location='top',
 }: NavBarProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -23,44 +32,38 @@ export default function NavBar({
   return (
     <>
       <div className="nav-bar">
-        <div className="burger">
-          {/* <div>
-            <Link href='/'>
-              <a className='title'>FRASERS</a>
-            </Link>
-          </div> */}
-          <div ref={node}>
-            <Burger open={open} setOpen={setOpen} />
-          </div>
-          <BurgerMenu open={open} />
-        </div>
-        {/* <NavList></NavList> */}
+        {
+          burgerLinks && (
+            <div className="burger">
+              <div ref={node}>
+                <Burger open={open} setOpen={setOpen} />
+              </div>
+                <BurgerMenu links={burgerLinks}   open={open} />
+            </div>
+          )
+        }
         <nav className="nav-list">
+          {showHomeLink &&
           <Link href="/">
             <a className="title">FRASERS</a>
           </Link>
-
-          <NavList showOnLarge />
+          }
+          <NavList links={links} showOnLarge={burgerLinks && true} />
         </nav>
       </div>
       {children}
       <style jsx>{`
-        .welcome-logo {
-          position: absolute;
-          top: 0.5rem;
-          left: 1rem;
-          width: 6rem;
-        }
+
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
           color: var(--white-color);
         }
         .nav-bar {
-          top: 0;
+          ${location}: 0;
           left: 0;
           z-index: 999;
-          position: fixed;
+          position: ${position};
           background: var(--background-color);
           opacity: 0.97;
           width: 100%;
@@ -70,7 +73,6 @@ export default function NavBar({
           justify-content: left;
           align-items: center;
           height: 4em;
-          position: sticky;
           top: 0;
         }
 
