@@ -4,6 +4,7 @@ import NavBar from "./NavBar"
 interface MenuProps {
     categories: string[];
     pathName: string;
+
 }
 
 export const Menu = ({categories, pathName}:MenuProps) => {
