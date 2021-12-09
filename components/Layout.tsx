@@ -35,10 +35,6 @@ const navigationLinks = [
     href: '/#about'
   },
   {
-    text: 'Gift Cards',
-    href: '/#gift-cards'
-  },
-  {
     text: 'Contact',
     href: '/#contact'
   }
