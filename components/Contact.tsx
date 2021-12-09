@@ -2,6 +2,7 @@
 import Social from './Social';
 import Button from './Button';
 import siteData from '../public/data/site-data.json';
+import NewsLetter from './NewsLetter';
 
 export default function Contact() {
   return (
@@ -51,14 +52,7 @@ export default function Contact() {
         </div>
 
         <div className="social-media-container">
-          <h3>Sign up for our newsletter to receive updates</h3>
-          <Button
-            buttonText="SIGN UP"
-            buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
-          />
-          <br />
-          <br />
-          <p>We respect your privacy</p>
+          <NewsLetter/>
           <h3>For specials and event info follow us on social media</h3>
           <div className="social-media-contents">
             <Social

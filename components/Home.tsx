@@ -23,53 +23,40 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
           </h2>
           <div className="double-wrapper">
             <Double
-              id="takeout"
-              title="Now Open for Dine In Service!"
-              subtitle="To make a reservation call us at 360-279-1231 "
-              imageSource="/images/pig-were-back.jpg"
-              imageAlt="Pig holding a sign that says were back"
-            >
-              <div>
-                <h3>Takeout Still Available</h3>
-                <p>
-                  Call {siteData.phoneNumber} during normal business hours to
-                  place an order
-                </p>
-              </div>
-              {/* <Button
-                buttonText="ORDER ONLINE"
-                buttonLink={siteData.websites.onlineStore}
-              /> */}
-              <br />
-              <br />
-              <h4>Sign up for our newsletter to receive future updates</h4>
-              <Button
-                buttonText="SIGN UP"
-                buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
-              />
-              <br />
-              <br />
-              <p>We respect your privacy</p>
-            </Double>
-            <Double
-              id="gift-cards"
-              title="Gift Cards Available"
-              subtitle=""
+              id="about"
+              title="Open New Year's Eve"
+              subtitle="Special 5 Course Menu"
               imageSource="/images/gift-card-square.jpg"
               imageAlt="frasers gift card closeup"
               imageLeft
             >
               <div>
+                <p>
+                  Please call for details!
+                </p>
+                <h3>Gift Cards Available</h3>
                 To purchase a gift card please call us at{' '}
                 <span className="nowrap">{siteData.phoneNumber}</span>
-                {/* <br />
-                <br />
-                <Button
-                  buttonText="ORDER GIFT CARDS ONLINE"
-                  buttonLink="https://frasersgh.square.site/product/gift-card/88"
-                /> */}
               </div>
             </Double>
+            <Double
+              id="announcements"
+              title="Open for Dine In Service"
+              subtitle="To make a reservation call us at 360-279-1231"
+              imageSource="/images/pig-were-back.jpg"
+              imageAlt="Pig holding a sign that says were back"
+            >
+              <div>
+                <h3>Takeout Is Still Available</h3>
+                <p>
+                  Call {siteData.phoneNumber} during normal business hours to
+                  place an order
+                </p>
+              </div>
+              <br />
+              <br />
+            </Double>
+
             <Double
               id="about"
               title={aboutBusinessData.title}
