@@ -1,7 +1,9 @@
 ---
 title: Vote For Pedro
 ---
+
 # Welcome to the blog.
+## I made a change
 
 > To edit this site head over to the [` /
   admin`](/admin) route. Then click the pencil icon in the bottom lefthand corner to start editing 🦙. 
