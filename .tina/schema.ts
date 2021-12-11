@@ -352,6 +352,88 @@ export default defineSchema({
       ],
     },
     {
+      label: "Modifiers",
+      name: "modifier",
+      path: "content/modifier",
+      fields: [
+        {
+          type: "string",
+          label: "Name",
+          name: "name",
+        },
+        {
+          type: "number",
+          label: "Price",
+          name: "price",
+        }
+      ]
+    },
+    {
+      label: "Menus",
+      name: "menu",
+      path: "content/menu",
+      fields: [
+        {
+            type: "string",
+            label: "Name",
+            name: "name",
+        },
+        {
+        type: "object",
+        label: "Sections",
+        name: "section",
+        list: true,
+        fields: [
+          {
+            type: "string",
+            label: "Name",
+            name: "name",
+          },
+          {
+            type: "object",
+            label: "Item",
+            name: "item",
+            fields: [
+             {
+               type: "string",
+              label: "Name",
+              name: "name",
+            },
+             {
+               type: "string",
+              label: "Description",
+              name: "description",
+            },
+            {
+              type: "number",
+              label: "Price",
+              name: "price",
+            },
+            {
+              type: "reference",
+              label: "Modifiers",
+              name: "modifier",
+              collections: ["modifier"],
+            },
+            {
+              type: "string",
+              label: "Dietary Preferences",
+              name: "dietary",
+              options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
+              list: true,
+            },
+            {
+              type: "boolean",
+              label: "Available",
+              name: "available",
+            }
+            ]
+          }
+        ]
+      }
+    ]
+    },
+    {
       label: "Blog Posts",
       name: "posts",
       path: "content/posts",

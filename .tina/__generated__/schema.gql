@@ -50,6 +50,10 @@ type Query {
   getDocumentFields: JSON!
   getGlobalDocument(relativePath: String): GlobalDocument!
   getGlobalList(before: String, after: String, first: Int, last: Int): GlobalConnection!
+  getModifierDocument(relativePath: String): ModifierDocument!
+  getModifierList(before: String, after: String, first: Int, last: Int): ModifierConnection!
+  getMenuDocument(relativePath: String): MenuDocument!
+  getMenuList(before: String, after: String, first: Int, last: Int): MenuConnection!
   getPostsDocument(relativePath: String): PostsDocument!
   getPostsList(before: String, after: String, first: Int, last: Int): PostsConnection!
 }
@@ -77,7 +81,7 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = GlobalDocument | PostsDocument
+union DocumentNode = GlobalDocument | ModifierDocument | MenuDocument | PostsDocument
 
 type GlobalHeaderIcon {
   color: String
@@ -141,6 +145,72 @@ type GlobalConnection implements Connection {
   edges: [GlobalConnectionEdges]
 }
 
+type Modifier {
+  name: String
+  price: Int
+}
+
+type ModifierDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: Modifier!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type ModifierConnectionEdges {
+  cursor: String
+  node: ModifierDocument
+}
+
+type ModifierConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [ModifierConnectionEdges]
+}
+
+union MenuSectionItemModifierDocument = ModifierDocument
+
+type MenuSectionItem {
+  name: String
+  description: String
+  price: Int
+  modifier: MenuSectionItemModifierDocument
+  dietary: [String]
+  available: Boolean
+}
+
+type MenuSection {
+  name: String
+  item: MenuSectionItem
+}
+
+type Menu {
+  name: String
+  section: [MenuSection]
+}
+
+type MenuDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: Menu!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type MenuConnectionEdges {
+  cursor: String
+  node: MenuDocument
+}
+
+type MenuConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [MenuConnectionEdges]
+}
+
 type Posts {
   title: String
   body: String
@@ -172,12 +242,18 @@ type Mutation {
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   updateGlobalDocument(relativePath: String!, params: GlobalMutation!): GlobalDocument!
   createGlobalDocument(relativePath: String!, params: GlobalMutation!): GlobalDocument!
+  updateModifierDocument(relativePath: String!, params: ModifierMutation!): ModifierDocument!
+  createModifierDocument(relativePath: String!, params: ModifierMutation!): ModifierDocument!
+  updateMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
+  createMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
   updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
   createPostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
 }
 
 input DocumentMutation {
   global: GlobalMutation
+  modifier: ModifierMutation
+  menu: MenuMutation
   posts: PostsMutation
 }
 
@@ -221,6 +297,30 @@ input GlobalMutation {
   header: GlobalHeaderMutation
   footer: GlobalFooterMutation
   theme: GlobalThemeMutation
+}
+
+input ModifierMutation {
+  name: String
+  price: Int
+}
+
+input MenuSectionItemMutation {
+  name: String
+  description: String
+  price: Int
+  modifier: String
+  dietary: [String]
+  available: Boolean
+}
+
+input MenuSectionMutation {
+  name: String
+  item: MenuSectionItemMutation
+}
+
+input MenuMutation {
+  name: String
+  section: [MenuSectionMutation]
 }
 
 input PostsMutation {
