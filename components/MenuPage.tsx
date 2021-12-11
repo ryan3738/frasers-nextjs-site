@@ -28,31 +28,15 @@ import { getStaticPropsForTina, gql, staticRequest } from 'tinacms'
 //     }
 // }
 
-export const getStaticProps = async ({ params }) => {
-  const tinaProperties = await getStaticPropsForTina({
-    query: gql`
-      query MenusQuery() {
-        getMenuDocument(relativePath: "menu.json") {
-          data {
-            name
-          }
-        }
-      }
-    `,
-    variables: {},
-  });
-  console.log('tinaProperties', tinaProperties);
-  return {
-    props: {
-      ...tinaProperties
-    }
-  };
-};
+
 
 export default function MenuPage(props) {
   const {pathname} = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
   props.data && console.log('DATA', props.data);
+  if (props) {
+    console.log('DATA2',props)
+  }
   return (
     <Layout>
       <Head>
@@ -75,3 +59,27 @@ export default function MenuPage(props) {
     </Layout>
   );
 }
+
+export const getStaticProps = async () => {
+  const variables = { relativePath: "main.md" }
+  const query = `
+  query MenuQuery($relativePath: String!) {
+    getMenuDocument(relativePath: $relativePath) {
+      data {
+        name
+      }
+    }
+  }
+`
+  const data = await staticRequest({
+    query: query,
+    variables: variables,
+  })
+  return {
+    props: {
+      query,
+      variables,
+      data,
+    },
+  };
+};
