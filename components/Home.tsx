@@ -10,7 +10,9 @@ import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu';
 
-export default function Home({ aboutOwnerData, aboutBusinessData }) {
+const {phoneNumber, aboutBusiness, aboutOwner } = siteData;
+
+export default function Home() {
   return (
     <>
       <Layout home>
@@ -36,7 +38,7 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
                 </p>
                 <h3>Gift Cards Available</h3>
                 To purchase a gift card please call us at{' '}
-                <span className="nowrap">{siteData.phoneNumber}</span>
+                <span className="nowrap">{phoneNumber}</span>
               </div>
             </Double>
             <Double
@@ -49,7 +51,7 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
               <div>
                 <h3>Takeout Is Still Available</h3>
                 <p>
-                  Call {siteData.phoneNumber} during normal business hours to
+                  Call {phoneNumber} during normal business hours to
                   place an order
                 </p>
               </div>
@@ -59,27 +61,25 @@ export default function Home({ aboutOwnerData, aboutBusinessData }) {
 
             <Double
               id="about"
-              title={aboutBusinessData.title}
-              subtitle={aboutBusinessData.subtitle}
-              imageSource={aboutBusinessData.imageSource}
-              imageAlt={aboutBusinessData.imageAlt}
+              title={aboutBusiness.title}
+              subtitle={aboutBusiness.subtitle}
+              imageSource={aboutBusiness.src}
+              imageAlt={aboutBusiness.alt}
             >
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: aboutBusinessData.contentHtml
-                }}
-              />
+              <div>
+                {aboutBusiness.content}
+              </div>
             </Double>
             <Double
-              title={aboutOwnerData.title}
-              subtitle={aboutOwnerData.subtitle}
-              imageSource={aboutOwnerData.imageSource}
-              imageAlt={aboutOwnerData.imageAlt}
+              title={aboutOwner.title}
+              subtitle={aboutOwner.subtitle}
+              imageSource={aboutOwner.src}
+              imageAlt={aboutOwner.alt}
               imageLeft
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutOwnerData.contentHtml
+                  __html: aboutOwner.content
                 }}
               />
             </Double>
