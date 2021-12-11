@@ -503,6 +503,7 @@
       "label": "Menus",
       "name": "menu",
       "path": "content/menu",
+      "format": "json",
       "fields": [
         {
           "type": "string",

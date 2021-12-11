@@ -31,17 +31,23 @@
     "resolveType": "collectionDocumentList",
     "collection": "global"
   },
-  "PostsDocument": {
-    "type": "PostsDocument",
+  "ModifierDocument": {
+    "type": "ModifierDocument",
     "resolveType": "collectionDocument",
-    "collection": "posts",
-    "createPostsDocument": "create",
-    "updatePostsDocument": "update"
+    "collection": "modifier",
+    "createModifierDocument": "create",
+    "updateModifierDocument": "update"
   },
-  "PostsConnection": {
-    "type": "PostsConnection",
+  "ModifierConnection": {
+    "type": "ModifierConnection",
     "resolveType": "collectionDocumentList",
-    "collection": "posts"
+    "collection": "modifier"
+  },
+  "MenuSectionItemModifierDocument": {
+    "type": "MenuSectionItemModifierDocument",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
   },
   "MenuDocument": {
     "type": "MenuDocument",
@@ -55,46 +61,16 @@
     "resolveType": "collectionDocumentList",
     "collection": "menu"
   },
-  "ModifierDocument": {
-    "type": "ModifierDocument",
+  "PostsDocument": {
+    "type": "PostsDocument",
     "resolveType": "collectionDocument",
-    "collection": "modifier",
-    "createModifierDocument": "create",
-    "updateModifierDocument": "update"
+    "collection": "posts",
+    "createPostsDocument": "create",
+    "updatePostsDocument": "update"
   },
-  "ModifierConnection": {
-    "type": "ModifierConnection",
+  "PostsConnection": {
+    "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
-    "collection": "modifier"
-  },
-  "MenuSectionItemAuthorDocument": {
-    "type": "MenuSectionItemAuthorDocument",
-    "resolveType": "multiCollectionDocument",
-    "createDocument": "create",
-    "updateDocument": "update"
-  },
-  "MenuSectionItemModiferDocument": {
-    "type": "MenuSectionItemModiferDocument",
-    "resolveType": "multiCollectionDocument",
-    "createDocument": "create",
-    "updateDocument": "update"
-  },
-  "MenuSectionItemModifersDocument": {
-    "type": "MenuSectionItemModifersDocument",
-    "resolveType": "multiCollectionDocument",
-    "createDocument": "create",
-    "updateDocument": "update"
-  },
-  "MenuSectionItemModifiersDocument": {
-    "type": "MenuSectionItemModifiersDocument",
-    "resolveType": "multiCollectionDocument",
-    "createDocument": "create",
-    "updateDocument": "update"
-  },
-  "MenuSectionItemModifierDocument": {
-    "type": "MenuSectionItemModifierDocument",
-    "resolveType": "multiCollectionDocument",
-    "createDocument": "create",
-    "updateDocument": "update"
+    "collection": "posts"
   }
 }

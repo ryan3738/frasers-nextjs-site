@@ -372,11 +372,12 @@ export default defineSchema({
       label: "Menus",
       name: "menu",
       path: "content/menu",
+      format: 'json',
       fields: [
         {
-            type: "string",
-            label: "Name",
-            name: "name",
+          type: "string",
+          label: "Name",
+          name: "name",
         },
         {
         type: "object",
@@ -394,13 +395,13 @@ export default defineSchema({
             label: "Item",
             name: "item",
             fields: [
-             {
-               type: "string",
+            {
+              type: "string",
               label: "Name",
               name: "name",
             },
-             {
-               type: "string",
+            {
+              type: "string",
               label: "Description",
               name: "description",
             },
@@ -431,7 +432,7 @@ export default defineSchema({
           }
         ]
       }
-    ]
+    ],
     },
     {
       label: "Blog Posts",
@@ -452,7 +453,7 @@ export default defineSchema({
             component: "textarea"
           },
         },
-      ],
+        ],
     },
   ],
 });
