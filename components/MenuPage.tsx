@@ -49,7 +49,7 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export default function MenuPage({props}) {
+export default function MenuPage(props) {
   const {pathname} = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
   props.data && console.log('DATA', props.data);
