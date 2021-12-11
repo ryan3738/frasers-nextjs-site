@@ -9,11 +9,24 @@ const App = ({ Component, pageProps }) => {
       <TinaEditProvider
         editMode={
           <TinaCMS
+            query={pageProps.query}
+            variables={pageProps.variables}
+            data={pageProps.data}
             clientId={process.env.NEXT_PUBLIC_TINA_CLIENT_ID}
-            branch={process.env.NEXT_PUBLIC_EDIT_BRANCH}
+            branch={process.env.NEXT_PUBLIC_EDIT_BRANCH || 'main'}
             isLocalClient={Boolean(
-              Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT ?? true)
+              Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT)
             )}
+            /**
+             * Treat the Global collection as a global form
+             */
+            formifyCallback={({ formConfig, createForm, createGlobalForm }) => {
+              if (formConfig.id === "getGlobalDocument") {
+                return createGlobalForm(formConfig);
+              }
+
+              return createForm(formConfig);
+            }}
             {...pageProps}
           >
             {(livePageProps) => <Component {...livePageProps} />}
