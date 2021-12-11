@@ -1,7 +1,8 @@
 ---
 name: main
 section:
-  - name: Starters
+  - {}
+  - name: Entrees
     item:
       - name: Salad
         description: A yummy salad
