@@ -10,20 +10,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "yarn tina-dev",
+    "build": "yarn tina-build",
+    "start": "yarn tina-start",
     "export": "npm run build && next export",
-    "lint": "next lint"
+    "lint": "next lint",
+    "tina-dev": "yarn tinacms server:start -c \"next dev\"",
+    "tina-build": "yarn tinacms server:start -c \"next build\"",
+    "tina-start": "yarn tinacms server:start -c \"next start\""
   },
   "dependencies": {
+    "@tinacms/cli": "^0.58.2",
     "classnames": "^2.3.1",
     "date-fns": "^2.27.0",
     "gray-matter": "^4.0.3",
     "next": "^12.0.7",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "tinacms": "^0.60.3"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.0.0",
