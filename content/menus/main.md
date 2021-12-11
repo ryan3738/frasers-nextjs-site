@@ -1,8 +1,23 @@
 ---
-name: Main
+name: main
 section:
   - name: Starters
     item:
+      - name: Salad
+        description: A yummy salad
+        price: 12
+        dietary:
+          - vegan
+          - gluten-free
+        available: true
       - name: Steak
-        description: A delicious steak
+        description: A yummy salad
+        price: 12
+        dietary:
+          - gluten-free
+        modifier:
+          - name: add bacon
+            price: 3
+        available: true
 ---
+

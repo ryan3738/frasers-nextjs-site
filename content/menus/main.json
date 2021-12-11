@@ -1,0 +1,25 @@
+{
+  "name": "main",
+  "section": [
+    {
+      "name": "Starters",
+      "item": [
+        {
+          "name": "Salad",
+          "description": "A yummy salad",
+          "price": 12,
+          "dietary": [
+            "vegan"
+          ],
+          "modifier": [
+            {
+              "name": "add bacon",
+              "price": 3
+            }
+          ],
+          "available": true
+        }
+      ]
+    }
+  ]
+}

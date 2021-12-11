@@ -3,7 +3,8 @@ import Layout from './Layout';
 import styles from '../styles/styles.module.css';
 import { Menu } from './Menu';
 import { useRouter } from "next/router";
-import { getStaticPropsForTina, gql, staticRequest } from 'tinacms'
+import type { PostsDocument } from "../.tina/__generated__/types";
+import { getStaticPropsForTina, staticRequest } from 'tinacms'
 
 // const getStaticProps = async () => {
 //     const query = `
@@ -60,26 +61,37 @@ export default function MenuPage(props) {
   );
 }
 
-export const getStaticProps = async () => {
-  const variables = { relativePath: "main.md" }
-  const query = `
-  query MenuQuery($relativePath: String!) {
-    getMenuDocument(relativePath: $relativePath) {
-      data {
+
+export const getStaticProps = async ({ params }) => {
+  const tinaProps = (await getStaticPropsForTina({
+    query: `#graphql
+      query getMenuQuery($relativePath: String!) {
+        getMenuDocument(relativePath: $relativePath) {
+          data {
+      name
+      section {
         name
+        item {
+          name
+          description
+          price
+          dietary
+          modifier {
+            name
+            price
+          }
+          available
+        }
       }
     }
-  }
-`
-  const data = await staticRequest({
-    query: query,
-    variables: variables,
-  })
+        }
+      }
+    `,
+    variables: { relativePath: `main.md` },
+  })) as { data: { getMenuDocument: PostsDocument } };
   return {
     props: {
-      query,
-      variables,
-      data,
+      ...tinaProps,
     },
   };
 };

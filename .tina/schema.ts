@@ -5,24 +5,6 @@ import type { TinaField } from "@tinacms/cli";
 export default defineSchema({
   collections: [
     {
-      label: "Modifiers",
-      name: "modifiers",
-      path: "content/menus",
-      format: "json",
-      fields: [
-        {
-          type: "string",
-          label: "Name",
-          name: "name",
-        },
-        {
-          type: "number",
-          label: "Price",
-          name: "price",
-        }
-      ]
-    },
-    {
       label: "Menu",
       name: "menu",
       path: "content/menus",
@@ -71,6 +53,24 @@ export default defineSchema({
               options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
               list: true,
             },
+            {
+              type: "object",
+              label: "Modifier",
+              name: "modifier",
+              list: true,
+              fields: [
+                {
+                  type: "string",
+                  label: "Name",
+                  name: "name",
+                },
+                {
+                  type: "number",
+                  label: "Price",
+                  name: "price",
+                }
+              ]
+            }
             {
               type: "boolean",
               label: "Available",
