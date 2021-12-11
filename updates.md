@@ -1,5 +1,4 @@
-next                             
-typescript       
+next
 
 remark                   
 remark-html 
