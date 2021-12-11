@@ -1,7 +1,5 @@
-next                     
-prettier         
-typescript
-@next/eslint-plugin-next        
+next                             
+typescript       
 
 remark                   
 remark-html 
