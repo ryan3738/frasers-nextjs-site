@@ -1,39 +1,3 @@
-fragment GlobalParts on Global {
-  header {
-    __typename
-    icon {
-      __typename
-      color
-      style
-      name
-    }
-    color
-    nav {
-      __typename
-      href
-      label
-    }
-  }
-  footer {
-    __typename
-    color
-    social {
-      __typename
-      facebook
-      twitter
-      instagram
-      github
-    }
-  }
-  theme {
-    __typename
-    color
-    font
-    icon
-    darkMode
-  }
-}
-
 fragment ModifierParts on Modifier {
   name
   price
@@ -49,11 +13,6 @@ fragment MenuParts on Menu {
       name
       description
       price
-      modifier {
-        ... on Document {
-          id
-        }
-      }
       dietary
       available
     }

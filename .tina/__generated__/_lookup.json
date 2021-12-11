@@ -3,7 +3,6 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
-      "global",
       "modifier",
       "menu",
       "posts"
