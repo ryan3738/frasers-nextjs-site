@@ -3,6 +3,7 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
+      "global",
       "posts"
     ]
   },
@@ -27,5 +28,17 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "GlobalDocument": {
+    "type": "GlobalDocument",
+    "resolveType": "collectionDocument",
+    "collection": "global",
+    "createGlobalDocument": "create",
+    "updateGlobalDocument": "update"
+  },
+  "GlobalConnection": {
+    "type": "GlobalConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "global"
   }
 }

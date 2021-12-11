@@ -48,6 +48,8 @@ type Query {
   getDocument(collection: String, relativePath: String): DocumentNode!
   getDocumentList(before: String, after: String, first: Int, last: Int): DocumentConnection!
   getDocumentFields: JSON!
+  getGlobalDocument(relativePath: String): GlobalDocument!
+  getGlobalList(before: String, after: String, first: Int, last: Int): GlobalConnection!
   getPostsDocument(relativePath: String): PostsDocument!
   getPostsList(before: String, after: String, first: Int, last: Int): PostsConnection!
 }
@@ -75,7 +77,69 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = PostsDocument
+union DocumentNode = GlobalDocument | PostsDocument
+
+type GlobalHeaderIcon {
+  color: String
+  style: String
+  name: String
+}
+
+type GlobalHeaderNav {
+  href: String
+  label: String
+}
+
+type GlobalHeader {
+  icon: GlobalHeaderIcon
+  color: String
+  nav: [GlobalHeaderNav]
+}
+
+type GlobalFooterSocial {
+  facebook: String
+  twitter: String
+  instagram: String
+  github: String
+}
+
+type GlobalFooter {
+  color: String
+  social: GlobalFooterSocial
+}
+
+type GlobalTheme {
+  color: String
+  font: String
+  icon: String
+  darkMode: String
+}
+
+type Global {
+  header: GlobalHeader
+  footer: GlobalFooter
+  theme: GlobalTheme
+}
+
+type GlobalDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: Global!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type GlobalConnectionEdges {
+  cursor: String
+  node: GlobalDocument
+}
+
+type GlobalConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [GlobalConnectionEdges]
+}
 
 type Posts {
   title: String
@@ -106,12 +170,57 @@ type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
+  updateGlobalDocument(relativePath: String!, params: GlobalMutation!): GlobalDocument!
+  createGlobalDocument(relativePath: String!, params: GlobalMutation!): GlobalDocument!
   updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
   createPostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
 }
 
 input DocumentMutation {
+  global: GlobalMutation
   posts: PostsMutation
+}
+
+input GlobalHeaderIconMutation {
+  color: String
+  style: String
+  name: String
+}
+
+input GlobalHeaderNavMutation {
+  href: String
+  label: String
+}
+
+input GlobalHeaderMutation {
+  icon: GlobalHeaderIconMutation
+  color: String
+  nav: [GlobalHeaderNavMutation]
+}
+
+input GlobalFooterSocialMutation {
+  facebook: String
+  twitter: String
+  instagram: String
+  github: String
+}
+
+input GlobalFooterMutation {
+  color: String
+  social: GlobalFooterSocialMutation
+}
+
+input GlobalThemeMutation {
+  color: String
+  font: String
+  icon: String
+  darkMode: String
+}
+
+input GlobalMutation {
+  header: GlobalHeaderMutation
+  footer: GlobalFooterMutation
+  theme: GlobalThemeMutation
 }
 
 input PostsMutation {
