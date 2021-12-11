@@ -41,56 +41,59 @@ const GlobalStyle = createGlobalStyle`
 const defaultMarked = markdown => markdown;
 // Use the props returned by get static props (this can be deleted when the edit provider and tina-wrapper are moved to _app.js)
 const BlogPage = properties => {
-  return (
-    <>
-      <Head>
-        {/* Tailwind CDN */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css"
-          integrity="sha512-y6ZMKFUQrn+UUEVoqYe8ApScqbjuhjqzTuwUMEGMDuhS2niI8KA3vhH2LenreqJXQS+iIXVTRL2iaNfJbDNA1Q=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        {/* Marked CDN */}
-        <script
-          type="text/javascript"
-          crossOrigin="anonymous"
-          src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.0/marked.min.js"
-        />
-      </Head>
-      <div>
-        <div
-          style={{
-            textAlign: 'center'
-          }}
-        >
-          <h1 className="text-3xl m-8 text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            {properties.data.getPostsDocument.data.title}
-          </h1>
-          {/* Convert markdown to html in the browser only */}
-          {typeof window !== 'undefined' && (
-            <ContentSection
-              content={window.marked.parse(
-                properties.data.getPostsDocument.data.body
-              )}
-            ></ContentSection>
-          )}
-        </div>
-        <div className="bg-green-100 text-center">
-          Lost and looking for a place to start?
-          <a
-            href="https://tina.io/guides/tina-cloud/getting-started/overview/"
-            className="text-blue-500 underline"
+  if (properties.data && properties.data.getPostsDocument) {
+    return (
+      <>
+        <Head>
+          {/* Tailwind CDN */}
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css"
+            integrity="sha512-y6ZMKFUQrn+UUEVoqYe8ApScqbjuhjqzTuwUMEGMDuhS2niI8KA3vhH2LenreqJXQS+iIXVTRL2iaNfJbDNA1Q=="
+            crossOrigin="anonymous"
+            referrerPolicy="no-referrer"
+          />
+          {/* Marked CDN */}
+          <script
+            type="text/javascript"
+            crossOrigin="anonymous"
+            src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.0/marked.min.js"
+          />
+        </Head>
+        <div>
+          <div
+            style={{
+              textAlign: 'center'
+            }}
           >
-            {' '}
-            Check out this guide
-          </a>{' '}
-          to see how add TinaCMS to an existing Next.js site.
+            <h1 className="text-3xl m-8 text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              {properties.data.getPostsDocument.data.title}
+            </h1>
+            {/* Convert markdown to html in the browser only */}
+            {typeof window !== 'undefined' && (
+              <ContentSection
+                content={window.marked.parse(
+                  properties.data.getPostsDocument.data.body
+                )}
+              ></ContentSection>
+            )}
+          </div>
+          <div className="bg-green-100 text-center">
+            Lost and looking for a place to start?
+            <a
+              href="https://tina.io/guides/tina-cloud/getting-started/overview/"
+              className="text-blue-500 underline"
+            >
+              {' '}
+              Check out this guide
+            </a>{' '}
+            to see how add TinaCMS to an existing Next.js site.
+          </div>
         </div>
-      </div>
-    </>
-  );
+      </>
+    );
+  }
+  return <div>Loading...</div>;
 };
 
 export const getStaticProps = async ({ params }) => {
