@@ -1,0 +1,44 @@
+{
+  "DocumentConnection": {
+    "type": "DocumentConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "menu",
+      "posts"
+    ]
+  },
+  "Node": {
+    "type": "Node",
+    "resolveType": "nodeDocument"
+  },
+  "DocumentNode": {
+    "type": "DocumentNode",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
+  },
+  "MenuDocument": {
+    "type": "MenuDocument",
+    "resolveType": "collectionDocument",
+    "collection": "menu",
+    "createMenuDocument": "create",
+    "updateMenuDocument": "update"
+  },
+  "MenuConnection": {
+    "type": "MenuConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "menu"
+  },
+  "PostsDocument": {
+    "type": "PostsDocument",
+    "resolveType": "collectionDocument",
+    "collection": "posts",
+    "createPostsDocument": "create",
+    "updatePostsDocument": "update"
+  },
+  "PostsConnection": {
+    "type": "PostsConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "posts"
+  }
+}

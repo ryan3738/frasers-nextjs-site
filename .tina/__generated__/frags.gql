@@ -1,0 +1,25 @@
+fragment MenuParts on Menu {
+  name
+  section {
+    __typename
+    name
+    item {
+      __typename
+      name
+      description
+      price
+      dietary
+      modifier {
+        __typename
+        name
+        price
+      }
+      available
+    }
+  }
+}
+
+fragment PostsParts on Posts {
+  title
+  body
+}
