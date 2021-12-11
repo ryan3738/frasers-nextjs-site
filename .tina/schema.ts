@@ -6,8 +6,9 @@ export default defineSchema({
   collections: [
     {
       label: "Modifiers",
-      name: "modifier",
-      path: "content/modifier",
+      name: "modifiers",
+      path: "content/menus",
+      format: "json",
       fields: [
         {
           type: "string",
@@ -22,7 +23,7 @@ export default defineSchema({
       ]
     },
     {
-      label: "Menus",
+      label: "Menu",
       name: "menu",
       path: "content/menus",
       fields: [
