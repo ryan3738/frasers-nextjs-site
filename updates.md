@@ -1,5 +1,2 @@
-next
-
 remark                   
-remark-html 
-date-fns
+remark-html
