@@ -2,7 +2,6 @@
 title: Vote For Pedro
 ---
 
-
 # Welcome to the blog.
 ## I made a change
 
@@ -30,7 +29,5 @@ hunc, fluctus Threicio, ad urbes, magicaeque, quid. Per credensque series adicis
 poteram [quidem](#)! Iam uni mensas victrix
 vittas ut flumina Satyri adulter; bellum iacet domitae repercusso truncis urnis
 mille rigidi sub taurum.
-
-Hello Hello
 
 
