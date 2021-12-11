@@ -1,2 +1,1 @@
-import { TinaAdmin } from 'tinacms';
-export default TinaAdmin;
+export { TinaAdmin as default } from 'tinacms';
