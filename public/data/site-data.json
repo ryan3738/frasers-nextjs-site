@@ -51,5 +51,21 @@
     "facebook": "",
     "instagram": "",
     "mailingListSignup": ""
+  },
+  "aboutOwner": {
+    "title": "Chef Scott Fraser",
+    "subtitle": "",
+    "date": "2020-01-01",
+    "src": "/images/scott_fraser_square.jpg",
+    "alt": "Scott Fraser holding a large salmon",
+    "content": "is a Pierre Dubrulle Culinary School graduate and understands the importance of food. After graduating he spent years honing his skills working at the finest French restaurants in Vancouver, BC. For the past 30 years, he has worked to establish Frasers Gourmet Hideaway as not only a hometown favorite, but a culinary destination in the Pacific Northwest for steaks, seafood, and more served with a creative palate."
+  },
+  "aboutBusiness": {
+    "title": "Frasers Gourmet Hideaway",
+    "subtitle": "",
+    "date": "2020-11-25T08:00:00.000Z",
+    "src": "/images/frasers-enter-dining-room.jpg",
+    "alt": "Frasers Gourmet Hideaway dining room",
+    "content": "is owned and operated by Chef Scott Fraser. Inside the rightly named gourmet hideaway, guests will notice a relaxing environment where food and drinks are the focal points. Come enjoy a seasonal menu of the freshest local Northwest ingredients. Pair this with a vibrant West Coast wine, handcrafted cocktail, or a nice cold beer."
   }
 }
