@@ -5,6 +5,20 @@
       "name": "Starters",
       "item": [
         {
+          "name": "Young Green Salad",
+          "description": "This is a delicious salad with cheese",
+          "price": 14,
+          "dietary": [
+            "vegetarian"
+          ],
+          "modifier": [
+            {
+              "name": "add bacon bits",
+              "price": 3
+            }
+          ]
+        },
+        {
           "name": "Salad",
           "description": "A yummy salad",
           "price": 12,
