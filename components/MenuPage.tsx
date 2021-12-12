@@ -3,41 +3,11 @@ import Layout from './Layout';
 import styles from '../styles/styles.module.css';
 import { Menu } from './Menu';
 import { useRouter } from "next/router";
-import { getStaticPropsForTina, staticRequest } from 'tinacms'
-
-// const getStaticProps = async () => {
-//     const query = `
-//         query getMenuList{
-//             name
-//         }
-//     `
-
-//     let data = {}
-//     try {
-//         data = await staticRequest({query})
-//     } catch {
-//         // swallow errors related to document creation
-//     }
-
-//     return {
-//         props: {
-//             query,
-//             data,
-//             //myOtherProp: 'some-other-data',
-//         },
-//     }
-// }
-
-
+import { getStaticPropsForTina, gql } from 'tinacms'
 
 export default function MenuPage(props) {
   const {pathname} = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
-  console.log(props)
-  props && console.log('DATA', props.data);
-  if (props) {
-    console.log('DATA2',props)
-  }
   return (
     <Layout>
       <Head>
@@ -46,7 +16,6 @@ export default function MenuPage(props) {
       <section className="menu-container">
         <div className={styles.header}>
           <h1>MENU</h1>
-
         </div>
         <Menu pathName={pathname} categories={menuCategories} />
       </section>
@@ -63,35 +32,35 @@ export default function MenuPage(props) {
 
 
 export const getStaticProps = async ({ params }) => {
-  const tinaProps = (await getStaticPropsForTina({
-    query: `#graphql
-      query getMenuQuery($relativePath: String!) {
+  const tinaProperties = await getStaticPropsForTina({
+    query: gql`
+      query MenuQuery($relativePath: String!) {
         getMenuDocument(relativePath: $relativePath) {
           data {
-      name
-      section {
-        name
-        item {
-          name
-          description
-          price
-          dietary
-          modifier {
             name
-            price
+            section {
+              name
+              item {
+                name
+                description
+                price
+                dietary
+                modifier {
+                  name
+                  price
+                }
+                available
+              }
+            }
           }
-          available
-        }
-      }
-    }
         }
       }
     `,
-    variables: { relativePath: `main.md` },
-  }));
+    variables: { relativePath: `main.md` }
+  });
   return {
     props: {
-      ...tinaProps,
-    },
+      ...tinaProperties
+    }
   };
 };
