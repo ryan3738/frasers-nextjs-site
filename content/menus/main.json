@@ -9,7 +9,8 @@
           "description": "A yummy salad",
           "price": 12,
           "dietary": [
-            "vegan"
+            "vegan",
+            "gluten-free"
           ],
           "modifier": [
             {
