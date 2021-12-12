@@ -40,6 +40,9 @@ export default defineSchema({
               type: "string",
               label: "Description",
               name: "description",
+              ui: {
+                component: "textarea",
+              },
             },
             {
               type: "number",
