@@ -16,7 +16,8 @@
               "name": "add bacon bits",
               "price": 3
             }
-          ]
+          ],
+          "available": true
         },
         {
           "name": "Salad",
