@@ -1,6 +1,6 @@
-import dynamic from 'next/dynamic'
-import { TinaEditProvider } from 'tinacms/dist/edit-state'
-const TinaCMS = dynamic(() => import('tinacms'), { ssr: false })
+import dynamic from 'next/dynamic';
+import { TinaEditProvider } from 'tinacms/dist/edit-state';
+const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 import '../styles/global.css';
 
 const App = ({ Component, pageProps }) => {
@@ -17,26 +17,50 @@ const App = ({ Component, pageProps }) => {
             isLocalClient={Boolean(
               Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT)
             )}
+            cmsCallback={cms => {
+              import('tinacms').then(({ GroupListFieldPlugin }) => {
+                cms.fields.add({
+                  ...GroupListFieldPlugin,
+                  name: 'section',
+                  Component: props => {
+                    const field = {
+                      ...props.field,
+                      itemProps: item => {
+                        return {
+                          label: item.name
+                        };
+                      }
+                    };
+                    return (
+                      <GroupListFieldPlugin.Component
+                        {...props}
+                        field={field}
+                      />
+                    );
+                  }
+                });
+              });
+            }}
             /**
              * Treat the Global collection as a global form
              */
-            formifyCallback={({ formConfig, createForm, createGlobalForm }) => {
-              if (formConfig.id === "getGlobalDocument") {
-                return createGlobalForm(formConfig);
-              }
+            // formifyCallback={({ formConfig, createForm, createGlobalForm }) => {
+            //   if (formConfig.id === 'getGlobalDocument') {
+            //     return createGlobalForm(formConfig);
+            //   }
 
-              return createForm(formConfig);
-            }}
+            //   return createForm(formConfig);
+            // }}
             {...pageProps}
           >
-            {(livePageProps) => <Component {...livePageProps} />}
+            {livePageProps => <Component {...livePageProps} />}
           </TinaCMS>
         }
       >
         <Component {...pageProps} />
       </TinaEditProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
