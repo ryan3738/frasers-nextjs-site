@@ -2,7 +2,7 @@
 name: Main
 section1: ''
 section:
-  - {}
+  - name: Desserts
   - name: Starters
   - name: Entrees
     item:
