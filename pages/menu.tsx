@@ -35,14 +35,14 @@ export const getStaticProps = async ({ params }) => {
             menu {
               name
               description
-              section {
+              sections {
                 name
-                item {
+                items {
                   name
                   description
                   price
                   dietary
-                  modifier {
+                  modifiers {
                     name
                     price
                   }

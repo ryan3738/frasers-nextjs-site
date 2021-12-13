@@ -174,12 +174,7 @@
       "itemName": "CHOCOLATE TARTE",
       "category": "Desserts",
       "menu": "New Years Takeout"
-    }
-  ]
-}
-
-[
-    [
+    },
   {
     "itemName": "Tomato & Burrata",
     "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
@@ -312,5 +307,6 @@
     "category": "Starters",
     "menu": "New Years Takeout"
   }
-]
-]
+  ]
+}
+
