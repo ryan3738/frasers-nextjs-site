@@ -1,5 +1,6 @@
 fragment MenuParts on Menu {
   name
+  description
   section {
     __typename
     name

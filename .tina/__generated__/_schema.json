@@ -7,11 +7,20 @@
       "fields": [
         {
           "type": "string",
-          "label": "Name",
+          "label": "Name of Menu",
           "name": "name",
           "namespace": [
             "menu",
             "name"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "description",
+          "name": "description",
+          "namespace": [
+            "menu",
+            "description"
           ]
         },
         {

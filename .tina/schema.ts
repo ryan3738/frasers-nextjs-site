@@ -11,8 +11,13 @@ export default defineSchema({
       fields: [
         {
           type: "string",
-          label: "Name",
+          label: "Name of Menu",
           name: "name",
+        },
+        {
+          type: "string",
+          label: "description",
+          name: "description",
         },
         {
         type: "object",
