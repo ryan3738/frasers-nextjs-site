@@ -2,81 +2,120 @@
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField } from "@tinacms/cli";
 
-export default defineSchema({
-  collections: [
+const menuItemSchema: TinaField = {
+  type: "object",
+  label: "Item",
+  name: "item",
+  list: true,
+  fields: [
     {
-      label: "Menu Sections",
-      name: "section",
-      path: "content/menuSections",
-      fields: [
-          {
-          type: "string",
-          label: "Name",
-          name: "name",
-        },
-        {
-          type: "string",
-          label: "Title",
-          name: "title",
-        }
-
-      ]
+      type: "string",
+      label: "Name",
+      name: "name",
     },
     {
-      label: "Menu Items",
-      name: "menuItem",
-      path: "content/menuItems",
+      type: "string",
+      label: "Description",
+      name: "description",
+      ui: {
+        component: "textarea",
+      },
+    },
+    {
+      type: "number",
+      label: "Price",
+      name: "price",
+    },
+    {
+      type: "string",
+      label: "Dietary Preferences",
+      name: "dietary",
+      options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
+      list: true,
+    },
+    {
+      type: "object",
+      label: "Modifier",
+      name: "modifier",
+      list: true,
       fields: [
         {
           type: "string",
           label: "Name",
           name: "name",
-        },
-        {
-          type: "string",
-          label: "Description",
-          name: "description",
-          ui: {
-            component: "textarea",
-          },
         },
         {
           type: "number",
           label: "Price",
           name: "price",
-        },
-        {
-          type: "string",
-          label: "Dietary Preferences",
-          name: "dietary",
-          options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
-          list: true,
-        },
-        {
-          type: "object",
-          label: "Modifier",
-          name: "modifier",
-          list: true,
-          fields: [
-            {
-              type: "string",
-              label: "Name",
-              name: "name",
-            },
-            {
-              type: "number",
-              label: "Price",
-              name: "price",
-            }
-          ]
-        },
-        {
-          type: "boolean",
-          label: "Available",
-          name: "available",
         }
       ]
     },
+    {
+      type: "boolean",
+      label: "Available",
+      name: "available",
+    }
+  ]
+}
+
+export default defineSchema({
+  collections: [
+    // {
+    //   label: "Menu Items",
+    //   name: "menuItem",
+    //   path: "content/menuItems",
+    //   fields: [
+    //     {
+    //       type: "string",
+    //       label: "Name",
+    //       name: "name",
+    //     },
+    //     {
+    //       type: "string",
+    //       label: "Description",
+    //       name: "description",
+    //       ui: {
+    //         component: "textarea",
+    //       },
+    //     },
+    //     {
+    //       type: "number",
+    //       label: "Price",
+    //       name: "price",
+    //     },
+    //     {
+    //       type: "string",
+    //       label: "Dietary Preferences",
+    //       name: "dietary",
+    //       options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
+    //       list: true,
+    //     },
+    //     {
+    //       type: "object",
+    //       label: "Modifier",
+    //       name: "modifier",
+    //       list: true,
+    //       fields: [
+    //         {
+    //           type: "string",
+    //           label: "Name",
+    //           name: "name",
+    //         },
+    //         {
+    //           type: "number",
+    //           label: "Price",
+    //           name: "price",
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       type: "boolean",
+    //       label: "Available",
+    //       name: "available",
+    //     }
+    //   ]
+    // },
     {
       label: "Menu",
       name: "menu",
@@ -89,15 +128,8 @@ export default defineSchema({
         },
         {
           type: "string",
-          label: "description",
+          label: "Description",
           name: "description",
-        },
-        {
-          type: "reference",
-          label: "Menu Section",
-          name: "section1",
-          // list: true,
-          collections: ["section"],
         },
         {
         type: "object",
@@ -109,11 +141,6 @@ export default defineSchema({
             type: "string",
             label: "Name",
             name: "name",
-          },
-          {
-            type: "string",
-            label: "Title",
-            name: "title",
           },
           {
             type: "object",
@@ -130,9 +157,6 @@ export default defineSchema({
               type: "string",
               label: "Description",
               name: "description",
-              ui: {
-                component: "textarea",
-              },
             },
             {
               type: "number",

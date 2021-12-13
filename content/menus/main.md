@@ -1,8 +1,7 @@
 ---
-name: Main
-section1: content/menuSections/menuSections.md
+name: Dinner
+description: This is the main dinner menu for Frasers
 section:
-  - {}
   - name: Starters
   - name: Entrees
     item:

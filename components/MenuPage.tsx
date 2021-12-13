@@ -1,15 +1,14 @@
 import Head from 'next/head';
-import Layout from './Layout';
 import styles from '../styles/styles.module.css';
 import { Menu } from './Menu';
-import { useRouter } from "next/router";
-import { getStaticPropsForTina, gql } from 'tinacms'
+import { useRouter } from 'next/router';
+import { getStaticPropsForTina, gql } from 'tinacms';
 
-export default function MenuPage(props) {
-  const {pathname} = useRouter();
+export default function MenuPage(properties) {
+  const { pathname } = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
   return (
-    <Layout>
+    <>
       <Head>
         <title>MENU</title>
       </Head>
@@ -26,10 +25,9 @@ export default function MenuPage(props) {
           place-self: center;
         }
       `}</style>
-    </Layout>
+    </>
   );
 }
-
 
 export const getStaticProps = async ({ params }) => {
   const tinaProperties = await getStaticPropsForTina({
