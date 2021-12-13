@@ -4,21 +4,26 @@ fragment MenusParts on Menus {
     name
     label
     description
-    section {
+    sections {
       __typename
       name
-      item {
+      items {
         __typename
         name
         description
         price
         dietary
-        modifier {
+        modifiers {
           __typename
           name
           price
         }
         available
+        image {
+          __typename
+          name
+          src
+        }
       }
     }
   }

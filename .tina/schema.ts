@@ -4,8 +4,8 @@ import type { TinaField } from "@tinacms/cli";
 
 const modifierSchema: TinaField = {
   type: "object",
-    label: "Modifier",
-      name: "modifier",
+    label: "Modifiers",
+      name: "modifiers",
         ui: {
     component: "groupList",
               },
@@ -50,8 +50,8 @@ const imageSchema: TinaField = {
 
 const menuItemSchema: TinaField = {
   type: "object",
-  label: "Menu Item",
-  name: "item",
+  label: "Menu Items",
+  name: "items",
   ui: {
     component: "groupList",
   },
@@ -97,7 +97,7 @@ const menuItemSchema: TinaField = {
 const menuSectionSchema: TinaField = {
   type: "object",
   label: "Sections",
-  name: "section",
+  name: "sections",
   ui: {
     component: "groupList",
   },

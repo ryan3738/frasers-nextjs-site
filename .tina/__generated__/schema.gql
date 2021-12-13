@@ -79,30 +79,36 @@ type Collection {
 
 union DocumentNode = MenusDocument | PostsDocument
 
-type MenusMenuSectionItemModifier {
+type MenusMenuSectionsItemsModifiers {
   name: String
   price: Int
 }
 
-type MenusMenuSectionItem {
+type MenusMenuSectionsItemsImage {
+  name: String!
+  src: String!
+}
+
+type MenusMenuSectionsItems {
   name: String
   description: String
   price: Int
   dietary: [String]
-  modifier: [MenusMenuSectionItemModifier]
+  modifiers: [MenusMenuSectionsItemsModifiers]
   available: Boolean
+  image: [MenusMenuSectionsItemsImage]
 }
 
-type MenusMenuSection {
+type MenusMenuSections {
   name: String
-  item: [MenusMenuSectionItem]
+  items: [MenusMenuSectionsItems]
 }
 
 type MenusMenu {
   name: String
   label: String
   description: String
-  section: [MenusMenuSection]
+  sections: [MenusMenuSections]
 }
 
 type Menus {
@@ -169,30 +175,36 @@ input DocumentMutation {
   posts: PostsMutation
 }
 
-input MenusMenuSectionItemModifierMutation {
+input MenusMenuSectionsItemsModifiersMutation {
   name: String
   price: Int
 }
 
-input MenusMenuSectionItemMutation {
+input MenusMenuSectionsItemsImageMutation {
+  name: String
+  src: String
+}
+
+input MenusMenuSectionsItemsMutation {
   name: String
   description: String
   price: Int
   dietary: [String]
-  modifier: [MenusMenuSectionItemModifierMutation]
+  modifiers: [MenusMenuSectionsItemsModifiersMutation]
   available: Boolean
+  image: [MenusMenuSectionsItemsImageMutation]
 }
 
-input MenusMenuSectionMutation {
+input MenusMenuSectionsMutation {
   name: String
-  item: [MenusMenuSectionItemMutation]
+  items: [MenusMenuSectionsItemsMutation]
 }
 
 input MenusMenuMutation {
   name: String
   label: String
   description: String
-  section: [MenusMenuSectionMutation]
+  sections: [MenusMenuSectionsMutation]
 }
 
 input MenusMutation {

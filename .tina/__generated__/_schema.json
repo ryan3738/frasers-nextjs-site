@@ -47,7 +47,7 @@
             {
               "type": "object",
               "label": "Sections",
-              "name": "section",
+              "name": "sections",
               "ui": {
                 "component": "groupList"
               },
@@ -60,14 +60,14 @@
                   "namespace": [
                     "menus",
                     "menu",
-                    "section",
+                    "sections",
                     "name"
                   ]
                 },
                 {
                   "type": "object",
-                  "label": "Menu Item",
-                  "name": "item",
+                  "label": "Menu Items",
+                  "name": "items",
                   "ui": {
                     "component": "groupList"
                   },
@@ -80,8 +80,8 @@
                       "namespace": [
                         "menus",
                         "menu",
-                        "section",
-                        "item",
+                        "sections",
+                        "items",
                         "name"
                       ]
                     },
@@ -95,8 +95,8 @@
                       "namespace": [
                         "menus",
                         "menu",
-                        "section",
-                        "item",
+                        "sections",
+                        "items",
                         "description"
                       ]
                     },
@@ -107,8 +107,8 @@
                       "namespace": [
                         "menus",
                         "menu",
-                        "section",
-                        "item",
+                        "sections",
+                        "items",
                         "price"
                       ]
                     },
@@ -126,15 +126,15 @@
                       "namespace": [
                         "menus",
                         "menu",
-                        "section",
-                        "item",
+                        "sections",
+                        "items",
                         "dietary"
                       ]
                     },
                     {
                       "type": "object",
-                      "label": "Modifier",
-                      "name": "modifier",
+                      "label": "Modifiers",
+                      "name": "modifiers",
                       "ui": {
                         "component": "groupList"
                       },
@@ -147,9 +147,9 @@
                           "namespace": [
                             "menus",
                             "menu",
-                            "section",
-                            "item",
-                            "modifier",
+                            "sections",
+                            "items",
+                            "modifiers",
                             "name"
                           ]
                         },
@@ -160,9 +160,9 @@
                           "namespace": [
                             "menus",
                             "menu",
-                            "section",
-                            "item",
-                            "modifier",
+                            "sections",
+                            "items",
+                            "modifiers",
                             "price"
                           ]
                         }
@@ -170,9 +170,9 @@
                       "namespace": [
                         "menus",
                         "menu",
-                        "section",
-                        "item",
-                        "modifier"
+                        "sections",
+                        "items",
+                        "modifiers"
                       ]
                     },
                     {
@@ -182,24 +182,70 @@
                       "namespace": [
                         "menus",
                         "menu",
-                        "section",
-                        "item",
+                        "sections",
+                        "items",
                         "available"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "label": "Image",
+                      "name": "image",
+                      "ui": {
+                        "component": "groupList"
+                      },
+                      "list": true,
+                      "fields": [
+                        {
+                          "type": "string",
+                          "label": "Image Alt Text",
+                          "name": "name",
+                          "required": true,
+                          "namespace": [
+                            "menus",
+                            "menu",
+                            "sections",
+                            "items",
+                            "image",
+                            "name"
+                          ]
+                        },
+                        {
+                          "type": "string",
+                          "label": "src",
+                          "name": "src",
+                          "required": true,
+                          "namespace": [
+                            "menus",
+                            "menu",
+                            "sections",
+                            "items",
+                            "image",
+                            "src"
+                          ]
+                        }
+                      ],
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "sections",
+                        "items",
+                        "image"
                       ]
                     }
                   ],
                   "namespace": [
                     "menus",
                     "menu",
-                    "section",
-                    "item"
+                    "sections",
+                    "items"
                   ]
                 }
               ],
               "namespace": [
                 "menus",
                 "menu",
-                "section"
+                "sections"
               ]
             }
           ],
