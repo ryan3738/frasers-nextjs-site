@@ -30,29 +30,31 @@ export const getStaticProps = async ({ params }) => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
       query MenuQuery($relativePath: String!) {
-        getMenuDocument(relativePath: $relativePath) {
+        getMenusDocument(relativePath: $relativePath) {
           data {
-            name
-            description
-            section {
+            menu {
               name
-              item {
+              description
+              section {
                 name
-                description
-                price
-                dietary
-                modifier {
+                item {
                   name
+                  description
                   price
+                  dietary
+                  modifier {
+                    name
+                    price
+                  }
+                  available
                 }
-                available
               }
             }
           }
         }
       }
     `,
-    variables: { relativePath: `main.md` }
+    variables: { relativePath: `menus.json` }
   });
   return {
     props: {

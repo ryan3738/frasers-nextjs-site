@@ -1,0 +1,204 @@
+{
+  "collections": [
+    {
+      "label": "Menus",
+      "name": "menus",
+      "path": "content/menus",
+      "fields": [
+        {
+          "type": "object",
+          "label": "Menu",
+          "name": "menu",
+          "ui": {
+            "component": "groupList"
+          },
+          "list": true,
+          "fields": [
+            {
+              "type": "string",
+              "label": "Name of Menu",
+              "name": "name",
+              "namespace": [
+                "menus",
+                "menu",
+                "name"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "menus",
+                "menu",
+                "description"
+              ]
+            },
+            {
+              "type": "object",
+              "label": "Sections",
+              "name": "section",
+              "ui": {
+                "component": "groupList"
+              },
+              "list": true,
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Name",
+                  "name": "name",
+                  "namespace": [
+                    "menus",
+                    "menu",
+                    "section",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "label": "Item",
+                  "name": "item",
+                  "ui": {
+                    "component": "groupList"
+                  },
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Name",
+                      "name": "name",
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "name"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Description",
+                      "name": "description",
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "description"
+                      ]
+                    },
+                    {
+                      "type": "number",
+                      "label": "Price",
+                      "name": "price",
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "price"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Dietary Preferences",
+                      "name": "dietary",
+                      "options": [
+                        "vegan",
+                        "vegetarian",
+                        "gluten-free",
+                        "pescatarian"
+                      ],
+                      "list": true,
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "dietary"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "label": "Modifier",
+                      "name": "modifier",
+                      "ui": {
+                        "component": "groupList"
+                      },
+                      "list": true,
+                      "fields": [
+                        {
+                          "type": "string",
+                          "label": "Name",
+                          "name": "name",
+                          "namespace": [
+                            "menus",
+                            "menu",
+                            "section",
+                            "item",
+                            "modifier",
+                            "name"
+                          ]
+                        },
+                        {
+                          "type": "number",
+                          "label": "Price",
+                          "name": "price",
+                          "namespace": [
+                            "menus",
+                            "menu",
+                            "section",
+                            "item",
+                            "modifier",
+                            "price"
+                          ]
+                        }
+                      ],
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "modifier"
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "label": "Available",
+                      "name": "available",
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "available"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "menus",
+                    "menu",
+                    "section",
+                    "item"
+                  ]
+                }
+              ],
+              "namespace": [
+                "menus",
+                "menu",
+                "section"
+              ]
+            }
+          ],
+          "namespace": [
+            "menus",
+            "menu"
+          ]
+        }
+      ],
+      "namespace": [
+        "menus"
+      ]
+    }
+  ]
+}

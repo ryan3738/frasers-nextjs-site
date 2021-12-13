@@ -6,6 +6,9 @@ const menuItemSchema: TinaField = {
   type: "object",
   label: "Item",
   name: "item",
+  ui: {
+    component: "groupList",
+  },
   list: true,
   fields: [
     {
@@ -61,64 +64,9 @@ const menuItemSchema: TinaField = {
 
 export default defineSchema({
   collections: [
-    // {
-    //   label: "Menu Items",
-    //   name: "menuItem",
-    //   path: "content/menuItems",
-    //   fields: [
-    //     {
-    //       type: "string",
-    //       label: "Name",
-    //       name: "name",
-    //     },
-    //     {
-    //       type: "string",
-    //       label: "Description",
-    //       name: "description",
-    //       ui: {
-    //         component: "textarea",
-    //       },
-    //     },
-    //     {
-    //       type: "number",
-    //       label: "Price",
-    //       name: "price",
-    //     },
-    //     {
-    //       type: "string",
-    //       label: "Dietary Preferences",
-    //       name: "dietary",
-    //       options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
-    //       list: true,
-    //     },
-    //     {
-    //       type: "object",
-    //       label: "Modifier",
-    //       name: "modifier",
-    //       list: true,
-    //       fields: [
-    //         {
-    //           type: "string",
-    //           label: "Name",
-    //           name: "name",
-    //         },
-    //         {
-    //           type: "number",
-    //           label: "Price",
-    //           name: "price",
-    //         }
-    //       ]
-    //     },
-    //     {
-    //       type: "boolean",
-    //       label: "Available",
-    //       name: "available",
-    //     }
-    //   ]
-    // },
     {
-      label: "Menu",
-      name: "menu",
+      label: "Menus",
+      name: "menus",
       path: "content/menus",
       fields: [
         {
@@ -135,6 +83,9 @@ export default defineSchema({
         type: "object",
         label: "Sections",
         name: "section",
+        ui: {
+          component: "groupList",
+        },
         list: true,
         fields: [
           {
@@ -146,6 +97,9 @@ export default defineSchema({
             type: "object",
             label: "Item",
             name: "item",
+            ui: {
+              component: "groupList",
+            },
             list: true,
             fields: [
             {
@@ -174,6 +128,9 @@ export default defineSchema({
               type: "object",
               label: "Modifier",
               name: "modifier",
+              ui: {
+                component: "groupList",
+              },
               list: true,
               fields: [
                 {

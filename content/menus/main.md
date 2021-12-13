@@ -3,6 +3,16 @@ name: Dinner
 description: This is the main dinner menu for Frasers
 section:
   - name: Starters
+    item:
+      - name: Salad
+        description: A yummy salad to eat
+        price: 12
+        dietary:
+          - vegetarian
+        modifier:
+          - name: Add salmon
+            price: 8
+        available: true
   - name: Entrees
     item:
       - name: Salad

@@ -21,7 +21,7 @@ const App = ({ Component, pageProps }) => {
               import('tinacms').then(({ GroupListFieldPlugin }) => {
                 cms.fields.add({
                   ...GroupListFieldPlugin,
-                  name: 'section',
+                  name: 'groupList',
                   Component: props => {
                     const field = {
                       ...props.field,

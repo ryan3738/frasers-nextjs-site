@@ -1,0 +1,26 @@
+{
+  "name": "Dinner",
+  "description": "This is the main dinner menu",
+  "section": [
+    {
+      "name": "Starters",
+      "item": [
+        {
+          "name": "Green Salad",
+          "description": "A yummy salad",
+          "price": 12,
+          "dietary": [
+            "vegetarian"
+          ],
+          "modifier": [
+            {
+              "name": "add Salmon",
+              "price": 8
+            }
+          ],
+          "available": true
+        }
+      ]
+    }
+  ]
+}

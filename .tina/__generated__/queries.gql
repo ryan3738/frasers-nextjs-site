@@ -1,0 +1,38 @@
+query getMenusDocument($relativePath: String!) {
+  getMenusDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...MenusParts
+    }
+  }
+}
+
+query getMenusList {
+  getMenusList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...MenusParts
+        }
+      }
+    }
+  }
+}

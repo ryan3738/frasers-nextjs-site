@@ -1,0 +1,24 @@
+fragment MenusParts on Menus {
+  menu {
+    __typename
+    name
+    description
+    section {
+      __typename
+      name
+      item {
+        __typename
+        name
+        description
+        price
+        dietary
+        modifier {
+          __typename
+          name
+          price
+        }
+        available
+      }
+    }
+  }
+}
