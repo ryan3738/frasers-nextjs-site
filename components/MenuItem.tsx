@@ -1,13 +1,31 @@
 import menuData from '../public/data/menu-data.json';
 
+interface MenuSectionProps {
+  category: String;
+  menuData: any;
+}
 
-const getMenuSection = (category: String, menuData: any) => {
+const getModifier = ({modifier, modifierPrice}) => {
+  return modifier ? [{
+    name: modifier,
+    price: modifierPrice
+  }] : null;
+}
+
+const getMenuSection = ({category, menuData}: MenuSectionProps) => {
   const menu = menuData.menu.filter(item => item.category === category);
-  return menu;
+  const migratedMenu = menu.map(item => {
+    return {
+      ...item,
+      name: item.itemName,
+      modifiers: getModifier({modifier: item.modifier, modifierPrice: item.modifierPrice}),
+    };
+  })
+  return migratedMenu;
 }
 
 const getMenuItem = ({ category }) => {
-  console.log(getMenuSection('Starters', menuData));
+  console.log(getMenuSection({category: 'Entrees', menuData: menuData}));
   return (
     <>
       {menuData.menu
