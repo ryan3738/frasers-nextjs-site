@@ -1,9 +1,27 @@
+fragment MenuSectionParts on MenuSection {
+  name
+}
+
+fragment MenuItemParts on MenuItem {
+  name
+  description
+  price
+  dietary
+  modifier {
+    __typename
+    name
+    price
+  }
+  available
+}
+
 fragment MenuParts on Menu {
   name
   description
   section {
     __typename
     name
+    title
     item {
       __typename
       name

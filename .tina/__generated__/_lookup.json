@@ -3,6 +3,8 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
+      "menuSection",
+      "menuItem",
       "menu",
       "posts"
     ]
@@ -40,5 +42,29 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "MenuItemDocument": {
+    "type": "MenuItemDocument",
+    "resolveType": "collectionDocument",
+    "collection": "menuItem",
+    "createMenuItemDocument": "create",
+    "updateMenuItemDocument": "update"
+  },
+  "MenuItemConnection": {
+    "type": "MenuItemConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "menuItem"
+  },
+  "MenuSectionDocument": {
+    "type": "MenuSectionDocument",
+    "resolveType": "collectionDocument",
+    "collection": "menuSection",
+    "createMenuSectionDocument": "create",
+    "updateMenuSectionDocument": "update"
+  },
+  "MenuSectionConnection": {
+    "type": "MenuSectionConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "menuSection"
   }
 }

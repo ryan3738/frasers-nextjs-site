@@ -4,7 +4,7 @@ import { getStaticPropsForTina, gql } from 'tinacms';
 import Layout from '../components/Layout';
 import Menu from '../components/MenuPage';
 
-export default function MenuPage(props) {
+export default function MenuPage(properties) {
   const { pathname } = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
   return (
@@ -35,6 +35,7 @@ export const getStaticProps = async ({ params }) => {
             name
             section {
               name
+              title
               item {
                 name
                 description
@@ -51,7 +52,7 @@ export const getStaticProps = async ({ params }) => {
         }
       }
     `,
-    variables: { relativePath: `main.json` }
+    variables: { relativePath: `main.md` }
   });
   return {
     props: {

@@ -1,3 +1,81 @@
+query getMenuSectionDocument($relativePath: String!) {
+  getMenuSectionDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...MenuSectionParts
+    }
+  }
+}
+
+query getMenuSectionList {
+  getMenuSectionList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...MenuSectionParts
+        }
+      }
+    }
+  }
+}
+
+query getMenuItemDocument($relativePath: String!) {
+  getMenuItemDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...MenuItemParts
+    }
+  }
+}
+
+query getMenuItemList {
+  getMenuItemList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...MenuItemParts
+        }
+      }
+    }
+  }
+}
+
 query getMenuDocument($relativePath: String!) {
   getMenuDocument(relativePath: $relativePath) {
     sys {
