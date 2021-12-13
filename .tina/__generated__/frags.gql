@@ -19,7 +19,7 @@ fragment MenusParts on Menus {
           price
         }
         available
-        image {
+        images {
           __typename
           name
           src

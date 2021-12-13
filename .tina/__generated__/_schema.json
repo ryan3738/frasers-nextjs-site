@@ -189,8 +189,8 @@
                     },
                     {
                       "type": "object",
-                      "label": "Image",
-                      "name": "image",
+                      "label": "Images",
+                      "name": "images",
                       "ui": {
                         "component": "groupList"
                       },
@@ -198,7 +198,7 @@
                       "fields": [
                         {
                           "type": "string",
-                          "label": "Image Alt Text",
+                          "label": "Descriptive Image Alt Text",
                           "name": "name",
                           "required": true,
                           "namespace": [
@@ -206,7 +206,7 @@
                             "menu",
                             "sections",
                             "items",
-                            "image",
+                            "images",
                             "name"
                           ]
                         },
@@ -220,7 +220,7 @@
                             "menu",
                             "sections",
                             "items",
-                            "image",
+                            "images",
                             "src"
                           ]
                         }
@@ -230,7 +230,7 @@
                         "menu",
                         "sections",
                         "items",
-                        "image"
+                        "images"
                       ]
                     }
                   ],

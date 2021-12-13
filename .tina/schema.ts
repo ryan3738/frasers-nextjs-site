@@ -1,6 +1,6 @@
 
 import { defineSchema } from "@tinacms/cli";
-import type { TinaField } from "@tinacms/cli";
+import type { TinaField, TinaTemplate } from "@tinacms/cli";
 
 const modifierSchema: TinaField = {
   type: "object",
@@ -24,10 +24,10 @@ const modifierSchema: TinaField = {
     ]
 }
 
-const imageSchema: TinaField = {
+const imagesSchema: TinaField = {
   type: "object",
-  label: "Image",
-  name: "image",
+  label: "Images",
+  name: "images",
   ui: {
     component: "groupList",
   },
@@ -35,7 +35,7 @@ const imageSchema: TinaField = {
   fields: [
     {
       type: "string",
-      label: "Image Alt Text",
+      label: "Descriptive Image Alt Text",
       name: "name",
       required: true,
     },
@@ -88,7 +88,7 @@ const menuItemSchema: TinaField = {
       label: "Available",
       name: "available",
     },
-    imageSchema,
+    imagesSchema,
   ]
 }
 

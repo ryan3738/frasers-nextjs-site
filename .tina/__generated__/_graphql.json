@@ -1297,7 +1297,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItemsImage"
+        "value": "MenusMenuSectionsItemsImages"
       },
       "fields": [
         {
@@ -1447,7 +1447,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "image"
+            "value": "images"
           },
           "arguments": [],
           "type": {
@@ -1456,7 +1456,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItemsImage"
+                "value": "MenusMenuSectionsItemsImages"
               }
             }
           }
@@ -2643,7 +2643,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItemsImageMutation"
+        "value": "MenusMenuSectionsItemsImagesMutation"
       },
       "fields": [
         {
@@ -2777,7 +2777,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "image"
+            "value": "images"
           },
           "type": {
             "kind": "ListType",
@@ -2785,7 +2785,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItemsImageMutation"
+                "value": "MenusMenuSectionsItemsImagesMutation"
               }
             }
           }

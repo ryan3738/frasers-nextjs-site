@@ -84,7 +84,7 @@ type MenusMenuSectionsItemsModifiers {
   price: Int
 }
 
-type MenusMenuSectionsItemsImage {
+type MenusMenuSectionsItemsImages {
   name: String!
   src: String!
 }
@@ -96,7 +96,7 @@ type MenusMenuSectionsItems {
   dietary: [String]
   modifiers: [MenusMenuSectionsItemsModifiers]
   available: Boolean
-  image: [MenusMenuSectionsItemsImage]
+  images: [MenusMenuSectionsItemsImages]
 }
 
 type MenusMenuSections {
@@ -180,7 +180,7 @@ input MenusMenuSectionsItemsModifiersMutation {
   price: Int
 }
 
-input MenusMenuSectionsItemsImageMutation {
+input MenusMenuSectionsItemsImagesMutation {
   name: String
   src: String
 }
@@ -192,7 +192,7 @@ input MenusMenuSectionsItemsMutation {
   dietary: [String]
   modifiers: [MenusMenuSectionsItemsModifiersMutation]
   available: Boolean
-  image: [MenusMenuSectionsItemsImageMutation]
+  images: [MenusMenuSectionsItemsImagesMutation]
 }
 
 input MenusMenuSectionsMutation {
