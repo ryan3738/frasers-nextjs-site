@@ -1,6 +1,6 @@
 ---
 name: Main
-section1: content/menuSections/menuSections.md
+section1: ''
 section:
   - {}
   - name: Starters
