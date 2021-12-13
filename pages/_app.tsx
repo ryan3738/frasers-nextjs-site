@@ -27,6 +27,7 @@ const App = ({ Component, pageProps }) => {
                       ...props.field,
                       itemProps: item => {
                         return {
+                          ...item,
                           label: item.name
                         };
                       }
@@ -34,6 +35,8 @@ const App = ({ Component, pageProps }) => {
                     return (
                       <GroupListFieldPlugin.Component
                         {...props}
+                        // TODO: look for type error of field
+                        // @ts-ignore
                         field={field}
                       />
                     );
