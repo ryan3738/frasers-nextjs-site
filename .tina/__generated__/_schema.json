@@ -6,27 +6,9 @@
       "path": "content/menus",
       "fields": [
         {
-          "type": "string",
-          "label": "Name of Menu",
-          "name": "name",
-          "namespace": [
-            "menus",
-            "name"
-          ]
-        },
-        {
-          "type": "string",
-          "label": "Description",
-          "name": "description",
-          "namespace": [
-            "menus",
-            "description"
-          ]
-        },
-        {
           "type": "object",
-          "label": "Sections",
-          "name": "section",
+          "label": "Menu",
+          "name": "menu",
           "ui": {
             "component": "groupList"
           },
@@ -34,18 +16,38 @@
           "fields": [
             {
               "type": "string",
-              "label": "Name",
+              "label": "Name of Menu",
               "name": "name",
               "namespace": [
                 "menus",
-                "section",
+                "menu",
                 "name"
               ]
             },
             {
+              "type": "string",
+              "label": "Label",
+              "name": "label",
+              "namespace": [
+                "menus",
+                "menu",
+                "label"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "menus",
+                "menu",
+                "description"
+              ]
+            },
+            {
               "type": "object",
-              "label": "Item",
-              "name": "item",
+              "label": "Sections",
+              "name": "section",
               "ui": {
                 "component": "groupList"
               },
@@ -57,55 +59,15 @@
                   "name": "name",
                   "namespace": [
                     "menus",
+                    "menu",
                     "section",
-                    "item",
                     "name"
                   ]
                 },
                 {
-                  "type": "string",
-                  "label": "Description",
-                  "name": "description",
-                  "namespace": [
-                    "menus",
-                    "section",
-                    "item",
-                    "description"
-                  ]
-                },
-                {
-                  "type": "number",
-                  "label": "Price",
-                  "name": "price",
-                  "namespace": [
-                    "menus",
-                    "section",
-                    "item",
-                    "price"
-                  ]
-                },
-                {
-                  "type": "string",
-                  "label": "Dietary Preferences",
-                  "name": "dietary",
-                  "options": [
-                    "vegan",
-                    "vegetarian",
-                    "gluten-free",
-                    "pescatarian"
-                  ],
-                  "list": true,
-                  "namespace": [
-                    "menus",
-                    "section",
-                    "item",
-                    "dietary"
-                  ]
-                },
-                {
                   "type": "object",
-                  "label": "Modifier",
-                  "name": "modifier",
+                  "label": "Menu Item",
+                  "name": "item",
                   "ui": {
                     "component": "groupList"
                   },
@@ -117,10 +79,25 @@
                       "name": "name",
                       "namespace": [
                         "menus",
+                        "menu",
                         "section",
                         "item",
-                        "modifier",
                         "name"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Description",
+                      "name": "description",
+                      "ui": {
+                        "component": "textarea"
+                      },
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "description"
                       ]
                     },
                     {
@@ -129,42 +106,106 @@
                       "name": "price",
                       "namespace": [
                         "menus",
+                        "menu",
                         "section",
                         "item",
-                        "modifier",
                         "price"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "label": "Dietary Preferences",
+                      "name": "dietary",
+                      "options": [
+                        "vegan",
+                        "vegetarian",
+                        "gluten-free",
+                        "pescatarian"
+                      ],
+                      "list": true,
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "dietary"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "label": "Modifier",
+                      "name": "modifier",
+                      "ui": {
+                        "component": "groupList"
+                      },
+                      "list": true,
+                      "fields": [
+                        {
+                          "type": "string",
+                          "label": "Name",
+                          "name": "name",
+                          "namespace": [
+                            "menus",
+                            "menu",
+                            "section",
+                            "item",
+                            "modifier",
+                            "name"
+                          ]
+                        },
+                        {
+                          "type": "number",
+                          "label": "Price",
+                          "name": "price",
+                          "namespace": [
+                            "menus",
+                            "menu",
+                            "section",
+                            "item",
+                            "modifier",
+                            "price"
+                          ]
+                        }
+                      ],
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "modifier"
+                      ]
+                    },
+                    {
+                      "type": "boolean",
+                      "label": "Available",
+                      "name": "available",
+                      "namespace": [
+                        "menus",
+                        "menu",
+                        "section",
+                        "item",
+                        "available"
                       ]
                     }
                   ],
                   "namespace": [
                     "menus",
+                    "menu",
                     "section",
-                    "item",
-                    "modifier"
-                  ]
-                },
-                {
-                  "type": "boolean",
-                  "label": "Available",
-                  "name": "available",
-                  "namespace": [
-                    "menus",
-                    "section",
-                    "item",
-                    "available"
+                    "item"
                   ]
                 }
               ],
               "namespace": [
                 "menus",
-                "section",
-                "item"
+                "menu",
+                "section"
               ]
             }
           ],
           "namespace": [
             "menus",
-            "section"
+            "menu"
           ]
         }
       ],

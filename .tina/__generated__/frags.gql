@@ -1,21 +1,25 @@
 fragment MenusParts on Menus {
-  name
-  description
-  section {
+  menu {
     __typename
     name
-    item {
+    label
+    description
+    section {
       __typename
       name
-      description
-      price
-      dietary
-      modifier {
+      item {
         __typename
         name
+        description
         price
+        dietary
+        modifier {
+          __typename
+          name
+          price
+        }
+        available
       }
-      available
     }
   }
 }

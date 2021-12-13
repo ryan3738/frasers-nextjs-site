@@ -40,5 +40,10 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "MenusSectionItemModifier": {
+    "type": "MenusSectionItemModifier",
+    "resolveType": "unionData",
+    "typeMap": {}
   }
 }

@@ -1256,7 +1256,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusSectionItemModifier"
+        "value": "MenusMenuSectionItemModifier"
       },
       "fields": [
         {
@@ -1297,7 +1297,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusSectionItem"
+        "value": "MenusMenuSectionItem"
       },
       "fields": [
         {
@@ -1376,7 +1376,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusSectionItemModifier"
+                "value": "MenusMenuSectionItemModifier"
               }
             }
           }
@@ -1404,7 +1404,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusSection"
+        "value": "MenusMenuSection"
       },
       "fields": [
         {
@@ -1435,7 +1435,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusSectionItem"
+                "value": "MenusMenuSectionItem"
               }
             }
           }
@@ -1448,7 +1448,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "Menus"
+        "value": "MenusMenu"
       },
       "fields": [
         {
@@ -1456,6 +1456,21 @@
           "name": {
             "kind": "Name",
             "value": "name"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "label"
           },
           "arguments": [],
           "type": {
@@ -1494,7 +1509,36 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusSection"
+                "value": "MenusMenuSection"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ObjectTypeDefinition",
+      "interfaces": [],
+      "directives": [],
+      "name": {
+        "kind": "Name",
+        "value": "Menus"
+      },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "menu"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "ListType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "MenusMenu"
               }
             }
           }
@@ -2497,7 +2541,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusSectionItemModifierMutation"
+        "value": "MenusMenuSectionItemModifierMutation"
       },
       "fields": [
         {
@@ -2534,7 +2578,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusSectionItemMutation"
+        "value": "MenusMenuSectionItemMutation"
       },
       "fields": [
         {
@@ -2608,7 +2652,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusSectionItemModifierMutation"
+                "value": "MenusMenuSectionItemModifierMutation"
               }
             }
           }
@@ -2633,7 +2677,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusSectionMutation"
+        "value": "MenusMenuSectionMutation"
       },
       "fields": [
         {
@@ -2662,7 +2706,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusSectionItemMutation"
+                "value": "MenusMenuSectionItemMutation"
               }
             }
           }
@@ -2673,7 +2717,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMutation"
+        "value": "MenusMenuMutation"
       },
       "fields": [
         {
@@ -2681,6 +2725,20 @@
           "name": {
             "kind": "Name",
             "value": "name"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "label"
           },
           "type": {
             "kind": "NamedType",
@@ -2716,7 +2774,33 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusSectionMutation"
+                "value": "MenusMenuSectionMutation"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "InputObjectTypeDefinition",
+      "name": {
+        "kind": "Name",
+        "value": "MenusMutation"
+      },
+      "fields": [
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "menu"
+          },
+          "type": {
+            "kind": "ListType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "MenusMenuMutation"
               }
             }
           }

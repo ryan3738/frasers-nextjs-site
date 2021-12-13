@@ -2,9 +2,55 @@
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField } from "@tinacms/cli";
 
+const modifierSchema: TinaField = {
+  type: "object",
+    label: "Modifier",
+      name: "modifier",
+        ui: {
+    component: "groupList",
+              },
+  list: true,
+    fields: [
+      {
+        type: "string",
+        label: "Name",
+        name: "name",
+      },
+      {
+        type: "number",
+        label: "Price",
+        name: "price",
+      }
+    ]
+}
+
+const imageSchema: TinaField = {
+  type: "object",
+  label: "Image",
+  name: "image",
+  ui: {
+    component: "groupList",
+  },
+  list: true,
+  fields: [
+    {
+      type: "string",
+      label: "Image Alt Text",
+      name: "name",
+      required: true,
+    },
+    {
+      type: "string",
+      label: "src",
+      name: "src",
+      required: true,
+    }
+  ]
+}
+
 const menuItemSchema: TinaField = {
   type: "object",
-  label: "Item",
+  label: "Menu Item",
   name: "item",
   ui: {
     component: "groupList",
@@ -36,30 +82,62 @@ const menuItemSchema: TinaField = {
       options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
       list: true,
     },
-    {
-      type: "object",
-      label: "Modifier",
-      name: "modifier",
-      list: true,
-      fields: [
-        {
-          type: "string",
-          label: "Name",
-          name: "name",
-        },
-        {
-          type: "number",
-          label: "Price",
-          name: "price",
-        }
-      ]
-    },
+    modifierSchema,
     {
       type: "boolean",
       label: "Available",
       name: "available",
-    }
+    },
+    imageSchema,
   ]
+}
+
+
+
+const menuSectionSchema: TinaField = {
+  type: "object",
+  label: "Sections",
+  name: "section",
+  ui: {
+    component: "groupList",
+  },
+  list: true,
+  fields: [
+    {
+      type: "string",
+      label: "Name",
+      name: "name",
+    },
+    menuItemSchema,
+  ]
+}
+
+const menuSchema: TinaField = {
+  type: "object",
+  label: 'Menu',
+  name: 'menu',
+  ui: {
+    component: "groupList",
+  },
+  list: true,
+  fields: [
+    {
+      type: "string",
+      label: "Name of Menu",
+      name: "name",
+    },
+    {
+      type: "string",
+      label: "Label",
+      name: "label",
+    },
+    {
+      type: "string",
+      label: "Description",
+      name: "description",
+    },
+    menuSectionSchema,
+  ],
 }
 
 export default defineSchema({
@@ -69,92 +147,8 @@ export default defineSchema({
       name: "menus",
       path: "content/menus",
       fields: [
-        {
-          type: "string",
-          label: "Name of Menu",
-          name: "name",
-        },
-        {
-          type: "string",
-          label: "Description",
-          name: "description",
-        },
-        {
-        type: "object",
-        label: "Sections",
-        name: "section",
-        ui: {
-          component: "groupList",
-        },
-        list: true,
-        fields: [
-          {
-            type: "string",
-            label: "Name",
-            name: "name",
-          },
-          {
-            type: "object",
-            label: "Item",
-            name: "item",
-            ui: {
-              component: "groupList",
-            },
-            list: true,
-            fields: [
-            {
-              type: "string",
-              label: "Name",
-              name: "name",
-            },
-            {
-              type: "string",
-              label: "Description",
-              name: "description",
-            },
-            {
-              type: "number",
-              label: "Price",
-              name: "price",
-            },
-            {
-              type: "string",
-              label: "Dietary Preferences",
-              name: "dietary",
-              options: ["vegan", "vegetarian", "gluten-free", "pescatarian"],
-              list: true,
-            },
-            {
-              type: "object",
-              label: "Modifier",
-              name: "modifier",
-              ui: {
-                component: "groupList",
-              },
-              list: true,
-              fields: [
-                {
-                  type: "string",
-                  label: "Name",
-                  name: "name",
-                },
-                {
-                  type: "number",
-                  label: "Price",
-                  name: "price",
-                }
-              ]
-            },
-            {
-              type: "boolean",
-              label: "Available",
-              name: "available",
-            }
-            ]
-          }
-        ]
-      }
-    ],
+        menuSchema,
+      ],
     },
     {
       label: "Blog Posts",

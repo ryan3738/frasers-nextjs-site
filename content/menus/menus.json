@@ -1,26 +1,35 @@
 {
-  "name": "Dinner",
-  "description": "This is the main dinner menu",
-  "section": [
+  "menu": [
     {
-      "name": "Starters",
-      "item": [
+      "name": "Dinner",
+      "label": "dinner",
+      "description": "This is the main dinner menu",
+      "section": [
         {
-          "name": "Green Salad",
-          "description": "A yummy salad",
-          "price": 12,
-          "dietary": [
-            "vegetarian"
-          ],
-          "modifier": [
+          "name": "Starters",
+          "item": [
             {
-              "name": "add Salmon",
-              "price": 8
+              "name": "Green Salad",
+              "description": "A yummy salad",
+              "price": 12,
+              "dietary": [
+                "vegetarian"
+              ],
+              "modifier": [
+                {
+                  "name": "add Salmon",
+                  "price": 8
+                }
+              ],
+              "available": true
             }
-          ],
-          "available": true
+          ]
         }
       ]
+    },
+    {
+      "name": "New Years Eve",
+      "description": "This is the menu for new years eve 2021"
     }
   ]
 }

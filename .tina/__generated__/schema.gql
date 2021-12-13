@@ -79,29 +79,34 @@ type Collection {
 
 union DocumentNode = MenusDocument | PostsDocument
 
-type MenusSectionItemModifier {
+type MenusMenuSectionItemModifier {
   name: String
   price: Int
 }
 
-type MenusSectionItem {
+type MenusMenuSectionItem {
   name: String
   description: String
   price: Int
   dietary: [String]
-  modifier: [MenusSectionItemModifier]
+  modifier: [MenusMenuSectionItemModifier]
   available: Boolean
 }
 
-type MenusSection {
+type MenusMenuSection {
   name: String
-  item: [MenusSectionItem]
+  item: [MenusMenuSectionItem]
+}
+
+type MenusMenu {
+  name: String
+  label: String
+  description: String
+  section: [MenusMenuSection]
 }
 
 type Menus {
-  name: String
-  description: String
-  section: [MenusSection]
+  menu: [MenusMenu]
 }
 
 type MenusDocument implements Node & Document {
@@ -164,29 +169,34 @@ input DocumentMutation {
   posts: PostsMutation
 }
 
-input MenusSectionItemModifierMutation {
+input MenusMenuSectionItemModifierMutation {
   name: String
   price: Int
 }
 
-input MenusSectionItemMutation {
+input MenusMenuSectionItemMutation {
   name: String
   description: String
   price: Int
   dietary: [String]
-  modifier: [MenusSectionItemModifierMutation]
+  modifier: [MenusMenuSectionItemModifierMutation]
   available: Boolean
 }
 
-input MenusSectionMutation {
+input MenusMenuSectionMutation {
   name: String
-  item: [MenusSectionItemMutation]
+  item: [MenusMenuSectionItemMutation]
+}
+
+input MenusMenuMutation {
+  name: String
+  label: String
+  description: String
+  section: [MenusMenuSectionMutation]
 }
 
 input MenusMutation {
-  name: String
-  description: String
-  section: [MenusSectionMutation]
+  menu: [MenusMenuMutation]
 }
 
 input PostsMutation {
