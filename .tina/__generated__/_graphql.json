@@ -780,6 +780,114 @@
               }
             }
           }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "getPostsDocument"
+          },
+          "arguments": [
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "relativePath"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "String"
+                }
+              }
+            }
+          ],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "PostsDocument"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "getPostsList"
+          },
+          "arguments": [
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "before"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "String"
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "after"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "String"
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "first"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Int"
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "last"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Int"
+                }
+              }
+            }
+          ],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "PostsConnection"
+              }
+            }
+          }
         }
       ]
     },
@@ -1132,6 +1240,13 @@
             "kind": "Name",
             "value": "MenusDocument"
           }
+        },
+        {
+          "kind": "NamedType",
+          "name": {
+            "kind": "Name",
+            "value": "PostsDocument"
+          }
         }
       ]
     },
@@ -1141,7 +1256,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionItemModifier"
+        "value": "MenusSectionItemModifier"
       },
       "fields": [
         {
@@ -1182,7 +1297,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionItem"
+        "value": "MenusSectionItem"
       },
       "fields": [
         {
@@ -1261,7 +1376,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionItemModifier"
+                "value": "MenusSectionItemModifier"
               }
             }
           }
@@ -1289,7 +1404,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSection"
+        "value": "MenusSection"
       },
       "fields": [
         {
@@ -1320,7 +1435,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionItem"
+                "value": "MenusSectionItem"
               }
             }
           }
@@ -1333,7 +1448,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenu"
+        "value": "Menus"
       },
       "fields": [
         {
@@ -1379,36 +1494,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSection"
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "kind": "ObjectTypeDefinition",
-      "interfaces": [],
-      "directives": [],
-      "name": {
-        "kind": "Name",
-        "value": "Menus"
-      },
-      "fields": [
-        {
-          "kind": "FieldDefinition",
-          "name": {
-            "kind": "Name",
-            "value": "menu"
-          },
-          "arguments": [],
-          "type": {
-            "kind": "ListType",
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "MenusMenu"
+                "value": "MenusSection"
               }
             }
           }
@@ -1654,6 +1740,292 @@
               "name": {
                 "kind": "Name",
                 "value": "MenusConnectionEdges"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ObjectTypeDefinition",
+      "interfaces": [],
+      "directives": [],
+      "name": {
+        "kind": "Name",
+        "value": "Posts"
+      },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "title"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "body"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ObjectTypeDefinition",
+      "interfaces": [
+        {
+          "kind": "NamedType",
+          "name": {
+            "kind": "Name",
+            "value": "Node"
+          }
+        },
+        {
+          "kind": "NamedType",
+          "name": {
+            "kind": "Name",
+            "value": "Document"
+          }
+        }
+      ],
+      "directives": [],
+      "name": {
+        "kind": "Name",
+        "value": "PostsDocument"
+      },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "id"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "ID"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "sys"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "SystemInfo"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "data"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Posts"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "form"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "JSON"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "values"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "JSON"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "dataJSON"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "JSON"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ObjectTypeDefinition",
+      "interfaces": [],
+      "directives": [],
+      "name": {
+        "kind": "Name",
+        "value": "PostsConnectionEdges"
+      },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "cursor"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "node"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "PostsDocument"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ObjectTypeDefinition",
+      "interfaces": [
+        {
+          "kind": "NamedType",
+          "name": {
+            "kind": "Name",
+            "value": "Connection"
+          }
+        }
+      ],
+      "directives": [],
+      "name": {
+        "kind": "Name",
+        "value": "PostsConnection"
+      },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "pageInfo"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "PageInfo"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "totalCount"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Int"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "edges"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "ListType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "PostsConnectionEdges"
               }
             }
           }
@@ -1975,6 +2347,112 @@
               }
             }
           }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "updatePostsDocument"
+          },
+          "arguments": [
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "relativePath"
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": {
+                    "kind": "Name",
+                    "value": "String"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "params"
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": {
+                    "kind": "Name",
+                    "value": "PostsMutation"
+                  }
+                }
+              }
+            }
+          ],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "PostsDocument"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "createPostsDocument"
+          },
+          "arguments": [
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "relativePath"
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": {
+                    "kind": "Name",
+                    "value": "String"
+                  }
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "params"
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": {
+                    "kind": "Name",
+                    "value": "PostsMutation"
+                  }
+                }
+              }
+            }
+          ],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "PostsDocument"
+              }
+            }
+          }
         }
       ]
     },
@@ -1998,6 +2476,20 @@
               "value": "MenusMutation"
             }
           }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "posts"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "PostsMutation"
+            }
+          }
         }
       ]
     },
@@ -2005,7 +2497,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionItemModifierMutation"
+        "value": "MenusSectionItemModifierMutation"
       },
       "fields": [
         {
@@ -2042,7 +2534,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionItemMutation"
+        "value": "MenusSectionItemMutation"
       },
       "fields": [
         {
@@ -2116,7 +2608,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionItemModifierMutation"
+                "value": "MenusSectionItemModifierMutation"
               }
             }
           }
@@ -2141,7 +2633,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionMutation"
+        "value": "MenusSectionMutation"
       },
       "fields": [
         {
@@ -2170,7 +2662,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionItemMutation"
+                "value": "MenusSectionItemMutation"
               }
             }
           }
@@ -2181,7 +2673,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuMutation"
+        "value": "MenusMutation"
       },
       "fields": [
         {
@@ -2224,7 +2716,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionMutation"
+                "value": "MenusSectionMutation"
               }
             }
           }
@@ -2235,23 +2727,34 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMutation"
+        "value": "PostsMutation"
       },
       "fields": [
         {
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "menu"
+            "value": "title"
           },
           "type": {
-            "kind": "ListType",
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "MenusMenuMutation"
-              }
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "body"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
             }
           }
         }

@@ -50,6 +50,8 @@ type Query {
   getDocumentFields: JSON!
   getMenusDocument(relativePath: String): MenusDocument!
   getMenusList(before: String, after: String, first: Int, last: Int): MenusConnection!
+  getPostsDocument(relativePath: String): PostsDocument!
+  getPostsList(before: String, after: String, first: Int, last: Int): PostsConnection!
 }
 
 type DocumentConnectionEdges {
@@ -75,35 +77,31 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = MenusDocument
+union DocumentNode = MenusDocument | PostsDocument
 
-type MenusMenuSectionItemModifier {
+type MenusSectionItemModifier {
   name: String
   price: Int
 }
 
-type MenusMenuSectionItem {
+type MenusSectionItem {
   name: String
   description: String
   price: Int
   dietary: [String]
-  modifier: [MenusMenuSectionItemModifier]
+  modifier: [MenusSectionItemModifier]
   available: Boolean
 }
 
-type MenusMenuSection {
+type MenusSection {
   name: String
-  item: [MenusMenuSectionItem]
-}
-
-type MenusMenu {
-  name: String
-  description: String
-  section: [MenusMenuSection]
+  item: [MenusSectionItem]
 }
 
 type Menus {
-  menu: [MenusMenu]
+  name: String
+  description: String
+  section: [MenusSection]
 }
 
 type MenusDocument implements Node & Document {
@@ -126,45 +124,74 @@ type MenusConnection implements Connection {
   edges: [MenusConnectionEdges]
 }
 
+type Posts {
+  title: String
+  body: String
+}
+
+type PostsDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: Posts!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type PostsConnectionEdges {
+  cursor: String
+  node: PostsDocument
+}
+
+type PostsConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [PostsConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   updateMenusDocument(relativePath: String!, params: MenusMutation!): MenusDocument!
   createMenusDocument(relativePath: String!, params: MenusMutation!): MenusDocument!
+  updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
+  createPostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
 }
 
 input DocumentMutation {
   menus: MenusMutation
+  posts: PostsMutation
 }
 
-input MenusMenuSectionItemModifierMutation {
+input MenusSectionItemModifierMutation {
   name: String
   price: Int
 }
 
-input MenusMenuSectionItemMutation {
+input MenusSectionItemMutation {
   name: String
   description: String
   price: Int
   dietary: [String]
-  modifier: [MenusMenuSectionItemModifierMutation]
+  modifier: [MenusSectionItemModifierMutation]
   available: Boolean
 }
 
-input MenusMenuSectionMutation {
+input MenusSectionMutation {
   name: String
-  item: [MenusMenuSectionItemMutation]
-}
-
-input MenusMenuMutation {
-  name: String
-  description: String
-  section: [MenusMenuSectionMutation]
+  item: [MenusSectionItemMutation]
 }
 
 input MenusMutation {
-  menu: [MenusMenuMutation]
+  name: String
+  description: String
+  section: [MenusSectionMutation]
+}
+
+input PostsMutation {
+  title: String
+  body: String
 }
 
 schema {

@@ -32,22 +32,20 @@ export const getStaticProps = async ({ params }) => {
       query MenuQuery($relativePath: String!) {
         getMenusDocument(relativePath: $relativePath) {
           data {
-            menu {
+            name
+            description
+            section {
               name
-              description
-              section {
+              item {
                 name
-                item {
+                description
+                price
+                dietary
+                modifier {
                   name
-                  description
                   price
-                  dietary
-                  modifier {
-                    name
-                    price
-                  }
-                  available
                 }
+                available
               }
             }
           }

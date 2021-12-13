@@ -3,7 +3,8 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
-      "menus"
+      "menus",
+      "posts"
     ]
   },
   "Node": {
@@ -16,17 +17,17 @@
     "createDocument": "create",
     "updateDocument": "update"
   },
-  "MenuDocument": {
-    "type": "MenuDocument",
+  "MenusDocument": {
+    "type": "MenusDocument",
     "resolveType": "collectionDocument",
-    "collection": "menu",
-    "createMenuDocument": "create",
-    "updateMenuDocument": "update"
+    "collection": "menus",
+    "createMenusDocument": "create",
+    "updateMenusDocument": "update"
   },
-  "MenuConnection": {
-    "type": "MenuConnection",
+  "MenusConnection": {
+    "type": "MenusConnection",
     "resolveType": "collectionDocumentList",
-    "collection": "menu"
+    "collection": "menus"
   },
   "PostsDocument": {
     "type": "PostsDocument",
@@ -39,17 +40,5 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
-  },
-  "MenusDocument": {
-    "type": "MenusDocument",
-    "resolveType": "collectionDocument",
-    "collection": "menus",
-    "createMenusDocument": "create",
-    "updateMenusDocument": "update"
-  },
-  "MenusConnection": {
-    "type": "MenusConnection",
-    "resolveType": "collectionDocumentList",
-    "collection": "menus"
   }
 }
