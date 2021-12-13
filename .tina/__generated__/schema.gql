@@ -48,8 +48,8 @@ type Query {
   getDocument(collection: String, relativePath: String): DocumentNode!
   getDocumentList(before: String, after: String, first: Int, last: Int): DocumentConnection!
   getDocumentFields: JSON!
-  getMenuSectionDocument(relativePath: String): MenuSectionDocument!
-  getMenuSectionList(before: String, after: String, first: Int, last: Int): MenuSectionConnection!
+  getSectionDocument(relativePath: String): SectionDocument!
+  getSectionList(before: String, after: String, first: Int, last: Int): SectionConnection!
   getMenuItemDocument(relativePath: String): MenuItemDocument!
   getMenuItemList(before: String, after: String, first: Int, last: Int): MenuItemConnection!
   getMenuDocument(relativePath: String): MenuDocument!
@@ -81,30 +81,31 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = MenuSectionDocument | MenuItemDocument | MenuDocument | PostsDocument
+union DocumentNode = SectionDocument | MenuItemDocument | MenuDocument | PostsDocument
 
-type MenuSection {
+type Section {
   name: String
+  title: String
 }
 
-type MenuSectionDocument implements Node & Document {
+type SectionDocument implements Node & Document {
   id: ID!
   sys: SystemInfo!
-  data: MenuSection!
+  data: Section!
   form: JSON!
   values: JSON!
   dataJSON: JSON!
 }
 
-type MenuSectionConnectionEdges {
+type SectionConnectionEdges {
   cursor: String
-  node: MenuSectionDocument
+  node: SectionDocument
 }
 
-type MenuSectionConnection implements Connection {
+type SectionConnection implements Connection {
   pageInfo: PageInfo
   totalCount: Int!
-  edges: [MenuSectionConnectionEdges]
+  edges: [SectionConnectionEdges]
 }
 
 type MenuItemModifier {
@@ -141,6 +142,8 @@ type MenuItemConnection implements Connection {
   edges: [MenuItemConnectionEdges]
 }
 
+union MenuSection1Document = SectionDocument
+
 type MenuSectionItemModifier {
   name: String
   price: Int
@@ -155,9 +158,16 @@ type MenuSectionItem {
   available: Boolean
 }
 
+type MenuSection {
+  name: String
+  title: String
+  item: [MenuSectionItem]
+}
+
 type Menu {
   name: String
   description: String
+  section1: MenuSection1Document
   section: [MenuSection]
 }
 
@@ -210,8 +220,8 @@ type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
-  updateMenuSectionDocument(relativePath: String!, params: MenuSectionMutation!): MenuSectionDocument!
-  createMenuSectionDocument(relativePath: String!, params: MenuSectionMutation!): MenuSectionDocument!
+  updateSectionDocument(relativePath: String!, params: SectionMutation!): SectionDocument!
+  createSectionDocument(relativePath: String!, params: SectionMutation!): SectionDocument!
   updateMenuItemDocument(relativePath: String!, params: MenuItemMutation!): MenuItemDocument!
   createMenuItemDocument(relativePath: String!, params: MenuItemMutation!): MenuItemDocument!
   updateMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
@@ -221,14 +231,15 @@ type Mutation {
 }
 
 input DocumentMutation {
-  menuSection: MenuSectionMutation
+  section: SectionMutation
   menuItem: MenuItemMutation
   menu: MenuMutation
   posts: PostsMutation
 }
 
-input MenuSectionMutation {
+input SectionMutation {
   name: String
+  title: String
 }
 
 input MenuItemModifierMutation {
@@ -259,9 +270,16 @@ input MenuSectionItemMutation {
   available: Boolean
 }
 
+input MenuSectionMutation {
+  name: String
+  title: String
+  item: [MenuSectionItemMutation]
+}
+
 input MenuMutation {
   name: String
   description: String
+  section1: String
   section: [MenuSectionMutation]
 }
 

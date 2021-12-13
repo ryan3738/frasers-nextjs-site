@@ -1,6 +1,8 @@
 ---
 name: Main
+section1: content/menuSections/menuSections.md
 section:
+  - {}
   - name: Starters
   - name: Entrees
     item:

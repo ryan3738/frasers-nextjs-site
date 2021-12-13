@@ -5,18 +5,20 @@ import type { TinaField } from "@tinacms/cli";
 export default defineSchema({
   collections: [
     {
-      label: "Menu Section",
-      name: "menuSection",
+      label: "Menu Sections",
+      name: "section",
       path: "content/menuSections",
       fields: [
-        {
-
-
-
+          {
           type: "string",
-        label: "Name",
-        name: "name",
-      }
+          label: "Name",
+          name: "name",
+        },
+        {
+          type: "string",
+          label: "Title",
+          name: "title",
+        }
 
       ]
     },
@@ -89,6 +91,13 @@ export default defineSchema({
           type: "string",
           label: "description",
           name: "description",
+        },
+        {
+          type: "reference",
+          label: "Menu Section",
+          name: "section1",
+          // list: true,
+          collections: ["section"],
         },
         {
         type: "object",

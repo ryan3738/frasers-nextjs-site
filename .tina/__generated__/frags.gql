@@ -1,5 +1,6 @@
-fragment MenuSectionParts on MenuSection {
+fragment SectionParts on Section {
   name
+  title
 }
 
 fragment MenuItemParts on MenuItem {
@@ -18,6 +19,11 @@ fragment MenuItemParts on MenuItem {
 fragment MenuParts on Menu {
   name
   description
+  section1 {
+    ... on Document {
+      id
+    }
+  }
   section {
     __typename
     name

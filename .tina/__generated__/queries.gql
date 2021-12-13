@@ -1,5 +1,5 @@
-query getMenuSectionDocument($relativePath: String!) {
-  getMenuSectionDocument(relativePath: $relativePath) {
+query getSectionDocument($relativePath: String!) {
+  getSectionDocument(relativePath: $relativePath) {
     sys {
       filename
       basename
@@ -10,13 +10,13 @@ query getMenuSectionDocument($relativePath: String!) {
     }
     id
     data {
-      ...MenuSectionParts
+      ...SectionParts
     }
   }
 }
 
-query getMenuSectionList {
-  getMenuSectionList {
+query getSectionList {
+  getSectionList {
     totalCount
     edges {
       node {
@@ -30,7 +30,7 @@ query getMenuSectionList {
           extension
         }
         data {
-          ...MenuSectionParts
+          ...SectionParts
         }
       }
     }

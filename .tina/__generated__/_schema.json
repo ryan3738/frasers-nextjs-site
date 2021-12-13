@@ -1,8 +1,8 @@
 {
   "collections": [
     {
-      "label": "Menu Section",
-      "name": "menuSection",
+      "label": "Menu Sections",
+      "name": "section",
       "path": "content/menuSections",
       "fields": [
         {
@@ -10,13 +10,22 @@
           "label": "Name",
           "name": "name",
           "namespace": [
-            "menuSection",
+            "section",
             "name"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Title",
+          "name": "title",
+          "namespace": [
+            "section",
+            "title"
           ]
         }
       ],
       "namespace": [
-        "menuSection"
+        "section"
       ]
     },
     {
@@ -137,6 +146,18 @@
           "namespace": [
             "menu",
             "description"
+          ]
+        },
+        {
+          "type": "reference",
+          "label": "Menu Section",
+          "name": "section1",
+          "collections": [
+            "section"
+          ],
+          "namespace": [
+            "menu",
+            "section1"
           ]
         },
         {
