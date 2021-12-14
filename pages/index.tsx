@@ -3,11 +3,16 @@ import Home from '../components/Home';
 import { getMenuQueryFragment } from './menu';
 
 export default function HomePage(props) {
-  if (props.data && props.data.getMenuDocument) {
+  if (
+    props.data &&
+    props.data.getMenuDocument &&
+    props.data.getBusinessInfoDocument
+  ) {
     const menu = props.data.getMenuDocument.data;
+    const businessInfo = props.data.getBusinessInfoDocument.data;
     return (
       <>
-        <Home menu={menu} />
+        <Home menu={menu} businessInfo={businessInfo} />
       </>
     );
   }
@@ -21,6 +26,16 @@ export const getBusinessInfoQueryFragment = `
       phoneNumber
       address {
         name
+        street
+        street2
+        city
+        region
+        zip
+        directions
+      }
+      hours {
+        day
+        hours
       }
     }
   }

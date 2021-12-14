@@ -1,7 +1,12 @@
 import Image from 'next/image';
-import siteData from '../public/data/site-data.json';
+import { BusinessInfo } from '../.tina/__generated__/types';
+// import businessInfo from '../public/data/site-data.json';
 
-export default function Hero() {
+interface HeroProps {
+  businessInfo?: BusinessInfo;
+}
+
+export default function Hero({businessInfo}) {
   return (
     <>
       <div id="welcome" className="welcome-container">
@@ -23,13 +28,13 @@ export default function Hero() {
             <br />
             {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}
             <a
-              href={siteData.address.directions}
+              href={businessInfo.address.directions}
               target="_blank"
               rel="noreferrer noopener"
             >
-              {`${siteData.address.street} ${siteData.address.street2}`}
+              {`${businessInfo.address.street} ${businessInfo.address.street2}`}
               <br />
-              {`${siteData.address.city}, ${siteData.address.state} ${siteData.address.zipCode}`}
+              {`${businessInfo.address.city}, ${businessInfo.address.state} ${businessInfo.address.zipCode}`}
             </a>
             <br />
             <br />
@@ -42,16 +47,16 @@ export default function Hero() {
               buttonText="ORDER ONLINE"
               buttonLink={siteData.websites.onlineStore}
             /> */}
-            <a href={`tel:${siteData.phoneNumber}`}>{siteData.phoneNumber}</a>
+            <a href={`tel:${businessInfo.phoneNumber}`}>{businessInfo.phoneNumber}</a>
             <br />
             <br />
             <div>
               <h3>HOURS</h3>
-              <div>
-                {siteData.hoursSummary.map((item) => (
-                  <div key={item.days}>
+              {businessInfo.hours && <div>
+                {businessInfo.hours.map((item) => (
+                  <div key={item.day}>
                     <div>
-                      <strong>{item.days}</strong>
+                      <strong>{item.day}</strong>
                     </div>
                     <div>
                       <span className="medium-emphasis">{item.hours}</span>
@@ -59,7 +64,7 @@ export default function Hero() {
                     <br />
                   </div>
                 ))}
-              </div>
+              </div>}
             </div>
           </div>
         </div>

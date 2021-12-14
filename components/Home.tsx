@@ -4,18 +4,24 @@ import Layout, { meta } from './Layout';
 import Double from './Double';
 import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
-import Button from './Button';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
+import {Menu as MenuType, BusinessInfo} from '../.tina/__generated__/types';
 
-const { phoneNumber, aboutBusiness, aboutOwner } = siteData;
+const { aboutBusiness, aboutOwner } = siteData;
 
-export default function Home({ menu }) {
+interface HomeProps {
+  menu: MenuType;
+  businessInfo: BusinessInfo;
+}
+
+export default function Home({ menu, businessInfo }: HomeProps) {
+  const { name, address, phoneNumber } = businessInfo;
   return (
     <>
-      <Layout home>
+      <Layout home businessInfo={businessInfo}>
         <Head>
           <title>{meta.title}</title>
         </Head>
@@ -98,7 +104,7 @@ export default function Home({ menu }) {
           <div className={`${styles.header} ${styles.hiddenHeader}`}>
             <h1>CONTACT</h1>
           </div>
-          <Contact />
+          <Contact businessInfo={businessInfo} />
         </section>
         <style jsx>{`
           .container {
