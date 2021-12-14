@@ -22,11 +22,11 @@ export default function MenuItem({ item }) {
         {item.modifiers ? (
           item.modifiers.map(modifier => {
             return (
-            <>
+            <div className="modifier">
               {modifier.name}&nbsp;
               <span className="primary-color">{modifier.price}</span>
               <br />
-            </>
+            </div>
             )
           })
         ) : (
@@ -56,6 +56,10 @@ export default function MenuItem({ item }) {
           .dietary-preferences {
             font-size: 0.78405rem;
             line-height: 1.1;
+            text-transform: uppercase;
+          }
+
+          .modifier {
             text-transform: uppercase;
           }
         `}</style>
