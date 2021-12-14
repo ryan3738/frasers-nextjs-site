@@ -1,5 +1,5 @@
-query getMenusDocument($relativePath: String!) {
-  getMenusDocument(relativePath: $relativePath) {
+query getMenuCollectionDocument($relativePath: String!) {
+  getMenuCollectionDocument(relativePath: $relativePath) {
     sys {
       filename
       basename
@@ -10,13 +10,13 @@ query getMenusDocument($relativePath: String!) {
     }
     id
     data {
-      ...MenusParts
+      ...MenuCollectionParts
     }
   }
 }
 
-query getMenusList {
-  getMenusList {
+query getMenuCollectionList {
+  getMenuCollectionList {
     totalCount
     edges {
       node {
@@ -30,7 +30,7 @@ query getMenusList {
           extension
         }
         data {
-          ...MenusParts
+          ...MenuCollectionParts
         }
       }
     }

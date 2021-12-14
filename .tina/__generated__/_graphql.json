@@ -677,7 +677,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "getMenusDocument"
+            "value": "getMenuCollectionDocument"
           },
           "arguments": [
             {
@@ -701,7 +701,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusDocument"
+                "value": "MenuCollectionDocument"
               }
             }
           }
@@ -710,7 +710,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "getMenusList"
+            "value": "getMenuCollectionList"
           },
           "arguments": [
             {
@@ -776,7 +776,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusConnection"
+                "value": "MenuCollectionConnection"
               }
             }
           }
@@ -1238,7 +1238,7 @@
           "kind": "NamedType",
           "name": {
             "kind": "Name",
-            "value": "MenusDocument"
+            "value": "MenuCollectionDocument"
           }
         },
         {
@@ -1256,7 +1256,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItemsModifiers"
+        "value": "MenuCollectionMenusSectionsItemsModifiers"
       },
       "fields": [
         {
@@ -1297,7 +1297,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItemsImages"
+        "value": "MenuCollectionMenusSectionsItemsImages"
       },
       "fields": [
         {
@@ -1344,7 +1344,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItems"
+        "value": "MenuCollectionMenusSectionsItems"
       },
       "fields": [
         {
@@ -1423,7 +1423,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItemsModifiers"
+                "value": "MenuCollectionMenusSectionsItemsModifiers"
               }
             }
           }
@@ -1456,7 +1456,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItemsImages"
+                "value": "MenuCollectionMenusSectionsItemsImages"
               }
             }
           }
@@ -1469,7 +1469,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSections"
+        "value": "MenuCollectionMenusSections"
       },
       "fields": [
         {
@@ -1500,7 +1500,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItems"
+                "value": "MenuCollectionMenusSectionsItems"
               }
             }
           }
@@ -1513,7 +1513,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusMenu"
+        "value": "MenuCollectionMenus"
       },
       "fields": [
         {
@@ -1574,7 +1574,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSections"
+                "value": "MenuCollectionMenusSections"
               }
             }
           }
@@ -1587,14 +1587,14 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "Menus"
+        "value": "MenuCollection"
       },
       "fields": [
         {
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "menu"
+            "value": "menus"
           },
           "arguments": [],
           "type": {
@@ -1603,7 +1603,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenu"
+                "value": "MenuCollectionMenus"
               }
             }
           }
@@ -1631,7 +1631,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusDocument"
+        "value": "MenuCollectionDocument"
       },
       "fields": [
         {
@@ -1683,7 +1683,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "Menus"
+                "value": "MenuCollection"
               }
             }
           }
@@ -1750,7 +1750,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusConnectionEdges"
+        "value": "MenuCollectionConnectionEdges"
       },
       "fields": [
         {
@@ -1779,7 +1779,7 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "MenusDocument"
+              "value": "MenuCollectionDocument"
             }
           }
         }
@@ -1799,7 +1799,7 @@
       "directives": [],
       "name": {
         "kind": "Name",
-        "value": "MenusConnection"
+        "value": "MenuCollectionConnection"
       },
       "fields": [
         {
@@ -1848,7 +1848,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusConnectionEdges"
+                "value": "MenuCollectionConnectionEdges"
               }
             }
           }
@@ -2355,7 +2355,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "updateMenusDocument"
+            "value": "updateMenuCollectionDocument"
           },
           "arguments": [
             {
@@ -2387,7 +2387,7 @@
                   "kind": "NamedType",
                   "name": {
                     "kind": "Name",
-                    "value": "MenusMutation"
+                    "value": "MenuCollectionMutation"
                   }
                 }
               }
@@ -2399,7 +2399,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusDocument"
+                "value": "MenuCollectionDocument"
               }
             }
           }
@@ -2408,7 +2408,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "createMenusDocument"
+            "value": "createMenuCollectionDocument"
           },
           "arguments": [
             {
@@ -2440,7 +2440,7 @@
                   "kind": "NamedType",
                   "name": {
                     "kind": "Name",
-                    "value": "MenusMutation"
+                    "value": "MenuCollectionMutation"
                   }
                 }
               }
@@ -2452,7 +2452,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusDocument"
+                "value": "MenuCollectionDocument"
               }
             }
           }
@@ -2576,13 +2576,13 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "menus"
+            "value": "menuCollection"
           },
           "type": {
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "MenusMutation"
+              "value": "MenuCollectionMutation"
             }
           }
         },
@@ -2606,7 +2606,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItemsModifiersMutation"
+        "value": "MenuCollectionMenusSectionsItemsModifiersMutation"
       },
       "fields": [
         {
@@ -2643,7 +2643,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItemsImagesMutation"
+        "value": "MenuCollectionMenusSectionsItemsImagesMutation"
       },
       "fields": [
         {
@@ -2680,7 +2680,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsItemsMutation"
+        "value": "MenuCollectionMenusSectionsItemsMutation"
       },
       "fields": [
         {
@@ -2754,7 +2754,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItemsModifiersMutation"
+                "value": "MenuCollectionMenusSectionsItemsModifiersMutation"
               }
             }
           }
@@ -2785,7 +2785,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItemsImagesMutation"
+                "value": "MenuCollectionMenusSectionsItemsImagesMutation"
               }
             }
           }
@@ -2796,7 +2796,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuSectionsMutation"
+        "value": "MenuCollectionMenusSectionsMutation"
       },
       "fields": [
         {
@@ -2825,7 +2825,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsItemsMutation"
+                "value": "MenuCollectionMenusSectionsItemsMutation"
               }
             }
           }
@@ -2836,7 +2836,7 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMenuMutation"
+        "value": "MenuCollectionMenusMutation"
       },
       "fields": [
         {
@@ -2893,7 +2893,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuSectionsMutation"
+                "value": "MenuCollectionMenusSectionsMutation"
               }
             }
           }
@@ -2904,14 +2904,14 @@
       "kind": "InputObjectTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "MenusMutation"
+        "value": "MenuCollectionMutation"
       },
       "fields": [
         {
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "menu"
+            "value": "menus"
           },
           "type": {
             "kind": "ListType",
@@ -2919,7 +2919,7 @@
               "kind": "NamedType",
               "name": {
                 "kind": "Name",
-                "value": "MenusMenuMutation"
+                "value": "MenuCollectionMenusMutation"
               }
             }
           }

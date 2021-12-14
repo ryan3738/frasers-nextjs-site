@@ -114,8 +114,8 @@ const menuSectionSchema: TinaField = {
 
 const menuSchema: TinaField = {
   type: "object",
-  label: 'Menu',
-  name: 'menu',
+  label: 'Menus',
+  name: 'menus',
   ui: {
     component: "groupList",
   },
@@ -143,8 +143,8 @@ const menuSchema: TinaField = {
 export default defineSchema({
   collections: [
     {
-      label: "Menus",
-      name: "menus",
+      label: "Menu Collection",
+      name: "menuCollection",
       path: "content/menus",
       fields: [
         menuSchema,

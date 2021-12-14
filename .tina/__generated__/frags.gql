@@ -1,5 +1,5 @@
-fragment MenusParts on Menus {
-  menu {
+fragment MenuCollectionParts on MenuCollection {
+  menus {
     __typename
     name
     label

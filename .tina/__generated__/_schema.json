@@ -1,14 +1,14 @@
 {
   "collections": [
     {
-      "label": "Menus",
-      "name": "menus",
+      "label": "Menu Collection",
+      "name": "menuCollection",
       "path": "content/menus",
       "fields": [
         {
           "type": "object",
-          "label": "Menu",
-          "name": "menu",
+          "label": "Menus",
+          "name": "menus",
           "ui": {
             "component": "groupList"
           },
@@ -19,8 +19,8 @@
               "label": "Name of Menu",
               "name": "name",
               "namespace": [
+                "menuCollection",
                 "menus",
-                "menu",
                 "name"
               ]
             },
@@ -29,8 +29,8 @@
               "label": "Label",
               "name": "label",
               "namespace": [
+                "menuCollection",
                 "menus",
-                "menu",
                 "label"
               ]
             },
@@ -39,8 +39,8 @@
               "label": "Description",
               "name": "description",
               "namespace": [
+                "menuCollection",
                 "menus",
-                "menu",
                 "description"
               ]
             },
@@ -58,8 +58,8 @@
                   "label": "Name",
                   "name": "name",
                   "namespace": [
+                    "menuCollection",
                     "menus",
-                    "menu",
                     "sections",
                     "name"
                   ]
@@ -78,8 +78,8 @@
                       "label": "Name",
                       "name": "name",
                       "namespace": [
+                        "menuCollection",
                         "menus",
-                        "menu",
                         "sections",
                         "items",
                         "name"
@@ -93,8 +93,8 @@
                         "component": "textarea"
                       },
                       "namespace": [
+                        "menuCollection",
                         "menus",
-                        "menu",
                         "sections",
                         "items",
                         "description"
@@ -105,8 +105,8 @@
                       "label": "Price",
                       "name": "price",
                       "namespace": [
+                        "menuCollection",
                         "menus",
-                        "menu",
                         "sections",
                         "items",
                         "price"
@@ -124,8 +124,8 @@
                       ],
                       "list": true,
                       "namespace": [
+                        "menuCollection",
                         "menus",
-                        "menu",
                         "sections",
                         "items",
                         "dietary"
@@ -145,8 +145,8 @@
                           "label": "Name",
                           "name": "name",
                           "namespace": [
+                            "menuCollection",
                             "menus",
-                            "menu",
                             "sections",
                             "items",
                             "modifiers",
@@ -158,8 +158,8 @@
                           "label": "Price",
                           "name": "price",
                           "namespace": [
+                            "menuCollection",
                             "menus",
-                            "menu",
                             "sections",
                             "items",
                             "modifiers",
@@ -168,8 +168,8 @@
                         }
                       ],
                       "namespace": [
+                        "menuCollection",
                         "menus",
-                        "menu",
                         "sections",
                         "items",
                         "modifiers"
@@ -180,8 +180,8 @@
                       "label": "Available",
                       "name": "available",
                       "namespace": [
+                        "menuCollection",
                         "menus",
-                        "menu",
                         "sections",
                         "items",
                         "available"
@@ -202,8 +202,8 @@
                           "name": "name",
                           "required": true,
                           "namespace": [
+                            "menuCollection",
                             "menus",
-                            "menu",
                             "sections",
                             "items",
                             "images",
@@ -216,8 +216,8 @@
                           "name": "src",
                           "required": true,
                           "namespace": [
+                            "menuCollection",
                             "menus",
-                            "menu",
                             "sections",
                             "items",
                             "images",
@@ -226,8 +226,8 @@
                         }
                       ],
                       "namespace": [
+                        "menuCollection",
                         "menus",
-                        "menu",
                         "sections",
                         "items",
                         "images"
@@ -235,28 +235,28 @@
                     }
                   ],
                   "namespace": [
+                    "menuCollection",
                     "menus",
-                    "menu",
                     "sections",
                     "items"
                   ]
                 }
               ],
               "namespace": [
+                "menuCollection",
                 "menus",
-                "menu",
                 "sections"
               ]
             }
           ],
           "namespace": [
-            "menus",
-            "menu"
+            "menuCollection",
+            "menus"
           ]
         }
       ],
       "namespace": [
-        "menus"
+        "menuCollection"
       ]
     },
     {

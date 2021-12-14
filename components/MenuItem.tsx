@@ -1,9 +1,11 @@
 import menuData from '../public/data/menu-data.json';
-
-
+import menuCollection from '../content/menus/menus.json';
 
 const getMenuItem = ({ category }) => {
-  
+  console.log(
+    'NEW MENU',
+    menuCollection.menus.map(menu => menu.name)
+  );
   return (
     <>
       {menuData.menu

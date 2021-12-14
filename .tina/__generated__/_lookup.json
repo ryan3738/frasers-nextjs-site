@@ -3,7 +3,7 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
-      "menus",
+      "menuCollection",
       "posts"
     ]
   },
@@ -17,17 +17,17 @@
     "createDocument": "create",
     "updateDocument": "update"
   },
-  "MenusDocument": {
-    "type": "MenusDocument",
+  "MenuCollectionDocument": {
+    "type": "MenuCollectionDocument",
     "resolveType": "collectionDocument",
-    "collection": "menus",
-    "createMenusDocument": "create",
-    "updateMenusDocument": "update"
+    "collection": "menuCollection",
+    "createMenuCollectionDocument": "create",
+    "updateMenuCollectionDocument": "update"
   },
-  "MenusConnection": {
-    "type": "MenusConnection",
+  "MenuCollectionConnection": {
+    "type": "MenuCollectionConnection",
     "resolveType": "collectionDocumentList",
-    "collection": "menus"
+    "collection": "menuCollection"
   },
   "PostsDocument": {
     "type": "PostsDocument",
