@@ -40,7 +40,6 @@ const navigationLinks = [
     text: 'Contact',
     href: '/#contact'
   }
-
 ]
 
 const theme = {
