@@ -20,11 +20,13 @@
     "tina-start": "yarn tinacms server:start -c \"next start\""
   },
   "dependencies": {
+    "@tinacms/auth": "^0.50.2",
     "@tinacms/cli": "^0.58.2",
     "classnames": "^2.3.1",
     "date-fns": "^2.27.0",
     "gray-matter": "^4.0.3",
     "next": "^12.0.7",
+    "next-tinacms-cloudinary": "^3.4.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
