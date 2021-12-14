@@ -9,6 +9,24 @@
           "name": "Starters",
           "items": [
             {
+              "name": "Yummy item",
+              "description": "It's soooooo good",
+              "price": 13,
+              "dietary": [
+                "vegetarian",
+                "gluten-free",
+                "pescatarian",
+                "vegan"
+              ],
+              "modifiers": [
+                {
+                  "name": "Add good stuff",
+                  "price": 3
+                }
+              ],
+              "available": true
+            },
+            {
               "name": "Tomato & Burrata",
               "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
               "price": 16,
