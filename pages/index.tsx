@@ -15,26 +15,24 @@ export default function HomePage(props) {
 }
 
 export const getBusinessHoursQueryFragment = `
-  getBusinessHoursCollectionDocument(relativePath: $hoursPath) {
+  getBusinessHoursDocument(relativePath: "hours.json") {
           data {
-      name
-      hours {
-        day
-        hours
-      }
-    }
+            name
+            hours {
+              day
+              hours
+            }
+          }
         }
 `;
 
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query HoursQuery($hoursPath: String!) {
-          ${getBusinessHoursQueryFragment}
-        },
-        query MenuQuery($relativePath: String!) {
-          ${getMenusQueryFragment}
-        }
+      query MenuQuery($relativePath: String!) {
+        ${getBusinessHoursQueryFragment}
+        ${getMenusQueryFragment}
+      }
     `,
     variables: { relativePath: `menus.json`, hoursPath: 'hours.json' }
   });

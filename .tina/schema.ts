@@ -6,9 +6,9 @@ const hoursSchema: TinaField = {
   type: "object",
   label: "Hours",
   name: "hours",
-  ui: {
-    component: "groupList",
-  },
+  // ui: {
+  //   component: "groupList",
+  // },
   list: true,
   fields: [
     {

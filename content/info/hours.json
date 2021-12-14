@@ -1,5 +1,9 @@
 {
-"hours": {
-
-}
+  "name": "Frasers",
+  "hours": [
+    {
+      "day": "Monday",
+      "hours": "4pm to 8pm"
+    }
+  ]
 }
