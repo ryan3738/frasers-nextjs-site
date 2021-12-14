@@ -10,9 +10,9 @@ import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu';
 
-const {phoneNumber, aboutBusiness, aboutOwner } = siteData;
+const { phoneNumber, aboutBusiness, aboutOwner } = siteData;
 
-export default function Home() {
+export default function Home({ menus }) {
   return (
     <>
       <Layout home>
@@ -33,9 +33,7 @@ export default function Home() {
               imageLeft
             >
               <div>
-                <p>
-                  Please call for details!
-                </p>
+                <p>Please call for details!</p>
                 <h3>Gift Cards Available</h3>
                 To purchase a gift card please call us at{' '}
                 <span className="nowrap">{phoneNumber}</span>
@@ -51,8 +49,8 @@ export default function Home() {
               <div>
                 <h3>Takeout Is Still Available</h3>
                 <p>
-                  Call {phoneNumber} during normal business hours to
-                  place an order
+                  Call {phoneNumber} during normal business hours to place an
+                  order
                 </p>
               </div>
               <br />
@@ -66,9 +64,7 @@ export default function Home() {
               imageSource={aboutBusiness.src}
               imageAlt={aboutBusiness.alt}
             >
-              <div>
-                {aboutBusiness.content}
-              </div>
+              <div>{aboutBusiness.content}</div>
             </Double>
             <Double
               title={aboutOwner.title}
@@ -90,7 +86,11 @@ export default function Home() {
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <Menu pathName='/' categories={['Starters', 'Entrees']} />
+          <Menu
+            menus={menus}
+            pathName="/"
+            categories={['Starters', 'Entrees']}
+          />
         </section>
         <section>
           <div className={styles.header}>
