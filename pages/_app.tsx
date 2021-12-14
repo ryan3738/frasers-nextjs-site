@@ -1,7 +1,9 @@
 import dynamic from 'next/dynamic';
 import { TinaEditProvider } from 'tinacms/dist/edit-state';
-const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
+import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary';
 import '../styles/global.css';
+
+const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -9,6 +11,7 @@ const App = ({ Component, pageProps }) => {
       <TinaEditProvider
         editMode={
           <TinaCMS
+            mediaStore={TinaCloudCloudinaryMediaStore}
             query={pageProps.query}
             variables={pageProps.variables}
             data={pageProps.data}
