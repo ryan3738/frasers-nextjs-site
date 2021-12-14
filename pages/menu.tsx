@@ -5,34 +5,38 @@ import Layout from '../components/Layout';
 import Menu from '../components/MenuPage';
 
 export default function MenuPage(properties) {
+  const { menus } = properties.data.getMenuCollectionDocument.data;
   const { pathname } = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
-  return (
-    <Layout>
-      <Head>
-        <title>MENU</title>
-      </Head>
-      <section className="menu-container">
-        <Menu pathName={pathname} categories={menuCategories} />
-      </section>
-      <style jsx>{`
-        .menu-container {
-          width: 100vw;
-          max-width: 1200px;
-          place-self: center;
-        }
-      `}</style>
-    </Layout>
-  );
+  if (properties.data && properties.data.getMenuCollectionDocument.data) {
+    return (
+      <Layout>
+        <Head>
+          <title>MENU</title>
+        </Head>
+        <section className="menu-container">
+          <Menu menus={menus} pathName={pathname} categories={menuCategories} />
+        </section>
+        <style jsx>{`
+          .menu-container {
+            width: 100vw;
+            max-width: 1200px;
+            place-self: center;
+          }
+        `}</style>
+      </Layout>
+    );
+  }
+  return <div>Loading...</div>;
 }
 
 export const getStaticProps = async ({ params }) => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
       query MenuQuery($relativePath: String!) {
-        getMenusDocument(relativePath: $relativePath) {
+        getMenuCollectionDocument(relativePath: $relativePath) {
           data {
-            menu {
+            menus {
               name
               description
               sections {
@@ -46,6 +50,11 @@ export const getStaticProps = async ({ params }) => {
                     name
                     price
                   }
+                  images {
+                    name
+                    src
+                  }
+                  dietary
                   available
                 }
               }
