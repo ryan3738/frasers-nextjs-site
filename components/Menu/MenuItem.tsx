@@ -1,7 +1,7 @@
-import { MenuCollectionMenusSectionsItems} from '../.tina/__generated__/types'
+import { MenuSectionsItems} from '../../.tina/__generated__/types'
 
 interface MenuItemProps {
-  item: MenuCollectionMenusSectionsItems;
+  item: MenuSectionsItems;
 }
 
 const getDietaryPreferences = ({modifiers}) => {
