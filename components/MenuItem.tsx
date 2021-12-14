@@ -25,7 +25,7 @@ export default function MenuItem({ item }) {
         {item.modifiers ? (
           item.modifiers.map(modifier => {
             return (
-            <div className="modifier">
+            <div key={modifier.name} className="modifier">
               {modifier.name}&nbsp;
               <span className="primary-color">{modifier.price}</span>
               <br />
