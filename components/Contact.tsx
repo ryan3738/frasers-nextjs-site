@@ -9,7 +9,6 @@ interface ContactProps {
 }
 
 export default function Contact({ businessInfo }: ContactProps) {
-  console.log('Business Info', businessInfo);
   return (
     <>
       <div className="contact-content">

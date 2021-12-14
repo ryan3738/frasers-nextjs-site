@@ -18,7 +18,7 @@ interface HomeProps {
 }
 
 export default function Home({ menu, businessInfo }: HomeProps) {
-  const { name, address, phoneNumber } = businessInfo;
+  const { phoneNumber } = businessInfo;
   return (
     <>
       <Layout home businessInfo={businessInfo}>

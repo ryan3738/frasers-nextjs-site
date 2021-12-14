@@ -10,9 +10,8 @@ interface MenuProps {
 
 const Menu = ({ menu, categories, pathName }:MenuProps) => {
     if (!menu) {
-        return <div>No Menus Found</div>
+        return <div>No Menu Found</div>
     }
-    // const menu = menu[0];
     const links = categories.map(category => {
         return { href: `${pathName}#${category}`, text: category}});
    return (
