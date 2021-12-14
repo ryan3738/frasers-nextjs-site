@@ -28,7 +28,8 @@ const App = ({ Component, pageProps }) => {
                       itemProps: item => {
                         return {
                           ...item,
-                          label: item.name
+                          label:
+                            item.name || item.title || item.label || item.day
                         };
                       }
                     };
