@@ -35,10 +35,6 @@ export const getMenuQueryFragment = `
                   name
                   price
                 }
-                images {
-                  name
-                  src
-                }
                 dietary
                 available
               }

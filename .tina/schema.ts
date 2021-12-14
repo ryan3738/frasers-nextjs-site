@@ -62,10 +62,9 @@ const imagesSchema: TinaField = {
       required: true,
     },
     {
-      type: "string",
-      label: "src",
-      name: "src",
-      required: true,
+      name: 'image',
+      type: 'image',
+      label: 'Menu Item Image',
     }
   ]
 }

@@ -1946,17 +1946,14 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "src"
+            "value": "image"
           },
           "arguments": [],
           "type": {
-            "kind": "NonNullType",
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "String"
-              }
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
             }
           }
         }
@@ -3628,7 +3625,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "src"
+            "value": "image"
           },
           "type": {
             "kind": "NamedType",

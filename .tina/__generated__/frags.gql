@@ -42,7 +42,7 @@ fragment MenuParts on Menu {
       images {
         __typename
         name
-        src
+        image
       }
     }
   }

@@ -132,7 +132,7 @@ type MenuSectionsItemsModifiers {
 
 type MenuSectionsItemsImages {
   name: String!
-  src: String!
+  image: String
 }
 
 type MenuSectionsItems {
@@ -251,7 +251,7 @@ input MenuSectionsItemsModifiersMutation {
 
 input MenuSectionsItemsImagesMutation {
   name: String
-  src: String
+  image: String
 }
 
 input MenuSectionsItemsMutation {

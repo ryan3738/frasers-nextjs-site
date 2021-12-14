@@ -364,16 +364,15 @@
                       ]
                     },
                     {
-                      "type": "string",
-                      "label": "src",
-                      "name": "src",
-                      "required": true,
+                      "name": "image",
+                      "type": "image",
+                      "label": "Menu Item Image",
                       "namespace": [
                         "menu",
                         "sections",
                         "items",
                         "images",
-                        "src"
+                        "image"
                       ]
                     }
                   ],
