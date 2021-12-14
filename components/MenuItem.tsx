@@ -4,8 +4,11 @@ interface MenuItemProps {
   item: MenuCollectionMenusSectionsItems;
 }
 
+const getDietaryPreferences = ({modifiers}) => {
+  return
+}
+
 export default function MenuItem({ item }) {
-  // console.log("ITEM", item)
   return (
     <>
       <div key={item.name} className="menu-item">
@@ -36,7 +39,12 @@ export default function MenuItem({ item }) {
         {item.dietary ? (
           <>
             <br />
-            <div className="dietary-preferences">{item.dietary}</div>
+            <div className="dietary-preferences">{item.dietary.map((preference, index )=>{
+              if (item.dietary.length === 1 || index === item.dietary.length - 1) {
+                return `${preference}`
+              }
+              return `${preference} | `
+            })}</div>
           </>
         ) : (
           ''
