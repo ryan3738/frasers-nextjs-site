@@ -3,6 +3,7 @@
     {
       "name": "Dinner",
       "description": "This is the main dinner menu for Frasers.",
+      "available": true,
       "sections": [
         {
           "name": "Starters",
@@ -287,6 +288,7 @@
     {
       "name": "New Years Eve",
       "description": "This is the menu for new years eve 2021",
+      "available": true,
       "sections": [
         {
           "name": "First Course",

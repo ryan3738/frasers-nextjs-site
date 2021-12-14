@@ -2183,6 +2183,21 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
+            "value": "available"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Boolean"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
             "value": "sections"
           },
           "arguments": [],
@@ -3842,6 +3857,20 @@
             "name": {
               "kind": "Name",
               "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "available"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "Boolean"
             }
           }
         },

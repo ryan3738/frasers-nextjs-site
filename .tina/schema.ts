@@ -156,6 +156,11 @@ const menuSchema: TinaField = {
       label: "Description",
       name: "description",
     },
+    {
+      type: "boolean",
+      label: "Available",
+      name: "available",
+    },
     menuSectionSchema,
   ],
 }

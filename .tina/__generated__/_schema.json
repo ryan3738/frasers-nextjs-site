@@ -200,6 +200,16 @@
               ]
             },
             {
+              "type": "boolean",
+              "label": "Available",
+              "name": "available",
+              "namespace": [
+                "menuCollection",
+                "menus",
+                "available"
+              ]
+            },
+            {
               "type": "object",
               "label": "Sections",
               "name": "sections",

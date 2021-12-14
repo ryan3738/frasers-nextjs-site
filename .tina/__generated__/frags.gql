@@ -25,6 +25,7 @@ fragment MenuCollectionParts on MenuCollection {
     __typename
     name
     description
+    available
     sections {
       __typename
       name

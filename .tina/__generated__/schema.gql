@@ -153,6 +153,7 @@ type MenuCollectionMenusSections {
 type MenuCollectionMenus {
   name: String!
   description: String
+  available: Boolean
   sections: [MenuCollectionMenusSections]
 }
 
@@ -275,6 +276,7 @@ input MenuCollectionMenusSectionsMutation {
 input MenuCollectionMenusMutation {
   name: String
   description: String
+  available: Boolean
   sections: [MenuCollectionMenusSectionsMutation]
 }
 
