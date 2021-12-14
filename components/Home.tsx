@@ -8,7 +8,7 @@ import Button from './Button';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
-import { Menu } from './Menu';
+import { Menu } from './Menu/Menu';
 
 const { phoneNumber, aboutBusiness, aboutOwner } = siteData;
 

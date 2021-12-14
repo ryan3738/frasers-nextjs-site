@@ -14,14 +14,29 @@ export default function HomePage(props) {
   return <div>Loading...</div>;
 }
 
+export const getBusinessHoursQueryFragment = `
+  getBusinessHoursCollectionDocument(relativePath: $hoursPath) {
+          data {
+      name
+      hours {
+        day
+        hours
+      }
+    }
+        }
+`;
+
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query MenuQuery($relativePath: String!) {
-        ${getMenusQueryFragment}
-      }
+      query HoursQuery($hoursPath: String!) {
+          ${getBusinessHoursQueryFragment}
+        },
+        query MenuQuery($relativePath: String!) {
+          ${getMenusQueryFragment}
+        }
     `,
-    variables: { relativePath: `menus.json` }
+    variables: { relativePath: `menus.json`, hoursPath: 'hours.json' }
   });
   return {
     props: {

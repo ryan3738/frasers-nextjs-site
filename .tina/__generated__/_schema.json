@@ -1,6 +1,60 @@
 {
   "collections": [
     {
+      "label": "Business Hours",
+      "name": "businessHours",
+      "path": "content/info",
+      "fields": [
+        {
+          "type": "string",
+          "label": "Name",
+          "name": "name",
+          "namespace": [
+            "businessHours",
+            "name"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Hours",
+          "name": "hours",
+          "ui": {
+            "component": "groupList"
+          },
+          "list": true,
+          "fields": [
+            {
+              "type": "string",
+              "name": "day",
+              "label": "Day",
+              "namespace": [
+                "businessHours",
+                "hours",
+                "day"
+              ]
+            },
+            {
+              "type": "string",
+              "name": "hours",
+              "label": "Hours",
+              "namespace": [
+                "businessHours",
+                "hours",
+                "hours"
+              ]
+            }
+          ],
+          "namespace": [
+            "businessHours",
+            "hours"
+          ]
+        }
+      ],
+      "namespace": [
+        "businessHours"
+      ]
+    },
+    {
       "label": "Menu Collection",
       "name": "menuCollection",
       "path": "content/menus",

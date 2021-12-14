@@ -3,6 +3,7 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
+      "businessHours",
       "menuCollection",
       "posts"
     ]
@@ -40,5 +41,29 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "HoursDocument": {
+    "type": "HoursDocument",
+    "resolveType": "collectionDocument",
+    "collection": "hours",
+    "createHoursDocument": "create",
+    "updateHoursDocument": "update"
+  },
+  "HoursConnection": {
+    "type": "HoursConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "hours"
+  },
+  "BusinessHoursDocument": {
+    "type": "BusinessHoursDocument",
+    "resolveType": "collectionDocument",
+    "collection": "businessHours",
+    "createBusinessHoursDocument": "create",
+    "updateBusinessHoursDocument": "update"
+  },
+  "BusinessHoursConnection": {
+    "type": "BusinessHoursConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "businessHours"
   }
 }

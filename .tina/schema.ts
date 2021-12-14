@@ -2,6 +2,28 @@
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField, TinaTemplate } from "@tinacms/cli";
 
+const hoursSchema: TinaField = {
+  type: "object",
+  label: "Hours",
+  name: "hours",
+  ui: {
+    component: "groupList",
+  },
+  list: true,
+  fields: [
+    {
+      type: "string",
+      name: "day",
+      label: "Day",
+    },
+    {
+      type: "string",
+      name: 'hours',
+      label: 'Hours',
+    }
+  ]
+}
+
 const modifierSchema: TinaField = {
   type: "object",
     label: "Modifiers",
@@ -142,6 +164,19 @@ const menuSchema: TinaField = {
 
 export default defineSchema({
   collections: [
+    {
+      label: "Business Hours",
+      name: "businessHours",
+      path: "content/info",
+      fields: [
+        {
+          type: "string",
+          label: "Name",
+          name: "name",
+        },
+        hoursSchema
+      ],
+    },
     {
       label: "Menu Collection",
       name: "menuCollection",

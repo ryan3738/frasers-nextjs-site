@@ -67,6 +67,8 @@ export type Query = {
   getDocument: DocumentNode;
   getDocumentList: DocumentConnection;
   getDocumentFields: Scalars['JSON'];
+  getBusinessHoursDocument: BusinessHoursDocument;
+  getBusinessHoursList: BusinessHoursConnection;
   getMenuCollectionDocument: MenuCollectionDocument;
   getMenuCollectionList: MenuCollectionConnection;
   getPostsDocument: PostsDocument;
@@ -91,6 +93,19 @@ export type QueryGetDocumentArgs = {
 
 
 export type QueryGetDocumentListArgs = {
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type QueryGetBusinessHoursDocumentArgs = {
+  relativePath?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryGetBusinessHoursListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -157,7 +172,42 @@ export type CollectionDocumentsArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
-export type DocumentNode = MenuCollectionDocument | PostsDocument;
+export type DocumentNode = BusinessHoursDocument | MenuCollectionDocument | PostsDocument;
+
+export type BusinessHoursHours = {
+  __typename?: 'BusinessHoursHours';
+  day?: Maybe<Scalars['String']>;
+  hours?: Maybe<Scalars['String']>;
+};
+
+export type BusinessHours = {
+  __typename?: 'BusinessHours';
+  name?: Maybe<Scalars['String']>;
+  hours?: Maybe<Array<Maybe<BusinessHoursHours>>>;
+};
+
+export type BusinessHoursDocument = Node & Document & {
+  __typename?: 'BusinessHoursDocument';
+  id: Scalars['ID'];
+  sys: SystemInfo;
+  data: BusinessHours;
+  form: Scalars['JSON'];
+  values: Scalars['JSON'];
+  dataJSON: Scalars['JSON'];
+};
+
+export type BusinessHoursConnectionEdges = {
+  __typename?: 'BusinessHoursConnectionEdges';
+  cursor?: Maybe<Scalars['String']>;
+  node?: Maybe<BusinessHoursDocument>;
+};
+
+export type BusinessHoursConnection = Connection & {
+  __typename?: 'BusinessHoursConnection';
+  pageInfo?: Maybe<PageInfo>;
+  totalCount: Scalars['Int'];
+  edges?: Maybe<Array<Maybe<BusinessHoursConnectionEdges>>>;
+};
 
 export type MenuCollectionMenusSectionsItemsModifiers = {
   __typename?: 'MenuCollectionMenusSectionsItemsModifiers';
@@ -258,6 +308,8 @@ export type Mutation = {
   addPendingDocument: DocumentNode;
   updateDocument: DocumentNode;
   createDocument: DocumentNode;
+  updateBusinessHoursDocument: BusinessHoursDocument;
+  createBusinessHoursDocument: BusinessHoursDocument;
   updateMenuCollectionDocument: MenuCollectionDocument;
   createMenuCollectionDocument: MenuCollectionDocument;
   updatePostsDocument: PostsDocument;
@@ -286,6 +338,18 @@ export type MutationCreateDocumentArgs = {
 };
 
 
+export type MutationUpdateBusinessHoursDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: BusinessHoursMutation;
+};
+
+
+export type MutationCreateBusinessHoursDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: BusinessHoursMutation;
+};
+
+
 export type MutationUpdateMenuCollectionDocumentArgs = {
   relativePath: Scalars['String'];
   params: MenuCollectionMutation;
@@ -310,8 +374,19 @@ export type MutationCreatePostsDocumentArgs = {
 };
 
 export type DocumentMutation = {
+  businessHours?: InputMaybe<BusinessHoursMutation>;
   menuCollection?: InputMaybe<MenuCollectionMutation>;
   posts?: InputMaybe<PostsMutation>;
+};
+
+export type BusinessHoursHoursMutation = {
+  day?: InputMaybe<Scalars['String']>;
+  hours?: InputMaybe<Scalars['String']>;
+};
+
+export type BusinessHoursMutation = {
+  name?: InputMaybe<Scalars['String']>;
+  hours?: InputMaybe<Array<InputMaybe<BusinessHoursHoursMutation>>>;
 };
 
 export type MenuCollectionMenusSectionsItemsModifiersMutation = {
@@ -355,9 +430,23 @@ export type PostsMutation = {
   body?: InputMaybe<Scalars['String']>;
 };
 
+export type BusinessHoursPartsFragment = { __typename?: 'BusinessHours', name?: string | null | undefined, hours?: Array<{ __typename: 'BusinessHoursHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined };
+
 export type MenuCollectionPartsFragment = { __typename?: 'MenuCollection', menus?: Array<{ __typename: 'MenuCollectionMenus', name?: string | null | undefined, label?: string | null | undefined, description?: string | null | undefined, sections?: Array<{ __typename: 'MenuCollectionMenusSections', name?: string | null | undefined, items?: Array<{ __typename: 'MenuCollectionMenusSectionsItems', name?: string | null | undefined, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsImages', name: string, src: string } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined };
+
+export type GetBusinessHoursDocumentQueryVariables = Exact<{
+  relativePath: Scalars['String'];
+}>;
+
+
+export type GetBusinessHoursDocumentQuery = { __typename?: 'Query', getBusinessHoursDocument: { __typename?: 'BusinessHoursDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'BusinessHours', name?: string | null | undefined, hours?: Array<{ __typename: 'BusinessHoursHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined } } };
+
+export type GetBusinessHoursListQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetBusinessHoursListQuery = { __typename?: 'Query', getBusinessHoursList: { __typename?: 'BusinessHoursConnection', totalCount: number, edges?: Array<{ __typename?: 'BusinessHoursConnectionEdges', node?: { __typename?: 'BusinessHoursDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'BusinessHours', name?: string | null | undefined, hours?: Array<{ __typename: 'BusinessHoursHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetMenuCollectionDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -383,6 +472,16 @@ export type GetPostsListQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetPostsListQuery = { __typename?: 'Query', getPostsList: { __typename?: 'PostsConnection', totalCount: number, edges?: Array<{ __typename?: 'PostsConnectionEdges', node?: { __typename?: 'PostsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
+export const BusinessHoursPartsFragmentDoc = gql`
+    fragment BusinessHoursParts on BusinessHours {
+  name
+  hours {
+    __typename
+    day
+    hours
+  }
+}
+    `;
 export const MenuCollectionPartsFragmentDoc = gql`
     fragment MenuCollectionParts on MenuCollection {
   menus {
@@ -421,6 +520,47 @@ export const PostsPartsFragmentDoc = gql`
   body
 }
     `;
+export const GetBusinessHoursDocumentDocument = gql`
+    query getBusinessHoursDocument($relativePath: String!) {
+  getBusinessHoursDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...BusinessHoursParts
+    }
+  }
+}
+    ${BusinessHoursPartsFragmentDoc}`;
+export const GetBusinessHoursListDocument = gql`
+    query getBusinessHoursList {
+  getBusinessHoursList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...BusinessHoursParts
+        }
+      }
+    }
+  }
+}
+    ${BusinessHoursPartsFragmentDoc}`;
 export const GetMenuCollectionDocumentDocument = gql`
     query getMenuCollectionDocument($relativePath: String!) {
   getMenuCollectionDocument(relativePath: $relativePath) {
@@ -506,7 +646,13 @@ export const GetPostsListDocument = gql`
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      getMenuCollectionDocument(variables: GetMenuCollectionDocumentQueryVariables, options?: C): Promise<{data: GetMenuCollectionDocumentQuery, variables: GetMenuCollectionDocumentQueryVariables, query: string}> {
+      getBusinessHoursDocument(variables: GetBusinessHoursDocumentQueryVariables, options?: C): Promise<{data: GetBusinessHoursDocumentQuery, variables: GetBusinessHoursDocumentQueryVariables, query: string}> {
+        return requester<{data: GetBusinessHoursDocumentQuery, variables: GetBusinessHoursDocumentQueryVariables, query: string}, GetBusinessHoursDocumentQueryVariables>(GetBusinessHoursDocumentDocument, variables, options);
+      },
+    getBusinessHoursList(variables?: GetBusinessHoursListQueryVariables, options?: C): Promise<{data: GetBusinessHoursListQuery, variables: GetBusinessHoursListQueryVariables, query: string}> {
+        return requester<{data: GetBusinessHoursListQuery, variables: GetBusinessHoursListQueryVariables, query: string}, GetBusinessHoursListQueryVariables>(GetBusinessHoursListDocument, variables, options);
+      },
+    getMenuCollectionDocument(variables: GetMenuCollectionDocumentQueryVariables, options?: C): Promise<{data: GetMenuCollectionDocumentQuery, variables: GetMenuCollectionDocumentQueryVariables, query: string}> {
         return requester<{data: GetMenuCollectionDocumentQuery, variables: GetMenuCollectionDocumentQueryVariables, query: string}, GetMenuCollectionDocumentQueryVariables>(GetMenuCollectionDocumentDocument, variables, options);
       },
     getMenuCollectionList(variables?: GetMenuCollectionListQueryVariables, options?: C): Promise<{data: GetMenuCollectionListQuery, variables: GetMenuCollectionListQueryVariables, query: string}> {

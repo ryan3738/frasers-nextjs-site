@@ -1,3 +1,42 @@
+query getBusinessHoursDocument($relativePath: String!) {
+  getBusinessHoursDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...BusinessHoursParts
+    }
+  }
+}
+
+query getBusinessHoursList {
+  getBusinessHoursList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...BusinessHoursParts
+        }
+      }
+    }
+  }
+}
+
 query getMenuCollectionDocument($relativePath: String!) {
   getMenuCollectionDocument(relativePath: $relativePath) {
     sys {

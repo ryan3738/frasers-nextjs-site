@@ -48,6 +48,8 @@ type Query {
   getDocument(collection: String, relativePath: String): DocumentNode!
   getDocumentList(before: String, after: String, first: Int, last: Int): DocumentConnection!
   getDocumentFields: JSON!
+  getBusinessHoursDocument(relativePath: String): BusinessHoursDocument!
+  getBusinessHoursList(before: String, after: String, first: Int, last: Int): BusinessHoursConnection!
   getMenuCollectionDocument(relativePath: String): MenuCollectionDocument!
   getMenuCollectionList(before: String, after: String, first: Int, last: Int): MenuCollectionConnection!
   getPostsDocument(relativePath: String): PostsDocument!
@@ -77,7 +79,37 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = MenuCollectionDocument | PostsDocument
+union DocumentNode = BusinessHoursDocument | MenuCollectionDocument | PostsDocument
+
+type BusinessHoursHours {
+  day: String
+  hours: String
+}
+
+type BusinessHours {
+  name: String
+  hours: [BusinessHoursHours]
+}
+
+type BusinessHoursDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: BusinessHours!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type BusinessHoursConnectionEdges {
+  cursor: String
+  node: BusinessHoursDocument
+}
+
+type BusinessHoursConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [BusinessHoursConnectionEdges]
+}
 
 type MenuCollectionMenusSectionsItemsModifiers {
   name: String
@@ -164,6 +196,8 @@ type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
+  updateBusinessHoursDocument(relativePath: String!, params: BusinessHoursMutation!): BusinessHoursDocument!
+  createBusinessHoursDocument(relativePath: String!, params: BusinessHoursMutation!): BusinessHoursDocument!
   updateMenuCollectionDocument(relativePath: String!, params: MenuCollectionMutation!): MenuCollectionDocument!
   createMenuCollectionDocument(relativePath: String!, params: MenuCollectionMutation!): MenuCollectionDocument!
   updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
@@ -171,8 +205,19 @@ type Mutation {
 }
 
 input DocumentMutation {
+  businessHours: BusinessHoursMutation
   menuCollection: MenuCollectionMutation
   posts: PostsMutation
+}
+
+input BusinessHoursHoursMutation {
+  day: String
+  hours: String
+}
+
+input BusinessHoursMutation {
+  name: String
+  hours: [BusinessHoursHoursMutation]
 }
 
 input MenuCollectionMenusSectionsItemsModifiersMutation {
