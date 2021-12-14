@@ -2,7 +2,6 @@ import Head from 'next/head';
 import styles from '../styles/styles.module.css';
 import { Menu } from './Menu';
 import { useRouter } from 'next/router';
-import { getStaticPropsForTina, gql } from 'tinacms';
 
 export default function MenuPage(properties) {
   const { pathname } = useRouter();
@@ -28,37 +27,3 @@ export default function MenuPage(properties) {
     </>
   );
 }
-
-export const getStaticProps = async ({ params }) => {
-  const tinaProperties = await getStaticPropsForTina({
-    query: gql`
-      query MenuQuery($relativePath: String!) {
-        getMenuDocument(relativePath: $relativePath) {
-          data {
-            name
-            section {
-              name
-              item {
-                name
-                description
-                price
-                dietary
-                modifier {
-                  name
-                  price
-                }
-                available
-              }
-            }
-          }
-        }
-      }
-    `,
-    variables: { relativePath: `main.md` }
-  });
-  return {
-    props: {
-      ...tinaProperties
-    }
-  };
-};
