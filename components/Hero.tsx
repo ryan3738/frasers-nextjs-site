@@ -6,7 +6,7 @@ interface HeroProps {
   businessInfo?: BusinessInfo;
 }
 
-export default function Hero({businessInfo}) {
+export default function Hero({ businessInfo }: HeroProps) {
   return (
     <>
       <div id="welcome" className="welcome-container">
@@ -34,7 +34,7 @@ export default function Hero({businessInfo}) {
             >
               {`${businessInfo.address.street} ${businessInfo.address.street2}`}
               <br />
-              {`${businessInfo.address.city}, ${businessInfo.address.state} ${businessInfo.address.zipCode}`}
+              {`${businessInfo.address.city}, ${businessInfo.address.region} ${businessInfo.address.zip}`}
             </a>
             <br />
             <br />
@@ -51,8 +51,9 @@ export default function Hero({businessInfo}) {
             <br />
             <br />
             <div>
+              {businessInfo.hours && <>
               <h3>HOURS</h3>
-              {businessInfo.hours && <div>
+               <div>
                 {businessInfo.hours.map((item) => (
                   <div key={item.day}>
                     <div>
@@ -64,7 +65,9 @@ export default function Hero({businessInfo}) {
                     <br />
                   </div>
                 ))}
-              </div>}
+              </div>
+                </>
+              }
             </div>
           </div>
         </div>
