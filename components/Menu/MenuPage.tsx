@@ -3,7 +3,7 @@ import styles from '../../styles/styles.module.css';
 import { Menu } from './Menu';
 import { useRouter } from 'next/router';
 
-export default function MenuPage({ menus }) {
+export default function MenuPage({ menu }) {
   const { pathname } = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
   return (
@@ -15,7 +15,7 @@ export default function MenuPage({ menus }) {
         <div className={styles.header}>
           <h1>MENU</h1>
         </div>
-        <Menu menus={menus} pathName={pathname} categories={menuCategories} />
+        <Menu menu={menu} pathName={pathname} categories={menuCategories} />
       </section>
       <style jsx>{`
         .menu-container {

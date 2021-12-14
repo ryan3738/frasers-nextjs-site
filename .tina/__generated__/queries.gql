@@ -37,8 +37,8 @@ query getBusinessInfoList {
   }
 }
 
-query getMenuCollectionDocument($relativePath: String!) {
-  getMenuCollectionDocument(relativePath: $relativePath) {
+query getMenuDocument($relativePath: String!) {
+  getMenuDocument(relativePath: $relativePath) {
     sys {
       filename
       basename
@@ -49,13 +49,13 @@ query getMenuCollectionDocument($relativePath: String!) {
     }
     id
     data {
-      ...MenuCollectionParts
+      ...MenuParts
     }
   }
 }
 
-query getMenuCollectionList {
-  getMenuCollectionList {
+query getMenuList {
+  getMenuList {
     totalCount
     edges {
       node {
@@ -69,7 +69,7 @@ query getMenuCollectionList {
           extension
         }
         data {
-          ...MenuCollectionParts
+          ...MenuParts
         }
       }
     }

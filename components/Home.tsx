@@ -12,7 +12,7 @@ import { Menu } from './Menu/Menu';
 
 const { phoneNumber, aboutBusiness, aboutOwner } = siteData;
 
-export default function Home({ menus }) {
+export default function Home({ menu }) {
   return (
     <>
       <Layout home>
@@ -86,11 +86,7 @@ export default function Home({ menus }) {
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <Menu
-            menus={menus}
-            pathName="/"
-            categories={['Starters', 'Entrees']}
-          />
+          <Menu menu={menu} pathName="/" categories={['Starters', 'Entrees']} />
         </section>
         <section>
           <div className={styles.header}>

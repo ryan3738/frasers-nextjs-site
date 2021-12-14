@@ -50,8 +50,8 @@ type Query {
   getDocumentFields: JSON!
   getBusinessInfoDocument(relativePath: String): BusinessInfoDocument!
   getBusinessInfoList(before: String, after: String, first: Int, last: Int): BusinessInfoConnection!
-  getMenuCollectionDocument(relativePath: String): MenuCollectionDocument!
-  getMenuCollectionList(before: String, after: String, first: Int, last: Int): MenuCollectionConnection!
+  getMenuDocument(relativePath: String): MenuDocument!
+  getMenuList(before: String, after: String, first: Int, last: Int): MenuConnection!
   getPostsDocument(relativePath: String): PostsDocument!
   getPostsList(before: String, after: String, first: Int, last: Int): PostsConnection!
 }
@@ -79,7 +79,7 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = BusinessInfoDocument | MenuCollectionDocument | PostsDocument
+union DocumentNode = BusinessInfoDocument | MenuDocument | PostsDocument
 
 type BusinessInfoAddress {
   name: String!
@@ -125,60 +125,56 @@ type BusinessInfoConnection implements Connection {
   edges: [BusinessInfoConnectionEdges]
 }
 
-type MenuCollectionMenusSectionsItemsModifiers {
+type MenuSectionsItemsModifiers {
   name: String
   price: Int
 }
 
-type MenuCollectionMenusSectionsItemsImages {
+type MenuSectionsItemsImages {
   name: String!
   src: String!
 }
 
-type MenuCollectionMenusSectionsItems {
+type MenuSectionsItems {
   name: String!
   description: String
   price: Int
   dietary: [String]
-  modifiers: [MenuCollectionMenusSectionsItemsModifiers]
+  modifiers: [MenuSectionsItemsModifiers]
   available: Boolean
-  images: [MenuCollectionMenusSectionsItemsImages]
+  images: [MenuSectionsItemsImages]
 }
 
-type MenuCollectionMenusSections {
+type MenuSections {
   name: String!
-  items: [MenuCollectionMenusSectionsItems]
+  items: [MenuSectionsItems]
 }
 
-type MenuCollectionMenus {
+type Menu {
   name: String!
   description: String
   available: Boolean
-  sections: [MenuCollectionMenusSections]
+  sections: [MenuSections]
 }
 
-type MenuCollection {
-  menus: [MenuCollectionMenus]
-}
-
-type MenuCollectionDocument implements Node & Document {
+type MenuDocument implements Node & Document {
   id: ID!
   sys: SystemInfo!
-  data: MenuCollection!
+  data: Menu!
   form: JSON!
   values: JSON!
   dataJSON: JSON!
 }
 
-type MenuCollectionConnectionEdges {
+type MenuConnectionEdges {
   cursor: String
-  node: MenuCollectionDocument
+  node: MenuDocument
 }
 
-type MenuCollectionConnection implements Connection {
+type MenuConnection implements Connection {
   pageInfo: PageInfo
   totalCount: Int!
-  edges: [MenuCollectionConnectionEdges]
+  edges: [MenuConnectionEdges]
 }
 
 type Posts {
@@ -212,15 +208,15 @@ type Mutation {
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   updateBusinessInfoDocument(relativePath: String!, params: BusinessInfoMutation!): BusinessInfoDocument!
   createBusinessInfoDocument(relativePath: String!, params: BusinessInfoMutation!): BusinessInfoDocument!
-  updateMenuCollectionDocument(relativePath: String!, params: MenuCollectionMutation!): MenuCollectionDocument!
-  createMenuCollectionDocument(relativePath: String!, params: MenuCollectionMutation!): MenuCollectionDocument!
+  updateMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
+  createMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
   updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
   createPostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
 }
 
 input DocumentMutation {
   businessInfo: BusinessInfoMutation
-  menuCollection: MenuCollectionMutation
+  menu: MenuMutation
   posts: PostsMutation
 }
 
@@ -248,40 +244,36 @@ input BusinessInfoMutation {
   hours: [BusinessInfoHoursMutation]
 }
 
-input MenuCollectionMenusSectionsItemsModifiersMutation {
+input MenuSectionsItemsModifiersMutation {
   name: String
   price: Int
 }
 
-input MenuCollectionMenusSectionsItemsImagesMutation {
+input MenuSectionsItemsImagesMutation {
   name: String
   src: String
 }
 
-input MenuCollectionMenusSectionsItemsMutation {
+input MenuSectionsItemsMutation {
   name: String
   description: String
   price: Int
   dietary: [String]
-  modifiers: [MenuCollectionMenusSectionsItemsModifiersMutation]
+  modifiers: [MenuSectionsItemsModifiersMutation]
   available: Boolean
-  images: [MenuCollectionMenusSectionsItemsImagesMutation]
+  images: [MenuSectionsItemsImagesMutation]
 }
 
-input MenuCollectionMenusSectionsMutation {
+input MenuSectionsMutation {
   name: String
-  items: [MenuCollectionMenusSectionsItemsMutation]
+  items: [MenuSectionsItemsMutation]
 }
 
-input MenuCollectionMenusMutation {
+input MenuMutation {
   name: String
   description: String
   available: Boolean
-  sections: [MenuCollectionMenusSectionsMutation]
-}
-
-input MenuCollectionMutation {
-  menus: [MenuCollectionMenusMutation]
+  sections: [MenuSectionsMutation]
 }
 
 input PostsMutation {

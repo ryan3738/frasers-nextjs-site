@@ -165,14 +165,43 @@
       ]
     },
     {
-      "label": "Menu Collection",
-      "name": "menuCollection",
+      "label": "Menu",
+      "name": "menu",
       "path": "content/menus",
+      "format": "json",
       "fields": [
         {
+          "type": "string",
+          "label": "Name of Menu",
+          "name": "name",
+          "required": true,
+          "namespace": [
+            "menu",
+            "name"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Description",
+          "name": "description",
+          "namespace": [
+            "menu",
+            "description"
+          ]
+        },
+        {
+          "type": "boolean",
+          "label": "Available",
+          "name": "available",
+          "namespace": [
+            "menu",
+            "available"
+          ]
+        },
+        {
           "type": "object",
-          "label": "Menus",
-          "name": "menus",
+          "label": "Sections",
+          "name": "sections",
           "ui": {
             "component": "groupList"
           },
@@ -180,39 +209,19 @@
           "fields": [
             {
               "type": "string",
-              "label": "Name of Menu",
+              "label": "Name",
               "name": "name",
               "required": true,
               "namespace": [
-                "menuCollection",
-                "menus",
+                "menu",
+                "sections",
                 "name"
               ]
             },
             {
-              "type": "string",
-              "label": "Description",
-              "name": "description",
-              "namespace": [
-                "menuCollection",
-                "menus",
-                "description"
-              ]
-            },
-            {
-              "type": "boolean",
-              "label": "Available",
-              "name": "available",
-              "namespace": [
-                "menuCollection",
-                "menus",
-                "available"
-              ]
-            },
-            {
               "type": "object",
-              "label": "Sections",
-              "name": "sections",
+              "label": "Menu Items",
+              "name": "items",
               "ui": {
                 "component": "groupList"
               },
@@ -224,16 +233,59 @@
                   "name": "name",
                   "required": true,
                   "namespace": [
-                    "menuCollection",
-                    "menus",
+                    "menu",
                     "sections",
+                    "items",
                     "name"
                   ]
                 },
                 {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "ui": {
+                    "component": "textarea"
+                  },
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "description"
+                  ]
+                },
+                {
+                  "type": "number",
+                  "label": "Price",
+                  "name": "price",
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "price"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Dietary Preferences",
+                  "name": "dietary",
+                  "options": [
+                    "vegan",
+                    "vegetarian",
+                    "gluten-free",
+                    "pescatarian"
+                  ],
+                  "list": true,
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "dietary"
+                  ]
+                },
+                {
                   "type": "object",
-                  "label": "Menu Items",
-                  "name": "items",
+                  "label": "Modifiers",
+                  "name": "modifiers",
                   "ui": {
                     "component": "groupList"
                   },
@@ -243,28 +295,12 @@
                       "type": "string",
                       "label": "Name",
                       "name": "name",
-                      "required": true,
                       "namespace": [
-                        "menuCollection",
-                        "menus",
+                        "menu",
                         "sections",
                         "items",
+                        "modifiers",
                         "name"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "label": "Description",
-                      "name": "description",
-                      "ui": {
-                        "component": "textarea"
-                      },
-                      "namespace": [
-                        "menuCollection",
-                        "menus",
-                        "sections",
-                        "items",
-                        "description"
                       ]
                     },
                     {
@@ -272,158 +308,91 @@
                       "label": "Price",
                       "name": "price",
                       "namespace": [
-                        "menuCollection",
-                        "menus",
+                        "menu",
                         "sections",
                         "items",
+                        "modifiers",
                         "price"
-                      ]
-                    },
-                    {
-                      "type": "string",
-                      "label": "Dietary Preferences",
-                      "name": "dietary",
-                      "options": [
-                        "vegan",
-                        "vegetarian",
-                        "gluten-free",
-                        "pescatarian"
-                      ],
-                      "list": true,
-                      "namespace": [
-                        "menuCollection",
-                        "menus",
-                        "sections",
-                        "items",
-                        "dietary"
-                      ]
-                    },
-                    {
-                      "type": "object",
-                      "label": "Modifiers",
-                      "name": "modifiers",
-                      "ui": {
-                        "component": "groupList"
-                      },
-                      "list": true,
-                      "fields": [
-                        {
-                          "type": "string",
-                          "label": "Name",
-                          "name": "name",
-                          "namespace": [
-                            "menuCollection",
-                            "menus",
-                            "sections",
-                            "items",
-                            "modifiers",
-                            "name"
-                          ]
-                        },
-                        {
-                          "type": "number",
-                          "label": "Price",
-                          "name": "price",
-                          "namespace": [
-                            "menuCollection",
-                            "menus",
-                            "sections",
-                            "items",
-                            "modifiers",
-                            "price"
-                          ]
-                        }
-                      ],
-                      "namespace": [
-                        "menuCollection",
-                        "menus",
-                        "sections",
-                        "items",
-                        "modifiers"
-                      ]
-                    },
-                    {
-                      "type": "boolean",
-                      "label": "Available",
-                      "name": "available",
-                      "namespace": [
-                        "menuCollection",
-                        "menus",
-                        "sections",
-                        "items",
-                        "available"
-                      ]
-                    },
-                    {
-                      "type": "object",
-                      "label": "Images",
-                      "name": "images",
-                      "ui": {
-                        "component": "groupList"
-                      },
-                      "list": true,
-                      "fields": [
-                        {
-                          "type": "string",
-                          "label": "Descriptive Image Alt Text",
-                          "name": "name",
-                          "required": true,
-                          "namespace": [
-                            "menuCollection",
-                            "menus",
-                            "sections",
-                            "items",
-                            "images",
-                            "name"
-                          ]
-                        },
-                        {
-                          "type": "string",
-                          "label": "src",
-                          "name": "src",
-                          "required": true,
-                          "namespace": [
-                            "menuCollection",
-                            "menus",
-                            "sections",
-                            "items",
-                            "images",
-                            "src"
-                          ]
-                        }
-                      ],
-                      "namespace": [
-                        "menuCollection",
-                        "menus",
-                        "sections",
-                        "items",
-                        "images"
                       ]
                     }
                   ],
                   "namespace": [
-                    "menuCollection",
-                    "menus",
+                    "menu",
                     "sections",
-                    "items"
+                    "items",
+                    "modifiers"
+                  ]
+                },
+                {
+                  "type": "boolean",
+                  "label": "Available",
+                  "name": "available",
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "available"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "label": "Images",
+                  "name": "images",
+                  "ui": {
+                    "component": "groupList"
+                  },
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Descriptive Image Alt Text",
+                      "name": "name",
+                      "required": true,
+                      "namespace": [
+                        "menu",
+                        "sections",
+                        "items",
+                        "images",
+                        "name"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "label": "src",
+                      "name": "src",
+                      "required": true,
+                      "namespace": [
+                        "menu",
+                        "sections",
+                        "items",
+                        "images",
+                        "src"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "images"
                   ]
                 }
               ],
               "namespace": [
-                "menuCollection",
-                "menus",
-                "sections"
+                "menu",
+                "sections",
+                "items"
               ]
             }
           ],
           "namespace": [
-            "menuCollection",
-            "menus"
+            "menu",
+            "sections"
           ]
         }
       ],
       "namespace": [
-        "menuCollection"
+        "menu"
       ]
     },
     {

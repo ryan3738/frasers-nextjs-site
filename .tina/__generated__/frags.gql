@@ -20,32 +20,29 @@ fragment BusinessInfoParts on BusinessInfo {
   }
 }
 
-fragment MenuCollectionParts on MenuCollection {
-  menus {
+fragment MenuParts on Menu {
+  name
+  description
+  available
+  sections {
     __typename
     name
-    description
-    available
-    sections {
+    items {
       __typename
       name
-      items {
+      description
+      price
+      dietary
+      modifiers {
         __typename
         name
-        description
         price
-        dietary
-        modifiers {
-          __typename
-          name
-          price
-        }
-        available
-        images {
-          __typename
-          name
-          src
-        }
+      }
+      available
+      images {
+        __typename
+        name
+        src
       }
     }
   }

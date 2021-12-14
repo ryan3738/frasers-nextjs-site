@@ -4,14 +4,14 @@ import NavBar from "../NavBar"
 interface MenuProps {
     categories: string[];
     pathName: string;
-    menus: any;
+    menu: any;
 }
 
-const Menu = ({ menus, categories, pathName }:MenuProps) => {
-    if (!menus) {
+const Menu = ({ menu, categories, pathName }:MenuProps) => {
+    if (!menu) {
         return <div>No Menus Found</div>
     }
-    const menu = menus[0];
+    // const menu = menu[0];
     const links = categories.map(category => {
         return { href: `${pathName}#${category}`, text: category}});
    return (

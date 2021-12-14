@@ -138,12 +138,8 @@ const menuSectionSchema: TinaField = {
 
 const menuSchema: TinaField = {
   type: "object",
-  label: 'Menus',
-  name: 'menus',
-  ui: {
-    component: "groupList",
-  },
-  list: true,
+  label: 'Menu',
+  name: 'menu',
   fields: [
     {
       type: "string",
@@ -240,11 +236,28 @@ export default defineSchema({
       ],
     },
     {
-      label: "Menu Collection",
-      name: "menuCollection",
+      label: "Menu",
+      name: "menu",
       path: "content/menus",
+      format: "json",
       fields: [
-        menuSchema,
+          {
+            type: "string",
+            label: "Name of Menu",
+            name: "name",
+            required: true,
+          },
+          {
+            type: "string",
+            label: "Description",
+            name: "description",
+          },
+          {
+            type: "boolean",
+            label: "Available",
+            name: "available",
+          },
+          menuSectionSchema,
       ],
     },
     {

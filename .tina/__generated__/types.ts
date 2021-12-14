@@ -69,8 +69,8 @@ export type Query = {
   getDocumentFields: Scalars['JSON'];
   getBusinessInfoDocument: BusinessInfoDocument;
   getBusinessInfoList: BusinessInfoConnection;
-  getMenuCollectionDocument: MenuCollectionDocument;
-  getMenuCollectionList: MenuCollectionConnection;
+  getMenuDocument: MenuDocument;
+  getMenuList: MenuConnection;
   getPostsDocument: PostsDocument;
   getPostsList: PostsConnection;
 };
@@ -113,12 +113,12 @@ export type QueryGetBusinessInfoListArgs = {
 };
 
 
-export type QueryGetMenuCollectionDocumentArgs = {
+export type QueryGetMenuDocumentArgs = {
   relativePath?: InputMaybe<Scalars['String']>;
 };
 
 
-export type QueryGetMenuCollectionListArgs = {
+export type QueryGetMenuListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -172,7 +172,7 @@ export type CollectionDocumentsArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
-export type DocumentNode = BusinessInfoDocument | MenuCollectionDocument | PostsDocument;
+export type DocumentNode = BusinessInfoDocument | MenuDocument | PostsDocument;
 
 export type BusinessInfoAddress = {
   __typename?: 'BusinessInfoAddress';
@@ -224,69 +224,64 @@ export type BusinessInfoConnection = Connection & {
   edges?: Maybe<Array<Maybe<BusinessInfoConnectionEdges>>>;
 };
 
-export type MenuCollectionMenusSectionsItemsModifiers = {
-  __typename?: 'MenuCollectionMenusSectionsItemsModifiers';
+export type MenuSectionsItemsModifiers = {
+  __typename?: 'MenuSectionsItemsModifiers';
   name?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['Int']>;
 };
 
-export type MenuCollectionMenusSectionsItemsImages = {
-  __typename?: 'MenuCollectionMenusSectionsItemsImages';
+export type MenuSectionsItemsImages = {
+  __typename?: 'MenuSectionsItemsImages';
   name: Scalars['String'];
   src: Scalars['String'];
 };
 
-export type MenuCollectionMenusSectionsItems = {
-  __typename?: 'MenuCollectionMenusSectionsItems';
+export type MenuSectionsItems = {
+  __typename?: 'MenuSectionsItems';
   name: Scalars['String'];
   description?: Maybe<Scalars['String']>;
   price?: Maybe<Scalars['Int']>;
   dietary?: Maybe<Array<Maybe<Scalars['String']>>>;
-  modifiers?: Maybe<Array<Maybe<MenuCollectionMenusSectionsItemsModifiers>>>;
+  modifiers?: Maybe<Array<Maybe<MenuSectionsItemsModifiers>>>;
   available?: Maybe<Scalars['Boolean']>;
-  images?: Maybe<Array<Maybe<MenuCollectionMenusSectionsItemsImages>>>;
+  images?: Maybe<Array<Maybe<MenuSectionsItemsImages>>>;
 };
 
-export type MenuCollectionMenusSections = {
-  __typename?: 'MenuCollectionMenusSections';
+export type MenuSections = {
+  __typename?: 'MenuSections';
   name: Scalars['String'];
-  items?: Maybe<Array<Maybe<MenuCollectionMenusSectionsItems>>>;
+  items?: Maybe<Array<Maybe<MenuSectionsItems>>>;
 };
 
-export type MenuCollectionMenus = {
-  __typename?: 'MenuCollectionMenus';
+export type Menu = {
+  __typename?: 'Menu';
   name: Scalars['String'];
   description?: Maybe<Scalars['String']>;
   available?: Maybe<Scalars['Boolean']>;
-  sections?: Maybe<Array<Maybe<MenuCollectionMenusSections>>>;
+  sections?: Maybe<Array<Maybe<MenuSections>>>;
 };
 
-export type MenuCollection = {
-  __typename?: 'MenuCollection';
-  menus?: Maybe<Array<Maybe<MenuCollectionMenus>>>;
-};
-
-export type MenuCollectionDocument = Node & Document & {
-  __typename?: 'MenuCollectionDocument';
+export type MenuDocument = Node & Document & {
+  __typename?: 'MenuDocument';
   id: Scalars['ID'];
   sys: SystemInfo;
-  data: MenuCollection;
+  data: Menu;
   form: Scalars['JSON'];
   values: Scalars['JSON'];
   dataJSON: Scalars['JSON'];
 };
 
-export type MenuCollectionConnectionEdges = {
-  __typename?: 'MenuCollectionConnectionEdges';
+export type MenuConnectionEdges = {
+  __typename?: 'MenuConnectionEdges';
   cursor?: Maybe<Scalars['String']>;
-  node?: Maybe<MenuCollectionDocument>;
+  node?: Maybe<MenuDocument>;
 };
 
-export type MenuCollectionConnection = Connection & {
-  __typename?: 'MenuCollectionConnection';
+export type MenuConnection = Connection & {
+  __typename?: 'MenuConnection';
   pageInfo?: Maybe<PageInfo>;
   totalCount: Scalars['Int'];
-  edges?: Maybe<Array<Maybe<MenuCollectionConnectionEdges>>>;
+  edges?: Maybe<Array<Maybe<MenuConnectionEdges>>>;
 };
 
 export type Posts = {
@@ -325,8 +320,8 @@ export type Mutation = {
   createDocument: DocumentNode;
   updateBusinessInfoDocument: BusinessInfoDocument;
   createBusinessInfoDocument: BusinessInfoDocument;
-  updateMenuCollectionDocument: MenuCollectionDocument;
-  createMenuCollectionDocument: MenuCollectionDocument;
+  updateMenuDocument: MenuDocument;
+  createMenuDocument: MenuDocument;
   updatePostsDocument: PostsDocument;
   createPostsDocument: PostsDocument;
 };
@@ -365,15 +360,15 @@ export type MutationCreateBusinessInfoDocumentArgs = {
 };
 
 
-export type MutationUpdateMenuCollectionDocumentArgs = {
+export type MutationUpdateMenuDocumentArgs = {
   relativePath: Scalars['String'];
-  params: MenuCollectionMutation;
+  params: MenuMutation;
 };
 
 
-export type MutationCreateMenuCollectionDocumentArgs = {
+export type MutationCreateMenuDocumentArgs = {
   relativePath: Scalars['String'];
-  params: MenuCollectionMutation;
+  params: MenuMutation;
 };
 
 
@@ -390,7 +385,7 @@ export type MutationCreatePostsDocumentArgs = {
 
 export type DocumentMutation = {
   businessInfo?: InputMaybe<BusinessInfoMutation>;
-  menuCollection?: InputMaybe<MenuCollectionMutation>;
+  menu?: InputMaybe<MenuMutation>;
   posts?: InputMaybe<PostsMutation>;
 };
 
@@ -418,40 +413,36 @@ export type BusinessInfoMutation = {
   hours?: InputMaybe<Array<InputMaybe<BusinessInfoHoursMutation>>>;
 };
 
-export type MenuCollectionMenusSectionsItemsModifiersMutation = {
+export type MenuSectionsItemsModifiersMutation = {
   name?: InputMaybe<Scalars['String']>;
   price?: InputMaybe<Scalars['Int']>;
 };
 
-export type MenuCollectionMenusSectionsItemsImagesMutation = {
+export type MenuSectionsItemsImagesMutation = {
   name?: InputMaybe<Scalars['String']>;
   src?: InputMaybe<Scalars['String']>;
 };
 
-export type MenuCollectionMenusSectionsItemsMutation = {
+export type MenuSectionsItemsMutation = {
   name?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
   price?: InputMaybe<Scalars['Int']>;
   dietary?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
-  modifiers?: InputMaybe<Array<InputMaybe<MenuCollectionMenusSectionsItemsModifiersMutation>>>;
+  modifiers?: InputMaybe<Array<InputMaybe<MenuSectionsItemsModifiersMutation>>>;
   available?: InputMaybe<Scalars['Boolean']>;
-  images?: InputMaybe<Array<InputMaybe<MenuCollectionMenusSectionsItemsImagesMutation>>>;
+  images?: InputMaybe<Array<InputMaybe<MenuSectionsItemsImagesMutation>>>;
 };
 
-export type MenuCollectionMenusSectionsMutation = {
+export type MenuSectionsMutation = {
   name?: InputMaybe<Scalars['String']>;
-  items?: InputMaybe<Array<InputMaybe<MenuCollectionMenusSectionsItemsMutation>>>;
+  items?: InputMaybe<Array<InputMaybe<MenuSectionsItemsMutation>>>;
 };
 
-export type MenuCollectionMenusMutation = {
+export type MenuMutation = {
   name?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
   available?: InputMaybe<Scalars['Boolean']>;
-  sections?: InputMaybe<Array<InputMaybe<MenuCollectionMenusSectionsMutation>>>;
-};
-
-export type MenuCollectionMutation = {
-  menus?: InputMaybe<Array<InputMaybe<MenuCollectionMenusMutation>>>;
+  sections?: InputMaybe<Array<InputMaybe<MenuSectionsMutation>>>;
 };
 
 export type PostsMutation = {
@@ -461,7 +452,7 @@ export type PostsMutation = {
 
 export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined };
 
-export type MenuCollectionPartsFragment = { __typename?: 'MenuCollection', menus?: Array<{ __typename: 'MenuCollectionMenus', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuCollectionMenusSections', name: string, items?: Array<{ __typename: 'MenuCollectionMenusSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsImages', name: string, src: string } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
+export type MenuPartsFragment = { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', name: string, src: string } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined };
 
@@ -477,17 +468,17 @@ export type GetBusinessInfoListQueryVariables = Exact<{ [key: string]: never; }>
 
 export type GetBusinessInfoListQuery = { __typename?: 'Query', getBusinessInfoList: { __typename?: 'BusinessInfoConnection', totalCount: number, edges?: Array<{ __typename?: 'BusinessInfoConnectionEdges', node?: { __typename?: 'BusinessInfoDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
-export type GetMenuCollectionDocumentQueryVariables = Exact<{
+export type GetMenuDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type GetMenuCollectionDocumentQuery = { __typename?: 'Query', getMenuCollectionDocument: { __typename?: 'MenuCollectionDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'MenuCollection', menus?: Array<{ __typename: 'MenuCollectionMenus', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuCollectionMenusSections', name: string, items?: Array<{ __typename: 'MenuCollectionMenusSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsImages', name: string, src: string } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } };
+export type GetMenuDocumentQuery = { __typename?: 'Query', getMenuDocument: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', name: string, src: string } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } };
 
-export type GetMenuCollectionListQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetMenuListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMenuCollectionListQuery = { __typename?: 'Query', getMenuCollectionList: { __typename?: 'MenuCollectionConnection', totalCount: number, edges?: Array<{ __typename?: 'MenuCollectionConnectionEdges', node?: { __typename?: 'MenuCollectionDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'MenuCollection', menus?: Array<{ __typename: 'MenuCollectionMenus', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuCollectionMenusSections', name: string, items?: Array<{ __typename: 'MenuCollectionMenusSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuCollectionMenusSectionsItemsImages', name: string, src: string } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetMenuListQuery = { __typename?: 'Query', getMenuList: { __typename?: 'MenuConnection', totalCount: number, edges?: Array<{ __typename?: 'MenuConnectionEdges', node?: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', name: string, src: string } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetPostsDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -524,33 +515,30 @@ export const BusinessInfoPartsFragmentDoc = gql`
   }
 }
     `;
-export const MenuCollectionPartsFragmentDoc = gql`
-    fragment MenuCollectionParts on MenuCollection {
-  menus {
+export const MenuPartsFragmentDoc = gql`
+    fragment MenuParts on Menu {
+  name
+  description
+  available
+  sections {
     __typename
     name
-    description
-    available
-    sections {
+    items {
       __typename
       name
-      items {
+      description
+      price
+      dietary
+      modifiers {
         __typename
         name
-        description
         price
-        dietary
-        modifiers {
-          __typename
-          name
-          price
-        }
-        available
-        images {
-          __typename
-          name
-          src
-        }
+      }
+      available
+      images {
+        __typename
+        name
+        src
       }
     }
   }
@@ -603,9 +591,9 @@ export const GetBusinessInfoListDocument = gql`
   }
 }
     ${BusinessInfoPartsFragmentDoc}`;
-export const GetMenuCollectionDocumentDocument = gql`
-    query getMenuCollectionDocument($relativePath: String!) {
-  getMenuCollectionDocument(relativePath: $relativePath) {
+export const GetMenuDocumentDocument = gql`
+    query getMenuDocument($relativePath: String!) {
+  getMenuDocument(relativePath: $relativePath) {
     sys {
       filename
       basename
@@ -616,14 +604,14 @@ export const GetMenuCollectionDocumentDocument = gql`
     }
     id
     data {
-      ...MenuCollectionParts
+      ...MenuParts
     }
   }
 }
-    ${MenuCollectionPartsFragmentDoc}`;
-export const GetMenuCollectionListDocument = gql`
-    query getMenuCollectionList {
-  getMenuCollectionList {
+    ${MenuPartsFragmentDoc}`;
+export const GetMenuListDocument = gql`
+    query getMenuList {
+  getMenuList {
     totalCount
     edges {
       node {
@@ -637,13 +625,13 @@ export const GetMenuCollectionListDocument = gql`
           extension
         }
         data {
-          ...MenuCollectionParts
+          ...MenuParts
         }
       }
     }
   }
 }
-    ${MenuCollectionPartsFragmentDoc}`;
+    ${MenuPartsFragmentDoc}`;
 export const GetPostsDocumentDocument = gql`
     query getPostsDocument($relativePath: String!) {
   getPostsDocument(relativePath: $relativePath) {
@@ -694,11 +682,11 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
     getBusinessInfoList(variables?: GetBusinessInfoListQueryVariables, options?: C): Promise<{data: GetBusinessInfoListQuery, variables: GetBusinessInfoListQueryVariables, query: string}> {
         return requester<{data: GetBusinessInfoListQuery, variables: GetBusinessInfoListQueryVariables, query: string}, GetBusinessInfoListQueryVariables>(GetBusinessInfoListDocument, variables, options);
       },
-    getMenuCollectionDocument(variables: GetMenuCollectionDocumentQueryVariables, options?: C): Promise<{data: GetMenuCollectionDocumentQuery, variables: GetMenuCollectionDocumentQueryVariables, query: string}> {
-        return requester<{data: GetMenuCollectionDocumentQuery, variables: GetMenuCollectionDocumentQueryVariables, query: string}, GetMenuCollectionDocumentQueryVariables>(GetMenuCollectionDocumentDocument, variables, options);
+    getMenuDocument(variables: GetMenuDocumentQueryVariables, options?: C): Promise<{data: GetMenuDocumentQuery, variables: GetMenuDocumentQueryVariables, query: string}> {
+        return requester<{data: GetMenuDocumentQuery, variables: GetMenuDocumentQueryVariables, query: string}, GetMenuDocumentQueryVariables>(GetMenuDocumentDocument, variables, options);
       },
-    getMenuCollectionList(variables?: GetMenuCollectionListQueryVariables, options?: C): Promise<{data: GetMenuCollectionListQuery, variables: GetMenuCollectionListQueryVariables, query: string}> {
-        return requester<{data: GetMenuCollectionListQuery, variables: GetMenuCollectionListQueryVariables, query: string}, GetMenuCollectionListQueryVariables>(GetMenuCollectionListDocument, variables, options);
+    getMenuList(variables?: GetMenuListQueryVariables, options?: C): Promise<{data: GetMenuListQuery, variables: GetMenuListQueryVariables, query: string}> {
+        return requester<{data: GetMenuListQuery, variables: GetMenuListQueryVariables, query: string}, GetMenuListQueryVariables>(GetMenuListDocument, variables, options);
       },
     getPostsDocument(variables: GetPostsDocumentQueryVariables, options?: C): Promise<{data: GetPostsDocumentQuery, variables: GetPostsDocumentQueryVariables, query: string}> {
         return requester<{data: GetPostsDocumentQuery, variables: GetPostsDocumentQueryVariables, query: string}, GetPostsDocumentQueryVariables>(GetPostsDocumentDocument, variables, options);

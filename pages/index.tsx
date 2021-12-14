@@ -1,30 +1,18 @@
 import { getStaticPropsForTina, gql } from 'tinacms';
 import Home from '../components/Home';
-import { getMenusQueryFragment } from './menu';
+import { getMenuQueryFragment } from './menu';
 
 export default function HomePage(props) {
-  if (props.data && props.data.getMenuCollectionDocument) {
-    const { menus } = props.data.getMenuCollectionDocument.data;
+  if (props.data && props.data.getMenuDocument) {
+    const menu = props.data.getMenuDocument.data;
     return (
       <>
-        <Home menus={menus} />
+        <Home menu={menu} />
       </>
     );
   }
   return <div>Loading...</div>;
 }
-
-// export const getBusinessHoursQueryFragment = `
-//   getBusinessHoursDocument(relativePath: "hours.json") {
-//           data {
-//             name
-//             hours {
-//               day
-//               hours
-//             }
-//           }
-//         }
-// `;
 
 export const getBusinessInfoQueryFragment = `
   getBusinessInfoDocument(relativePath: "businessInfo.json"){
@@ -41,12 +29,12 @@ export const getBusinessInfoQueryFragment = `
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query MenuQuery($relativePath: String!) {
-        ${getMenusQueryFragment}
+      query MenuQuery{
+        ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
       }
     `,
-    variables: { relativePath: `menus.json`, hoursPath: 'hours.json' }
+    variables: {}
   });
   return {
     props: {

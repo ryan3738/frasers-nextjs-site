@@ -5,44 +5,42 @@ import Layout from '../components/Layout';
 import Menu from '../components/Menu/MenuPage';
 
 export default function MenuPage(props) {
-  if (props.data && props.data.getMenuCollectionDocument) {
-    const { menus } = props.data.getMenuCollectionDocument.data;
+  if (props.data && props.data.getMenuDocument) {
+    const menu = props.data.getMenuDocument.data;
     return (
       <Layout>
         <Head>
           <title>MENU</title>
         </Head>
-        <Menu menus={menus} />
+        <Menu menu={menu} />
       </Layout>
     );
   }
   return <div>Loading...</div>;
 }
 
-export const getMenusQueryFragment = `
-  getMenuCollectionDocument(relativePath: $relativePath) {
+export const getMenuQueryFragment = `
+  getMenuDocument(relativePath: "dinnerMenu.json") {
           data {
-            menus {
+            name
+            description
+            sections {
               name
-              description
-              sections {
+              items {
                 name
-                items {
+                description
+                price
+                dietary
+                modifiers {
                   name
-                  description
                   price
-                  dietary
-                  modifiers {
-                    name
-                    price
-                  }
-                  images {
-                    name
-                    src
-                  }
-                  dietary
-                  available
                 }
+                images {
+                  name
+                  src
+                }
+                dietary
+                available
               }
             }
           }
@@ -52,11 +50,11 @@ export const getMenusQueryFragment = `
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query MenuQuery($relativePath: String!) {
-        ${getMenusQueryFragment}
+      query MenuQuery {
+        ${getMenuQueryFragment}
       }
     `,
-    variables: { relativePath: `menus.json` }
+    variables: {}
   });
   return {
     props: {
