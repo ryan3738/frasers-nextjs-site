@@ -237,6 +237,6 @@ export default function Layout({ children, home, businessInfo }: LayoutProps) {
         }
       `}</style>
     </div>
-            </NavBar>
+  </NavBar>
   );
 }

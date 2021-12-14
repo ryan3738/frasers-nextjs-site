@@ -1,0 +1,116 @@
+query getBusinessInfoDocument($relativePath: String!) {
+  getBusinessInfoDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...BusinessInfoParts
+    }
+  }
+}
+
+query getBusinessInfoList {
+  getBusinessInfoList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...BusinessInfoParts
+        }
+      }
+    }
+  }
+}
+
+query getMenuDocument($relativePath: String!) {
+  getMenuDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...MenuParts
+    }
+  }
+}
+
+query getMenuList {
+  getMenuList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...MenuParts
+        }
+      }
+    }
+  }
+}
+
+query getPostsDocument($relativePath: String!) {
+  getPostsDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...PostsParts
+    }
+  }
+}
+
+query getPostsList {
+  getPostsList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...PostsParts
+        }
+      }
+    }
+  }
+}
