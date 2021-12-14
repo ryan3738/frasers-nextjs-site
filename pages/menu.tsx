@@ -12,16 +12,7 @@ export default function MenuPage(props) {
         <Head>
           <title>MENU</title>
         </Head>
-        <section className="menu-container">
-          <Menu menus={menus} />
-        </section>
-        <style jsx>{`
-          .menu-container {
-            width: 100vw;
-            max-width: 1200px;
-            place-self: center;
-          }
-        `}</style>
+        <Menu menus={menus} />
       </Layout>
     );
   }
