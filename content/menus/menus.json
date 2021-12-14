@@ -3,7 +3,7 @@
     {
       "name": "Dinner",
       "label": "dinner",
-      "description": "This is the main dinner menu",
+      "description": "This is the main dinner menu for Frasers.",
       "sections": [
         {
           "name": "Starters",

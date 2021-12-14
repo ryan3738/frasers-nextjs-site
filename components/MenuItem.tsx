@@ -1,82 +1,65 @@
-import menuData from '../public/data/menu-data.json';
+import { MenuCollectionMenusSectionsItems} from '../.tina/__generated__/types'
 
-const getMenuItem = ({ category }) => {
+interface MenuItemProps {
+  item: MenuCollectionMenusSectionsItems;
+}
+
+export default function MenuItem({ item }) {
+  // console.log("ITEM", item)
   return (
     <>
-      {menuData.menu
-        // .filter(item => item.category === category)
-        .filter(item => item.available === true)
-        .map(item => (
-          <div key={item.itemName} className="menu-item">
-            <h3 className="primary-color">{item.itemName}</h3>
-            {item.description ? (
-              <>
-                <div dangerouslySetInnerHTML={{ __html: item.description }} />
-                <br />
-              </>
-            ) : (
-              ''
-            )}
+      <div key={item.name} className="menu-item">
+        <h3 className="primary-color">{item.name}</h3>
+        {item.description ? (
+          <>
+            <div dangerouslySetInnerHTML={{ __html: item.description }} />
+            <br />
+          </>
+        ) : (
+          ''
+        )}
+        <div className="primary-color">{item.price}</div>
+        {item.modifiers ? (
+          item.modifiers.map(modifier => {
+            return (
+            <>
+              {modifier.name}&nbsp;
+              <span className="primary-color">{modifier.price}</span>
+              <br />
+            </>
+            )
+          })
+        ) : (
+          ''
+        )}
 
-            <div className="primary-color">{item.price}</div>
-            {item.modifier ? (
-              <>
-                {item.modifier}&nbsp;
-                <span className="primary-color">{item.modifierPrice}</span>
-                <br />
-              </>
-            ) : (
-              ''
-            )}
-
-            {item.dietaryPreferences ? (
-              <>
-                <br />
-                <div className="dietary-preferences">
-                  {item.dietaryPreferences}
-                </div>
-              </>
-            ) : (
-              ''
-            )}
-            <style jsx>{`
-              .menu-item {
-                text-align: left;
-                border-color: var(--primary-color-desaturated);
-                border-radius: 7px;
-                padding: 5%;
-                background: var(--surface-color);
-                border-color: var(--primary-color-desaturated);
-              }
-              .primary-color {
-                color: var(--primary-color-desaturated);
-              }
-              .dietary-preferences {
-                font-size: 0.78405rem;
-                line-height: 1.1;
-                text-transform: uppercase;
-              }
-            `}</style>
-          </div>
-        ))}
-    </>
-  );
-};
-
-export default function MenuItem({ category }) {
-  return (
-    <>
-      <div className="menu-section">{getMenuItem(category)}</div>
-      <style jsx>
-        {`
-          .menu-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-            grid-gap: 5px;
+        {item.dietary ? (
+          <>
+            <br />
+            <div className="dietary-preferences">{item.dietary}</div>
+          </>
+        ) : (
+          ''
+        )}
+        <style jsx>{`
+          .menu-item {
+            text-align: left;
+            border-color: var(--primary-color-desaturated);
+            border-radius: 7px;
             padding: 5%;
+            background: var(--surface-color);
+            border-color: var(--primary-color-desaturated);
           }
-        `}
-      </style>
+          .primary-color {
+            color: var(--primary-color-desaturated);
+          }
+          .dietary-preferences {
+            font-size: 0.78405rem;
+            line-height: 1.1;
+            text-transform: uppercase;
+          }
+        `}</style>
+      </div>
     </>
   );
 }

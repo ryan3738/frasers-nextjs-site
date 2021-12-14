@@ -1,21 +1,24 @@
 import MenuItem from './MenuItem';
-import { MenuCollectionMenus } from '../.tina/__generated__/types';
+import { MenuCollectionMenusSections } from '../.tina/__generated__/types';
 
 interface MenuSectionProps {
   category: string;
-  section: any
+  section: MenuCollectionMenusSections;
 }
 
 export default function MenuSection({ section,
   category
 }: MenuSectionProps): JSX.Element {
-  console.log("A Menu Section", section)
   return (
     <div id={category} className="menu-container">
       <h2 className="menu-header">{section.name}</h2>
       <div className="line" />
       <div className="menu-section">
-      <MenuItem category={category} />
+      {
+          section.items.filter(item => item.available === true).map(
+            item => <MenuItem key={item.name} item={item}  />
+          )
+      }
       </div>
       <style jsx>{`
         .menu-header {
