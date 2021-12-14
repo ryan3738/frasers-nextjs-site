@@ -4,9 +4,9 @@ import { getStaticPropsForTina, gql } from 'tinacms';
 import Layout from '../components/Layout';
 import Menu from '../components/MenuPage';
 
-export default function MenuPage(properties) {
-  if (properties.data && properties.data.getMenuCollectionDocument) {
-    const { menus } = properties.data.getMenuCollectionDocument.data;
+export default function MenuPage(props) {
+  if (props.data && props.data.getMenuCollectionDocument) {
+    const { menus } = props.data.getMenuCollectionDocument.data;
     return (
       <Layout>
         <Head>
@@ -58,7 +58,7 @@ export const getMenusQueryFragment = `
         }
 `;
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
       query MenuQuery($relativePath: String!) {
