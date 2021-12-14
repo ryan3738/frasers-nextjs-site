@@ -1,20 +1,21 @@
 import MenuSection from "./MenuSection"
 import NavBar from "./NavBar"
 
-
-
-
 interface MenuProps {
     categories: string[];
     pathName: string;
+    menus: any;
 }
 
-const Menu = ({ categories, pathName }:MenuProps) => {
+const Menu = ({ menus, categories, pathName }:MenuProps) => {
+    const menu = menus.find(menu => menu.name === 'Dinner');
     const links = categories.map(category => {
         return { href: `${pathName}#${category}`, text: category}});
    return (
         <>
-            {categories.map((category) => <MenuSection key={category} category={category}/>)}
+            {categories.map((category) =>{
+                const section = menu.sections.find(section => section.name === category);
+                return<MenuSection section={section} key={category} category={category}/>})}
             <NavBar showHomeLink={false} links={links} position='sticky' location='bottom' />
         </>
        )

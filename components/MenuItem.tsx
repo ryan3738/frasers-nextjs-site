@@ -1,44 +1,39 @@
 import menuData from '../public/data/menu-data.json';
-import menuCollection from '../content/menus/menus.json';
 
 const getMenuItem = ({ category }) => {
-  console.log(
-    'NEW MENU',
-    menuCollection.menus.map(menu => menu.name)
-  );
   return (
     <>
       {menuData.menu
-        .filter(item => item.category === category)
+        // .filter(item => item.category === category)
         .filter(item => item.available === true)
-        .map(data => (
-          <div key={data.itemName} className="menu-item">
-            <h3 className="primary-color">{data.itemName}</h3>
-            {data.description ? (
+        .map(item => (
+          <div key={item.itemName} className="menu-item">
+            <h3 className="primary-color">{item.itemName}</h3>
+            {item.description ? (
               <>
-                <div dangerouslySetInnerHTML={{ __html: data.description }} />
+                <div dangerouslySetInnerHTML={{ __html: item.description }} />
                 <br />
               </>
             ) : (
               ''
             )}
 
-            <div className="primary-color">{data.price}</div>
-            {data.modifier ? (
+            <div className="primary-color">{item.price}</div>
+            {item.modifier ? (
               <>
-                {data.modifier}&nbsp;
-                <span className="primary-color">{data.modifierPrice}</span>
+                {item.modifier}&nbsp;
+                <span className="primary-color">{item.modifierPrice}</span>
                 <br />
               </>
             ) : (
               ''
             )}
 
-            {data.dietaryPreferences ? (
+            {item.dietaryPreferences ? (
               <>
                 <br />
                 <div className="dietary-preferences">
-                  {data.dietaryPreferences}
+                  {item.dietaryPreferences}
                 </div>
               </>
             ) : (
@@ -68,9 +63,9 @@ const getMenuItem = ({ category }) => {
   );
 };
 
-export default function MenuItem(category) {
+export default function MenuItem({ category }) {
   return (
-    <div>
+    <>
       <div className="menu-section">{getMenuItem(category)}</div>
       <style jsx>
         {`
@@ -82,6 +77,6 @@ export default function MenuItem(category) {
           }
         `}
       </style>
-    </div>
+    </>
   );
 }
