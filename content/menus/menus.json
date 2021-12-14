@@ -287,7 +287,21 @@
     },
     {
       "name": "New Years Eve",
-      "description": "This is the menu for new years eve 2021"
+      "description": "This is the menu for new years eve 2021",
+      "sections": [
+        {
+          "name": "First Course",
+          "items": [
+            {
+              "name": "Pork",
+              "description": "Some pork dish",
+              "dietary": [
+                "gluten-free"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
