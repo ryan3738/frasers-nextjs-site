@@ -3,7 +3,7 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
-      "businessHours",
+      "businessInfo",
       "menuCollection",
       "posts"
     ]
@@ -18,17 +18,35 @@
     "createDocument": "create",
     "updateDocument": "update"
   },
-  "BusinessHoursDocument": {
-    "type": "BusinessHoursDocument",
-    "resolveType": "collectionDocument",
-    "collection": "businessHours",
-    "createBusinessHoursDocument": "create",
-    "updateBusinessHoursDocument": "update"
+  "BusinessInfoHoursDocument": {
+    "type": "BusinessInfoHoursDocument",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
   },
-  "BusinessHoursConnection": {
-    "type": "BusinessHoursConnection",
+  "BusinessInfoDocument": {
+    "type": "BusinessInfoDocument",
+    "resolveType": "collectionDocument",
+    "collection": "businessInfo",
+    "createBusinessInfoDocument": "create",
+    "updateBusinessInfoDocument": "update"
+  },
+  "BusinessInfoConnection": {
+    "type": "BusinessInfoConnection",
     "resolveType": "collectionDocumentList",
-    "collection": "businessHours"
+    "collection": "businessInfo"
+  },
+  "HoursDocument": {
+    "type": "HoursDocument",
+    "resolveType": "collectionDocument",
+    "collection": "hours",
+    "createHoursDocument": "create",
+    "updateHoursDocument": "update"
+  },
+  "HoursConnection": {
+    "type": "HoursConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "hours"
   },
   "MenuCollectionDocument": {
     "type": "MenuCollectionDocument",
@@ -53,5 +71,12 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "BusinessInfoHoursConnection": {
+    "type": "BusinessInfoHoursConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "hours"
+    ]
   }
 }

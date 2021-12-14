@@ -1,5 +1,5 @@
-query getBusinessHoursDocument($relativePath: String!) {
-  getBusinessHoursDocument(relativePath: $relativePath) {
+query getBusinessInfoDocument($relativePath: String!) {
+  getBusinessInfoDocument(relativePath: $relativePath) {
     sys {
       filename
       basename
@@ -10,13 +10,13 @@ query getBusinessHoursDocument($relativePath: String!) {
     }
     id
     data {
-      ...BusinessHoursParts
+      ...BusinessInfoParts
     }
   }
 }
 
-query getBusinessHoursList {
-  getBusinessHoursList {
+query getBusinessInfoList {
+  getBusinessInfoList {
     totalCount
     edges {
       node {
@@ -30,7 +30,7 @@ query getBusinessHoursList {
           extension
         }
         data {
-          ...BusinessHoursParts
+          ...BusinessInfoParts
         }
       }
     }

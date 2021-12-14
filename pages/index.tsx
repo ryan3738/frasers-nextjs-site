@@ -14,24 +14,36 @@ export default function HomePage(props) {
   return <div>Loading...</div>;
 }
 
-export const getBusinessHoursQueryFragment = `
-  getBusinessHoursDocument(relativePath: "hours.json") {
-          data {
-            name
-            hours {
-              day
-              hours
-            }
-          }
-        }
+// export const getBusinessHoursQueryFragment = `
+//   getBusinessHoursDocument(relativePath: "hours.json") {
+//           data {
+//             name
+//             hours {
+//               day
+//               hours
+//             }
+//           }
+//         }
+// `;
+
+export const getBusinessInfoQueryFragment = `
+  getBusinessInfoDocument(relativePath: "businessInfo.json"){
+    data {
+      name
+      phoneNumber
+      address {
+        name
+      }
+    }
+  }
 `;
 
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
       query MenuQuery($relativePath: String!) {
-        ${getBusinessHoursQueryFragment}
         ${getMenusQueryFragment}
+        ${getBusinessInfoQueryFragment}
       }
     `,
     variables: { relativePath: `menus.json`, hoursPath: 'hours.json' }

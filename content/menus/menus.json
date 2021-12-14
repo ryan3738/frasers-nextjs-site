@@ -2,7 +2,6 @@
   "menus": [
     {
       "name": "Dinner",
-      "label": "dinner",
       "description": "This is the main dinner menu for Frasers.",
       "sections": [
         {
@@ -13,8 +12,8 @@
               "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
               "price": 16,
               "dietary": [
-                "gluten-free",
-                "vegetarian"
+                "vegetarian",
+                "gluten-free"
               ],
               "available": true
             },

@@ -1,23 +1,136 @@
 {
   "collections": [
     {
-      "label": "Business Hours",
-      "name": "businessHours",
+      "label": "Business Info",
+      "name": "businessInfo",
       "path": "content/info",
       "fields": [
         {
           "type": "string",
-          "label": "Name",
+          "label": "Business Name",
           "name": "name",
           "namespace": [
-            "businessHours",
+            "businessInfo",
             "name"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Phone Number",
+          "name": "phoneNumber",
+          "namespace": [
+            "businessInfo",
+            "phoneNumber"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Email",
+          "name": "email",
+          "namespace": [
+            "businessInfo",
+            "email"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Address",
+          "name": "address",
+          "fields": [
+            {
+              "type": "string",
+              "label": "Name",
+              "name": "name",
+              "required": true,
+              "namespace": [
+                "businessInfo",
+                "address",
+                "name"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "description"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Street",
+              "name": "street",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "street"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "street2",
+              "name": "street2",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "street2"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "City",
+              "name": "city",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "city"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "State",
+              "name": "region",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "region"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Zip",
+              "name": "zip",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "zip"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Directions URL",
+              "name": "directions",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "directions"
+              ]
+            }
+          ],
+          "namespace": [
+            "businessInfo",
+            "address"
           ]
         },
         {
           "type": "object",
           "label": "Hours",
           "name": "hours",
+          "ui": {
+            "component": "groupList"
+          },
           "list": true,
           "fields": [
             {
@@ -25,7 +138,7 @@
               "name": "day",
               "label": "Day",
               "namespace": [
-                "businessHours",
+                "businessInfo",
                 "hours",
                 "day"
               ]
@@ -35,20 +148,20 @@
               "name": "hours",
               "label": "Hours",
               "namespace": [
-                "businessHours",
+                "businessInfo",
                 "hours",
                 "hours"
               ]
             }
           ],
           "namespace": [
-            "businessHours",
+            "businessInfo",
             "hours"
           ]
         }
       ],
       "namespace": [
-        "businessHours"
+        "businessInfo"
       ]
     },
     {
@@ -69,20 +182,11 @@
               "type": "string",
               "label": "Name of Menu",
               "name": "name",
+              "required": true,
               "namespace": [
                 "menuCollection",
                 "menus",
                 "name"
-              ]
-            },
-            {
-              "type": "string",
-              "label": "Label",
-              "name": "label",
-              "namespace": [
-                "menuCollection",
-                "menus",
-                "label"
               ]
             },
             {
@@ -108,6 +212,7 @@
                   "type": "string",
                   "label": "Name",
                   "name": "name",
+                  "required": true,
                   "namespace": [
                     "menuCollection",
                     "menus",
@@ -128,6 +233,7 @@
                       "type": "string",
                       "label": "Name",
                       "name": "name",
+                      "required": true,
                       "namespace": [
                         "menuCollection",
                         "menus",

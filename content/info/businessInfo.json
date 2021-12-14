@@ -1,0 +1,34 @@
+{
+  "name": "Frasers",
+  "phoneNumber": "360-279-1231",
+  "address": {
+    "name": "Frasers",
+    "description": "Address for frasers restaurant"
+  },
+  "hours": [
+    {
+      "day": "DEC 24-27",
+      "hours": "Closed"
+    },
+    {
+      "day": "New Year's Eve",
+      "hours": "OPEN"
+    },
+    {
+      "day": "Tue - Sat",
+      "hours": "OPEN AT 4:30"
+    },
+    {
+      "day": "TUE - THURS",
+      "hours": "LAST SEATING AT 7:30"
+    },
+    {
+      "day": "FRI - SAT",
+      "hours": "LAST SEATING AT 8:00"
+    },
+    {
+      "day": "SUN - MON",
+      "hours": "CLOSED"
+    }
+  ]
+}
