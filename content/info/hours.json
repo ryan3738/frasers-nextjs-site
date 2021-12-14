@@ -2,8 +2,12 @@
   "name": "Frasers",
   "hours": [
     {
-      "day": "Monday",
-      "hours": "4pm to 8pm"
+      "day": "DEC 24-27",
+      "hours": "Closed"
+    },
+    {
+      "day": "New Year's Eve",
+      "hours": "OPEN"
     }
   ]
 }
