@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { getStaticPropsForTina, gql } from 'tinacms';
 import Layout from '../components/Layout';
-import Menu from '../components/MenuPage';
+import Menu from '../components/Menu/MenuPage';
 
 export default function MenuPage(props) {
   if (props.data && props.data.getMenuCollectionDocument) {
