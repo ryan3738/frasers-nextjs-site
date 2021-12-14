@@ -2,6 +2,11 @@ import Head from 'next/head';
 import styles from '../../styles/styles.module.css';
 import { Menu } from './Menu';
 import { useRouter } from 'next/router';
+import { Menu as MenuType } from '../../.tina/__generated__/types';
+
+interface MenuPageProps {
+  menu: MenuType;
+}
 
 export default function MenuPage({ menu }) {
   const { pathname } = useRouter();

@@ -1,9 +1,9 @@
 import MenuItem from './MenuItem';
-import { MenuCollectionMenusSections } from '../.tina/__generated__/types';
+import { MenuSections } from '../../.tina/__generated__/types';
 
 interface MenuSectionProps {
   category: string;
-  section: MenuCollectionMenusSections;
+  section: MenuSections;
 }
 
 export default function MenuSection({ section,

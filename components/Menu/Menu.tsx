@@ -1,10 +1,11 @@
 import MenuSection from "./MenuSection"
 import NavBar from "../NavBar"
+import { Menu } from '../../.tina/__generated__/types';
 
 interface MenuProps {
     categories: string[];
     pathName: string;
-    menu: any;
+    menu: Menu;
 }
 
 const Menu = ({ menu, categories, pathName }:MenuProps) => {

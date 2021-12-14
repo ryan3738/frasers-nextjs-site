@@ -3,10 +3,11 @@ import Head from 'next/head';
 import { getStaticPropsForTina, gql } from 'tinacms';
 import Layout from '../components/Layout';
 import Menu from '../components/Menu/MenuPage';
+import { Menu as MenuType } from '../.tina/__generated__/types';
 
 export default function MenuPage(props) {
   if (props.data && props.data.getMenuDocument) {
-    const menu = props.data.getMenuDocument.data;
+    const menu:MenuType = props.data.getMenuDocument.data;
     return (
       <Layout>
         <Head>
