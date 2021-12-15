@@ -66,7 +66,6 @@ export default function MenuItem({ item }) {
             line-height: 1.1;
             text-transform: uppercase;
           }
-
           .modifier {
             text-transform: uppercase;
           }
