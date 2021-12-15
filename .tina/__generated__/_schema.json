@@ -45,17 +45,18 @@
             },
             {
               "type": "string",
-              "label": "Size",
-              "name": "size",
+              "label": "Format",
+              "name": "format",
               "options": [
                 "small",
-                "medium",
-                "large"
+                "big",
+                "vertical",
+                "horizontal"
               ],
               "namespace": [
                 "galleryGrid",
                 "images",
-                "size"
+                "format"
               ]
             }
           ],

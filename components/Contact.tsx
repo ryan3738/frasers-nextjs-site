@@ -3,6 +3,7 @@ import Social from './Social';
 // import businessInfo from '../public/data/site-data.json';
 import NewsLetter from './NewsLetter';
 import { BusinessInfo } from '../.tina/__generated__/types';
+import Hours from './Hours';
 
 interface ContactProps {
   businessInfo: BusinessInfo;
@@ -38,21 +39,7 @@ export default function Contact({ businessInfo }: ContactProps) {
             </p>
           </div>
           <div>
-            <h2>HOURS</h2>
-
-            { businessInfo.hours && <div>
-              {businessInfo.hours.map(item => (
-                <div key={item.day}>
-                  <div>
-                    <strong>{item.day}</strong>
-                  </div>
-                  <div>
-                    <span className="medium-emphasis">{item.hours}</span>
-                  </div>
-                  <br />
-                </div>
-              ))}
-            </div>}
+            <Hours hours={businessInfo.hours} />
           </div>
         </div>
 

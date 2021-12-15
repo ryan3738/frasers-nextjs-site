@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { BusinessInfo } from '../.tina/__generated__/types';
-// import businessInfo from '../public/data/site-data.json';
-
+import Hours from './Hours';
 interface HeroProps {
   businessInfo?: BusinessInfo;
 }
@@ -51,23 +50,7 @@ export default function Hero({ businessInfo }: HeroProps) {
             <br />
             <br />
             <div>
-              {businessInfo.hours && <>
-              <h3>HOURS</h3>
-               <div>
-                {businessInfo.hours.map((item) => (
-                  <div key={item.day}>
-                    <div>
-                      <strong>{item.day}</strong>
-                    </div>
-                    <div>
-                      <span className="medium-emphasis">{item.hours}</span>
-                    </div>
-                    <br />
-                  </div>
-                ))}
-              </div>
-                </>
-              }
+              <Hours hours={businessInfo.hours} />
             </div>
           </div>
         </div>

@@ -19,6 +19,18 @@ export default function HomePage(props) {
   return <div>Loading...</div>;
 }
 
+export const getGalleryGridFragment = `
+  getGalleryGridDocument(relativePath: "galleryGrid.json"){
+    data {
+      images {
+      alt
+      image
+      format
+    }
+  }
+}
+`;
+
 export const getBusinessInfoQueryFragment = `
   getBusinessInfoDocument(relativePath: "businessInfo.json"){
     data {
@@ -47,6 +59,7 @@ export const getStaticProps = async () => {
       query MenuQuery{
         ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
+        ${getGalleryGridFragment}
       }
     `,
     variables: {}

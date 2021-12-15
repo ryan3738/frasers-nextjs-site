@@ -214,9 +214,9 @@ export default defineSchema({
             },
             {
               type: "string",
-              label: "Size",
-              name: "size",
-              options: ["small", "medium", "large"],
+              label: "Format",
+              name: "format",
+              options: ["small", "big", "vertical", "horizontal"],
             },
           ]
         }

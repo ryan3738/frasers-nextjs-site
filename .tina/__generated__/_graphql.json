@@ -1526,7 +1526,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "size"
+            "value": "format"
           },
           "arguments": [],
           "type": {
@@ -3930,7 +3930,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "size"
+            "value": "format"
           },
           "type": {
             "kind": "NamedType",
