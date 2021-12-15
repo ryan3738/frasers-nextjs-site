@@ -1,11 +1,7 @@
 import { MenuSectionsItems} from '../../.tina/__generated__/types'
-
+import * as Tooltip from '@radix-ui/react-tooltip'
 interface MenuItemProps {
   item: MenuSectionsItems;
-}
-
-const getDietaryPreferences = ({modifiers}) => {
-  return
 }
 
 export default function MenuItem({ item }) {
