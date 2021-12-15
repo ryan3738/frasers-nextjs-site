@@ -23,7 +23,7 @@ export default function Contact({ businessInfo }: ContactProps) {
                 {`${businessInfo.address.city}, ${businessInfo.address.region} ${businessInfo.address.zip}`}
                 <br />
                 <br />
-                <a href="tel:13602791231">{businessInfo.phoneNumber}</a>
+                <a href={`tel:${businessInfo.phoneNumber}`} title="Click to Get Directions">{businessInfo.phoneNumber}</a>
                 <br />
                 <br />
                 <b>

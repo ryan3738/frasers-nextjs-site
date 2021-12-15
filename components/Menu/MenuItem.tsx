@@ -21,7 +21,7 @@ export default function MenuItem({ item }) {
         ) : (
           ''
         )}
-        <div className="primary-color">{item.price}</div>
+        <div className="primary-color" aria-label="price">{item.price}</div>
         {item.modifiers ? (
           item.modifiers.map(modifier => {
             return (
