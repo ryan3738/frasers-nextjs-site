@@ -465,6 +465,36 @@
       ]
     },
     {
+      "label": "Double Feature",
+      "name": "doubleFeature",
+      "path": "content/doubleFeature",
+      "format": "mdx",
+      "fields": [
+        {
+          "type": "string",
+          "label": "Title",
+          "name": "title",
+          "required": true,
+          "namespace": [
+            "doubleFeature",
+            "title"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Subtitle",
+          "name": "subtitle",
+          "namespace": [
+            "doubleFeature",
+            "subtitle"
+          ]
+        }
+      ],
+      "namespace": [
+        "doubleFeature"
+      ]
+    },
+    {
       "label": "Blog Posts",
       "name": "posts",
       "path": "content/posts",

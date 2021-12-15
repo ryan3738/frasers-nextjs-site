@@ -115,6 +115,45 @@ query getMenuList {
   }
 }
 
+query getDoubleFeatureDocument($relativePath: String!) {
+  getDoubleFeatureDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...DoubleFeatureParts
+    }
+  }
+}
+
+query getDoubleFeatureList {
+  getDoubleFeatureList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...DoubleFeatureParts
+        }
+      }
+    }
+  }
+}
+
 query getPostsDocument($relativePath: String!) {
   getPostsDocument(relativePath: $relativePath) {
     sys {

@@ -1,6 +1,6 @@
 {
   "name": "Dinner",
-  "description": "This is the main dinner menu for Frasers.",
+  "description": "This is the main dinner menu for Frasers",
   "available": true,
   "sections": [
     {

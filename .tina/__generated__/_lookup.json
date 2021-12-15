@@ -6,6 +6,7 @@
       "galleryGrid",
       "businessInfo",
       "menu",
+      "doubleFeature",
       "posts"
     ]
   },
@@ -66,5 +67,17 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "DoubleFeatureDocument": {
+    "type": "DoubleFeatureDocument",
+    "resolveType": "collectionDocument",
+    "collection": "doubleFeature",
+    "createDoubleFeatureDocument": "create",
+    "updateDoubleFeatureDocument": "update"
+  },
+  "DoubleFeatureConnection": {
+    "type": "DoubleFeatureConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "doubleFeature"
   }
 }

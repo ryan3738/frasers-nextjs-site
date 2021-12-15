@@ -57,6 +57,11 @@ fragment MenuParts on Menu {
   }
 }
 
+fragment DoubleFeatureParts on DoubleFeature {
+  title
+  subtitle
+}
+
 fragment PostsParts on Posts {
   title
   body

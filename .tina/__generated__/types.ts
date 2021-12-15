@@ -73,6 +73,8 @@ export type Query = {
   getBusinessInfoList: BusinessInfoConnection;
   getMenuDocument: MenuDocument;
   getMenuList: MenuConnection;
+  getDoubleFeatureDocument: DoubleFeatureDocument;
+  getDoubleFeatureList: DoubleFeatureConnection;
   getPostsDocument: PostsDocument;
   getPostsList: PostsConnection;
 };
@@ -141,6 +143,19 @@ export type QueryGetMenuListArgs = {
 };
 
 
+export type QueryGetDoubleFeatureDocumentArgs = {
+  relativePath?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryGetDoubleFeatureListArgs = {
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type QueryGetPostsDocumentArgs = {
   relativePath?: InputMaybe<Scalars['String']>;
 };
@@ -187,7 +202,7 @@ export type CollectionDocumentsArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
-export type DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | PostsDocument;
+export type DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument;
 
 export type GalleryGridImages = {
   __typename?: 'GalleryGridImages';
@@ -334,6 +349,35 @@ export type MenuConnection = Connection & {
   edges?: Maybe<Array<Maybe<MenuConnectionEdges>>>;
 };
 
+export type DoubleFeature = {
+  __typename?: 'DoubleFeature';
+  title: Scalars['String'];
+  subtitle?: Maybe<Scalars['String']>;
+};
+
+export type DoubleFeatureDocument = Node & Document & {
+  __typename?: 'DoubleFeatureDocument';
+  id: Scalars['ID'];
+  sys: SystemInfo;
+  data: DoubleFeature;
+  form: Scalars['JSON'];
+  values: Scalars['JSON'];
+  dataJSON: Scalars['JSON'];
+};
+
+export type DoubleFeatureConnectionEdges = {
+  __typename?: 'DoubleFeatureConnectionEdges';
+  cursor?: Maybe<Scalars['String']>;
+  node?: Maybe<DoubleFeatureDocument>;
+};
+
+export type DoubleFeatureConnection = Connection & {
+  __typename?: 'DoubleFeatureConnection';
+  pageInfo?: Maybe<PageInfo>;
+  totalCount: Scalars['Int'];
+  edges?: Maybe<Array<Maybe<DoubleFeatureConnectionEdges>>>;
+};
+
 export type Posts = {
   __typename?: 'Posts';
   title?: Maybe<Scalars['String']>;
@@ -374,6 +418,8 @@ export type Mutation = {
   createBusinessInfoDocument: BusinessInfoDocument;
   updateMenuDocument: MenuDocument;
   createMenuDocument: MenuDocument;
+  updateDoubleFeatureDocument: DoubleFeatureDocument;
+  createDoubleFeatureDocument: DoubleFeatureDocument;
   updatePostsDocument: PostsDocument;
   createPostsDocument: PostsDocument;
 };
@@ -436,6 +482,18 @@ export type MutationCreateMenuDocumentArgs = {
 };
 
 
+export type MutationUpdateDoubleFeatureDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: DoubleFeatureMutation;
+};
+
+
+export type MutationCreateDoubleFeatureDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: DoubleFeatureMutation;
+};
+
+
 export type MutationUpdatePostsDocumentArgs = {
   relativePath: Scalars['String'];
   params: PostsMutation;
@@ -451,6 +509,7 @@ export type DocumentMutation = {
   galleryGrid?: InputMaybe<GalleryGridMutation>;
   businessInfo?: InputMaybe<BusinessInfoMutation>;
   menu?: InputMaybe<MenuMutation>;
+  doubleFeature?: InputMaybe<DoubleFeatureMutation>;
   posts?: InputMaybe<PostsMutation>;
 };
 
@@ -520,6 +579,11 @@ export type MenuMutation = {
   sections?: InputMaybe<Array<InputMaybe<MenuSectionsMutation>>>;
 };
 
+export type DoubleFeatureMutation = {
+  title?: InputMaybe<Scalars['String']>;
+  subtitle?: InputMaybe<Scalars['String']>;
+};
+
 export type PostsMutation = {
   title?: InputMaybe<Scalars['String']>;
   body?: InputMaybe<Scalars['String']>;
@@ -530,6 +594,8 @@ export type GalleryGridPartsFragment = { __typename?: 'GalleryGrid', images?: Ar
 export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined };
 
 export type MenuPartsFragment = { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
+
+export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title: string, subtitle?: string | null | undefined };
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined };
 
@@ -568,6 +634,18 @@ export type GetMenuListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type GetMenuListQuery = { __typename?: 'Query', getMenuList: { __typename?: 'MenuConnection', totalCount: number, edges?: Array<{ __typename?: 'MenuConnectionEdges', node?: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+
+export type GetDoubleFeatureDocumentQueryVariables = Exact<{
+  relativePath: Scalars['String'];
+}>;
+
+
+export type GetDoubleFeatureDocumentQuery = { __typename?: 'Query', getDoubleFeatureDocument: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title: string, subtitle?: string | null | undefined } } };
+
+export type GetDoubleFeatureListQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetDoubleFeatureListQuery = { __typename?: 'Query', getDoubleFeatureList: { __typename?: 'DoubleFeatureConnection', totalCount: number, edges?: Array<{ __typename?: 'DoubleFeatureConnectionEdges', node?: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title: string, subtitle?: string | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetPostsDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -641,6 +719,12 @@ export const MenuPartsFragmentDoc = gql`
       }
     }
   }
+}
+    `;
+export const DoubleFeaturePartsFragmentDoc = gql`
+    fragment DoubleFeatureParts on DoubleFeature {
+  title
+  subtitle
 }
     `;
 export const PostsPartsFragmentDoc = gql`
@@ -772,6 +856,47 @@ export const GetMenuListDocument = gql`
   }
 }
     ${MenuPartsFragmentDoc}`;
+export const GetDoubleFeatureDocumentDocument = gql`
+    query getDoubleFeatureDocument($relativePath: String!) {
+  getDoubleFeatureDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...DoubleFeatureParts
+    }
+  }
+}
+    ${DoubleFeaturePartsFragmentDoc}`;
+export const GetDoubleFeatureListDocument = gql`
+    query getDoubleFeatureList {
+  getDoubleFeatureList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...DoubleFeatureParts
+        }
+      }
+    }
+  }
+}
+    ${DoubleFeaturePartsFragmentDoc}`;
 export const GetPostsDocumentDocument = gql`
     query getPostsDocument($relativePath: String!) {
   getPostsDocument(relativePath: $relativePath) {
@@ -833,6 +958,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     getMenuList(variables?: GetMenuListQueryVariables, options?: C): Promise<{data: GetMenuListQuery, variables: GetMenuListQueryVariables, query: string}> {
         return requester<{data: GetMenuListQuery, variables: GetMenuListQueryVariables, query: string}, GetMenuListQueryVariables>(GetMenuListDocument, variables, options);
+      },
+    getDoubleFeatureDocument(variables: GetDoubleFeatureDocumentQueryVariables, options?: C): Promise<{data: GetDoubleFeatureDocumentQuery, variables: GetDoubleFeatureDocumentQueryVariables, query: string}> {
+        return requester<{data: GetDoubleFeatureDocumentQuery, variables: GetDoubleFeatureDocumentQueryVariables, query: string}, GetDoubleFeatureDocumentQueryVariables>(GetDoubleFeatureDocumentDocument, variables, options);
+      },
+    getDoubleFeatureList(variables?: GetDoubleFeatureListQueryVariables, options?: C): Promise<{data: GetDoubleFeatureListQuery, variables: GetDoubleFeatureListQueryVariables, query: string}> {
+        return requester<{data: GetDoubleFeatureListQuery, variables: GetDoubleFeatureListQueryVariables, query: string}, GetDoubleFeatureListQueryVariables>(GetDoubleFeatureListDocument, variables, options);
       },
     getPostsDocument(variables: GetPostsDocumentQueryVariables, options?: C): Promise<{data: GetPostsDocumentQuery, variables: GetPostsDocumentQueryVariables, query: string}> {
         return requester<{data: GetPostsDocumentQuery, variables: GetPostsDocumentQueryVariables, query: string}, GetPostsDocumentQueryVariables>(GetPostsDocumentDocument, variables, options);

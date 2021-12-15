@@ -36,7 +36,6 @@ export default function Home({ menu, businessInfo }: HomeProps) {
               subtitle="Special 5 Course Menu"
               imageSource="/images/gift-card-square.jpg"
               imageAlt="frasers gift card closeup"
-              imageLeft
             >
               <div>
                 <p>Please call for details!</p>

@@ -54,6 +54,8 @@ type Query {
   getBusinessInfoList(before: String, after: String, first: Int, last: Int): BusinessInfoConnection!
   getMenuDocument(relativePath: String): MenuDocument!
   getMenuList(before: String, after: String, first: Int, last: Int): MenuConnection!
+  getDoubleFeatureDocument(relativePath: String): DoubleFeatureDocument!
+  getDoubleFeatureList(before: String, after: String, first: Int, last: Int): DoubleFeatureConnection!
   getPostsDocument(relativePath: String): PostsDocument!
   getPostsList(before: String, after: String, first: Int, last: Int): PostsConnection!
 }
@@ -81,7 +83,7 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | PostsDocument
+union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument
 
 type GalleryGridImages {
   alt: String!
@@ -209,6 +211,31 @@ type MenuConnection implements Connection {
   edges: [MenuConnectionEdges]
 }
 
+type DoubleFeature {
+  title: String!
+  subtitle: String
+}
+
+type DoubleFeatureDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: DoubleFeature!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type DoubleFeatureConnectionEdges {
+  cursor: String
+  node: DoubleFeatureDocument
+}
+
+type DoubleFeatureConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [DoubleFeatureConnectionEdges]
+}
+
 type Posts {
   title: String
   body: String
@@ -244,6 +271,8 @@ type Mutation {
   createBusinessInfoDocument(relativePath: String!, params: BusinessInfoMutation!): BusinessInfoDocument!
   updateMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
   createMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
+  updateDoubleFeatureDocument(relativePath: String!, params: DoubleFeatureMutation!): DoubleFeatureDocument!
+  createDoubleFeatureDocument(relativePath: String!, params: DoubleFeatureMutation!): DoubleFeatureDocument!
   updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
   createPostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
 }
@@ -252,6 +281,7 @@ input DocumentMutation {
   galleryGrid: GalleryGridMutation
   businessInfo: BusinessInfoMutation
   menu: MenuMutation
+  doubleFeature: DoubleFeatureMutation
   posts: PostsMutation
 }
 
@@ -319,6 +349,11 @@ input MenuMutation {
   description: String
   available: Boolean
   sections: [MenuSectionsMutation]
+}
+
+input DoubleFeatureMutation {
+  title: String
+  subtitle: String
 }
 
 input PostsMutation {

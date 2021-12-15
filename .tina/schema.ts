@@ -272,6 +272,50 @@ export default defineSchema({
       ],
     },
     {
+      label: "Double Feature",
+      name: "doubleFeature",
+      path: "content/doubleFeature",
+      format: "mdx",
+      fields: [
+        {
+          type: "string",
+          label: "Title",
+          name: "title",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Subtitle",
+          name: "subtitle",
+        },
+        {
+          type: "image",
+          label: "Image",
+          name: "image",
+        },
+        {
+          type: "string",
+          label: "Image Alt Text",
+          name: "alt",
+        },
+        {
+          type: "string",
+          label: "Element ID",
+          name: "elemntId",
+        },
+        {
+          type: "string",
+          label: "Double Feature Body",
+          name: "body",
+          isBody: true,
+          ui: {
+            component: "textarea"
+          },
+        },
+
+      ]
+    },
+    {
       label: "Blog Posts",
       name: "posts",
       path: "content/posts",
