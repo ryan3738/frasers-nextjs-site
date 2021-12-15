@@ -56,8 +56,13 @@ export const getGalleryGridFragment = `
 export const getDoubleFeatureFragment = `
     getDoubleFeatureDocument(relativePath: "aboutBusiness.mdx"){
     data {
-
+      elemntId
+      title
       subtitle
+      image {
+        src
+        alt
+      }
       body
     }
   }
