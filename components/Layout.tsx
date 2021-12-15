@@ -5,10 +5,12 @@ import NavList from './NavList';
 import Script from 'next/script';
 import { useState } from 'react';
 import NavBar from './NavBar'
+import { BusinessInfo } from '../.tina/__generated__/types';
 
 interface LayoutProps {
   children: React.ReactNode;
   home?: boolean
+  businessInfo?: BusinessInfo;
 }
 
 export const meta = {
@@ -38,7 +40,6 @@ const navigationLinks = [
     text: 'Contact',
     href: '/#contact'
   }
-
 ]
 
 const theme = {
@@ -48,7 +49,7 @@ const theme = {
   largeScreen: '1008px'
 };
 
-export default function Layout({ children, home }: LayoutProps) {
+export default function Layout({ children, home, businessInfo }: LayoutProps) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
   return (
@@ -98,7 +99,7 @@ export default function Layout({ children, home }: LayoutProps) {
         {home ? (
           <>
             <div className="nav-spacer" />
-            <Hero />
+              <Hero businessInfo={businessInfo}  />
           </>
         ) : (
           <>
@@ -235,6 +236,6 @@ export default function Layout({ children, home }: LayoutProps) {
         }
       `}</style>
     </div>
-            </NavBar>
+  </NavBar>
   );
 }

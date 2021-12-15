@@ -1,10 +1,15 @@
 // import utilStyles from '../styles/utils.module.css'
 import Social from './Social';
-import Button from './Button';
-import siteData from '../public/data/site-data.json';
+// import businessInfo from '../public/data/site-data.json';
 import NewsLetter from './NewsLetter';
+import { BusinessInfo } from '../.tina/__generated__/types';
+import Hours from './Hours';
 
-export default function Contact() {
+interface ContactProps {
+  businessInfo: BusinessInfo;
+}
+
+export default function Contact({ businessInfo }: ContactProps) {
   return (
     <>
       <div className="contact-content">
@@ -13,17 +18,17 @@ export default function Contact() {
             <h2>LOCATION</h2>
             <p>
               <span className="medium-emphasis">
-                {`${siteData.address.street} ${siteData.address.street2}`}
+                {`${businessInfo.address.street} ${businessInfo.address.street2}`}
                 <br />
-                {`${siteData.address.city}, ${siteData.address.state} ${siteData.address.zipCode}`}
+                {`${businessInfo.address.city}, ${businessInfo.address.region} ${businessInfo.address.zip}`}
                 <br />
                 <br />
-                <a href="tel:13602791231">{siteData.phoneNumber}</a>
+                <a href="tel:13602791231">{businessInfo.phoneNumber}</a>
                 <br />
                 <br />
                 <b>
                   <a
-                    href={siteData.address.directions}
+                    href={businessInfo.address.directions}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -34,25 +39,12 @@ export default function Contact() {
             </p>
           </div>
           <div>
-            <h2>HOURS</h2>
-            <div>
-              {siteData.hoursSummary.map((item) => (
-                <div key={item.days}>
-                  <div>
-                    <strong>{item.days}</strong>
-                  </div>
-                  <div>
-                    <span className="medium-emphasis">{item.hours}</span>
-                  </div>
-                  <br />
-                </div>
-              ))}
-            </div>
+            <Hours hours={businessInfo.hours} />
           </div>
         </div>
 
         <div className="social-media-container">
-          <NewsLetter/>
+          <NewsLetter />
           <h3>For specials and event info follow us on social media</h3>
           <div className="social-media-contents">
             <Social

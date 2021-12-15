@@ -1,3 +1,4 @@
+// eslint-disable-next-line unicorn/prefer-module
 module.exports = {
   eslint: {
     // Warning: This allows production builds to successfully complete even if

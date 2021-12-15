@@ -1,0 +1,41 @@
+{
+  "name": "Frasers",
+  "phoneNumber": "360-279-1231",
+  "email": "frasersgh@comcast.net",
+  "address": {
+    "name": "Frasers",
+    "description": "Address for frasers restaurant",
+    "street": "1191 SE Dock St",
+    "street2": "#101",
+    "city": "Oak Harbor",
+    "region": "WA",
+    "zip": "98277",
+    "directions": "https://www.google.com/maps/dir//Frasers+Gourmet+Hideaway+1191+SE+Dock+St+STE+101,+Oak+Harbor,+WA+98277"
+  },
+  "hours": [
+    {
+      "day": "DEC 24-27",
+      "hours": "Closed"
+    },
+    {
+      "day": "New Year's Eve",
+      "hours": "OPEN"
+    },
+    {
+      "day": "Tue - Sat",
+      "hours": "OPEN AT 4:30"
+    },
+    {
+      "day": "TUE - THURS",
+      "hours": "LAST SEATING AT 7:30"
+    },
+    {
+      "day": "FRI - SAT",
+      "hours": "LAST SEATING AT 8:00"
+    },
+    {
+      "day": "SUN - MON",
+      "hours": "CLOSED"
+    }
+  ]
+}

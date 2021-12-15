@@ -4,18 +4,24 @@ import Layout, { meta } from './Layout';
 import Double from './Double';
 import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
-import Button from './Button';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
-import { Menu } from './Menu';
+import { Menu } from './Menu/Menu';
+import {Menu as MenuType, BusinessInfo} from '../.tina/__generated__/types';
 
-const {phoneNumber, aboutBusiness, aboutOwner } = siteData;
+const { aboutBusiness, aboutOwner } = siteData;
 
-export default function Home() {
+interface HomeProps {
+  menu: MenuType;
+  businessInfo: BusinessInfo;
+}
+
+export default function Home({ menu, businessInfo }: HomeProps) {
+  const { phoneNumber } = businessInfo;
   return (
     <>
-      <Layout home>
+      <Layout home businessInfo={businessInfo}>
         <Head>
           <title>{meta.title}</title>
         </Head>
@@ -30,12 +36,9 @@ export default function Home() {
               subtitle="Special 5 Course Menu"
               imageSource="/images/gift-card-square.jpg"
               imageAlt="frasers gift card closeup"
-              imageLeft
             >
               <div>
-                <p>
-                  Please call for details!
-                </p>
+                <p>Please call for details!</p>
                 <h3>Gift Cards Available</h3>
                 To purchase a gift card please call us at{' '}
                 <span className="nowrap">{phoneNumber}</span>
@@ -51,8 +54,8 @@ export default function Home() {
               <div>
                 <h3>Takeout Is Still Available</h3>
                 <p>
-                  Call {phoneNumber} during normal business hours to
-                  place an order
+                  Call {phoneNumber} during normal business hours to place an
+                  order
                 </p>
               </div>
               <br />
@@ -66,9 +69,7 @@ export default function Home() {
               imageSource={aboutBusiness.src}
               imageAlt={aboutBusiness.alt}
             >
-              <div>
-                {aboutBusiness.content}
-              </div>
+              <div>{aboutBusiness.content}</div>
             </Double>
             <Double
               title={aboutOwner.title}
@@ -90,7 +91,7 @@ export default function Home() {
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <Menu pathName='/' categories={['Starters', 'Entrees']} />
+          <Menu menu={menu} pathName="/" categories={['Starters', 'Entrees']} />
         </section>
         <section>
           <div className={styles.header}>
@@ -102,7 +103,7 @@ export default function Home() {
           <div className={`${styles.header} ${styles.hiddenHeader}`}>
             <h1>CONTACT</h1>
           </div>
-          <Contact />
+          <Contact businessInfo={businessInfo} />
         </section>
         <style jsx>{`
           .container {

@@ -1,3 +1,14 @@
 {
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+    },
+
+
 }
