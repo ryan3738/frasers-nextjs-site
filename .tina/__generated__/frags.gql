@@ -69,15 +69,6 @@ fragment DoubleFeatureParts on DoubleFeature {
   body
 }
 
-fragment DoubleFeaturesParts on DoubleFeatures {
-  name
-  doubleFeatures {
-    ... on Document {
-      id
-    }
-  }
-}
-
 fragment PostsParts on Posts {
   title
   body

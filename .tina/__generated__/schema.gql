@@ -56,8 +56,6 @@ type Query {
   getMenuList(before: String, after: String, first: Int, last: Int): MenuConnection!
   getDoubleFeatureDocument(relativePath: String): DoubleFeatureDocument!
   getDoubleFeatureList(before: String, after: String, first: Int, last: Int): DoubleFeatureConnection!
-  getDoubleFeaturesDocument(relativePath: String): DoubleFeaturesDocument!
-  getDoubleFeaturesList(before: String, after: String, first: Int, last: Int): DoubleFeaturesConnection!
   getPostsDocument(relativePath: String): PostsDocument!
   getPostsList(before: String, after: String, first: Int, last: Int): PostsConnection!
 }
@@ -85,7 +83,7 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | DoubleFeaturesDocument | PostsDocument
+union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument
 
 type GalleryGridImages {
   alt: String!
@@ -246,44 +244,6 @@ type DoubleFeatureConnection implements Connection {
   edges: [DoubleFeatureConnectionEdges]
 }
 
-union DoubleFeaturesDoubleFeaturesDocument = DoubleFeatureDocument
-
-type DoubleFeaturesDoubleFeaturesConnectionEdges {
-  cursor: String
-  node: DoubleFeaturesDoubleFeaturesDocument
-}
-
-type DoubleFeaturesDoubleFeaturesConnection implements Connection {
-  pageInfo: PageInfo
-  totalCount: Int!
-  edges: [DoubleFeaturesDoubleFeaturesConnectionEdges]
-}
-
-type DoubleFeatures {
-  name: String
-  doubleFeatures(before: String, after: String, first: Int, last: Int): DoubleFeaturesDoubleFeaturesConnection!
-}
-
-type DoubleFeaturesDocument implements Node & Document {
-  id: ID!
-  sys: SystemInfo!
-  data: DoubleFeatures!
-  form: JSON!
-  values: JSON!
-  dataJSON: JSON!
-}
-
-type DoubleFeaturesConnectionEdges {
-  cursor: String
-  node: DoubleFeaturesDocument
-}
-
-type DoubleFeaturesConnection implements Connection {
-  pageInfo: PageInfo
-  totalCount: Int!
-  edges: [DoubleFeaturesConnectionEdges]
-}
-
 type Posts {
   title: String
   body: String
@@ -321,8 +281,6 @@ type Mutation {
   createMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
   updateDoubleFeatureDocument(relativePath: String!, params: DoubleFeatureMutation!): DoubleFeatureDocument!
   createDoubleFeatureDocument(relativePath: String!, params: DoubleFeatureMutation!): DoubleFeatureDocument!
-  updateDoubleFeaturesDocument(relativePath: String!, params: DoubleFeaturesMutation!): DoubleFeaturesDocument!
-  createDoubleFeaturesDocument(relativePath: String!, params: DoubleFeaturesMutation!): DoubleFeaturesDocument!
   updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
   createPostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
 }
@@ -332,7 +290,6 @@ input DocumentMutation {
   businessInfo: BusinessInfoMutation
   menu: MenuMutation
   doubleFeature: DoubleFeatureMutation
-  doubleFeatures: DoubleFeaturesMutation
   posts: PostsMutation
 }
 
@@ -413,11 +370,6 @@ input DoubleFeatureMutation {
   image: DoubleFeatureImageMutation
   elemntId: String
   body: String
-}
-
-input DoubleFeaturesMutation {
-  name: String
-  doubleFeatures: [String]
 }
 
 input PostsMutation {

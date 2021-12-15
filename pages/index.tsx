@@ -72,12 +72,6 @@ export const getDoubleFeatureFragment = `
   }
 `;
 
-export const getDoubleFeaturesFragment = `
-    getDoubleFeaturesDocument(relativePath: "home.mdx") {
-      id
-  }
-`;
-
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`

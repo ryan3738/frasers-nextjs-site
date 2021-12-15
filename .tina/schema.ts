@@ -325,31 +325,6 @@ export default defineSchema({
       ]
     },
     {
-      label: "Double Features",
-      name: "doubleFeatures",
-      path: "content/doubleFeature",
-      format: "mdx",
-      fields: [
-        {
-          type: "string",
-          label: "Name",
-          name: "name",
-        },
-        {
-          type: "reference",
-          label: "Double Features",
-          name: "doubleFeatures",
-          ui: {
-            component: "groupList",
-          },
-          list: true,
-          collections: [
-            "doubleFeature",
-          ]
-        }
-      ]
-    },
-    {
       label: "Blog Posts",
       name: "posts",
       path: "content/posts",
