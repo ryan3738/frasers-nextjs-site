@@ -13,15 +13,20 @@ export default function Hours({ hours }: HoursProps) {
           {hours.map(item => (
             <div key={item.day}>
               <div>
-                <strong>{item.day}</strong>
+                <strong className="uppercase">{item.day}</strong>
               </div>
               <div>
-                <span className="medium-emphasis">{item.hours}</span>
+                <span className="medium-emphasis uppercase">{item.hours}</span>
               </div>
               <br />
             </div>
           ))}
         </div>
+        <style jsx>{`
+        .uppercase {
+          text-transform: uppercase;
+        }
+      `}</style>
       </>
     )};
 }
