@@ -67,6 +67,8 @@ export type Query = {
   getDocument: DocumentNode;
   getDocumentList: DocumentConnection;
   getDocumentFields: Scalars['JSON'];
+  getGalleryGridDocument: GalleryGridDocument;
+  getGalleryGridList: GalleryGridConnection;
   getBusinessInfoDocument: BusinessInfoDocument;
   getBusinessInfoList: BusinessInfoConnection;
   getMenuDocument: MenuDocument;
@@ -93,6 +95,19 @@ export type QueryGetDocumentArgs = {
 
 
 export type QueryGetDocumentListArgs = {
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
+export type QueryGetGalleryGridDocumentArgs = {
+  relativePath?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryGetGalleryGridListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
   first?: InputMaybe<Scalars['Int']>;
@@ -172,7 +187,41 @@ export type CollectionDocumentsArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
-export type DocumentNode = BusinessInfoDocument | MenuDocument | PostsDocument;
+export type DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | PostsDocument;
+
+export type GalleryGridImages = {
+  __typename?: 'GalleryGridImages';
+  alt: Scalars['String'];
+  image?: Maybe<Scalars['String']>;
+};
+
+export type GalleryGrid = {
+  __typename?: 'GalleryGrid';
+  images?: Maybe<Array<Maybe<GalleryGridImages>>>;
+};
+
+export type GalleryGridDocument = Node & Document & {
+  __typename?: 'GalleryGridDocument';
+  id: Scalars['ID'];
+  sys: SystemInfo;
+  data: GalleryGrid;
+  form: Scalars['JSON'];
+  values: Scalars['JSON'];
+  dataJSON: Scalars['JSON'];
+};
+
+export type GalleryGridConnectionEdges = {
+  __typename?: 'GalleryGridConnectionEdges';
+  cursor?: Maybe<Scalars['String']>;
+  node?: Maybe<GalleryGridDocument>;
+};
+
+export type GalleryGridConnection = Connection & {
+  __typename?: 'GalleryGridConnection';
+  pageInfo?: Maybe<PageInfo>;
+  totalCount: Scalars['Int'];
+  edges?: Maybe<Array<Maybe<GalleryGridConnectionEdges>>>;
+};
 
 export type BusinessInfoAddress = {
   __typename?: 'BusinessInfoAddress';
@@ -232,7 +281,7 @@ export type MenuSectionsItemsModifiers = {
 
 export type MenuSectionsItemsImages = {
   __typename?: 'MenuSectionsItemsImages';
-  name: Scalars['String'];
+  alt: Scalars['String'];
   image?: Maybe<Scalars['String']>;
 };
 
@@ -318,6 +367,8 @@ export type Mutation = {
   addPendingDocument: DocumentNode;
   updateDocument: DocumentNode;
   createDocument: DocumentNode;
+  updateGalleryGridDocument: GalleryGridDocument;
+  createGalleryGridDocument: GalleryGridDocument;
   updateBusinessInfoDocument: BusinessInfoDocument;
   createBusinessInfoDocument: BusinessInfoDocument;
   updateMenuDocument: MenuDocument;
@@ -345,6 +396,18 @@ export type MutationCreateDocumentArgs = {
   collection?: InputMaybe<Scalars['String']>;
   relativePath: Scalars['String'];
   params: DocumentMutation;
+};
+
+
+export type MutationUpdateGalleryGridDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: GalleryGridMutation;
+};
+
+
+export type MutationCreateGalleryGridDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: GalleryGridMutation;
 };
 
 
@@ -384,9 +447,19 @@ export type MutationCreatePostsDocumentArgs = {
 };
 
 export type DocumentMutation = {
+  galleryGrid?: InputMaybe<GalleryGridMutation>;
   businessInfo?: InputMaybe<BusinessInfoMutation>;
   menu?: InputMaybe<MenuMutation>;
   posts?: InputMaybe<PostsMutation>;
+};
+
+export type GalleryGridImagesMutation = {
+  alt?: InputMaybe<Scalars['String']>;
+  image?: InputMaybe<Scalars['String']>;
+};
+
+export type GalleryGridMutation = {
+  images?: InputMaybe<Array<InputMaybe<GalleryGridImagesMutation>>>;
 };
 
 export type BusinessInfoAddressMutation = {
@@ -419,7 +492,7 @@ export type MenuSectionsItemsModifiersMutation = {
 };
 
 export type MenuSectionsItemsImagesMutation = {
-  name?: InputMaybe<Scalars['String']>;
+  alt?: InputMaybe<Scalars['String']>;
   image?: InputMaybe<Scalars['String']>;
 };
 
@@ -450,11 +523,25 @@ export type PostsMutation = {
   body?: InputMaybe<Scalars['String']>;
 };
 
+export type GalleryGridPartsFragment = { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined };
+
 export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined };
 
-export type MenuPartsFragment = { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', name: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
+export type MenuPartsFragment = { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined };
+
+export type GetGalleryGridDocumentQueryVariables = Exact<{
+  relativePath: Scalars['String'];
+}>;
+
+
+export type GetGalleryGridDocumentQuery = { __typename?: 'Query', getGalleryGridDocument: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } } };
+
+export type GetGalleryGridListQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetGalleryGridListQuery = { __typename?: 'Query', getGalleryGridList: { __typename?: 'GalleryGridConnection', totalCount: number, edges?: Array<{ __typename?: 'GalleryGridConnectionEdges', node?: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetBusinessInfoDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -473,12 +560,12 @@ export type GetMenuDocumentQueryVariables = Exact<{
 }>;
 
 
-export type GetMenuDocumentQuery = { __typename?: 'Query', getMenuDocument: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', name: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } };
+export type GetMenuDocumentQuery = { __typename?: 'Query', getMenuDocument: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } };
 
 export type GetMenuListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMenuListQuery = { __typename?: 'Query', getMenuList: { __typename?: 'MenuConnection', totalCount: number, edges?: Array<{ __typename?: 'MenuConnectionEdges', node?: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', name: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetMenuListQuery = { __typename?: 'Query', getMenuList: { __typename?: 'MenuConnection', totalCount: number, edges?: Array<{ __typename?: 'MenuConnectionEdges', node?: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetPostsDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -492,6 +579,15 @@ export type GetPostsListQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetPostsListQuery = { __typename?: 'Query', getPostsList: { __typename?: 'PostsConnection', totalCount: number, edges?: Array<{ __typename?: 'PostsConnectionEdges', node?: { __typename?: 'PostsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
+export const GalleryGridPartsFragmentDoc = gql`
+    fragment GalleryGridParts on GalleryGrid {
+  images {
+    __typename
+    alt
+    image
+  }
+}
+    `;
 export const BusinessInfoPartsFragmentDoc = gql`
     fragment BusinessInfoParts on BusinessInfo {
   name
@@ -537,7 +633,7 @@ export const MenuPartsFragmentDoc = gql`
       available
       images {
         __typename
-        name
+        alt
         image
       }
     }
@@ -550,6 +646,47 @@ export const PostsPartsFragmentDoc = gql`
   body
 }
     `;
+export const GetGalleryGridDocumentDocument = gql`
+    query getGalleryGridDocument($relativePath: String!) {
+  getGalleryGridDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...GalleryGridParts
+    }
+  }
+}
+    ${GalleryGridPartsFragmentDoc}`;
+export const GetGalleryGridListDocument = gql`
+    query getGalleryGridList {
+  getGalleryGridList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...GalleryGridParts
+        }
+      }
+    }
+  }
+}
+    ${GalleryGridPartsFragmentDoc}`;
 export const GetBusinessInfoDocumentDocument = gql`
     query getBusinessInfoDocument($relativePath: String!) {
   getBusinessInfoDocument(relativePath: $relativePath) {
@@ -676,7 +813,13 @@ export const GetPostsListDocument = gql`
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      getBusinessInfoDocument(variables: GetBusinessInfoDocumentQueryVariables, options?: C): Promise<{data: GetBusinessInfoDocumentQuery, variables: GetBusinessInfoDocumentQueryVariables, query: string}> {
+      getGalleryGridDocument(variables: GetGalleryGridDocumentQueryVariables, options?: C): Promise<{data: GetGalleryGridDocumentQuery, variables: GetGalleryGridDocumentQueryVariables, query: string}> {
+        return requester<{data: GetGalleryGridDocumentQuery, variables: GetGalleryGridDocumentQueryVariables, query: string}, GetGalleryGridDocumentQueryVariables>(GetGalleryGridDocumentDocument, variables, options);
+      },
+    getGalleryGridList(variables?: GetGalleryGridListQueryVariables, options?: C): Promise<{data: GetGalleryGridListQuery, variables: GetGalleryGridListQueryVariables, query: string}> {
+        return requester<{data: GetGalleryGridListQuery, variables: GetGalleryGridListQueryVariables, query: string}, GetGalleryGridListQueryVariables>(GetGalleryGridListDocument, variables, options);
+      },
+    getBusinessInfoDocument(variables: GetBusinessInfoDocumentQueryVariables, options?: C): Promise<{data: GetBusinessInfoDocumentQuery, variables: GetBusinessInfoDocumentQueryVariables, query: string}> {
         return requester<{data: GetBusinessInfoDocumentQuery, variables: GetBusinessInfoDocumentQueryVariables, query: string}, GetBusinessInfoDocumentQueryVariables>(GetBusinessInfoDocumentDocument, variables, options);
       },
     getBusinessInfoList(variables?: GetBusinessInfoListQueryVariables, options?: C): Promise<{data: GetBusinessInfoListQuery, variables: GetBusinessInfoListQueryVariables, query: string}> {

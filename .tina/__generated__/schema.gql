@@ -48,6 +48,8 @@ type Query {
   getDocument(collection: String, relativePath: String): DocumentNode!
   getDocumentList(before: String, after: String, first: Int, last: Int): DocumentConnection!
   getDocumentFields: JSON!
+  getGalleryGridDocument(relativePath: String): GalleryGridDocument!
+  getGalleryGridList(before: String, after: String, first: Int, last: Int): GalleryGridConnection!
   getBusinessInfoDocument(relativePath: String): BusinessInfoDocument!
   getBusinessInfoList(before: String, after: String, first: Int, last: Int): BusinessInfoConnection!
   getMenuDocument(relativePath: String): MenuDocument!
@@ -79,7 +81,36 @@ type Collection {
   documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
 }
 
-union DocumentNode = BusinessInfoDocument | MenuDocument | PostsDocument
+union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | PostsDocument
+
+type GalleryGridImages {
+  alt: String!
+  image: String
+}
+
+type GalleryGrid {
+  images: [GalleryGridImages]
+}
+
+type GalleryGridDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: GalleryGrid!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type GalleryGridConnectionEdges {
+  cursor: String
+  node: GalleryGridDocument
+}
+
+type GalleryGridConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [GalleryGridConnectionEdges]
+}
 
 type BusinessInfoAddress {
   name: String!
@@ -131,7 +162,7 @@ type MenuSectionsItemsModifiers {
 }
 
 type MenuSectionsItemsImages {
-  name: String!
+  alt: String!
   image: String
 }
 
@@ -206,6 +237,8 @@ type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
+  updateGalleryGridDocument(relativePath: String!, params: GalleryGridMutation!): GalleryGridDocument!
+  createGalleryGridDocument(relativePath: String!, params: GalleryGridMutation!): GalleryGridDocument!
   updateBusinessInfoDocument(relativePath: String!, params: BusinessInfoMutation!): BusinessInfoDocument!
   createBusinessInfoDocument(relativePath: String!, params: BusinessInfoMutation!): BusinessInfoDocument!
   updateMenuDocument(relativePath: String!, params: MenuMutation!): MenuDocument!
@@ -215,9 +248,19 @@ type Mutation {
 }
 
 input DocumentMutation {
+  galleryGrid: GalleryGridMutation
   businessInfo: BusinessInfoMutation
   menu: MenuMutation
   posts: PostsMutation
+}
+
+input GalleryGridImagesMutation {
+  alt: String
+  image: String
+}
+
+input GalleryGridMutation {
+  images: [GalleryGridImagesMutation]
 }
 
 input BusinessInfoAddressMutation {
@@ -250,7 +293,7 @@ input MenuSectionsItemsModifiersMutation {
 }
 
 input MenuSectionsItemsImagesMutation {
-  name: String
+  alt: String
   image: String
 }
 

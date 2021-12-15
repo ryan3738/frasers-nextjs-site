@@ -3,6 +3,7 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
+      "galleryGrid",
       "businessInfo",
       "menu",
       "posts"
@@ -53,5 +54,17 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "GalleryGridDocument": {
+    "type": "GalleryGridDocument",
+    "resolveType": "collectionDocument",
+    "collection": "galleryGrid",
+    "createGalleryGridDocument": "create",
+    "updateGalleryGridDocument": "update"
+  },
+  "GalleryGridConnection": {
+    "type": "GalleryGridConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "galleryGrid"
   }
 }

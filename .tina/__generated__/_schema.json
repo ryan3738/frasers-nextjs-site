@@ -8,6 +8,53 @@
   "meta": {},
   "collections": [
     {
+      "label": "Gallery Grid",
+      "name": "galleryGrid",
+      "path": "content/gallery",
+      "format": "json",
+      "fields": [
+        {
+          "type": "object",
+          "label": "Images",
+          "name": "images",
+          "ui": {
+            "component": "groupList"
+          },
+          "list": true,
+          "fields": [
+            {
+              "type": "string",
+              "label": "Image Alt Text",
+              "name": "alt",
+              "required": true,
+              "namespace": [
+                "galleryGrid",
+                "images",
+                "alt"
+              ]
+            },
+            {
+              "name": "image",
+              "type": "image",
+              "label": "Menu Item Image",
+              "namespace": [
+                "galleryGrid",
+                "images",
+                "image"
+              ]
+            }
+          ],
+          "namespace": [
+            "galleryGrid",
+            "images"
+          ]
+        }
+      ],
+      "namespace": [
+        "galleryGrid"
+      ]
+    },
+    {
       "label": "Business Info",
       "name": "businessInfo",
       "path": "content/info",
@@ -352,15 +399,15 @@
                   "fields": [
                     {
                       "type": "string",
-                      "label": "Descriptive Image Alt Text",
-                      "name": "name",
+                      "label": "Image Alt Text",
+                      "name": "alt",
                       "required": true,
                       "namespace": [
                         "menu",
                         "sections",
                         "items",
                         "images",
-                        "name"
+                        "alt"
                       ]
                     },
                     {

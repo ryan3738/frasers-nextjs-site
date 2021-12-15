@@ -1,3 +1,11 @@
+fragment GalleryGridParts on GalleryGrid {
+  images {
+    __typename
+    alt
+    image
+  }
+}
+
 fragment BusinessInfoParts on BusinessInfo {
   name
   phoneNumber
@@ -41,7 +49,7 @@ fragment MenuParts on Menu {
       available
       images {
         __typename
-        name
+        alt
         image
       }
     }

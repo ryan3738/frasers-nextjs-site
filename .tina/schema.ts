@@ -2,6 +2,8 @@
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField, TinaTemplate } from "@tinacms/cli";
 
+
+
 const hoursSchema: TinaField = {
   type: "object",
   label: "Hours",
@@ -57,8 +59,8 @@ const imagesSchema: TinaField = {
   fields: [
     {
       type: "string",
-      label: "Descriptive Image Alt Text",
-      name: "name",
+      label: "Image Alt Text",
+      name: "alt",
       required: true,
     },
     {
@@ -135,30 +137,6 @@ const menuSectionSchema: TinaField = {
   ]
 }
 
-const menuSchema: TinaField = {
-  type: "object",
-  label: 'Menu',
-  name: 'menu',
-  fields: [
-    {
-      type: "string",
-      label: "Name of Menu",
-      name: "name",
-      required: true,
-    },
-    {
-      type: "string",
-      label: "Description",
-      name: "description",
-    },
-    {
-      type: "boolean",
-      label: "Available",
-      name: "available",
-    },
-    menuSectionSchema,
-  ],
-}
 const addressSchema: TinaField = {
   type: "object",
   label: 'Address',
@@ -210,6 +188,15 @@ const addressSchema: TinaField = {
 
 export default defineSchema({
   collections: [
+    {
+      label: "Gallery Grid",
+      name: "galleryGrid",
+      path: "content/gallery",
+      format: "json",
+      fields: [
+        imagesSchema,
+      ]
+    },
     {
       label: "Business Info",
       name: "businessInfo",

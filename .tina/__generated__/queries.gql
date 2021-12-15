@@ -1,3 +1,42 @@
+query getGalleryGridDocument($relativePath: String!) {
+  getGalleryGridDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...GalleryGridParts
+    }
+  }
+}
+
+query getGalleryGridList {
+  getGalleryGridList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...GalleryGridParts
+        }
+      }
+    }
+  }
+}
+
 query getBusinessInfoDocument($relativePath: String!) {
   getBusinessInfoDocument(relativePath: $relativePath) {
     sys {
