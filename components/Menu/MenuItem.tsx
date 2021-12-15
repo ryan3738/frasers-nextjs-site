@@ -4,7 +4,7 @@ interface MenuItemProps {
   item: MenuSectionsItems;
 }
 
-export default function MenuItem({ item }) {
+export default function MenuItem({ item }: MenuItemProps) {
   return (
     <>
       <div key={item.name} className="menu-item">
@@ -12,30 +12,26 @@ export default function MenuItem({ item }) {
         {item.description ? (
           <>
             <div dangerouslySetInnerHTML={{ __html: item.description }} />
-            <br />
           </>
         ) : (
           ''
         )}
-        <div className="primary-color" aria-label="price">{item.price}</div>
+            <div className="primary-color item-detail" aria-label={`$${item.price}`}>{item.price}</div>
         {item.modifiers ? (
           item.modifiers.map(modifier => {
             return (
-            <div key={modifier.name} className="modifier">
+              <div key={modifier.name} className="modifier item-detail">
               {modifier.name}&nbsp;
-              <span className="primary-color">{modifier.price}</span>
-              <br />
+                <span className="primary-color" aria-label={`$${modifier.price}`}>{modifier.price}</span>
             </div>
             )
           })
         ) : (
           ''
         )}
-
         {item.dietary ? (
           <>
-            <br />
-            <div className="dietary-preferences">{item.dietary.map((preference, index )=>{
+            <div className="dietary-preferences item-detail">{item.dietary.map((preference, index )=>{
               if (item.dietary.length === 1 || index === item.dietary.length - 1) {
                 return `${preference}`
               }
@@ -50,7 +46,7 @@ export default function MenuItem({ item }) {
             text-align: left;
             border-color: var(--primary-color-desaturated);
             border-radius: 7px;
-            padding: 5%;
+            padding: 1rem;
             background: var(--surface-color);
             border-color: var(--primary-color-desaturated);
           }
@@ -64,6 +60,9 @@ export default function MenuItem({ item }) {
           }
           .modifier {
             text-transform: uppercase;
+          }
+          .item-detail {
+            margin: 1rem 0 0 0;
           }
         `}</style>
       </div>
