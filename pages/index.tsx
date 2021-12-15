@@ -19,18 +19,6 @@ export default function HomePage(props) {
   return <div>Loading...</div>;
 }
 
-export const getGalleryGridFragment = `
-  getGalleryGridDocument(relativePath: "galleryGrid.json"){
-    data {
-      images {
-      alt
-      image
-      format
-    }
-  }
-}
-`;
-
 export const getBusinessInfoQueryFragment = `
   getBusinessInfoDocument(relativePath: "businessInfo.json"){
     data {
@@ -51,6 +39,28 @@ export const getBusinessInfoQueryFragment = `
       }
     }
   }
+  `;
+
+export const getGalleryGridFragment = `
+    getGalleryGridDocument(relativePath: "galleryGrid.json"){
+      data {
+        images {
+        alt
+        image
+        format
+      }
+    }
+  }
+  `;
+
+export const getDoubleFeatureFragment = `
+    getDoubleFeatureDocument(relativePath: "aboutBusiness.mdx"){
+    data {
+
+      subtitle
+      body
+    }
+  }
 `;
 
 export const getStaticProps = async () => {
@@ -60,6 +70,7 @@ export const getStaticProps = async () => {
         ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
         ${getGalleryGridFragment}
+        ${getDoubleFeatureFragment}
       }
     `,
     variables: {}

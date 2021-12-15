@@ -16,6 +16,7 @@ const imageSchema: TinaField = {
             type: "string",
             label: "Image Alt Text",
             name: "alt",
+            required: true,
           },
         ]
 }

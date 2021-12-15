@@ -213,7 +213,7 @@ type MenuConnection implements Connection {
 
 type DoubleFeatureImage {
   src: String
-  alt: String
+  alt: String!
 }
 
 type DoubleFeature {

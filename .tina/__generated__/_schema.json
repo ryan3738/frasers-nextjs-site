@@ -508,6 +508,7 @@
               "type": "string",
               "label": "Image Alt Text",
               "name": "alt",
+              "required": true,
               "namespace": [
                 "doubleFeature",
                 "image",
