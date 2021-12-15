@@ -1,0 +1,263 @@
+{
+  "name": "Dinner",
+  "description": "This is the main dinner menu for Frasers.",
+  "available": true,
+  "sections": [
+    {
+      "name": "Starters",
+      "items": [
+        {
+          "name": "Tomato & Burrata",
+          "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
+          "price": 16,
+          "dietary": [
+            "vegetarian",
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "Duck Liver Pate",
+          "description": "Homemade duck liver pate served with pear compote and crostinis",
+          "price": 16,
+          "available": true
+        },
+        {
+          "name": "BEEF & CHORIZO EMPANADAS",
+          "description": "Rice & black bean salad, chimichurro aioli",
+          "price": 12,
+          "available": false
+        },
+        {
+          "name": "CAESAR SALAD",
+          "description": "Romaine, crispy prosciutto, fried capers, & parmesan black olive hemp tuille",
+          "price": 13,
+          "available": true
+        },
+        {
+          "name": "GOAT CHEESE SALAD",
+          "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
+          "price": 16,
+          "available": true
+        },
+        {
+          "name": "DRY GARLIC BABY BACK RIBS",
+          "description": "Baby back ribs, crispy garlic, blackberry mustard sauce",
+          "price": 18,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "CALAMARI",
+          "description": "Fried calamari steaks with serrano chiles and blue cheese dipping sauce",
+          "price": 16,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "Penn Cove Mussels",
+          "description": "Steamed local mussels in a fragrant curry cream broth",
+          "price": 16,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "DUNGENESS CRAB CAKES",
+          "description": "Fried dungeness crab cakes",
+          "price": 20,
+          "available": true
+        },
+        {
+          "name": "GARLIC & BRIE FONDUE FOR TWO",
+          "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread",
+          "price": 20,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available": true
+        },
+        {
+          "name": "SEAFOOD CHOWDER",
+          "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
+          "price": 14,
+          "available": true
+        },
+        {
+          "name": "YOUNG GREENS SEASONAL SALAD",
+          "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette",
+          "price": 11,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "DUCK & PHEASANT PATE",
+          "description": "Blackberry mustard, pickled vegetables, tapioca ink chips",
+          "price": 1,
+          "available": false
+        },
+        {
+          "name": "CIOPPINO",
+          "description": "Prawns, scallops, octopus, crab, tomato saffron seafood broth",
+          "price": 1,
+          "available": false
+
+        }
+      ]
+    },
+    {
+      "name": "Entrees",
+      "items": [
+        {
+          "name": "BEEF TENDERLOIN",
+          "description": "Grilled 7oz filet mignon, garlic mashed potatoes, vegetables, horseradish butter",
+          "price": 41,
+          "dietary": [
+            "gluten-free"
+          ],
+          "modifiers": [
+            {
+              "name": "ADD SURF",
+              "price": 12
+            }
+          ],
+          "available": true
+        },
+        {
+          "name": "RED SNAPPER",
+          "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
+          "price": 27,
+          "available": true
+        },
+        {
+          "name": "BEEF BURGUNDY",
+          "description": "Braised beef medallions in a red wine reduction, house made buttered noodles",
+          "price": 26,
+          "available": false
+        },
+        {
+          "name": "VEGETABLE GNOCCHI",
+          "description": "Tender ricotta gnocchi, seasonal vegetables, & parmesan cream sauce",
+          "price": 24,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available": true
+        },
+        {
+          "name": "CRAB & SHRIMP LASAGNA",
+          "description": "Dungeness crab, shrimp, & lobster cream sauce",
+          "price": 34,
+          "available": true
+        },
+        {
+          "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
+          "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
+          "price": 29,
+          "available": true
+        },
+        {
+          "name": "USDA NEW YORK STRIP STEAK",
+          "description": "12oz Prime NY steak, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
+          "price": 44,
+          "available": true
+        },
+        {
+          "name": "TEXAS LONG BONE SHORT RIB",
+          "description": "Braised short rib, potato & pepper saute, grainy mustard & bacon greens",
+          "price": 38,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "DUCK BREAST",
+          "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & marsala cream reduction",
+          "price": 35,
+          "available": true
+        },
+        {
+          "name": "CHICKEN & WAFFLES",
+          "description": "Buttermilk fried Jidori chicken breast, chilli cheese waffle, & truffle honey butter",
+          "price": 26,
+          "available": false
+        },
+        {
+          "name": "CHICKEN & Southern Cast Iron Spoonbread",
+          "description": "Buttermilk fried Jidori chicken breast, fire roasted green chili & corn spoonbread, truffle honey butter",
+          "price": 27,
+          "available": true
+        },
+        {
+          "name": "BRAISED SMOKED KUROBUTA PORK SHANK",
+          "description": "Spätzle, currywurst, pickled red cabbage, mustard sauce",
+          "price": 25,
+          "available": false
+        },
+        {
+          "name": "NORTH AFRICAN SEAFOOD STEW",
+          "description": "Prawns, scallops, snapper, mussels, coconut african spiced curry, couscous",
+          "price": 26,
+          "available": false
+        },
+        {
+          "name": "RACK OF LAMB",
+          "description": "Pistachio crusted lamb rack, garlic mashed potatoes, & mixed vegetables",
+          "price": 39,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "SCALLOPS",
+          "description": "Vegetable risotto, dill beurre blanc, & chili oil",
+          "price": 37,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
+          "name": "SEAFOOD LASAGNA",
+          "description": "Dungeness crab, bay shrimp, lobster cream sauce",
+          "price": 26,
+          "available": false
+        },
+        {
+          "name": "VEGETABLE GNOCCHI",
+          "description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce",
+          "price": 20,
+          "available": false
+        },
+        {
+          "name": "VEGETABLE LASAGNA",
+          "description": "Layers of pasta & grilled vegetables, tomato, smoked mozzarella",
+          "price": 20,
+          "available": false
+        },
+        {
+          "name": "CORNISH GAME HEN",
+          "description": "Wild mushroom mousse, Butternut squash orzo, asparagus, sauce Forestiere",
+          "price": 1,
+          "available": false
+
+        },
+        {
+          "name": "FILET MIGNON",
+          "description": "Brie stuffed wrapped in prosciutto, garlic mash, veg, braising reduction",
+          "price": 1,
+          "available": false
+        }
+      ]
+    }
+  ]
+}

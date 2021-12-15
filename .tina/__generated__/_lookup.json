@@ -3,6 +3,10 @@
     "type": "DocumentConnection",
     "resolveType": "multiCollectionDocumentList",
     "collections": [
+      "galleryGrid",
+      "businessInfo",
+      "menu",
+      "doubleFeature",
       "posts"
     ]
   },
@@ -16,6 +20,72 @@
     "createDocument": "create",
     "updateDocument": "update"
   },
+  "GalleryGridDocument": {
+    "type": "GalleryGridDocument",
+    "resolveType": "collectionDocument",
+    "collection": "galleryGrid",
+    "createGalleryGridDocument": "create",
+    "updateGalleryGridDocument": "update"
+  },
+  "GalleryGridConnection": {
+    "type": "GalleryGridConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "galleryGrid"
+  },
+  "BusinessInfoDocument": {
+    "type": "BusinessInfoDocument",
+    "resolveType": "collectionDocument",
+    "collection": "businessInfo",
+    "createBusinessInfoDocument": "create",
+    "updateBusinessInfoDocument": "update"
+  },
+  "BusinessInfoConnection": {
+    "type": "BusinessInfoConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "businessInfo"
+  },
+  "MenuDocument": {
+    "type": "MenuDocument",
+    "resolveType": "collectionDocument",
+    "collection": "menu",
+    "createMenuDocument": "create",
+    "updateMenuDocument": "update"
+  },
+  "MenuConnection": {
+    "type": "MenuConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "menu"
+  },
+  "DoubleFeatureDocument": {
+    "type": "DoubleFeatureDocument",
+    "resolveType": "collectionDocument",
+    "collection": "doubleFeature",
+    "createDoubleFeatureDocument": "create",
+    "updateDoubleFeatureDocument": "update"
+  },
+  "DoubleFeatureConnection": {
+    "type": "DoubleFeatureConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "doubleFeature"
+  },
+  "DoubleFeaturesDoubleFeatureDocument": {
+    "type": "DoubleFeaturesDoubleFeatureDocument",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
+  },
+  "DoubleFeaturesDocument": {
+    "type": "DoubleFeaturesDocument",
+    "resolveType": "collectionDocument",
+    "collection": "doubleFeatures",
+    "createDoubleFeaturesDocument": "create",
+    "updateDoubleFeaturesDocument": "update"
+  },
+  "DoubleFeaturesConnection": {
+    "type": "DoubleFeaturesConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "doubleFeatures"
+  },
   "PostsDocument": {
     "type": "PostsDocument",
     "resolveType": "collectionDocument",
@@ -27,5 +97,25 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "DoubleFeaturesDoubleFeaturesDocument": {
+    "type": "DoubleFeaturesDoubleFeaturesDocument",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
+  },
+  "DoubleFeaturesDoubleFeaturesConnection": {
+    "type": "DoubleFeaturesDoubleFeaturesConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "doubleFeature"
+    ]
+  },
+  "DoubleFeaturesDoubleFeatureConnection": {
+    "type": "DoubleFeaturesDoubleFeatureConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "doubleFeature"
+    ]
   }
 }

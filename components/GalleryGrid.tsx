@@ -1,7 +1,4 @@
 import Image from 'next/image';
-// import images from '../public/data/gallery-grid.json';
-
-
 interface ImageProps {
   src: string;
   alt: string;
@@ -11,7 +8,6 @@ interface ImageProps {
 interface GridProps {
   images: ImageProps[];
 }
-
 
 const getGalleryItem = (galleryArray:ImageProps[]) => (
   <>
@@ -35,8 +31,6 @@ const getGalleryItem = (galleryArray:ImageProps[]) => (
               objectFit="cover"
               height="560"
               width="560"
-              // placeholder="blur"
-              // blurDataURL="/public/favicon-32x32.png"
             />
           </div>)
         ))}
@@ -108,40 +102,6 @@ const getGalleryItem = (galleryArray:ImageProps[]) => (
         transition: all 0.3s ease-in-out;
       }
     `}</style>
-    {/* <style jsx>{`
-        .gallery-container {
-          margin-top: 2rem;
-          display: grid;
-          grid-gap: 5px;
-          grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-          grid-auto-rows: 120px;
-          grid-auto-flow: dense;
-        }
-        #image-div {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 2rem;
-          color: #ffeead;
-        }
-
-        .image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .horizontal {
-          grid-column: span 2;
-        }
-        .vertical {
-          grid-row: span 2;
-        }
-        .big {
-          grid-column: span 2;
-          grid-row: span 2;
-        }
-      `}</style> */}
   </>
 );
 

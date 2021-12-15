@@ -1,7 +1,11 @@
 import Image from 'next/image';
-import siteData from '../public/data/site-data.json';
+import { BusinessInfo } from '../.tina/__generated__/types';
+import Hours from './Hours';
+interface HeroProps {
+  businessInfo?: BusinessInfo;
+}
 
-export default function Hero() {
+export default function Hero({ businessInfo }: HeroProps) {
   return (
     <>
       <div id="welcome" className="welcome-container">
@@ -23,13 +27,13 @@ export default function Hero() {
             <br />
             {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}
             <a
-              href={siteData.address.directions}
+              href={businessInfo.address.directions}
               target="_blank"
               rel="noreferrer noopener"
             >
-              {`${siteData.address.street} ${siteData.address.street2}`}
+              {`${businessInfo.address.street} ${businessInfo.address.street2}`}
               <br />
-              {`${siteData.address.city}, ${siteData.address.state} ${siteData.address.zipCode}`}
+              {`${businessInfo.address.city}, ${businessInfo.address.region} ${businessInfo.address.zip}`}
             </a>
             <br />
             <br />
@@ -42,24 +46,11 @@ export default function Hero() {
               buttonText="ORDER ONLINE"
               buttonLink={siteData.websites.onlineStore}
             /> */}
-            <a href={`tel:${siteData.phoneNumber}`}>{siteData.phoneNumber}</a>
+            <a href={`tel:${businessInfo.phoneNumber}`}>{businessInfo.phoneNumber}</a>
             <br />
             <br />
             <div>
-              <h3>HOURS</h3>
-              <div>
-                {siteData.hoursSummary.map((item) => (
-                  <div key={item.days}>
-                    <div>
-                      <strong>{item.days}</strong>
-                    </div>
-                    <div>
-                      <span className="medium-emphasis">{item.hours}</span>
-                    </div>
-                    <br />
-                  </div>
-                ))}
-              </div>
+              <Hours hours={businessInfo.hours} />
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
-import Head from 'next/head'
-import Layout from '../components/Layout'
-import Double from '../components/Double'
+import Head from 'next/head';
+import Layout from '../components/Layout';
 
 export default function AboutPage() {
   return (
@@ -8,8 +7,7 @@ export default function AboutPage() {
       <Head>
         <title>MENU</title>
       </Head>
-      <section className="menu-container">
-      </section>
+      <section className="menu-container"></section>
       <style jsx>{`
         .menu-container {
           width: 100vw;
@@ -18,5 +16,5 @@ export default function AboutPage() {
         }
       `}</style>
     </Layout>
-  )
+  );
 }

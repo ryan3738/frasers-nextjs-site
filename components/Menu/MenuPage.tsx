@@ -1,24 +1,26 @@
 import Head from 'next/head';
-import Layout from './Layout';
-import styles from '../styles/styles.module.css';
+import styles from '../../styles/styles.module.css';
 import { Menu } from './Menu';
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
+import { Menu as MenuType } from '../../.tina/__generated__/types';
 
-export default function MenuPage() {
-  const {pathname} = useRouter();
+interface MenuPageProps {
+  menu: MenuType;
+}
+
+export default function MenuPage({ menu }) {
+  const { pathname } = useRouter();
   const menuCategories = ['Starters', 'Entrees'];
-
   return (
-    <Layout>
+    <>
       <Head>
         <title>MENU</title>
       </Head>
       <section className="menu-container">
         <div className={styles.header}>
           <h1>MENU</h1>
-
         </div>
-        <Menu pathName={pathname} categories={menuCategories} />
+        <Menu menu={menu} pathName={pathname} categories={menuCategories} />
       </section>
       <style jsx>{`
         .menu-container {
@@ -27,6 +29,6 @@ export default function MenuPage() {
           place-self: center;
         }
       `}</style>
-    </Layout>
+    </>
   );
 }
