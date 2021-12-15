@@ -7,13 +7,9 @@ export default function HomePage(props) {
     props.data &&
     props.data.getMenuDocument &&
     props.data.getBusinessInfoDocument
-    // props.data.getDoubleFeatureDocument
   ) {
-    console.log('HomePage props.data', props.data);
     const menu = props.data.getMenuDocument.data;
     const businessInfo = props.data.getBusinessInfoDocument.data;
-    // const aboutBusiness = props.data.getDoubleFeatureDocument.data;
-    // console.log('ABOUT BUSINESS', aboutBusiness);
     return (
       <>
         <Home menu={menu} businessInfo={businessInfo} />
