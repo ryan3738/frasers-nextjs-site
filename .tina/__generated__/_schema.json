@@ -488,6 +488,46 @@
             "doubleFeature",
             "subtitle"
           ]
+        },
+        {
+          "type": "image",
+          "label": "Image",
+          "name": "image",
+          "namespace": [
+            "doubleFeature",
+            "image"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Image Alt Text",
+          "name": "alt",
+          "namespace": [
+            "doubleFeature",
+            "alt"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Element ID",
+          "name": "elemntId",
+          "namespace": [
+            "doubleFeature",
+            "elemntId"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Double Feature Body",
+          "name": "body",
+          "isBody": true,
+          "ui": {
+            "component": "textarea"
+          },
+          "namespace": [
+            "doubleFeature",
+            "body"
+          ]
         }
       ],
       "namespace": [

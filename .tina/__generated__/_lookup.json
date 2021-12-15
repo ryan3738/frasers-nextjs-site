@@ -56,18 +56,6 @@
     "resolveType": "collectionDocumentList",
     "collection": "menu"
   },
-  "PostsDocument": {
-    "type": "PostsDocument",
-    "resolveType": "collectionDocument",
-    "collection": "posts",
-    "createPostsDocument": "create",
-    "updatePostsDocument": "update"
-  },
-  "PostsConnection": {
-    "type": "PostsConnection",
-    "resolveType": "collectionDocumentList",
-    "collection": "posts"
-  },
   "DoubleFeatureDocument": {
     "type": "DoubleFeatureDocument",
     "resolveType": "collectionDocument",
@@ -79,5 +67,17 @@
     "type": "DoubleFeatureConnection",
     "resolveType": "collectionDocumentList",
     "collection": "doubleFeature"
+  },
+  "PostsDocument": {
+    "type": "PostsDocument",
+    "resolveType": "collectionDocument",
+    "collection": "posts",
+    "createPostsDocument": "create",
+    "updatePostsDocument": "update"
+  },
+  "PostsConnection": {
+    "type": "PostsConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "posts"
   }
 }

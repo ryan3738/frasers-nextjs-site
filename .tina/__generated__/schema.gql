@@ -214,6 +214,10 @@ type MenuConnection implements Connection {
 type DoubleFeature {
   title: String!
   subtitle: String
+  image: String
+  alt: String
+  elemntId: String
+  body: String
 }
 
 type DoubleFeatureDocument implements Node & Document {
@@ -354,6 +358,10 @@ input MenuMutation {
 input DoubleFeatureMutation {
   title: String
   subtitle: String
+  image: String
+  alt: String
+  elemntId: String
+  body: String
 }
 
 input PostsMutation {

@@ -2,8 +2,6 @@
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField, TinaTemplate } from "@tinacms/cli";
 
-
-
 const hoursSchema: TinaField = {
   type: "object",
   label: "Hours",

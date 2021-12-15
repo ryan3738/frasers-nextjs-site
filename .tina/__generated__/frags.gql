@@ -60,6 +60,10 @@ fragment MenuParts on Menu {
 fragment DoubleFeatureParts on DoubleFeature {
   title
   subtitle
+  image
+  alt
+  elemntId
+  body
 }
 
 fragment PostsParts on Posts {
