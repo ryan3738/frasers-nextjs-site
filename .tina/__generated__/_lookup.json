@@ -19,6 +19,18 @@
     "createDocument": "create",
     "updateDocument": "update"
   },
+  "GalleryGridDocument": {
+    "type": "GalleryGridDocument",
+    "resolveType": "collectionDocument",
+    "collection": "galleryGrid",
+    "createGalleryGridDocument": "create",
+    "updateGalleryGridDocument": "update"
+  },
+  "GalleryGridConnection": {
+    "type": "GalleryGridConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "galleryGrid"
+  },
   "BusinessInfoDocument": {
     "type": "BusinessInfoDocument",
     "resolveType": "collectionDocument",
@@ -54,17 +66,5 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
-  },
-  "GalleryGridDocument": {
-    "type": "GalleryGridDocument",
-    "resolveType": "collectionDocument",
-    "collection": "galleryGrid",
-    "createGalleryGridDocument": "create",
-    "updateGalleryGridDocument": "update"
-  },
-  "GalleryGridConnection": {
-    "type": "GalleryGridConnection",
-    "resolveType": "collectionDocumentList",
-    "collection": "galleryGrid"
   }
 }

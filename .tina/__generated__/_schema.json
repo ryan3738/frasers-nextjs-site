@@ -42,6 +42,21 @@
                 "images",
                 "image"
               ]
+            },
+            {
+              "type": "string",
+              "label": "Size",
+              "name": "size",
+              "options": [
+                "small",
+                "medium",
+                "large"
+              ],
+              "namespace": [
+                "galleryGrid",
+                "images",
+                "size"
+              ]
             }
           ],
           "namespace": [

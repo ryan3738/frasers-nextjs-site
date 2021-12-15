@@ -14,12 +14,7 @@
             "vegetarian",
             "gluten-free"
           ],
-          "available": true,
-          "images": [
-            {
-              "name": "A tasty image"
-            }
-          ]
+          "available": true
         },
         {
           "name": "Duck Liver Pate",
@@ -37,7 +32,13 @@
           "name": "CAESAR SALAD",
           "description": "Romaine, crispy prosciutto, fried capers, & parmesan black olive hemp tuille",
           "price": 13,
-          "available": true
+          "available": true,
+          "images": [
+            {
+              "alt": "CAESAR SALAD",
+              "image": "http://res.cloudinary.com/ryan3738/image/upload/v1639529311/frasers/caesar_salad_esgixs.jpg"
+            }
+          ]
         },
         {
           "name": "GOAT CHEESE SALAD",
@@ -108,9 +109,7 @@
           "price": 1,
           "available": false,
           "images": [
-            {
-              "name": ""
-            }
+            {}
           ]
         },
         {
@@ -119,9 +118,7 @@
           "price": 1,
           "available": false,
           "images": [
-            {
-              "name": ""
-            }
+            {}
           ]
         }
       ]
@@ -264,9 +261,7 @@
           "price": 1,
           "available": false,
           "images": [
-            {
-              "name": ""
-            }
+            {}
           ]
         },
         {
@@ -275,9 +270,7 @@
           "price": 1,
           "available": false,
           "images": [
-            {
-              "name": ""
-            }
+            {}
           ]
         }
       ]

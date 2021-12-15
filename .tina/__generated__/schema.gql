@@ -86,6 +86,7 @@ union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument |
 type GalleryGridImages {
   alt: String!
   image: String
+  size: String
 }
 
 type GalleryGrid {
@@ -257,6 +258,7 @@ input DocumentMutation {
 input GalleryGridImagesMutation {
   alt: String
   image: String
+  size: String
 }
 
 input GalleryGridMutation {

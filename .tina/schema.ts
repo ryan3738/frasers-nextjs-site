@@ -116,8 +116,6 @@ const menuItemSchema: TinaField = {
   ]
 }
 
-
-
 const menuSectionSchema: TinaField = {
   type: "object",
   label: "Sections",
@@ -194,7 +192,34 @@ export default defineSchema({
       path: "content/gallery",
       format: "json",
       fields: [
-        imagesSchema,
+        {
+          type: "object",
+          label: "Images",
+          name: "images",
+          ui: {
+            component: "groupList",
+          },
+          list: true,
+          fields: [
+            {
+              type: "string",
+              label: "Image Alt Text",
+              name: "alt",
+              required: true,
+            },
+            {
+              name: 'image',
+              type: 'image',
+              label: 'Menu Item Image',
+            },
+            {
+              type: "string",
+              label: "Size",
+              name: "size",
+              options: ["small", "medium", "large"],
+            },
+          ]
+        }
       ]
     },
     {

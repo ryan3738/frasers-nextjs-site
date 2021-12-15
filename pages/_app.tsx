@@ -32,7 +32,11 @@ const App = ({ Component, pageProps }) => {
                         return {
                           ...item,
                           label:
-                            item.name || item.title || item.label || item.day
+                            item.name ||
+                            item.title ||
+                            item.label ||
+                            item.alt ||
+                            item.day
                         };
                       }
                     };
