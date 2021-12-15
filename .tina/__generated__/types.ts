@@ -75,6 +75,8 @@ export type Query = {
   getMenuList: MenuConnection;
   getDoubleFeatureDocument: DoubleFeatureDocument;
   getDoubleFeatureList: DoubleFeatureConnection;
+  getDoubleFeaturesDocument: DoubleFeaturesDocument;
+  getDoubleFeaturesList: DoubleFeaturesConnection;
   getPostsDocument: PostsDocument;
   getPostsList: PostsConnection;
 };
@@ -156,6 +158,19 @@ export type QueryGetDoubleFeatureListArgs = {
 };
 
 
+export type QueryGetDoubleFeaturesDocumentArgs = {
+  relativePath?: InputMaybe<Scalars['String']>;
+};
+
+
+export type QueryGetDoubleFeaturesListArgs = {
+  before?: InputMaybe<Scalars['String']>;
+  after?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+};
+
+
 export type QueryGetPostsDocumentArgs = {
   relativePath?: InputMaybe<Scalars['String']>;
 };
@@ -202,7 +217,7 @@ export type CollectionDocumentsArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
-export type DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument;
+export type DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | DoubleFeaturesDocument | PostsDocument;
 
 export type GalleryGridImages = {
   __typename?: 'GalleryGridImages';
@@ -387,6 +402,37 @@ export type DoubleFeatureConnection = Connection & {
   edges?: Maybe<Array<Maybe<DoubleFeatureConnectionEdges>>>;
 };
 
+export type DoubleFeaturesDoubleFeatureDocument = DoubleFeatureDocument;
+
+export type DoubleFeatures = {
+  __typename?: 'DoubleFeatures';
+  name?: Maybe<Scalars['String']>;
+  doubleFeature?: Maybe<DoubleFeaturesDoubleFeatureDocument>;
+};
+
+export type DoubleFeaturesDocument = Node & Document & {
+  __typename?: 'DoubleFeaturesDocument';
+  id: Scalars['ID'];
+  sys: SystemInfo;
+  data: DoubleFeatures;
+  form: Scalars['JSON'];
+  values: Scalars['JSON'];
+  dataJSON: Scalars['JSON'];
+};
+
+export type DoubleFeaturesConnectionEdges = {
+  __typename?: 'DoubleFeaturesConnectionEdges';
+  cursor?: Maybe<Scalars['String']>;
+  node?: Maybe<DoubleFeaturesDocument>;
+};
+
+export type DoubleFeaturesConnection = Connection & {
+  __typename?: 'DoubleFeaturesConnection';
+  pageInfo?: Maybe<PageInfo>;
+  totalCount: Scalars['Int'];
+  edges?: Maybe<Array<Maybe<DoubleFeaturesConnectionEdges>>>;
+};
+
 export type Posts = {
   __typename?: 'Posts';
   title?: Maybe<Scalars['String']>;
@@ -429,6 +475,8 @@ export type Mutation = {
   createMenuDocument: MenuDocument;
   updateDoubleFeatureDocument: DoubleFeatureDocument;
   createDoubleFeatureDocument: DoubleFeatureDocument;
+  updateDoubleFeaturesDocument: DoubleFeaturesDocument;
+  createDoubleFeaturesDocument: DoubleFeaturesDocument;
   updatePostsDocument: PostsDocument;
   createPostsDocument: PostsDocument;
 };
@@ -503,6 +551,18 @@ export type MutationCreateDoubleFeatureDocumentArgs = {
 };
 
 
+export type MutationUpdateDoubleFeaturesDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: DoubleFeaturesMutation;
+};
+
+
+export type MutationCreateDoubleFeaturesDocumentArgs = {
+  relativePath: Scalars['String'];
+  params: DoubleFeaturesMutation;
+};
+
+
 export type MutationUpdatePostsDocumentArgs = {
   relativePath: Scalars['String'];
   params: PostsMutation;
@@ -519,6 +579,7 @@ export type DocumentMutation = {
   businessInfo?: InputMaybe<BusinessInfoMutation>;
   menu?: InputMaybe<MenuMutation>;
   doubleFeature?: InputMaybe<DoubleFeatureMutation>;
+  doubleFeatures?: InputMaybe<DoubleFeaturesMutation>;
   posts?: InputMaybe<PostsMutation>;
 };
 
@@ -601,6 +662,11 @@ export type DoubleFeatureMutation = {
   body?: InputMaybe<Scalars['String']>;
 };
 
+export type DoubleFeaturesMutation = {
+  name?: InputMaybe<Scalars['String']>;
+  doubleFeature?: InputMaybe<Scalars['String']>;
+};
+
 export type PostsMutation = {
   title?: InputMaybe<Scalars['String']>;
   body?: InputMaybe<Scalars['String']>;
@@ -613,6 +679,8 @@ export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: st
 export type MenuPartsFragment = { __typename?: 'Menu', name: string, description?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name: string, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
 
 export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title: string, subtitle?: string | null | undefined, elemntId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined };
+
+export type DoubleFeaturesPartsFragment = { __typename?: 'DoubleFeatures', name?: string | null | undefined, doubleFeature?: { __typename?: 'DoubleFeatureDocument', id: string } | null | undefined };
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined };
 
@@ -663,6 +731,18 @@ export type GetDoubleFeatureListQueryVariables = Exact<{ [key: string]: never; }
 
 
 export type GetDoubleFeatureListQuery = { __typename?: 'Query', getDoubleFeatureList: { __typename?: 'DoubleFeatureConnection', totalCount: number, edges?: Array<{ __typename?: 'DoubleFeatureConnectionEdges', node?: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title: string, subtitle?: string | null | undefined, elemntId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+
+export type GetDoubleFeaturesDocumentQueryVariables = Exact<{
+  relativePath: Scalars['String'];
+}>;
+
+
+export type GetDoubleFeaturesDocumentQuery = { __typename?: 'Query', getDoubleFeaturesDocument: { __typename?: 'DoubleFeaturesDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeatures', name?: string | null | undefined, doubleFeature?: { __typename?: 'DoubleFeatureDocument', id: string } | null | undefined } } };
+
+export type GetDoubleFeaturesListQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetDoubleFeaturesListQuery = { __typename?: 'Query', getDoubleFeaturesList: { __typename?: 'DoubleFeaturesConnection', totalCount: number, edges?: Array<{ __typename?: 'DoubleFeaturesConnectionEdges', node?: { __typename?: 'DoubleFeaturesDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeatures', name?: string | null | undefined, doubleFeature?: { __typename?: 'DoubleFeatureDocument', id: string } | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetPostsDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -749,6 +829,16 @@ export const DoubleFeaturePartsFragmentDoc = gql`
   }
   elemntId
   body
+}
+    `;
+export const DoubleFeaturesPartsFragmentDoc = gql`
+    fragment DoubleFeaturesParts on DoubleFeatures {
+  name
+  doubleFeature {
+    ... on Document {
+      id
+    }
+  }
 }
     `;
 export const PostsPartsFragmentDoc = gql`
@@ -921,6 +1011,47 @@ export const GetDoubleFeatureListDocument = gql`
   }
 }
     ${DoubleFeaturePartsFragmentDoc}`;
+export const GetDoubleFeaturesDocumentDocument = gql`
+    query getDoubleFeaturesDocument($relativePath: String!) {
+  getDoubleFeaturesDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...DoubleFeaturesParts
+    }
+  }
+}
+    ${DoubleFeaturesPartsFragmentDoc}`;
+export const GetDoubleFeaturesListDocument = gql`
+    query getDoubleFeaturesList {
+  getDoubleFeaturesList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...DoubleFeaturesParts
+        }
+      }
+    }
+  }
+}
+    ${DoubleFeaturesPartsFragmentDoc}`;
 export const GetPostsDocumentDocument = gql`
     query getPostsDocument($relativePath: String!) {
   getPostsDocument(relativePath: $relativePath) {
@@ -988,6 +1119,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     getDoubleFeatureList(variables?: GetDoubleFeatureListQueryVariables, options?: C): Promise<{data: GetDoubleFeatureListQuery, variables: GetDoubleFeatureListQueryVariables, query: string}> {
         return requester<{data: GetDoubleFeatureListQuery, variables: GetDoubleFeatureListQueryVariables, query: string}, GetDoubleFeatureListQueryVariables>(GetDoubleFeatureListDocument, variables, options);
+      },
+    getDoubleFeaturesDocument(variables: GetDoubleFeaturesDocumentQueryVariables, options?: C): Promise<{data: GetDoubleFeaturesDocumentQuery, variables: GetDoubleFeaturesDocumentQueryVariables, query: string}> {
+        return requester<{data: GetDoubleFeaturesDocumentQuery, variables: GetDoubleFeaturesDocumentQueryVariables, query: string}, GetDoubleFeaturesDocumentQueryVariables>(GetDoubleFeaturesDocumentDocument, variables, options);
+      },
+    getDoubleFeaturesList(variables?: GetDoubleFeaturesListQueryVariables, options?: C): Promise<{data: GetDoubleFeaturesListQuery, variables: GetDoubleFeaturesListQueryVariables, query: string}> {
+        return requester<{data: GetDoubleFeaturesListQuery, variables: GetDoubleFeaturesListQueryVariables, query: string}, GetDoubleFeaturesListQueryVariables>(GetDoubleFeaturesListDocument, variables, options);
       },
     getPostsDocument(variables: GetPostsDocumentQueryVariables, options?: C): Promise<{data: GetPostsDocumentQuery, variables: GetPostsDocumentQueryVariables, query: string}> {
         return requester<{data: GetPostsDocumentQuery, variables: GetPostsDocumentQueryVariables, query: string}, GetPostsDocumentQueryVariables>(GetPostsDocumentDocument, variables, options);

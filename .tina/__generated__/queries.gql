@@ -154,6 +154,45 @@ query getDoubleFeatureList {
   }
 }
 
+query getDoubleFeaturesDocument($relativePath: String!) {
+  getDoubleFeaturesDocument(relativePath: $relativePath) {
+    sys {
+      filename
+      basename
+      breadcrumbs
+      path
+      relativePath
+      extension
+    }
+    id
+    data {
+      ...DoubleFeaturesParts
+    }
+  }
+}
+
+query getDoubleFeaturesList {
+  getDoubleFeaturesList {
+    totalCount
+    edges {
+      node {
+        id
+        sys {
+          filename
+          basename
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        data {
+          ...DoubleFeaturesParts
+        }
+      }
+    }
+  }
+}
+
 query getPostsDocument($relativePath: String!) {
   getPostsDocument(relativePath: $relativePath) {
     sys {

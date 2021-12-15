@@ -7,6 +7,7 @@
       "businessInfo",
       "menu",
       "doubleFeature",
+      "doubleFeatures",
       "posts"
     ]
   },
@@ -79,5 +80,23 @@
     "type": "PostsConnection",
     "resolveType": "collectionDocumentList",
     "collection": "posts"
+  },
+  "DoubleFeaturesDocument": {
+    "type": "DoubleFeaturesDocument",
+    "resolveType": "collectionDocument",
+    "collection": "doubleFeatures",
+    "createDoubleFeaturesDocument": "create",
+    "updateDoubleFeaturesDocument": "update"
+  },
+  "DoubleFeaturesConnection": {
+    "type": "DoubleFeaturesConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "doubleFeatures"
+  },
+  "DoubleFeaturesDoubleFeatureDocument": {
+    "type": "DoubleFeaturesDoubleFeatureDocument",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
   }
 }

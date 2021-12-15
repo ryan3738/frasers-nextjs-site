@@ -1,3 +1,4 @@
+import { DoubleFeature } from './__generated__/types';
 
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField, TinaTemplate } from "@tinacms/cli";
@@ -321,6 +322,27 @@ export default defineSchema({
           },
         },
 
+      ]
+    },
+    {
+      label: "Double Features",
+      name: "doubleFeatures",
+      path: "content/doubleFeature",
+      format: "mdx",
+      fields: [
+        {
+          type: "string",
+          label: "Name",
+          name: "name",
+        },
+        {
+          type: "reference",
+          label: "Double Feature",
+          name: "doubleFeature",
+          collections: [
+            "doubleFeature",
+          ]
+        }
       ]
     },
     {

@@ -6,10 +6,13 @@ export default function HomePage(props) {
   if (
     props.data &&
     props.data.getMenuDocument &&
-    props.data.getBusinessInfoDocument
+    props.data.getBusinessInfoDocument &&
+    props.data.getDoubleFeatureDocument
   ) {
     const menu = props.data.getMenuDocument.data;
     const businessInfo = props.data.getBusinessInfoDocument.data;
+    // const aboutBusiness = props.data.getDoubleFeatureDocument.data;
+    // console.log('ABOUT BUSINESS', aboutBusiness);
     return (
       <>
         <Home menu={menu} businessInfo={businessInfo} />
@@ -67,6 +70,19 @@ export const getDoubleFeatureFragment = `
     }
   }
 `;
+export const getDoubleFeatureListFragment = `
+    getDoubleFeatureList(first: 0, last: 1 ){
+    totalCount
+    edges {
+      node {
+        data {
+          title
+          subtitle
+        }
+      }
+    }
+  }
+`;
 
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
@@ -76,6 +92,7 @@ export const getStaticProps = async () => {
         ${getBusinessInfoQueryFragment}
         ${getGalleryGridFragment}
         ${getDoubleFeatureFragment}
+        ${getDoubleFeatureListFragment}
       }
     `,
     variables: {}
