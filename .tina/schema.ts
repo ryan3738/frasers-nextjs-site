@@ -2,6 +2,24 @@
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField, TinaTemplate } from "@tinacms/cli";
 
+const imageSchema: TinaField = {
+  type: "object",
+    label: "Image",
+      name: "image",
+        fields: [
+          {
+            type: "image",
+            label: "Image Source",
+            name: "src",
+          },
+          {
+            type: "string",
+            label: "Image Alt Text",
+            name: "alt",
+          },
+        ]
+}
+
 const hoursSchema: TinaField = {
   type: "object",
   label: "Hours",
@@ -286,16 +304,7 @@ export default defineSchema({
           label: "Subtitle",
           name: "subtitle",
         },
-        {
-          type: "image",
-          label: "Image",
-          name: "image",
-        },
-        {
-          type: "string",
-          label: "Image Alt Text",
-          name: "alt",
-        },
+        imageSchema,
         {
           type: "string",
           label: "Element ID",

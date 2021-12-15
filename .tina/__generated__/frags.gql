@@ -60,8 +60,11 @@ fragment MenuParts on Menu {
 fragment DoubleFeatureParts on DoubleFeature {
   title
   subtitle
-  image
-  alt
+  image {
+    __typename
+    src
+    alt
+  }
   elemntId
   body
 }

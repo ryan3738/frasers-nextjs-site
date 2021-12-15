@@ -490,21 +490,34 @@
           ]
         },
         {
-          "type": "image",
+          "type": "object",
           "label": "Image",
           "name": "image",
+          "fields": [
+            {
+              "type": "image",
+              "label": "Image Source",
+              "name": "src",
+              "namespace": [
+                "doubleFeature",
+                "image",
+                "src"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Image Alt Text",
+              "name": "alt",
+              "namespace": [
+                "doubleFeature",
+                "image",
+                "alt"
+              ]
+            }
+          ],
           "namespace": [
             "doubleFeature",
             "image"
-          ]
-        },
-        {
-          "type": "string",
-          "label": "Image Alt Text",
-          "name": "alt",
-          "namespace": [
-            "doubleFeature",
-            "alt"
           ]
         },
         {

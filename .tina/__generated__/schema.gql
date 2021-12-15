@@ -211,11 +211,15 @@ type MenuConnection implements Connection {
   edges: [MenuConnectionEdges]
 }
 
+type DoubleFeatureImage {
+  src: String
+  alt: String
+}
+
 type DoubleFeature {
   title: String!
   subtitle: String
-  image: String
-  alt: String
+  image: DoubleFeatureImage
   elemntId: String
   body: String
 }
@@ -355,11 +359,15 @@ input MenuMutation {
   sections: [MenuSectionsMutation]
 }
 
+input DoubleFeatureImageMutation {
+  src: String
+  alt: String
+}
+
 input DoubleFeatureMutation {
   title: String
   subtitle: String
-  image: String
-  alt: String
+  image: DoubleFeatureImageMutation
   elemntId: String
   body: String
 }
