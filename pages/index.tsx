@@ -6,9 +6,10 @@ export default function HomePage(props) {
   if (
     props.data &&
     props.data.getMenuDocument &&
-    props.data.getBusinessInfoDocument &&
-    props.data.getDoubleFeatureDocument
+    props.data.getBusinessInfoDocument
+    // props.data.getDoubleFeatureDocument
   ) {
+    console.log('HomePage props.data', props.data);
     const menu = props.data.getMenuDocument.data;
     const businessInfo = props.data.getBusinessInfoDocument.data;
     // const aboutBusiness = props.data.getDoubleFeatureDocument.data;
@@ -70,17 +71,10 @@ export const getDoubleFeatureFragment = `
     }
   }
 `;
-export const getDoubleFeatureListFragment = `
-    getDoubleFeatureList(first: 0, last: 1 ){
-    totalCount
-    edges {
-      node {
-        data {
-          title
-          subtitle
-        }
-      }
-    }
+
+export const getDoubleFeaturesFragment = `
+    getDoubleFeaturesDocument(relativePath: "home.mdx") {
+      id
   }
 `;
 
@@ -91,8 +85,6 @@ export const getStaticProps = async () => {
         ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
         ${getGalleryGridFragment}
-        ${getDoubleFeatureFragment}
-        ${getDoubleFeatureListFragment}
       }
     `,
     variables: {}

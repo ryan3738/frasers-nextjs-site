@@ -246,11 +246,22 @@ type DoubleFeatureConnection implements Connection {
   edges: [DoubleFeatureConnectionEdges]
 }
 
-union DoubleFeaturesDoubleFeatureDocument = DoubleFeatureDocument
+union DoubleFeaturesDoubleFeaturesDocument = DoubleFeatureDocument
+
+type DoubleFeaturesDoubleFeaturesConnectionEdges {
+  cursor: String
+  node: DoubleFeaturesDoubleFeaturesDocument
+}
+
+type DoubleFeaturesDoubleFeaturesConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Int!
+  edges: [DoubleFeaturesDoubleFeaturesConnectionEdges]
+}
 
 type DoubleFeatures {
   name: String
-  doubleFeature: DoubleFeaturesDoubleFeatureDocument
+  doubleFeatures(before: String, after: String, first: Int, last: Int): DoubleFeaturesDoubleFeaturesConnection!
 }
 
 type DoubleFeaturesDocument implements Node & Document {
@@ -406,7 +417,7 @@ input DoubleFeatureMutation {
 
 input DoubleFeaturesMutation {
   name: String
-  doubleFeature: String
+  doubleFeatures: [String]
 }
 
 input PostsMutation {

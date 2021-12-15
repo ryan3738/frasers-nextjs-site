@@ -69,17 +69,11 @@
     "resolveType": "collectionDocumentList",
     "collection": "doubleFeature"
   },
-  "PostsDocument": {
-    "type": "PostsDocument",
-    "resolveType": "collectionDocument",
-    "collection": "posts",
-    "createPostsDocument": "create",
-    "updatePostsDocument": "update"
-  },
-  "PostsConnection": {
-    "type": "PostsConnection",
-    "resolveType": "collectionDocumentList",
-    "collection": "posts"
+  "DoubleFeaturesDoubleFeatureDocument": {
+    "type": "DoubleFeaturesDoubleFeatureDocument",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
   },
   "DoubleFeaturesDocument": {
     "type": "DoubleFeaturesDocument",
@@ -93,10 +87,36 @@
     "resolveType": "collectionDocumentList",
     "collection": "doubleFeatures"
   },
-  "DoubleFeaturesDoubleFeatureDocument": {
-    "type": "DoubleFeaturesDoubleFeatureDocument",
+  "PostsDocument": {
+    "type": "PostsDocument",
+    "resolveType": "collectionDocument",
+    "collection": "posts",
+    "createPostsDocument": "create",
+    "updatePostsDocument": "update"
+  },
+  "PostsConnection": {
+    "type": "PostsConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "posts"
+  },
+  "DoubleFeaturesDoubleFeaturesDocument": {
+    "type": "DoubleFeaturesDoubleFeaturesDocument",
     "resolveType": "multiCollectionDocument",
     "createDocument": "create",
     "updateDocument": "update"
+  },
+  "DoubleFeaturesDoubleFeaturesConnection": {
+    "type": "DoubleFeaturesDoubleFeaturesConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "doubleFeature"
+    ]
+  },
+  "DoubleFeaturesDoubleFeatureConnection": {
+    "type": "DoubleFeaturesDoubleFeatureConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "doubleFeature"
+    ]
   }
 }

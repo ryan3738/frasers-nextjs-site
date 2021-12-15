@@ -318,7 +318,7 @@ export default defineSchema({
           name: "body",
           isBody: true,
           ui: {
-            component: "textarea"
+            component: "markdown"
           },
         },
 
@@ -337,8 +337,12 @@ export default defineSchema({
         },
         {
           type: "reference",
-          label: "Double Feature",
-          name: "doubleFeature",
+          label: "Double Features",
+          name: "doubleFeatures",
+          ui: {
+            component: "groupList",
+          },
+          list: true,
           collections: [
             "doubleFeature",
           ]

@@ -21,6 +21,9 @@ const App = ({ Component, pageProps }) => {
               Number(process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT)
             )}
             cmsCallback={cms => {
+              import('react-tinacms-editor').then(field => {
+                cms.plugins.add(field.MarkdownFieldPlugin);
+              });
               import('tinacms').then(({ GroupListFieldPlugin }) => {
                 cms.fields.add({
                   ...GroupListFieldPlugin,

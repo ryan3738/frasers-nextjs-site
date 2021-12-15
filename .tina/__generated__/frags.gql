@@ -71,7 +71,7 @@ fragment DoubleFeatureParts on DoubleFeature {
 
 fragment DoubleFeaturesParts on DoubleFeatures {
   name
-  doubleFeature {
+  doubleFeatures {
     ... on Document {
       id
     }

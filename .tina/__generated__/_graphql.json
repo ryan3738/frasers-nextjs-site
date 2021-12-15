@@ -3516,7 +3516,7 @@
       "kind": "UnionTypeDefinition",
       "name": {
         "kind": "Name",
-        "value": "DoubleFeaturesDoubleFeatureDocument"
+        "value": "DoubleFeaturesDoubleFeaturesDocument"
       },
       "directives": [],
       "types": [
@@ -3525,6 +3525,117 @@
           "name": {
             "kind": "Name",
             "value": "DoubleFeatureDocument"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ObjectTypeDefinition",
+      "interfaces": [],
+      "directives": [],
+      "name": {
+        "kind": "Name",
+        "value": "DoubleFeaturesDoubleFeaturesConnectionEdges"
+      },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "cursor"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "node"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "DoubleFeaturesDoubleFeaturesDocument"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "kind": "ObjectTypeDefinition",
+      "interfaces": [
+        {
+          "kind": "NamedType",
+          "name": {
+            "kind": "Name",
+            "value": "Connection"
+          }
+        }
+      ],
+      "directives": [],
+      "name": {
+        "kind": "Name",
+        "value": "DoubleFeaturesDoubleFeaturesConnection"
+      },
+      "fields": [
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "pageInfo"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "PageInfo"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "totalCount"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "Int"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "edges"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "ListType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "DoubleFeaturesDoubleFeaturesConnectionEdges"
+              }
+            }
           }
         }
       ]
@@ -3557,14 +3668,74 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "doubleFeature"
+            "value": "doubleFeatures"
           },
-          "arguments": [],
+          "arguments": [
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "before"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "String"
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "after"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "String"
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "first"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Int"
+                }
+              }
+            },
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "last"
+              },
+              "type": {
+                "kind": "NamedType",
+                "name": {
+                  "kind": "Name",
+                  "value": "Int"
+                }
+              }
+            }
+          ],
           "type": {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "DoubleFeaturesDoubleFeatureDocument"
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "DoubleFeaturesDoubleFeaturesConnection"
+              }
             }
           }
         }
@@ -5798,13 +5969,16 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "doubleFeature"
+            "value": "doubleFeatures"
           },
           "type": {
-            "kind": "NamedType",
-            "name": {
-              "kind": "Name",
-              "value": "String"
+            "kind": "ListType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "String"
+              }
             }
           }
         }
