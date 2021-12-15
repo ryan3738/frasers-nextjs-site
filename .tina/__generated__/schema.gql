@@ -217,7 +217,7 @@ type DoubleFeatureImage {
 }
 
 type DoubleFeature {
-  title: String!
+  title: String
   subtitle: String
   image: DoubleFeatureImage
   elemntId: String

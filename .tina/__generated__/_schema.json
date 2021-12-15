@@ -474,7 +474,6 @@
           "type": "string",
           "label": "Title",
           "name": "title",
-          "required": true,
           "namespace": [
             "doubleFeature",
             "title"

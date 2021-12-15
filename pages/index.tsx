@@ -72,6 +72,20 @@ export const getDoubleFeatureFragment = `
   }
 `;
 
+export const getDoubleFeatureListFragment = `
+    getDoubleFeatureList(first: 0, last: 1){
+    totalCount
+    edges {
+      node {
+        id
+        data {
+          title
+        }
+      }
+    }
+  }
+`;
+
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
@@ -79,6 +93,7 @@ export const getStaticProps = async () => {
         ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
         ${getGalleryGridFragment}
+        ${getDoubleFeatureListFragment}
       }
     `,
     variables: {}
