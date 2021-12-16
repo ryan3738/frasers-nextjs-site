@@ -13,7 +13,10 @@ interface ContactProps {
 export default function ContactInfo({ heading, address, phoneNumber }: ContactProps) {
     return (
             <>
-                {heading && <h2>{heading}</h2>}
+                {heading && <h2 className="header-wrapper">{heading}
+                <div className="divider" />
+                </h2>
+                }
                 <p>
                     <span className="medium-emphasis">
                         {address && (
@@ -45,11 +48,21 @@ export default function ContactInfo({ heading, address, phoneNumber }: ContactPr
                     </span>
                 </p>
         <style jsx>{`
+            .header-wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             .item-detail {
             margin: 1.45rem 0 0 0;
           }
+          .divider {
+          border: 1px solid var(--primary-color-desaturated);
+          width: 80%;
+          height: 1px;
+          margin-top: 1rem;
+        }
       `}</style>
     </>
-
     );
 }

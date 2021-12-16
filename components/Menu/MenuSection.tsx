@@ -12,7 +12,7 @@ export default function MenuSection({ section,
   return (
     <div id={category} className="menu-container">
       <h2 className="menu-header">{section.name}</h2>
-      <div className="line" />
+      <div className="divider" />
       <div className="menu-section">
       {
           section.items.filter(item => item.available === true).map(
@@ -31,10 +31,10 @@ export default function MenuSection({ section,
             grid-gap: 5px;
             padding: 5%;
           }
-        .line {
-          border: 0.5px solid var(--primary-color-desaturated);
+          .divider {
+          border: 1px solid var(--primary-color-desaturated);
           width: 100%;
-          height: 0px;
+          height: 1px;
         }
       `}</style>
     </div>
