@@ -27,6 +27,7 @@ export default function Hours({ hours }: HoursProps) {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
             }
         .uppercase {
           text-transform: uppercase;
@@ -35,7 +36,7 @@ export default function Hours({ hours }: HoursProps) {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 1.45rem 0 0 0;
+            margin: 0 0 1.45rem 0;
           }
 
           .hours-container {
