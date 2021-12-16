@@ -57,7 +57,10 @@ const getGalleryItem = (galleryArray:ImageProps[]) => (
         max-width: 360px;
         width: 100vw;
         border: 0px solid black;
-        padding: 5px;
+        outline-offset: -3px;
+        outline: 0px solid var(--primary-color);
+        padding: 12px;
+        transition: all 0.3s ease-in-out;
       }
 
       .image-overlay {
@@ -73,6 +76,13 @@ const getGalleryItem = (galleryArray:ImageProps[]) => (
         opacity: 0;
         transition: all 0.3s ease-in-out;
       }
+
+      #image-div:hover, #image-div:active {
+        outline-offset: -12px;
+        outline: 2px solid var(--primary-color);
+      }
+
+
       #image-div:active .image-overlay,
       #image-div:hover .image-overlay {
         opacity: 0.4;
