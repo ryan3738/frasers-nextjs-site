@@ -13,11 +13,11 @@ export default function Hero({ businessInfo }: HeroProps) {
           <div className="welcome-inner-box">
             <p className="spaced-text">Est. | 2006</p>
             <br />
-            <h1 className="title">FRASERS</h1>
             <div className="welcome-logo">
               <Image
                 src="/images/frasers-logo.png"
                 alt="Frasers Gourmet Hideaway Logo"
+                title="Frasers"
                 layout="responsive"
                 width={228}
                 height={104}
@@ -30,6 +30,7 @@ export default function Hero({ businessInfo }: HeroProps) {
               href={businessInfo.address.directions}
               target="_blank"
               rel="noreferrer noopener"
+              title="Click to Get Directions"
             >
               {`${businessInfo.address.street} ${businessInfo.address.street2}`}
               <br />
@@ -39,14 +40,10 @@ export default function Hero({ businessInfo }: HeroProps) {
             <br />
             <h3>Reservations Recommended</h3>
             <p>
-              <strong> CALL FOR TAKEOUT</strong>
+              <strong>CALL FOR TAKEOUT</strong>
               <br />
             </p>
-            {/* <Button
-              buttonText="ORDER ONLINE"
-              buttonLink={siteData.websites.onlineStore}
-            /> */}
-            <a href={`tel:${businessInfo.phoneNumber}`}>{businessInfo.phoneNumber}</a>
+            <a href={`tel:${businessInfo.phoneNumber}`} title="Click to Call">{businessInfo.phoneNumber}</a>
             <br />
             <br />
             <div>
@@ -98,12 +95,6 @@ export default function Hero({ businessInfo }: HeroProps) {
           display: block;
         }
 
-        .title {
-          /* font-size: 3rem; */
-          color: var(--primary-color);
-          text-align: center;
-          display: none;
-        }
         .spaced-text {
           letter-spacing: 0.5rem;
           margin-bottom: 0;
