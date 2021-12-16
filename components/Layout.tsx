@@ -37,6 +37,10 @@ const navigationLinks = [
     href: '/#about'
   },
   {
+    text: 'Gallery',
+    href: '/#gallery'
+  },
+  {
     text: 'Contact',
     href: '/#contact'
   }
