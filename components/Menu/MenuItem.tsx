@@ -15,13 +15,13 @@ export default function MenuItem({ item }: MenuItemProps) {
         ) : (
           ''
         )}
-            <div className="primary-color item-detail" aria-label={`$${item.price}`}>{item.price}</div>
+          {item.price > 0 && <div className="primary-color item-detail" aria-label={`$${item.price}`}>{item.price}</div>}
         {item.modifiers ? (
           item.modifiers.map(modifier => {
             return (
               <div key={modifier.name} className="modifier item-detail">
               {modifier.name}&nbsp;
-                <span className="primary-color" aria-label={`$${modifier.price}`}>{modifier.price}</span>
+                {modifier.price > 0 && <span className="primary-color" aria-label={`$${modifier.price}`}>{modifier.price}</span>}
             </div>
             )
           })
@@ -52,12 +52,13 @@ export default function MenuItem({ item }: MenuItemProps) {
           .primary-color {
             color: var(--primary-color-desaturated);
           }
+          .modifier {
+            text-transform: uppercase;
+            font-size: 0.85028rem;
+          }
           .dietary-preferences {
             font-size: 0.78405rem;
             line-height: 1.1;
-            text-transform: uppercase;
-          }
-          .modifier {
             text-transform: uppercase;
           }
           .item-detail {
