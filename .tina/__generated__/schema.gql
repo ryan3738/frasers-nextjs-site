@@ -185,7 +185,7 @@ type MenuSections {
 }
 
 type Menu {
-  name: String!
+  name: String
   description: String
   available: Boolean
   sections: [MenuSections]

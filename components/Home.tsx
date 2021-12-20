@@ -91,7 +91,7 @@ export default function Home({ menu, businessInfo }: HomeProps) {
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <Menu menu={menu} pathName="/" categories={['Starters', 'Entrees']} />
+          <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
         </section>
         <section id="gallery">
           <div className={styles.header}>

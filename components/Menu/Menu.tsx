@@ -3,22 +3,24 @@ import NavBar from "../NavBar"
 import { Menu } from '../../.tina/__generated__/types';
 
 interface MenuProps {
-    categories: string[];
+    sections: string[];
     pathName: string;
     menu: Menu;
 }
 
-const Menu = ({ menu, categories, pathName }:MenuProps) => {
+const Menu = ({ menu, sections, pathName }:MenuProps) => {
     if (!menu) {
         return <div>No Menu Found</div>
     }
-    const links = categories.map(category => {
-        return { href: `${pathName}#${category}`, text: category}});
+    const links = sections.map(section => {
+    return { href: `${pathName}#${section}`, text: section}});
+
+    if (!menu) { return <div>No Menu Found</div> }
    return (
         <>
-            {categories.map((category) =>{
-                const section = menu.sections.find(section => section.name === category);
-                return<MenuSection section={section} key={category} category={category}/>})}
+            {sections.map((item) =>{
+                const section = menu?.sections?.find(section => section.name === item);
+                return<MenuSection section={section} key={item} category={item}/>})}
             <NavBar showHomeLink={false} links={links} position='sticky' location='bottom' />
         </>
        )

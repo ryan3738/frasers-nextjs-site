@@ -274,7 +274,6 @@ export default defineSchema({
             type: "string",
             label: "Name of Menu",
             name: "name",
-            required: true,
           },
           {
             type: "string",

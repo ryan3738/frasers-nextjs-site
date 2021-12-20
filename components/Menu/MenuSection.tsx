@@ -9,13 +9,16 @@ interface MenuSectionProps {
 export default function MenuSection({ section,
   category
 }: MenuSectionProps): JSX.Element {
+  // if(!section) {
+  //   return <div>No Menu Section Found</div>;
+  // }
   return (
     <div id={category} className="menu-container">
-      <h2 className="menu-header">{section.name}</h2>
+      <h2 className="menu-header">{section?.name}</h2>
       <div className="divider" />
       <div className="menu-section">
       {
-          section.items.filter(item => item.available === true).map(
+          section?.items?.filter(item => item.available === true).map(
             item => <MenuItem key={item.name} item={item}  />
           )
       }

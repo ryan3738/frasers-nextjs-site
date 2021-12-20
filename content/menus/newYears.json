@@ -1,1 +1,85 @@
-{}
+{
+  "name": "New Year's Eve Menu",
+  "description": "This is the new year's eve menu",
+  "available": true,
+  "sections": [
+    {
+      "name": "Dessert",
+      "items": [
+        {
+          "name": "House Made Belgium Waffle",
+          "description": "Glazed Fresh Fruits & Berries, Bourbon Whip",
+          "price": 0,
+          "available": true
+        },
+        {
+          "name": "Hazelnut & White Chocolate Pot Au Creme",
+          "description": "Caramel, Maple Walnut Ice Cream, Candy Cane Coral",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Amuse Bouche",
+      "items": [
+        {
+          "name": "Smoked Duck Crostini",
+          "available": true
+        },
+        {
+          "name": "Petite Vegetarian Samosa ",
+          "available": true
+        },
+        {
+          "name": "Kumamoto Oyster",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "First Course",
+      "items": [
+        {
+          "name": "Cold Carrot Coconut Soup",
+          "description": "Dungeness Crab, Pea Shoots. Pepitas, Thai Basil",
+          "available": true
+        },
+        {
+          "name": "Pork Belly Rillette",
+          "description": "Pickled vegetables, Crispy Pork Confit, Cracklins, Beet Blood",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Second Course",
+      "items": [
+        {
+          "name": "Poblano, Goat Cheese & Egg Yolk Raviolo",
+          "description": "Poblano, Goat Cheese & Egg Yolk Raviolo",
+          "available": true
+        },
+        {
+          "name": "Seared Day Boat Scallop",
+          "description": "Butternut Squash Risotto, Chimichurri Sauce",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Third Course",
+      "items": [
+        {
+          "name": "Wagyu Flat Iron Steak",
+          "description": "Beef Cheek Croquette, Roasted Carrots, Brussels Sprouts, Reduction Sauce",
+          "available": true
+        },
+        {
+          "name": "Prosciutto Wrapped Monkfish",
+          "description": "Tempura Lobster, Barley, Veg Pearls, Lobster Beurre Blanc",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

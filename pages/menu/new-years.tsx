@@ -1,18 +1,25 @@
 import Head from 'next/head';
 
 import { getStaticPropsForTina, gql } from 'tinacms';
-import Layout from '../components/Layout';
-import Menu from '../components/Menu/MenuPage';
+import Layout from '../../components/Layout';
+import Menu from '../../components/Menu/MenuPage';
 
 export default function MenuPage(props) {
+  const sections = [
+    'Amuse Bouche',
+    'First Course',
+    'Second Course',
+    'Third Course',
+    'Dessert'
+  ];
   if (props.data && props.data.getMenuDocument) {
     const menu = props.data.getMenuDocument.data;
     return (
       <Layout>
         <Head>
-          <title>MENU</title>
+          <title>New Years Menu</title>
         </Head>
-        <Menu menu={menu} />
+        <Menu menu={menu} sections={sections} />
       </Layout>
     );
   }
@@ -20,7 +27,7 @@ export default function MenuPage(props) {
 }
 
 export const getMenuQueryFragment = `
-  getMenuDocument(relativePath: "dinnerMenu.json") {
+  getMenuDocument(relativePath: "newYears.json") {
           data {
             name
             description

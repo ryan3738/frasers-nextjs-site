@@ -1,6 +1,6 @@
 import { getStaticPropsForTina, gql } from 'tinacms';
 import Home from '../components/Home';
-import { getMenuQueryFragment } from './menu';
+import { getMenuQueryFragment } from './menu/index';
 
 export default function HomePage(props) {
   if (
