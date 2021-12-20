@@ -36,6 +36,7 @@ fragment MenuParts on Menu {
   sections {
     __typename
     name
+    description
     items {
       __typename
       name

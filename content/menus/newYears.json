@@ -4,25 +4,11 @@
   "available": true,
   "sections": [
     {
-      "name": "Dessert",
-      "items": [
-        {
-          "name": "House Made Belgium Waffle",
-          "description": "Glazed Fresh Fruits & Berries, Bourbon Whip",
-          "available": true
-        },
-        {
-          "name": "Hazelnut & White Chocolate Pot Au Creme",
-          "description": "Caramel, Maple Walnut Ice Cream, Candy Cane Coral",
-          "available": true
-        }
-      ]
-    },
-    {
       "name": "Amuse Bouche",
       "items": [
         {
           "name": "Smoked Duck Crostini",
+          "price": 0,
           "available": true
         },
         {
@@ -39,13 +25,24 @@
       "name": "First Course",
       "items": [
         {
-          "name": "Cold Carrot Coconut Soup",
-          "description": "Dungeness Crab, Pea Shoots. Pepitas, Thai Basil",
+          "name": "Pork Belly Rillette",
+          "description": "Pickled vegetables, Crispy Pork Confit, Cracklins, Beet Blood",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing:   Domaine Ste Michelle Brut",
+              "price": 0
+            }
+          ],
           "available": true
         },
         {
-          "name": "Pork Belly Rillette",
-          "description": "Pickled vegetables, Crispy Pork Confit, Cracklins, Beet Blood",
+          "name": "Cold Carrot Coconut Soup",
+          "description": "Dungeness Crab, Pea Shoots. Pepitas, Thai Basil",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing:   Domaine Ste Michelle Brut"
+            }
+          ],
           "available": true
         }
       ]
@@ -76,6 +73,21 @@
         {
           "name": "Prosciutto Wrapped Monkfish",
           "description": "Tempura Lobster, Barley, Veg Pearls, Lobster Beurre Blanc",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        {
+          "name": "House Made Belgium Waffle",
+          "description": "Glazed Fresh Fruits & Berries, Bourbon Whip",
+          "available": true
+        },
+        {
+          "name": "Hazelnut & White Chocolate Pot Au Creme",
+          "description": "Caramel, Maple Walnut Ice Cream, Candy Cane Coral",
           "available": true
         }
       ]

@@ -147,7 +147,11 @@ const menuSectionSchema: TinaField = {
       type: "string",
       label: "Name",
       name: "name",
-      required: true
+    },
+    {
+      type: "string",
+      label: "Description",
+      name: "description",
     },
     menuItemSchema,
   ]
