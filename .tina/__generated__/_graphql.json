@@ -2752,6 +2752,21 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
+            "value": "notes"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
             "value": "available"
           },
           "arguments": [],
@@ -5097,6 +5112,20 @@
           "name": {
             "kind": "Name",
             "value": "description"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "notes"
           },
           "type": {
             "kind": "NamedType",

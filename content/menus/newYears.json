@@ -1,6 +1,7 @@
 {
   "name": "New Year's Eve Menu",
   "description": "This is the new year's eve menu",
+  "notes": "4 Course Dinner $85 | Add 4 Course Wine Pairing $40",
   "available": true,
   "sections": [
     {
@@ -51,13 +52,13 @@
       "name": "Second Course",
       "items": [
         {
-          "name": "Poblano, Goat Cheese & Egg Yolk Raviolo",
-          "description": "Poblano, Goat Cheese & Egg Yolk Raviolo",
+          "name": "Seared Day Boat Scallop",
+          "description": "Butternut Squash Risotto, Chimichurri Sauce",
           "available": true
         },
         {
-          "name": "Seared Day Boat Scallop",
-          "description": "Butternut Squash Risotto, Chimichurri Sauce",
+          "name": "Poblano, Goat Cheese & Egg Yolk Raviolo",
+          "description": "Poblano, Goat Cheese & Egg Yolk Raviolo",
           "available": true
         }
       ]
@@ -66,13 +67,23 @@
       "name": "Third Course",
       "items": [
         {
-          "name": "Wagyu Flat Iron Steak",
-          "description": "Beef Cheek Croquette, Roasted Carrots, Brussels Sprouts, Reduction Sauce",
+          "name": "Prosciutto Wrapped Monkfish",
+          "description": "Tempura Lobster, Barley, Veg Pearls, Lobster Beurre Blanc",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing:  Alexana Chardonnay"
+            }
+          ],
           "available": true
         },
         {
-          "name": "Prosciutto Wrapped Monkfish",
-          "description": "Tempura Lobster, Barley, Veg Pearls, Lobster Beurre Blanc",
+          "name": "Wagyu Flat Iron Steak",
+          "description": "Beef Cheek Croquette, Roasted Carrots, Brussels Sprouts, Reduction Sauce",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing : DiStefano Winery Domenica"
+            }
+          ],
           "available": true
         }
       ]
@@ -83,11 +94,21 @@
         {
           "name": "House Made Belgium Waffle",
           "description": "Glazed Fresh Fruits & Berries, Bourbon Whip",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing : Chateau De Cosse Sauternes"
+            }
+          ],
           "available": true
         },
         {
           "name": "Hazelnut & White Chocolate Pot Au Creme",
           "description": "Caramel, Maple Walnut Ice Cream, Candy Cane Coral",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing : Chateau De Cosse Sauternes"
+            }
+          ],
           "available": true
         }
       ]

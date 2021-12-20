@@ -188,6 +188,7 @@ type MenuSections {
 type Menu {
   name: String
   description: String
+  notes: String
   available: Boolean
   sections: [MenuSections]
 }
@@ -357,6 +358,7 @@ input MenuSectionsMutation {
 input MenuMutation {
   name: String
   description: String
+  notes: String
   available: Boolean
   sections: [MenuSectionsMutation]
 }

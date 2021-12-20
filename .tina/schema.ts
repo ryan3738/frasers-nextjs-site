@@ -285,6 +285,11 @@ export default defineSchema({
             name: "description",
           },
           {
+            type: "string",
+            label: "Notes",
+            name: "notes",
+          },
+          {
             type: "boolean",
             label: "Available",
             name: "available",
