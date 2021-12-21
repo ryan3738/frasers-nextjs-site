@@ -31,10 +31,17 @@ export default function NavList({
       ))}
       <style jsx>{`
         .nav-link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           text-transform: uppercase;
-          padding: 1em;
+          padding: 0 3.25rem;
           margin: auto;
           font-weight: 600;
+          min-height: 48px;
+          min-width: 48px;
+          height: 100%;
+          width: auto;
         }
         a {
           transition: all 0.3s ease-in-out;
@@ -47,6 +54,8 @@ export default function NavList({
       <style jsx>{`
         .burger-menu-link {
           margin: 0;
+          height: auto;
+          width: 100%;
         }
         .show-on-large {
           display: none;
