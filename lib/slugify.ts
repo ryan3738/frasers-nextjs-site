@@ -1,4 +1,4 @@
-function slugify({ text }: { text: string }): string {
+function slugify(text: string): string {
   // Turn the string into a slug
   return text
     .toLowerCase()
