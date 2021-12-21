@@ -20,12 +20,14 @@ export default function MenuPage(props) {
 }
 
 export const getMenuQueryFragment = `
-  getMenuDocument(relativePath: "dinnerMenu.json") {
+  getMenuDocument(relativePath: $menuRelativePath) {
           data {
             name
             description
+            notes
             sections {
               name
+              description
               items {
                 name
                 description
@@ -46,11 +48,11 @@ export const getMenuQueryFragment = `
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query MenuQuery {
+      query MenuQuery($menuRelativePath: String!) {
         ${getMenuQueryFragment}
       }
     `,
-    variables: {}
+    variables: { menuRelativePath: 'dinnerMenu.json' }
   });
   return {
     props: {

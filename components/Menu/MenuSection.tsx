@@ -4,16 +4,17 @@ import { MenuSections } from '../../.tina/__generated__/types';
 interface MenuSectionProps {
   category: string;
   section: MenuSections;
+  id: string;
 }
 
 export default function MenuSection({ section,
-  category
+  category, id
 }: MenuSectionProps): JSX.Element {
   // if(!section) {
   //   return <div>No Menu Section Found</div>;
   // }
   return (
-    <div id={category} className="menu-container">
+    <div id={id} className="menu-container">
       <h2 className="menu-header">{section?.name}</h2>
       <div className="divider" />
       <div className="menu-section">
@@ -31,7 +32,9 @@ export default function MenuSection({ section,
         .menu-section {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-            grid-gap: 5px;
+            align-items: stretch;
+            justify-items: stretch;
+            grid-gap: 12px;
             padding: 5%;
           }
           .divider {

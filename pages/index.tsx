@@ -85,14 +85,14 @@ export const getDoubleFeatureListFragment = `
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query MenuQuery{
+      query MenuQuery($menuRelativePath: String!){
         ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
         ${getGalleryGridFragment}
         ${getDoubleFeatureListFragment}
       }
     `,
-    variables: {}
+    variables: { menuRelativePath: 'dinnerMenu.json' }
   });
   return {
     props: {

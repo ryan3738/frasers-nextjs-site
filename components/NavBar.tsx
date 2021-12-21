@@ -72,6 +72,9 @@ export default function NavBar({
           display: flex;
           justify-content: left;
           align-items: center;
+          max-width: 100vw;
+          overflow:auto;
+          overflow-y: hidden;
           height: 4em;
           top: 0;
         }
