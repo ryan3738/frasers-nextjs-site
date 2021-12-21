@@ -21,7 +21,7 @@ export default function MenuSection({
       <div className="divider" />
       <div className="menu-section">
         {section?.items
-          ?.filter(item => item.available === true)
+          .filter(item => item.available === true)
           .map(item => (
             <MenuItem key={item.name} item={item} />
           ))}
