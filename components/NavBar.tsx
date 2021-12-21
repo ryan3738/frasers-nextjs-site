@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-redundant-boolean */
 import Link from 'next/link';
 import { useRef } from 'react';
 import Burger from './Burger';
@@ -58,6 +59,7 @@ export default function NavBar({
         }
         .nav-bar {
           ${location}: 0;
+          ${location === 'bottom' ? 'border-radius: 7px 7px 0 0;' : ''}
           left: 0;
           z-index: 999;
           position: ${position};
