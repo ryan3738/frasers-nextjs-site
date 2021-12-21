@@ -244,7 +244,6 @@
           "type": "string",
           "label": "Name of Menu",
           "name": "name",
-          "required": true,
           "namespace": [
             "menu",
             "name"
@@ -257,6 +256,15 @@
           "namespace": [
             "menu",
             "description"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Notes",
+          "name": "notes",
+          "namespace": [
+            "menu",
+            "notes"
           ]
         },
         {
@@ -281,11 +289,20 @@
               "type": "string",
               "label": "Name",
               "name": "name",
-              "required": true,
               "namespace": [
                 "menu",
                 "sections",
                 "name"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "menu",
+                "sections",
+                "description"
               ]
             },
             {

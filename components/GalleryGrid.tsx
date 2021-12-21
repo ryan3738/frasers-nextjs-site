@@ -9,31 +9,34 @@ interface GridProps {
   images: ImageProps[];
 }
 
-const getGalleryItem = (galleryArray:ImageProps[]) => (
+const getGalleryItem = (galleryArray: ImageProps[]): JSX.Element => (
   <>
     <div className="gallery-container">
       {galleryArray
         // .filter((e) => e.Category === category)
         // .filter((e) => e.Available === true)
-        .map(data => (
-          data.src && (<div
-            key={data.alt}
-            id="image-div"
-            // className={data.size}
-          >
-            <div className="image-overlay"> </div>
-            <div className="overlay-text">{data.alt}</div>
-            <Image
-              className="image"
-              src={data.src}
-              alt={data.alt}
-              layout="responsive"
-              objectFit="cover"
-              height="560"
-              width="560"
-            />
-          </div>)
-        ))}
+        .map(
+          data =>
+            data.src && (
+              <div
+                key={data.alt}
+                id="image-div"
+                // className={data.size}
+              >
+                <div className="image-overlay"> </div>
+                <div className="overlay-text">{data.alt}</div>
+                <Image
+                  className="image"
+                  src={data.src}
+                  alt={data.alt}
+                  layout="responsive"
+                  objectFit="cover"
+                  height="560"
+                  width="560"
+                />
+              </div>
+            )
+        )}
     </div>
     <style jsx>{`
       .gallery-container {
@@ -77,11 +80,11 @@ const getGalleryItem = (galleryArray:ImageProps[]) => (
         transition: all 0.3s ease-in-out;
       }
 
-      #image-div:hover, #image-div:active {
+      #image-div:hover,
+      #image-div:active {
         outline-offset: -12px;
         outline: 2px solid var(--primary-color);
       }
-
 
       #image-div:active .image-overlay,
       #image-div:hover .image-overlay {
@@ -115,6 +118,6 @@ const getGalleryItem = (galleryArray:ImageProps[]) => (
   </>
 );
 
-export default function GalleryGrid({ images }: GridProps) {
+export default function GalleryGrid({ images }: GridProps): JSX.Element {
   return <>{getGalleryItem(images)}</>;
 }

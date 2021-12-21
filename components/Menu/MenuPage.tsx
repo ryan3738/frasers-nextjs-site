@@ -6,11 +6,17 @@ import { Menu as MenuType } from '../../.tina/__generated__/types';
 
 interface MenuPageProps {
   menu: MenuType;
+  sections: string[];
 }
 
-export default function MenuPage({ menu }) {
+export default function MenuPage({
+  menu,
+  sections,
+}: MenuPageProps): JSX.Element {
   const { pathname } = useRouter();
-  const menuCategories = ['Starters', 'Entrees'];
+  if (!menu) {
+    return <div>No Menu Found</div>;
+  }
   return (
     <>
       <Head>
@@ -20,7 +26,7 @@ export default function MenuPage({ menu }) {
         <div className={styles.header}>
           <h1>MENU</h1>
         </div>
-        <Menu menu={menu} pathName={pathname} categories={menuCategories} />
+        <Menu menu={menu} pathName={pathname} sections={sections} />
       </section>
       <style jsx>{`
         .menu-container {

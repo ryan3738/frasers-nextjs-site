@@ -8,7 +8,7 @@ import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
-import {Menu as MenuType, BusinessInfo} from '../.tina/__generated__/types';
+import { Menu as MenuType, BusinessInfo } from '../.tina/__generated__/types';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
@@ -17,7 +17,7 @@ interface HomeProps {
   businessInfo: BusinessInfo;
 }
 
-export default function Home({ menu, businessInfo }: HomeProps) {
+export default function Home({ menu, businessInfo }: HomeProps): JSX.Element {
   const { phoneNumber } = businessInfo;
   return (
     <>
@@ -80,7 +80,7 @@ export default function Home({ menu, businessInfo }: HomeProps) {
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutOwner.content
+                  __html: aboutOwner.content,
                 }}
               />
             </Double>
@@ -91,7 +91,7 @@ export default function Home({ menu, businessInfo }: HomeProps) {
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <Menu menu={menu} pathName="/" categories={['Starters', 'Entrees']} />
+          <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
         </section>
         <section id="gallery">
           <div className={styles.header}>

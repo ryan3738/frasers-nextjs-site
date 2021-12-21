@@ -1,4 +1,4 @@
-export default function Button({ buttonText, buttonLink }) {
+export default function Button({ buttonText, buttonLink }): JSX.Element {
   return (
     <>
       <a href={buttonLink}>

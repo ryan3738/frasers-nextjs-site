@@ -10,13 +10,17 @@ interface ContactProps {
   businessInfo: BusinessInfo;
 }
 
-export default function Contact({ businessInfo }: ContactProps) {
+export default function Contact({ businessInfo }: ContactProps): JSX.Element {
   return (
     <>
       <div className="contact-content">
         <div id="contact-info">
           <div>
-            <ContactInfo heading="Location" address={businessInfo.address} phoneNumber={businessInfo.phoneNumber} />
+            <ContactInfo
+              heading="Location"
+              address={businessInfo.address}
+              phoneNumber={businessInfo.phoneNumber}
+            />
           </div>
           <div>
             <Hours hours={businessInfo.hours} />

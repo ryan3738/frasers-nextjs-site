@@ -5,7 +5,7 @@ interface HeroProps {
   businessInfo?: BusinessInfo;
 }
 
-export default function Hero({ businessInfo }: HeroProps) {
+export default function Hero({ businessInfo }: HeroProps): JSX.Element {
   return (
     <>
       <div id="welcome" className="welcome-container">
@@ -43,7 +43,9 @@ export default function Hero({ businessInfo }: HeroProps) {
               <strong>CALL FOR TAKEOUT</strong>
               <br />
             </p>
-            <a href={`tel:${businessInfo.phoneNumber}`} title="Click to Call">{businessInfo.phoneNumber}</a>
+            <a href={`tel:${businessInfo.phoneNumber}`} title="Click to Call">
+              {businessInfo.phoneNumber}
+            </a>
             <br />
             <br />
             <div>

@@ -1,10 +1,10 @@
 import Head from 'next/head';
-
 import { getStaticPropsForTina, gql } from 'tinacms';
-import Layout from '../components/Layout';
-import Menu from '../components/Menu/MenuPage';
+import Layout from '../../components/Layout';
+import Menu from '../../components/Menu/MenuPage';
 
-export default function MenuPage(props) {
+export default function MenuPage(props): JSX.Element {
+  const sections = ['Starters', 'Entrees'];
   if (props.data && props.data.getMenuDocument) {
     const menu = props.data.getMenuDocument.data;
     return (
@@ -12,7 +12,7 @@ export default function MenuPage(props) {
         <Head>
           <title>MENU</title>
         </Head>
-        <Menu menu={menu} />
+        <Menu menu={menu} sections={sections} />
       </Layout>
     );
   }
@@ -20,12 +20,14 @@ export default function MenuPage(props) {
 }
 
 export const getMenuQueryFragment = `
-  getMenuDocument(relativePath: "dinnerMenu.json") {
+  getMenuDocument(relativePath: $menuRelativePath) {
           data {
             name
             description
+            notes
             sections {
               name
+              description
               items {
                 name
                 description
@@ -46,15 +48,15 @@ export const getMenuQueryFragment = `
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query MenuQuery {
+      query MenuQuery($menuRelativePath: String!) {
         ${getMenuQueryFragment}
       }
     `,
-    variables: {}
+    variables: { menuRelativePath: 'dinnerMenu.json' },
   });
   return {
     props: {
-      ...tinaProperties
-    }
+      ...tinaProperties,
+    },
   };
 };

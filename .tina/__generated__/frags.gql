@@ -32,10 +32,12 @@ fragment BusinessInfoParts on BusinessInfo {
 fragment MenuParts on Menu {
   name
   description
+  notes
   available
   sections {
     __typename
     name
+    description
     items {
       __typename
       name

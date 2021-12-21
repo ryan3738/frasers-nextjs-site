@@ -5,7 +5,7 @@ import '../styles/global.css';
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 
-const App = ({ Component, pageProps }) => {
+const App = ({ Component, pageProps }): JSX.Element => {
   return (
     <>
       <TinaEditProvider
@@ -39,9 +39,9 @@ const App = ({ Component, pageProps }) => {
                             item.title ||
                             item.label ||
                             item.alt ||
-                            item.day
+                            item.day,
                         };
-                      }
+                      },
                     };
                     return (
                       <GroupListFieldPlugin.Component
@@ -51,7 +51,7 @@ const App = ({ Component, pageProps }) => {
                         field={field}
                       />
                     );
-                  }
+                  },
                 });
               });
             }}
