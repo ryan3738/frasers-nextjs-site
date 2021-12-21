@@ -1,6 +1,10 @@
 {
   "name": "Frasers Gourmet Hideaway",
   "short_name": "Frasers",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "/favicon-16x16.png",
@@ -22,8 +26,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  ]
 }
