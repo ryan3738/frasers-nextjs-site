@@ -1,9 +1,9 @@
-const slugify = string => {
+function slugify({ text }: { text: string }): string {
   // Turn the string into a slug
-  return string
+  return text
     .toLowerCase()
     .replace(/\s+/g, '-')
     .replace(/[^\w-]+/g, '');
-};
+}
 
 export { slugify };
