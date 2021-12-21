@@ -38,8 +38,8 @@ export default function NavList({
           padding: 0 3.25rem;
           margin: auto;
           font-weight: 600;
-          min-height: 48px;
-          min-width: 48px;
+          min-height: 60px;
+          min-width: 60px;
           height: 100%;
           width: auto;
         }
@@ -63,7 +63,7 @@ export default function NavList({
 
         @media (min-width: 769px) {
           .show-on-large {
-            display: block;
+            display: flex;
           }
         }
       `}</style>
