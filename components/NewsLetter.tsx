@@ -1,18 +1,18 @@
-import Button from "./Button"
+import Button from './Button';
 
-const NewsLetter = () => {
-return (
+const NewsLetter = (): JSX.Element => {
+  return (
     <>
-        <h3>Sign up for our newsletter to receive updates</h3>
-        <Button
+      <h3>Sign up for our newsletter to receive updates</h3>
+      <Button
         buttonText="SIGN UP"
         buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
-        />
-        <br />
-        <br />
-        <p>We respect your privacy</p>
+      />
+      <br />
+      <br />
+      <p>We respect your privacy</p>
     </>
-    )
-}
+  );
+};
 
 export default NewsLetter;

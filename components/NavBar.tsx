@@ -23,8 +23,8 @@ export default function NavBar({
   showHomeLink = true,
   open,
   setOpen,
-  position='fixed'  ,
-  location='top',
+  position = 'fixed',
+  location = 'top',
 }: NavBarProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -32,28 +32,25 @@ export default function NavBar({
   return (
     <>
       <div className="nav-bar">
-        {
-          burgerLinks && (
-            <div className="burger">
-              <div ref={node}>
-                <Burger open={open} setOpen={setOpen} />
-              </div>
-                <BurgerMenu links={burgerLinks}   open={open} />
+        {burgerLinks && (
+          <div className="burger">
+            <div ref={node}>
+              <Burger open={open} setOpen={setOpen} />
             </div>
-          )
-        }
+            <BurgerMenu links={burgerLinks} open={open} />
+          </div>
+        )}
         <nav className="nav-list">
-          {showHomeLink &&
-          <Link href="/">
-            <a className="title">FRASERS</a>
-          </Link>
-          }
+          {showHomeLink && (
+            <Link href="/">
+              <a className="title">FRASERS</a>
+            </Link>
+          )}
           <NavList links={links} showOnLarge={burgerLinks && true} />
         </nav>
       </div>
       {children}
       <style jsx>{`
-
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
@@ -73,7 +70,7 @@ export default function NavBar({
           justify-content: left;
           align-items: center;
           max-width: 100vw;
-          overflow:auto;
+          overflow: auto;
           overflow-y: hidden;
           height: 4em;
           top: 0;

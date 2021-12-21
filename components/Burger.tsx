@@ -1,6 +1,6 @@
 import { bool, func } from 'prop-types';
 
-export default function Burger({ open, setOpen }) {
+export default function Burger({ open, setOpen }): JSX.Element {
   return (
     <>
       <button

@@ -11,21 +11,24 @@ interface NavListProps {
   burgerMenuLink?: boolean;
 }
 
-export default function NavList({links, showOnLarge, burgerMenuLink}: NavListProps): JSX.Element {
+export default function NavList({
+  links,
+  showOnLarge,
+  burgerMenuLink,
+}: NavListProps): JSX.Element {
   return (
     <>
-{
-  links?.map((link) => (
-    <Link key={link.text} href={link.href}>
-      <a
-        className={`nav-link ${showOnLarge && 'show-on-large'} ${burgerMenuLink && 'burger-menu-link'
-          }`}
-      >
-       {link.text}
-      </a>
-    </Link>
-  ))
-}
+      {links?.map(link => (
+        <Link key={link.text} href={link.href}>
+          <a
+            className={`nav-link ${showOnLarge && 'show-on-large'} ${
+              burgerMenuLink && 'burger-menu-link'
+            }`}
+          >
+            {link.text}
+          </a>
+        </Link>
+      ))}
       <style jsx>{`
         .nav-link {
           text-transform: uppercase;

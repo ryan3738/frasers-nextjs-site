@@ -1,13 +1,14 @@
-import { BusinessInfoHours} from '../.tina/__generated__/types'
+import { BusinessInfoHours } from '../.tina/__generated__/types';
 interface HoursProps {
-    hours: BusinessInfoHours[];
+  hours: BusinessInfoHours[];
 }
 
-export default function Hours({ hours }: HoursProps) {
-    if (hours) {
+export default function Hours({ hours }: HoursProps): JSX.Element {
+  if (hours) {
     return (
       <div className="hours-container">
-        <h3 className="header-wrapper">HOURS
+        <h3 className="header-wrapper">
+          HOURS
           <div className="divider" />
         </h3>
         <div>
@@ -23,16 +24,15 @@ export default function Hours({ hours }: HoursProps) {
           ))}
         </div>
         <style jsx>{`
-          .header-wrapper{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
-            }
-        .uppercase {
-          text-transform: uppercase;
-        }
-        .item-detail {
+          .header-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .uppercase {
+            text-transform: uppercase;
+          }
+          .item-detail {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -45,13 +45,14 @@ export default function Hours({ hours }: HoursProps) {
             align-items: center;
           }
 
-        .divider {
-          border: 1px solid var(--primary-color-desaturated);
-          width: 100%;
-          height: 1px;
-          margin-top: 1rem;
-        }
-      `}</style>
+          .divider {
+            border: 1px solid var(--primary-color-desaturated);
+            width: 100%;
+            height: 1px;
+            margin-top: 1rem;
+          }
+        `}</style>
       </div>
-    )};
+    );
+  }
 }
