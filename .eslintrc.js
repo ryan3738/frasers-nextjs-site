@@ -41,7 +41,8 @@ module.exports = {
           getInitialProps: true,
           getStaticProps: true,
           livePageProps: true,
-          props: true
+          props: true,
+          Props: true
         }
       }
     ]
