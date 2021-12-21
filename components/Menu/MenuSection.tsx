@@ -7,8 +7,10 @@ interface MenuSectionProps {
   id: string;
 }
 
-export default function MenuSection({ section,
-  category, id
+export default function MenuSection({
+  section,
+  category,
+  id,
 }: MenuSectionProps): JSX.Element {
   // if(!section) {
   //   return <div>No Menu Section Found</div>;
@@ -18,11 +20,11 @@ export default function MenuSection({ section,
       <h2 className="menu-header">{section?.name}</h2>
       <div className="divider" />
       <div className="menu-section">
-      {
-          section?.items?.filter(item => item.available === true).map(
-            item => <MenuItem key={item.name} item={item}  />
-          )
-      }
+        {section?.items
+          ?.filter(item => item.available === true)
+          .map(item => (
+            <MenuItem key={item.name} item={item} />
+          ))}
       </div>
       <style jsx>{`
         .menu-header {
@@ -30,14 +32,14 @@ export default function MenuSection({ section,
           padding: 3rem 0 0;
         }
         .menu-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-            align-items: stretch;
-            justify-items: stretch;
-            grid-gap: 12px;
-            padding: 5%;
-          }
-          .divider {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+          align-content: stretch;
+          justify-content: stretch;
+          grid-gap: 12px;
+          padding: 5%;
+        }
+        .divider {
           border: 1px solid var(--primary-color-desaturated);
           width: 100%;
           height: 1px;

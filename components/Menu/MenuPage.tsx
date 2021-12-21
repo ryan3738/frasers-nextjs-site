@@ -9,7 +9,10 @@ interface MenuPageProps {
   sections: string[];
 }
 
-export default function MenuPage({ menu, sections }) {
+export default function MenuPage({
+  menu,
+  sections,
+}: MenuPageProps): JSX.Element {
   const { pathname } = useRouter();
   if (!menu) {
     return <div>No Menu Found</div>;

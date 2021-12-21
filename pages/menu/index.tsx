@@ -3,7 +3,7 @@ import { getStaticPropsForTina, gql } from 'tinacms';
 import Layout from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
 
-export default function MenuPage(props) {
+export default function MenuPage(props): JSX.Element {
   const sections = ['Starters', 'Entrees'];
   if (props.data && props.data.getMenuDocument) {
     const menu = props.data.getMenuDocument.data;
@@ -52,11 +52,11 @@ export const getStaticProps = async () => {
         ${getMenuQueryFragment}
       }
     `,
-    variables: { menuRelativePath: 'dinnerMenu.json' }
+    variables: { menuRelativePath: 'dinnerMenu.json' },
   });
   return {
     props: {
-      ...tinaProperties
-    }
+      ...tinaProperties,
+    },
   };
 };

@@ -1,9 +1,9 @@
-import { MenuSectionsItems} from '../../.tina/__generated__/types'
+import { MenuSectionsItems } from '../../.tina/__generated__/types';
 interface MenuItemProps {
   item: MenuSectionsItems;
 }
 
-export default function MenuItem({ item }: MenuItemProps) {
+export default function MenuItem({ item }: MenuItemProps): JSX.Element {
   return (
     <>
       <div key={item.name} className="menu-item">
@@ -15,27 +15,44 @@ export default function MenuItem({ item }: MenuItemProps) {
         ) : (
           ''
         )}
-          {item.price > 0 && <div className="primary-color item-detail" aria-label={`$${item.price}`}>{item.price}</div>}
-        {item.modifiers ? (
-          item.modifiers.map(modifier => {
-            return (
-              <div key={modifier.name} className="modifier item-detail">
-              {modifier.name}&nbsp;
-                {modifier.price > 0 && <span className="primary-color" aria-label={`$${modifier.price}`}>{modifier.price}</span>}
-            </div>
-            )
-          })
-        ) : (
-          ''
+        {item.price > 0 && (
+          <div
+            className="primary-color item-detail"
+            aria-label={`$${item.price}`}
+          >
+            {item.price}
+          </div>
         )}
+        {item.modifiers
+          ? item.modifiers.map(modifier => {
+              return (
+                <div key={modifier.name} className="modifier item-detail">
+                  {modifier.name}&nbsp;
+                  {modifier.price > 0 && (
+                    <span
+                      className="primary-color"
+                      aria-label={`$${modifier.price}`}
+                    >
+                      {modifier.price}
+                    </span>
+                  )}
+                </div>
+              );
+            })
+          : ''}
         {item.dietary ? (
           <>
-            <div className="dietary-preferences item-detail">{item.dietary.map((preference, index )=>{
-              if (item.dietary.length === 1 || index === item.dietary.length - 1) {
-                return `${preference}`
-              }
-              return `${preference} | `
-            })}</div>
+            <div className="dietary-preferences item-detail">
+              {item.dietary.map((preference, index) => {
+                if (
+                  item.dietary.length === 1 ||
+                  index === item.dietary.length - 1
+                ) {
+                  return `${preference}`;
+                }
+                return `${preference} | `;
+              })}
+            </div>
           </>
         ) : (
           ''
