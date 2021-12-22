@@ -54,6 +54,11 @@
         {
           "name": "Seared Day Boat Scallop",
           "description": "Butternut Squash Risotto, Chimichurri Sauce",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing :  Erath Pinot Gris"
+            }
+          ],
           "available": true
         },
         {
