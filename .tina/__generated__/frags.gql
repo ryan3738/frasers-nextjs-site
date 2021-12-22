@@ -30,7 +30,7 @@ fragment BusinessInfoParts on BusinessInfo {
 }
 
 fragment MenuParts on Menu {
-  name
+  title
   description
   notes
   available

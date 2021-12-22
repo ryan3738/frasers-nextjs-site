@@ -1,8 +1,7 @@
 import Head from 'next/head';
-
 import { getStaticPropsForTina, gql } from 'tinacms';
 import { getMenuQueryFragment } from './index';
-import Layout from '../../components/Layout';
+import Layout, { meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
 
 export default function MenuPage(props): JSX.Element {
@@ -18,9 +17,11 @@ export default function MenuPage(props): JSX.Element {
     return (
       <Layout>
         <Head>
-          <title>New Year&apos;s Eve Menu</title>
+          <title>
+            {menu.title} | {meta.title}
+          </title>
         </Head>
-        <Menu title="New Year's Eve" menu={menu} sections={sections} />
+        <Menu menu={menu} sections={sections} />
       </Layout>
     );
   }

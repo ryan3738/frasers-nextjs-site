@@ -276,8 +276,8 @@ export default defineSchema({
       fields: [
           {
             type: "string",
-            label: "Name of Menu",
-            name: "name",
+            label: "Menu Title",
+            name: "title",
           },
           {
             type: "string",

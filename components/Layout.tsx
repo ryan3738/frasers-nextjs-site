@@ -15,7 +15,7 @@ interface LayoutProps {
 
 export const meta = {
   name: 'Frasers',
-  title: 'Frasers Gourmet Hideaway | Oak Harbor | Pacific Northwest',
+  title: 'Frasers Gourmet Hideaway',
   description:
     'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
   keywords: 'restaurant, steak, seafood, whidbey',
