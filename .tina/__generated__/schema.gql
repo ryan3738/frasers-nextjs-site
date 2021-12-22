@@ -186,7 +186,7 @@ type MenuSections {
 }
 
 type Menu {
-  name: String
+  title: String
   description: String
   notes: String
   available: Boolean
@@ -356,7 +356,7 @@ input MenuSectionsMutation {
 }
 
 input MenuMutation {
-  name: String
+  title: String
   description: String
   notes: String
   available: Boolean

@@ -16,10 +16,6 @@ const Menu = ({ menu, sections, pathName }: MenuProps): JSX.Element => {
   const links = menu.sections.map(section => {
     return { href: `${pathName}#${slugify(section.name)}`, text: section.name };
   });
-
-  if (!menu) {
-    return <div>No Menu Found</div>;
-  }
   return (
     <>
       {sections.map(item => {

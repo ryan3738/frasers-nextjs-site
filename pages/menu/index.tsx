@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { getStaticPropsForTina, gql } from 'tinacms';
-import Layout from '../../components/Layout';
+import Layout, { meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
 
 export default function MenuPage(props): JSX.Element {
@@ -10,9 +10,11 @@ export default function MenuPage(props): JSX.Element {
     return (
       <Layout>
         <Head>
-          <title>MENU</title>
+          <title>
+            {menu.title} | {meta.title}
+          </title>
         </Head>
-        <Menu title="Menu" menu={menu} sections={sections} />
+        <Menu menu={menu} sections={sections} />
       </Layout>
     );
   }
@@ -22,7 +24,7 @@ export default function MenuPage(props): JSX.Element {
 export const getMenuQueryFragment = `
   getMenuDocument(relativePath: $menuRelativePath) {
           data {
-            name
+            title
             description
             notes
             sections {

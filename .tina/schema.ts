@@ -276,8 +276,8 @@ export default defineSchema({
       fields: [
           {
             type: "string",
-            label: "Name of Menu",
-            name: "name",
+            label: "Menu Title",
+            name: "title",
           },
           {
             type: "string",
@@ -288,6 +288,10 @@ export default defineSchema({
             type: "string",
             label: "Notes",
             name: "notes",
+            isBody: true,
+            ui: {
+              component: "markdown"
+            },
           },
           {
             type: "boolean",

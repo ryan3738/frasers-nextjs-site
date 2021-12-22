@@ -1,5 +1,5 @@
 {
-  "name": "Dinner",
+  "title": "Menu",
   "description": "This is the main dinner menu for Frasers",
   "available": true,
   "sections": [
