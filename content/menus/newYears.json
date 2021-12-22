@@ -63,7 +63,7 @@
           "description": "Tempura Lobster, Barley, Veg Pearls, Lobster Beurre Blanc",
           "modifiers": [
             {
-              "name": "Suggested Wine Pairing:  Alexana Chardonnay"
+              "name": "Wine Pairing:  Alexana Chardonnay"
             }
           ],
           "available": true
@@ -73,7 +73,7 @@
           "description": "Beef Cheek Croquette, Roasted Carrots, Brussels Sprouts, Reduction Sauce",
           "modifiers": [
             {
-              "name": "Suggested Wine Pairing : DiStefano Winery Domenica"
+              "name": "Wine Pairing : DiStefano Winery Domenica"
             }
           ],
           "available": true
