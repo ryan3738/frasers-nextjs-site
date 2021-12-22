@@ -9,6 +9,7 @@ import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
 import { Menu as MenuType, BusinessInfo } from '../.tina/__generated__/types';
+import ButtonLink from './ButtonLink';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
@@ -38,7 +39,11 @@ export default function Home({ menu, businessInfo }: HomeProps): JSX.Element {
               imageAlt="frasers gift card closeup"
             >
               <div>
-                <p>Please call for details!</p>
+                <ButtonLink
+                  buttonText="New Year's Menu"
+                  buttonLink="/menu/new-years"
+                />
+                <p>Please call to make a reservation</p>
                 <h3>Gift Cards Available</h3>
                 To purchase a gift card please call us at{' '}
                 <span className="nowrap">{phoneNumber}</span>
@@ -85,7 +90,6 @@ export default function Home({ menu, businessInfo }: HomeProps): JSX.Element {
               />
             </Double>
           </div>
-          {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
         </section>
         <section id="menu" className="container">
           <div className={styles.header}>

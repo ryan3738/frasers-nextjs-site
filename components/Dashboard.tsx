@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Button from './Button';
+import Button from './ButtonLink';
 import Layout, { meta } from './Layout';
 
 export default function Dashboard(): JSX.Element {
