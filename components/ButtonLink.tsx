@@ -16,11 +16,13 @@ export default function ButtonLink({ buttonText, buttonLink }): JSX.Element {
           display: flex;
           align-items: center;
           justify-content: center;
-          padding: 0.5rem;
-          min-height: 60px;
-          width: auto;
+          align-self: center;
+          padding: 0.5rem 1rem;
           height: auto;
+          width: auto;
+          min-height: 60px;
           min-width: 60px;
+          max-width: 360px;
           margin: 0.5rem 0;
           background-color: var(--primary-color);
           border: 2px solid var(--primary-color);
@@ -31,7 +33,7 @@ export default function ButtonLink({ buttonText, buttonLink }): JSX.Element {
         .button-text:hover {
           transform: scale(1.1);
           background-color: var(--primary-color-desaturated);
-          border-color: var(--surface-color);
+          border-color: var(--primary-color-desaturated);
         }
       `}</style>
     </>
