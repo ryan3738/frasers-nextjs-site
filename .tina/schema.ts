@@ -288,6 +288,10 @@ export default defineSchema({
             type: "string",
             label: "Notes",
             name: "notes",
+            isBody: true,
+            ui: {
+              component: "markdown"
+            },
           },
           {
             type: "boolean",

@@ -18,9 +18,9 @@ export default function MenuPage(props): JSX.Element {
     return (
       <Layout>
         <Head>
-          <title>New Years Menu</title>
+          <title>New Year&apos;s Eve Menu</title>
         </Head>
-        <Menu title="New Year's Menu" menu={menu} sections={sections} />
+        <Menu title="New Year's Eve" menu={menu} sections={sections} />
       </Layout>
     );
   }

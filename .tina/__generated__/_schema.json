@@ -262,6 +262,10 @@
           "type": "string",
           "label": "Notes",
           "name": "notes",
+          "isBody": true,
+          "ui": {
+            "component": "markdown"
+          },
           "namespace": [
             "menu",
             "notes"

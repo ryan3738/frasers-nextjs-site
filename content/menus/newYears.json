@@ -1,7 +1,7 @@
 {
-  "name": "New Year's Eve Menu",
+  "name": "New Year's Eve",
   "description": "This is the new year's eve menu",
-  "notes": "4 Course Dinner $85 | 4 Course Wine Pairing $40",
+  "notes": "## 4 Course Dinner Menu $85\n\n## 4 Course Wine Pairing $40",
   "available": true,
   "sections": [
     {
