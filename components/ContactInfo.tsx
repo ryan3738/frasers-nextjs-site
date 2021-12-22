@@ -24,7 +24,7 @@ export default function ContactInfo({
           <div className="divider" />
         </h2>
       )}
-      <p>
+      <div>
         <span className="medium-emphasis">
           {address && (
             <div className="item-detail">
@@ -53,7 +53,7 @@ export default function ContactInfo({
             </div>
           )}
         </span>
-      </p>
+      </div>
       <style jsx>{`
         .header-wrapper {
           display: flex;
