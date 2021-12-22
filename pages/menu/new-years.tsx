@@ -5,13 +5,13 @@ import { getMenuQueryFragment } from './index';
 import Layout from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
 
-export default function MenuPage(props) {
+export default function MenuPage(props): JSX.Element {
   const sections = [
     'Amuse Bouche',
     'First Course',
     'Second Course',
     'Third Course',
-    'Dessert'
+    'Dessert',
   ];
   if (props.data && props.data.getMenuDocument) {
     const menu = props.data.getMenuDocument.data;
@@ -20,7 +20,7 @@ export default function MenuPage(props) {
         <Head>
           <title>New Years Menu</title>
         </Head>
-        <Menu menu={menu} sections={sections} />
+        <Menu title="New Year's Menu" menu={menu} sections={sections} />
       </Layout>
     );
   }
@@ -34,11 +34,11 @@ export const getStaticProps = async () => {
         ${getMenuQueryFragment}
       }
     `,
-    variables: { menuRelativePath: 'newYears.json' }
+    variables: { menuRelativePath: 'newYears.json' },
   });
   return {
     props: {
-      ...tinaProperties
-    }
+      ...tinaProperties,
+    },
   };
 };
