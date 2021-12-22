@@ -24,7 +24,7 @@
     },
     {
       "name": "First Course",
-      "notes": "Suggested Wine Pairing:  Domaine Ste Michelle Brut \n\nChoose One",
+      "notes": "Wine Pairing:  Domaine Ste Michelle Brut\n\nChoose One",
       "items": [
         {
           "name": "Pork Belly Rillette",
@@ -40,7 +40,7 @@
     },
     {
       "name": "Second Course",
-      "notes": "Suggested Wine Pairing:  Erath Pinot Gris\n\nChoose One",
+      "notes": "Wine Pairing:  Erath Pinot Gris\n\nChoose One",
       "items": [
         {
           "name": "Seared Day Boat Scallop",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Dessert",
-      "notes": "Suggested Wine Pairing: Chateau De Cosse Sauternes\n\nChoose One",
+      "notes": "Wine Pairing: Chateau De Cosse Sauternes\n\nChoose One",
       "items": [
         {
           "name": "House Made Belgium Waffle",
