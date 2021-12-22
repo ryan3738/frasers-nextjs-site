@@ -9,6 +9,11 @@ export default function Button({ buttonText, buttonLink }): JSX.Element {
 
       <style jsx>{`
         .button-text {
+          padding: 0.5rem;
+          min-height: 60px;
+          min-width: 60px;
+          font-weight: bold;
+          margin: 0.5rem 0;
           /* display: flex;
           flex-direction: column;
           place-items: center; */
