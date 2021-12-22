@@ -64,6 +64,11 @@
         {
           "name": "Poblano, Goat Cheese & Egg Yolk Raviolo",
           "description": "Poblano, Goat Cheese & Egg Yolk Raviolo",
+          "modifiers": [
+            {
+              "name": "Suggested Wine Pairing :  Erath Pinot Gris"
+            }
+          ],
           "available": true
         }
       ]
