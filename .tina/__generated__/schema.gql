@@ -182,6 +182,7 @@ type MenuSectionsItems {
 type MenuSections {
   name: String
   description: String
+  notes: String
   items: [MenuSectionsItems]
 }
 
@@ -352,6 +353,7 @@ input MenuSectionsItemsMutation {
 input MenuSectionsMutation {
   name: String
   description: String
+  notes: String
   items: [MenuSectionsItemsMutation]
 }
 

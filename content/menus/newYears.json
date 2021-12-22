@@ -24,51 +24,32 @@
     },
     {
       "name": "First Course",
+      "notes": "Suggested Wine Pairing:  Domaine Ste Michelle Brut",
       "items": [
         {
           "name": "Pork Belly Rillette",
           "description": "Pickled vegetables, Crispy Pork Confit, Cracklins, Beet Blood",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing:   Domaine Ste Michelle Brut",
-              "price": 0
-            }
-          ],
           "available": true
         },
         {
           "name": "Cold Carrot Coconut Soup",
           "description": "Dungeness Crab, Pea Shoots. Pepitas, Thai Basil",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing:   Domaine Ste Michelle Brut"
-            }
-          ],
           "available": true
         }
       ]
     },
     {
       "name": "Second Course",
+      "notes": "Suggested Wine Pairing:  Erath Pinot Gris",
       "items": [
         {
           "name": "Seared Day Boat Scallop",
           "description": "Butternut Squash Risotto, Chimichurri Sauce",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing :  Erath Pinot Gris"
-            }
-          ],
           "available": true
         },
         {
           "name": "Poblano, Goat Cheese & Egg Yolk Raviolo",
           "description": "Poblano, Goat Cheese & Egg Yolk Raviolo",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing :  Erath Pinot Gris"
-            }
-          ],
           "available": true
         }
       ]
@@ -100,25 +81,16 @@
     },
     {
       "name": "Dessert",
+      "notes": "Suggested Wine Pairing: Chateau De Cosse Sauternes",
       "items": [
         {
           "name": "House Made Belgium Waffle",
           "description": "Glazed Fresh Fruits & Berries, Bourbon Whip",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing : Chateau De Cosse Sauternes"
-            }
-          ],
           "available": true
         },
         {
           "name": "Hazelnut & White Chocolate Pot Au Creme",
           "description": "Caramel, Maple Walnut Ice Cream, Candy Cane Coral",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing : Chateau De Cosse Sauternes"
-            }
-          ],
           "available": true
         }
       ]

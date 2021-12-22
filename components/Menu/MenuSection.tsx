@@ -1,5 +1,6 @@
 import MenuItem from './MenuItem';
 import { MenuSections } from '../../.tina/__generated__/types';
+import Markdown from 'react-markdown';
 
 interface MenuSectionProps {
   category: string;
@@ -9,15 +10,15 @@ interface MenuSectionProps {
 
 export default function MenuSection({
   section,
-  category,
   id,
 }: MenuSectionProps): JSX.Element {
-  // if(!section) {
-  //   return <div>No Menu Section Found</div>;
-  // }
+  if (!section) {
+    return <div>No Menu Section Found</div>;
+  }
   return (
     <div id={id} className="menu-container">
       <h2 className="menu-header">{section?.name}</h2>
+      {section.notes && <Markdown>{section?.notes}</Markdown>}
       <div className="divider" />
       <div className="menu-section">
         {section?.items

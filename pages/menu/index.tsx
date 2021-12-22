@@ -30,6 +30,7 @@ export const getMenuQueryFragment = `
             sections {
               name
               description
+              notes
               items {
                 name
                 description

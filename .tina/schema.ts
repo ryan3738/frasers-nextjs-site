@@ -153,6 +153,15 @@ const menuSectionSchema: TinaField = {
       label: "Description",
       name: "description",
     },
+    {
+      type: "string",
+      label: "Notes",
+      name: "notes",
+      isBody: true,
+      ui: {
+        component: "markdown"
+      },
+    },
     menuItemSchema,
   ]
 }

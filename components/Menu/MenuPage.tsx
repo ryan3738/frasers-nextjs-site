@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import styles from '../../styles/styles.module.css';
 import { Menu } from './Menu';
 import { useRouter } from 'next/router';

@@ -38,6 +38,7 @@ fragment MenuParts on Menu {
     __typename
     name
     description
+    notes
     items {
       __typename
       name
