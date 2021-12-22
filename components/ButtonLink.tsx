@@ -24,7 +24,7 @@ export default function ButtonLink({ buttonText, buttonLink }): JSX.Element {
           min-width: 60px;
           max-width: 360px;
           margin: 0.5rem 0;
-          background-color: var(--primary-color);
+          background: var(--primary-color);
           border: 2px solid var(--primary-color);
           border-radius: 7px;
           color: var(--black-color);
@@ -32,7 +32,7 @@ export default function ButtonLink({ buttonText, buttonLink }): JSX.Element {
         }
         .button-text:hover {
           transform: scale(1.1);
-          background-color: var(--primary-color-desaturated);
+          background: var(--primary-color-desaturated);
           border-color: var(--primary-color-desaturated);
         }
       `}</style>
