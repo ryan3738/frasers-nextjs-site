@@ -5,11 +5,13 @@ import { useRouter } from 'next/router';
 import { Menu as MenuType } from '../../.tina/__generated__/types';
 
 interface MenuPageProps {
+  title: string;
   menu: MenuType;
   sections: string[];
 }
 
 export default function MenuPage({
+  title,
   menu,
   sections,
 }: MenuPageProps): JSX.Element {
@@ -24,7 +26,8 @@ export default function MenuPage({
       </Head>
       <section className="menu-container">
         <div className={styles.header}>
-          <h1>MENU</h1>
+          <h1>{title}</h1>
+          {menu.notes && <h2>{menu?.notes}</h2>}
         </div>
         <Menu menu={menu} pathName={pathname} sections={sections} />
       </section>

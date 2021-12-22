@@ -20,7 +20,7 @@ export default function MenuPage(props): JSX.Element {
         <Head>
           <title>New Years Menu</title>
         </Head>
-        <Menu menu={menu} sections={sections} />
+        <Menu title="New Year's Menu" menu={menu} sections={sections} />
       </Layout>
     );
   }
