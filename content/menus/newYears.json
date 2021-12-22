@@ -60,22 +60,12 @@
       "items": [
         {
           "name": "Prosciutto Wrapped Monkfish",
-          "description": "Tempura Lobster, Barley, Veg Pearls, Lobster Beurre Blanc",
-          "modifiers": [
-            {
-              "name": "Wine Pairing:  Alexana Chardonnay"
-            }
-          ],
+          "description": "Tempura Lobster, Barley, Veg Pearls, Lobster Beurre Blanc<br><br>\n\nWine Pairing:  Alexana Chardonnay",
           "available": true
         },
         {
           "name": "Wagyu Flat Iron Steak",
-          "description": "Beef Cheek Croquette, Roasted Carrots, Brussels Sprouts, Reduction Sauce",
-          "modifiers": [
-            {
-              "name": "Wine Pairing : DiStefano Winery Domenica"
-            }
-          ],
+          "description": "Beef Cheek Croquette, Roasted Carrots, Brussels Sprouts, Reduction Sauce<br><br>\nWine Pairing : DiStefano Winery Domenica",
           "available": true
         }
       ]
