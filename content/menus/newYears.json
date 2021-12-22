@@ -1,7 +1,7 @@
 {
   "title": "New Year's Eve",
   "description": "This is the new year's eve menu 2022",
-  "notes": "## 4 Course Dinner Menu $85\n\n## 4 Course Wine Pairing $40",
+  "notes": "## 4 Course Dinner $85\n\n## 4 Course Wine Pairing $40",
   "available": true,
   "sections": [
     {
@@ -24,51 +24,32 @@
     },
     {
       "name": "First Course",
+      "notes": "Suggested Wine Pairing:  Domaine Ste Michelle Brut",
       "items": [
         {
           "name": "Pork Belly Rillette",
           "description": "Pickled vegetables, Crispy Pork Confit, Cracklins, Beet Blood",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing:   Domaine Ste Michelle Brut",
-              "price": 0
-            }
-          ],
           "available": true
         },
         {
           "name": "Cold Carrot Coconut Soup",
           "description": "Dungeness Crab, Pea Shoots. Pepitas, Thai Basil",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing:   Domaine Ste Michelle Brut"
-            }
-          ],
           "available": true
         }
       ]
     },
     {
       "name": "Second Course",
+      "notes": "Suggested Wine Pairing:  Erath Pinot Gris",
       "items": [
         {
           "name": "Seared Day Boat Scallop",
           "description": "Butternut Squash Risotto, Chimichurri Sauce",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing :  Erath Pinot Gris"
-            }
-          ],
           "available": true
         },
         {
           "name": "Poblano, Goat Cheese & Egg Yolk Raviolo",
           "description": "Poblano, Goat Cheese & Egg Yolk Raviolo",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing :  Erath Pinot Gris"
-            }
-          ],
           "available": true
         }
       ]
@@ -100,25 +81,16 @@
     },
     {
       "name": "Dessert",
+      "notes": "Suggested Wine Pairing: Chateau De Cosse Sauternes",
       "items": [
         {
           "name": "House Made Belgium Waffle",
           "description": "Glazed Fresh Fruits & Berries, Bourbon Whip",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing : Chateau De Cosse Sauternes"
-            }
-          ],
           "available": true
         },
         {
           "name": "Hazelnut & White Chocolate Pot Au Creme",
           "description": "Caramel, Maple Walnut Ice Cream, Candy Cane Coral",
-          "modifiers": [
-            {
-              "name": "Suggested Wine Pairing : Chateau De Cosse Sauternes"
-            }
-          ],
           "available": true
         }
       ]

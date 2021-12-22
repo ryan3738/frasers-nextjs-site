@@ -310,6 +310,20 @@
               ]
             },
             {
+              "type": "string",
+              "label": "Notes",
+              "name": "notes",
+              "isBody": true,
+              "ui": {
+                "component": "markdown"
+              },
+              "namespace": [
+                "menu",
+                "sections",
+                "notes"
+              ]
+            },
+            {
               "type": "object",
               "label": "Menu Items",
               "name": "items",
