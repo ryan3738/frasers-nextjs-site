@@ -1,0 +1,83 @@
+{
+  "DocumentConnection": {
+    "type": "DocumentConnection",
+    "resolveType": "multiCollectionDocumentList",
+    "collections": [
+      "galleryGrid",
+      "businessInfo",
+      "menu",
+      "doubleFeature",
+      "posts"
+    ]
+  },
+  "Node": {
+    "type": "Node",
+    "resolveType": "nodeDocument"
+  },
+  "DocumentNode": {
+    "type": "DocumentNode",
+    "resolveType": "multiCollectionDocument",
+    "createDocument": "create",
+    "updateDocument": "update"
+  },
+  "GalleryGridDocument": {
+    "type": "GalleryGridDocument",
+    "resolveType": "collectionDocument",
+    "collection": "galleryGrid",
+    "createGalleryGridDocument": "create",
+    "updateGalleryGridDocument": "update"
+  },
+  "GalleryGridConnection": {
+    "type": "GalleryGridConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "galleryGrid"
+  },
+  "BusinessInfoDocument": {
+    "type": "BusinessInfoDocument",
+    "resolveType": "collectionDocument",
+    "collection": "businessInfo",
+    "createBusinessInfoDocument": "create",
+    "updateBusinessInfoDocument": "update"
+  },
+  "BusinessInfoConnection": {
+    "type": "BusinessInfoConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "businessInfo"
+  },
+  "MenuDocument": {
+    "type": "MenuDocument",
+    "resolveType": "collectionDocument",
+    "collection": "menu",
+    "createMenuDocument": "create",
+    "updateMenuDocument": "update"
+  },
+  "MenuConnection": {
+    "type": "MenuConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "menu"
+  },
+  "DoubleFeatureDocument": {
+    "type": "DoubleFeatureDocument",
+    "resolveType": "collectionDocument",
+    "collection": "doubleFeature",
+    "createDoubleFeatureDocument": "create",
+    "updateDoubleFeatureDocument": "update"
+  },
+  "DoubleFeatureConnection": {
+    "type": "DoubleFeatureConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "doubleFeature"
+  },
+  "PostsDocument": {
+    "type": "PostsDocument",
+    "resolveType": "collectionDocument",
+    "collection": "posts",
+    "createPostsDocument": "create",
+    "updatePostsDocument": "update"
+  },
+  "PostsConnection": {
+    "type": "PostsConnection",
+    "resolveType": "collectionDocumentList",
+    "collection": "posts"
+  }
+}

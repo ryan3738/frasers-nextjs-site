@@ -1,0 +1,618 @@
+{
+  "version": {
+    "fullVersion": "0.59.2",
+    "major": "0",
+    "minor": "59",
+    "patch": "2"
+  },
+  "meta": {},
+  "collections": [
+    {
+      "label": "Gallery Grid",
+      "name": "galleryGrid",
+      "path": "content/gallery",
+      "format": "json",
+      "fields": [
+        {
+          "type": "object",
+          "label": "Images",
+          "name": "images",
+          "ui": {
+            "component": "groupList"
+          },
+          "list": true,
+          "fields": [
+            {
+              "type": "string",
+              "label": "Image Alt Text",
+              "name": "alt",
+              "required": true,
+              "namespace": [
+                "galleryGrid",
+                "images",
+                "alt"
+              ]
+            },
+            {
+              "name": "image",
+              "type": "image",
+              "label": "Menu Item Image",
+              "namespace": [
+                "galleryGrid",
+                "images",
+                "image"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Format",
+              "name": "format",
+              "options": [
+                "small",
+                "big",
+                "vertical",
+                "horizontal"
+              ],
+              "namespace": [
+                "galleryGrid",
+                "images",
+                "format"
+              ]
+            }
+          ],
+          "namespace": [
+            "galleryGrid",
+            "images"
+          ]
+        }
+      ],
+      "namespace": [
+        "galleryGrid"
+      ]
+    },
+    {
+      "label": "Business Info",
+      "name": "businessInfo",
+      "path": "content/info",
+      "fields": [
+        {
+          "type": "string",
+          "label": "Business Name",
+          "name": "name",
+          "namespace": [
+            "businessInfo",
+            "name"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Phone Number",
+          "name": "phoneNumber",
+          "namespace": [
+            "businessInfo",
+            "phoneNumber"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Email",
+          "name": "email",
+          "namespace": [
+            "businessInfo",
+            "email"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Address",
+          "name": "address",
+          "fields": [
+            {
+              "type": "string",
+              "label": "Name",
+              "name": "name",
+              "required": true,
+              "namespace": [
+                "businessInfo",
+                "address",
+                "name"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "description"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Street",
+              "name": "street",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "street"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "street2",
+              "name": "street2",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "street2"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "City",
+              "name": "city",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "city"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "State",
+              "name": "region",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "region"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Zip",
+              "name": "zip",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "zip"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Directions URL",
+              "name": "directions",
+              "namespace": [
+                "businessInfo",
+                "address",
+                "directions"
+              ]
+            }
+          ],
+          "namespace": [
+            "businessInfo",
+            "address"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Hours",
+          "name": "hours",
+          "ui": {
+            "component": "groupList"
+          },
+          "list": true,
+          "fields": [
+            {
+              "type": "string",
+              "name": "day",
+              "label": "Day",
+              "namespace": [
+                "businessInfo",
+                "hours",
+                "day"
+              ]
+            },
+            {
+              "type": "string",
+              "name": "hours",
+              "label": "Hours",
+              "namespace": [
+                "businessInfo",
+                "hours",
+                "hours"
+              ]
+            }
+          ],
+          "namespace": [
+            "businessInfo",
+            "hours"
+          ]
+        }
+      ],
+      "namespace": [
+        "businessInfo"
+      ]
+    },
+    {
+      "label": "Menu",
+      "name": "menu",
+      "path": "content/menus",
+      "format": "json",
+      "fields": [
+        {
+          "type": "string",
+          "label": "Menu Title",
+          "name": "title",
+          "namespace": [
+            "menu",
+            "title"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Description",
+          "name": "description",
+          "namespace": [
+            "menu",
+            "description"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Notes",
+          "name": "notes",
+          "isBody": true,
+          "ui": {
+            "component": "markdown"
+          },
+          "namespace": [
+            "menu",
+            "notes"
+          ]
+        },
+        {
+          "type": "boolean",
+          "label": "Available",
+          "name": "available",
+          "namespace": [
+            "menu",
+            "available"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Sections",
+          "name": "sections",
+          "ui": {
+            "component": "groupList"
+          },
+          "list": true,
+          "fields": [
+            {
+              "type": "string",
+              "label": "Name",
+              "name": "name",
+              "namespace": [
+                "menu",
+                "sections",
+                "name"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "menu",
+                "sections",
+                "description"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Notes",
+              "name": "notes",
+              "isBody": true,
+              "ui": {
+                "component": "markdown"
+              },
+              "namespace": [
+                "menu",
+                "sections",
+                "notes"
+              ]
+            },
+            {
+              "type": "object",
+              "label": "Menu Items",
+              "name": "items",
+              "ui": {
+                "component": "groupList"
+              },
+              "list": true,
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Name",
+                  "name": "name",
+                  "required": true,
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "name"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Description",
+                  "name": "description",
+                  "ui": {
+                    "component": "textarea"
+                  },
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "description"
+                  ]
+                },
+                {
+                  "type": "number",
+                  "label": "Price",
+                  "name": "price",
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "price"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Dietary Preferences",
+                  "name": "dietary",
+                  "options": [
+                    "vegan",
+                    "vegetarian",
+                    "gluten-free",
+                    "pescatarian"
+                  ],
+                  "list": true,
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "dietary"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "label": "Modifiers",
+                  "name": "modifiers",
+                  "ui": {
+                    "component": "groupList"
+                  },
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Name",
+                      "name": "name",
+                      "namespace": [
+                        "menu",
+                        "sections",
+                        "items",
+                        "modifiers",
+                        "name"
+                      ]
+                    },
+                    {
+                      "type": "number",
+                      "label": "Price",
+                      "name": "price",
+                      "namespace": [
+                        "menu",
+                        "sections",
+                        "items",
+                        "modifiers",
+                        "price"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "modifiers"
+                  ]
+                },
+                {
+                  "type": "boolean",
+                  "label": "Available",
+                  "name": "available",
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "available"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "label": "Images",
+                  "name": "images",
+                  "ui": {
+                    "component": "groupList"
+                  },
+                  "list": true,
+                  "fields": [
+                    {
+                      "type": "string",
+                      "label": "Image Alt Text",
+                      "name": "alt",
+                      "required": true,
+                      "namespace": [
+                        "menu",
+                        "sections",
+                        "items",
+                        "images",
+                        "alt"
+                      ]
+                    },
+                    {
+                      "name": "image",
+                      "type": "image",
+                      "label": "Menu Item Image",
+                      "namespace": [
+                        "menu",
+                        "sections",
+                        "items",
+                        "images",
+                        "image"
+                      ]
+                    }
+                  ],
+                  "namespace": [
+                    "menu",
+                    "sections",
+                    "items",
+                    "images"
+                  ]
+                }
+              ],
+              "namespace": [
+                "menu",
+                "sections",
+                "items"
+              ]
+            }
+          ],
+          "namespace": [
+            "menu",
+            "sections"
+          ]
+        }
+      ],
+      "namespace": [
+        "menu"
+      ]
+    },
+    {
+      "label": "Double Feature",
+      "name": "doubleFeature",
+      "path": "content/doubleFeature",
+      "format": "mdx",
+      "fields": [
+        {
+          "type": "string",
+          "label": "Title",
+          "name": "title",
+          "namespace": [
+            "doubleFeature",
+            "title"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Subtitle",
+          "name": "subtitle",
+          "namespace": [
+            "doubleFeature",
+            "subtitle"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Image",
+          "name": "image",
+          "fields": [
+            {
+              "type": "image",
+              "label": "Image Source",
+              "name": "src",
+              "namespace": [
+                "doubleFeature",
+                "image",
+                "src"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Image Alt Text",
+              "name": "alt",
+              "required": true,
+              "namespace": [
+                "doubleFeature",
+                "image",
+                "alt"
+              ]
+            }
+          ],
+          "namespace": [
+            "doubleFeature",
+            "image"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Element ID",
+          "name": "elemntId",
+          "namespace": [
+            "doubleFeature",
+            "elemntId"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Double Feature Body",
+          "name": "body",
+          "isBody": true,
+          "ui": {
+            "component": "markdown"
+          },
+          "namespace": [
+            "doubleFeature",
+            "body"
+          ]
+        }
+      ],
+      "namespace": [
+        "doubleFeature"
+      ]
+    },
+    {
+      "label": "Blog Posts",
+      "name": "posts",
+      "path": "content/posts",
+      "fields": [
+        {
+          "type": "string",
+          "label": "Title",
+          "name": "title",
+          "namespace": [
+            "posts",
+            "title"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Blog Post Body",
+          "name": "body",
+          "isBody": true,
+          "ui": {
+            "component": "textarea"
+          },
+          "namespace": [
+            "posts",
+            "body"
+          ]
+        }
+      ],
+      "namespace": [
+        "posts"
+      ]
+    }
+  ]
+}
