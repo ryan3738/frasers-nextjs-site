@@ -9,7 +9,7 @@ import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
 import { Menu as MenuType, BusinessInfo } from '../.tina/__generated__/types';
-import ButtonLink from './ButtonLink';
+import ButtonLink from './LinkButton';
 
 const { aboutBusiness, aboutOwner } = siteData;
 

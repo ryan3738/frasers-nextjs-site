@@ -1,47 +1,39 @@
-export default function Button({ buttonText, buttonLink }) {
+import Link from 'next/link';
+
+export default function LinkButton({ buttonText, buttonLink }): JSX.Element {
   return (
     <>
-      <a href={buttonLink} className="link">
-        <button type="button" className="button-text">
-          <span className="button-text">{buttonText}</span>
-        </button>
-      </a>
+      <Link href={buttonLink}>
+        <a className="button-text">{buttonText}</a>
+      </Link>
 
       <style jsx>{`
         .button-text {
-          /* display: flex;
-          flex-direction: column;
-          place-items: center; */
-          /* display: inline-block; */
-          /* vertial-align: middle; */
-          /* line-height: normal; */
-          /* margin: 1%; */
-          /* padding: 1%; */
-        }
-        .link {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
             Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
-          cursor: pointer;
-          background-color: var(--primary-color);
+          font-weight: bold;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          padding: 0.5rem 1rem;
+          height: auto;
+          width: auto;
+          min-height: 60px;
+          min-width: 60px;
+          max-width: 360px;
+          margin: 0.5rem 0;
+          background: var(--primary-color);
           border: 2px solid var(--primary-color);
-          border-radius: 5px;
+          border-radius: 7px;
           color: var(--black-color);
-          padding: 5px;
-          margin: 10px 5px;
+          transition: all 0.3s ease-in-out;
         }
-
-        .link:hover {
-          animation-name: background-color;
-          animation-duration: 500ms;
-          background-color: var(--surface-color);
-          border-color: var(--surface-color);
-          color: var(--high-emphasis-text);
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          appearance: none;
+        .button-text:hover {
+          transform: scale(1.1);
+          background: var(--primary-color-desaturated);
+          border-color: var(--primary-color-desaturated);
         }
       `}</style>
     </>

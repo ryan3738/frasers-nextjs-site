@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { BusinessInfo } from '../.tina/__generated__/types';
-import ButtonLink from './ButtonLink';
+import ButtonLink from './LinkButton';
 import Hours from './Hours';
 interface HeroProps {
   businessInfo?: BusinessInfo;
