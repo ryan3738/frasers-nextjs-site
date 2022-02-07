@@ -1,4 +1,4 @@
-import Button from './LinkButton';
+import Button from './Button';
 
 const NewsLetter = (): JSX.Element => {
   return (

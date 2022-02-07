@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Button from './LinkButton';
+import Button from './Button';
 
 import Layout, { meta } from './Layout';
 
