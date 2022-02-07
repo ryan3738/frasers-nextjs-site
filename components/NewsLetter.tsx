@@ -1,10 +1,10 @@
-import Button from './Button';
+import LinkButton from './LinkButton';
 
 const NewsLetter = (): JSX.Element => {
   return (
     <>
       <h3>Sign up for our newsletter to receive updates</h3>
-      <Button
+      <LinkButton
         buttonText="SIGN UP"
         buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
       />

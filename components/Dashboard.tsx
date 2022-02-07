@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Button from './Button';
 
 import Layout, { meta } from './Layout';
 
@@ -14,10 +13,6 @@ export default function Dashboard(): JSX.Element {
         <div id="contact-info">
           <h2>Dashboard</h2>
           <p>Click below to edit site details</p>
-          {/* <Button
-            buttonText="Edit Site Data"
-            buttonLink="https://frasers-admin.netlify.app/admin/index.html"
-          /> */}
         </div>
       </div>
       <style jsx>{`
