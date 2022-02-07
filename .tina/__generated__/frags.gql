@@ -30,12 +30,15 @@ fragment BusinessInfoParts on BusinessInfo {
 }
 
 fragment MenuParts on Menu {
-  name
+  title
   description
+  notes
   available
   sections {
     __typename
     name
+    description
+    notes
     items {
       __typename
       name

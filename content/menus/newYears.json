@@ -1,0 +1,90 @@
+{
+  "title": "New Year's Eve",
+  "description": "This is the new year's eve menu 2022",
+  "notes": "**4 Course Dinner $85**\n\n**4 Course Wine Pairing $40**",
+  "available": true,
+  "sections": [
+    {
+      "name": "Amuse Bouche",
+      "items": [
+        {
+          "name": "Smoked Duck Crostini",
+          "price": 0,
+          "available": true
+        },
+        {
+          "name": "Petite Vegetarian Samosa ",
+          "available": true
+        },
+        {
+          "name": "Kumamoto Oyster",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "First Course",
+      "notes": "Wine Pairing:  Domaine Ste Michelle Brut\n\nChoose One",
+      "items": [
+        {
+          "name": "Pork Belly Rillette",
+          "description": "Pickled vegetables, Crispy Pork Confit, Cracklins, Beet Blood",
+          "available": true
+        },
+        {
+          "name": "Cold Carrot Coconut Soup",
+          "description": "Dungeness Crab, Pea Shoots. Pepitas, Thai Basil",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Second Course",
+      "notes": "Wine Pairing:  Erath Pinot Gris\n\nChoose One",
+      "items": [
+        {
+          "name": "Seared Day Boat Scallop",
+          "description": "Butternut Squash Risotto, Chimichurri Sauce",
+          "available": true
+        },
+        {
+          "name": "Poblano, Goat Cheese & Egg Yolk Raviolo",
+          "description": "Poblano, Goat Cheese & Egg Yolk Raviolo",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Third Course",
+      "notes": "Choose One",
+      "items": [
+        {
+          "name": "Mahi-mahi",
+          "description": "Lobster tempura, pineapple salsa, shrimp barley, veg pearls, Yuzu beurre blanc<br><br>\nWine Pairing:  Alexana Chardonnay",
+          "available": true
+        },
+        {
+          "name": "Wagyu Flat Iron Steak",
+          "description": "Beef Cheek Croquette, Roasted Carrots, Brussels Sprouts, Reduction Sauce<br><br>\nWine Pairing : DiStefano Winery Domenica",
+          "available": true
+        }
+      ]
+    },
+    {
+      "name": "Dessert",
+      "notes": "Wine Pairing: Chateau De Cosse Sauternes\n\nChoose One",
+      "items": [
+        {
+          "name": "House Made Belgium Waffle",
+          "description": "Glazed Fresh Fruits & Berries, Bourbon Whip",
+          "available": true
+        },
+        {
+          "name": "Hazelnut & White Chocolate Pot Au Creme",
+          "description": "Caramel, Maple Walnut Ice Cream, Candy Cane Coral",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

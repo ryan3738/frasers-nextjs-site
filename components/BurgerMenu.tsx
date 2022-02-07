@@ -1,11 +1,14 @@
 import NavList, { NavLinks } from './NavList';
 
 interface BurgerMenuProps {
-  open: boolean
-  links: NavLinks[]
+  open: boolean;
+  links: NavLinks[];
 }
 
-export default function BurgerMenu({ open, links }: BurgerMenuProps) {
+export default function BurgerMenu({
+  open,
+  links,
+}: BurgerMenuProps): JSX.Element {
   return (
     <>
       <nav className="styled-menu">
@@ -18,6 +21,7 @@ export default function BurgerMenu({ open, links }: BurgerMenuProps) {
           justify-content: center;
           background: var(--background-color);
           height: 100vh;
+          width: 80vw;
           padding: 2rem;
           position: absolute;
           top: 0;

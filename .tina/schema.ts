@@ -147,7 +147,20 @@ const menuSectionSchema: TinaField = {
       type: "string",
       label: "Name",
       name: "name",
-      required: true
+    },
+    {
+      type: "string",
+      label: "Description",
+      name: "description",
+    },
+    {
+      type: "string",
+      label: "Notes",
+      name: "notes",
+      isBody: true,
+      ui: {
+        component: "markdown"
+      },
     },
     menuItemSchema,
   ]
@@ -272,14 +285,22 @@ export default defineSchema({
       fields: [
           {
             type: "string",
-            label: "Name of Menu",
-            name: "name",
-            required: true,
+            label: "Menu Title",
+            name: "title",
           },
           {
             type: "string",
             label: "Description",
             name: "description",
+          },
+          {
+            type: "string",
+            label: "Notes",
+            name: "notes",
+            isBody: true,
+            ui: {
+              component: "markdown"
+            },
           },
           {
             type: "boolean",

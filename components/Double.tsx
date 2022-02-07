@@ -25,7 +25,6 @@ export default function Double({
   rightSubtitle,
   id,
 }: DoubleProps): JSX.Element {
-
   return (
     <>
       <div id={id} className="double-container">
@@ -59,8 +58,6 @@ export default function Double({
           <div className="medium-emphasis">{children}</div>
         </div>
         <style jsx>{`
-
-
           .double-container {
             display: flex;
             flex-direction: column;

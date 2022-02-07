@@ -2667,13 +2667,40 @@
           },
           "arguments": [],
           "type": {
-            "kind": "NonNullType",
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "String"
-              }
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "description"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "notes"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
             }
           }
         },
@@ -2710,17 +2737,14 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "name"
+            "value": "title"
           },
           "arguments": [],
           "type": {
-            "kind": "NonNullType",
-            "type": {
-              "kind": "NamedType",
-              "name": {
-                "kind": "Name",
-                "value": "String"
-              }
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
             }
           }
         },
@@ -2729,6 +2753,21 @@
           "name": {
             "kind": "Name",
             "value": "description"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "notes"
           },
           "arguments": [],
           "type": {
@@ -5033,6 +5072,34 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
+            "value": "description"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "notes"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
             "value": "items"
           },
           "type": {
@@ -5059,7 +5126,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "name"
+            "value": "title"
           },
           "type": {
             "kind": "NamedType",
@@ -5074,6 +5141,20 @@
           "name": {
             "kind": "Name",
             "value": "description"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "notes"
           },
           "type": {
             "kind": "NamedType",

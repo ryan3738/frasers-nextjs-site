@@ -1,6 +1,6 @@
 import { getStaticPropsForTina, gql } from 'tinacms';
 import Home from '../components/Home';
-import { getMenuQueryFragment } from './menu';
+import { getMenuQueryFragment } from './menu/index';
 
 export default function HomePage(props) {
   if (
@@ -85,14 +85,14 @@ export const getDoubleFeatureListFragment = `
 export const getStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
-      query MenuQuery{
+      query MenuQuery($menuRelativePath: String!){
         ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
         ${getGalleryGridFragment}
         ${getDoubleFeatureListFragment}
       }
     `,
-    variables: {}
+    variables: { menuRelativePath: 'dinnerMenu.json' }
   });
   return {
     props: {

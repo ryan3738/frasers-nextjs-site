@@ -4,39 +4,23 @@ import Social from './Social';
 import NewsLetter from './NewsLetter';
 import { BusinessInfo } from '../.tina/__generated__/types';
 import Hours from './Hours';
+import ContactInfo from './ContactInfo';
 
 interface ContactProps {
   businessInfo: BusinessInfo;
 }
 
-export default function Contact({ businessInfo }: ContactProps) {
+export default function Contact({ businessInfo }: ContactProps): JSX.Element {
   return (
     <>
       <div className="contact-content">
         <div id="contact-info">
           <div>
-            <h2>LOCATION</h2>
-            <p>
-              <span className="medium-emphasis">
-                {`${businessInfo.address.street} ${businessInfo.address.street2}`}
-                <br />
-                {`${businessInfo.address.city}, ${businessInfo.address.region} ${businessInfo.address.zip}`}
-                <br />
-                <br />
-                <a href="tel:13602791231">{businessInfo.phoneNumber}</a>
-                <br />
-                <br />
-                <b>
-                  <a
-                    href={businessInfo.address.directions}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    Get Directions
-                  </a>
-                </b>
-              </span>
-            </p>
+            <ContactInfo
+              heading="Location"
+              address={businessInfo.address}
+              phoneNumber={businessInfo.phoneNumber}
+            />
           </div>
           <div>
             <Hours hours={businessInfo.hours} />
@@ -76,6 +60,7 @@ export default function Contact({ businessInfo }: ContactProps) {
           align-content: space-around;
           width: 100%;
           height: auto;
+          margin: 0 0 1.45rem 0;
         }
         .social-media-container {
           display: flex;

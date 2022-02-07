@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Button from './LinkButton';
+
 import Layout, { meta } from './Layout';
 
-export default function Dashboard() {
+export default function Dashboard(): JSX.Element {
   return (
     <Layout>
       <Head>

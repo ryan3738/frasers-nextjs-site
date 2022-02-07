@@ -242,12 +242,11 @@
       "fields": [
         {
           "type": "string",
-          "label": "Name of Menu",
-          "name": "name",
-          "required": true,
+          "label": "Menu Title",
+          "name": "title",
           "namespace": [
             "menu",
-            "name"
+            "title"
           ]
         },
         {
@@ -257,6 +256,19 @@
           "namespace": [
             "menu",
             "description"
+          ]
+        },
+        {
+          "type": "string",
+          "label": "Notes",
+          "name": "notes",
+          "isBody": true,
+          "ui": {
+            "component": "markdown"
+          },
+          "namespace": [
+            "menu",
+            "notes"
           ]
         },
         {
@@ -281,11 +293,34 @@
               "type": "string",
               "label": "Name",
               "name": "name",
-              "required": true,
               "namespace": [
                 "menu",
                 "sections",
                 "name"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Description",
+              "name": "description",
+              "namespace": [
+                "menu",
+                "sections",
+                "description"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Notes",
+              "name": "notes",
+              "isBody": true,
+              "ui": {
+                "component": "markdown"
+              },
+              "namespace": [
+                "menu",
+                "sections",
+                "notes"
               ]
             },
             {

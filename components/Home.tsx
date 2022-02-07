@@ -8,7 +8,8 @@ import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
-import {Menu as MenuType, BusinessInfo} from '../.tina/__generated__/types';
+import { Menu as MenuType, BusinessInfo } from '../.tina/__generated__/types';
+import ButtonLink from './ButtonLink';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
@@ -17,7 +18,7 @@ interface HomeProps {
   businessInfo: BusinessInfo;
 }
 
-export default function Home({ menu, businessInfo }: HomeProps) {
+export default function Home({ menu, businessInfo }: HomeProps): JSX.Element {
   const { phoneNumber } = businessInfo;
   return (
     <>
@@ -38,7 +39,11 @@ export default function Home({ menu, businessInfo }: HomeProps) {
               imageAlt="frasers gift card closeup"
             >
               <div>
-                <p>Please call for details!</p>
+                <ButtonLink
+                  buttonText="New Year's Menu"
+                  buttonLink="/menu/new-years"
+                />
+                <p>Please call to make a reservation</p>
                 <h3>Gift Cards Available</h3>
                 To purchase a gift card please call us at{' '}
                 <span className="nowrap">{phoneNumber}</span>
@@ -80,20 +85,19 @@ export default function Home({ menu, businessInfo }: HomeProps) {
             >
               <div
                 dangerouslySetInnerHTML={{
-                  __html: aboutOwner.content
+                  __html: aboutOwner.content,
                 }}
               />
             </Double>
           </div>
-          {/* <Button buttonText='LEARN MORE ABOUT FRASERS' buttonLink='/about' /> */}
         </section>
         <section id="menu" className="container">
           <div className={styles.header}>
             <h1>MENU</h1>
           </div>
-          <Menu menu={menu} pathName="/" categories={['Starters', 'Entrees']} />
+          <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
         </section>
-        <section>
+        <section id="gallery">
           <div className={styles.header}>
             <h1>Gallery</h1>
           </div>
