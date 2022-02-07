@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Button from './Button';
+import Button from './LinkButton';
 import Layout, { meta } from './Layout';
 
 export default function Dashboard() {
