@@ -8,16 +8,25 @@ import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
-import { Menu as MenuType, BusinessInfo } from '../.tina/__generated__/types';
+import {
+  Menu as MenuType,
+  BusinessInfo,
+  GalleryGridImages,
+} from '../.tina/__generated__/types';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
 interface HomeProps {
-  menu: MenuType;
+  menu?: MenuType;
   businessInfo: BusinessInfo;
+  galleryImages?: GalleryGridImages;
 }
 
-export default function Home({ menu, businessInfo }: HomeProps): JSX.Element {
+export default function Home({
+  menu,
+  businessInfo,
+  galleryImages,
+}: HomeProps): JSX.Element {
   const { phoneNumber } = businessInfo;
   return (
     <>
@@ -96,7 +105,7 @@ export default function Home({ menu, businessInfo }: HomeProps): JSX.Element {
           <div className={styles.header}>
             <h1>Gallery</h1>
           </div>
-          <GalleryGrid images={images} />
+          <GalleryGrid images={galleryImages} />
         </section>
         <section id="contact">
           <div className={`${styles.header} ${styles.hiddenHeader}`}>
