@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-export default function AboutPage() {
+export default function AboutPage(): JSX.Element {
   return (
     <Layout>
       <Head>

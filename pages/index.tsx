@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { getStaticPropsForTina, gql } from 'tinacms';
 import Home from '../components/Home';
 import { getMenuQueryFragment } from './menu/index';
@@ -88,7 +89,7 @@ export const getDoubleFeatureListFragment = `
   }
 `;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
       query MenuQuery($menuRelativePath: String!){
