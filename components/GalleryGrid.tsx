@@ -5,7 +5,6 @@ interface GridProps {
 }
 
 export default function GalleryGrid({ images }: GridProps): JSX.Element {
-  console.log('IMAGES', images);
   return (
     <>
       <div className="gallery-container">

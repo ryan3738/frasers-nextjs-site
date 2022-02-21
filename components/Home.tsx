@@ -6,7 +6,6 @@ import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
 import siteData from '../public/data/site-data.json';
 import styles from '../styles/styles.module.css';
-import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
 import {
   Menu as MenuType,
