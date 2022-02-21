@@ -12,8 +12,6 @@ export default function HomePage(props): JSX.Element {
     const menu = props.data.getMenuDocument.data;
     const businessInfo = props.data.getBusinessInfoDocument.data;
     const galleryImages = props.data.getGalleryGridDocument.data.images || [];
-
-    // console.log('galleryImages', galleryImages);
     return (
       <>
         <Home
