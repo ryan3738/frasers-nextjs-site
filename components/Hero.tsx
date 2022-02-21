@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { BusinessInfo } from '../.tina/__generated__/types';
-import ButtonLink from './ButtonLink';
+import LinkButton from './LinkButton';
 import Hours from './Hours';
 interface HeroProps {
   businessInfo?: BusinessInfo;
@@ -39,10 +39,6 @@ export default function Hero({ businessInfo }: HeroProps): JSX.Element {
             <p>
               <strong>CALL FOR TAKEOUT</strong>
             </p>
-            <ButtonLink
-              buttonText="New Year's Menu"
-              buttonLink="/menu/new-years"
-            />
             <a href={`tel:${businessInfo.phoneNumber}`} title="Click to Call">
               {businessInfo.phoneNumber}
             </a>

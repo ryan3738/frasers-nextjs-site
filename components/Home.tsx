@@ -9,7 +9,6 @@ import styles from '../styles/styles.module.css';
 import images from '../public/data/gallery-grid.json';
 import { Menu } from './Menu/Menu';
 import { Menu as MenuType, BusinessInfo } from '../.tina/__generated__/types';
-import ButtonLink from './ButtonLink';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
@@ -33,16 +32,12 @@ export default function Home({ menu, businessInfo }: HomeProps): JSX.Element {
           <div className="double-wrapper">
             <Double
               id="about"
-              title="Open New Year's Eve"
-              subtitle="Special 5 Course Menu"
+              title=""
+              subtitle=""
               imageSource="/images/gift-card-square.jpg"
               imageAlt="frasers gift card closeup"
             >
               <div>
-                <ButtonLink
-                  buttonText="New Year's Menu"
-                  buttonLink="/menu/new-years"
-                />
                 <p>Please call to make a reservation</p>
                 <h3>Gift Cards Available</h3>
                 To purchase a gift card please call us at{' '}

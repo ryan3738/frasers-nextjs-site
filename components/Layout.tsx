@@ -33,10 +33,6 @@ const navigationLinks = [
     href: '/menu',
   },
   {
-    text: "New Year's",
-    href: '/menu/new-years',
-  },
-  {
     text: 'About',
     href: '/#about',
   },
