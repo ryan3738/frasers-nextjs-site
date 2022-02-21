@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@tinacms/auth": "^0.50.2",
-    "@tinacms/cli": "^0.58.5",
+    "@tinacms/cli": "^0.60.5",
     "classnames": "^2.3.1",
     "date-fns": "^2.27.0",
     "gray-matter": "^4.0.3",
@@ -31,10 +31,10 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-markdown": "^7.1.1",
-    "react-tinacms-editor": "^0.52.11",
+    "react-markdown": "^8.0.0",
+    "react-tinacms-editor": "^0.53.5",
     "styled-components": "^5.3.3",
-    "tinacms": "^0.61.1"
+    "tinacms": "^0.66.4"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.0.0",
@@ -57,8 +57,8 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-sonarjs": "^0.11.0",
-    "eslint-plugin-unicorn": "^39.0.0",
+    "eslint-plugin-sonarjs": "^0.12.0",
+    "eslint-plugin-unicorn": "^41.0.0",
     "prettier": "^2.4.1",
     "typescript": "^4.5.4"
   }

@@ -38,7 +38,7 @@ interface Document {
 
 """A relay-compliant pagination connection"""
 interface Connection {
-  totalCount: Int!
+  totalCount: Float!
 }
 
 type Query {
@@ -46,18 +46,18 @@ type Query {
   getCollections: [Collection!]!
   node(id: String): Node!
   getDocument(collection: String, relativePath: String): DocumentNode!
-  getDocumentList(before: String, after: String, first: Int, last: Int): DocumentConnection!
+  getDocumentList(before: String, after: String, first: Float, last: Float): DocumentConnection!
   getDocumentFields: JSON!
   getGalleryGridDocument(relativePath: String): GalleryGridDocument!
-  getGalleryGridList(before: String, after: String, first: Int, last: Int): GalleryGridConnection!
+  getGalleryGridList(before: String, after: String, first: Float, last: Float): GalleryGridConnection!
   getBusinessInfoDocument(relativePath: String): BusinessInfoDocument!
-  getBusinessInfoList(before: String, after: String, first: Int, last: Int): BusinessInfoConnection!
+  getBusinessInfoList(before: String, after: String, first: Float, last: Float): BusinessInfoConnection!
   getMenuDocument(relativePath: String): MenuDocument!
-  getMenuList(before: String, after: String, first: Int, last: Int): MenuConnection!
+  getMenuList(before: String, after: String, first: Float, last: Float): MenuConnection!
   getDoubleFeatureDocument(relativePath: String): DoubleFeatureDocument!
-  getDoubleFeatureList(before: String, after: String, first: Int, last: Int): DoubleFeatureConnection!
+  getDoubleFeatureList(before: String, after: String, first: Float, last: Float): DoubleFeatureConnection!
   getPostsDocument(relativePath: String): PostsDocument!
-  getPostsList(before: String, after: String, first: Int, last: Int): PostsConnection!
+  getPostsList(before: String, after: String, first: Float, last: Float): PostsConnection!
 }
 
 type DocumentConnectionEdges {
@@ -67,20 +67,20 @@ type DocumentConnectionEdges {
 
 type DocumentConnection implements Connection {
   pageInfo: PageInfo
-  totalCount: Int!
+  totalCount: Float!
   edges: [DocumentConnectionEdges]
 }
 
 type Collection {
   name: String!
   slug: String!
-  label: String!
+  label: String
   path: String!
   format: String
   matches: String
   templates: [JSON]
   fields: [JSON]
-  documents(before: String, after: String, first: Int, last: Int): DocumentConnection!
+  documents(before: String, after: String, first: Float, last: Float): DocumentConnection!
 }
 
 union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument
@@ -111,7 +111,7 @@ type GalleryGridConnectionEdges {
 
 type GalleryGridConnection implements Connection {
   pageInfo: PageInfo
-  totalCount: Int!
+  totalCount: Float!
   edges: [GalleryGridConnectionEdges]
 }
 
@@ -155,13 +155,13 @@ type BusinessInfoConnectionEdges {
 
 type BusinessInfoConnection implements Connection {
   pageInfo: PageInfo
-  totalCount: Int!
+  totalCount: Float!
   edges: [BusinessInfoConnectionEdges]
 }
 
 type MenuSectionsItemsModifiers {
   name: String
-  price: Int
+  price: Float
 }
 
 type MenuSectionsItemsImages {
@@ -172,7 +172,7 @@ type MenuSectionsItemsImages {
 type MenuSectionsItems {
   name: String!
   description: String
-  price: Int
+  price: Float
   dietary: [String]
   modifiers: [MenuSectionsItemsModifiers]
   available: Boolean
@@ -210,7 +210,7 @@ type MenuConnectionEdges {
 
 type MenuConnection implements Connection {
   pageInfo: PageInfo
-  totalCount: Int!
+  totalCount: Float!
   edges: [MenuConnectionEdges]
 }
 
@@ -243,7 +243,7 @@ type DoubleFeatureConnectionEdges {
 
 type DoubleFeatureConnection implements Connection {
   pageInfo: PageInfo
-  totalCount: Int!
+  totalCount: Float!
   edges: [DoubleFeatureConnectionEdges]
 }
 
@@ -268,7 +268,7 @@ type PostsConnectionEdges {
 
 type PostsConnection implements Connection {
   pageInfo: PageInfo
-  totalCount: Int!
+  totalCount: Float!
   edges: [PostsConnectionEdges]
 }
 
@@ -332,7 +332,7 @@ input BusinessInfoMutation {
 
 input MenuSectionsItemsModifiersMutation {
   name: String
-  price: Int
+  price: Float
 }
 
 input MenuSectionsItemsImagesMutation {
@@ -343,7 +343,7 @@ input MenuSectionsItemsImagesMutation {
 input MenuSectionsItemsMutation {
   name: String
   description: String
-  price: Int
+  price: Float
   dietary: [String]
   modifiers: [MenuSectionsItemsModifiersMutation]
   available: Boolean
