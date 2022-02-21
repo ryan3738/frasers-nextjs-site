@@ -1,18 +1,48 @@
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import GalleryGrid from '../components/GalleryGrid';
-import images from '../public/data/gallery-grid.json';
+import { getStaticPropsForTina, gql } from 'tinacms';
 
-export default function GalleryPage() {
-  return (
-    <Layout>
-      <Head>
-        <title>Gallery</title>
-      </Head>
-      <section>
-        <h1>Gallery</h1>
-        <GalleryGrid images={images} />
-      </section>
-    </Layout>
-  );
+export default function GalleryPage(props): JSX.Element {
+  if (props.data && props.data.getGalleryGridDocument) {
+    const galleryImages = props.data.getGalleryGridDocument.data.images || [];
+    return (
+      <Layout>
+        <Head>
+          <title>Gallery</title>
+        </Head>
+        <section>
+          <h1>Gallery</h1>
+          <GalleryGrid images={galleryImages} />
+        </section>
+      </Layout>
+    );
+  }
 }
+
+export const getGalleryGridFragment = `
+    getGalleryGridDocument(relativePath: "galleryGrid.json"){
+      data {
+        images {
+        alt
+        src
+        format
+      }
+    }
+  }
+  `;
+
+export const getStaticProps = async () => {
+  const tinaProperties = await getStaticPropsForTina({
+    query: gql`
+      query GalleryQuery{
+        ${getGalleryGridFragment}
+      }
+    `,
+  });
+  return {
+    props: {
+      ...tinaProperties,
+    },
+  };
+};

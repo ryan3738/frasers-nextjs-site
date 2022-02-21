@@ -17,6 +17,6 @@ export default createMediaHandler({
       console.error(error);
       return false;
     }
-  }
+  },
 });
 export { mediaHandlerConfig as config } from 'next-tinacms-cloudinary/dist/handlers';
