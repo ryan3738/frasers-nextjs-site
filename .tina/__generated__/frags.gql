@@ -2,7 +2,7 @@ fragment GalleryGridParts on GalleryGrid {
   images {
     __typename
     alt
-    image
+    src
     format
   }
 }

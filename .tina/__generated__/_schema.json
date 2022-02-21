@@ -34,13 +34,13 @@
               ]
             },
             {
-              "name": "image",
+              "name": "src",
               "type": "image",
               "label": "Menu Item Image",
               "namespace": [
                 "galleryGrid",
                 "images",
-                "image"
+                "src"
               ]
             },
             {

@@ -207,7 +207,7 @@ export type DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocu
 export type GalleryGridImages = {
   __typename?: 'GalleryGridImages';
   alt: Scalars['String'];
-  image?: Maybe<Scalars['String']>;
+  src?: Maybe<Scalars['String']>;
   format?: Maybe<Scalars['String']>;
 };
 
@@ -527,7 +527,7 @@ export type DocumentMutation = {
 
 export type GalleryGridImagesMutation = {
   alt?: InputMaybe<Scalars['String']>;
-  image?: InputMaybe<Scalars['String']>;
+  src?: InputMaybe<Scalars['String']>;
   format?: InputMaybe<Scalars['String']>;
 };
 
@@ -612,7 +612,7 @@ export type PostsMutation = {
   body?: InputMaybe<Scalars['String']>;
 };
 
-export type GalleryGridPartsFragment = { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, image?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined };
+export type GalleryGridPartsFragment = { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined };
 
 export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined };
 
@@ -627,12 +627,12 @@ export type GetGalleryGridDocumentQueryVariables = Exact<{
 }>;
 
 
-export type GetGalleryGridDocumentQuery = { __typename?: 'Query', getGalleryGridDocument: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, image?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined } } };
+export type GetGalleryGridDocumentQuery = { __typename?: 'Query', getGalleryGridDocument: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined } } };
 
 export type GetGalleryGridListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetGalleryGridListQuery = { __typename?: 'Query', getGalleryGridList: { __typename?: 'GalleryGridConnection', totalCount: number, edges?: Array<{ __typename?: 'GalleryGridConnectionEdges', node?: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, image?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetGalleryGridListQuery = { __typename?: 'Query', getGalleryGridList: { __typename?: 'GalleryGridConnection', totalCount: number, edges?: Array<{ __typename?: 'GalleryGridConnectionEdges', node?: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetBusinessInfoDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -687,7 +687,7 @@ export const GalleryGridPartsFragmentDoc = gql`
   images {
     __typename
     alt
-    image
+    src
     format
   }
 }

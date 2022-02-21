@@ -2,17 +2,25 @@ import { getStaticPropsForTina, gql } from 'tinacms';
 import Home from '../components/Home';
 import { getMenuQueryFragment } from './menu/index';
 
-export default function HomePage(props) {
+export default function HomePage(props): JSX.Element {
   if (
     props.data &&
     props.data.getMenuDocument &&
-    props.data.getBusinessInfoDocument
+    props.data.getBusinessInfoDocument &&
+    props.data.getGalleryGridDocument
   ) {
     const menu = props.data.getMenuDocument.data;
     const businessInfo = props.data.getBusinessInfoDocument.data;
+    const galleryImages = props.data.getGalleryGridDocument.data.images || [];
+
+    // console.log('galleryImages', galleryImages);
     return (
       <>
-        <Home menu={menu} businessInfo={businessInfo} />
+        <Home
+          menu={menu}
+          businessInfo={businessInfo}
+          galleryImages={galleryImages}
+        />
       </>
     );
   }
@@ -46,7 +54,7 @@ export const getGalleryGridFragment = `
       data {
         images {
         alt
-        image
+        src
         format
       }
     }

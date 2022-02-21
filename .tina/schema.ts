@@ -239,7 +239,7 @@ export default defineSchema({
               required: true,
             },
             {
-              name: 'image',
+              name: 'src',
               type: 'image',
               label: 'Menu Item Image',
             },

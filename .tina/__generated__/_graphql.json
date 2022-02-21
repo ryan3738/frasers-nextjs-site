@@ -1626,7 +1626,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "image"
+            "value": "src"
           },
           "arguments": [],
           "type": {
@@ -4565,7 +4565,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "image"
+            "value": "src"
           },
           "type": {
             "kind": "NamedType",
