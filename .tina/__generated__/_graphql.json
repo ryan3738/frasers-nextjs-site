@@ -3160,7 +3160,7 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
-            "value": "elemntId"
+            "value": "elementId"
           },
           "arguments": [],
           "type": {
@@ -5287,7 +5287,7 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "elemntId"
+            "value": "elementId"
           },
           "type": {
             "kind": "NamedType",

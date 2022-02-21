@@ -363,7 +363,7 @@ export type DoubleFeature = {
   title?: Maybe<Scalars['String']>;
   subtitle?: Maybe<Scalars['String']>;
   image?: Maybe<DoubleFeatureImage>;
-  elemntId?: Maybe<Scalars['String']>;
+  elementId?: Maybe<Scalars['String']>;
   body?: Maybe<Scalars['String']>;
 };
 
@@ -603,7 +603,7 @@ export type DoubleFeatureMutation = {
   title?: InputMaybe<Scalars['String']>;
   subtitle?: InputMaybe<Scalars['String']>;
   image?: InputMaybe<DoubleFeatureImageMutation>;
-  elemntId?: InputMaybe<Scalars['String']>;
+  elementId?: InputMaybe<Scalars['String']>;
   body?: InputMaybe<Scalars['String']>;
 };
 
@@ -618,7 +618,7 @@ export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: st
 
 export type MenuPartsFragment = { __typename?: 'Menu', title?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
 
-export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elemntId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined };
+export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elementId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined };
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined };
 
@@ -663,12 +663,12 @@ export type GetDoubleFeatureDocumentQueryVariables = Exact<{
 }>;
 
 
-export type GetDoubleFeatureDocumentQuery = { __typename?: 'Query', getDoubleFeatureDocument: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elemntId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined } } };
+export type GetDoubleFeatureDocumentQuery = { __typename?: 'Query', getDoubleFeatureDocument: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elementId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined } } };
 
 export type GetDoubleFeatureListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetDoubleFeatureListQuery = { __typename?: 'Query', getDoubleFeatureList: { __typename?: 'DoubleFeatureConnection', totalCount: number, edges?: Array<{ __typename?: 'DoubleFeatureConnectionEdges', node?: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elemntId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetDoubleFeatureListQuery = { __typename?: 'Query', getDoubleFeatureList: { __typename?: 'DoubleFeatureConnection', totalCount: number, edges?: Array<{ __typename?: 'DoubleFeatureConnectionEdges', node?: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elementId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export type GetPostsDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -756,7 +756,7 @@ export const DoubleFeaturePartsFragmentDoc = gql`
     src
     alt
   }
-  elemntId
+  elementId
   body
 }
     `;

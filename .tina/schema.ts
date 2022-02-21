@@ -330,7 +330,7 @@ export default defineSchema({
         {
           type: "string",
           label: "Element ID",
-          name: "elemntId",
+          name: "elementId",
         },
         {
           type: "string",

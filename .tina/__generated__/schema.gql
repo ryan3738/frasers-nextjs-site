@@ -223,7 +223,7 @@ type DoubleFeature {
   title: String
   subtitle: String
   image: DoubleFeatureImage
-  elemntId: String
+  elementId: String
   body: String
 }
 
@@ -374,7 +374,7 @@ input DoubleFeatureMutation {
   title: String
   subtitle: String
   image: DoubleFeatureImageMutation
-  elemntId: String
+  elementId: String
   body: String
 }
 

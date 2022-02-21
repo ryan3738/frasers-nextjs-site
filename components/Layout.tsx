@@ -155,14 +155,11 @@ export default function Layout({
         </footer>
         <style jsx>{`
           .container {
-            /* effects max width of layout */
             height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            /* max-width: 100%; */
-            /* min-width: 200px; */
             padding: 0;
             margin: 0 auto;
           }
@@ -186,11 +183,7 @@ export default function Layout({
             width: 100%;
             background-color: var(--surface-color);
             padding: 1em;
-            /* white-space: no-wrap; */
           }
-          /* .light-text {
-          color: var(--text-color);
-        } */
 
           .no-wrap {
             white-space: nowrap;
