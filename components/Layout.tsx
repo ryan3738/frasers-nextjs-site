@@ -137,7 +137,10 @@ export default function Layout({
         </Script>
         <main className="main">{children}</main>
         <footer className="footer">
-          <span>© 2020 Frasers Gourmet Hideaway |</span>
+          <nav className="nav-list">
+            <NavList links={navigationLinks} />
+          </nav>
+          <span>© 2022 Frasers Gourmet Hideaway |</span>
           <span className="no-wrap">
             &nbsp;Built by:&nbsp;
             <a
@@ -149,9 +152,6 @@ export default function Layout({
               Ryan Fraser
             </a>
           </span>
-          <nav className="nav-list">
-            <NavList links={navigationLinks} />
-          </nav>
         </footer>
         <style jsx>{`
           .container {
