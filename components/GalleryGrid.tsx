@@ -8,31 +8,28 @@ export default function GalleryGrid({ images }: GridProps): JSX.Element {
   return (
     <>
       <div className="gallery-container">
-        {images
-          // .filter((e) => e.Category === category)
-          // .filter((e) => e.Available === true)
-          .map(
-            data =>
-              data.src && (
-                <div
-                  key={data.alt}
-                  id="image-div"
-                  // className={data.size}
-                >
-                  <div className="image-overlay"> </div>
-                  <div className="overlay-text">{data.alt}</div>
-                  <Image
-                    className="image"
-                    src={data.src}
-                    alt={data.alt}
-                    layout="responsive"
-                    objectFit="cover"
-                    height="560"
-                    width="560"
-                  />
-                </div>
-              )
-          )}
+        {images.map(
+          image =>
+            image.src && (
+              <div
+                key={image.alt}
+                id="image-div"
+                // className={data.size}
+              >
+                <div className="image-overlay"> </div>
+                <div className="overlay-text">{image.alt}</div>
+                <Image
+                  className="image"
+                  src={image.src}
+                  alt={image.alt}
+                  layout="responsive"
+                  objectFit="cover"
+                  height="560"
+                  width="560"
+                />
+              </div>
+            )
+        )}
       </div>
       <style jsx>{`
         .gallery-container {
