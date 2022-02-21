@@ -68,7 +68,7 @@ fragment DoubleFeatureParts on DoubleFeature {
     src
     alt
   }
-  elemntId
+  elementId
   body
 }
 

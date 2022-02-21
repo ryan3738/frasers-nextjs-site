@@ -56,7 +56,7 @@ export const getGalleryGridFragment = `
 export const getDoubleFeatureFragment = `
     getDoubleFeatureDocument(relativePath: "aboutBusiness.mdx"){
     data {
-      elemntId
+      elementId
       title
       subtitle
       image {
@@ -92,11 +92,11 @@ export const getStaticProps = async () => {
         ${getDoubleFeatureListFragment}
       }
     `,
-    variables: { menuRelativePath: 'dinnerMenu.json' }
+    variables: { menuRelativePath: 'dinnerMenu.json' },
   });
   return {
     props: {
-      ...tinaProperties
-    }
+      ...tinaProperties,
+    },
   };
 };
