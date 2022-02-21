@@ -18,7 +18,7 @@ const { aboutBusiness, aboutOwner } = siteData;
 interface HomeProps {
   menu?: MenuType;
   businessInfo: BusinessInfo;
-  galleryImages?: GalleryGridImages;
+  galleryImages?: GalleryGridImages[];
 }
 
 export default function Home({
