@@ -3,6 +3,7 @@ import { getStaticPropsForTina, gql } from 'tinacms';
 import { getMenuQueryFragment } from './index';
 import Layout, { meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
+import { GetStaticProps } from 'next';
 
 export default function MenuPage(props): JSX.Element {
   const sections = [
@@ -28,7 +29,7 @@ export default function MenuPage(props): JSX.Element {
   return <div>Loading...</div>;
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
       query MenuQuery($menuRelativePath: String!) {

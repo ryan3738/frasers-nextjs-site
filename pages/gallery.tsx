@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import GalleryGrid from '../components/GalleryGrid';
 import { getStaticPropsForTina, gql } from 'tinacms';
+import { GetStaticProps } from 'next';
 
 export default function GalleryPage(props): JSX.Element {
   if (props.data && props.data.getGalleryGridDocument) {
@@ -32,7 +33,7 @@ export const getGalleryGridFragment = `
   }
   `;
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const tinaProperties = await getStaticPropsForTina({
     query: gql`
       query GalleryQuery{

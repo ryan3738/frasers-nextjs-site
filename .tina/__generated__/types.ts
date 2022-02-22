@@ -56,7 +56,7 @@ export type Document = {
 
 /** A relay-compliant pagination connection */
 export type Connection = {
-  totalCount: Scalars['Int'];
+  totalCount: Scalars['Float'];
 };
 
 export type Query = {
@@ -99,8 +99,8 @@ export type QueryGetDocumentArgs = {
 export type QueryGetDocumentListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 
@@ -112,8 +112,8 @@ export type QueryGetGalleryGridDocumentArgs = {
 export type QueryGetGalleryGridListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 
@@ -125,8 +125,8 @@ export type QueryGetBusinessInfoDocumentArgs = {
 export type QueryGetBusinessInfoListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 
@@ -138,8 +138,8 @@ export type QueryGetMenuDocumentArgs = {
 export type QueryGetMenuListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 
@@ -151,8 +151,8 @@ export type QueryGetDoubleFeatureDocumentArgs = {
 export type QueryGetDoubleFeatureListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 
@@ -164,8 +164,8 @@ export type QueryGetPostsDocumentArgs = {
 export type QueryGetPostsListArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 export type DocumentConnectionEdges = {
@@ -177,7 +177,7 @@ export type DocumentConnectionEdges = {
 export type DocumentConnection = Connection & {
   __typename?: 'DocumentConnection';
   pageInfo?: Maybe<PageInfo>;
-  totalCount: Scalars['Int'];
+  totalCount: Scalars['Float'];
   edges?: Maybe<Array<Maybe<DocumentConnectionEdges>>>;
 };
 
@@ -185,7 +185,7 @@ export type Collection = {
   __typename?: 'Collection';
   name: Scalars['String'];
   slug: Scalars['String'];
-  label: Scalars['String'];
+  label?: Maybe<Scalars['String']>;
   path: Scalars['String'];
   format?: Maybe<Scalars['String']>;
   matches?: Maybe<Scalars['String']>;
@@ -198,8 +198,8 @@ export type Collection = {
 export type CollectionDocumentsArgs = {
   before?: InputMaybe<Scalars['String']>;
   after?: InputMaybe<Scalars['String']>;
-  first?: InputMaybe<Scalars['Int']>;
-  last?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 export type DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument;
@@ -235,7 +235,7 @@ export type GalleryGridConnectionEdges = {
 export type GalleryGridConnection = Connection & {
   __typename?: 'GalleryGridConnection';
   pageInfo?: Maybe<PageInfo>;
-  totalCount: Scalars['Int'];
+  totalCount: Scalars['Float'];
   edges?: Maybe<Array<Maybe<GalleryGridConnectionEdges>>>;
 };
 
@@ -285,14 +285,14 @@ export type BusinessInfoConnectionEdges = {
 export type BusinessInfoConnection = Connection & {
   __typename?: 'BusinessInfoConnection';
   pageInfo?: Maybe<PageInfo>;
-  totalCount: Scalars['Int'];
+  totalCount: Scalars['Float'];
   edges?: Maybe<Array<Maybe<BusinessInfoConnectionEdges>>>;
 };
 
 export type MenuSectionsItemsModifiers = {
   __typename?: 'MenuSectionsItemsModifiers';
   name?: Maybe<Scalars['String']>;
-  price?: Maybe<Scalars['Int']>;
+  price?: Maybe<Scalars['Float']>;
 };
 
 export type MenuSectionsItemsImages = {
@@ -305,7 +305,7 @@ export type MenuSectionsItems = {
   __typename?: 'MenuSectionsItems';
   name: Scalars['String'];
   description?: Maybe<Scalars['String']>;
-  price?: Maybe<Scalars['Int']>;
+  price?: Maybe<Scalars['Float']>;
   dietary?: Maybe<Array<Maybe<Scalars['String']>>>;
   modifiers?: Maybe<Array<Maybe<MenuSectionsItemsModifiers>>>;
   available?: Maybe<Scalars['Boolean']>;
@@ -348,7 +348,7 @@ export type MenuConnectionEdges = {
 export type MenuConnection = Connection & {
   __typename?: 'MenuConnection';
   pageInfo?: Maybe<PageInfo>;
-  totalCount: Scalars['Int'];
+  totalCount: Scalars['Float'];
   edges?: Maybe<Array<Maybe<MenuConnectionEdges>>>;
 };
 
@@ -386,7 +386,7 @@ export type DoubleFeatureConnectionEdges = {
 export type DoubleFeatureConnection = Connection & {
   __typename?: 'DoubleFeatureConnection';
   pageInfo?: Maybe<PageInfo>;
-  totalCount: Scalars['Int'];
+  totalCount: Scalars['Float'];
   edges?: Maybe<Array<Maybe<DoubleFeatureConnectionEdges>>>;
 };
 
@@ -415,7 +415,7 @@ export type PostsConnectionEdges = {
 export type PostsConnection = Connection & {
   __typename?: 'PostsConnection';
   pageInfo?: Maybe<PageInfo>;
-  totalCount: Scalars['Int'];
+  totalCount: Scalars['Float'];
   edges?: Maybe<Array<Maybe<PostsConnectionEdges>>>;
 };
 
@@ -561,7 +561,7 @@ export type BusinessInfoMutation = {
 
 export type MenuSectionsItemsModifiersMutation = {
   name?: InputMaybe<Scalars['String']>;
-  price?: InputMaybe<Scalars['Int']>;
+  price?: InputMaybe<Scalars['Float']>;
 };
 
 export type MenuSectionsItemsImagesMutation = {
@@ -572,7 +572,7 @@ export type MenuSectionsItemsImagesMutation = {
 export type MenuSectionsItemsMutation = {
   name?: InputMaybe<Scalars['String']>;
   description?: InputMaybe<Scalars['String']>;
-  price?: InputMaybe<Scalars['Int']>;
+  price?: InputMaybe<Scalars['Float']>;
   dietary?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
   modifiers?: InputMaybe<Array<InputMaybe<MenuSectionsItemsModifiersMutation>>>;
   available?: InputMaybe<Scalars['Boolean']>;
@@ -612,75 +612,75 @@ export type PostsMutation = {
   body?: InputMaybe<Scalars['String']>;
 };
 
-export type GalleryGridPartsFragment = { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined };
+export type GalleryGridPartsFragment = { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null, format?: string | null } | null> | null };
 
-export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined };
+export type BusinessInfoPartsFragment = { __typename?: 'BusinessInfo', name?: string | null, phoneNumber?: string | null, email?: string | null, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null, street?: string | null, street2?: string | null, city?: string | null, region?: string | null, zip?: string | null, directions?: string | null } | null, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null, hours?: string | null } | null> | null };
 
-export type MenuPartsFragment = { __typename?: 'Menu', title?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined };
+export type MenuPartsFragment = { __typename?: 'Menu', title?: string | null, description?: string | null, notes?: string | null, available?: boolean | null, sections?: Array<{ __typename: 'MenuSections', name?: string | null, description?: string | null, notes?: string | null, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null, price?: number | null, dietary?: Array<string | null> | null, available?: boolean | null, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null, price?: number | null } | null> | null, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null } | null> | null } | null> | null } | null> | null };
 
-export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elementId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined };
+export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title?: string | null, subtitle?: string | null, elementId?: string | null, body?: string | null, image?: { __typename: 'DoubleFeatureImage', src?: string | null, alt: string } | null };
 
-export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined };
+export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null, body?: string | null };
 
 export type GetGalleryGridDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type GetGalleryGridDocumentQuery = { __typename?: 'Query', getGalleryGridDocument: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined } } };
+export type GetGalleryGridDocumentQuery = { __typename?: 'Query', getGalleryGridDocument: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null, format?: string | null } | null> | null } } };
 
 export type GetGalleryGridListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetGalleryGridListQuery = { __typename?: 'Query', getGalleryGridList: { __typename?: 'GalleryGridConnection', totalCount: number, edges?: Array<{ __typename?: 'GalleryGridConnectionEdges', node?: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null | undefined, format?: string | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetGalleryGridListQuery = { __typename?: 'Query', getGalleryGridList: { __typename?: 'GalleryGridConnection', totalCount: number, edges?: Array<{ __typename?: 'GalleryGridConnectionEdges', node?: { __typename?: 'GalleryGridDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null, format?: string | null } | null> | null } } | null } | null> | null } };
 
 export type GetBusinessInfoDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type GetBusinessInfoDocumentQuery = { __typename?: 'Query', getBusinessInfoDocument: { __typename?: 'BusinessInfoDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined } } };
+export type GetBusinessInfoDocumentQuery = { __typename?: 'Query', getBusinessInfoDocument: { __typename?: 'BusinessInfoDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'BusinessInfo', name?: string | null, phoneNumber?: string | null, email?: string | null, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null, street?: string | null, street2?: string | null, city?: string | null, region?: string | null, zip?: string | null, directions?: string | null } | null, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null, hours?: string | null } | null> | null } } };
 
 export type GetBusinessInfoListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetBusinessInfoListQuery = { __typename?: 'Query', getBusinessInfoList: { __typename?: 'BusinessInfoConnection', totalCount: number, edges?: Array<{ __typename?: 'BusinessInfoConnectionEdges', node?: { __typename?: 'BusinessInfoDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'BusinessInfo', name?: string | null | undefined, phoneNumber?: string | null | undefined, email?: string | null | undefined, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null | undefined, street?: string | null | undefined, street2?: string | null | undefined, city?: string | null | undefined, region?: string | null | undefined, zip?: string | null | undefined, directions?: string | null | undefined } | null | undefined, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null | undefined, hours?: string | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetBusinessInfoListQuery = { __typename?: 'Query', getBusinessInfoList: { __typename?: 'BusinessInfoConnection', totalCount: number, edges?: Array<{ __typename?: 'BusinessInfoConnectionEdges', node?: { __typename?: 'BusinessInfoDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'BusinessInfo', name?: string | null, phoneNumber?: string | null, email?: string | null, address?: { __typename: 'BusinessInfoAddress', name: string, description?: string | null, street?: string | null, street2?: string | null, city?: string | null, region?: string | null, zip?: string | null, directions?: string | null } | null, hours?: Array<{ __typename: 'BusinessInfoHours', day?: string | null, hours?: string | null } | null> | null } } | null } | null> | null } };
 
 export type GetMenuDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type GetMenuDocumentQuery = { __typename?: 'Query', getMenuDocument: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', title?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } };
+export type GetMenuDocumentQuery = { __typename?: 'Query', getMenuDocument: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', title?: string | null, description?: string | null, notes?: string | null, available?: boolean | null, sections?: Array<{ __typename: 'MenuSections', name?: string | null, description?: string | null, notes?: string | null, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null, price?: number | null, dietary?: Array<string | null> | null, available?: boolean | null, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null, price?: number | null } | null> | null, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null } | null> | null } | null> | null } | null> | null } } };
 
 export type GetMenuListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetMenuListQuery = { __typename?: 'Query', getMenuList: { __typename?: 'MenuConnection', totalCount: number, edges?: Array<{ __typename?: 'MenuConnectionEdges', node?: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', title?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, available?: boolean | null | undefined, sections?: Array<{ __typename: 'MenuSections', name?: string | null | undefined, description?: string | null | undefined, notes?: string | null | undefined, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null | undefined, price?: number | null | undefined, dietary?: Array<string | null | undefined> | null | undefined, available?: boolean | null | undefined, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null | undefined, price?: number | null | undefined } | null | undefined> | null | undefined, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } | null | undefined> | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetMenuListQuery = { __typename?: 'Query', getMenuList: { __typename?: 'MenuConnection', totalCount: number, edges?: Array<{ __typename?: 'MenuConnectionEdges', node?: { __typename?: 'MenuDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Menu', title?: string | null, description?: string | null, notes?: string | null, available?: boolean | null, sections?: Array<{ __typename: 'MenuSections', name?: string | null, description?: string | null, notes?: string | null, items?: Array<{ __typename: 'MenuSectionsItems', name: string, description?: string | null, price?: number | null, dietary?: Array<string | null> | null, available?: boolean | null, modifiers?: Array<{ __typename: 'MenuSectionsItemsModifiers', name?: string | null, price?: number | null } | null> | null, images?: Array<{ __typename: 'MenuSectionsItemsImages', alt: string, image?: string | null } | null> | null } | null> | null } | null> | null } } | null } | null> | null } };
 
 export type GetDoubleFeatureDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type GetDoubleFeatureDocumentQuery = { __typename?: 'Query', getDoubleFeatureDocument: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elementId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined } } };
+export type GetDoubleFeatureDocumentQuery = { __typename?: 'Query', getDoubleFeatureDocument: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null, subtitle?: string | null, elementId?: string | null, body?: string | null, image?: { __typename: 'DoubleFeatureImage', src?: string | null, alt: string } | null } } };
 
 export type GetDoubleFeatureListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetDoubleFeatureListQuery = { __typename?: 'Query', getDoubleFeatureList: { __typename?: 'DoubleFeatureConnection', totalCount: number, edges?: Array<{ __typename?: 'DoubleFeatureConnectionEdges', node?: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null | undefined, subtitle?: string | null | undefined, elementId?: string | null | undefined, body?: string | null | undefined, image?: { __typename: 'DoubleFeatureImage', src?: string | null | undefined, alt: string } | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetDoubleFeatureListQuery = { __typename?: 'Query', getDoubleFeatureList: { __typename?: 'DoubleFeatureConnection', totalCount: number, edges?: Array<{ __typename?: 'DoubleFeatureConnectionEdges', node?: { __typename?: 'DoubleFeatureDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'DoubleFeature', title?: string | null, subtitle?: string | null, elementId?: string | null, body?: string | null, image?: { __typename: 'DoubleFeatureImage', src?: string | null, alt: string } | null } } | null } | null> | null } };
 
 export type GetPostsDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type GetPostsDocumentQuery = { __typename?: 'Query', getPostsDocument: { __typename?: 'PostsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined } } };
+export type GetPostsDocumentQuery = { __typename?: 'Query', getPostsDocument: { __typename?: 'PostsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Posts', title?: string | null, body?: string | null } } };
 
 export type GetPostsListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetPostsListQuery = { __typename?: 'Query', getPostsList: { __typename?: 'PostsConnection', totalCount: number, edges?: Array<{ __typename?: 'PostsConnectionEdges', node?: { __typename?: 'PostsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Posts', title?: string | null | undefined, body?: string | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetPostsListQuery = { __typename?: 'Query', getPostsList: { __typename?: 'PostsConnection', totalCount: number, edges?: Array<{ __typename?: 'PostsConnectionEdges', node?: { __typename?: 'PostsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Posts', title?: string | null, body?: string | null } } | null } | null> | null } };
 
 export const GalleryGridPartsFragmentDoc = gql`
     fragment GalleryGridParts on GalleryGrid {
@@ -1009,16 +1009,26 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
   export type Sdk = ReturnType<typeof getSdk>;
 
 // TinaSDK generated code
-import { getStaticPropsForTina } from 'tinacms'
+import { staticRequest } from 'tinacms'
 const requester: (doc: any, vars?: any, options?: any) => Promise<any> = async (
   doc,
   vars,
   _options
 ) => {
-  // const data = await tinaClient.request(doc, { variables: vars }); 
-  const res = await await getStaticPropsForTina({query: doc, variables: vars})
-  return res
-};
+  let data = {}
+  try {
+    data = await staticRequest({
+      query: doc,
+      variables: vars,
+    })
+  } catch (e) {
+    // swallow errors related to document creation
+    console.warn('Warning: There was an error when fetching data')
+    console.warn(e)
+  }
+
+  return { data, query: doc, variables: vars || {} }
+}
 
 /**
  * @experimental this class can be used but may change in the future
