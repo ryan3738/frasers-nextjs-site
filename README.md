@@ -1,11 +1,13 @@
 # Next.js Restaurant Website
 
-A Next.js website for Fraser's Gourmet Hideaway Restaurant with a CMS and Authentication. This website is coded using Next.js, React.js, Typescript, and Tina CMS.
+A Next.js website for Restaurants with a CMS and Authentication.This site is mobile responsive and offers the ability to update business info, hours, menu items, and the photo gallery.
 
-This site is mobile responsive and offers the ability to update business info, hours, menu items, and the photo gallery.
+The is a Jamstack website made using Next.js, React.js, Typescript, and Tina CMS. The performance
+
+
 # Getting Started
 ## Clone the repository and install dependencies
-1. Clone the repository locally
+1. Clone the [repository](https://github.com/ryan3738/frasers-nextjs-site) locally
 2. Navigate to the root directory
 3. Install dependencies
 
@@ -14,11 +16,11 @@ This site is mobile responsive and offers the ability to update business info, h
         yarn
 
 ## Create a Tina CMS account and setup your credentials
-Go here for instructions on setting up a Tina account: https://tina.io/docs/tina-cloud/dashboard/
-1. Create a Tina Cloud account
-2. Create a new Tina project
-3. Take the .env.example file and rename it to .env
-4. Place your Tina CMS credentials in the .env file
+1. Create a new Github repository and push the project to the repository
+2. Create a [Tina Cloud](https://tina.io/docs/tina-cloud/dashboard/) account
+3. Create a new [Tina project](https://app.tina.io/projects) and connect the Tina project to your github repository
+4. Take the .env.example file and rename it to .env
+5. Place your Tina CMS credentials in the .env file
 
         # TINA SETTINGS
         NEXT_PUBLIC_TINA_CLIENT_ID="TINA CLIENT ID"
@@ -31,8 +33,7 @@ Go here for instructions on setting up a Tina account: https://tina.io/docs/tina
         NEXT_PUBLIC_USE_LOCAL_CLIENT=1
 
 ## Create a Cloudinary account and setup your credentials
-Go here for instructions on setting up a cloudinary account: https://cloudinary.com/documentation/how_to_integrate_cloudinary
-1. Create a Cloudinary account
+1. Create a [Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary) account
 2. Place your Cloudinary credentials in the .env file
 
         # Cloudinary API keys
@@ -63,10 +64,8 @@ The best way to deploy this website is through a CI/CD pipeline so that changes 
 
 Github and vercel make a great option to deploy this site. Most changes will be deployed in around a minute. [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-1. If you haven't already, create a new Github repository and push the project to the repository.
-2. Create a Vercel account
+2. Create a [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) account
 3. Create a new project with Vercel and link it to your Github repository
 4. Add the .env variables to the Vercel project to link to your Tina Cloud and Cloudinary accounts
 
