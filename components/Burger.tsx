@@ -6,6 +6,7 @@ export default function Burger({ open, setOpen }): JSX.Element {
       <button
         type="button"
         className="styled-burger"
+        aria-label="Toggle navigation menu"
         onClick={() => setOpen(!open)}
       >
         <div className="top-bun" />

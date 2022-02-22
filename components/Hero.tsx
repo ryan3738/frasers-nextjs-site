@@ -20,7 +20,6 @@ export default function Hero({ businessInfo }: HeroProps): JSX.Element {
               layout="responsive"
               width={228}
               height={104}
-              priority
             />
 
             {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}
@@ -102,7 +101,7 @@ export default function Hero({ businessInfo }: HeroProps): JSX.Element {
           letter-spacing: 0.5rem;
           margin-bottom: 0;
         }
-        @media (min-width: 460px) {
+        @media (min-width: 769px) {
           .welcome-container {
             background-position: center center;
             background-repeat: no-repeat;
