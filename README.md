@@ -66,7 +66,6 @@ Github and vercel make a great option to deploy this site. Most changes will be 
 1. Create a [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) account
 2. Create a [new project](https://vercel.com/new) with Vercel and link it to your Github repository![Vercel new project page](/assets/images/vercel-deploy.jpg)
 3. Add the environment variables to the Vercel project to link to your Tina Cloud and Cloudinary accounts
-4. 
 
 # Next Steps
 * Create additional items in the ./tina/schmes.ts file to add more content types to the website.
