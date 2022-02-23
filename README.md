@@ -1,6 +1,6 @@
 # Next.js Restaurant Website
 
-A Next.js Jamstack website for Restaurants with Tina CMS and Authentication. Users have the ability to update business info, hours, menu items, and the photo gallery with live previews. Saved changes are are quickly deployed to the production site.
+A Next.js Jamstack website for Restaurants utilizing Tina CMS and Authentication. Users can update business info, hours, menu items, and the photo gallery with live previews. All changes are recorded in the git history and quickly deployed to the production site.
 
 # Overview
 1. Clone [this repository](https://github.com/ryan3738/frasers-nextjs-site)
@@ -19,10 +19,10 @@ A Next.js Jamstack website for Restaurants with Tina CMS and Authentication. Use
         # or
         yarn
 
-## Create a Tina CMS account and setup your credentials
-1. Create a new Github repository and push the project to the repository
+## Create a Tina Cloud account and enter your credentials
+1. Create a new GitHub repository and push the project to the repository
 2. Create a [Tina Cloud](https://tina.io/docs/tina-cloud/dashboard/) account
-3. Create a new [Tina project](https://app.tina.io/projects) and connect the Tina project to your github repository
+3. Create a new [Tina project](https://app.tina.io/projects) and connect the Tina project to your GitHub repository
 4. Take the [.env.example](/.env.example) file and rename it to .env
 5. Place your Tina CMS credentials in the .env file
 
@@ -36,9 +36,9 @@ A Next.js Jamstack website for Restaurants with Tina CMS and Authentication. Use
         # 1 = save to the local git branch
         NEXT_PUBLIC_USE_LOCAL_CLIENT=1
 
-## Create a Cloudinary account and setup your credentials
+## Create a Cloudinary account and enter your credentials
 1. Create a [Cloudinary](https://cloudinary.com/documentation/how_to_integrate_cloudinary) account
-2. Place your Cloudinary credentials in the [.env](./.env) file
+2. Place your Cloudinary credentials in the .env file
 
         # Cloudinary API keys
         NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="CLOUDINARY CLOUD NAME"
@@ -54,19 +54,16 @@ A Next.js Jamstack website for Restaurants with Tina CMS and Authentication. Use
         yarn dev
 
 2. Open http://localhost:3000 with your browser to see the website
-3. Go to http://localhost:3000/admin to login to the admin panel. When logged in the cms is availabe as a side drawer. Changes are displayed live on the website. Once the save button is pressed changes will be saved to the git branch and location based on the settings in the .env file.![Make edits to Tina Cms in real time](/assets/images/cms-site-edits.jpg)
+3. Go to http://localhost:3000/admin to log in to the admin panel. When logged in, the cms is available as a side drawer. Changes are held in memory and displayed live on the website. After pressing the save button, changes are committed to the appropriate git branch based on the environment variables. ![Make edits to Tina Cms in real time](/assets/images/cms-site-edits.jpg)
 4. Go to http://localhost:3000/admin/logout to log out of the cms      
 
 # Deploy
 
-The best way to deploy this website is through a CI/CD pipeline so that changes can be automatically deployed to the production website after they are saved.
-
-Github and vercel make a great option to deploy this site. Most changes will be deployed in around a minute. [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
+CI/CD is ideal so that changes are automatically deployed to the production site. GitHub and Vercel make a great option for this case, and most changes take around a minute to deploy. [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
 1. Create a [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) account
-2. Create a [new project](https://vercel.com/new) with Vercel and link it to your Github repository![Vercel new project page](/assets/images/vercel-deploy.jpg)
-3. Add the environment variables to the Vercel project to link to your Tina Cloud and Cloudinary accounts
-4. 
+2. Create a [new project](https://vercel.com/new) with Vercel and link it to your GitHub repository![Vercel new project page](/assets/images/vercel-deploy.jpg)
+3. Add the environment variables to the Vercel project to link to your Tina Cloud and Cloudinary accounts.
 
 # Next Steps
 * Create additional items in the ./tina/schmes.ts file to add more content types to the website.
