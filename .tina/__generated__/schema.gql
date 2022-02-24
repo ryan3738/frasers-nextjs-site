@@ -274,12 +274,19 @@ type PostsConnection implements Connection {
   edges: [PostsConnectionEdges]
 }
 
+type GlobalHeaderIcon {
+  color: String
+  style: String
+  name: String
+}
+
 type GlobalHeaderNav {
   href: String
   label: String
 }
 
 type GlobalHeader {
+  icon: GlobalHeaderIcon
   color: String
   nav: [GlobalHeaderNav]
 }
@@ -443,12 +450,19 @@ input PostsMutation {
   body: String
 }
 
+input GlobalHeaderIconMutation {
+  color: String
+  style: String
+  name: String
+}
+
 input GlobalHeaderNavMutation {
   href: String
   label: String
 }
 
 input GlobalHeaderMutation {
+  icon: GlobalHeaderIconMutation
   color: String
   nav: [GlobalHeaderNavMutation]
 }

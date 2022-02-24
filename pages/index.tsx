@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next';
-import { getStaticPropsForTina, gql } from 'tinacms';
+import { staticRequest } from 'tinacms';
 import Home from '../components/Home';
 import { layoutQueryFragment } from '../components/Layout';
 import { getMenuQueryFragment } from './menu/index';
@@ -91,8 +91,7 @@ export const getDoubleFeatureListFragment = `
 `;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const tinaProperties = await getStaticPropsForTina({
-    query: gql`
+  const query = `
       query MenuQuery($menuRelativePath: String!){
         ${getMenuQueryFragment}
         ${getBusinessInfoQueryFragment}
@@ -100,12 +99,23 @@ export const getStaticProps: GetStaticProps = async () => {
         ${getDoubleFeatureListFragment}
         ${layoutQueryFragment}
       }
-    `,
-    variables: { menuRelativePath: 'dinnerMenu.json' },
-  });
+    `;
+  const variables = { menuRelativePath: 'dinnerMenu.json' };
+  const data = {};
+  try {
+    await staticRequest({
+      query,
+      variables,
+    });
+  } catch {
+    // swallow errors related to document creation
+  }
   return {
     props: {
-      ...tinaProperties,
+      query,
+      variables,
+      data,
+      // myOtherProp: 'some-other-data',
     },
   };
 };
