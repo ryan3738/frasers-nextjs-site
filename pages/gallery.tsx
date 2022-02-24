@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout, { layoutQueryFragment } from '../components/Layout';
+import { layoutQueryFragment } from '../components/Layout';
 import GalleryGrid from '../components/GalleryGrid';
 import { getStaticPropsForTina, gql } from 'tinacms';
 import { GetStaticProps } from 'next';
@@ -8,7 +8,7 @@ export default function GalleryPage(props): JSX.Element {
   if (props.data && props.data.getGalleryGridDocument) {
     const galleryImages = props.data.getGalleryGridDocument.data.images || [];
     return (
-      <Layout>
+      <>
         <Head>
           <title>Gallery</title>
         </Head>
@@ -16,7 +16,7 @@ export default function GalleryPage(props): JSX.Element {
           <h1>Gallery</h1>
           <GalleryGrid images={galleryImages} />
         </section>
-      </Layout>
+      </>
     );
   }
 }

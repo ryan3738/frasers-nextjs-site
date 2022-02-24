@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { getStaticPropsForTina, gql } from 'tinacms';
-import Layout, { layoutQueryFragment, meta } from '../../components/Layout';
+import { layoutQueryFragment, meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
 
 export default function MenuPage(props): JSX.Element {
@@ -9,14 +9,14 @@ export default function MenuPage(props): JSX.Element {
   if (props.data && props.data.getMenuDocument) {
     const menu = props.data.getMenuDocument.data;
     return (
-      <Layout>
+      <>
         <Head>
           <title>
             {menu.title} | {meta.title}
           </title>
         </Head>
         <Menu menu={menu} sections={sections} />
-      </Layout>
+      </>
     );
   }
   return <div>Loading...</div>;

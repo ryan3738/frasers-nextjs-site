@@ -35,23 +35,38 @@
   "navigation": [
     {
       "href": "/",
-      "label": "Home"
+      "label": "Home",
+      "header": true,
+      "burger": true,
+      "footer": true
     },
     {
       "href": "/menu",
-      "label": "Menu"
+      "label": "Menu",
+      "header": true,
+      "burger": true,
+      "footer": true
     },
     {
       "href": "/#about",
-      "label": "About"
+      "label": "About",
+      "header": true,
+      "burger": true,
+      "footer": true
     },
     {
       "href": "/#gallery",
-      "label": "Gallery"
+      "label": "Gallery",
+      "header": true,
+      "burger": true,
+      "footer": true
     },
     {
       "href": "/#contact",
-      "label": "Contact"
+      "label": "Contact",
+      "header": true,
+      "burger": true,
+      "footer": true
     }
   ]
 }

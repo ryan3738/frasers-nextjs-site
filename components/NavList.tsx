@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export interface NavLinks {
   href: string;
-  text: string;
+  label: string;
 }
 
 interface NavListProps {
@@ -19,13 +19,13 @@ export default function NavList({
   return (
     <>
       {links?.map(link => (
-        <Link key={link.text} href={link.href}>
+        <Link key={link.label} href={link.href}>
           <a
             className={`nav-link ${showOnLarge && 'show-on-large'} ${
               burgerMenuLink && 'burger-menu-link'
             }`}
           >
-            {link.text}
+            {link.label}
           </a>
         </Link>
       ))}

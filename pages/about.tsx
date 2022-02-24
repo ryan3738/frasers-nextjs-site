@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Layout from '../components/Layout';
 
 export default function AboutPage(): JSX.Element {
   return (
-    <Layout>
+    <>
       <Head>
         <title>MENU</title>
       </Head>
@@ -15,6 +14,6 @@ export default function AboutPage(): JSX.Element {
           place-self: center;
         }
       `}</style>
-    </Layout>
+    </>
   );
 }

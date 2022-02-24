@@ -1,16 +1,17 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
-import Hero from './Hero';
 import NavList from './NavList';
 import Script from 'next/script';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavBar from './NavBar';
 import { BusinessInfo } from '../.tina/__generated__/types';
+import layoutData from '../content/global/index.json';
 
 interface LayoutProps {
   children: React.ReactNode;
   home?: boolean;
   businessInfo?: BusinessInfo;
+  data?: any;
 }
 
 export const meta = {
@@ -54,16 +55,36 @@ const theme = {
 };
 
 export default function Layout({
+  data = layoutData,
   children,
-  home,
-  businessInfo,
 }: LayoutProps): JSX.Element {
   const [open, setOpen] = useState(false);
+  const [navLinks, setNavLinks] = useState({
+    header: [],
+    burger: [],
+    footer: [],
+  });
   const router = useRouter();
+  useEffect(() => {
+    if (data.navigation) {
+      for (const link of data.navigation) {
+        for (const key of Object.keys(navLinks)) {
+          if (link[key as string] === true) {
+            setNavLinks(navLinks => {
+              return {
+                ...navLinks,
+                [key]: [...navLinks[key as string], link],
+              };
+            });
+          }
+        }
+      }
+    }
+  }, []);
   return (
     <NavBar
-      links={navigationLinks}
-      burgerLinks={navigationLinks}
+      links={navLinks.header}
+      burgerLinks={navLinks.burger}
       open={open}
       setOpen={setOpen}
     >
@@ -111,18 +132,8 @@ export default function Layout({
           />
           <link rel="manifest" href="/site.webmanifest.json" />
         </Head>
-        <header className="header">
-          {home ? (
-            <>
-              <div className="nav-spacer" />
-              <Hero businessInfo={businessInfo} />
-            </>
-          ) : (
-            <>
-              <div className="nav-spacer" />
-            </>
-          )}
-        </header>
+        <header className="header"></header>
+        <div className="nav-spacer" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
           strategy="afterInteractive"
@@ -138,7 +149,7 @@ export default function Layout({
         <main className="main">{children}</main>
         <footer className="footer">
           <nav className="nav-list">
-            <NavList links={navigationLinks} />
+            <NavList links={navLinks.footer} />
           </nav>
           <span>© 2022 Frasers Gourmet Hideaway |</span>
           <span className="no-wrap">

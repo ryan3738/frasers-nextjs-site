@@ -2,10 +2,14 @@ import dynamic from 'next/dynamic';
 import { TinaEditProvider } from 'tinacms/dist/edit-state';
 import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary';
 import '../styles/global.css';
+import { GetStaticProps } from 'next';
+import { staticRequest } from 'tinacms';
+import Layout, { layoutQueryFragment } from '../components/Layout';
 
 const TinaCMS = dynamic(() => import('tinacms'), { ssr: false });
 
 const App = ({ Component, pageProps }): JSX.Element => {
+  console.log('PROPS', pageProps.data?.getGlobalDocument);
   return (
     <>
       <TinaEditProvider
@@ -67,11 +71,17 @@ const App = ({ Component, pageProps }): JSX.Element => {
             }}
             {...pageProps}
           >
-            {livePageProps => <Component {...livePageProps} />}
+            {livePageProps => (
+              <Layout data={livePageProps.data?.getGlobalDocument?.data}>
+                <Component {...livePageProps} />
+              </Layout>
+            )}
           </TinaCMS>
         }
       >
-        <Component {...pageProps} />
+        <Layout data={pageProps.data?.getGlobalDocument?.data}>
+          <Component {...pageProps} />
+        </Layout>
       </TinaEditProvider>
     </>
   );

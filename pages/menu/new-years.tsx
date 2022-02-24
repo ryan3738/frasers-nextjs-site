@@ -16,14 +16,14 @@ export default function MenuPage(props): JSX.Element {
   if (props.data && props.data.getMenuDocument) {
     const menu = props.data.getMenuDocument.data;
     return (
-      <Layout>
+      <>
         <Head>
           <title>
             {menu.title} | {meta.title}
           </title>
         </Head>
         <Menu menu={menu} sections={sections} />
-      </Layout>
+      </>
     );
   }
   return <div>Loading...</div>;
