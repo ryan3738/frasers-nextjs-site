@@ -1079,6 +1079,73 @@
             "global",
             "theme"
           ]
+        },
+        {
+          "type": "object",
+          "label": "Navigation",
+          "name": "navigation",
+          "ui": {
+            "defaultItem": {
+              "href": "home",
+              "label": "Home"
+            }
+          },
+          "fields": [
+            {
+              "type": "string",
+              "label": "Link",
+              "name": "href",
+              "namespace": [
+                "global",
+                "navigation",
+                "href"
+              ]
+            },
+            {
+              "type": "string",
+              "label": "Label",
+              "name": "label",
+              "namespace": [
+                "global",
+                "navigation",
+                "label"
+              ]
+            },
+            {
+              "type": "boolean",
+              "label": "Header",
+              "name": "header",
+              "namespace": [
+                "global",
+                "navigation",
+                "header"
+              ]
+            },
+            {
+              "type": "boolean",
+              "label": "Burger",
+              "name": "burger",
+              "namespace": [
+                "global",
+                "navigation",
+                "burger"
+              ]
+            },
+            {
+              "type": "boolean",
+              "label": "Footer",
+              "name": "footer",
+              "namespace": [
+                "global",
+                "navigation",
+                "footer"
+              ]
+            }
+          ],
+          "namespace": [
+            "global",
+            "navigation"
+          ]
         }
       ],
       "namespace": [

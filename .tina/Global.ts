@@ -1,4 +1,4 @@
-import { TinaField, TinaTemplate } from "@tinacms/cli"
+import { TinaField } from "@tinacms/cli"
 
 const iconSchema: TinaField = {
   type: "object",
@@ -156,6 +156,54 @@ const iconSchema: TinaField = {
     },
   ],
 };
+
+const navigationSchema: TinaField = {
+  type: "object",
+  label: "Navigation",
+  name: "navigation",
+  ui: {
+    defaultItem: {
+      href: "home",
+      label: "Home",
+    },
+  },
+  fields: [
+    {
+      type: "string",
+      label: "Link",
+      name: "href",
+    },
+    {
+      type: "string",
+      label: "Label",
+      name: "label",
+    },
+    {
+      type: "boolean",
+      label: "Header",
+      name: "header",
+      ui: {
+        default: true,
+      }
+    },
+    {
+      type: "boolean",
+      label: "Burger",
+      name: "burger",
+      ui: {
+        default: true,
+      }
+    },
+    {
+      type: "boolean",
+      label: "Footer",
+      name: "footer",
+      ui: {
+        default: true,
+      }
+    },
+  ]
+}
 
 const headerSchema: TinaField = {
   type: "object",
@@ -343,4 +391,4 @@ const themeSchema: TinaField = {
   ],
 }
 
-export { headerSchema, footerSchema, themeSchema }
+export { headerSchema, footerSchema, themeSchema, navigationSchema };

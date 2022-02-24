@@ -111,4 +111,12 @@ fragment GlobalParts on Global {
     icon
     darkMode
   }
+  navigation {
+    __typename
+    href
+    label
+    header
+    burger
+    footer
+  }
 }

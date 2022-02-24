@@ -476,11 +476,21 @@ export type GlobalTheme = {
   darkMode?: Maybe<Scalars['String']>;
 };
 
+export type GlobalNavigation = {
+  __typename?: 'GlobalNavigation';
+  href?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  header?: Maybe<Scalars['Boolean']>;
+  burger?: Maybe<Scalars['Boolean']>;
+  footer?: Maybe<Scalars['Boolean']>;
+};
+
 export type Global = {
   __typename?: 'Global';
   header?: Maybe<GlobalHeader>;
   footer?: Maybe<GlobalFooter>;
   theme?: Maybe<GlobalTheme>;
+  navigation?: Maybe<GlobalNavigation>;
 };
 
 export type GlobalDocument = Node & Document & {
@@ -750,10 +760,19 @@ export type GlobalThemeMutation = {
   darkMode?: InputMaybe<Scalars['String']>;
 };
 
+export type GlobalNavigationMutation = {
+  href?: InputMaybe<Scalars['String']>;
+  label?: InputMaybe<Scalars['String']>;
+  header?: InputMaybe<Scalars['Boolean']>;
+  burger?: InputMaybe<Scalars['Boolean']>;
+  footer?: InputMaybe<Scalars['Boolean']>;
+};
+
 export type GlobalMutation = {
   header?: InputMaybe<GlobalHeaderMutation>;
   footer?: InputMaybe<GlobalFooterMutation>;
   theme?: InputMaybe<GlobalThemeMutation>;
+  navigation?: InputMaybe<GlobalNavigationMutation>;
 };
 
 export type GalleryGridPartsFragment = { __typename?: 'GalleryGrid', images?: Array<{ __typename: 'GalleryGridImages', alt: string, src?: string | null, format?: string | null } | null> | null };
@@ -766,7 +785,7 @@ export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title?:
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null, body?: string | null };
 
-export type GlobalPartsFragment = { __typename?: 'Global', header?: { __typename: 'GlobalHeader', color?: string | null, icon?: { __typename: 'GlobalHeaderIcon', color?: string | null, style?: string | null, name?: string | null } | null, nav?: Array<{ __typename: 'GlobalHeaderNav', href?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, font?: string | null, icon?: string | null, darkMode?: string | null } | null };
+export type GlobalPartsFragment = { __typename?: 'Global', header?: { __typename: 'GlobalHeader', color?: string | null, icon?: { __typename: 'GlobalHeaderIcon', color?: string | null, style?: string | null, name?: string | null } | null, nav?: Array<{ __typename: 'GlobalHeaderNav', href?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, font?: string | null, icon?: string | null, darkMode?: string | null } | null, navigation?: { __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null };
 
 export type GetGalleryGridDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -833,12 +852,12 @@ export type GetGlobalDocumentQueryVariables = Exact<{
 }>;
 
 
-export type GetGlobalDocumentQuery = { __typename?: 'Query', getGlobalDocument: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', header?: { __typename: 'GlobalHeader', color?: string | null, icon?: { __typename: 'GlobalHeaderIcon', color?: string | null, style?: string | null, name?: string | null } | null, nav?: Array<{ __typename: 'GlobalHeaderNav', href?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, font?: string | null, icon?: string | null, darkMode?: string | null } | null } } };
+export type GetGlobalDocumentQuery = { __typename?: 'Query', getGlobalDocument: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', header?: { __typename: 'GlobalHeader', color?: string | null, icon?: { __typename: 'GlobalHeaderIcon', color?: string | null, style?: string | null, name?: string | null } | null, nav?: Array<{ __typename: 'GlobalHeaderNav', href?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, font?: string | null, icon?: string | null, darkMode?: string | null } | null, navigation?: { __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null } } };
 
 export type GetGlobalListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetGlobalListQuery = { __typename?: 'Query', getGlobalList: { __typename?: 'GlobalConnection', totalCount: number, edges?: Array<{ __typename?: 'GlobalConnectionEdges', node?: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', header?: { __typename: 'GlobalHeader', color?: string | null, icon?: { __typename: 'GlobalHeaderIcon', color?: string | null, style?: string | null, name?: string | null } | null, nav?: Array<{ __typename: 'GlobalHeaderNav', href?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, font?: string | null, icon?: string | null, darkMode?: string | null } | null } } | null } | null> | null } };
+export type GetGlobalListQuery = { __typename?: 'Query', getGlobalList: { __typename?: 'GlobalConnection', totalCount: number, edges?: Array<{ __typename?: 'GlobalConnectionEdges', node?: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', header?: { __typename: 'GlobalHeader', color?: string | null, icon?: { __typename: 'GlobalHeaderIcon', color?: string | null, style?: string | null, name?: string | null } | null, nav?: Array<{ __typename: 'GlobalHeaderNav', href?: string | null, label?: string | null } | null> | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, font?: string | null, icon?: string | null, darkMode?: string | null } | null, navigation?: { __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null } } | null } | null> | null } };
 
 export const GalleryGridPartsFragmentDoc = gql`
     fragment GalleryGridParts on GalleryGrid {
@@ -958,6 +977,14 @@ export const GlobalPartsFragmentDoc = gql`
     font
     icon
     darkMode
+  }
+  navigation {
+    __typename
+    href
+    label
+    header
+    burger
+    footer
   }
 }
     `;

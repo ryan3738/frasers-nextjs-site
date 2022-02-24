@@ -310,10 +310,19 @@ type GlobalTheme {
   darkMode: String
 }
 
+type GlobalNavigation {
+  href: String
+  label: String
+  header: Boolean
+  burger: Boolean
+  footer: Boolean
+}
+
 type Global {
   header: GlobalHeader
   footer: GlobalFooter
   theme: GlobalTheme
+  navigation: GlobalNavigation
 }
 
 type GlobalDocument implements Node & Document {
@@ -486,10 +495,19 @@ input GlobalThemeMutation {
   darkMode: String
 }
 
+input GlobalNavigationMutation {
+  href: String
+  label: String
+  header: Boolean
+  burger: Boolean
+  footer: Boolean
+}
+
 input GlobalMutation {
   header: GlobalHeaderMutation
   footer: GlobalFooterMutation
   theme: GlobalThemeMutation
+  navigation: GlobalNavigationMutation
 }
 
 schema {
