@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import Layout, { meta } from './Layout';
+import { meta } from './Layout';
 import Double from './Double';
 import GalleryGrid from './GalleryGrid';
 import Contact from './Contact';
