@@ -65,6 +65,7 @@ CI/CD is ideal so that changes are automatically deployed to the production site
 2. Create a [new project](https://vercel.com/new) with Vercel and link it to your GitHub repository![Vercel new project page](/assets/images/vercel-deploy.jpg)
 3. Add the environment variables to the Vercel project to link to your Tina Cloud and Cloudinary accounts.
 
+
 # Next Steps
 * Create additional items in the ./tina/schmes.ts file to add more content types to the website.
 * Add additional users to your Tina Cloud account to give them the ability to edit the website.
