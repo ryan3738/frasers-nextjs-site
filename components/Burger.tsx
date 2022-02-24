@@ -24,7 +24,6 @@ export default function Burger({ open, setOpen }): JSX.Element {
             height: 2.8rem;
             background: var(--background-color);
             border: 0;
-            /* box-shadow: 0 0 0 7px var(--secondary-color); */
             cursor: pointer;
             padding: 0;
             z-index: 10;

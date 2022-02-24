@@ -90,11 +90,11 @@ export default function Layout({
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YS529TE94E');
-              `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YS529TE94E');
+          `}
         </Script>
         <main className="main">{children}</main>
         <Footer navLinks={data.navigation} />
@@ -117,25 +117,23 @@ export default function Layout({
         `}</style>
         <style global jsx>{`
           :root {
+            --white-color: #ffffffde;
             --black-color: #0b0a0a;
+            --surface-color: rgba(27, 15, 15, 0.03);
             --background-color: var(--black-color);
-            --surface-color: rgba(255, 255, 255, 0.03);
-            --primary-color: #c6a938;
+            --primary-color: ${data.theme.color || `#c6a938`};
             --primary-color-desaturated: #f3e08d;
             /* Have option for internet explorer without f6*/
-            --secondary-color: #1a1a1a;
-            --white-color: #ffffffde;
-            --text-color: var(--white-color);
             /* 87% */
-            --high-emphasis-text: #ffffffde;
+            --high-emphasis-text: var(--white-color);
             /* 60% */
             --medium-emphasis-text: #ffffff99;
             /* 38% */
             --text-disabled: #ffffff61;
-            --color-facebook: #3b5998;
+            --color-facebook: #8d8d8d;
             --color-instagram: #fb3958;
-            --small-screen: 460px;
-            --medium-screen: 769px;
+            --small-screen: ${theme.smallScreen};
+            --medium-screen: ${theme.mediumScreen};
           }
           .medium-emphasis {
             color: var(--medium-emphasis-text);

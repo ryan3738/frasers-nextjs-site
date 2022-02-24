@@ -62,7 +62,7 @@ export default function Header({
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
-          color: var(--white-color);
+          color: var(--high-emphasis-text);
         }
         .nav-bar {
           ${location}: 0;
