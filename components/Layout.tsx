@@ -290,6 +290,13 @@ export const layoutQueryFragment = `
         font
         darkMode
       }
+      navigation {
+        label
+        href
+        header
+        burger
+        footer
+      }
     }
   }
 `;
