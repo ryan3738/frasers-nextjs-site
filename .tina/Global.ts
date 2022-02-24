@@ -161,11 +161,13 @@ const navigationSchema: TinaField = {
   type: "object",
   label: "Navigation",
   name: "navigation",
+  list: true,
   ui: {
     defaultItem: {
-      href: "home",
+      href: "/",
       label: "Home",
     },
+    component: "groupList",
   },
   fields: [
     {
@@ -184,7 +186,7 @@ const navigationSchema: TinaField = {
       name: "header",
       ui: {
         default: true,
-      }
+      },
     },
     {
       type: "boolean",
@@ -192,7 +194,7 @@ const navigationSchema: TinaField = {
       name: "burger",
       ui: {
         default: true,
-      }
+      },
     },
     {
       type: "boolean",
@@ -200,7 +202,7 @@ const navigationSchema: TinaField = {
       name: "footer",
       ui: {
         default: true,
-      }
+      },
     },
   ]
 }
