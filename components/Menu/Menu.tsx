@@ -34,7 +34,7 @@ const Menu = ({ menu, sections, pathName }: MenuProps): JSX.Element => {
       })}
       <NavBar
         showHomeLink={false}
-        links={links}
+        navLinks={links}
         position="sticky"
         location="bottom"
       />
