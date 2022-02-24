@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Header from './Header';
 import { BusinessInfo } from '../.tina/__generated__/types';
 import layoutData from '../content/global/index.json';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -37,7 +38,8 @@ export default function Layout({
   const [open, setOpen] = useState(false);
   const router = useRouter();
   return (
-    <Header navLinks={data.navigation} open={open} setOpen={setOpen}>
+    <>
+      <Header navLinks={data.navigation} open={open} setOpen={setOpen} />
       <div className="container">
         <Head>
           <meta
@@ -82,7 +84,6 @@ export default function Layout({
           />
           <link rel="manifest" href="/site.webmanifest.json" />
         </Head>
-        <div className="nav-spacer" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
           strategy="afterInteractive"
@@ -96,23 +97,7 @@ export default function Layout({
               `}
         </Script>
         <main className="main">{children}</main>
-        <footer className="footer">
-          <nav className="nav-list">
-            {/* <NavList links={navLinks.footer} /> */}
-          </nav>
-          <span>© 2022 Frasers Gourmet Hideaway |</span>
-          <span className="no-wrap">
-            &nbsp;Built by:&nbsp;
-            <a
-              className="light-text"
-              href="https://github.com/ryan3738"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Ryan Fraser
-            </a>
-          </span>
-        </footer>
+        <Footer navLinks={data.navigation} />
         <style jsx>{`
           .container {
             height: 100%;
@@ -123,53 +108,13 @@ export default function Layout({
             padding: 0;
             margin: 0 auto;
           }
-
           .main {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
           }
-
-          .header {
-            width: 100%;
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* align-items: center; */
-          }
-
-          .footer {
-            height: auto;
-            width: 100%;
-            background-color: var(--surface-color);
-            padding: 1em;
-          }
-
-          .no-wrap {
-            white-space: nowrap;
-          }
-
-          .nav-spacer {
-            height: 4em;
-          }
-
-          .nav-padding {
-            padding: 4em 0 0;
-          }
-          .nav-link {
-            /* font-size: 0.5rem; */
-            padding: 1em;
-            margin: auto;
-            text-decoration: underline;
-            white-space: nowrap;
-          }
-          .nav-list {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-          }
         `}</style>
-
         <style global jsx>{`
           :root {
             --black-color: #0b0a0a;
@@ -205,7 +150,7 @@ export default function Layout({
           }
         `}</style>
       </div>
-    </Header>
+    </>
   );
 }
 
