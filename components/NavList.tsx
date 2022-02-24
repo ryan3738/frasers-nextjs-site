@@ -3,6 +3,9 @@ import Link from 'next/link';
 export interface NavLinks {
   href: string;
   label: string;
+  header?: boolean;
+  burger?: boolean;
+  footer?: boolean;
 }
 
 interface NavListProps {

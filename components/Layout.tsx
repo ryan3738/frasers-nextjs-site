@@ -1,9 +1,8 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
-import NavList from './NavList';
 import Script from 'next/script';
-import { useEffect, useState } from 'react';
-import NavBar from './Header';
+import { useState } from 'react';
+import Header from './Header';
 import { BusinessInfo } from '../.tina/__generated__/types';
 import layoutData from '../content/global/index.json';
 
@@ -24,29 +23,6 @@ export const meta = {
   url: 'https://frasersgh.com',
 };
 
-const navigationLinks = [
-  {
-    text: 'Home',
-    href: '/',
-  },
-  {
-    text: 'Menu',
-    href: '/menu',
-  },
-  {
-    text: 'About',
-    href: '/#about',
-  },
-  {
-    text: 'Gallery',
-    href: '/#gallery',
-  },
-  {
-    text: 'Contact',
-    href: '/#contact',
-  },
-];
-
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
@@ -59,35 +35,9 @@ export default function Layout({
   children,
 }: LayoutProps): JSX.Element {
   const [open, setOpen] = useState(false);
-  const [navLinks, setNavLinks] = useState({
-    header: [],
-    burger: [],
-    footer: [],
-  });
   const router = useRouter();
-  // useEffect(() => {
-  //   if (data.navigation) {
-  //     for (const link of data.navigation) {
-  //       for (const key of Object.keys(navLinks)) {
-  //         if (link[key as string] === true) {
-  //           setNavLinks(navLinks => {
-  //             return {
-  //               ...navLinks,
-  //               [key]: [...navLinks[key as string], link],
-  //             };
-  //           });
-  //         }
-  //       }
-  //     }
-  //   }
-  // }, [data.navigation]);
   return (
-    <NavBar
-      links={navLinks.header}
-      burgerLinks={navLinks.burger}
-      open={open}
-      setOpen={setOpen}
-    >
+    <Header navLinks={data.navigation} open={open} setOpen={setOpen}>
       <div className="container">
         <Head>
           <meta
@@ -148,7 +98,7 @@ export default function Layout({
         <main className="main">{children}</main>
         <footer className="footer">
           <nav className="nav-list">
-            <NavList links={navLinks.footer} />
+            {/* <NavList links={navLinks.footer} /> */}
           </nav>
           <span>© 2022 Frasers Gourmet Hideaway |</span>
           <span className="no-wrap">
@@ -255,7 +205,7 @@ export default function Layout({
           }
         `}</style>
       </div>
-    </NavBar>
+    </Header>
   );
 }
 

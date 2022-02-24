@@ -8,8 +8,7 @@ import NavList, { NavLinks } from './NavList';
 
 interface HeaderProps {
   children?: React.ReactNode;
-  links?: NavLinks[];
-  burgerLinks?: NavLinks[];
+  navLinks?: NavLinks[];
   showHomeLink?: boolean;
   open?: boolean;
   setOpen?: (value: boolean) => void;
@@ -19,9 +18,8 @@ interface HeaderProps {
 
 export default function Header({
   children,
-  links,
-  burgerLinks,
   showHomeLink = true,
+  navLinks,
   open,
   setOpen,
   position = 'fixed',
@@ -29,7 +27,8 @@ export default function Header({
 }: HeaderProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
-
+  const headerLinks = navLinks?.filter(link => link.header === true);
+  const burgerLinks = navLinks?.filter(link => link.burger === true);
   return (
     <header>
       <div className="nav-bar">
@@ -47,7 +46,7 @@ export default function Header({
               <a className="title">FRASERS</a>
             </Link>
           )}
-          <NavList links={links} showOnLarge={burgerLinks && true} />
+          <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
         </nav>
       </div>
       {children}
