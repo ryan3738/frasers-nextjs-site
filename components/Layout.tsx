@@ -3,7 +3,7 @@ import Head from 'next/head';
 import NavList from './NavList';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
-import NavBar from './NavBar';
+import NavBar from './Header';
 import { BusinessInfo } from '../.tina/__generated__/types';
 import layoutData from '../content/global/index.json';
 
@@ -65,22 +65,22 @@ export default function Layout({
     footer: [],
   });
   const router = useRouter();
-  useEffect(() => {
-    if (data.navigation) {
-      for (const link of data.navigation) {
-        for (const key of Object.keys(navLinks)) {
-          if (link[key as string] === true) {
-            setNavLinks(navLinks => {
-              return {
-                ...navLinks,
-                [key]: [...navLinks[key as string], link],
-              };
-            });
-          }
-        }
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (data.navigation) {
+  //     for (const link of data.navigation) {
+  //       for (const key of Object.keys(navLinks)) {
+  //         if (link[key as string] === true) {
+  //           setNavLinks(navLinks => {
+  //             return {
+  //               ...navLinks,
+  //               [key]: [...navLinks[key as string], link],
+  //             };
+  //           });
+  //         }
+  //       }
+  //     }
+  //   }
+  // }, [data.navigation]);
   return (
     <NavBar
       links={navLinks.header}
@@ -132,7 +132,6 @@ export default function Layout({
           />
           <link rel="manifest" href="/site.webmanifest.json" />
         </Head>
-        <header className="header"></header>
         <div className="nav-spacer" />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"

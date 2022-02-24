@@ -1,5 +1,5 @@
 import MenuSection from './MenuSection';
-import NavBar from '../NavBar';
+import NavBar from '../Header';
 import { Menu as MenuType } from '../../.tina/__generated__/types';
 import { slugify } from '../../lib/slugify';
 
