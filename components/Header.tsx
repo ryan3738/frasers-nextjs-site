@@ -32,7 +32,7 @@ export default function Header({
   return (
     <header>
       <div className="nav-bar">
-        {burgerLinks && (
+        {burgerLinks?.length > 0 && (
           <div className="burger">
             <div ref={node}>
               <Burger open={open} setOpen={setOpen} />
@@ -40,17 +40,25 @@ export default function Header({
             <BurgerMenu links={burgerLinks} open={open} />
           </div>
         )}
-        <nav className="nav-list">
-          {showHomeLink && (
-            <Link href="/">
-              <a className="title">FRASERS</a>
-            </Link>
-          )}
-          <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
-        </nav>
+        {headerLinks?.length > 0 && (
+          <>
+            <nav className="nav-list">
+              {showHomeLink && (
+                <Link href="/">
+                  <a className="title">FRASERS</a>
+                </Link>
+              )}
+              <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
+            </nav>
+          </>
+        )}
       </div>
+      {headerLinks?.length > 0 && <div className="nav-spacer" />}
       {children}
       <style jsx>{`
+        .nav-spacer {
+          height: 4em;
+        }
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
