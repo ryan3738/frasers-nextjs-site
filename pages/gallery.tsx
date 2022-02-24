@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '../components/Layout';
+import Layout, { layoutQueryFragment } from '../components/Layout';
 import GalleryGrid from '../components/GalleryGrid';
 import { getStaticPropsForTina, gql } from 'tinacms';
 import { GetStaticProps } from 'next';
@@ -38,6 +38,7 @@ export const getStaticProps: GetStaticProps = async () => {
     query: gql`
       query GalleryQuery{
         ${getGalleryGridFragment}
+        ${layoutQueryFragment}
       }
     `,
   });

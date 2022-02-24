@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import { getStaticPropsForTina, gql } from 'tinacms';
 import Home from '../components/Home';
+import { layoutQueryFragment } from '../components/Layout';
 import { getMenuQueryFragment } from './menu/index';
 
 export default function HomePage(props): JSX.Element {
@@ -97,6 +98,7 @@ export const getStaticProps: GetStaticProps = async () => {
         ${getBusinessInfoQueryFragment}
         ${getGalleryGridFragment}
         ${getDoubleFeatureListFragment}
+        ${layoutQueryFragment}
       }
     `,
     variables: { menuRelativePath: 'dinnerMenu.json' },

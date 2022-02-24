@@ -613,6 +613,298 @@
       "namespace": [
         "posts"
       ]
+    },
+    {
+      "label": "Global",
+      "name": "global",
+      "path": "content/global",
+      "fields": [
+        {
+          "type": "object",
+          "label": "Header",
+          "name": "header",
+          "fields": [
+            {
+              "type": "string",
+              "label": "Color",
+              "name": "color",
+              "options": [
+                {
+                  "label": "Default",
+                  "value": "default"
+                },
+                {
+                  "label": "Primary",
+                  "value": "primary"
+                }
+              ],
+              "namespace": [
+                "global",
+                "header",
+                "color"
+              ]
+            },
+            {
+              "type": "object",
+              "label": "Nav Links",
+              "name": "nav",
+              "list": true,
+              "ui": {
+                "defaultItem": {
+                  "href": "home",
+                  "label": "Home"
+                }
+              },
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Link",
+                  "name": "href",
+                  "namespace": [
+                    "global",
+                    "header",
+                    "nav",
+                    "href"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Label",
+                  "name": "label",
+                  "namespace": [
+                    "global",
+                    "header",
+                    "nav",
+                    "label"
+                  ]
+                }
+              ],
+              "namespace": [
+                "global",
+                "header",
+                "nav"
+              ]
+            }
+          ],
+          "namespace": [
+            "global",
+            "header"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Footer",
+          "name": "footer",
+          "fields": [
+            {
+              "type": "string",
+              "label": "Color",
+              "name": "color",
+              "options": [
+                {
+                  "label": "Default",
+                  "value": "default"
+                },
+                {
+                  "label": "Primary",
+                  "value": "primary"
+                }
+              ],
+              "namespace": [
+                "global",
+                "footer",
+                "color"
+              ]
+            },
+            {
+              "type": "object",
+              "label": "Social Links",
+              "name": "social",
+              "fields": [
+                {
+                  "type": "string",
+                  "label": "Facebook",
+                  "name": "facebook",
+                  "namespace": [
+                    "global",
+                    "footer",
+                    "social",
+                    "facebook"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Twitter",
+                  "name": "twitter",
+                  "namespace": [
+                    "global",
+                    "footer",
+                    "social",
+                    "twitter"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Instagram",
+                  "name": "instagram",
+                  "namespace": [
+                    "global",
+                    "footer",
+                    "social",
+                    "instagram"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "label": "Github",
+                  "name": "github",
+                  "namespace": [
+                    "global",
+                    "footer",
+                    "social",
+                    "github"
+                  ]
+                }
+              ],
+              "namespace": [
+                "global",
+                "footer",
+                "social"
+              ]
+            }
+          ],
+          "namespace": [
+            "global",
+            "footer"
+          ]
+        },
+        {
+          "type": "object",
+          "label": "Theme",
+          "name": "theme",
+          "fields": [
+            {
+              "type": "string",
+              "label": "Primary Color",
+              "name": "color",
+              "options": [
+                {
+                  "label": "Blue",
+                  "value": "blue"
+                },
+                {
+                  "label": "Teal",
+                  "value": "teal"
+                },
+                {
+                  "label": "Green",
+                  "value": "green"
+                },
+                {
+                  "label": "Red",
+                  "value": "red"
+                },
+                {
+                  "label": "Pink",
+                  "value": "pink"
+                },
+                {
+                  "label": "Purple",
+                  "value": "purple"
+                },
+                {
+                  "label": "Orange",
+                  "value": "orange"
+                },
+                {
+                  "label": "Yellow",
+                  "value": "yellow"
+                }
+              ],
+              "namespace": [
+                "global",
+                "theme",
+                "color"
+              ]
+            },
+            {
+              "type": "string",
+              "name": "font",
+              "label": "Font Family",
+              "options": [
+                {
+                  "label": "System Sans",
+                  "value": "sans"
+                },
+                {
+                  "label": "Nunito",
+                  "value": "nunito"
+                },
+                {
+                  "label": "Lato",
+                  "value": "lato"
+                }
+              ],
+              "namespace": [
+                "global",
+                "theme",
+                "font"
+              ]
+            },
+            {
+              "type": "string",
+              "name": "icon",
+              "label": "Icon Set",
+              "options": [
+                {
+                  "label": "Boxicons",
+                  "value": "boxicon"
+                },
+                {
+                  "label": "Heroicons",
+                  "value": "heroicon"
+                }
+              ],
+              "namespace": [
+                "global",
+                "theme",
+                "icon"
+              ]
+            },
+            {
+              "type": "string",
+              "name": "darkMode",
+              "label": "Dark Mode",
+              "options": [
+                {
+                  "label": "System",
+                  "value": "system"
+                },
+                {
+                  "label": "Light",
+                  "value": "light"
+                },
+                {
+                  "label": "Dark",
+                  "value": "dark"
+                }
+              ],
+              "namespace": [
+                "global",
+                "theme",
+                "darkMode"
+              ]
+            }
+          ],
+          "namespace": [
+            "global",
+            "theme"
+          ]
+        }
+      ],
+      "namespace": [
+        "global"
+      ]
     }
   ]
 }

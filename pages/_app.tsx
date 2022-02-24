@@ -58,13 +58,13 @@ const App = ({ Component, pageProps }): JSX.Element => {
             /**
              * Treat the Global collection as a global form
              */
-            // formifyCallback={({ formConfig, createForm, createGlobalForm }) => {
-            //   if (formConfig.id === 'getGlobalDocument') {
-            //     return createGlobalForm(formConfig);
-            //   }
+            formifyCallback={({ formConfig, createForm, createGlobalForm }) => {
+              if (formConfig.id === 'getGlobalDocument') {
+                return createGlobalForm(formConfig);
+              }
 
-            //   return createForm(formConfig);
-            // }}
+              return createForm(formConfig);
+            }}
             {...pageProps}
           >
             {livePageProps => <Component {...livePageProps} />}

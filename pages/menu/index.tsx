@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { getStaticPropsForTina, gql } from 'tinacms';
-import Layout, { meta } from '../../components/Layout';
+import Layout, { layoutQueryFragment, meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
 
 export default function MenuPage(props): JSX.Element {
@@ -54,6 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
     query: gql`
       query MenuQuery($menuRelativePath: String!) {
         ${getMenuQueryFragment}
+        ${layoutQueryFragment}
       }
     `,
     variables: { menuRelativePath: 'dinnerMenu.json' },

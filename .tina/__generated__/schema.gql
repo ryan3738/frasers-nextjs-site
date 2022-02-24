@@ -58,6 +58,8 @@ type Query {
   getDoubleFeatureList(before: String, after: String, first: Float, last: Float): DoubleFeatureConnection!
   getPostsDocument(relativePath: String): PostsDocument!
   getPostsList(before: String, after: String, first: Float, last: Float): PostsConnection!
+  getGlobalDocument(relativePath: String): GlobalDocument!
+  getGlobalList(before: String, after: String, first: Float, last: Float): GlobalConnection!
 }
 
 type DocumentConnectionEdges {
@@ -83,7 +85,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float): DocumentConnection!
 }
 
-union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument
+union DocumentNode = GalleryGridDocument | BusinessInfoDocument | MenuDocument | DoubleFeatureDocument | PostsDocument | GlobalDocument
 
 type GalleryGridImages {
   alt: String!
@@ -272,6 +274,61 @@ type PostsConnection implements Connection {
   edges: [PostsConnectionEdges]
 }
 
+type GlobalHeaderNav {
+  href: String
+  label: String
+}
+
+type GlobalHeader {
+  color: String
+  nav: [GlobalHeaderNav]
+}
+
+type GlobalFooterSocial {
+  facebook: String
+  twitter: String
+  instagram: String
+  github: String
+}
+
+type GlobalFooter {
+  color: String
+  social: GlobalFooterSocial
+}
+
+type GlobalTheme {
+  color: String
+  font: String
+  icon: String
+  darkMode: String
+}
+
+type Global {
+  header: GlobalHeader
+  footer: GlobalFooter
+  theme: GlobalTheme
+}
+
+type GlobalDocument implements Node & Document {
+  id: ID!
+  sys: SystemInfo!
+  data: Global!
+  form: JSON!
+  values: JSON!
+  dataJSON: JSON!
+}
+
+type GlobalConnectionEdges {
+  cursor: String
+  node: GlobalDocument
+}
+
+type GlobalConnection implements Connection {
+  pageInfo: PageInfo
+  totalCount: Float!
+  edges: [GlobalConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
@@ -286,6 +343,8 @@ type Mutation {
   createDoubleFeatureDocument(relativePath: String!, params: DoubleFeatureMutation!): DoubleFeatureDocument!
   updatePostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
   createPostsDocument(relativePath: String!, params: PostsMutation!): PostsDocument!
+  updateGlobalDocument(relativePath: String!, params: GlobalMutation!): GlobalDocument!
+  createGlobalDocument(relativePath: String!, params: GlobalMutation!): GlobalDocument!
 }
 
 input DocumentMutation {
@@ -294,6 +353,7 @@ input DocumentMutation {
   menu: MenuMutation
   doubleFeature: DoubleFeatureMutation
   posts: PostsMutation
+  global: GlobalMutation
 }
 
 input GalleryGridImagesMutation {
@@ -381,6 +441,41 @@ input DoubleFeatureMutation {
 input PostsMutation {
   title: String
   body: String
+}
+
+input GlobalHeaderNavMutation {
+  href: String
+  label: String
+}
+
+input GlobalHeaderMutation {
+  color: String
+  nav: [GlobalHeaderNavMutation]
+}
+
+input GlobalFooterSocialMutation {
+  facebook: String
+  twitter: String
+  instagram: String
+  github: String
+}
+
+input GlobalFooterMutation {
+  color: String
+  social: GlobalFooterSocialMutation
+}
+
+input GlobalThemeMutation {
+  color: String
+  font: String
+  icon: String
+  darkMode: String
+}
+
+input GlobalMutation {
+  header: GlobalHeaderMutation
+  footer: GlobalFooterMutation
+  theme: GlobalThemeMutation
 }
 
 schema {

@@ -248,3 +248,32 @@ export default function Layout({
     </NavBar>
   );
 }
+
+export const layoutQueryFragment = `
+  getGlobalDocument(relativePath: "index.json") {
+    data {
+      header {
+        color
+        nav {
+          href
+          label
+        }
+      }
+      footer {
+        color
+        social {
+          facebook
+          twitter
+          instagram
+          github
+        }
+      }
+      theme {
+        color
+        icon
+        font
+        darkMode
+      }
+    }
+  }
+`;

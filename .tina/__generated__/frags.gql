@@ -76,3 +76,33 @@ fragment PostsParts on Posts {
   title
   body
 }
+
+fragment GlobalParts on Global {
+  header {
+    __typename
+    color
+    nav {
+      __typename
+      href
+      label
+    }
+  }
+  footer {
+    __typename
+    color
+    social {
+      __typename
+      facebook
+      twitter
+      instagram
+      github
+    }
+  }
+  theme {
+    __typename
+    color
+    font
+    icon
+    darkMode
+  }
+}

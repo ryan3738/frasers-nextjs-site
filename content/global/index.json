@@ -1,0 +1,35 @@
+{
+  "header": {
+    "icon": {
+      "color": "yellow",
+      "style": "float",
+      "name": "beer"
+    },
+    "color": "default",
+    "nav": [
+      {
+        "href": "home",
+        "label": "Home"
+      },
+      {
+        "href": "posts",
+        "label": "Projects"
+      }
+    ]
+  },
+  "footer": {
+    "color": "default",
+    "social": {
+      "facebook": "",
+      "twitter": "",
+      "instagram": "",
+      "github": "https://github.com/ryan3738"
+    }
+  },
+  "theme": {
+    "color": "teal",
+    "font": "sans",
+    "icon": "boxicon",
+    "darkMode": "system"
+  }
+}

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { getStaticPropsForTina, gql } from 'tinacms';
 import { getMenuQueryFragment } from './index';
-import Layout, { meta } from '../../components/Layout';
+import Layout, { layoutQueryFragment, meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
 import { GetStaticProps } from 'next';
 
@@ -34,6 +34,7 @@ export const getStaticProps: GetStaticProps = async () => {
     query: gql`
       query MenuQuery($menuRelativePath: String!) {
         ${getMenuQueryFragment}
+        ${layoutQueryFragment}
       }
     `,
     variables: { menuRelativePath: 'newYears.json' },
