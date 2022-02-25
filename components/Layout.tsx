@@ -42,7 +42,7 @@ export default function Layout({
   useEffect(() => {
     setUrl(window.location.origin);
   }, []);
-  
+
   return (
     <>
       <Header navLinks={data.navigation} open={open} setOpen={setOpen} />
