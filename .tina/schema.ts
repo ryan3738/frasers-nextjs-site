@@ -1,6 +1,6 @@
 import { defineSchema } from "@tinacms/cli";
 import type { TinaField } from "@tinacms/cli";
-import { footerSchema, headerSchema, navigationSchema, themeSchema } from "./Global";
+import { footerSchema, headerSchema, metaSchema, navigationSchema, themeSchema } from "./Global";
 import { menuSectionSchema } from "./Menu";
 import { imageSchema } from "./General";
 import { addressSchema, hoursSchema } from "./BusinessInfo";
@@ -162,6 +162,7 @@ export default defineSchema({
       name: "global",
       path: "content/global",
       fields: [
+        metaSchema,
         footerSchema,
         themeSchema,
         navigationSchema,

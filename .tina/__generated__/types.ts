@@ -434,6 +434,14 @@ export type PostsConnection = Connection & {
   edges?: Maybe<Array<Maybe<PostsConnectionEdges>>>;
 };
 
+export type GlobalMeta = {
+  __typename?: 'GlobalMeta';
+  title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  keywords?: Maybe<Array<Maybe<Scalars['String']>>>;
+  cardImage?: Maybe<Scalars['String']>;
+};
+
 export type GlobalFooterSocial = {
   __typename?: 'GlobalFooterSocial';
   facebook?: Maybe<Scalars['String']>;
@@ -465,6 +473,7 @@ export type GlobalNavigation = {
 
 export type Global = {
   __typename?: 'Global';
+  meta?: Maybe<GlobalMeta>;
   footer?: Maybe<GlobalFooter>;
   theme?: Maybe<GlobalTheme>;
   navigation?: Maybe<Array<Maybe<GlobalNavigation>>>;
@@ -701,6 +710,13 @@ export type PostsMutation = {
   body?: InputMaybe<Scalars['String']>;
 };
 
+export type GlobalMetaMutation = {
+  title?: InputMaybe<Scalars['String']>;
+  description?: InputMaybe<Scalars['String']>;
+  keywords?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+  cardImage?: InputMaybe<Scalars['String']>;
+};
+
 export type GlobalFooterSocialMutation = {
   facebook?: InputMaybe<Scalars['String']>;
   twitter?: InputMaybe<Scalars['String']>;
@@ -727,6 +743,7 @@ export type GlobalNavigationMutation = {
 };
 
 export type GlobalMutation = {
+  meta?: InputMaybe<GlobalMetaMutation>;
   footer?: InputMaybe<GlobalFooterMutation>;
   theme?: InputMaybe<GlobalThemeMutation>;
   navigation?: InputMaybe<Array<InputMaybe<GlobalNavigationMutation>>>;
@@ -742,7 +759,7 @@ export type DoubleFeaturePartsFragment = { __typename?: 'DoubleFeature', title?:
 
 export type PostsPartsFragment = { __typename?: 'Posts', title?: string | null, body?: string | null };
 
-export type GlobalPartsFragment = { __typename?: 'Global', footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, darkMode?: string | null } | null, navigation?: Array<{ __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null> | null };
+export type GlobalPartsFragment = { __typename?: 'Global', meta?: { __typename: 'GlobalMeta', title?: string | null, description?: string | null, keywords?: Array<string | null> | null, cardImage?: string | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, darkMode?: string | null } | null, navigation?: Array<{ __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null> | null };
 
 export type GetGalleryGridDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
@@ -809,12 +826,12 @@ export type GetGlobalDocumentQueryVariables = Exact<{
 }>;
 
 
-export type GetGlobalDocumentQuery = { __typename?: 'Query', getGlobalDocument: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, darkMode?: string | null } | null, navigation?: Array<{ __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null> | null } } };
+export type GetGlobalDocumentQuery = { __typename?: 'Query', getGlobalDocument: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', meta?: { __typename: 'GlobalMeta', title?: string | null, description?: string | null, keywords?: Array<string | null> | null, cardImage?: string | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, darkMode?: string | null } | null, navigation?: Array<{ __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null> | null } } };
 
 export type GetGlobalListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetGlobalListQuery = { __typename?: 'Query', getGlobalList: { __typename?: 'GlobalConnection', totalCount: number, edges?: Array<{ __typename?: 'GlobalConnectionEdges', node?: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, darkMode?: string | null } | null, navigation?: Array<{ __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null> | null } } | null } | null> | null } };
+export type GetGlobalListQuery = { __typename?: 'Query', getGlobalList: { __typename?: 'GlobalConnection', totalCount: number, edges?: Array<{ __typename?: 'GlobalConnectionEdges', node?: { __typename?: 'GlobalDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Global', meta?: { __typename: 'GlobalMeta', title?: string | null, description?: string | null, keywords?: Array<string | null> | null, cardImage?: string | null } | null, footer?: { __typename: 'GlobalFooter', color?: string | null, social?: { __typename: 'GlobalFooterSocial', facebook?: string | null, twitter?: string | null, instagram?: string | null, github?: string | null } | null } | null, theme?: { __typename: 'GlobalTheme', color?: string | null, darkMode?: string | null } | null, navigation?: Array<{ __typename: 'GlobalNavigation', href?: string | null, label?: string | null, header?: boolean | null, burger?: boolean | null, footer?: boolean | null } | null> | null } } | null } | null> | null } };
 
 export const GalleryGridPartsFragmentDoc = gql`
     fragment GalleryGridParts on GalleryGrid {
@@ -902,6 +919,13 @@ export const PostsPartsFragmentDoc = gql`
     `;
 export const GlobalPartsFragmentDoc = gql`
     fragment GlobalParts on Global {
+  meta {
+    __typename
+    title
+    description
+    keywords
+    cardImage
+  }
   footer {
     __typename
     color

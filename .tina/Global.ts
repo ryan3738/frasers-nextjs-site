@@ -1,5 +1,39 @@
 import { TinaField } from "@tinacms/cli"
 
+const metaSchema: TinaField = {
+  type: "object",
+  label: "Meta Tags",
+  name: "meta",
+  fields: [
+    {
+      name: "title",
+      label: "Title",
+      description: "Title of page",
+      type: "string",
+    },
+    {
+      name: "description",
+      label: "Description",
+      description: "Description of the page",
+      type: "string",
+    },
+    {
+      name: "keywords",
+      label: "Keywords",
+      description: "Enter meta tags",
+      type: "string",
+      list: true,
+    },
+    {
+      name: "cardImage",
+      label: "Social Card Image",
+      description: "Square image to be used for social cards 512x512 or larger",
+      type: "image",
+    }
+  ]
+
+}
+
 const navigationSchema: TinaField = {
   type: "object",
   label: "Navigation",
@@ -133,4 +167,4 @@ const themeSchema: TinaField = {
   ],
 }
 
-export { footerSchema, themeSchema, navigationSchema };
+export { metaSchema, footerSchema, themeSchema, navigationSchema };

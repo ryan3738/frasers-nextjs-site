@@ -78,6 +78,13 @@ fragment PostsParts on Posts {
 }
 
 fragment GlobalParts on Global {
+  meta {
+    __typename
+    title
+    description
+    keywords
+    cardImage
+  }
   footer {
     __typename
     color

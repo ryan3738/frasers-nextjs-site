@@ -274,6 +274,13 @@ type PostsConnection implements Connection {
   edges: [PostsConnectionEdges]
 }
 
+type GlobalMeta {
+  title: String
+  description: String
+  keywords: [String]
+  cardImage: String
+}
+
 type GlobalFooterSocial {
   facebook: String
   twitter: String
@@ -300,6 +307,7 @@ type GlobalNavigation {
 }
 
 type Global {
+  meta: GlobalMeta
   footer: GlobalFooter
   theme: GlobalTheme
   navigation: [GlobalNavigation]
@@ -439,6 +447,13 @@ input PostsMutation {
   body: String
 }
 
+input GlobalMetaMutation {
+  title: String
+  description: String
+  keywords: [String]
+  cardImage: String
+}
+
 input GlobalFooterSocialMutation {
   facebook: String
   twitter: String
@@ -465,6 +480,7 @@ input GlobalNavigationMutation {
 }
 
 input GlobalMutation {
+  meta: GlobalMetaMutation
   footer: GlobalFooterMutation
   theme: GlobalThemeMutation
   navigation: [GlobalNavigationMutation]

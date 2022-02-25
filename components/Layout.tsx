@@ -1,7 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
 import Script from 'next/script';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './Header';
 import { BusinessInfo } from '../.tina/__generated__/types';
 import layoutData from '../content/global/index.json';
@@ -16,13 +16,11 @@ interface LayoutProps {
 }
 
 export const meta = {
-  name: 'Frasers',
   title: 'Frasers Gourmet Hideaway',
   description:
     'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
   keywords: 'restaurant, steak, seafood, whidbey',
   cardImage: '/android-chrome-512x512.png',
-  url: 'https://frasersgh.com',
 };
 
 const theme = {
@@ -37,8 +35,15 @@ export default function Layout({
   children,
 }: LayoutProps): JSX.Element {
   const [open, setOpen] = useState(false);
+  const [url, setUrl] = useState('');
   const router = useRouter();
   const primaryColor = data?.theme?.color || 'teal';
+
+  useEffect(() => {
+    setUrl(window.location.origin);
+  }, []);
+  console.log('Current URL', url + router.asPath);
+
   return (
     <>
       <Header navLinks={data.navigation} open={open} setOpen={setOpen} />
@@ -53,7 +58,7 @@ export default function Layout({
           <meta name="keywords" content={meta.keywords} />
           {/* Social media information */}
           {/* Open Graph */}
-          <meta property="og:url" content={meta.url + router.asPath} />
+          <meta property="og:url" content={url + router.asPath} />
           <meta property="og:type" content="restaurant" />
           <meta property="og:site_name" content={meta.title} />
           <meta property="og:description" content={meta.description} />

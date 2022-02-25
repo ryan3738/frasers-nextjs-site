@@ -621,6 +621,62 @@
       "fields": [
         {
           "type": "object",
+          "label": "Meta Tags",
+          "name": "meta",
+          "fields": [
+            {
+              "name": "title",
+              "label": "Title",
+              "description": "Title of page",
+              "type": "string",
+              "namespace": [
+                "global",
+                "meta",
+                "title"
+              ]
+            },
+            {
+              "name": "description",
+              "label": "Description",
+              "description": "Description of the page",
+              "type": "string",
+              "namespace": [
+                "global",
+                "meta",
+                "description"
+              ]
+            },
+            {
+              "name": "keywords",
+              "label": "Keywords",
+              "description": "Enter meta tags",
+              "type": "string",
+              "list": true,
+              "namespace": [
+                "global",
+                "meta",
+                "keywords"
+              ]
+            },
+            {
+              "name": "cardImage",
+              "label": "Social Card Image",
+              "description": "Square image to be used for social cards 512x512 or larger",
+              "type": "image",
+              "namespace": [
+                "global",
+                "meta",
+                "cardImage"
+              ]
+            }
+          ],
+          "namespace": [
+            "global",
+            "meta"
+          ]
+        },
+        {
+          "type": "object",
           "label": "Footer",
           "name": "footer",
           "fields": [
