@@ -27,7 +27,9 @@ const navigationSchema: TinaField = {
       type: "boolean",
       label: "Header",
       name: "header",
+      description: 'Check to display this link in the header',
       ui: {
+        component: 'toggle',
         default: true,
       },
     },
@@ -35,6 +37,7 @@ const navigationSchema: TinaField = {
       type: "boolean",
       label: "Burger",
       name: "burger",
+      description: 'Check to display this link in the burger menu',
       ui: {
         default: true,
       },
@@ -43,6 +46,7 @@ const navigationSchema: TinaField = {
       type: "boolean",
       label: "Footer",
       name: "footer",
+      description: 'Check to display this link in the footer',
       ui: {
         default: true,
       },
