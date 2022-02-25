@@ -27,7 +27,7 @@
     }
   },
   "theme": {
-    "color": "teal",
+    "color": "#C6A938",
     "font": "sans",
     "icon": "boxicon",
     "darkMode": "system"
