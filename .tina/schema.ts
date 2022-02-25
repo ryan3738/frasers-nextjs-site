@@ -162,7 +162,6 @@ export default defineSchema({
       name: "global",
       path: "content/global",
       fields: [
-        headerSchema,
         footerSchema,
         themeSchema,
         navigationSchema,
