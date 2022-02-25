@@ -121,10 +121,20 @@ export default function Layout({
           :root {
             --white-color: #ffffffde;
             --black-color: #0b0a0a;
-            --surface-color: rgba(27, 15, 15, 0.03);
+            --surface-color: rgba(255, 255, 255, 0.03);
             --background-color: var(--black-color);
             --primary-color: var(--primary-color-500);
             --primary-color-desaturated: var(--primary-color-200);
+            --primary-color-50: ${chroma(primaryColor).brighten(3).hex()};
+            --primary-color-100: ${chroma(primaryColor).brighten(2.25).hex()};
+            --primary-color-200: ${chroma(primaryColor).brighten(1.5).hex()};
+            --primary-color-300: ${chroma(primaryColor).brighten(0.75).hex()};
+            --primary-color-400: ${chroma(primaryColor).hex()};
+            --primary-color-500: ${chroma(primaryColor).darken(0.75).hex()};
+            --primary-color-600: ${chroma(primaryColor).darken(1.5).hex()};
+            --primary-color-700: ${chroma(primaryColor).darken(2.25).hex()};
+            --primary-color-800: ${chroma(primaryColor).darken(3).hex()};
+            --primary-color-900: ${chroma(primaryColor).darken(3.75).hex()};
             /* Have option for internet explorer without f6*/
             /* 87% */
             --high-emphasis-text: var(--white-color);
@@ -136,16 +146,7 @@ export default function Layout({
             --color-instagram: #fb3958;
             --small-screen: ${theme.smallScreen};
             --medium-screen: ${theme.mediumScreen};
-            --primary-color-50: ${chroma(primaryColor).brighten(3).hex()};
-            --primary-color-100: ${chroma(primaryColor).brighten(2.25).hex()};
-            --primary-color-200: ${chroma(primaryColor).brighten(1.5).hex()};
-            --primary-color-300: ${chroma(primaryColor).brighten(0.75).hex()};
-            --primary-color-400: ${chroma(primaryColor).hex()};
-            --primary-color-500: ${chroma(primaryColor).darken(0.75).hex()};
-            --primary-color-600: ${chroma(primaryColor).darken(1.5).hex()};
-            --primary-color-700: ${chroma(primaryColor).darken(2.25).hex()};
-            --primary-color-800: ${chroma(primaryColor).darken(3).hex()};
-            --primary-color-900: ${chroma(primaryColor).darken(3.75).hex()};
+            --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           }
           .medium-emphasis {
             color: var(--medium-emphasis-text);
