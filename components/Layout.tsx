@@ -42,8 +42,7 @@ export default function Layout({
   useEffect(() => {
     setUrl(window.location.origin);
   }, []);
-  console.log('Current URL', url + router.asPath);
-
+  
   return (
     <>
       <Header navLinks={data.navigation} open={open} setOpen={setOpen} />
