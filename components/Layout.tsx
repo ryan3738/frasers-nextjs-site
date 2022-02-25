@@ -167,18 +167,6 @@ export default function Layout({
 export const layoutQueryFragment = `
   getGlobalDocument(relativePath: "index.json") {
     data {
-      header {
-        icon {
-          name
-          color
-          style
-        }
-        color
-        nav {
-          href
-          label
-        }
-      }
       footer {
         color
         social {
@@ -190,8 +178,6 @@ export const layoutQueryFragment = `
       }
       theme {
         color
-        icon
-        font
         darkMode
       }
       navigation {
