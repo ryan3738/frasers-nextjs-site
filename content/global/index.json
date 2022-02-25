@@ -23,41 +23,43 @@
     "color": "#C6A938",
     "darkMode": "system"
   },
-  "navigation": [
-    {
-      "href": "/",
-      "label": "Home",
-      "header": true,
-      "burger": true,
-      "footer": true
-    },
-    {
-      "href": "/menu",
-      "label": "Menu",
-      "header": true,
-      "burger": true,
-      "footer": true
-    },
-    {
-      "href": "/#about",
-      "label": "About",
-      "header": true,
-      "burger": true,
-      "footer": true
-    },
-    {
-      "href": "/#gallery",
-      "label": "Gallery",
-      "header": true,
-      "burger": true,
-      "footer": true
-    },
-    {
-      "href": "/#contact",
-      "label": "Contact",
-      "header": true,
-      "burger": true,
-      "footer": true
-    }
-  ]
+  "navigation": {
+    "links": [
+      {
+        "href": "/",
+        "label": "Home",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/menu",
+        "label": "Menu",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/#about",
+        "label": "About",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/#gallery",
+        "label": "Gallery",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/#contact",
+        "label": "Contact",
+        "header": true,
+        "burger": true,
+        "footer": true
+      }
+    ]
+  }
 }

@@ -103,10 +103,13 @@ fragment GlobalParts on Global {
   }
   navigation {
     __typename
-    href
-    label
-    header
-    burger
-    footer
+    links {
+      __typename
+      href
+      label
+      header
+      burger
+      footer
+    }
   }
 }

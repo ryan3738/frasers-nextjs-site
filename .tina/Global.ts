@@ -38,53 +38,60 @@ const navigationSchema: TinaField = {
   type: "object",
   label: "Navigation",
   name: "navigation",
-  list: true,
-  ui: {
-    defaultItem: {
-      href: "/",
-      label: "Home",
-    },
-    component: "groupList",
-  },
   fields: [
     {
-      type: "string",
-      label: "Link",
-      name: "href",
-    },
-    {
-      type: "string",
-      label: "Label",
-      name: "label",
-    },
-    {
-      type: "boolean",
-      label: "Header",
-      name: "header",
-      description: 'Check to display this link in the header',
+      type: "object",
+      label: "links",
+      name: "links",
+      list: true,
       ui: {
-        component: 'toggle',
-        default: true,
+        defaultItem: {
+          href: "/",
+          label: "Home",
+        },
+        component: "groupList",
       },
-    },
-    {
-      type: "boolean",
-      label: "Burger",
-      name: "burger",
-      description: 'Check to display this link in the burger menu',
-      ui: {
-        default: true,
-      },
-    },
-    {
-      type: "boolean",
-      label: "Footer",
-      name: "footer",
-      description: 'Check to display this link in the footer',
-      ui: {
-        default: true,
-      },
-    },
+      fields: [
+        {
+          type: "string",
+          label: "Link",
+          name: "href",
+        },
+        {
+          type: "string",
+          label: "Label",
+          name: "label",
+        },
+        {
+          type: "boolean",
+          label: "Header",
+          name: "header",
+          description: 'Check to display this link in the header',
+          ui: {
+            component: 'toggle',
+            default: true,
+          },
+        },
+        {
+          type: "boolean",
+          label: "Burger",
+          name: "burger",
+          description: 'Check to display this link in the burger menu',
+          ui: {
+            default: true,
+          },
+        },
+        {
+          type: "boolean",
+          label: "Footer",
+          name: "footer",
+          description: 'Check to display this link in the footer',
+          ui: {
+            default: true,
+          },
+        },
+      ]
+    }
   ]
 }
 

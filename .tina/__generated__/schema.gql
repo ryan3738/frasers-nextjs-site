@@ -298,7 +298,7 @@ type GlobalTheme {
   darkMode: String
 }
 
-type GlobalNavigation {
+type GlobalNavigationLinks {
   href: String
   label: String
   header: Boolean
@@ -306,11 +306,15 @@ type GlobalNavigation {
   footer: Boolean
 }
 
+type GlobalNavigation {
+  links: [GlobalNavigationLinks]
+}
+
 type Global {
   meta: GlobalMeta
   footer: GlobalFooter
   theme: GlobalTheme
-  navigation: [GlobalNavigation]
+  navigation: GlobalNavigation
 }
 
 type GlobalDocument implements Node & Document {
@@ -471,7 +475,7 @@ input GlobalThemeMutation {
   darkMode: String
 }
 
-input GlobalNavigationMutation {
+input GlobalNavigationLinksMutation {
   href: String
   label: String
   header: Boolean
@@ -479,11 +483,15 @@ input GlobalNavigationMutation {
   footer: Boolean
 }
 
+input GlobalNavigationMutation {
+  links: [GlobalNavigationLinksMutation]
+}
+
 input GlobalMutation {
   meta: GlobalMetaMutation
   footer: GlobalFooterMutation
   theme: GlobalThemeMutation
-  navigation: [GlobalNavigationMutation]
+  navigation: GlobalNavigationMutation
 }
 
 schema {

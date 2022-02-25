@@ -45,7 +45,7 @@ export default function Layout({
 
   return (
     <>
-      <Header navLinks={data.navigation} open={open} setOpen={setOpen} />
+      <Header navLinks={data.navigation.links} open={open} setOpen={setOpen} />
       <div className="container">
         <Head>
           <meta
@@ -103,7 +103,7 @@ export default function Layout({
           `}
         </Script>
         <main className="main">{children}</main>
-        <Footer navLinks={data.navigation} />
+        <Footer navLinks={data.navigation.links} />
         <style jsx>{`
           .container {
             height: 100%;
@@ -172,6 +172,19 @@ export default function Layout({
 export const layoutQueryFragment = `
   getGlobalDocument(relativePath: "index.json") {
     data {
+      navigation {
+        links {
+          label
+          href
+          header
+          burger
+          footer
+        }
+      }
+      theme {
+        color
+        darkMode
+      }
       footer {
         color
         social {
@@ -180,17 +193,6 @@ export const layoutQueryFragment = `
           instagram
           github
         }
-      }
-      theme {
-        color
-        darkMode
-      }
-      navigation {
-        label
-        href
-        header
-        burger
-        footer
       }
     }
   }
