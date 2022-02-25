@@ -142,7 +142,7 @@ export default function Layout({
             --medium-emphasis-text: #ffffff99;
             /* 38% */
             --text-disabled: #ffffff61;
-            --color-facebook: #8d8d8d;
+            --color-facebook: #3b5998;
             --color-instagram: #fb3958;
             --small-screen: ${theme.smallScreen};
             --medium-screen: ${theme.mediumScreen};

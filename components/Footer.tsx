@@ -12,7 +12,7 @@ export default function Footer({
   const footerLinks = navLinks?.filter(link => link.footer === true);
   // const footerLinks = [];
   return (
-    <footer>
+    <footer className="footer">
       {footerLinks && (
         <nav className="nav-list">
           <NavList links={footerLinks} />
