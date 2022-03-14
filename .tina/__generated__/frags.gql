@@ -78,6 +78,22 @@ fragment PostsParts on Posts {
 }
 
 fragment GlobalParts on Global {
+  navigation {
+    __typename
+    links {
+      __typename
+      href
+      label
+      header
+      burger
+      footer
+    }
+  }
+  theme {
+    __typename
+    color
+    darkMode
+  }
   meta {
     __typename
     title
@@ -94,22 +110,6 @@ fragment GlobalParts on Global {
       twitter
       instagram
       github
-    }
-  }
-  theme {
-    __typename
-    color
-    darkMode
-  }
-  navigation {
-    __typename
-    links {
-      __typename
-      href
-      label
-      header
-      burger
-      footer
     }
   }
 }

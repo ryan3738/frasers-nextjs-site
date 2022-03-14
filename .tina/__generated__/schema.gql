@@ -274,6 +274,23 @@ type PostsConnection implements Connection {
   edges: [PostsConnectionEdges]
 }
 
+type GlobalNavigationLinks {
+  href: String
+  label: String
+  header: Boolean
+  burger: Boolean
+  footer: Boolean
+}
+
+type GlobalNavigation {
+  links: [GlobalNavigationLinks]
+}
+
+type GlobalTheme {
+  color: String
+  darkMode: String
+}
+
 type GlobalMeta {
   title: String
   description: String
@@ -293,28 +310,11 @@ type GlobalFooter {
   social: GlobalFooterSocial
 }
 
-type GlobalTheme {
-  color: String
-  darkMode: String
-}
-
-type GlobalNavigationLinks {
-  href: String
-  label: String
-  header: Boolean
-  burger: Boolean
-  footer: Boolean
-}
-
-type GlobalNavigation {
-  links: [GlobalNavigationLinks]
-}
-
 type Global {
+  navigation: GlobalNavigation
+  theme: GlobalTheme
   meta: GlobalMeta
   footer: GlobalFooter
-  theme: GlobalTheme
-  navigation: GlobalNavigation
 }
 
 type GlobalDocument implements Node & Document {
@@ -451,6 +451,23 @@ input PostsMutation {
   body: String
 }
 
+input GlobalNavigationLinksMutation {
+  href: String
+  label: String
+  header: Boolean
+  burger: Boolean
+  footer: Boolean
+}
+
+input GlobalNavigationMutation {
+  links: [GlobalNavigationLinksMutation]
+}
+
+input GlobalThemeMutation {
+  color: String
+  darkMode: String
+}
+
 input GlobalMetaMutation {
   title: String
   description: String
@@ -470,28 +487,11 @@ input GlobalFooterMutation {
   social: GlobalFooterSocialMutation
 }
 
-input GlobalThemeMutation {
-  color: String
-  darkMode: String
-}
-
-input GlobalNavigationLinksMutation {
-  href: String
-  label: String
-  header: Boolean
-  burger: Boolean
-  footer: Boolean
-}
-
-input GlobalNavigationMutation {
-  links: [GlobalNavigationLinksMutation]
-}
-
 input GlobalMutation {
+  navigation: GlobalNavigationMutation
+  theme: GlobalThemeMutation
   meta: GlobalMetaMutation
   footer: GlobalFooterMutation
-  theme: GlobalThemeMutation
-  navigation: GlobalNavigationMutation
 }
 
 schema {
