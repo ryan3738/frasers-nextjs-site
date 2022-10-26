@@ -10,6 +10,12 @@
           "name": "CAESAR SALAD",
           "description": "Romaine, crispy prosciutto, fried capers, & parmesan black olive hemp tuille",
           "price": 14,
+          "modifiers": [
+            {
+              "name": "Add Smoked Mussels",
+              "price": 5
+            }
+          ],
           "available": true,
           "images": [
             {
@@ -17,6 +23,15 @@
               "image": "http://res.cloudinary.com/ryan3738/image/upload/v1639529311/frasers/caesar_salad_esgixs.jpg"
             }
           ]
+        },
+        {
+          "name": "Penn Cove Mussels",
+          "description": "Steamed local mussels in a fragrant curry cream broth",
+          "price": 16,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
         },
         {
           "name": "Tomato & Burrata",
@@ -58,15 +73,6 @@
         {
           "name": "CALAMARI",
           "description": "Fried calamari steaks with serrano chiles and blue cheese dipping sauce",
-          "price": 16,
-          "dietary": [
-            "gluten-free"
-          ],
-          "available": true
-        },
-        {
-          "name": "Penn Cove Mussels",
-          "description": "Steamed local mussels in a fragrant curry cream broth",
           "price": 16,
           "dietary": [
             "gluten-free"
