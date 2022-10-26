@@ -208,16 +208,16 @@
           "available": true
         },
         {
-          "name": "BEEF BURGUNDY",
-          "description": "Braised beef medallions in a red wine reduction, house made buttered noodles",
-          "price": 26,
-          "available": false
-        },
-        {
           "name": "CRAB & SHRIMP LASAGNA",
           "description": "Dungeness crab, shrimp, & lobster cream sauce",
           "price": 34,
           "available": true
+        },
+        {
+          "name": "BEEF BURGUNDY",
+          "description": "Braised beef medallions in a red wine reduction, house made buttered noodles",
+          "price": 26,
+          "available": false
         },
         {
           "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
