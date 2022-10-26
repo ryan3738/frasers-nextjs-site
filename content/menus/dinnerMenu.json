@@ -163,6 +163,12 @@
           "available": true
         },
         {
+          "name": "DUCK BREAST",
+          "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & marsala cream reduction",
+          "price": 37,
+          "available": true
+        },
+        {
           "name": "RED SNAPPER",
           "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
           "price": 27,
@@ -193,12 +199,6 @@
           "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
           "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
           "price": 29,
-          "available": true
-        },
-        {
-          "name": "DUCK BREAST",
-          "description": "House made pasta, pinenuts, asparagus, beach mushrooms, & marsala cream reduction",
-          "price": 35,
           "available": true
         },
         {
