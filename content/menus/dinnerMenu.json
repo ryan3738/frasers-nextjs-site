@@ -214,16 +214,16 @@
           "available": true
         },
         {
+          "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
+          "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
+          "price": 31,
+          "available": true
+        },
+        {
           "name": "BEEF BURGUNDY",
           "description": "Braised beef medallions in a red wine reduction, house made buttered noodles",
           "price": 26,
           "available": false
-        },
-        {
-          "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
-          "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
-          "price": 29,
-          "available": true
         },
         {
           "name": "CHICKEN & WAFFLES",
