@@ -169,6 +169,12 @@
           "available": true
         },
         {
+          "name": "CHICKEN & Southern Cast Iron Spoonbread",
+          "description": "Buttermilk fried Jidori chicken breast, fire roasted green chili & corn spoonbread, truffle honey butter",
+          "price": 29,
+          "available": true
+        },
+        {
           "name": "RED SNAPPER",
           "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
           "price": 27,
@@ -206,12 +212,6 @@
           "description": "Buttermilk fried Jidori chicken breast, chilli cheese waffle, & truffle honey butter",
           "price": 26,
           "available": false
-        },
-        {
-          "name": "CHICKEN & Southern Cast Iron Spoonbread",
-          "description": "Buttermilk fried Jidori chicken breast, fire roasted green chili & corn spoonbread, truffle honey butter",
-          "price": 27,
-          "available": true
         },
         {
           "name": "BRAISED SMOKED KUROBUTA PORK SHANK",
