@@ -77,6 +77,15 @@
           "available": true
         },
         {
+          "name": "GARLIC & BRIE FONDUE FOR TWO",
+          "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread",
+          "price": 21,
+          "dietary": [
+            "vegetarian"
+          ],
+          "available": true
+        },
+        {
           "name": "Duck Liver Pate",
           "description": "Homemade duck liver pate served with pear compote and crostinis",
           "price": 16,
@@ -92,15 +101,6 @@
           "name": "DUNGENESS CRAB CAKES",
           "description": "Fried dungeness crab cakes",
           "price": 20,
-          "available": true
-        },
-        {
-          "name": "GARLIC & BRIE FONDUE FOR TWO",
-          "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread",
-          "price": 20,
-          "dietary": [
-            "vegetarian"
-          ],
           "available": true
         },
         {
