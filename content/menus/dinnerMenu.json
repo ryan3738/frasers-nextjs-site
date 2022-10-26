@@ -59,9 +59,18 @@
           "available": true
         },
         {
+          "name": "DRY GARLIC BABY BACK RIBS",
+          "description": "Baby back ribs, crispy garlic, blackberry mustard sauce",
+          "price": 18,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
           "name": "Penn Cove Mussels",
           "description": "Steamed local mussels in a fragrant curry cream broth",
-          "price": 16,
+          "price": 17,
           "dietary": [
             "gluten-free"
           ],
@@ -78,15 +87,6 @@
           "description": "Rice & black bean salad, chimichurro aioli",
           "price": 12,
           "available": false
-        },
-        {
-          "name": "DRY GARLIC BABY BACK RIBS",
-          "description": "Baby back ribs, crispy garlic, blackberry mustard sauce",
-          "price": 18,
-          "dietary": [
-            "gluten-free"
-          ],
-          "available": true
         },
         {
           "name": "DUNGENESS CRAB CAKES",
