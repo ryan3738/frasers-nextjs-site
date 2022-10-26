@@ -148,6 +148,12 @@
           "available": true
         },
         {
+          "name": "USDA NEW YORK STRIP STEAK",
+          "description": "12oz Prime NY steak, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
+          "price": 48,
+          "available": true
+        },
+        {
           "name": "RED SNAPPER",
           "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
           "price": 27,
@@ -178,12 +184,6 @@
           "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
           "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
           "price": 29,
-          "available": true
-        },
-        {
-          "name": "USDA NEW YORK STRIP STEAK",
-          "description": "12oz Prime NY steak, yukon fork mash, smoked blue cheese, asparagus, & green peppercorn sauce",
-          "price": 44,
           "available": true
         },
         {
