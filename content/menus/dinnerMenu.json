@@ -7,6 +7,18 @@
       "name": "Starters",
       "items": [
         {
+          "name": "CAESAR SALAD",
+          "description": "Romaine, crispy prosciutto, fried capers, & parmesan black olive hemp tuille",
+          "price": 14,
+          "available": true,
+          "images": [
+            {
+              "alt": "CAESAR SALAD",
+              "image": "http://res.cloudinary.com/ryan3738/image/upload/v1639529311/frasers/caesar_salad_esgixs.jpg"
+            }
+          ]
+        },
+        {
           "name": "Tomato & Burrata",
           "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
           "price": 16,
@@ -27,18 +39,6 @@
           "description": "Rice & black bean salad, chimichurro aioli",
           "price": 12,
           "available": false
-        },
-        {
-          "name": "CAESAR SALAD",
-          "description": "Romaine, crispy prosciutto, fried capers, & parmesan black olive hemp tuille",
-          "price": 14,
-          "available": true,
-          "images": [
-            {
-              "alt": "CAESAR SALAD",
-              "image": "http://res.cloudinary.com/ryan3738/image/upload/v1639529311/frasers/caesar_salad_esgixs.jpg"
-            }
-          ]
         },
         {
           "name": "GOAT CHEESE SALAD",
