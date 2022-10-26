@@ -199,19 +199,19 @@
           "available": true
         },
         {
-          "name": "BEEF BURGUNDY",
-          "description": "Braised beef medallions in a red wine reduction, house made buttered noodles",
-          "price": 26,
-          "available": false
-        },
-        {
           "name": "VEGETABLE GNOCCHI",
           "description": "Tender ricotta gnocchi, seasonal vegetables, & parmesan cream sauce",
-          "price": 24,
+          "price": 25,
           "dietary": [
             "vegetarian"
           ],
           "available": true
+        },
+        {
+          "name": "BEEF BURGUNDY",
+          "description": "Braised beef medallions in a red wine reduction, house made buttered noodles",
+          "price": 26,
+          "available": false
         },
         {
           "name": "CRAB & SHRIMP LASAGNA",
