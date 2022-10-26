@@ -40,20 +40,20 @@
           "available": true
         },
         {
-          "name": "Penn Cove Mussels",
-          "description": "Steamed local mussels in a fragrant curry cream broth",
-          "price": 16,
+          "name": "Tomato & Burrata",
+          "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
+          "price": 17,
           "dietary": [
+            "vegetarian",
             "gluten-free"
           ],
           "available": true
         },
         {
-          "name": "Tomato & Burrata",
-          "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
+          "name": "Penn Cove Mussels",
+          "description": "Steamed local mussels in a fragrant curry cream broth",
           "price": 16,
           "dietary": [
-            "vegetarian",
             "gluten-free"
           ],
           "available": true
