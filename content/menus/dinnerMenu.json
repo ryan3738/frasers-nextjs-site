@@ -34,6 +34,12 @@
           "available": true
         },
         {
+          "name": "GOAT CHEESE SALAD",
+          "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
+          "price": 17,
+          "available": true
+        },
+        {
           "name": "Penn Cove Mussels",
           "description": "Steamed local mussels in a fragrant curry cream broth",
           "price": 16,
@@ -63,12 +69,6 @@
           "description": "Rice & black bean salad, chimichurro aioli",
           "price": 12,
           "available": false
-        },
-        {
-          "name": "GOAT CHEESE SALAD",
-          "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
-          "price": 16,
-          "available": true
         },
         {
           "name": "DRY GARLIC BABY BACK RIBS",
