@@ -86,6 +86,12 @@
           "available": true
         },
         {
+          "name": "SEAFOOD CHOWDER",
+          "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
+          "price": 15,
+          "available": true
+        },
+        {
           "name": "Duck Liver Pate",
           "description": "Homemade duck liver pate served with pear compote and crostinis",
           "price": 16,
@@ -101,12 +107,6 @@
           "name": "DUNGENESS CRAB CAKES",
           "description": "Fried dungeness crab cakes",
           "price": 20,
-          "available": true
-        },
-        {
-          "name": "SEAFOOD CHOWDER",
-          "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
-          "price": 14,
           "available": true
         },
         {
