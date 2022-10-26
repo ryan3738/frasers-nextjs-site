@@ -92,9 +92,15 @@
           "available": true
         },
         {
+          "name": "DUNGENESS CRAB CAKES",
+          "description": "Fried dungeness crab cakes",
+          "price": 20,
+          "available": true
+        },
+        {
           "name": "Duck Liver Pate",
           "description": "Homemade duck liver pate served with pear compote and crostinis",
-          "price": 16,
+          "price": 17,
           "available": true
         },
         {
@@ -102,12 +108,6 @@
           "description": "Rice & black bean salad, chimichurro aioli",
           "price": 12,
           "available": false
-        },
-        {
-          "name": "DUNGENESS CRAB CAKES",
-          "description": "Fried dungeness crab cakes",
-          "price": 20,
-          "available": true
         },
         {
           "name": "DUCK & PHEASANT PATE",
