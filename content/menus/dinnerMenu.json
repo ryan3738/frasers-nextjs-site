@@ -154,6 +154,15 @@
           "available": true
         },
         {
+          "name": "TEXAS LONG BONE SHORT RIB",
+          "description": "Braised short rib, potato & pepper saute, grainy mustard & bacon greens",
+          "price": 42,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
           "name": "RED SNAPPER",
           "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
           "price": 27,
@@ -184,15 +193,6 @@
           "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
           "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
           "price": 29,
-          "available": true
-        },
-        {
-          "name": "TEXAS LONG BONE SHORT RIB",
-          "description": "Braised short rib, potato & pepper saute, grainy mustard & bacon greens",
-          "price": 38,
-          "dietary": [
-            "gluten-free"
-          ],
           "available": true
         },
         {
