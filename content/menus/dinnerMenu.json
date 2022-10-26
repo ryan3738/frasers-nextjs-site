@@ -50,6 +50,15 @@
           "available": true
         },
         {
+          "name": "CALAMARI",
+          "description": "Fried calamari steaks with serrano chiles and blue cheese dipping sauce",
+          "price": 17,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
           "name": "Penn Cove Mussels",
           "description": "Steamed local mussels in a fragrant curry cream broth",
           "price": 16,
@@ -74,15 +83,6 @@
           "name": "DRY GARLIC BABY BACK RIBS",
           "description": "Baby back ribs, crispy garlic, blackberry mustard sauce",
           "price": 18,
-          "dietary": [
-            "gluten-free"
-          ],
-          "available": true
-        },
-        {
-          "name": "CALAMARI",
-          "description": "Fried calamari steaks with serrano chiles and blue cheese dipping sauce",
-          "price": 16,
           "dietary": [
             "gluten-free"
           ],
