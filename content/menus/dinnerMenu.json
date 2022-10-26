@@ -135,14 +135,14 @@
         {
           "name": "BEEF TENDERLOIN",
           "description": "Grilled 7oz filet mignon, garlic mashed potatoes, vegetables, horseradish butter",
-          "price": 41,
+          "price": 44,
           "dietary": [
             "gluten-free"
           ],
           "modifiers": [
             {
               "name": "ADD SURF",
-              "price": 12
+              "price": 14
             }
           ],
           "available": true
