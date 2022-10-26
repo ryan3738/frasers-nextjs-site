@@ -184,6 +184,15 @@
           "available": true
         },
         {
+          "name": "SCALLOPS",
+          "description": "Vegetable risotto, dill beurre blanc, & chili oil",
+          "price": 40,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
           "name": "RED SNAPPER",
           "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
           "price": 27,
@@ -233,15 +242,6 @@
           "description": "Prawns, scallops, snapper, mussels, coconut african spiced curry, couscous",
           "price": 26,
           "available": false
-        },
-        {
-          "name": "SCALLOPS",
-          "description": "Vegetable risotto, dill beurre blanc, & chili oil",
-          "price": 37,
-          "dietary": [
-            "gluten-free"
-          ],
-          "available": true
         },
         {
           "name": "SEAFOOD LASAGNA",
