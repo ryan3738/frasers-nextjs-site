@@ -25,6 +25,15 @@
           ]
         },
         {
+          "name": "YOUNG GREENS SEASONAL SALAD",
+          "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette",
+          "price": 12,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
           "name": "Penn Cove Mussels",
           "description": "Steamed local mussels in a fragrant curry cream broth",
           "price": 16,
@@ -98,15 +107,6 @@
           "name": "SEAFOOD CHOWDER",
           "description": "Clams, mussels, snapper & shrimp in a rich creamy stock",
           "price": 14,
-          "available": true
-        },
-        {
-          "name": "YOUNG GREENS SEASONAL SALAD",
-          "description": "Mixed salad with pear slices, spiced pecans, Gorgonzola cheese, maple bourbon vinaigrette",
-          "price": 11,
-          "dietary": [
-            "gluten-free"
-          ],
           "available": true
         },
         {
