@@ -175,6 +175,15 @@
           "available": true
         },
         {
+          "name": "RACK OF LAMB",
+          "description": "Pistachio crusted lamb rack, garlic mashed potatoes, & mixed vegetables",
+          "price": 46,
+          "dietary": [
+            "gluten-free"
+          ],
+          "available": true
+        },
+        {
           "name": "RED SNAPPER",
           "description": "Pan seared filet, vegetable couscous, nasturtium pesto, & tomato caper sauce",
           "price": 27,
@@ -224,15 +233,6 @@
           "description": "Prawns, scallops, snapper, mussels, coconut african spiced curry, couscous",
           "price": 26,
           "available": false
-        },
-        {
-          "name": "RACK OF LAMB",
-          "description": "Pistachio crusted lamb rack, garlic mashed potatoes, & mixed vegetables",
-          "price": 39,
-          "dietary": [
-            "gluten-free"
-          ],
-          "available": true
         },
         {
           "name": "SCALLOPS",
