@@ -15,7 +15,7 @@
     "start": "yarn tina-start",
     "export": "npm run build && next export",
     "lint": "next lint",
-    "tina-dev": "yarn tinacms server:start -c \"next dev\"",
+    "tina-dev": "yarn tinacms server:start -c \"next dev -p 3100\"",
     "tina-build": "yarn tinacms server:start -c \"next build\"",
     "tina-start": "yarn tinacms server:start -c \"next start\""
   },
