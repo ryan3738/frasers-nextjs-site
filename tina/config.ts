@@ -8,7 +8,7 @@ const branch =
   process.env.HEAD ||
   'dev'
 
-const token = process.env.NEXT_PUBLIC_TINA_GITHUB_TOKEN;
+const token = process.env.NEXT_PUBLIC_TINA_TOKEN;
 const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID;
 const indexerToken = process.env.NEXT_PUBLIC_TINA_INDEXER_TOKEN;
 
