@@ -10,6 +10,7 @@ const branch =
 
 const token = process.env.NEXT_PUBLIC_TINA_GITHUB_TOKEN;
 const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID;
+const indexerToken = process.env.NEXT_PUBLIC_TINA_INDEXER_TOKEN;
 
 
 export default defineConfig({
@@ -21,6 +22,14 @@ export default defineConfig({
     outputFolder: "admin", // within the public folder
   },
   schema,
+  search: {
+    tina: {
+      indexerToken,
+      stopwordLanguages: ['eng'],
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100,
+  },
   media: {
     // Media config
     // tina: {

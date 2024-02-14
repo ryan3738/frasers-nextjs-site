@@ -554,6 +554,7 @@ var schema = {
 var branch = process.env.NEXT_PUBLIC_TINA_BRANCH || process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF || process.env.HEAD || "dev";
 var token = process.env.NEXT_PUBLIC_TINA_GITHUB_TOKEN;
 var clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID;
+var indexerToken = process.env.NEXT_PUBLIC_TINA_INDEXER_TOKEN;
 var config_default = defineConfig({
   branch,
   token,
@@ -565,6 +566,14 @@ var config_default = defineConfig({
     // within the public folder
   },
   schema,
+  search: {
+    tina: {
+      indexerToken,
+      stopwordLanguages: ["eng"]
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100
+  },
   media: {
     // Media config
     // tina: {
