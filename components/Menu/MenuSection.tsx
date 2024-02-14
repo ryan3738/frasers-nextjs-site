@@ -1,5 +1,5 @@
 import MenuItem from './MenuItem';
-import { MenuSections } from '../../.tina/__generated__/types';
+import { MenuSections } from '../../tina/__generated__/types';
 import Markdown from 'react-markdown';
 
 interface MenuSectionProps {

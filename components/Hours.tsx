@@ -1,4 +1,4 @@
-import { BusinessInfoHours } from '../.tina/__generated__/types';
+import { BusinessInfoHours } from '../tina/__generated__/types';
 interface HoursProps {
   hours: BusinessInfoHours[];
 }

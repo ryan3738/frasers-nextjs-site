@@ -1,46 +1,45 @@
 import Head from 'next/head';
-import { getStaticPropsForTina, gql } from 'tinacms';
-import { getMenuQueryFragment } from './index';
-import Layout, { meta } from '../../components/Layout';
+import { meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
-import { GetStaticProps } from 'next';
+import { useEffect, useState } from 'react';
+import client from '../../tina/__generated__/client';
 
-export default function MenuPage(props): JSX.Element {
-  const sections = [
-    'Amuse Bouche',
-    'First Course',
-    'Second Course',
-    'Third Course',
-    'Dessert',
-  ];
-  if (props.data && props.data.getMenuDocument) {
-    const menu = props.data.getMenuDocument.data;
+const sections = [
+  'Amuse Bouche',
+  'First Course',
+  'Second Course',
+  'Third Course',
+  'Dessert',
+];
+
+export default function MenuPage() {
+  const [menuResponse, setMenuResponse] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await client.queries.menu({ relativePath: "newYears.json" });
+      console.log("menu response", { res });
+      setMenuResponse(res);
+    };
+    fetchData();
+  }, [])
+
+  if (menuResponse?.errors) {
+    console.error(menuResponse.errors);
+    return <div>Error loading menu</div>;
+  }
+  if (menuResponse?.data?.menu) {
+    const menu = menuResponse?.data?.menu;
     return (
-      <Layout>
+      <>
         <Head>
           <title>
             {menu.title} | {meta.title}
           </title>
         </Head>
         <Menu menu={menu} sections={sections} />
-      </Layout>
+      </>
     );
   }
   return <div>Loading...</div>;
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const tinaProperties = await getStaticPropsForTina({
-    query: gql`
-      query MenuQuery($menuRelativePath: String!) {
-        ${getMenuQueryFragment}
-      }
-    `,
-    variables: { menuRelativePath: 'newYears.json' },
-  });
-  return {
-    props: {
-      ...tinaProperties,
-    },
-  };
-};

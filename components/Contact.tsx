@@ -2,7 +2,7 @@
 import Social from './Social';
 // import businessInfo from '../public/data/site-data.json';
 import NewsLetter from './NewsLetter';
-import { BusinessInfo } from '../.tina/__generated__/types';
+import { BusinessInfo } from '../tina/__generated__/types';
 import Hours from './Hours';
 import ContactInfo from './ContactInfo';
 

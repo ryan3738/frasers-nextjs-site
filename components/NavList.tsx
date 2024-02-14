@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 export interface NavLinks {
   href: string;
-  text: string;
+  label: string;
+  header?: boolean;
+  burger?: boolean;
+  footer?: boolean;
 }
 
 interface NavListProps {
@@ -18,16 +21,14 @@ export default function NavList({
 }: NavListProps): JSX.Element {
   return (
     <>
-      {links?.map(link => (
-        <Link key={link.text} href={link.href}>
-          <a
-            className={`nav-link ${showOnLarge && 'show-on-large'} ${
-              burgerMenuLink && 'burger-menu-link'
-            }`}
-          >
-            {link.text}
-          </a>
-        </Link>
+      {links?.map((link, index) => (
+        <div key={link?.label + index} className={`nav-link ${showOnLarge && 'show-on-large'} ${burgerMenuLink && 'burger-menu-link'
+          }`}>
+
+          <Link key={link.label} href={link.href}>
+            {link.label}
+          </Link>
+        </div>
       ))}
       <style jsx>{`
         .nav-link {

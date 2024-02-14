@@ -84,6 +84,7 @@ export default function Double({
             background: var(--surface-color);
             padding: 1.5rem;
             height: 100%;
+            box-shadow: var(--box-shadow);
           }
           .double-right {
             grid-area: p1;

@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "title": "Frasers Gourmet Hideaway",
+    "description": "Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.",
+    "keywords": [
+      "restaurant",
+      "steak",
+      "seafood",
+      "whidbey"
+    ],
+    "cardImage": "https://res.cloudinary.com/ryan3738/image/upload/v1645810548/frasers/android-chrome-512x512_ui3ilk.png"
+  },
+  "footer": {
+    "color": "default",
+    "social": {
+      "facebook": "",
+      "twitter": "",
+      "instagram": "",
+      "github": "https://github.com/ryan3738"
+    }
+  },
+  "theme": {
+    "color": "#C6A938",
+    "darkMode": "system"
+  },
+  "navigation": {
+    "links": [
+      {
+        "href": "/",
+        "label": "Home",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/menu",
+        "label": "Menu",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/#about",
+        "label": "About",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/#gallery",
+        "label": "Gallery",
+        "header": true,
+        "burger": true,
+        "footer": true
+      },
+      {
+        "href": "/#contact",
+        "label": "Contact",
+        "header": true,
+        "burger": true,
+        "footer": true
+      }
+    ]
+  }
+}

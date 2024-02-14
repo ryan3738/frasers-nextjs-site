@@ -6,10 +6,9 @@ import BurgerMenu from './BurgerMenu';
 import { useOnClickOutside } from '../hooks/useOnClickOutside';
 import NavList, { NavLinks } from './NavList';
 
-interface NavBarProps {
+interface HeaderProps {
   children?: React.ReactNode;
-  links?: NavLinks[];
-  burgerLinks?: NavLinks[];
+  navLinks?: NavLinks[];
   showHomeLink?: boolean;
   open?: boolean;
   setOpen?: (value: boolean) => void;
@@ -17,23 +16,23 @@ interface NavBarProps {
   position?: 'fixed' | 'sticky' | 'static';
 }
 
-export default function NavBar({
+export default function Header({
   children,
-  links,
-  burgerLinks,
   showHomeLink = true,
+  navLinks,
   open,
   setOpen,
   position = 'fixed',
   location = 'top',
-}: NavBarProps): JSX.Element {
+}: HeaderProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
-
+  const headerLinks = navLinks?.filter(link => link.header === true);
+  const burgerLinks = navLinks?.filter(link => link.burger === true);
   return (
-    <>
+    <header>
       <div className="nav-bar">
-        {burgerLinks && (
+        {burgerLinks?.length > 0 && (
           <div className="burger">
             <div ref={node}>
               <Burger open={open} setOpen={setOpen} />
@@ -41,21 +40,31 @@ export default function NavBar({
             <BurgerMenu links={burgerLinks} open={open} />
           </div>
         )}
-        <nav className="nav-list">
-          {showHomeLink && (
-            <Link href="/">
-              <a className="title">FRASERS</a>
-            </Link>
-          )}
-          <NavList links={links} showOnLarge={burgerLinks && true} />
-        </nav>
+        {headerLinks?.length > 0 && (
+          <>
+            <nav className="nav-list">
+              {showHomeLink && (
+                <div className="title">
+                  <Link href="/">
+                    FRASERS
+                  </Link>
+                </div>
+              )}
+              <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
+            </nav>
+          </>
+        )}
       </div>
+      {headerLinks?.length > 0 && <div className="nav-spacer" />}
       {children}
       <style jsx>{`
+        .nav-spacer {
+          height: 4em;
+        }
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
-          color: var(--white-color);
+          color: var(--high-emphasis-text);
         }
         .nav-bar {
           ${location}: 0;
@@ -86,6 +95,6 @@ export default function NavBar({
           }
         }
       `}</style>
-    </>
+    </header>
   );
 }
