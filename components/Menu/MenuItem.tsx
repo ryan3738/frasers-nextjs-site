@@ -1,4 +1,4 @@
-import { MenuSectionsItems } from '../../.tina/__generated__/types';
+import { MenuSectionsItems } from '../../tina/__generated__/types';
 interface MenuItemProps {
   item: MenuSectionsItems;
 }

@@ -31,11 +31,9 @@ export default defineConfig({
     maxSearchIndexFieldLength: 100,
   },
   media: {
-    // Media config
-    // tina: {
-    //   // Repo-based Media config
-    // },
+
     // function that loads  the media store
+    // @ts-ignore
     loadCustomStore: async () => {
       const pack = await import("next-tinacms-cloudinary");
       return pack.TinaCloudCloudinaryMediaStore;
