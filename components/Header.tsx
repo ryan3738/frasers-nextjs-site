@@ -44,9 +44,11 @@ export default function Header({
           <>
             <nav className="nav-list">
               {showHomeLink && (
-                <Link href="/">
-                  <a className="title">FRASERS</a>
-                </Link>
+                <div className="title">
+                  <Link href="/">
+                    FRASERS
+                  </Link>
+                </div>
               )}
               <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
             </nav>

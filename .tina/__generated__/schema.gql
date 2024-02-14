@@ -17,6 +17,11 @@ type SystemInfo {
   collection: Collection!
 }
 
+type Folder {
+  name: String!
+  path: String!
+}
+
 type PageInfo {
   hasPreviousPage: Boolean!
   hasNextPage: Boolean!
@@ -49,17 +54,26 @@ type Query {
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
   galleryGrid(relativePath: String): GalleryGrid!
-  galleryGridConnection(before: String, after: String, first: Float, last: Float, sort: String): GalleryGridConnection!
+  galleryGridConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: GalleryGridFilter): GalleryGridConnection!
   businessInfo(relativePath: String): BusinessInfo!
-  businessInfoConnection(before: String, after: String, first: Float, last: Float, sort: String): BusinessInfoConnection!
+  businessInfoConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: BusinessInfoFilter): BusinessInfoConnection!
   menu(relativePath: String): Menu!
-  menuConnection(before: String, after: String, first: Float, last: Float, sort: String): MenuConnection!
+  menuConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MenuFilter): MenuConnection!
   doubleFeature(relativePath: String): DoubleFeature!
-  doubleFeatureConnection(before: String, after: String, first: Float, last: Float, sort: String): DoubleFeatureConnection!
+  doubleFeatureConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: DoubleFeatureFilter): DoubleFeatureConnection!
   posts(relativePath: String): Posts!
-  postsConnection(before: String, after: String, first: Float, last: Float, sort: String): PostsConnection!
+  postsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostsFilter): PostsConnection!
   global(relativePath: String): Global!
-  globalConnection(before: String, after: String, first: Float, last: Float, sort: String): GlobalConnection!
+  globalConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: GlobalFilter): GlobalConnection!
+}
+
+input DocumentFilter {
+  galleryGrid: GalleryGridFilter
+  businessInfo: BusinessInfoFilter
+  menu: MenuFilter
+  doubleFeature: DoubleFeatureFilter
+  posts: PostsFilter
+  global: GlobalFilter
 }
 
 type DocumentConnectionEdges {
@@ -82,10 +96,10 @@ type Collection {
   matches: String
   templates: [JSON]
   fields: [JSON]
-  documents(before: String, after: String, first: Float, last: Float, sort: String): DocumentConnection!
+  documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = GalleryGrid | BusinessInfo | Menu | DoubleFeature | Posts | Global
+union DocumentNode = GalleryGrid | BusinessInfo | Menu | DoubleFeature | Posts | Global | Folder
 
 type GalleryGridImages {
   alt: String!
@@ -98,6 +112,30 @@ type GalleryGrid implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input StringFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input ImageFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input GalleryGridImagesFilter {
+  alt: StringFilter
+  src: ImageFilter
+  format: StringFilter
+}
+
+input GalleryGridFilter {
+  images: GalleryGridImagesFilter
 }
 
 type GalleryGridConnectionEdges {
@@ -136,6 +174,30 @@ type BusinessInfo implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input BusinessInfoAddressFilter {
+  name: StringFilter
+  description: StringFilter
+  street: StringFilter
+  street2: StringFilter
+  city: StringFilter
+  region: StringFilter
+  zip: StringFilter
+  directions: StringFilter
+}
+
+input BusinessInfoHoursFilter {
+  day: StringFilter
+  hours: StringFilter
+}
+
+input BusinessInfoFilter {
+  name: StringFilter
+  phoneNumber: StringFilter
+  email: StringFilter
+  address: BusinessInfoAddressFilter
+  hours: BusinessInfoHoursFilter
 }
 
 type BusinessInfoConnectionEdges {
@@ -187,6 +249,56 @@ type Menu implements Node & Document {
   _values: JSON!
 }
 
+input BooleanFilter {
+  eq: Boolean
+  exists: Boolean
+}
+
+input NumberFilter {
+  lt: Float
+  lte: Float
+  gte: Float
+  gt: Float
+  eq: Float
+  exists: Boolean
+  in: [Float]
+}
+
+input MenuSectionsItemsModifiersFilter {
+  name: StringFilter
+  price: NumberFilter
+}
+
+input MenuSectionsItemsImagesFilter {
+  alt: StringFilter
+  image: ImageFilter
+}
+
+input MenuSectionsItemsFilter {
+  name: StringFilter
+  description: StringFilter
+  price: NumberFilter
+  dietary: StringFilter
+  modifiers: MenuSectionsItemsModifiersFilter
+  available: BooleanFilter
+  images: MenuSectionsItemsImagesFilter
+}
+
+input MenuSectionsFilter {
+  name: StringFilter
+  description: StringFilter
+  notes: StringFilter
+  items: MenuSectionsItemsFilter
+}
+
+input MenuFilter {
+  title: StringFilter
+  description: StringFilter
+  notes: StringFilter
+  available: BooleanFilter
+  sections: MenuSectionsFilter
+}
+
 type MenuConnectionEdges {
   cursor: String!
   node: Menu
@@ -214,6 +326,19 @@ type DoubleFeature implements Node & Document {
   _values: JSON!
 }
 
+input DoubleFeatureImageFilter {
+  src: ImageFilter
+  alt: StringFilter
+}
+
+input DoubleFeatureFilter {
+  title: StringFilter
+  subtitle: StringFilter
+  image: DoubleFeatureImageFilter
+  elementId: StringFilter
+  body: StringFilter
+}
+
 type DoubleFeatureConnectionEdges {
   cursor: String!
   node: DoubleFeature
@@ -231,6 +356,11 @@ type Posts implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input PostsFilter {
+  title: StringFilter
+  body: StringFilter
 }
 
 type PostsConnectionEdges {
@@ -290,6 +420,49 @@ type Global implements Node & Document {
   _values: JSON!
 }
 
+input GlobalNavigationLinksFilter {
+  href: StringFilter
+  label: StringFilter
+  header: BooleanFilter
+  burger: BooleanFilter
+  footer: BooleanFilter
+}
+
+input GlobalNavigationFilter {
+  links: GlobalNavigationLinksFilter
+}
+
+input GlobalThemeFilter {
+  color: StringFilter
+  darkMode: StringFilter
+}
+
+input GlobalMetaFilter {
+  title: StringFilter
+  description: StringFilter
+  keywords: StringFilter
+  cardImage: ImageFilter
+}
+
+input GlobalFooterSocialFilter {
+  facebook: StringFilter
+  twitter: StringFilter
+  instagram: StringFilter
+  github: StringFilter
+}
+
+input GlobalFooterFilter {
+  color: StringFilter
+  social: GlobalFooterSocialFilter
+}
+
+input GlobalFilter {
+  navigation: GlobalNavigationFilter
+  theme: GlobalThemeFilter
+  meta: GlobalMetaFilter
+  footer: GlobalFooterFilter
+}
+
 type GlobalConnectionEdges {
   cursor: String!
   node: Global
@@ -303,7 +476,7 @@ type GlobalConnection implements Connection {
 
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
-  updateDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
+  updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
   updateGalleryGrid(relativePath: String!, params: GalleryGridMutation!): GalleryGrid!
@@ -318,6 +491,16 @@ type Mutation {
   createPosts(relativePath: String!, params: PostsMutation!): Posts!
   updateGlobal(relativePath: String!, params: GlobalMutation!): Global!
   createGlobal(relativePath: String!, params: GlobalMutation!): Global!
+}
+
+input DocumentUpdateMutation {
+  galleryGrid: GalleryGridMutation
+  businessInfo: BusinessInfoMutation
+  menu: MenuMutation
+  doubleFeature: DoubleFeatureMutation
+  posts: PostsMutation
+  global: GlobalMutation
+  relativePath: String
 }
 
 input DocumentMutation {
@@ -463,4 +646,3 @@ schema {
   query: Query
   mutation: Mutation
 }
-  

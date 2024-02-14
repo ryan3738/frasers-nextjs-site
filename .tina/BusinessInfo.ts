@@ -1,4 +1,4 @@
-import { TinaField } from "@tinacms/cli"
+import { TinaField } from "tinacms";
 
 const hoursSchema: TinaField = {
   type: "object",

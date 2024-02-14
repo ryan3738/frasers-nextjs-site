@@ -15,16 +15,24 @@ query galleryGrid($relativePath: String!) {
   }
 }
 
-query galleryGridConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+query galleryGridConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: GalleryGridFilter) {
   galleryGridConnection(
     before: $before
     after: $after
     first: $first
     last: $last
     sort: $sort
+    filter: $filter
   ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
     totalCount
     edges {
+      cursor
       node {
         ... on Document {
           _sys {
@@ -60,16 +68,24 @@ query businessInfo($relativePath: String!) {
   }
 }
 
-query businessInfoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+query businessInfoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: BusinessInfoFilter) {
   businessInfoConnection(
     before: $before
     after: $after
     first: $first
     last: $last
     sort: $sort
+    filter: $filter
   ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
     totalCount
     edges {
+      cursor
       node {
         ... on Document {
           _sys {
@@ -105,16 +121,24 @@ query menu($relativePath: String!) {
   }
 }
 
-query menuConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+query menuConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MenuFilter) {
   menuConnection(
     before: $before
     after: $after
     first: $first
     last: $last
     sort: $sort
+    filter: $filter
   ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
     totalCount
     edges {
+      cursor
       node {
         ... on Document {
           _sys {
@@ -150,16 +174,24 @@ query doubleFeature($relativePath: String!) {
   }
 }
 
-query doubleFeatureConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+query doubleFeatureConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: DoubleFeatureFilter) {
   doubleFeatureConnection(
     before: $before
     after: $after
     first: $first
     last: $last
     sort: $sort
+    filter: $filter
   ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
     totalCount
     edges {
+      cursor
       node {
         ... on Document {
           _sys {
@@ -195,16 +227,24 @@ query posts($relativePath: String!) {
   }
 }
 
-query postsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+query postsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PostsFilter) {
   postsConnection(
     before: $before
     after: $after
     first: $first
     last: $last
     sort: $sort
+    filter: $filter
   ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
     totalCount
     edges {
+      cursor
       node {
         ... on Document {
           _sys {
@@ -240,16 +280,24 @@ query global($relativePath: String!) {
   }
 }
 
-query globalConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+query globalConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: GlobalFilter) {
   globalConnection(
     before: $before
     after: $after
     first: $first
     last: $last
     sort: $sort
+    filter: $filter
   ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
     totalCount
     edges {
+      cursor
       node {
         ... on Document {
           _sys {

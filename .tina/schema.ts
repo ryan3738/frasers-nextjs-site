@@ -1,12 +1,12 @@
-import { defineSchema } from "@tinacms/cli";
+
 import { footerSchema, metaSchema, navigationSchema, themeSchema } from "./Global";
 import { menuSectionSchema } from "./Menu";
 import { imageSchema } from "./General";
 import { addressSchema, hoursSchema } from "./BusinessInfo";
+import { Schema } from "tinacms";
 
 
-
-export default defineSchema({
+export const schema: Schema = {
   collections: [
     {
       label: "Gallery Grid",
@@ -18,9 +18,9 @@ export default defineSchema({
           type: "object",
           label: "Images",
           name: "images",
-          ui: {
-            component: "groupList",
-          },
+          // ui: {
+          //   component: "groupList",
+          // },
           list: true,
           fields: [
             {
@@ -48,6 +48,7 @@ export default defineSchema({
       label: "Business Info",
       name: "businessInfo",
       path: "content/info",
+      format: 'json',
       fields: [
         {
           type: "string",
@@ -74,31 +75,31 @@ export default defineSchema({
       path: "content/menus",
       format: "json",
       fields: [
-          {
-            type: "string",
-            label: "Menu Title",
-            name: "title",
+        {
+          type: "string",
+          label: "Menu Title",
+          name: "title",
+        },
+        {
+          type: "string",
+          label: "Description",
+          name: "description",
+        },
+        {
+          type: "string",
+          label: "Notes",
+          name: "notes",
+          isBody: true,
+          ui: {
+            component: "markdown"
           },
-          {
-            type: "string",
-            label: "Description",
-            name: "description",
-          },
-          {
-            type: "string",
-            label: "Notes",
-            name: "notes",
-            isBody: true,
-            ui: {
-              component: "markdown"
-            },
-          },
-          {
-            type: "boolean",
-            label: "Available",
-            name: "available",
-          },
-          menuSectionSchema,
+        },
+        {
+          type: "boolean",
+          label: "Available",
+          name: "available",
+        },
+        menuSectionSchema,
       ],
     },
     {
@@ -139,6 +140,7 @@ export default defineSchema({
       label: "Blog Posts",
       name: "posts",
       path: "content/posts",
+      format: 'mdx',
       fields: [
         {
           type: "string",
@@ -154,12 +156,13 @@ export default defineSchema({
             component: "textarea"
           },
         },
-        ],
+      ],
     },
     {
       label: "Global",
       name: "global",
       path: "content/global",
+      format: "json",
       fields: [
         navigationSchema,
         themeSchema,
@@ -168,6 +171,4 @@ export default defineSchema({
       ],
     },
   ],
-});
-
-
+};

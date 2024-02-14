@@ -3,9 +3,11 @@ import Link from 'next/link';
 export default function LinkButton({ buttonText, buttonLink }): JSX.Element {
   return (
     <>
-      <Link href={buttonLink}>
-        <a className="button-text">{buttonText}</a>
-      </Link>
+      <div className="button-text">
+        <Link href={buttonLink}>
+          {buttonText}
+        </Link>
+      </div>
 
       <style jsx>{`
         .button-text {

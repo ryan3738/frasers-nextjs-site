@@ -1,4 +1,5 @@
-import { TinaField } from "@tinacms/cli"
+import { TinaField } from "tinacms";
+
 
 const metaSchema: TinaField = {
   type: "object",
@@ -35,22 +36,22 @@ const metaSchema: TinaField = {
 }
 
 const navigationSchema: TinaField = {
-  type: "object",
   label: "Navigation",
   name: "navigation",
+  type: "object",
   fields: [
     {
-      type: "object",
       label: "links",
       name: "links",
+      type: "object",
       list: true,
-      ui: {
-        defaultItem: {
-          href: "/",
-          label: "Home",
-        },
-        component: "groupList",
-      },
+      // ui: {
+      //   defaultItem: {
+      //     href: "/",
+      //     label: "Home",
+      //   },
+      //   component: "groupList",
+      // },
       fields: [
         {
           type: "string",
@@ -69,7 +70,7 @@ const navigationSchema: TinaField = {
           description: 'Check to display this link in the header',
           ui: {
             component: 'toggle',
-            default: true,
+            // default: true,
           },
         },
         {
@@ -77,18 +78,18 @@ const navigationSchema: TinaField = {
           label: "Burger",
           name: "burger",
           description: 'Check to display this link in the burger menu',
-          ui: {
-            default: true,
-          },
+          // ui: {
+            // default: true,
+          // },
         },
         {
           type: "boolean",
           label: "Footer",
           name: "footer",
           description: 'Check to display this link in the footer',
-          ui: {
-            default: true,
-          },
+          // ui: {
+            // default: true,
+          // },
         },
       ]
     }

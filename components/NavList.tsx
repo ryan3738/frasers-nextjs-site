@@ -21,16 +21,14 @@ export default function NavList({
 }: NavListProps): JSX.Element {
   return (
     <>
-      {links?.map(link => (
-        <Link key={link.label} href={link.href}>
-          <a
-            className={`nav-link ${showOnLarge && 'show-on-large'} ${
-              burgerMenuLink && 'burger-menu-link'
-            }`}
-          >
+      {links?.map((link, index) => (
+        <div key={link?.label + index} className={`nav-link ${showOnLarge && 'show-on-large'} ${burgerMenuLink && 'burger-menu-link'
+          }`}>
+
+          <Link key={link.label} href={link.href}>
             {link.label}
-          </a>
-        </Link>
+          </Link>
+        </div>
       ))}
       <style jsx>{`
         .nav-link {
