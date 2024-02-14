@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import Header from './Header';
-import { BusinessInfo } from '../.tina/__generated__/types';
+import { BusinessInfo } from '../tina/__generated__/types';
 import layoutData from '../content/global/index.json';
 import Footer from './Footer';
 import chroma from 'chroma-js';

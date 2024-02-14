@@ -11,7 +11,7 @@ import {
   Menu as MenuType,
   BusinessInfo,
   GalleryGridImages,
-} from '../.tina/__generated__/types';
+} from '../tina/__generated__/types';
 import Hero from './Hero';
 
 const { aboutBusiness, aboutOwner } = siteData;

@@ -3,7 +3,7 @@
 import {
   BusinessInfo,
   BusinessInfoAddress,
-} from '../.tina/__generated__/types';
+} from '../tina/__generated__/types';
 
 interface ContactProps {
   heading: string;
