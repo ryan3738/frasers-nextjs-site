@@ -1,13 +1,29 @@
-import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { getStaticPropsForTina, gql } from 'tinacms';
-import { layoutQueryFragment, meta } from '../../components/Layout';
+import { meta } from '../../components/Layout';
 import Menu from '../../components/Menu/MenuPage';
+import client from '../../tina/__generated__/client';
+import { useEffect, useState } from 'react';
 
-export default function MenuPage(props): JSX.Element {
+export default function MenuPage() {
+  const [menuResponse, setMenuResponse] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await client.queries.menu({ relativePath: "dinnerMenu.json" });
+      console.log("menu response", { res });
+      setMenuResponse(res);
+    };
+    fetchData();
+  }, [])
+
   const sections = ['Starters', 'Entrees'];
-  if (props.data && props.data.getMenuDocument) {
-    const menu = props.data.getMenuDocument.data;
+
+  if (menuResponse?.errors) {
+    console.error(menuResponse.errors);
+    return <div>Error loading menu</div>;
+  }
+  if (menuResponse?.data?.menu) {
+    const menu = menuResponse?.data?.menu;
     return (
       <>
         <Head>
@@ -21,47 +37,3 @@ export default function MenuPage(props): JSX.Element {
   }
   return <div>Loading...</div>;
 }
-
-export const getMenuQueryFragment = `
-  getMenuDocument(relativePath: $menuRelativePath) {
-          data {
-            title
-            description
-            notes
-            sections {
-              name
-              description
-              notes
-              items {
-                name
-                description
-                price
-                dietary
-                modifiers {
-                  name
-                  price
-                }
-                dietary
-                available
-              }
-            }
-          }
-        }
-`;
-
-export const getStaticProps: GetStaticProps = async () => {
-  const tinaProperties = await getStaticPropsForTina({
-    query: gql`
-      query MenuQuery($menuRelativePath: String!) {
-        ${getMenuQueryFragment}
-        ${layoutQueryFragment}
-      }
-    `,
-    variables: { menuRelativePath: 'dinnerMenu.json' },
-  });
-  return {
-    props: {
-      ...tinaProperties,
-    },
-  };
-};

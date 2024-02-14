@@ -27,7 +27,7 @@ export const schema: Schema = {
               type: "string",
               label: "Image Alt Text",
               name: "alt",
-              required: true,
+              // required: true,
             },
             {
               name: 'src',

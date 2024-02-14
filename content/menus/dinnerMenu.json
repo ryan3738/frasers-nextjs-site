@@ -114,18 +114,14 @@
           "description": "Blackberry mustard, pickled vegetables, tapioca ink chips",
           "price": 1,
           "available": false,
-          "images": [
-            {}
-          ]
+          "images": []
         },
         {
           "name": "CIOPPINO",
           "description": "Prawns, scallops, octopus, crab, tomato saffron seafood broth",
           "price": 1,
           "available": false,
-          "images": [
-            {}
-          ]
+          "images": []
         }
       ]
     },
@@ -266,18 +262,14 @@
           "description": "Wild mushroom mousse, Butternut squash orzo, asparagus, sauce Forestiere",
           "price": 1,
           "available": false,
-          "images": [
-            {}
-          ]
+          "images": []
         },
         {
           "name": "FILET MIGNON",
           "description": "Brie stuffed wrapped in prosciutto, garlic mash, veg, braising reduction",
           "price": 1,
           "available": false,
-          "images": [
-            {}
-          ]
+          "images": []
         }
       ]
     }
