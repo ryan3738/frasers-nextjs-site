@@ -6,11 +6,11 @@ const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
   process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
-  'dev'
+  ''
 
-const token = process.env.NEXT_PUBLIC_TINA_TOKEN;
+const token = process.env.TINA_TOKEN;
 const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID;
-const indexerToken = process.env.NEXT_PUBLIC_TINA_INDEXER_TOKEN;
+const indexerToken = process.env.TINA_INDEXER_TOKEN;
 
 
 export default defineConfig({
