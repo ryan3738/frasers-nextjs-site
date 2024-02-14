@@ -1,232 +1,268 @@
-query getGalleryGridDocument($relativePath: String!) {
-  getGalleryGridDocument(relativePath: $relativePath) {
-    sys {
-      filename
-      basename
-      breadcrumbs
-      path
-      relativePath
-      extension
+query galleryGrid($relativePath: String!) {
+  galleryGrid(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
     }
-    id
-    data {
-      ...GalleryGridParts
-    }
+    ...GalleryGridParts
   }
 }
 
-query getGalleryGridList {
-  getGalleryGridList {
+query galleryGridConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+  galleryGridConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+  ) {
     totalCount
     edges {
       node {
-        id
-        sys {
-          filename
-          basename
-          breadcrumbs
-          path
-          relativePath
-          extension
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
         }
-        data {
-          ...GalleryGridParts
-        }
+        ...GalleryGridParts
       }
     }
   }
 }
 
-query getBusinessInfoDocument($relativePath: String!) {
-  getBusinessInfoDocument(relativePath: $relativePath) {
-    sys {
-      filename
-      basename
-      breadcrumbs
-      path
-      relativePath
-      extension
+query businessInfo($relativePath: String!) {
+  businessInfo(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
     }
-    id
-    data {
-      ...BusinessInfoParts
-    }
+    ...BusinessInfoParts
   }
 }
 
-query getBusinessInfoList {
-  getBusinessInfoList {
+query businessInfoConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+  businessInfoConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+  ) {
     totalCount
     edges {
       node {
-        id
-        sys {
-          filename
-          basename
-          breadcrumbs
-          path
-          relativePath
-          extension
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
         }
-        data {
-          ...BusinessInfoParts
-        }
+        ...BusinessInfoParts
       }
     }
   }
 }
 
-query getMenuDocument($relativePath: String!) {
-  getMenuDocument(relativePath: $relativePath) {
-    sys {
-      filename
-      basename
-      breadcrumbs
-      path
-      relativePath
-      extension
+query menu($relativePath: String!) {
+  menu(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
     }
-    id
-    data {
-      ...MenuParts
-    }
+    ...MenuParts
   }
 }
 
-query getMenuList {
-  getMenuList {
+query menuConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+  menuConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+  ) {
     totalCount
     edges {
       node {
-        id
-        sys {
-          filename
-          basename
-          breadcrumbs
-          path
-          relativePath
-          extension
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
         }
-        data {
-          ...MenuParts
-        }
+        ...MenuParts
       }
     }
   }
 }
 
-query getDoubleFeatureDocument($relativePath: String!) {
-  getDoubleFeatureDocument(relativePath: $relativePath) {
-    sys {
-      filename
-      basename
-      breadcrumbs
-      path
-      relativePath
-      extension
+query doubleFeature($relativePath: String!) {
+  doubleFeature(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
     }
-    id
-    data {
-      ...DoubleFeatureParts
-    }
+    ...DoubleFeatureParts
   }
 }
 
-query getDoubleFeatureList {
-  getDoubleFeatureList {
+query doubleFeatureConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+  doubleFeatureConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+  ) {
     totalCount
     edges {
       node {
-        id
-        sys {
-          filename
-          basename
-          breadcrumbs
-          path
-          relativePath
-          extension
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
         }
-        data {
-          ...DoubleFeatureParts
-        }
+        ...DoubleFeatureParts
       }
     }
   }
 }
 
-query getPostsDocument($relativePath: String!) {
-  getPostsDocument(relativePath: $relativePath) {
-    sys {
-      filename
-      basename
-      breadcrumbs
-      path
-      relativePath
-      extension
+query posts($relativePath: String!) {
+  posts(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
     }
-    id
-    data {
-      ...PostsParts
-    }
+    ...PostsParts
   }
 }
 
-query getPostsList {
-  getPostsList {
+query postsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+  postsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+  ) {
     totalCount
     edges {
       node {
-        id
-        sys {
-          filename
-          basename
-          breadcrumbs
-          path
-          relativePath
-          extension
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
         }
-        data {
-          ...PostsParts
-        }
+        ...PostsParts
       }
     }
   }
 }
 
-query getGlobalDocument($relativePath: String!) {
-  getGlobalDocument(relativePath: $relativePath) {
-    sys {
-      filename
-      basename
-      breadcrumbs
-      path
-      relativePath
-      extension
+query global($relativePath: String!) {
+  global(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
     }
-    id
-    data {
-      ...GlobalParts
-    }
+    ...GlobalParts
   }
 }
 
-query getGlobalList {
-  getGlobalList {
+query globalConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String) {
+  globalConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+  ) {
     totalCount
     edges {
       node {
-        id
-        sys {
-          filename
-          basename
-          breadcrumbs
-          path
-          relativePath
-          extension
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
         }
-        data {
-          ...GlobalParts
-        }
+        ...GlobalParts
       }
     }
   }

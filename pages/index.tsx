@@ -5,6 +5,7 @@ import { layoutQueryFragment } from '../components/Layout';
 import { getMenuQueryFragment } from './menu/index';
 
 export default function HomePage(props): JSX.Element {
+  console.log('props', props)
   if (
     props.data &&
     props.data.getMenuDocument &&
