@@ -29,6 +29,9 @@
 # misc
 .DS_Store
 
+# tinacms
+__generated__
+
 # debug
 npm-debug.log*
 yarn-debug.log*
@@ -40,3 +43,6 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+
+node_modules
+.env

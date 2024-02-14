@@ -10,14 +10,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "yarn tina-dev",
-    "build": "yarn tina-build",
-    "start": "yarn tina-start",
+    "dev": "tinacms dev -c \"next dev -p 3100\"",
+    "build": "tinacms build && next build",
+    "start": "tinacms build && next start",
     "export": "npm run build && next export",
-    "lint": "next lint",
-    "tina-dev": "yarn tinacms server:start -c \"next dev -p 3100\"",
-    "tina-build": "yarn tinacms server:start -c \"next build\"",
-    "tina-start": "yarn tinacms server:start -c \"next start\""
+    "lint": "next lint"
   },
   "dependencies": {
     "@tinacms/auth": "^1.0.4",
@@ -38,7 +35,7 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.0",
-    "@types/node": "^17.0.2",
+    "@types/node": "^20.11.17",
     "@types/react": "^18.2.55",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
