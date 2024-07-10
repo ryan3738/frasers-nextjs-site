@@ -20,7 +20,7 @@ export default function HomePage() {
         relativePath: "galleryGrid.json"
       });
       setGalleryGridResponse(galleryGridResponse);
-      console.log("homepage responses", { menuResponse, businessInfoResponse, galleryGridResponse });
+      // console.log("homepage responses", { menuResponse, businessInfoResponse, galleryGridResponse });
     };
     fetchData();
   }, [])
