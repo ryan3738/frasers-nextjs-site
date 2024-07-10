@@ -1,14 +1,11 @@
 import Image from 'next/legacy/image';
-import { GalleryGridImages } from '../tina/__generated__/types';
+import { GalleryGridImages } from '@/tina/__generated__/types';
+
 interface GridProps {
   images: GalleryGridImages[];
 }
 
-/**
- *
- * @deprecated
- */
-export default function GalleryGrid({ images }: GridProps): JSX.Element {
+export const GalleryGrid = ({ images }: GridProps) => {
   return (
     <>
       <div className="gallery-container">
@@ -114,4 +111,4 @@ export default function GalleryGrid({ images }: GridProps): JSX.Element {
       `}</style>
     </>
   );
-}
+};

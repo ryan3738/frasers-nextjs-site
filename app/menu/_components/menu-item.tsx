@@ -1,13 +1,9 @@
-import { MenuSectionsItems } from '../../tina/__generated__/types';
+import { MenuSectionsItems } from '@/tina/__generated__/types';
 interface MenuItemProps {
   item: MenuSectionsItems;
 }
 
-/**
- *
- * @deprecated
- */
-export default function MenuItem({ item }: MenuItemProps): JSX.Element {
+export const MenuItem = ({ item }: MenuItemProps) => {
   return (
     <>
       <div key={item.name} className="menu-item">
@@ -90,4 +86,4 @@ export default function MenuItem({ item }: MenuItemProps): JSX.Element {
       </div>
     </>
   );
-}
+};

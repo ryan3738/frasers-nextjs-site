@@ -1,11 +1,12 @@
 import Image from 'next/legacy/image';
-import { BusinessInfoQuery } from '../tina/__generated__/types';
-import Hours from './Hours';
+import { BusinessInfoQuery } from '@/tina/__generated__/types';
+import { Hours } from './hours';
+
 interface HeroProps {
   businessInfo?: BusinessInfoQuery['businessInfo'];
 }
 
-export default function Hero({ businessInfo }: HeroProps): JSX.Element {
+export function Hero({ businessInfo }: HeroProps): JSX.Element {
   return (
     <>
       <div id="welcome" className="welcome-container">

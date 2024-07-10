@@ -24,8 +24,9 @@ export default function NavList({
       {links?.map((link, index) => (
         <div
           key={link?.label + index}
-          className={`nav-link ${showOnLarge && 'show-on-large'} ${burgerMenuLink && 'burger-menu-link'
-            }`}
+          className={`nav-link ${showOnLarge && 'show-on-large'} ${
+            burgerMenuLink && 'burger-menu-link'
+          }`}
         >
           <Link key={link.label} href={link.href}>
             {link.label}

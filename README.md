@@ -67,5 +67,6 @@ CI/CD is ideal so that changes are automatically deployed to the production site
 
 
 # Next Steps
-* Create additional items in the ./tina/schmes.ts file to add more content types to the website.
+* Create additional items in the ./tina/schema.ts file to add more content types to the website.
 * Add additional users to your Tina Cloud account to give them the ability to edit the website.
+* Query data [Query data in NextJS](https://tina.io/guides/tinacms/nextjs-data-fetching/guide/#example-fetching-content-through-getstaticpaths)

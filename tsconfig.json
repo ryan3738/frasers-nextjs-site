@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "importHelpers": false,
-    "target": "es5",
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,10 +18,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "strictNullChecks": false,
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
   ],
   "include": [
     ".eslintrc.js",

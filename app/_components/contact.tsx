@@ -1,19 +1,14 @@
-// import utilStyles from '../styles/utils.module.css'
-import Social from './Social';
-// import businessInfo from '../public/data/site-data.json';
-import NewsLetter from './NewsLetter';
-import { BusinessInfoQuery } from '../tina/__generated__/types';
-import Hours from './Hours';
-import ContactInfo from './ContactInfo';
+import { Social } from './social';
+import { NewsLetter } from './news-letter';
+import { BusinessInfoQuery } from '@/tina/__generated__/types';
+import { Hours } from './hours';
+import { ContactInfo } from './contact-info';
 
 interface ContactProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
 }
 
-/**
- * @deprecated
- */
-export default function Contact({ businessInfo }: ContactProps): JSX.Element {
+export function Contact({ businessInfo }: ContactProps): JSX.Element {
   return (
     <>
       <div className="contact-content">

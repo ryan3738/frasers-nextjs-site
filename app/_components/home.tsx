@@ -1,18 +1,16 @@
-import Head from 'next/head';
-import React from 'react';
-import { meta } from './Layout';
-import Double from './Double';
-import GalleryGrid from './GalleryGrid';
-import Contact from './Contact';
-import siteData from '../public/data/site-data.json';
-import styles from '../styles/styles.module.css';
-import { Menu } from './Menu/Menu';
+'use client';
+import siteData from '@/public/data/site-data.json';
+import styles from '@/styles/styles.module.css';
 import {
   GalleryGridImages,
-  BusinessInfoQuery,
-  MenuQuery
-} from '../tina/__generated__/types';
-import Hero from './Hero';
+  MenuQuery,
+  BusinessInfoQuery
+} from '@/tina/__generated__/types';
+import { Menu } from '../menu/_components/menu';
+import { GalleryGrid } from '../gallery/_components/gallery-grid';
+import { Contact } from './contact';
+import { Double } from './double';
+import { Hero } from './hero';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
@@ -22,21 +20,10 @@ interface HomeProps {
   galleryImages?: GalleryGridImages[];
 }
 
-/**
- *
- * @deprecated
- */
-export default function Home({
-  menu,
-  businessInfo,
-  galleryImages
-}: HomeProps): JSX.Element {
+export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
   const { phoneNumber } = businessInfo;
   return (
     <>
-      <Head>
-        <title>{meta.title}</title>
-      </Head>
       <Hero businessInfo={businessInfo} />
       <section className="container">
         <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
@@ -144,4 +131,4 @@ export default function Home({
       `}</style>
     </>
   );
-}
+};

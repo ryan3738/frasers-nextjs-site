@@ -1,13 +1,10 @@
 'use client';
-import { useRouter } from 'next/dist/client/router';
-import Head from 'next/head';
-import Script from 'next/script';
-import { useEffect, useState } from 'react';
-import Header from './Header';
-import { BusinessInfo } from '../tina/__generated__/types';
-import layoutData from '../content/global/index.json';
-import Footer from './Footer';
+import { useState } from 'react';
+import { BusinessInfo } from '@/tina/__generated__/types';
+import layoutData from '@/content/global/index.json';
+import Footer from '@/components/Footer';
 import chroma from 'chroma-js';
+import { Header } from './header';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -31,82 +28,14 @@ const theme = {
   largeScreen: '1008px'
 };
 
-/**
- *
- * @deprecated
- */
-export default function Layout({
-  data = layoutData,
-  children
-}: LayoutProps): JSX.Element {
+export const Layout = ({ data = layoutData, children }: LayoutProps) => {
   const [open, setOpen] = useState(false);
-  const [url, setUrl] = useState('');
-  const router = useRouter();
   const primaryColor = data?.theme?.color || 'teal';
-
-  useEffect(() => {
-    setUrl(window.location.origin);
-  }, []);
 
   return (
     <>
       <Header navLinks={data.navigation.links} open={open} setOpen={setOpen} />
       <div className="container">
-        <Head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          {/* <title>{meta.title}</title> */}
-          <meta name="description" content={meta.description} />
-          <meta name="keywords" content={meta.keywords} />
-          {/* Social media information */}
-          {/* Open Graph */}
-          <meta property="og:url" content={url + router.asPath} />
-          <meta property="og:type" content="restaurant" />
-          <meta property="og:site_name" content={meta.title} />
-          <meta property="og:description" content={meta.description} />
-          <meta property="og:title" content={meta.title} />
-          <meta property="og:image" content={meta.cardImage} />
-          {/* Twitter */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="website" />
-          <meta name="twitter:title" content={meta.title} />
-          <meta name="twitter:description" content={meta.description} />
-          <meta name="twitter:image" content={meta.cardImage} />
-          {/* Global site tag (gtag.js) - Google Analytics */}
-          <link rel="icon" href="/favicon.ico" />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
-          />
-          <link rel="manifest" href="/site.webmanifest.json" />
-        </Head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-YS529TE94E');
-          `}
-        </Script>
         <main className="main">{children}</main>
         <Footer navLinks={data.navigation.links} />
         <style jsx>{`
@@ -172,33 +101,4 @@ export default function Layout({
       </div>
     </>
   );
-}
-
-export const layoutQueryFragment = `
-  getGlobalDocument(relativePath: "index.json") {
-    data {
-      navigation {
-        links {
-          label
-          href
-          header
-          burger
-          footer
-        }
-      }
-      theme {
-        color
-        darkMode
-      }
-      footer {
-        color
-        social {
-          facebook
-          twitter
-          instagram
-          github
-        }
-      }
-    }
-  }
-`;
+};

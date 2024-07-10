@@ -1,5 +1,5 @@
-import MenuItem from './MenuItem';
-import { MenuSections } from '../../tina/__generated__/types';
+import { MenuItem } from './menu-item';
+import { MenuSections } from '@/tina/__generated__/types';
 import Markdown from 'react-markdown';
 
 interface MenuSectionProps {
@@ -8,14 +8,7 @@ interface MenuSectionProps {
   id: string;
 }
 
-/**
- *
- * @deprecated
- */
-export default function MenuSection({
-  section,
-  id
-}: MenuSectionProps): JSX.Element {
+export const MenuSection = ({ section, id }: MenuSectionProps) => {
   if (!section) {
     return <div>No Menu Section Found</div>;
   }
@@ -50,4 +43,4 @@ export default function MenuSection({
       `}</style>
     </div>
   );
-}
+};

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function AboutPage(): JSX.Element {
+export default function AboutPage() {
   return (
     <>
       <Head>

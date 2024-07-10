@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { useRef } from 'react';
-import Burger from './Burger';
-import BurgerMenu from './BurgerMenu';
-import { useOnClickOutside } from '../hooks/useOnClickOutside';
-import NavList, { NavLinks } from './NavList';
+import Burger from '@/components/Burger';
+import BurgerMenu from '@/components/BurgerMenu';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+import NavList, { NavLinks } from '@/components/NavList';
 
 interface HeaderProps {
   children?: React.ReactNode;
@@ -16,11 +16,7 @@ interface HeaderProps {
   position?: 'fixed' | 'sticky' | 'static';
 }
 
-/**
- *
- * @deprecated
- */
-export default function Header({
+export const Header = ({
   children,
   showHomeLink = true,
   navLinks,
@@ -28,7 +24,7 @@ export default function Header({
   setOpen,
   position = 'fixed',
   location = 'top'
-}: HeaderProps): JSX.Element {
+}: HeaderProps) => {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
   const headerLinks = navLinks?.filter(link => link.header === true);
@@ -99,4 +95,4 @@ export default function Header({
       `}</style>
     </header>
   );
-}
+};

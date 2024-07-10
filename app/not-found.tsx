@@ -1,7 +1,6 @@
 import Image from 'next/legacy/image';
 
-// pages/404.js
-export default function Custom404(): JSX.Element {
+export default function Custom404() {
   return (
     <>
       <div>

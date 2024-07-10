@@ -2,6 +2,26 @@ import Home from '../components/Home';
 import { useEffect, useState } from 'react';
 import client from '../tina/__generated__/client';
 
+// export const getStaticProps = async () => {
+//   const menuResponse = await client.queries.menu({
+//     relativePath: 'dinnerMenu.json'
+//   });
+//   const businessInfoResponse = await client.queries.businessInfo({
+//     relativePath: 'businessInfo.json'
+//   });
+//   const galleryGridResponse = await client.queries.galleryGrid({
+//     relativePath: 'galleryGrid.json'
+//   });
+
+//   return {
+//     props: {
+//       menu: menuResponse.data.menu,
+//       businessInfo: businessInfoResponse.data.businessInfo,
+//       galleryImages: galleryGridResponse.data.galleryGrid.images
+//     }
+//   };
+// };
+
 export default function HomePage() {
   const [menuResponse, setMenuResponse] = useState(null);
   const [businessInfoResponse, setBusinessInfoResponse] = useState(null);

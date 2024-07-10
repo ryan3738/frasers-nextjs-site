@@ -1,6 +1,6 @@
 import styles from '../../styles/styles.module.css';
-import { MenuQuery } from '../../tina/__generated__/types';
-import { Menu } from './Menu';
+import { MenuQuery } from '@/tina/__generated__/types';
+import { Menu } from './menu';
 import { useRouter } from 'next/router';
 
 import Markdown from 'react-markdown';
@@ -10,14 +10,7 @@ interface MenuPageProps {
   sections: string[];
 }
 
-/**
- *
- * @deprecated
- */
-export default function MenuPage({
-  menu,
-  sections
-}: MenuPageProps): JSX.Element {
+export const MenuPage = ({ menu, sections }: MenuPageProps) => {
   const { pathname } = useRouter();
   if (!menu) {
     return <div>No Menu Found</div>;
@@ -40,4 +33,4 @@ export default function MenuPage({
       `}</style>
     </>
   );
-}
+};
