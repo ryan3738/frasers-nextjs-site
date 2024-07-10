@@ -30,8 +30,8 @@ importers:
         specifier: ^14.1.0
         version: 14.2.4(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-tinacms-cloudinary:
-        specifier: ^4.4.5
-        version: 4.4.7(tinacms@1.6.5(@babel/core@7.24.7)(@babel/template@7.24.7)(@types/react@18.3.3)(abstract-level@1.0.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(typescript@5.5.3))
+        specifier: ^5.0.5
+        version: 5.0.5(tinacms@1.6.5(@babel/core@7.24.7)(@babel/template@7.24.7)(@types/react@18.3.3)(abstract-level@1.0.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(typescript@5.5.3))
       prop-types:
         specifier: ^15.7.2
         version: 15.8.1
@@ -4770,10 +4770,10 @@ packages:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
     engines: {node: '>= 0.6'}
 
-  next-tinacms-cloudinary@4.4.7:
-    resolution: {integrity: sha512-nJ0wQTn5BFb7OeZ2vKJsho9WN6ex1s8K/yBgkje/bm4ZOu2vwMHeIpSDaLCeKsLS6OTX3mZv4l0WpegEsw3wXg==}
+  next-tinacms-cloudinary@5.0.5:
+    resolution: {integrity: sha512-zVuNcINYMAkCKX5Vs3eri10+dgYPylksXJq3FVPtO0Ff2D6F0/KkLxTR7mDrFcIcZUg0VAXH1xvxpKnXAIE1EA==}
     peerDependencies:
-      tinacms: 1.5.30
+      tinacms: 1.6.5
 
   next@14.2.4:
     resolution: {integrity: sha512-R8/V7vugY+822rsQGQCjoLhMuC9oFj9SOi4Cl4b2wjDrseD0LRZ10W7R6Czo4w9ZznVSshKjuIomsRjvm9EKJQ==}
@@ -14736,7 +14736,7 @@ snapshots:
 
   negotiator@0.6.3: {}
 
-  next-tinacms-cloudinary@4.4.7(tinacms@1.6.5(@babel/core@7.24.7)(@babel/template@7.24.7)(@types/react@18.3.3)(abstract-level@1.0.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(typescript@5.5.3)):
+  next-tinacms-cloudinary@5.0.5(tinacms@1.6.5(@babel/core@7.24.7)(@babel/template@7.24.7)(@types/react@18.3.3)(abstract-level@1.0.4)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(typescript@5.5.3)):
     dependencies:
       cloudinary: 1.41.3
       multer: 1.4.5-lts.1
