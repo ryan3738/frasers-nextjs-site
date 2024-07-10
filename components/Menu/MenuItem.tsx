@@ -1,8 +1,12 @@
-import { MenuSectionsItems } from '../../.tina/__generated__/types';
+import { MenuSectionsItems } from '../../tina/__generated__/types';
 interface MenuItemProps {
   item: MenuSectionsItems;
 }
 
+/**
+ *
+ * @deprecated
+ */
 export default function MenuItem({ item }: MenuItemProps): JSX.Element {
   return (
     <>
@@ -65,6 +69,7 @@ export default function MenuItem({ item }: MenuItemProps): JSX.Element {
             padding: 1rem;
             background: var(--surface-color);
             border-color: var(--primary-color-desaturated);
+            box-shadow: var(--box-shadow);
           }
           .primary-color {
             color: var(--primary-color-desaturated);

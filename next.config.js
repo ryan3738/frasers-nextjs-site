@@ -1,6 +1,14 @@
 /* eslint-disable unicorn/prefer-module */
 
 module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/admin',
+        destination: '/admin/index.html'
+      }
+    ];
+  },
   i18n: {
     locales: ['en'],
     defaultLocale: 'en'

@@ -1,72 +1,56 @@
+'use client';
 import { useRouter } from 'next/dist/client/router';
 import Head from 'next/head';
-import Hero from './Hero';
-import NavList from './NavList';
 import Script from 'next/script';
-import { useState } from 'react';
-import NavBar from './NavBar';
-import { BusinessInfo } from '../.tina/__generated__/types';
+import { useEffect, useState } from 'react';
+import Header from './Header';
+import { BusinessInfo } from '../tina/__generated__/types';
+import layoutData from '../content/global/index.json';
+import Footer from './Footer';
+import chroma from 'chroma-js';
 
 interface LayoutProps {
   children: React.ReactNode;
   home?: boolean;
   businessInfo?: BusinessInfo;
+  data?: any;
 }
 
 export const meta = {
-  name: 'Frasers',
   title: 'Frasers Gourmet Hideaway',
   description:
     'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
   keywords: 'restaurant, steak, seafood, whidbey',
-  cardImage: '/android-chrome-512x512.png',
-  url: 'https://frasersgh.com',
+  cardImage: '/android-chrome-512x512.png'
 };
-
-const navigationLinks = [
-  {
-    text: 'Home',
-    href: '/',
-  },
-  {
-    text: 'Menu',
-    href: '/menu',
-  },
-  {
-    text: 'About',
-    href: '/#about',
-  },
-  {
-    text: 'Gallery',
-    href: '/#gallery',
-  },
-  {
-    text: 'Contact',
-    href: '/#contact',
-  },
-];
 
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
   mediumScreen: '769px',
-  largeScreen: '1008px',
+  largeScreen: '1008px'
 };
 
+/**
+ *
+ * @deprecated
+ */
 export default function Layout({
-  children,
-  home,
-  businessInfo,
+  data = layoutData,
+  children
 }: LayoutProps): JSX.Element {
   const [open, setOpen] = useState(false);
+  const [url, setUrl] = useState('');
   const router = useRouter();
+  const primaryColor = data?.theme?.color || 'teal';
+
+  useEffect(() => {
+    setUrl(window.location.origin);
+  }, []);
+
   return (
-    <NavBar
-      links={navigationLinks}
-      burgerLinks={navigationLinks}
-      open={open}
-      setOpen={setOpen}
-    >
+    <>
+      <Header navLinks={data.navigation.links} open={open} setOpen={setOpen} />
       <div className="container">
         <Head>
           <meta
@@ -78,7 +62,7 @@ export default function Layout({
           <meta name="keywords" content={meta.keywords} />
           {/* Social media information */}
           {/* Open Graph */}
-          <meta property="og:url" content={meta.url + router.asPath} />
+          <meta property="og:url" content={url + router.asPath} />
           <meta property="og:type" content="restaurant" />
           <meta property="og:site_name" content={meta.title} />
           <meta property="og:description" content={meta.description} />
@@ -111,48 +95,20 @@ export default function Layout({
           />
           <link rel="manifest" href="/site.webmanifest.json" />
         </Head>
-        <header className="header">
-          {home ? (
-            <>
-              <div className="nav-spacer" />
-              <Hero businessInfo={businessInfo} />
-            </>
-          ) : (
-            <>
-              <div className="nav-spacer" />
-            </>
-          )}
-        </header>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YS529TE94E');
-              `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YS529TE94E');
+          `}
         </Script>
         <main className="main">{children}</main>
-        <footer className="footer">
-          <nav className="nav-list">
-            <NavList links={navigationLinks} />
-          </nav>
-          <span>© 2022 Frasers Gourmet Hideaway |</span>
-          <span className="no-wrap">
-            &nbsp;Built by:&nbsp;
-            <a
-              className="light-text"
-              href="https://github.com/ryan3738"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              Ryan Fraser
-            </a>
-          </span>
-        </footer>
+        <Footer navLinks={data.navigation.links} />
         <style jsx>{`
           .container {
             height: 100%;
@@ -163,74 +119,43 @@ export default function Layout({
             padding: 0;
             margin: 0 auto;
           }
-
           .main {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
           }
-
-          .header {
-            width: 100%;
-            /* display: flex; */
-            /* flex-direction: column; */
-            /* align-items: center; */
-          }
-
-          .footer {
-            height: auto;
-            width: 100%;
-            background-color: var(--surface-color);
-            padding: 1em;
-          }
-
-          .no-wrap {
-            white-space: nowrap;
-          }
-
-          .nav-spacer {
-            height: 4em;
-          }
-
-          .nav-padding {
-            padding: 4em 0 0;
-          }
-          .nav-link {
-            /* font-size: 0.5rem; */
-            padding: 1em;
-            margin: auto;
-            text-decoration: underline;
-            white-space: nowrap;
-          }
-          .nav-list {
-            display: flex;
-            flex-wrap: wrap;
-            width: 100%;
-          }
         `}</style>
-
         <style global jsx>{`
           :root {
-            --black-color: #0b0a0a;
-            --background-color: var(--black-color);
-            --surface-color: rgba(255, 255, 255, 0.03);
-            --primary-color: #c6a938;
-            --primary-color-desaturated: #f3e08d;
-            /* Have option for internet explorer without f6*/
-            --secondary-color: #1a1a1a;
             --white-color: #ffffffde;
-            --text-color: var(--white-color);
+            --black-color: #0b0a0a;
+            --surface-color: rgba(255, 255, 255, 0.03);
+            --background-color: var(--black-color);
+            --primary-color: var(--primary-color-500);
+            --primary-color-desaturated: var(--primary-color-200);
+            --primary-color-50: ${chroma(primaryColor).brighten(3).hex()};
+            --primary-color-100: ${chroma(primaryColor).brighten(2.25).hex()};
+            --primary-color-200: ${chroma(primaryColor).brighten(1.5).hex()};
+            --primary-color-300: ${chroma(primaryColor).brighten(0.75).hex()};
+            --primary-color-400: ${chroma(primaryColor).hex()};
+            --primary-color-500: ${chroma(primaryColor).darken(0.75).hex()};
+            --primary-color-600: ${chroma(primaryColor).darken(1.5).hex()};
+            --primary-color-700: ${chroma(primaryColor).darken(2.25).hex()};
+            --primary-color-800: ${chroma(primaryColor).darken(3).hex()};
+            --primary-color-900: ${chroma(primaryColor).darken(3.75).hex()};
+            /* Have option for internet explorer without f6*/
             /* 87% */
-            --high-emphasis-text: #ffffffde;
+            --high-emphasis-text: var(--white-color);
             /* 60% */
             --medium-emphasis-text: #ffffff99;
             /* 38% */
             --text-disabled: #ffffff61;
             --color-facebook: #3b5998;
             --color-instagram: #fb3958;
-            --small-screen: 460px;
-            --medium-screen: 769px;
+            --small-screen: ${theme.smallScreen};
+            --medium-screen: ${theme.mediumScreen};
+            --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           }
           .medium-emphasis {
             color: var(--medium-emphasis-text);
@@ -245,6 +170,35 @@ export default function Layout({
           }
         `}</style>
       </div>
-    </NavBar>
+    </>
   );
 }
+
+export const layoutQueryFragment = `
+  getGlobalDocument(relativePath: "index.json") {
+    data {
+      navigation {
+        links {
+          label
+          href
+          header
+          burger
+          footer
+        }
+      }
+      theme {
+        color
+        darkMode
+      }
+      footer {
+        color
+        social {
+          facebook
+          twitter
+          instagram
+          github
+        }
+      }
+    }
+  }
+`;

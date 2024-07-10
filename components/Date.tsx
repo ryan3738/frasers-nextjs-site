@@ -1,7 +1,7 @@
 import { parseISO, format } from 'date-fns';
 
 export default function Date({
-  dateString,
+  dateString
 }: {
   dateString: string;
 }): JSX.Element {

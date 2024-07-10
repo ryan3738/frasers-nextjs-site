@@ -17,7 +17,7 @@ A Next.js Jamstack website for Restaurants utilizing Tina CMS and Authentication
 
         npm install
         # or
-        yarn
+        pnpm
 
 ## Create a Tina Cloud account and enter your credentials
 1. Create a new GitHub repository and push the project to the repository
@@ -51,7 +51,7 @@ A Next.js Jamstack website for Restaurants utilizing Tina CMS and Authentication
    
         npm run dev
         # or
-        yarn dev
+        pnpm dev
 
 2. Open http://localhost:3000 with your browser to see the website
 3. Go to http://localhost:3000/admin to log in to the admin panel. When logged in, the cms is available as a side drawer. Changes are held in memory and displayed live on the website. After pressing the save button, changes are committed to the appropriate git branch based on the environment variables. ![Make edits to Tina Cms in real time](/assets/images/cms-site-edits.jpg)
@@ -67,5 +67,6 @@ CI/CD is ideal so that changes are automatically deployed to the production site
 
 
 # Next Steps
-* Create additional items in the ./tina/schmes.ts file to add more content types to the website.
+* Create additional items in the ./tina/schema.ts file to add more content types to the website.
 * Add additional users to your Tina Cloud account to give them the ability to edit the website.
+* Query data [Query data in NextJS](https://tina.io/guides/tinacms/nextjs-data-fetching/guide/#example-fetching-content-through-getstaticpaths)

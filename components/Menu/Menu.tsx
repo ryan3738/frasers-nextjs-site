@@ -1,20 +1,27 @@
 import MenuSection from './MenuSection';
-import NavBar from '../NavBar';
-import { Menu as MenuType } from '../../.tina/__generated__/types';
+import NavBar from '../Header';
+import { MenuQuery } from '../../tina/__generated__/types';
 import { slugify } from '../../lib/slugify';
 
 interface MenuProps {
   sections: string[];
   pathName: string;
-  menu: MenuType;
+  menu: MenuQuery['menu'];
 }
 
+/**
+ *
+ * @deprecated
+ */
 const Menu = ({ menu, sections, pathName }: MenuProps): JSX.Element => {
   if (!menu) {
     return <div>No Menu Found</div>;
   }
   const links = menu.sections.map(section => {
-    return { href: `${pathName}#${slugify(section.name)}`, text: section.name };
+    return {
+      href: `${pathName}#${slugify(section.name)}`,
+      label: section.name
+    };
   });
   return (
     <>
@@ -31,7 +38,7 @@ const Menu = ({ menu, sections, pathName }: MenuProps): JSX.Element => {
       })}
       <NavBar
         showHomeLink={false}
-        links={links}
+        navLinks={links}
         position="sticky"
         location="bottom"
       />

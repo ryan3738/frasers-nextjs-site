@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "importHelpers": true,
-    "target": "es5",
+    "importHelpers": false,
+    "target": "ES2022",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,14 +18,33 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "strictNullChecks": false,
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
   ],
   "include": [
+    ".eslintrc.js",
+    "eslint.config.js",
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.js",
+    ".next/types/**/*.ts",
+    "prettier.config.js",
+    "next.config.mjs"
   ]
 }

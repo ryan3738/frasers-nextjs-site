@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 interface SocialProps {
   href: string;
@@ -11,7 +11,7 @@ export default function Social({
   href,
   img,
   alt,
-  color,
+  color
 }: SocialProps): JSX.Element {
   return (
     <div className="social">

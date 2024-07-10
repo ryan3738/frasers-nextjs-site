@@ -1,17 +1,22 @@
 import styles from '../../styles/styles.module.css';
+import { MenuQuery } from '../../tina/__generated__/types';
 import { Menu } from './Menu';
 import { useRouter } from 'next/router';
-import { Menu as MenuType } from '../../.tina/__generated__/types';
+
 import Markdown from 'react-markdown';
 
 interface MenuPageProps {
-  menu: MenuType;
+  menu: MenuQuery['menu'];
   sections: string[];
 }
 
+/**
+ *
+ * @deprecated
+ */
 export default function MenuPage({
   menu,
-  sections,
+  sections
 }: MenuPageProps): JSX.Element {
   const { pathname } = useRouter();
   if (!menu) {

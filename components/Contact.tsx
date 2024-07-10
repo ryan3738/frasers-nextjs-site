@@ -2,14 +2,17 @@
 import Social from './Social';
 // import businessInfo from '../public/data/site-data.json';
 import NewsLetter from './NewsLetter';
-import { BusinessInfo } from '../.tina/__generated__/types';
+import { BusinessInfoQuery } from '../tina/__generated__/types';
 import Hours from './Hours';
 import ContactInfo from './ContactInfo';
 
 interface ContactProps {
-  businessInfo: BusinessInfo;
+  businessInfo: BusinessInfoQuery['businessInfo'];
 }
 
+/**
+ * @deprecated
+ */
 export default function Contact({ businessInfo }: ContactProps): JSX.Element {
   return (
     <>

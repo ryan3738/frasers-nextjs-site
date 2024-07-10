@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 interface DoubleProps {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ export default function Double({
   rightText,
   rightTitle,
   rightSubtitle,
-  id,
+  id
 }: DoubleProps): JSX.Element {
   return (
     <>
@@ -84,6 +84,7 @@ export default function Double({
             background: var(--surface-color);
             padding: 1.5rem;
             height: 100%;
+            box-shadow: var(--box-shadow);
           }
           .double-right {
             grid-area: p1;

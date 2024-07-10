@@ -7,7 +7,7 @@ interface BurgerMenuProps {
 
 export default function BurgerMenu({
   open,
-  links,
+  links
 }: BurgerMenuProps): JSX.Element {
   return (
     <>
@@ -43,7 +43,6 @@ export default function BurgerMenu({
           padding: 2rem 0;
           font-weight: bold;
           letter-spacing: 0.5rem;
-          /* color: var(--secondary-color); */
           text-decoration: none;
           transition: color 0.3s linear;
         }
