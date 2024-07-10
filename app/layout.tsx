@@ -2,7 +2,6 @@ import { Metadata } from 'next';
 import Script from 'next/script';
 import '@/styles/global.css';
 import { Layout } from './_components/layout';
-import { Header } from './_components/header';
 
 export const meta = {
   url: new URL('https://frasersgh.com'),

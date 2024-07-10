@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { useRef } from 'react';
-import Burger from '@/components/Burger';
-import BurgerMenu from '@/components/BurgerMenu';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
-import NavList, { NavLinks } from '@/components/NavList';
+import { NavLinks, NavList } from './nav-list';
+import { Burger } from './burger';
+import { BurgerMenu } from './burger-menu';
 
 interface HeaderProps {
   children?: React.ReactNode;
@@ -31,7 +31,7 @@ export const Header = ({
   const burgerLinks = navLinks?.filter(link => link.burger === true);
   return (
     <header>
-      <div className="nav-bar">
+      <div className="nav-bar w-full opacity-95">
         {burgerLinks?.length > 0 && (
           <div className="burger">
             <div ref={node}>
@@ -42,10 +42,12 @@ export const Header = ({
         )}
         {headerLinks?.length > 0 && (
           <>
-            <nav className="nav-list">
+            <nav className="nav-list ">
               {showHomeLink && (
                 <div className="title">
-                  <Link href="/">FRASERS</Link>
+                  <Link href="/" className=" hover:text-white">
+                    FRASERS
+                  </Link>
                 </div>
               )}
               <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
@@ -70,8 +72,6 @@ export const Header = ({
           z-index: 999;
           position: ${position};
           background: var(--background-color);
-          opacity: 0.97;
-          width: 100%;
         }
         .nav-list {
           display: flex;

@@ -14,7 +14,7 @@ interface NavListProps {
   burgerMenuLink?: boolean;
 }
 
-export default function NavList({
+export function NavList({
   links,
   showOnLarge,
   burgerMenuLink
@@ -31,7 +31,7 @@ export default function NavList({
           <Link
             key={link.label}
             href={link.href}
-            className="flex size-full place-items-center"
+            className="flex size-full place-items-center hover:text-white"
           >
             {link.label}
           </Link>

@@ -30,7 +30,7 @@ const theme = {
 
 export const Layout = ({ data = layoutData, children }: LayoutProps) => {
   const [open, setOpen] = useState(false);
-  const primaryColor = data?.theme?.color || 'teal';
+  const primaryColor = '#C6A938';
 
   return (
     <>
@@ -57,34 +57,26 @@ export const Layout = ({ data = layoutData, children }: LayoutProps) => {
         `}</style>
         <style global jsx>{`
           :root {
-            --white-color: #ffffffde;
-            --black-color: #0b0a0a;
-            --surface-color: rgba(255, 255, 255, 0.03);
+            --white-color: hsla(0, 0%, 100%, 0.871);
+            --black-color: hsl(0, 5%, 4%);
+            --surface-color: hsla(0, 0%, 100%, 0.03);
             --background-color: var(--black-color);
-            --primary-color: var(--primary-color-500);
+            --primary-color: hsl(48, 56%, 50%);
             --primary-color-desaturated: var(--primary-color-200);
-            --primary-color-50: ${chroma(primaryColor).brighten(3).hex()};
-            --primary-color-100: ${chroma(primaryColor).brighten(2.25).hex()};
+
             --primary-color-200: ${chroma(primaryColor).brighten(1.5).hex()};
-            --primary-color-300: ${chroma(primaryColor).brighten(0.75).hex()};
-            --primary-color-400: ${chroma(primaryColor).hex()};
-            --primary-color-500: ${chroma(primaryColor).darken(0.75).hex()};
-            --primary-color-600: ${chroma(primaryColor).darken(1.5).hex()};
-            --primary-color-700: ${chroma(primaryColor).darken(2.25).hex()};
-            --primary-color-800: ${chroma(primaryColor).darken(3).hex()};
-            --primary-color-900: ${chroma(primaryColor).darken(3.75).hex()};
             /* Have option for internet explorer without f6*/
             /* 87% */
             --high-emphasis-text: var(--white-color);
             /* 60% */
-            --medium-emphasis-text: #ffffff99;
+            --medium-emphasis-text: hsla(0, 0%, 100%, 0.6);
             /* 38% */
-            --text-disabled: #ffffff61;
-            --color-facebook: #3b5998;
-            --color-instagram: #fb3958;
+            --text-disabled: hsla(0, 0%, 100%, 0.38);
+            --color-facebook: hsl(221, 44%, 41%);
+            --color-instagram: hsl(350, 96%, 60%);
             --small-screen: ${theme.smallScreen};
             --medium-screen: ${theme.mediumScreen};
-            --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            --box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
           }
           .medium-emphasis {
             color: var(--medium-emphasis-text);
