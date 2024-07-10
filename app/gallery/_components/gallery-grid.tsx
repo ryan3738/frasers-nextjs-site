@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/legacy/image';
 import { GalleryGridImages } from '@/tina/__generated__/types';
 
