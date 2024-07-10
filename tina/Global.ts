@@ -43,13 +43,11 @@ const navigationSchema: TinaField = {
       name: 'links',
       type: 'object',
       list: true,
-      // ui: {
-      //   defaultItem: {
-      //     href: "/",
-      //     label: "Home",
-      //   },
-      //   component: "groupList",
-      // },
+      ui: {
+        itemProps: item => ({
+          label: item.label
+        })
+      },
       fields: [
         {
           type: 'string',

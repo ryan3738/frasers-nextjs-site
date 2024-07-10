@@ -5,7 +5,9 @@ const imagesSchema: TinaField = {
   label: 'Images',
   name: 'images',
   ui: {
-    component: 'groupList'
+    itemProps: item => {
+      return { label: item?.alt };
+    }
   },
   list: true,
   fields: [
@@ -48,9 +50,12 @@ const modifierSchema: TinaField = {
 const menuItemSchema: TinaField = {
   label: 'Menu Items',
   name: 'items',
-  // ui: {
-  //   component: "groupList",
-  // },
+  ui: {
+    itemProps: item => {
+      const label = `${item?.name}, ${item?.price}${item?.available ? '' : ', Not Available'}`;
+      return { label };
+    }
+  },
   type: 'object',
   list: true,
   fields: [
@@ -94,9 +99,11 @@ const menuSectionSchema: TinaField = {
   type: 'object',
   label: 'Sections',
   name: 'sections',
-  // ui: {
-  //   component: "groupList",
-  // },
+  ui: {
+    itemProps: item => {
+      return { label: item?.name };
+    }
+  },
   list: true,
   fields: [
     {

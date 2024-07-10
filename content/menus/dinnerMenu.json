@@ -16,13 +16,7 @@
               "price": 5
             }
           ],
-          "available": true,
-          "images": [
-            {
-              "alt": "CAESAR SALAD",
-              "image": "http://res.cloudinary.com/ryan3738/image/upload/v1639529311/frasers/caesar_salad_esgixs.jpg"
-            }
-          ]
+          "available": true
         },
         {
           "name": "YOUNG GREENS SEASONAL SALAD",
