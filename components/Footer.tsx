@@ -12,7 +12,7 @@ export default function Footer({
   const footerLinks = navLinks?.filter(link => link.footer === true);
   // const footerLinks = [];
   return (
-    <footer className="footer">
+    <footer className="footer p-4 h-fit w-screen">
       {footerLinks && (
         <nav className="nav-list">
           <NavList links={footerLinks} />
@@ -33,10 +33,7 @@ export default function Footer({
       </span>
       <style jsx>{`
         .footer {
-          height: auto;
-          width: 100%;
           background-color: var(--surface-color);
-          padding: 1em;
         }
 
         .nav-list {
