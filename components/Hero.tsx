@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { BusinessInfo } from '../tina/__generated__/types';
 import Hours from './Hours';
 interface HeroProps {

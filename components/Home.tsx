@@ -10,7 +10,7 @@ import { Menu } from './Menu/Menu';
 import {
   Menu as MenuType,
   BusinessInfo,
-  GalleryGridImages,
+  GalleryGridImages
 } from '../tina/__generated__/types';
 import Hero from './Hero';
 
@@ -25,7 +25,7 @@ interface HomeProps {
 export default function Home({
   menu,
   businessInfo,
-  galleryImages,
+  galleryImages
 }: HomeProps): JSX.Element {
   const { phoneNumber } = businessInfo;
   return (
@@ -88,7 +88,7 @@ export default function Home({
           >
             <div
               dangerouslySetInnerHTML={{
-                __html: aboutOwner.content,
+                __html: aboutOwner.content
               }}
             />
           </Double>

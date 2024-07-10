@@ -1,13 +1,14 @@
 //@ts-nocheck
-import { PropsWithChildren } from "react"
+import { PropsWithChildren } from 'react';
 import { TinaEditProvider } from 'tinacms/dist/edit-state';
 import { TinaCloudCloudinaryMediaStore } from 'next-tinacms-cloudinary';
 import Layout from '../components/Layout';
-import { TinaCMS } from "tinacms";
+import { TinaCMS } from 'tinacms';
 
-export const TinaProvider = (props: PropsWithChildren & { Component, pageProps }) => {
-  const { children, Component, pageProps } = props
-
+export const TinaProvider = (
+  props: PropsWithChildren & { Component; pageProps }
+) => {
+  const { children, Component, pageProps } = props;
 
   return (
     <TinaEditProvider
@@ -41,9 +42,9 @@ export const TinaProvider = (props: PropsWithChildren & { Component, pageProps }
                           item.title ||
                           item.label ||
                           item.alt ||
-                          item.day,
+                          item.day
                       };
-                    },
+                    }
                   };
                   return (
                     <GroupListFieldPlugin.Component
@@ -53,7 +54,7 @@ export const TinaProvider = (props: PropsWithChildren & { Component, pageProps }
                       field={field}
                     />
                   );
-                },
+                }
               });
             });
           }}
@@ -79,5 +80,5 @@ export const TinaProvider = (props: PropsWithChildren & { Component, pageProps }
     >
       {children}
     </TinaEditProvider>
-  )
-}
+  );
+};

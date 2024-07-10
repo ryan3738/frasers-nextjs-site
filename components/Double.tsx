@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 interface DoubleProps {
   children: React.ReactNode;
@@ -23,7 +23,7 @@ export default function Double({
   rightText,
   rightTitle,
   rightSubtitle,
-  id,
+  id
 }: DoubleProps): JSX.Element {
   return (
     <>

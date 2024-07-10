@@ -16,7 +16,7 @@ const Menu = ({ menu, sections, pathName }: MenuProps): JSX.Element => {
   const links = menu.sections.map(section => {
     return {
       href: `${pathName}#${slugify(section.name)}`,
-      label: section.name,
+      label: section.name
     };
   });
   return (

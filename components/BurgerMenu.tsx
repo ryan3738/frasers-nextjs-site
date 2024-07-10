@@ -7,7 +7,7 @@ interface BurgerMenuProps {
 
 export default function BurgerMenu({
   open,
-  links,
+  links
 }: BurgerMenuProps): JSX.Element {
   return (
     <>

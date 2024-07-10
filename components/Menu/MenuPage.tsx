@@ -12,7 +12,7 @@ interface MenuPageProps {
 
 export default function MenuPage({
   menu,
-  sections,
+  sections
 }: MenuPageProps): JSX.Element {
   const { pathname } = useRouter();
   if (!menu) {

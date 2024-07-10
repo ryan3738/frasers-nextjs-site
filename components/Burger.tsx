@@ -69,5 +69,5 @@ export default function Burger({ open, setOpen }): JSX.Element {
 }
 Burger.propTypes = {
   open: bool.isRequired,
-  setOpen: func.isRequired,
+  setOpen: func.isRequired
 };

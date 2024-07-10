@@ -1,12 +1,15 @@
 {
     "cmake.configureOnOpen": false,
-    "eslint.validate": [
+    "eslint.probe": [
         "javascript",
         "javascriptreact",
         "typescript",
         "typescriptreact",
     ],
+    "editor.formatOnSave": false,
+    // Runs Prettier, then ESLint
     "editor.codeActionsOnSave": {
+        "source.formatDocument": "explicit",
         "source.fixAll.eslint": "explicit"
     },
 

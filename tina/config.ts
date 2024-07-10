@@ -31,7 +31,6 @@ export default defineConfig({
     maxSearchIndexFieldLength: 100,
   },
   media: {
-
     // function that loads  the media store
     // @ts-ignore
     loadCustomStore: async () => {

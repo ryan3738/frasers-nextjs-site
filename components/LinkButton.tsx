@@ -4,9 +4,7 @@ export default function LinkButton({ buttonText, buttonLink }): JSX.Element {
   return (
     <>
       <div className="button-text">
-        <Link href={buttonLink}>
-          {buttonText}
-        </Link>
+        <Link href={buttonLink}>{buttonText}</Link>
       </div>
 
       <style jsx>{`

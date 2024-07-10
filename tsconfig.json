@@ -24,8 +24,15 @@
     "node_modules"
   ],
   "include": [
+    ".eslintrc.js",
+    "eslint.config.js",
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.js",
+    ".next/types/**/*.ts",
+    "prettier.config.js",
+    "next.config.mjs"
   ]
 }

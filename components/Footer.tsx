@@ -7,12 +7,12 @@ interface FooterProps {
 
 export default function Footer({
   children,
-  navLinks,
+  navLinks
 }: FooterProps): JSX.Element {
   const footerLinks = navLinks?.filter(link => link.footer === true);
   // const footerLinks = [];
   return (
-    <footer className="footer p-4 h-fit w-screen">
+    <footer className="footer h-fit w-screen p-4">
       {footerLinks && (
         <nav className="nav-list">
           <NavList links={footerLinks} />

@@ -1,9 +1,6 @@
 // import utilStyles from '../styles/utils.module.css'
 
-import {
-  BusinessInfo,
-  BusinessInfoAddress,
-} from '../tina/__generated__/types';
+import { BusinessInfo, BusinessInfoAddress } from '../tina/__generated__/types';
 
 interface ContactProps {
   heading: string;
@@ -14,7 +11,7 @@ interface ContactProps {
 export default function ContactInfo({
   heading,
   address,
-  phoneNumber,
+  phoneNumber
 }: ContactProps): JSX.Element {
   return (
     <>

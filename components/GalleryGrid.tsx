@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import { GalleryGridImages } from '../tina/__generated__/types';
 interface GridProps {
   images: GalleryGridImages[];
@@ -14,7 +14,7 @@ export default function GalleryGrid({ images }: GridProps): JSX.Element {
               <div
                 key={image.alt}
                 id="image-div"
-              // className={data.size}
+                // className={data.size}
               >
                 <div className="image-overlay"> </div>
                 <div className="overlay-text">{image.alt}</div>

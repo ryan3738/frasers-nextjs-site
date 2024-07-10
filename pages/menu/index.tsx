@@ -9,12 +9,14 @@ export default function MenuPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await client.queries.menu({ relativePath: "dinnerMenu.json" });
-      console.log("menu response", { res });
+      const res = await client.queries.menu({
+        relativePath: 'dinnerMenu.json'
+      });
+      console.log('menu response', { res });
       setMenuResponse(res);
     };
     fetchData();
-  }, [])
+  }, []);
 
   const sections = ['Starters', 'Entrees'];
 

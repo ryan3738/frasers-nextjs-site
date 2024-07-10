@@ -9,16 +9,14 @@ export default function GalleryPage() {
   useEffect(() => {
     const fetchData = async () => {
       const galleryGridResponse = await client.queries.galleryGrid({
-        relativePath: "galleryGrid.json"
+        relativePath: 'galleryGrid.json'
       });
       setGalleryGridResponse(galleryGridResponse);
     };
     fetchData();
-  }, [])
+  }, []);
 
-  if (
-    galleryGridResponse?.data?.galleryGrid
-  ) {
+  if (galleryGridResponse?.data?.galleryGrid) {
     const galleryImages = galleryGridResponse?.data?.galleryGrid?.images || [];
     return (
       <>

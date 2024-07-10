@@ -5,9 +5,9 @@ module.exports = {
     return [
       {
         source: '/admin',
-        destination: '/admin/index.html',
-      },
-    ]
+        destination: '/admin/index.html'
+      }
+    ];
   },
   i18n: {
     locales: ['en'],

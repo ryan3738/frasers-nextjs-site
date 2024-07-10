@@ -20,19 +20,19 @@ export const meta = {
   description:
     'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
   keywords: 'restaurant, steak, seafood, whidbey',
-  cardImage: '/android-chrome-512x512.png',
+  cardImage: '/android-chrome-512x512.png'
 };
 
 const theme = {
   maxWidth: '1200px',
   smallScreen: '460px',
   mediumScreen: '769px',
-  largeScreen: '1008px',
+  largeScreen: '1008px'
 };
 
 export default function Layout({
   data = layoutData,
-  children,
+  children
 }: LayoutProps): JSX.Element {
   const [open, setOpen] = useState(false);
   const [url, setUrl] = useState('');

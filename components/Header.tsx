@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-redundant-boolean */
 import Link from 'next/link';
 import { useRef } from 'react';
 import Burger from './Burger';
@@ -23,7 +22,7 @@ export default function Header({
   open,
   setOpen,
   position = 'fixed',
-  location = 'top',
+  location = 'top'
 }: HeaderProps): JSX.Element {
   const node = useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -45,9 +44,7 @@ export default function Header({
             <nav className="nav-list">
               {showHomeLink && (
                 <div className="title">
-                  <Link href="/">
-                    FRASERS
-                  </Link>
+                  <Link href="/">FRASERS</Link>
                 </div>
               )}
               <NavList links={headerLinks} showOnLarge={burgerLinks && true} />

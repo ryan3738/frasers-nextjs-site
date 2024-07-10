@@ -9,7 +9,7 @@ const sections = [
   'First Course',
   'Second Course',
   'Third Course',
-  'Dessert',
+  'Dessert'
 ];
 
 export default function MenuPage() {
@@ -17,12 +17,12 @@ export default function MenuPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await client.queries.menu({ relativePath: "newYears.json" });
-      console.log("menu response", { res });
+      const res = await client.queries.menu({ relativePath: 'newYears.json' });
+      console.log('menu response', { res });
       setMenuResponse(res);
     };
     fetchData();
-  }, [])
+  }, []);
 
   if (menuResponse?.errors) {
     console.error(menuResponse.errors);

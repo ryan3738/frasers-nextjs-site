@@ -17,14 +17,16 @@ interface NavListProps {
 export default function NavList({
   links,
   showOnLarge,
-  burgerMenuLink,
+  burgerMenuLink
 }: NavListProps): JSX.Element {
   return (
     <>
       {links?.map((link, index) => (
-        <div key={link?.label + index} className={`nav-link ${showOnLarge && 'show-on-large'} ${burgerMenuLink && 'burger-menu-link'
-          }`}>
-
+        <div
+          key={link?.label + index}
+          className={`nav-link ${showOnLarge && 'show-on-large'} ${burgerMenuLink && 'burger-menu-link'
+            }`}
+        >
           <Link key={link.label} href={link.href}>
             {link.label}
           </Link>

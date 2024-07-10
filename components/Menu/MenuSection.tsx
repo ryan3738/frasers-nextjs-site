@@ -10,7 +10,7 @@ interface MenuSectionProps {
 
 export default function MenuSection({
   section,
-  id,
+  id
 }: MenuSectionProps): JSX.Element {
   if (!section) {
     return <div>No Menu Section Found</div>;
@@ -23,9 +23,7 @@ export default function MenuSection({
       <div className="menu-section">
         {section?.items
           .filter(item => item.available === true)
-          .map(item => (
-            <MenuItem key={item.name} item={item} />
-          ))}
+          .map(item => <MenuItem key={item.name} item={item} />)}
       </div>
       <style jsx>{`
         .menu-header {
