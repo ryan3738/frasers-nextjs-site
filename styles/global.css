@@ -2,15 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --white-color-tw: 0 0 100 0.871;
+    --black-color-tw: 0 5 4;
+    /* convert to hsl */
+    /* --surface-color-tw: hsla(0, 0%, 100%, 0.03); */
+    --surface-color-tw: 0 0 100;
+    --background-color-tw: var(--black-color-tw);
+    --primary-color-tw: 48 56 50;
+    /* Have option for internet explorer without f6*/
+    /* 87% */
+    --high-emphasis-text-tw: var(--white-color-tw);
+    /* 60% */
+    --medium-emphasis-text-tw: 0 0 100 0.6;
+    /* 38% */
+    --text-disabled-tw: hsla(0, 0%, 100%, 0.38);
+    --color-facebook-tw: hsl(221, 44%, 41%);
+    --color-instagram-tw: hsl(350, 96%, 60%);
+
+    --white-color: hsla(0, 0%, 100%, 0.871);
+    --black-color: hsl(0, 5%, 4%);
+    --surface-color: hsla(0, 0%, 100%, 0.03);
+    --background-color: var(--black-color);
+    --primary-color: hsl(48, 56%, 50%);
+    /* Have option for internet explorer without f6*/
+    /* 87% */
+    --high-emphasis-text: var(--white-color);
+    /* 60% */
+    --medium-emphasis-text: hsla(0, 0%, 100%, 0.6);
+    /* 38% */
+    --text-disabled: hsla(0, 0%, 100%, 0.38);
+    --color-facebook: hsl(221, 44%, 41%);
+    --color-instagram: hsl(350, 96%, 60%);
+    --small-screen: ${theme.smallScreen};
+    --medium-screen: ${theme.mediumScreen};
+    --box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+  }
+}
+
 html {
   box-sizing: border-box;
   overflow-y: scroll;
   scroll-padding-top: 4em;
   /* height of sticky header */
 }
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -ms-text-size-adjust: 100%;

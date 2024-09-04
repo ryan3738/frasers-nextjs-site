@@ -10,11 +10,12 @@ export const theme = {
   extend: {
     colors: {
       ...colors,
-      background: 'hsl(var(--background-color))',
-      foreground: 'hsl(var(--white-color))',
+      background: 'hsl(var(--background-color-tw))',
+      foreground: 'hsl(var(--white-color-tw))',
+      surface: 'hsl(var(--surface-color-tw))',
       primary: {
-        DEFAULT: 'hsl(var(--primary-color))',
-        foreground: 'hsl(var(--black-color))'
+        DEFAULT: 'var(--primary-color-tw)',
+        foreground: 'hsl(var(--black-color-tw))'
       }
     }
   }

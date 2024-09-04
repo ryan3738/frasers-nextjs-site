@@ -25,11 +25,11 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
   return (
     <>
       <Hero businessInfo={businessInfo} />
-      <section className="container">
+      <section className="w-full max-w-screen-xl bg-surface/5">
         <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
           About
         </h2>
-        <div className="double-wrapper">
+        <div className="flex flex-wrap justify-center">
           <Double
             id="about"
             title=""
@@ -85,7 +85,7 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
           </Double>
         </div>
       </section>
-      <section id="menu" className="container">
+      <section id="menu" className="w-full max-w-screen-xl bg-surface/5">
         <div className={styles.header}>
           <h1>MENU</h1>
         </div>
@@ -103,32 +103,6 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
         </div>
         <Contact businessInfo={businessInfo} />
       </section>
-      <style jsx>{`
-        .container {
-          width: 100%;
-          max-width: 1120px;
-          background-color: var(--surface-color);
-          /* background: var(--background-color); */
-        }
-        .double-wrapper {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        .special-menu {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-          background-color: var(--surface-color);
-          padding: 10px;
-          border-radius: 7px;
-        }
-        .special-menu li {
-          background-color: var(--surface-color);
-          padding: 10px;
-          border-radius: 7px;
-        }
-      `}</style>
     </>
   );
 };

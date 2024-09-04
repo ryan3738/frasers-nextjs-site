@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Script from 'next/script';
 import '@/styles/global.css';
 import { Layout } from './_components/layout';
@@ -19,7 +19,7 @@ const theme = {
   largeScreen: '1008px'
 };
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     template: `%s | ${meta.title}`,
     default: meta.title

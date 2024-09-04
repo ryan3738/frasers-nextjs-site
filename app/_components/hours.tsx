@@ -3,13 +3,13 @@ interface HoursProps {
   hours: BusinessInfoHours[];
 }
 
-export function Hours({ hours }: HoursProps): JSX.Element {
+export function Hours({ hours }: HoursProps) {
   if (hours) {
     return (
       <div className="hours-container">
         <h3 className="header-wrapper">
           HOURS
-          <div className="divider" />
+          <div className="bg-primary-200 mt-4 h-1 w-full" />
         </h3>
         <div>
           {hours.map(item => (
@@ -45,12 +45,12 @@ export function Hours({ hours }: HoursProps): JSX.Element {
             align-items: center;
           }
 
-          .divider {
+          {/* .divider {
             border: 1px solid var(--primary-color-desaturated);
             width: 100%;
             height: 1px;
             margin-top: 1rem;
-          }
+          } */}
         `}</style>
       </div>
     );

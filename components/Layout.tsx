@@ -35,10 +35,7 @@ const theme = {
  *
  * @deprecated
  */
-export default function Layout({
-  data = layoutData,
-  children
-}: LayoutProps): JSX.Element {
+export default function Layout({ data = layoutData, children }: LayoutProps) {
   const [open, setOpen] = useState(false);
   const [url, setUrl] = useState('');
   const router = useRouter();

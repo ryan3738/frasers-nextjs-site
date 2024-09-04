@@ -1,3 +1,4 @@
+'use client';
 import NavList, { NavLinks } from './NavList';
 
 interface FooterProps {
