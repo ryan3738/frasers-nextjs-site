@@ -18,6 +18,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@t3-oss/env-nextjs": "^0.11.1",
     "@tinacms/auth": "^1.0.4",
     "@tinacms/cli": "^1.5.39",
     "chroma-js": "^2.4.2",
@@ -32,7 +33,9 @@
     "react-markdown": "^9.0.1",
     "react-tinacms-editor": "^0.53.5",
     "styled-components": "^5.3.3",
-    "tinacms": "^1.5.28"
+    "tailwind-merge": "^2.5.3",
+    "tinacms": "^1.5.28",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.2.5",

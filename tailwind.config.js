@@ -16,7 +16,8 @@ export const theme = {
       primary: {
         DEFAULT: 'var(--primary-color-tw)',
         foreground: 'hsl(var(--black-color-tw))'
-      }
+      },
+      border: 'hsl(var(--border))'
     }
   }
 };

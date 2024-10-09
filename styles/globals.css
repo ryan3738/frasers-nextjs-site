@@ -4,6 +4,8 @@
 
 @layer base {
   :root {
+    --border: 217.2 32.6% 17.5%;
+
     --white-color-tw: 0 0 100 0.871;
     --black-color-tw: 0 5 4;
     /* convert to hsl */
@@ -41,11 +43,18 @@
   }
 }
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* overflow-y: scroll; */
+  }
+}
+
 html {
-  box-sizing: border-box;
   overflow-y: scroll;
-  scroll-padding-top: 4em;
-  /* height of sticky header */
 }
 
 html, body {

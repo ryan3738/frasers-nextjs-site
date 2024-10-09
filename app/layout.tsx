@@ -1,6 +1,6 @@
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import '@/styles/global.css';
 import { Layout } from './_components/layout';
 
 export const meta = {
@@ -59,8 +59,6 @@ export const metadata: Metadata = {
 } satisfies Metadata;
 
 export default function RootLayout({
-  // Layouts must accept a children prop.
-  // This will be populated with nested layouts or pages
   children
 }: {
   children: React.ReactNode;
