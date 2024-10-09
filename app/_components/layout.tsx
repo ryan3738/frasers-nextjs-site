@@ -4,7 +4,6 @@ import layoutData from '@/content/global/index.json';
 import Footer from '@/components/Footer';
 import chroma from 'chroma-js';
 import { Header } from './header';
-import { Metadata } from 'next';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -12,14 +11,6 @@ interface LayoutProps {
   businessInfo?: BusinessInfo;
   data?: any;
 }
-
-export const meta: Metadata = {
-  title: 'Frasers Gourmet Hideaway',
-  description:
-    'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
-  keywords: 'restaurant, steak, seafood, whidbey',
-  cardImage: '/android-chrome-512x512.png'
-};
 
 const theme = {
   maxWidth: '1200px',

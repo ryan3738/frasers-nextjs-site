@@ -14,11 +14,7 @@ interface NavListProps {
   burgerMenuLink?: boolean;
 }
 
-export function NavList({
-  links,
-  showOnLarge,
-  burgerMenuLink
-}: NavListProps): JSX.Element {
+export function NavList({ links, showOnLarge, burgerMenuLink }: NavListProps) {
   return (
     <>
       {links?.map((link, index) => (

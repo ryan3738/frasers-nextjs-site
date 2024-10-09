@@ -12,13 +12,6 @@ export const meta = {
   images: '/android-chrome-512x512.png'
 } as const;
 
-const theme = {
-  maxWidth: '1200px',
-  smallScreen: '460px',
-  mediumScreen: '769px',
-  largeScreen: '1008px'
-};
-
 export const metadata: Metadata = {
   title: {
     template: `%s | ${meta.title}`,
