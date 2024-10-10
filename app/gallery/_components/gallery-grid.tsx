@@ -1,17 +1,18 @@
 'use client';
 import Image from 'next/legacy/image';
-import { GalleryGridImages } from '@/tina/__generated__/types';
+import { GalleryGridQuery } from '@/tina/__generated__/types';
 
 interface GridProps {
-  images: GalleryGridImages[];
+  images: GalleryGridQuery['galleryGrid']['images'];
 }
 
 export const GalleryGrid = ({ images }: GridProps) => {
   return (
     <>
       <div className="gallery-container">
-        {images.map(
+        {images?.map(
           image =>
+            image &&
             image.src && (
               <div
                 key={image.alt}
@@ -23,7 +24,7 @@ export const GalleryGrid = ({ images }: GridProps) => {
                 <Image
                   className="image"
                   src={image.src}
-                  alt={image.alt}
+                  alt={image.alt || 'gallery image'}
                   layout="responsive"
                   objectFit="cover"
                   height="560"
@@ -63,7 +64,7 @@ export const GalleryGrid = ({ images }: GridProps) => {
 
         .image-overlay {
           position: absolute;
-          z-index: 500;
+          z-index: 10;
           margin: 0 auto;
           left: 0;
           bottom: 0;
@@ -93,7 +94,7 @@ export const GalleryGrid = ({ images }: GridProps) => {
 
         .overlay-text {
           position: absolute;
-          z-index: 500;
+          z-index: 20;
           margin: 0 auto;
           padding: 1.5rem;
           left: 0;

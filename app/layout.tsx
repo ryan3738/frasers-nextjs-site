@@ -1,7 +1,10 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
 import '@/styles/global.css';
+import { Inter as FontSans } from 'next/font/google';
 import { Layout } from './_components/layout';
+import { ThemeProvider } from '@/components/theme-provider';
+import { cn } from '@/lib/utils';
 
 export const meta = {
   url: new URL('https://frasersgh.com'),
@@ -58,15 +61,18 @@ export const metadata = {
   }
 } satisfies Metadata;
 
+const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans'
+});
+
 export default function RootLayout({
-  // Layouts must accept a children prop.
-  // This will be populated with nested layouts or pages
   children
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-y-scroll" suppressHydrationWarning>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
         strategy="afterInteractive"
@@ -79,8 +85,20 @@ export default function RootLayout({
             gtag('config', 'G-YS529TE94E');
           `}
       </Script>
-      <body>
-        <Layout>{children}</Layout>
+      <body
+        className={cn(
+          'relative min-h-[calc(100vh-180px)] w-full bg-background font-sans antialiased',
+          fontSans.variable
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Layout>{children}</Layout>
+        </ThemeProvider>
       </body>
     </html>
   );

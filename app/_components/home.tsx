@@ -1,35 +1,36 @@
 'use client';
 import siteData from '@/public/data/site-data.json';
-import styles from '@/styles/styles.module.css';
 import {
-  GalleryGridImages,
   MenuQuery,
-  BusinessInfoQuery
+  BusinessInfoQuery,
+  GalleryGridQuery
 } from '@/tina/__generated__/types';
 import { Menu } from '../menu/_components/menu';
 import { GalleryGrid } from '../gallery/_components/gallery-grid';
 import { Contact } from './contact';
 import { Double } from './double';
 import { Hero } from './hero';
+import { TypographyH1 } from '@/components/ui/typography';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
 interface HomeProps {
   menu?: MenuQuery['menu'];
   businessInfo: BusinessInfoQuery['businessInfo'];
-  galleryImages?: GalleryGridImages[];
+  galleryImages?: GalleryGridQuery['galleryGrid']['images'];
 }
 
 export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
   const { phoneNumber } = businessInfo;
+
   return (
     <>
       <Hero businessInfo={businessInfo} />
-      <section className="container">
-        <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
+      <section className="w-full max-w-screen-xl bg-accent/30">
+        <TypographyH1 id="about" className="hidden text-center">
           About
-        </h2>
-        <div className="double-wrapper">
+        </TypographyH1>
+        <div className="flex flex-wrap justify-center">
           <Double
             id="about"
             title=""
@@ -41,7 +42,7 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
               <p>Please call to make a reservation</p>
               <h3>Gift Cards Available</h3>
               To purchase a gift card please call us at{' '}
-              <span className="nowrap">{phoneNumber}</span>
+              <span className="text-nowrap">{phoneNumber}</span>
             </div>
           </Double>
           <Double
@@ -85,50 +86,27 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
           </Double>
         </div>
       </section>
-      <section id="menu" className="container">
-        <div className={styles.header}>
-          <h1>MENU</h1>
-        </div>
-        <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
+      <section
+        id="menu"
+        className="grid w-full max-w-screen-xl justify-center bg-accent/30"
+      >
+        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground">
+          MENU
+        </TypographyH1>
+        {menu && (
+          <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
+        )}
       </section>
       <section id="gallery">
-        <div className={styles.header}>
-          <h1>Gallery</h1>
-        </div>
-        <GalleryGrid images={galleryImages} />
+        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground">
+          Gallery
+        </TypographyH1>
+        <GalleryGrid images={galleryImages || []} />
       </section>
       <section id="contact">
-        <div className={`${styles.header} ${styles.hiddenHeader}`}>
-          <h1>CONTACT</h1>
-        </div>
+        <TypographyH1 className="hidden">CONTACT</TypographyH1>
         <Contact businessInfo={businessInfo} />
       </section>
-      <style jsx>{`
-        .container {
-          width: 100%;
-          max-width: 1120px;
-          background-color: var(--surface-color);
-          /* background: var(--background-color); */
-        }
-        .double-wrapper {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        .special-menu {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-          background-color: var(--surface-color);
-          padding: 10px;
-          border-radius: 7px;
-        }
-        .special-menu li {
-          background-color: var(--surface-color);
-          padding: 10px;
-          border-radius: 7px;
-        }
-      `}</style>
     </>
   );
 };

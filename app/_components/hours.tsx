@@ -1,55 +1,41 @@
-import { BusinessInfoHours } from '@/tina/__generated__/types';
+import { TypographyH2, TypographyMuted } from '@/components/ui/typography';
+import { BusinessInfoQuery } from '@/tina/__generated__/types';
 interface HoursProps {
-  hours: BusinessInfoHours[];
+  hours: BusinessInfoQuery['businessInfo']['hours'];
 }
 
-export function Hours({ hours }: HoursProps): JSX.Element {
+export function Hours({ hours }: HoursProps) {
   if (hours) {
     return (
-      <div className="hours-container">
-        <h3 className="header-wrapper">
-          HOURS
-          <div className="divider" />
-        </h3>
+      <div className="flex flex-col items-center">
+        <div className="border-b border-accent-foreground">
+          <TypographyH2 className="flex flex-col items-center">
+            HOURS
+          </TypographyH2>
+        </div>
         <div>
           {hours.map(item => (
-            <div key={item.day} className="item-detail">
+            <div
+              key={item?.day}
+              className="mb-6 mt-2 flex flex-col items-center"
+            >
               <div>
-                <strong className="uppercase">{item.day}</strong>
+                <strong className="uppercase">{item?.day}</strong>
               </div>
               <div>
-                <span className="medium-emphasis uppercase">{item.hours}</span>
+                <TypographyMuted className="uppercase">
+                  {item?.hours}
+                </TypographyMuted>
               </div>
             </div>
           ))}
         </div>
         <style jsx>{`
-          .header-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-          .uppercase {
-            text-transform: uppercase;
-          }
           .item-detail {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0 0 1.45rem 0;
-          }
-
-          .hours-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
-
-          .divider {
-            border: 1px solid var(--primary-color-desaturated);
-            width: 100%;
-            height: 1px;
-            margin-top: 1rem;
           }
         `}</style>
       </div>

@@ -1,8 +1,11 @@
+import { Button, buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export interface NavLinks {
   href: string;
-  label: string;
+  label: string | null | undefined;
   header?: boolean;
   burger?: boolean;
   footer?: boolean;
@@ -14,29 +17,40 @@ interface NavListProps {
   burgerMenuLink?: boolean;
 }
 
-export function NavList({
-  links,
-  showOnLarge,
-  burgerMenuLink
-}: NavListProps): JSX.Element {
+export function NavList({ links }: NavListProps) {
+  const pathname = usePathname();
+
+  console.log('pathname', pathname);
   return (
     <>
-      {links?.map((link, index) => (
-        <div
-          key={link?.label + index}
-          className={`nav-link ${showOnLarge && 'show-on-large'} ${
-            burgerMenuLink && 'burger-menu-link'
-          }`}
-        >
+      {links?.map((link, index) => {
+        const href = link?.href || '';
+
+        console.log({ href, pathname });
+        return (
+          // <Button
+          //   key={link?.label || '' + index}
+          //   variant="ghost-inverted"
+          //   className="size-full min-w-14 rounded-none px-4 text-xl font-bold"
+          //   asChild
+          // >
           <Link
-            key={link.label}
+            key={link?.label || '' + index}
+            className={cn(
+              buttonVariants({
+                variant: 'ghost-inverted',
+                className:
+                  'h-14 w-full min-w-14 rounded-none px-4 text-xl bg-background font-bold'
+              })
+              // 'h-14 w-full min-w-14 rounded-none px-4 text-xl bg-background font-bold'
+            )}
             href={link.href}
-            className="flex size-full place-items-center hover:text-white"
           >
-            {link.label}
+            {link?.label}
           </Link>
-        </div>
-      ))}
+          // </Button>
+        );
+      })}
       <style jsx>{`
         .nav-link {
           display: flex;
@@ -50,29 +64,6 @@ export function NavList({
           min-width: 60px;
           height: 100%;
           width: auto;
-        }
-        a {
-          transition: all 0.3s ease-in-out;
-        }
-        a:hover {
-          background: var(--primary-color-desaturated);
-          color: var(--background-color);
-        }
-      `}</style>
-      <style jsx>{`
-        .burger-menu-link {
-          margin: 0;
-          height: auto;
-          width: 100%;
-        }
-        .show-on-large {
-          display: none;
-        }
-
-        @media (min-width: 769px) {
-          .show-on-large {
-            display: flex;
-          }
         }
       `}</style>
     </>

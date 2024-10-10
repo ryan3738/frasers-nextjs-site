@@ -2,7 +2,7 @@ import { type NavLinks, NavList } from "./nav-list";
 
 
 interface BurgerMenuProps {
-  open: boolean;
+  open?: boolean;
   links: NavLinks[];
 }
 

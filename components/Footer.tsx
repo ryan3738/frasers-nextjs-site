@@ -5,46 +5,31 @@ interface FooterProps {
   navLinks?: NavLinks[];
 }
 
-export default function Footer({
-  children,
-  navLinks
-}: FooterProps): JSX.Element {
+export default function Footer({ children, navLinks }: FooterProps) {
   const footerLinks = navLinks?.filter(link => link.footer === true);
-  // const footerLinks = [];
+
   return (
-    <footer className="footer h-fit w-screen p-4">
+    <footer className="grid h-fit w-full place-items-center overflow-x-auto bg-accent p-4">
       {footerLinks && (
-        <nav className="nav-list">
+        <nav className="flex place-items-center gap-4">
           <NavList links={footerLinks} />
         </nav>
       )}
       {children}
-      <span>© 2022 Frasers Gourmet Hideaway |</span>
-      <span className="no-wrap">
-        &nbsp;Built by:&nbsp;
-        <a
-          className="light-text"
-          href="https://github.com/ryan3738"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          Ryan Fraser
-        </a>
-      </span>
-      <style jsx>{`
-        .footer {
-          background-color: var(--surface-color);
-        }
-
-        .nav-list {
-          display: flex;
-          flex-wrap: wrap;
-          width: 100%;
-        }
-        .no-wrap {
-          white-space: nowrap;
-        }
-      `}</style>
+      <div className="grid w-full items-center justify-center gap-1">
+        <span>© 2022 Frasers Gourmet Hideaway</span>
+        <span className="flex items-center justify-center gap-1">
+          <span>Built by:</span>
+          <a
+            className="text-foreground/80"
+            href="https://github.com/ryan3738"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Ryan Fraser
+          </a>
+        </span>
+      </div>
     </footer>
   );
 }

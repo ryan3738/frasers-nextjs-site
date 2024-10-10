@@ -6,7 +6,10 @@ interface HeroProps {
   businessInfo?: BusinessInfoQuery['businessInfo'];
 }
 
-export function Hero({ businessInfo }: HeroProps): JSX.Element {
+export function Hero({ businessInfo }: HeroProps) {
+  if (!businessInfo) {
+    return <div>No Business Info Found</div>;
+  }
   return (
     <>
       <div id="welcome" className="welcome-container">
@@ -24,15 +27,16 @@ export function Hero({ businessInfo }: HeroProps): JSX.Element {
             />
 
             {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}
+
             <a
-              href={businessInfo.address.directions}
+              href={businessInfo?.address?.directions || ''}
               target="_blank"
               rel="noreferrer noopener"
               title="Click to Get Directions"
             >
-              {`${businessInfo.address.street} ${businessInfo.address.street2}`}
+              {`${businessInfo?.address?.street} ${businessInfo?.address?.street2}`}
               <br />
-              {`${businessInfo.address.city}, ${businessInfo.address.region} ${businessInfo.address.zip}`}
+              {`${businessInfo?.address?.city}, ${businessInfo?.address?.region} ${businessInfo?.address?.zip}`}
             </a>
             <h3>Reservations Recommended</h3>
             <p>

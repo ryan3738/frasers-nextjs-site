@@ -1,13 +1,19 @@
 import { bool, func } from 'prop-types';
 
-export default function Burger({ open, setOpen }): JSX.Element {
+export function Burger({
+  open,
+  setOpen
+}: {
+  open?: boolean;
+  setOpen?: (open: boolean) => void;
+}) {
   return (
     <>
       <button
         type="button"
         className="styled-burger"
         aria-label="Toggle navigation menu"
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen?.(!open)}
       >
         <div className="top-bun" />
         <div className="patty" />

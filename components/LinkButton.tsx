@@ -1,6 +1,12 @@
 import Link from 'next/link';
 
-export default function LinkButton({ buttonText, buttonLink }): JSX.Element {
+export default function LinkButton({
+  buttonText,
+  buttonLink
+}: {
+  buttonText: string;
+  buttonLink: string;
+}) {
   return (
     <>
       <Link

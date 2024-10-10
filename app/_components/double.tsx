@@ -46,7 +46,7 @@ export function Double({
               <h3>{rightSubtitle}</h3>
               <div
                 className="medium-emphasis"
-                dangerouslySetInnerHTML={{ __html: rightText }}
+                dangerouslySetInnerHTML={{ __html: rightText || '' }}
               />
             </div>
           </>

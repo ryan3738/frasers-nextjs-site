@@ -13,13 +13,11 @@ export const metadata = {
 export default function GalleryPage() {
   if (galleryGridResponse?.data?.galleryGrid) {
     const galleryImages = galleryGridResponse?.data?.galleryGrid?.images || [];
-    return (
-      <>
-        <section>
-          <h1>Gallery</h1>
-          <GalleryGrid images={galleryImages} />
-        </section>
-      </>
-    );
+    return galleryImages ? (
+      <section>
+        <h1>Gallery</h1>
+        <GalleryGrid images={galleryImages} />
+      </section>
+    ) : null;
   }
 }

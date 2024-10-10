@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { useRef } from 'react';
-import Burger from './Burger';
-import BurgerMenu from './BurgerMenu';
-import { useOnClickOutside } from '../hooks/useOnClickOutside';
-import NavList, { NavLinks } from './NavList';
+import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+import { NavLinks, NavList } from './nav-list';
+import { Burger } from './burger';
+import { BurgerMenu } from './burger-menu';
 
 interface HeaderProps {
   children?: React.ReactNode;
@@ -16,11 +16,7 @@ interface HeaderProps {
   position?: 'fixed' | 'sticky' | 'static';
 }
 
-/**
- *
- * @deprecated
- */
-export default function Header({
+export const Header = ({
   children,
   showHomeLink = true,
   navLinks,
@@ -28,15 +24,15 @@ export default function Header({
   setOpen,
   position = 'fixed',
   location = 'top'
-}: HeaderProps): JSX.Element {
-  const node = useRef();
-  useOnClickOutside(node, () => setOpen(false));
+}: HeaderProps) => {
+  const node = useRef(null);
+  useOnClickOutside(node, () => setOpen?.(false));
   const headerLinks = navLinks?.filter(link => link.header === true);
   const burgerLinks = navLinks?.filter(link => link.burger === true);
   return (
     <header>
-      <div className="nav-bar">
-        {burgerLinks?.length > 0 && (
+      <div className="nav-bar w-full opacity-95">
+        {burgerLinks && burgerLinks?.length > 0 && (
           <div className="burger">
             <div ref={node}>
               <Burger open={open} setOpen={setOpen} />
@@ -44,12 +40,14 @@ export default function Header({
             <BurgerMenu links={burgerLinks} open={open} />
           </div>
         )}
-        {headerLinks?.length > 0 && (
+        {headerLinks && headerLinks?.length > 0 && (
           <>
-            <nav className="nav-list">
+            <nav className="nav-list ">
               {showHomeLink && (
                 <div className="title">
-                  <Link href="/">FRASERS</Link>
+                  <Link href="/" className=" hover:text-white">
+                    FRASERS
+                  </Link>
                 </div>
               )}
               <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
@@ -57,7 +55,7 @@ export default function Header({
           </>
         )}
       </div>
-      {headerLinks?.length > 0 && <div className="nav-spacer" />}
+      {headerLinks && headerLinks?.length > 0 && <div className="nav-spacer" />}
       {children}
       <style jsx>{`
         .nav-spacer {
@@ -74,8 +72,6 @@ export default function Header({
           z-index: 999;
           position: ${position};
           background: var(--background-color);
-          opacity: 0.97;
-          width: 100%;
         }
         .nav-list {
           display: flex;
@@ -99,4 +95,4 @@ export default function Header({
       `}</style>
     </header>
   );
-}
+};
