@@ -1,4 +1,3 @@
-'use client';
 import siteData from '@/public/data/site-data.json';
 import {
   MenuQuery,
@@ -80,18 +79,21 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
         id="menu"
         className="grid w-full max-w-screen-xl justify-items-center bg-accent/30"
       >
-        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground">
+        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground lg:text-8xl">
           MENU
         </TypographyH1>
         {menu && (
           <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
         )}
       </section>
-      <section id="gallery">
-        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground">
+      <section id="gallery" className="grid w-full justify-items-center ">
+        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground lg:text-8xl">
           Gallery
         </TypographyH1>
-        <GalleryGrid images={galleryImages || []} />
+        <GalleryGrid
+          images={galleryImages || []}
+          className="max-w-screen-2xl"
+        />
       </section>
       <section id="contact">
         <TypographyH1 className="hidden">CONTACT</TypographyH1>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Script from 'next/script';
 import '@/styles/global.css';
-import { Inter as FontSans } from 'next/font/google';
+import { Open_Sans, Lato } from 'next/font/google';
 import { Layout } from './_components/layout';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
@@ -61,7 +61,7 @@ export const metadata = {
   }
 } satisfies Metadata;
 
-const fontSans = FontSans({
+const fontSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-sans'
 });

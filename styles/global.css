@@ -20,14 +20,14 @@ html {
     --instagram: 350 96% 60%;
 
 
-    --background: 0 0% 100%;
+    --background: 20 5% 87%;
     --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
+    --card: 20 5% 87%;
     --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
+    --popover: 20 5% 87%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 20 5% 87%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
@@ -35,7 +35,7 @@ html {
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 20 5% 87%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
@@ -51,11 +51,11 @@ html {
     --instagram: 350 96% 60%;
 
     --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    --foreground: 20 5% 87%;
     --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 20 5% 87%;
     --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 20 5% 87%;
     /* gold */
     --primary: 48 56% 50%;
     --primary-foreground: 0 0% 9%;
@@ -67,7 +67,7 @@ html {
     /* gold desaturated */
     --accent-foreground: 54.8 100% 75.3%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 20 5% 87%;
     --border: 0 0% 14.9%;
     /* --border: 55 100% 75%; */
     --input: 0 0% 14.9%;

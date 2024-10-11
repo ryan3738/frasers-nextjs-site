@@ -1,10 +1,7 @@
 'use client';
-import Link from 'next/link';
 import { useRef } from 'react';
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
-import { NavLinks, NavList } from './nav-list';
-import { Burger } from './burger';
-import { BurgerMenu } from './burger-menu';
+import { NavLinks, NavList } from '../../app/_components/nav-list';
+import { cn } from '@/lib/utils';
 
 interface HeaderProps {
   children?: React.ReactNode;
@@ -18,60 +15,31 @@ interface HeaderProps {
 
 export const Header = ({
   children,
-  showHomeLink = true,
   navLinks,
-  open,
-  setOpen,
-  position = 'fixed',
+  position = 'sticky',
   location = 'top'
 }: HeaderProps) => {
-  const node = useRef(null);
-  useOnClickOutside(node, () => setOpen?.(false));
   const headerLinks = navLinks?.filter(link => link.header === true);
-  const burgerLinks = navLinks?.filter(link => link.burger === true);
   return (
-    <header>
-      <div className="nav-bar w-full opacity-95">
-        {burgerLinks && burgerLinks?.length > 0 && (
-          <div className="burger">
-            <div ref={node}>
-              <Burger open={open} setOpen={setOpen} />
-            </div>
-            <BurgerMenu links={burgerLinks} open={open} />
-          </div>
-        )}
-        {headerLinks && headerLinks?.length > 0 && (
-          <>
-            <nav className="nav-list ">
-              {showHomeLink && (
-                <div className="title">
-                  <Link href="/" className=" hover:text-white">
-                    FRASERS
-                  </Link>
-                </div>
-              )}
-              <NavList links={headerLinks} showOnLarge={burgerLinks && true} />
-            </nav>
-          </>
-        )}
-      </div>
-      {headerLinks && headerLinks?.length > 0 && <div className="nav-spacer" />}
+    <header
+      className={cn(
+        'flex bg-background/95 left-0 z-50 overflow-x-auto w-full ',
+        location === 'top' ? 'top-0' : 'bottom-0',
+        position
+      )}
+    >
+      {headerLinks && headerLinks?.length > 0 && (
+        <nav className="flex h-16 w-full items-center justify-evenly ">
+          <NavList links={headerLinks} />
+        </nav>
+      )}
+
       {children}
       <style jsx>{`
-        .nav-spacer {
-          height: 4em;
-        }
         .title {
           padding: 0.5em;
           font-size: 2.2rem;
           color: var(--high-emphasis-text);
-        }
-        .nav-bar {
-          ${location}: 0;
-          left: 0;
-          z-index: 999;
-          position: ${position};
-          background: var(--background-color);
         }
         .nav-list {
           display: flex;

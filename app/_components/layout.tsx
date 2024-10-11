@@ -1,8 +1,6 @@
-'use client';
 import { BusinessInfo } from '@/tina/__generated__/types';
 import layoutData from '@/content/global/index.json';
 import Footer from './footer';
-import { useMediaQuery } from '@/hooks/use-media-query';
 import { Nav } from './nav';
 
 interface LayoutProps {
@@ -21,22 +19,20 @@ export const meta = {
 };
 
 export const Layout = ({ data = layoutData, children }: LayoutProps) => {
-  const isDesktop = useMediaQuery('(min-width: 768px)');
-
   return (
     <div className="grid size-full min-h-[calc(100vh-180px)] place-items-center">
-      {/* <Header navLinks={data.navigation.links} location="bottom" /> */}
-
       <Nav
         navLinks={data.navigation.links}
         location="top"
-        position={isDesktop ? 'sticky' : 'static'}
+        className={'hidden md:sticky md:flex'}
       />
-      <main className="flex w-full flex-col items-center">{children}</main>
+      <main className="flex min-h-screen w-full flex-col items-center">
+        {children}
+      </main>
       <Nav
         navLinks={data.navigation.links}
         location="bottom"
-        position={isDesktop ? 'static' : 'sticky'}
+        className="sticky md:hidden"
       />
       <Footer />
     </div>

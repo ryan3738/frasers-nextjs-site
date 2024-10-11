@@ -14,7 +14,7 @@ export const MenuSection = ({ section, id }: MenuSectionProps) => {
     return <div>No Menu Section Found</div>;
   }
   return (
-    <div id={id} className="w-full max-w-screen-lg bg-accent/30">
+    <div id={id} className="mb-40 w-full max-w-screen-lg bg-accent/30">
       <div className="mt-8 border-b border-accent-foreground">
         <TypographyH2 className=" p-4 text-center uppercase">
           {section?.name}

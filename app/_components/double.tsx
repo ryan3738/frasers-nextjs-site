@@ -1,10 +1,10 @@
+import { blurDataURL } from '@/components/blur-data-url';
 import {
   TypographyH2,
   TypographyH3,
   TypographyMuted
 } from '@/components/ui/typography';
 import Image from 'next/legacy/image';
-import { blurDataURL } from './image-placeholder';
 
 interface DoubleProps {
   children: React.ReactNode;

@@ -1,6 +1,9 @@
-import { Button, buttonVariants } from '@/components/ui/button';
+'use client';
+import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { useParams, usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export interface NavLinks {
   href: string;
@@ -17,33 +20,33 @@ interface NavListProps {
 }
 
 export function NavList({ links }: NavListProps) {
-  return (
-    <>
-      {links?.map((link, index) => {
-        return (
-          // <Button
-          //   key={link?.label || '' + index}
-          //   variant="ghost-inverted"
-          //   className="size-full min-w-14 rounded-none px-4 text-xl font-bold"
-          //   asChild
-          // >
-          <Link
-            key={link?.label || '' + index}
-            className={cn(
-              buttonVariants({
-                variant: 'ghost-inverted',
-                className:
-                  'h-14 w-full min-w-14 rounded-none px-4 text-xl bg-background font-bold'
-              })
-              // 'h-14 w-full min-w-14 rounded-none px-4 text-xl bg-background font-bold'
-            )}
-            href={link.href}
-          >
-            {link?.label}
-          </Link>
-          // </Button>
-        );
-      })}
-    </>
-  );
+  const pathName = usePathname();
+  const [hash, setHash] = useState('');
+  const params = useParams();
+
+  useEffect(() => {
+    setHash(window.location.hash);
+  }, [params]);
+
+  return links?.map((link, index) => {
+    const href = link.href;
+    const hashPath = pathName + hash;
+
+    return (
+      <Link
+        key={link?.label || '' + index}
+        className={cn(
+          buttonVariants({
+            variant: 'ghost-inverted',
+            className:
+              'uppercase h-20 w-full rounded-none text-xl bg-background font-bold'
+          }),
+          hashPath === href ? 'bg-secondary/50 text-accent-foreground' : ''
+        )}
+        href={link.href}
+      >
+        {link?.label}
+      </Link>
+    );
+  });
 }

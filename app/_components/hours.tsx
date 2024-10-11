@@ -30,14 +30,6 @@ export function Hours({ hours }: HoursProps) {
             </div>
           ))}
         </div>
-        <style jsx>{`
-          .item-detail {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 0 1.45rem 0;
-          }
-        `}</style>
       </div>
     );
   }

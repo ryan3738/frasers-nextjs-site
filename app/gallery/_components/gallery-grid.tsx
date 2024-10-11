@@ -1,116 +1,49 @@
-'use client';
 import Image from 'next/legacy/image';
 import { GalleryGridQuery } from '@/tina/__generated__/types';
+import { blurDataURL } from '@/components/blur-data-url';
+import { cn } from '@/lib/utils';
 
 interface GridProps {
   images: GalleryGridQuery['galleryGrid']['images'];
+  className?: string;
 }
 
-export const GalleryGrid = ({ images }: GridProps) => {
+export const GalleryGrid = ({ images, className }: GridProps) => {
   return (
-    <>
-      <div className="gallery-container">
-        {images?.map(
+    <div
+      className={cn(
+        ' flex w-full flex-wrap items-center justify-center gap-6 text-center',
+        className
+      )}
+    >
+      {images &&
+        images.map(
           image =>
             image &&
             image.src && (
               <div
                 key={image.alt}
-                id="image-div"
-                // className={data.size}
+                className="group relative inline-block h-auto w-full min-w-[240px] max-w-[360px] outline outline-0 outline-offset-8 outline-secondary-foreground transition-all duration-300 ease-in-out hover:outline-2 hover:outline-offset-0"
               >
-                <div className="image-overlay"> </div>
-                <div className="overlay-text">{image.alt}</div>
+                <div className="absolute left-0 top-0 z-10 size-full bg-background opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-40" />
+                <div className="absolute bottom-0 left-0 z-20 w-full p-6 text-left  text-3xl font-bold uppercase opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 sm:text-5xl">
+                  {image.alt}
+                </div>
+
                 <Image
-                  className="image"
+                  className="absolute left-0 top-0"
                   src={image.src}
                   alt={image.alt || 'gallery image'}
                   layout="responsive"
                   objectFit="cover"
+                  placeholder="blur"
+                  blurDataURL={blurDataURL}
                   height="560"
                   width="560"
                 />
               </div>
             )
         )}
-      </div>
-      <style jsx>{`
-        .gallery-container {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          align-content: stretch;
-          justify-content: center;
-          text-align: center;
-        }
-
-        .image {
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-        #image-div {
-          position: relative;
-          display: inline-block;
-          height: auto;
-          max-width: 360px;
-          width: 100vw;
-          border: 0px solid black;
-          outline-offset: -3px;
-          outline: 0px solid var(--primary-color);
-          padding: 12px;
-          transition: all 0.3s ease-in-out;
-        }
-
-        .image-overlay {
-          position: absolute;
-          z-index: 10;
-          margin: 0 auto;
-          left: 0;
-          bottom: 0;
-          /* Set the width of the positioned div*/
-          width: 100%;
-          height: 100%;
-          background: var(--background-color);
-          opacity: 0;
-          transition: all 0.3s ease-in-out;
-        }
-
-        #image-div:hover,
-        #image-div:active {
-          outline-offset: -12px;
-          outline: 2px solid var(--primary-color);
-        }
-
-        #image-div:active .image-overlay,
-        #image-div:hover .image-overlay {
-          opacity: 0.4;
-        }
-
-        #image-div:hover .overlay-text,
-        #image-div:active .overlay-text {
-          opacity: 1;
-        }
-
-        .overlay-text {
-          position: absolute;
-          z-index: 20;
-          margin: 0 auto;
-          padding: 1.5rem;
-          left: 0;
-          bottom: 0;
-          text-align: left;
-          /* Set the width of the positioned div*/
-          width: 100%;
-          text-transform: uppercase;
-          line-height: 1.2;
-          font-size: 2em;
-          color: var(-high-emphasis-text);
-          font-weight: bold;
-          opacity: 0;
-          transition: all 0.3s ease-in-out;
-        }
-      `}</style>
-    </>
+    </div>
   );
 };

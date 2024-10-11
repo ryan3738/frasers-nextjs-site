@@ -6,7 +6,7 @@ export function TypographyH1(props: React.HTMLAttributes<HTMLElement>) {
   return (
     <h1
       className={cn(
-        'scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl',
+        'scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl',
         className
       )}
       {...rest}
@@ -30,7 +30,7 @@ export function TypographyH2(props: React.HTMLAttributes<HTMLElement>) {
   return (
     <h2
       className={cn(
-        'scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight first:mt-0',
+        'scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0',
         className
       )}
       {...rest}
@@ -45,7 +45,7 @@ export function TypographyH3(props: React.HTMLAttributes<HTMLElement>) {
   return (
     <h3
       className={cn(
-        'scroll-m-20 text-1xl font-semibold tracking-tight',
+        'scroll-m-20 text-2xl font-semibold tracking-tight',
         className
       )}
       {...rest}
@@ -60,7 +60,7 @@ export function TypographyH4(props: React.HTMLAttributes<HTMLElement>) {
   return (
     <h4
       className={cn(
-        'scroll-m-20 text-lg font-semibold tracking-tight',
+        'scroll-m-20 text-xl font-semibold tracking-tight',
         className
       )}
       {...rest}
@@ -99,7 +99,7 @@ export function TypographyInlineCode(props: React.HTMLAttributes<HTMLElement>) {
   return (
     <code
       className={cn(
-        'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold',
+        'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-md font-semibold',
         className
       )}
       {...rest}
@@ -112,7 +112,7 @@ export function TypographyInlineCode(props: React.HTMLAttributes<HTMLElement>) {
 export function TypographyLead(props: React.HTMLAttributes<HTMLElement>) {
   const { children, className, ...rest } = props;
   return (
-    <p className={cn('text-xl text-muted-foreground', className)} {...rest}>
+    <p className={cn('text-2xl text-muted-foreground', className)} {...rest}>
       {children}
     </p>
   );
@@ -151,7 +151,7 @@ export function TypographySmall(props: React.HTMLAttributes<HTMLElement>) {
 export function TypographyMuted(props: React.HTMLAttributes<HTMLElement>) {
   const { children, className, ...rest } = props;
   return (
-    <div className={cn('text-sm text-muted-foreground', className)} {...rest}>
+    <div className={cn('text-md text-muted-foreground', className)} {...rest}>
       {children}
     </div>
   );

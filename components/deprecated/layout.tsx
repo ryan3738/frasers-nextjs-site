@@ -4,7 +4,7 @@ import { BusinessInfo } from '@/tina/__generated__/types';
 import layoutData from '@/content/global/index.json';
 import chroma from 'chroma-js';
 import { Header } from './header';
-import Footer from '../Footer';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: React.ReactNode;

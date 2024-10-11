@@ -1,4 +1,4 @@
-import { type NavLinks, NavList } from './nav-list';
+import { type NavLinks, NavList } from '../../app/_components/nav-list';
 
 interface BurgerMenuProps {
   open?: boolean;
