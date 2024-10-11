@@ -1,3 +1,9 @@
+import { blurDataURL } from '@/components/blur-data-url';
+import {
+  TypographyH2,
+  TypographyH3,
+  TypographyMuted
+} from '@/components/ui/typography';
 import Image from 'next/legacy/image';
 
 interface DoubleProps {
@@ -6,7 +12,6 @@ interface DoubleProps {
   subtitle: string;
   imageSource: string;
   imageAlt: string;
-  imageLeft?: boolean;
   rightText?: string;
   rightTitle?: string;
   rightSubtitle?: string;
@@ -19,86 +24,48 @@ export function Double({
   subtitle,
   imageSource,
   imageAlt,
-  imageLeft,
   rightText,
   rightTitle,
   rightSubtitle,
   id
-}: DoubleProps): JSX.Element {
+}: DoubleProps) {
   return (
-    <>
-      <div id={id} className="double-container">
-        {imageSource ? (
-          <>
-            <div className="double-item double-right">
-              <Image
-                src={imageSource}
-                alt={imageAlt}
-                height="560"
-                width="560"
-              />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="double-item double-text double-right">
-              <h2 className="primary-color">{rightTitle}</h2>
-              <h3>{rightSubtitle}</h3>
-              <div
-                className="medium-emphasis"
-                dangerouslySetInnerHTML={{ __html: rightText }}
-              />
-            </div>
-          </>
-        )}
-
-        <div className="double-item double-text double-left">
-          <h2 className="primary-color">{title}</h2>
-          <h3>{subtitle}</h3>
-          <div className="medium-emphasis">{children}</div>
+    <div id={id} className="mt-16 flex w-full max-w-[560px] flex-col">
+      {imageSource ? (
+        <div className="mx-3">
+          <Image
+            src={imageSource}
+            alt={imageAlt}
+            height="560"
+            width="560"
+            placeholder="blur"
+            blurDataURL={blurDataURL}
+          />
         </div>
-        <style jsx>{`
-          .double-container {
-            display: flex;
-            flex-direction: column;
-            max-width: 560px;
-            margin: 4rem 0 0;
-          }
-          .primary-color {
-            color: var(--primary-color-desaturated);
-          }
-
-          .double-item {
-            text-align: left;
-            margin: 0 10px 0;
-          }
-
-          .double-item > img {
-            padding-top: 4rem;
-            object-fit: cover;
-            width: 100%;
-            max-height: 100%;
-          }
-          .double-text {
-            margin: 5px 10px 5rem;
-            background: var(--surface-color);
-            padding: 1.5rem;
-            height: 100%;
-            box-shadow: var(--box-shadow);
-          }
-          .double-right {
-            grid-area: p1;
-          }
-
-          .double-left {
-            grid-area: t1;
-          }
-
-          .alternating-color:nth-child(odd) {
-            color: var(--color-white);
-          }
-        `}</style>
+      ) : (
+        <div className="mx-3 mb-20 mt-1 h-full space-y-4 bg-accent/50 p-6">
+          {rightTitle && (
+            <TypographyH2 className="uppercase text-accent-foreground">
+              {rightTitle}
+            </TypographyH2>
+          )}
+          {rightSubtitle && (
+            <TypographyH3 className="uppercase">{rightSubtitle}</TypographyH3>
+          )}
+          <TypographyMuted>{rightText || ''}</TypographyMuted>
+        </div>
+      )}
+      <div className="mx-3 mb-20 mt-1 h-full space-y-4 bg-accent/50 p-6">
+        {title && (
+          <TypographyH2 className="uppercase text-accent-foreground">
+            {title}
+          </TypographyH2>
+        )}
+        {subtitle && (
+          <TypographyH3 className="uppercase">{subtitle}</TypographyH3>
+        )}
+        <TypographyMuted className="text-lg">{children}</TypographyMuted>
       </div>
-    </>
+    </div>
   );
 }

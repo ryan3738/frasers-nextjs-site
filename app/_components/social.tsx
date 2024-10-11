@@ -1,15 +1,23 @@
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Image from 'next/legacy/image';
 
 interface SocialProps {
   href: string;
   img: string;
   alt: string;
-  color: string;
+  className?: string;
 }
 
-export function Social({ href, img, alt, color }: SocialProps): JSX.Element {
+export function Social({
+  href,
+  img,
+  alt,
+
+  className
+}: SocialProps): JSX.Element {
   return (
-    <div className="social">
+    <Button size="icon" className={cn('m-1 size-[45px]', className)} asChild>
       <a title={alt} href={href} target="_blank" rel="noreferrer noopener">
         <Image
           src={img}
@@ -21,22 +29,6 @@ export function Social({ href, img, alt, color }: SocialProps): JSX.Element {
           quality="100"
         />
       </a>
-      <style jsx>{`
-        .social {
-          width: 45px;
-          height: 45px;
-          vertical-align: center;
-          background-color: var(--primary-color);
-          border-radius: 5px;
-          grid-column: 1/2;
-          margin: 5px;
-        }
-        .social:hover {
-          animation-name: social-button;
-          animation-duration: 500ms;
-          background-color: var(${color});
-        }
-      `}</style>
-    </div>
+    </Button>
   );
 }

@@ -1,16 +1,15 @@
-import LinkButton from '@/components/LinkButton';
+import { Button } from '@/components/ui/button';
+import { TypographyH3, TypographyMuted } from '@/components/ui/typography';
+import { cn } from '@/lib/utils';
 
-export const NewsLetter = () => {
+export const NewsLetter = ({ className }: { className?: string }) => {
   return (
-    <>
-      <h3>Sign up for our newsletter to receive updates</h3>
-      <LinkButton
-        buttonText="SIGN UP"
-        buttonLink="https://squareup.com/outreach/sgPDT7/subscribe"
-      />
-      <br />
-      <br />
-      <p>We respect your privacy</p>
-    </>
+    <div className={cn('grid justify-items-center gap-2', className)}>
+      <TypographyH3>Sign up for our newsletter to receive updates</TypographyH3>
+      <Button className="w-fit" asChild>
+        <a href="https://squareup.com/outreach/sgPDT7/subscribe">Sign Up</a>
+      </Button>
+      <TypographyMuted>We respect your privacy</TypographyMuted>
+    </div>
   );
 };

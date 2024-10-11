@@ -1,8 +1,13 @@
+'use client';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { useParams, usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export interface NavLinks {
   href: string;
-  label: string;
+  label: string | null | undefined;
   header?: boolean;
   burger?: boolean;
   footer?: boolean;
@@ -14,67 +19,34 @@ interface NavListProps {
   burgerMenuLink?: boolean;
 }
 
-export function NavList({
-  links,
-  showOnLarge,
-  burgerMenuLink
-}: NavListProps): JSX.Element {
-  return (
-    <>
-      {links?.map((link, index) => (
-        <div
-          key={link?.label + index}
-          className={`nav-link ${showOnLarge && 'show-on-large'} ${
-            burgerMenuLink && 'burger-menu-link'
-          }`}
-        >
-          <Link
-            key={link.label}
-            href={link.href}
-            className="flex size-full place-items-center hover:text-white"
-          >
-            {link.label}
-          </Link>
-        </div>
-      ))}
-      <style jsx>{`
-        .nav-link {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-transform: uppercase;
-          padding: 0 3.25rem;
-          margin: auto;
-          font-weight: 600;
-          min-height: 60px;
-          min-width: 60px;
-          height: 100%;
-          width: auto;
-        }
-        a {
-          transition: all 0.3s ease-in-out;
-        }
-        a:hover {
-          background: var(--primary-color-desaturated);
-          color: var(--background-color);
-        }
-      `}</style>
-      <style jsx>{`
-        .burger-menu-link {
-          margin: 0;
-          height: auto;
-          width: 100%;
-        }
-        .show-on-large {
-          display: none;
-        }
+export function NavList({ links }: NavListProps) {
+  const pathName = usePathname();
+  const [hash, setHash] = useState('');
+  const params = useParams();
 
-        @media (min-width: 769px) {
-          .show-on-large {
-            display: flex;
-          }
-        }
-      `}</style>
-    </>
-  );
+  useEffect(() => {
+    setHash(window.location.hash);
+  }, [params]);
+
+  return links?.map((link, index) => {
+    const href = link.href;
+    const hashPath = pathName + hash;
+
+    return (
+      <Button
+        onClick={event => {
+          event.stopPropagation();
+        }}
+        className={cn(
+          'uppercase h-20 w-full rounded-none text-xl bg-background/90 font-bold z-50',
+          hashPath === href ? 'bg-secondary/50 text-accent-foreground' : ''
+        )}
+        variant="ghost-inverted"
+        key={link?.label || '' + index}
+        asChild
+      >
+        <Link href={link.href}>{link?.label}</Link>
+      </Button>
+    );
+  });
 }

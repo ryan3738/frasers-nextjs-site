@@ -1,65 +1,60 @@
-'use client';
 import siteData from '@/public/data/site-data.json';
-import styles from '@/styles/styles.module.css';
 import {
-  GalleryGridImages,
   MenuQuery,
-  BusinessInfoQuery
+  BusinessInfoQuery,
+  GalleryGridQuery
 } from '@/tina/__generated__/types';
 import { Menu } from '../menu/_components/menu';
 import { GalleryGrid } from '../gallery/_components/gallery-grid';
 import { Contact } from './contact';
 import { Double } from './double';
 import { Hero } from './hero';
+import { TypographyH1, TypographyH3 } from '@/components/ui/typography';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
 interface HomeProps {
   menu?: MenuQuery['menu'];
   businessInfo: BusinessInfoQuery['businessInfo'];
-  galleryImages?: GalleryGridImages[];
+  galleryImages?: GalleryGridQuery['galleryGrid']['images'];
 }
 
 export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
   const { phoneNumber } = businessInfo;
+
   return (
     <>
       <Hero businessInfo={businessInfo} />
-      <section className="container">
-        <h2 id="about" className={`${styles.header} ${styles.hiddenHeader}`}>
+      <section className="w-full max-w-screen-xl bg-accent/30">
+        <TypographyH1 id="about" className="hidden text-center">
           About
-        </h2>
-        <div className="double-wrapper">
-          <Double
-            id="about"
-            title=""
-            subtitle=""
-            imageSource="/images/gift-card-square.jpg"
-            imageAlt="frasers gift card closeup"
-          >
-            <div>
-              <p>Please call to make a reservation</p>
-              <h3>Gift Cards Available</h3>
-              To purchase a gift card please call us at{' '}
-              <span className="nowrap">{phoneNumber}</span>
-            </div>
-          </Double>
+        </TypographyH1>
+        <div className="flex flex-wrap justify-center">
           <Double
             id="announcements"
             title="Open for Dine In Service"
-            subtitle="To make a reservation call us at 360-279-1231"
+            subtitle="Please call to make a reservation at 360-279-1231"
             imageSource="/images/pig-were-back.jpg"
             imageAlt="Pig holding a sign that says were back"
           >
-            <div>
-              <h3>Takeout Is Still Available</h3>
+            <div className="space-y-4">
+              <TypographyH3 className="uppercase">
+                Takeout Is Still Available
+              </TypographyH3>
               <p>
                 Call {phoneNumber} during normal business hours to place an
                 order
               </p>
             </div>
-            <br />
-            <br />
+          </Double>
+          <Double
+            id="about"
+            title="Gift Cards Available"
+            subtitle={`To purchase a gift card please call us at ${phoneNumber}`}
+            imageSource="/images/gift-card-square.jpg"
+            imageAlt="frasers gift card closeup"
+          >
+            <></>
           </Double>
           <Double
             id="about"
@@ -75,60 +70,35 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
             subtitle={aboutOwner.subtitle}
             imageSource={aboutOwner.src}
             imageAlt={aboutOwner.alt}
-            imageLeft
           >
-            <div
-              dangerouslySetInnerHTML={{
-                __html: aboutOwner.content
-              }}
-            />
+            <div>{aboutOwner.content}</div>
           </Double>
         </div>
       </section>
-      <section id="menu" className="container">
-        <div className={styles.header}>
-          <h1>MENU</h1>
-        </div>
-        <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
+      <section
+        id="menu"
+        className="grid w-full max-w-screen-xl justify-items-center bg-accent/30"
+      >
+        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground lg:text-8xl">
+          MENU
+        </TypographyH1>
+        {menu && (
+          <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
+        )}
       </section>
-      <section id="gallery">
-        <div className={styles.header}>
-          <h1>Gallery</h1>
-        </div>
-        <GalleryGrid images={galleryImages} />
+      <section id="gallery" className="grid w-full justify-items-center ">
+        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground lg:text-8xl">
+          Gallery
+        </TypographyH1>
+        <GalleryGrid
+          images={galleryImages || []}
+          className="max-w-screen-2xl"
+        />
       </section>
       <section id="contact">
-        <div className={`${styles.header} ${styles.hiddenHeader}`}>
-          <h1>CONTACT</h1>
-        </div>
+        <TypographyH1 className="hidden">CONTACT</TypographyH1>
         <Contact businessInfo={businessInfo} />
       </section>
-      <style jsx>{`
-        .container {
-          width: 100%;
-          max-width: 1120px;
-          background-color: var(--surface-color);
-          /* background: var(--background-color); */
-        }
-        .double-wrapper {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        .special-menu {
-          list-style-type: none;
-          padding: 0;
-          margin: 0;
-          background-color: var(--surface-color);
-          padding: 10px;
-          border-radius: 7px;
-        }
-        .special-menu li {
-          background-color: var(--surface-color);
-          padding: 10px;
-          border-radius: 7px;
-        }
-      `}</style>
     </>
   );
 };

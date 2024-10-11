@@ -2,7 +2,6 @@
 import { MenuSection } from './menu-section';
 import { MenuQuery } from '@/tina/__generated__/types';
 import { slugify } from '@/lib/slugify';
-import { Header } from '@/app/_components/header';
 import { usePathname } from 'next/navigation';
 
 interface MenuProps {
@@ -16,31 +15,32 @@ export const Menu = ({ menu, sections, pathName }: MenuProps) => {
   if (!menu) {
     return <div>No Menu Found</div>;
   }
-  const links = menu.sections.map(section => {
+  const links = menu?.sections?.map(section => {
     return {
-      href: `${pathName || pathname}#${slugify(section.name)}`,
-      label: section.name
+      href: `${pathName || pathname}#${slugify(section?.name || '')}`,
+      label: section?.name
     };
   });
   return (
     <>
       {sections.map(item => {
-        const section = menu?.sections?.find(section => section.name === item);
+        const section = menu?.sections?.find(section => section?.name === item);
+        if (!section) return null;
         return (
           <MenuSection
             section={section}
             key={item}
             category={item}
-            id={slugify(section.name)}
+            id={slugify(section?.name || '')}
           />
         );
       })}
-      <Header
+      {/* <Header
         showHomeLink={false}
-        navLinks={links}
+        navLinks={links || []}
         position="sticky"
         location="bottom"
-      />
+      /> */}
     </>
   );
 };

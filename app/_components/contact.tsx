@@ -3,74 +3,47 @@ import { NewsLetter } from './news-letter';
 import { BusinessInfoQuery } from '@/tina/__generated__/types';
 import { Hours } from './hours';
 import { ContactInfo } from './contact-info';
+import { TypographyH3 } from '@/components/ui/typography';
 
 interface ContactProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
 }
 
-export function Contact({ businessInfo }: ContactProps): JSX.Element {
+export function Contact({ businessInfo }: ContactProps) {
   return (
-    <>
-      <div className="contact-content">
-        <div id="contact-info">
-          <div>
-            <ContactInfo
-              heading="Location"
-              address={businessInfo.address}
-              phoneNumber={businessInfo.phoneNumber}
-            />
-          </div>
-          <div>
-            <Hours hours={businessInfo.hours} />
-          </div>
-        </div>
+    <div className="flex flex-col justify-center pb-4 pt-8">
+      <div
+        id="contact-info"
+        className="flex h-auto w-full flex-wrap justify-around"
+      >
+        <ContactInfo
+          heading="Location"
+          address={businessInfo.address}
+          phoneNumber={businessInfo.phoneNumber}
+        />
 
-        <div className="social-media-container">
-          <NewsLetter />
-          <h3>For specials and event info follow us on social media</h3>
-          <div className="social-media-contents">
-            <Social
-              href="https://www.instagram.com/frasersgourmethideaway/"
-              img="/images/instagram-logo.png"
-              alt="frasers instagram"
-              color="--color-instagram"
-            />
-            <Social
-              href="http://facebook.com/frasersgh"
-              img="/images/facebook-logo.png"
-              alt="frasers facebook"
-              color="--color-facebook"
-            />
-          </div>
+        <Hours hours={businessInfo.hours} />
+      </div>
+      <div className="m-3 grid place-items-center gap-4">
+        <NewsLetter />
+        <TypographyH3>
+          For specials and event info follow us on social media
+        </TypographyH3>
+        <div className="flex flex-wrap  justify-center gap-2">
+          <Social
+            href="https://www.instagram.com/frasersgourmethideaway/"
+            img="/images/instagram-logo.png"
+            alt="frasers instagram"
+            className="hover:bg-instagram"
+          />
+          <Social
+            href="http://facebook.com/frasersgh"
+            img="/images/facebook-logo.png"
+            alt="frasers facebook"
+            className="hover:bg-facebook"
+          />
         </div>
       </div>
-      <style jsx>{`
-        .contact-content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          padding: 2rem 1rem;
-        }
-        #contact-info {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: space-around;
-          align-content: space-around;
-          width: 100%;
-          height: auto;
-          margin: 0 0 1.45rem 0;
-        }
-        .social-media-container {
-          display: flex;
-          flex-direction: column;
-          margin: 10px;
-        }
-        .social-media-contents {
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: center;
-        }
-      `}</style>
-    </>
+    </div>
   );
 }

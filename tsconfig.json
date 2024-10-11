@@ -9,7 +9,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -29,11 +29,11 @@
       "@/*": [
         "./*"
       ]
-    },
-    "strictNullChecks": false,
+    }
   },
   "exclude": [
     "node_modules",
+    ".next"
   ],
   "include": [
     ".eslintrc.js",
@@ -43,8 +43,9 @@
     "**/*.tsx",
     "**/*.cjs",
     "**/*.js",
-    ".next/types/**/*.ts",
+    // ".next/types/**/*.ts",
     "prettier.config.js",
-    "next.config.mjs"
+    "next.config.mjs",
+    ".next/types/**/*.ts"
   ]
 }

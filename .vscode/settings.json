@@ -12,6 +12,11 @@
         "source.formatDocument": "explicit",
         "source.fixAll.eslint": "explicit"
     },
-
-
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        "ngClass",
+        "classes",
+        ".*Classes*",
+    ]
 }

@@ -1,70 +1,57 @@
-import { BusinessInfo, BusinessInfoAddress } from '@/tina/__generated__/types';
+import { TypographyH2, TypographyMuted } from '@/components/ui/typography';
+import { cn } from '@/lib/utils';
+import { BusinessInfo, BusinessInfoQuery } from '@/tina/__generated__/types';
 
 interface ContactProps {
   heading: string;
-  address?: BusinessInfoAddress;
+  address?: BusinessInfoQuery['businessInfo']['address'];
   phoneNumber?: BusinessInfo['phoneNumber'];
+  className?: string;
 }
 
 export function ContactInfo({
   heading,
   address,
-  phoneNumber
-}: ContactProps): JSX.Element {
+  phoneNumber,
+  className
+}: ContactProps) {
   return (
-    <>
+    <div className={cn('flex flex-col items-center text-center', className)}>
       {heading && (
-        <h2 className="header-wrapper">
-          {heading}
-          <div className="divider" />
-        </h2>
+        <div className="border-b border-accent-foreground">
+          <TypographyH2 className="flex flex-col items-center uppercase">
+            {heading}
+          </TypographyH2>
+        </div>
       )}
-      <div>
-        <span className="medium-emphasis">
-          {address && (
-            <div className="item-detail">
-              {`${address.street} ${address.street2}`}
-              <br />
-              {`${address.city}, ${address.region} ${address.zip}`}
-            </div>
-          )}
-          {phoneNumber && (
-            <div className="item-detail">
-              <a href={`tel:${phoneNumber}`} title="Click to Get Directions">
-                {phoneNumber}
-              </a>
-            </div>
-          )}
-          {address?.directions && (
-            <div className="item-detail">
-              <a
-                href={address.directions}
-                target="_blank"
-                rel="noreferrer noopener"
-                className=""
-              >
-                <b>Get Directions</b>
-              </a>
-            </div>
-          )}
-        </span>
-      </div>
-      <style jsx>{`
-        .header-wrapper {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-        .item-detail {
-          margin: 1.45rem 0 0 0;
-        }
-        .divider {
-          border: 1px solid var(--primary-color-desaturated);
-          width: 80%;
-          height: 1px;
-          margin-top: 1rem;
-        }
-      `}</style>
-    </>
+      <TypographyMuted className="mt-2 grid gap-4">
+        {address && (
+          <div>
+            {`${address.street} ${address.street2}`}
+            <br />
+            {`${address.city}, ${address.region} ${address.zip}`}
+          </div>
+        )}
+        {phoneNumber && (
+          <div className="text-secondary-foreground">
+            <a href={`tel:${phoneNumber}`} title="Click to Get Directions">
+              {phoneNumber}
+            </a>
+          </div>
+        )}
+        {address?.directions && (
+          <div className=" text-secondary-foreground">
+            <a
+              href={address.directions}
+              target="_blank"
+              rel="noreferrer noopener"
+              className=""
+            >
+              <b>Get Directions</b>
+            </a>
+          </div>
+        )}
+      </TypographyMuted>
+    </div>
   );
 }
