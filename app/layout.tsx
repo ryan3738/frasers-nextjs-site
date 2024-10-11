@@ -87,7 +87,7 @@ export default function RootLayout({
       </Script>
       <body
         className={cn(
-          'relative min-h-[calc(100vh-180px)] w-full bg-background font-sans antialiased',
+          'relative font-sans antialiased bg-star-pattern',
           fontSans.variable
         )}
       >

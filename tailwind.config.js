@@ -56,10 +56,17 @@ module.exports = {
           foreground: 'hsl(var(--card-foreground))'
         }
       },
+      backgroundImage: {
+        'star-pattern': "url('/images/stars.png')",
+        'hero-image': "url('/images/calamari-blue-cheese-sauce.jpg')"
+      },
       borderRadius: {
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,
         sm: 'calc(var(--radius) - 4px)'
+      },
+      letterSpacing: {
+        'super-wide': '0.5rem'
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans]
@@ -78,18 +85,6 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
       }
-    }
-  },
-  extend: {
-    colors: {
-      // ...colors,
-      background: 'hsl(var(--background-color))',
-      foreground: 'hsl(var(--white-color))',
-      primary: {
-        DEFAULT: 'hsl(var(--primary-color))',
-        foreground: 'hsl(var(--black-color))'
-      },
-      border: 'hsl(var(--border))'
     }
   },
   plugins: [require('tailwindcss-animate')]

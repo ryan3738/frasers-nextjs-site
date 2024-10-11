@@ -10,7 +10,7 @@ import { GalleryGrid } from '../gallery/_components/gallery-grid';
 import { Contact } from './contact';
 import { Double } from './double';
 import { Hero } from './hero';
-import { TypographyH1 } from '@/components/ui/typography';
+import { TypographyH1, TypographyH3 } from '@/components/ui/typography';
 
 const { aboutBusiness, aboutOwner } = siteData;
 
@@ -32,35 +32,30 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
         </TypographyH1>
         <div className="flex flex-wrap justify-center">
           <Double
-            id="about"
-            title=""
-            subtitle=""
-            imageSource="/images/gift-card-square.jpg"
-            imageAlt="frasers gift card closeup"
-          >
-            <div>
-              <p>Please call to make a reservation</p>
-              <h3>Gift Cards Available</h3>
-              To purchase a gift card please call us at{' '}
-              <span className="text-nowrap">{phoneNumber}</span>
-            </div>
-          </Double>
-          <Double
             id="announcements"
             title="Open for Dine In Service"
-            subtitle="To make a reservation call us at 360-279-1231"
+            subtitle="Please call to make a reservation at 360-279-1231"
             imageSource="/images/pig-were-back.jpg"
             imageAlt="Pig holding a sign that says were back"
           >
-            <div>
-              <h3>Takeout Is Still Available</h3>
+            <div className="space-y-4">
+              <TypographyH3 className="uppercase">
+                Takeout Is Still Available
+              </TypographyH3>
               <p>
                 Call {phoneNumber} during normal business hours to place an
                 order
               </p>
             </div>
-            <br />
-            <br />
+          </Double>
+          <Double
+            id="about"
+            title="Gift Cards Available"
+            subtitle={`To purchase a gift card please call us at ${phoneNumber}`}
+            imageSource="/images/gift-card-square.jpg"
+            imageAlt="frasers gift card closeup"
+          >
+            <></>
           </Double>
           <Double
             id="about"
@@ -76,19 +71,14 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
             subtitle={aboutOwner.subtitle}
             imageSource={aboutOwner.src}
             imageAlt={aboutOwner.alt}
-            imageLeft
           >
-            <div
-              dangerouslySetInnerHTML={{
-                __html: aboutOwner.content
-              }}
-            />
+            <div>{aboutOwner.content}</div>
           </Double>
         </div>
       </section>
       <section
         id="menu"
-        className="grid w-full max-w-screen-xl justify-center bg-accent/30"
+        className="grid w-full max-w-screen-xl justify-items-center bg-accent/30"
       >
         <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground">
           MENU

@@ -24,22 +24,21 @@ export const Layout = ({ data = layoutData, children }: LayoutProps) => {
   const isDesktop = useMediaQuery('(min-width: 768px)');
 
   return (
-    <>
+    <div className="grid size-full min-h-[calc(100vh-180px)] place-items-center">
       {/* <Header navLinks={data.navigation.links} location="bottom" /> */}
-      <div className="flex size-full flex-col items-center justify-center p-0">
-        <Nav
-          navLinks={data.navigation.links}
-          location="top"
-          position={isDesktop ? 'sticky' : 'static'}
-        />
-        <main className="flex w-full flex-col items-center">{children}</main>
-        <Nav
-          navLinks={data.navigation.links}
-          location="bottom"
-          position={isDesktop ? 'static' : 'sticky'}
-        />
-        <Footer />
-      </div>
-    </>
+
+      <Nav
+        navLinks={data.navigation.links}
+        location="top"
+        position={isDesktop ? 'sticky' : 'static'}
+      />
+      <main className="flex w-full flex-col items-center">{children}</main>
+      <Nav
+        navLinks={data.navigation.links}
+        location="bottom"
+        position={isDesktop ? 'static' : 'sticky'}
+      />
+      <Footer />
+    </div>
   );
 };

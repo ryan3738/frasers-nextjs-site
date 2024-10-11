@@ -11,7 +11,7 @@ interface ContactProps {
 
 export function Contact({ businessInfo }: ContactProps) {
   return (
-    <div className="flex flex-col items-center pb-4 pt-8">
+    <div className="flex flex-col justify-center pb-4 pt-8">
       <div
         id="contact-info"
         className="flex h-auto w-full flex-wrap justify-around"
@@ -24,12 +24,12 @@ export function Contact({ businessInfo }: ContactProps) {
 
         <Hours hours={businessInfo.hours} />
       </div>
-      <div className="m-3 flex flex-col gap-4">
+      <div className="m-3 grid place-items-center gap-4">
         <NewsLetter />
         <TypographyH3>
           For specials and event info follow us on social media
         </TypographyH3>
-        <div className="flex flex-wrap justify-center gap-2">
+        <div className="flex flex-wrap  justify-center gap-2">
           <Social
             href="https://www.instagram.com/frasersgourmethideaway/"
             img="/images/instagram-logo.png"
