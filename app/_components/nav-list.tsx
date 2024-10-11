@@ -39,7 +39,7 @@ export function NavList({ links }: NavListProps) {
           buttonVariants({
             variant: 'ghost-inverted',
             className:
-              'uppercase h-20 w-full rounded-none text-xl bg-background font-bold'
+              'uppercase h-20 w-full rounded-none text-xl bg-background/90 font-bold z-50'
           }),
           hashPath === href ? 'bg-secondary/50 text-accent-foreground' : ''
         )}
