@@ -1,5 +1,5 @@
 'use client';
-import { buttonVariants } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
@@ -33,23 +33,20 @@ export function NavList({ links }: NavListProps) {
     const hashPath = pathName + hash;
 
     return (
-      <Link
-        key={link?.label || '' + index}
+      <Button
         onClick={event => {
           event.stopPropagation();
         }}
         className={cn(
-          buttonVariants({
-            variant: 'ghost-inverted',
-            className:
-              'uppercase h-20 w-full rounded-none text-xl bg-background/90 font-bold z-50'
-          }),
+          'uppercase h-20 w-full rounded-none text-xl bg-background/90 font-bold z-50',
           hashPath === href ? 'bg-secondary/50 text-accent-foreground' : ''
         )}
-        href={link.href}
+        variant="ghost-inverted"
+        key={link?.label || '' + index}
+        asChild
       >
-        {link?.label}
-      </Link>
+        <Link href={link.href}>{link?.label}</Link>
+      </Button>
     );
   });
 }
