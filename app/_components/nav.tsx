@@ -4,16 +4,10 @@ import { cn } from '@/lib/utils';
 interface HeaderProps {
   navLinks?: NavLinks[];
   location?: 'top' | 'bottom';
-  // position?: 'fixed' | 'sticky' | 'static' | 'hidden';
   className?: string;
 }
 
-export const Nav = ({
-  navLinks,
-  // position = 'sticky',
-  location = 'top',
-  className
-}: HeaderProps) => {
+export const Nav = ({ navLinks, location = 'top', className }: HeaderProps) => {
   const headerLinks = navLinks?.filter(link => link.header === true);
   return (
     headerLinks &&
@@ -22,7 +16,6 @@ export const Nav = ({
         className={cn(
           'flex h-20 bg-background/90 left-1/2 z-40 overflow-x-auto w-full',
           location === 'top' ? 'top-0' : 'bottom-0',
-          // position,
           className
         )}
       >

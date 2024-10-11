@@ -35,6 +35,9 @@ export function NavList({ links }: NavListProps) {
     return (
       <Link
         key={link?.label || '' + index}
+        onClick={event => {
+          event.stopPropagation();
+        }}
         className={cn(
           buttonVariants({
             variant: 'ghost-inverted',
