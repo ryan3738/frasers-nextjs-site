@@ -20,7 +20,7 @@ export const Nav = ({
     headerLinks?.length > 0 && (
       <nav
         className={cn(
-          'flex h-20 bg-background/95 left-0 z-50 items-center justify-evenly overflow-x-auto w-full',
+          'flex h-20 bg-background/90 left-1/2 z-50 overflow-x-auto w-full',
           location === 'top' ? 'top-0' : 'bottom-0',
           // position,
           className
