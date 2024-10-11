@@ -2,7 +2,6 @@
 import { MenuSection } from './menu-section';
 import { MenuQuery } from '@/tina/__generated__/types';
 import { slugify } from '@/lib/slugify';
-import { Header } from '@/components/deprecated/header';
 import { usePathname } from 'next/navigation';
 
 interface MenuProps {
