@@ -243,7 +243,7 @@
           "name": "VEGETABLE GNOCCHI",
           "description": "Tender ricotta gnocchi, seasonal vegetables, pesto cream sauce",
           "price": 20,
-          "available": true
+          "available": false
         },
         {
           "name": "VEGETABLE LASAGNA",
