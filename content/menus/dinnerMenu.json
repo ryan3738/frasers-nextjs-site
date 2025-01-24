@@ -28,12 +28,6 @@
           "available": true
         },
         {
-          "name": "GOAT CHEESE SALAD",
-          "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
-          "price": 18,
-          "available": true
-        },
-        {
           "name": "Tomato & Burrata",
           "description": "Oven roasted tomatoes, Burrata mozzarella, pickled asparagus, prosciutto, & baba ghanoush",
           "price": 18,
@@ -41,6 +35,12 @@
             "vegetarian",
             "gluten-free"
           ],
+          "available": true
+        },
+        {
+          "name": "GOAT CHEESE SALAD",
+          "description": "Deep fried cypress grove goat cheese arugula lettuce, apple, pickled onions",
+          "price": 18,
           "available": true
         },
         {
@@ -82,7 +82,7 @@
         {
           "name": "SEAFOOD CHOWDER",
           "description": "Clams, bacon, snapper & shrimp in a rich creamy stock",
-          "price": 17,
+          "price": 18,
           "available": true
         },
         {
