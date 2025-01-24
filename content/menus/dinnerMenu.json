@@ -189,15 +189,6 @@
           "available": true
         },
         {
-          "name": "VEGETABLE GNOCCHI",
-          "description": "Tender ricotta gnocchi, seasonal vegetables, & parmesan cream sauce",
-          "price": 28,
-          "dietary": [
-            "vegetarian"
-          ],
-          "available": false
-        },
-        {
           "name": "CRAB & SHRIMP LASAGNA",
           "description": "Dungeness crab, shrimp, & lobster cream sauce",
           "price": 37,
@@ -207,6 +198,15 @@
           "name": "SMOKED PORK SHANK GNOCCHI CARBONARA",
           "description": "Tender srf pork shank, ricotta gnocchi, charred brocolini, & parmesan cream sauce",
           "price": 36,
+          "available": true
+        },
+        {
+          "name": "VEGETABLE GNOCCHI",
+          "description": "Tender ricotta gnocchi, seasonal vegetables, & parmesan cream sauce",
+          "price": 30,
+          "dietary": [
+            "vegetarian"
+          ],
           "available": true
         },
         {
