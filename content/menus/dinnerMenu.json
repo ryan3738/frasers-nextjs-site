@@ -98,6 +98,12 @@
           "available": true
         },
         {
+          "name": "Penn Cove Mussels",
+          "description": "Steamed local mussels in a fragrant curry cream broth",
+          "price": 20,
+          "available": false
+        },
+        {
           "name": "BEEF & CHORIZO EMPANADAS",
           "description": "Rice & black bean salad, chimichurro aioli",
           "price": 12,
