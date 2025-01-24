@@ -62,15 +62,6 @@
           "available": true
         },
         {
-          "name": "Penn Cove Mussels",
-          "description": "Steamed local mussels in a fragrant curry cream broth",
-          "price": 17,
-          "dietary": [
-            "gluten-free"
-          ],
-          "available": false
-        },
-        {
           "name": "GARLIC & BRIE FONDUE FOR TWO",
           "description": "Roasted garlic & brie fondue for two, chef's selection of vegetables & bread",
           "price": 23,
@@ -95,6 +86,15 @@
           "name": "Duck Liver Pate",
           "description": "Homemade duck liver pate served with pear compote and crostinis",
           "price": 18,
+          "available": true
+        },
+        {
+          "name": "Penn Cove Mussels",
+          "description": "Steamed local mussels in a fragrant curry cream broth",
+          "price": 20,
+          "dietary": [
+            "gluten-free"
+          ],
           "available": true
         },
         {
