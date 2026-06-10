@@ -1,6 +1,6 @@
 # Next.js Restaurant Website
 
-A Next.js Jamstack website for Restaurants utilizing Tina CMS and Authentication. Users can update business info, hours, menu items, and the photo gallery with live previews. All changes are recorded in the git history and quickly deployed to the production site.
+A Next.js website for Restaurants utilizing Tina CMS and Authentication. Users can update business info, hours, menu items, and the photo gallery with live previews. All changes are recorded in the git history and quickly deployed to the production site.
 
 # Overview
 1. Clone [this repository](https://github.com/ryan3738/frasers-nextjs-site)
