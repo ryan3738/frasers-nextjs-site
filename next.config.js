@@ -1,6 +1,8 @@
-/* eslint-disable unicorn/prefer-module */
-
 module.exports = {
+  transpilePackages: ['next-tinacms-cloudinary'],
+  turbopack: {
+    root: __dirname
+  },
   async rewrites() {
     return [
       {
@@ -9,16 +11,16 @@ module.exports = {
       }
     ];
   },
-  i18n: {
-    locales: ['en'],
-    defaultLocale: 'en'
-  },
-  eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
-    ignoreDuringBuilds: true
-  },
   images: {
-    domains: ['res.cloudinary.com']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com'
+      },
+      {
+        protocol: 'http',
+        hostname: 'res.cloudinary.com'
+      }
+    ]
   }
 };

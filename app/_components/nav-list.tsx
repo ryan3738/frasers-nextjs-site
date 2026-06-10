@@ -2,8 +2,8 @@
 import { Button, buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { useParams, usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { useSyncExternalStore } from 'react';
 
 export interface NavLinks {
   href: string;
@@ -19,14 +19,18 @@ interface NavListProps {
   burgerMenuLink?: boolean;
 }
 
+function subscribeToHash(callback: () => void) {
+  window.addEventListener('hashchange', callback);
+  return () => window.removeEventListener('hashchange', callback);
+}
+
 export function NavList({ links }: NavListProps) {
   const pathName = usePathname();
-  const [hash, setHash] = useState('');
-  const params = useParams();
-
-  useEffect(() => {
-    setHash(window.location.hash);
-  }, [params]);
+  const hash = useSyncExternalStore(
+    subscribeToHash,
+    () => window.location.hash,
+    () => ''
+  );
 
   return links?.map((link, index) => {
     const href = link.href;

@@ -1,24 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@config '../tailwind.config.js';
 
 html {
-  /* box-sizing: border-box; */
   overflow-y: scroll;
-  /* scroll-padding-top: 4em; */
-  /* height of sticky header */
 }
 
 @layer base {
   :root {
-    /* --white-color: 0, 0%, 100%, 0.871 */
-    /* --surface-color: 0, 0%, 100%, 0.03 */
-    /* --primary-color: 48, 56%, 50% */
-    /* --primary-color-desaturated: var(--primary-color-200); */
-    /* --primary-color-desaturated: 54.8 100% 75.3%; */
     --facebook: 214, 89%, 52%;
     --instagram: 350 96% 60%;
-
 
     --background: 20 5% 87%;
     --foreground: 0 0% 3.9%;
@@ -56,7 +46,6 @@ html {
     --card-foreground: 20 5% 87%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 20 5% 87%;
-    /* gold */
     --primary: 48 56% 50%;
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
@@ -64,12 +53,10 @@ html {
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
     --accent: 0 0% 14.9%;
-    /* gold desaturated */
     --accent-foreground: 54.8 100% 75.3%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 20 5% 87%;
     --border: 0 0% 14.9%;
-    /* --border: 55 100% 75%; */
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
@@ -79,7 +66,6 @@ html {
     --chart-5: 340 75% 55%;
   }
 }
-
 
 @layer base {
   * {
