@@ -21,16 +21,17 @@ export const schema: Schema = {
           type: 'object',
           label: 'Images',
           name: 'images',
-          // ui: {
-          //   component: "groupList",
-          // },
+          ui: {
+            itemProps: item => {
+              return { label: item?.alt };
+            }
+          },
           list: true,
           fields: [
             {
               type: 'string',
               label: 'Image Alt Text',
               name: 'alt'
-              // required: true,
             },
             {
               name: 'src',

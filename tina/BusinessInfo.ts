@@ -5,7 +5,9 @@ const hoursSchema: TinaField = {
   label: 'Hours',
   name: 'hours',
   ui: {
-    component: 'groupList'
+    itemProps: item => {
+      return { label: item?.day };
+    }
   },
   list: true,
   fields: [

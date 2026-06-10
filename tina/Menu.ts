@@ -30,7 +30,9 @@ const modifierSchema: TinaField = {
   label: 'Modifiers',
   name: 'modifiers',
   ui: {
-    component: 'groupList'
+    itemProps: item => {
+      return { label: item?.name };
+    }
   },
   list: true,
   fields: [
