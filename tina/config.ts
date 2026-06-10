@@ -3,9 +3,10 @@ import { schema } from './schema';
 
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
+  process.env.NEXT_PUBLIC_EDIT_BRANCH ||
   process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
   process.env.HEAD ||
-  '';
+  'main';
 
 const token = process.env.TINA_TOKEN;
 const clientId = process.env.NEXT_PUBLIC_TINA_CLIENT_ID;

@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { BusinessInfoQuery } from '@/tina/__generated__/types';
 import { Hours } from './hours';
 import { TypographyH3 } from '@/components/ui/typography';
@@ -29,11 +29,11 @@ export function Hero({ businessInfo }: HeroProps) {
               src="/images/frasers-logo.png"
               title="Frasers"
               alt="Frasers Gourmet Hideaway Logo"
-              layout="responsive"
               placeholder="blur"
               blurDataURL={blurDataURL}
               width={228}
               height={104}
+              className="h-auto w-full"
             />
           </div>
           {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}
