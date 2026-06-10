@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 interface SocialProps {
   href: string;
@@ -15,18 +15,17 @@ export function Social({
   alt,
 
   className
-}: SocialProps): JSX.Element {
+}: SocialProps) {
   return (
     <Button size="icon" className={cn('m-1 size-[45px]', className)} asChild>
       <a title={alt} href={href} target="_blank" rel="noreferrer noopener">
         <Image
           src={img}
           alt={alt}
-          layout="fixed"
-          objectFit="cover"
-          height="45"
-          width="45"
-          quality="100"
+          height={45}
+          width={45}
+          quality={100}
+          className="object-cover"
         />
       </a>
     </Button>

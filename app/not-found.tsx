@@ -1,5 +1,5 @@
 import { TypographyH1 } from '@/components/ui/typography';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 export default function Custom404() {
   return (
@@ -8,8 +8,9 @@ export default function Custom404() {
       <Image
         src="/images/scott_fraser_square.jpg"
         alt="Scott holding a salmon"
-        height="480"
-        width="480"
+        height={480}
+        width={480}
+        className="h-auto max-w-full"
       />
     </div>
   );

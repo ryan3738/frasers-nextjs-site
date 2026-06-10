@@ -1,5 +1,3 @@
-import { fontFamily } from 'tailwindcss/defaultTheme';
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
@@ -14,12 +12,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        // background: 'hsl(var(--background-color))',
-        // foreground: 'hsl(var(--white-color))',
-        // primary: {
-        //   DEFAULT: 'hsl(var(--primary-color))',
-        //   foreground: 'hsl(var(--black-color))'
-        // },
         facebook: 'hsl(var(--facebook))',
         instagram: 'hsl(var(--instagram))',
         border: 'hsl(var(--border))',
@@ -61,15 +53,24 @@ module.exports = {
         'hero-image': "url('/images/calamari-blue-cheese-sauce.jpg')"
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
       letterSpacing: {
         'super-wide': '0.5rem'
       },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans]
+        sans: [
+          'var(--font-sans)',
+          'ui-sans-serif',
+          'system-ui',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji'
+        ]
       },
       keyframes: {
         'accordion-down': {
@@ -86,6 +87,5 @@ module.exports = {
         'accordion-up': 'accordion-up 0.2s ease-out'
       }
     }
-  },
-  plugins: [require('tailwindcss-animate')]
+  }
 };

@@ -4,7 +4,7 @@ import {
   TypographyH3,
   TypographyMuted
 } from '@/components/ui/typography';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 interface DoubleProps {
   children: React.ReactNode;
@@ -36,10 +36,11 @@ export function Double({
           <Image
             src={imageSource}
             alt={imageAlt}
-            height="560"
-            width="560"
+            height={560}
+            width={560}
             placeholder="blur"
             blurDataURL={blurDataURL}
+            className="h-auto w-full"
           />
         </div>
       ) : (
