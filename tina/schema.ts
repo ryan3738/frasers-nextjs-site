@@ -93,9 +93,8 @@ export const schema: Schema = {
           type: 'string',
           label: 'Notes',
           name: 'notes',
-          isBody: true,
           ui: {
-            component: 'markdown'
+            component: 'textarea'
           }
         },
         {
@@ -129,13 +128,10 @@ export const schema: Schema = {
           name: 'elementId'
         },
         {
-          type: 'string',
+          type: 'rich-text',
           label: 'Double Feature Body',
           name: 'body',
-          isBody: true,
-          ui: {
-            component: 'markdown'
-          }
+          isBody: true
         }
       ]
     },
