@@ -28,7 +28,7 @@ export default function HomePage() {
       ?.map(edge => edge?.node)
       .filter(
         (node): node is NonNullable<typeof node> =>
-          node != null && node.order != null
+          node != null && node.showOnHomepage === true
       ) ?? [];
 
   if (!menu || !businessInfo || !galleryImages) notFound();

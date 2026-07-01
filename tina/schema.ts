@@ -133,6 +133,15 @@ export const schema: Schema = {
           name: 'order'
         },
         {
+          type: 'boolean',
+          label: 'Show on Homepage',
+          name: 'showOnHomepage',
+          description: 'Turn off to hide this card without deleting it.',
+          ui: {
+            component: 'toggle'
+          }
+        },
+        {
           type: 'rich-text',
           label: 'Card Body',
           name: 'body',
