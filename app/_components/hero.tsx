@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { BusinessInfoQuery } from '@/tina/__generated__/types';
 import { Hours } from './hours';
-import { TypographyH3 } from '@/components/ui/typography';
+import { TypographyH1, TypographyH3 } from '@/components/ui/typography';
 import { blurDataURL } from '../../components/blur-data-url';
 
 interface HeroProps {
@@ -24,6 +24,7 @@ export function Hero({ businessInfo }: HeroProps) {
       >
         <div className="flex w-full flex-col content-stretch items-center justify-evenly gap-5 p-4 outline outline-1 outline-accent-foreground ">
           <p className="mb-0 text-lg tracking-super-wide">Est. | 2006</p>
+          <TypographyH1 className="sr-only">Frasers Gourmet Hideaway</TypographyH1>
           <div className="m-auto block h-auto w-full text-secondary-foreground">
             <Image
               src="/images/frasers-logo.png"

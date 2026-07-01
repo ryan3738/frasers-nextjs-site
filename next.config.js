@@ -3,6 +3,15 @@ module.exports = {
   turbopack: {
     root: __dirname
   },
+  async redirects() {
+    return [
+      {
+        source: '/gallery',
+        destination: '/#gallery',
+        permanent: true
+      }
+    ];
+  },
   async rewrites() {
     return [
       {

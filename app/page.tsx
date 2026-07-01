@@ -1,7 +1,13 @@
 import { notFound } from 'next/navigation';
 import client from '../tina/__generated__/client';
 import { isHighlightVisible } from '@/lib/is-highlight-visible';
+import { pageMetadata } from '@/lib/seo';
 import { Home } from './_components/home';
+import { StructuredData } from './_components/structured-data';
+
+export const metadata = pageMetadata({
+  path: '/'
+});
 
 export const revalidate = 3600;
 
@@ -36,11 +42,14 @@ export default function HomePage() {
 
   if (!menu || !businessInfo || !galleryImages) notFound();
   return (
-    <Home
-      menu={menu}
-      businessInfo={businessInfo}
-      galleryImages={galleryImages}
-      highlights={highlights}
-    />
+    <>
+      <StructuredData businessInfo={businessInfo} />
+      <Home
+        menu={menu}
+        businessInfo={businessInfo}
+        galleryImages={galleryImages}
+        highlights={highlights}
+      />
+    </>
   );
 }

@@ -6,6 +6,14 @@ import {
   CardFooter,
   CardTitle
 } from '@/components/ui/card';
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Theme Test',
+  description: 'Internal theme testing page.',
+  path: '/test',
+  noIndex: true
+});
 
 export default function HomePage() {
   return (

@@ -33,13 +33,13 @@ export function Contact({ businessInfo }: ContactProps) {
           <Social
             href="https://www.instagram.com/frasersgourmethideaway/"
             img="/images/instagram-logo.png"
-            alt="frasers instagram"
+            alt="Frasers Gourmet Hideaway on Instagram"
             className="hover:bg-instagram"
           />
           <Social
             href="http://facebook.com/frasersgh"
             img="/images/facebook-logo.png"
-            alt="frasers facebook"
+            alt="Frasers Gourmet Hideaway on Facebook"
             className="hover:bg-facebook"
           />
         </div>
