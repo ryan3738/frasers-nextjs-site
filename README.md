@@ -117,8 +117,21 @@ CI/CD via GitHub and Vercel is recommended so content changes deploy automatical
 
 1. Create a [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) account
 2. Create a [new project](https://vercel.com/new) linked to your GitHub repository
-3. Add all environment variables from `.env` to the Vercel project (Tina Cloud and Cloudinary credentials)
-4. Set `NEXT_PUBLIC_USE_LOCAL_CLIENT=0` in production so Tina saves to the remote git branch
+3. Add these environment variables in Vercel (**Production**, **Preview**, and **Development** — not just Production):
+
+| Variable | Notes |
+| --- | --- |
+| `NEXT_PUBLIC_TINA_CLIENT_ID` | From [app.tina.io](https://app.tina.io) → Project → Client ID |
+| `TINA_TOKEN` | Read-only **Content** token from Project → Tokens |
+| `TINA_INDEXER_TOKEN` | **Search** token from Project → Tokens |
+| `NEXT_PUBLIC_USE_LOCAL_CLIENT` | Set to `0` |
+| `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME` | Cloudinary cloud name |
+| `NEXT_PUBLIC_CLOUDINARY_API_KEY` | Cloudinary API key |
+| `CLOUDINARY_API_SECRET` | Cloudinary API secret |
+
+4. **Branch access (fixes `not authorized to access branch`):** Vercel builds use the deployed git branch (e.g. `staging`). In Tina Cloud → Project → **Tokens**, ensure your Content token includes that branch (or use **All branches**). In the project dashboard, confirm the branch is indexed (push a commit to `tina/tina-lock.json` on that branch if needed).
+
+5. **Optional:** If you only want Tina to read `main` on every Vercel deploy, set `NEXT_PUBLIC_TINA_BRANCH=main` in Vercel.
 
 ## Next steps
 

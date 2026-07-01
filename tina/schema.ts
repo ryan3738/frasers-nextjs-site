@@ -74,7 +74,7 @@ export const schema: Schema = {
       ]
     },
     {
-      label: 'Menu',
+      label: 'Menus',
       name: 'menu',
       path: 'content/menus',
       format: 'json',
@@ -106,7 +106,7 @@ export const schema: Schema = {
       ]
     },
     {
-      label: 'Homepage Card',
+      label: 'Homepage Cards',
       name: 'highlight',
       path: 'content/highlight',
       format: 'mdx',
