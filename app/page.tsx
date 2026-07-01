@@ -1,6 +1,9 @@
 import { notFound } from 'next/navigation';
 import client from '../tina/__generated__/client';
+import { isHighlightVisible } from '@/lib/is-highlight-visible';
 import { Home } from './_components/home';
+
+export const revalidate = 3600;
 
 const menuResponse = await client.queries.menu({
   relativePath: 'dinnerMenu.json'
@@ -28,7 +31,7 @@ export default function HomePage() {
       ?.map(edge => edge?.node)
       .filter(
         (node): node is NonNullable<typeof node> =>
-          node != null && node.showOnHomepage === true
+          node != null && isHighlightVisible(node)
       ) ?? [];
 
   if (!menu || !businessInfo || !galleryImages) notFound();

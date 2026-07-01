@@ -8,11 +8,18 @@ import { menuSectionSchema } from './Menu';
 import { imageSchema } from './General';
 import { addressSchema, hoursSchema } from './BusinessInfo';
 import { Schema } from 'tinacms';
+import {
+  comparePacificPublishDates,
+  formatPublishDateRange
+} from '../lib/is-highlight-visible';
+import { parsePacificDatetimeField, toTinaDatetimeDisplayValue } from '../lib/pacific-datetime';
 
 function buildHighlightListLabel(values: {
   title?: string;
   order?: number | null;
   showOnHomepage?: boolean;
+  publishStart?: string | null;
+  publishEnd?: string | null;
 }): string {
   const parts: string[] = [];
 
@@ -22,6 +29,14 @@ function buildHighlightListLabel(values: {
 
   parts.push(values.title?.trim() || 'Untitled');
   parts.push(values.showOnHomepage ? 'On homepage' : 'Hidden');
+
+  const dateRange = formatPublishDateRange(
+    values.publishStart,
+    values.publishEnd
+  );
+  if (dateRange) {
+    parts.push(dateRange);
+  }
 
   return parts.join(' · ');
 }
@@ -130,11 +145,19 @@ export const schema: Schema = {
       ui: {
         beforeSubmit: async ({ values }) => ({
           ...values,
+          publishStart: values.publishStart
+            ? parsePacificDatetimeField(String(values.publishStart))
+            : values.publishStart,
+          publishEnd: values.publishEnd
+            ? parsePacificDatetimeField(String(values.publishEnd))
+            : values.publishEnd,
           listLabel: buildHighlightListLabel(
             values as {
               title?: string;
               order?: number | null;
               showOnHomepage?: boolean;
+              publishStart?: string | null;
+              publishEnd?: string | null;
             }
           )
         })
@@ -169,6 +192,37 @@ export const schema: Schema = {
           description: 'Turn off to hide this card without deleting it.',
           ui: {
             component: 'toggle'
+          }
+        },
+        {
+          type: 'datetime',
+          name: 'publishStart',
+          label: 'Publish Start',
+          description:
+            'Optional. Date and time in Pacific time when this card can first appear.',
+          ui: {
+            dateFormat: true,
+            timeFormat: true,
+            parse: toTinaDatetimeDisplayValue,
+            format: (value: string) => parsePacificDatetimeField(value) ?? value
+          }
+        },
+        {
+          type: 'datetime',
+          name: 'publishEnd',
+          label: 'Publish End',
+          description:
+            'Optional. Date and time in Pacific time when this card stops appearing.',
+          ui: {
+            dateFormat: true,
+            timeFormat: true,
+            parse: toTinaDatetimeDisplayValue,
+            format: (value: string) => parsePacificDatetimeField(value) ?? value,
+            validate: (value: string, allValues) =>
+              comparePacificPublishDates(
+                allValues?.publishStart as string | null | undefined,
+                value
+              )
           }
         },
         {
