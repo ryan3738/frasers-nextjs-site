@@ -12,7 +12,8 @@ import {
   comparePacificPublishDates,
   formatPublishDateRange
 } from '../lib/is-highlight-visible';
-import { parsePacificDatetimeField, toTinaDatetimeDisplayValue } from '../lib/pacific-datetime';
+import { parsePacificDatetimeField } from '../lib/pacific-datetime';
+import { OptionalDatetimeField } from './components/optional-datetime-field';
 
 function buildHighlightListLabel(values: {
   title?: string;
@@ -195,29 +196,25 @@ export const schema: Schema = {
           }
         },
         {
-          type: 'datetime',
+          type: 'string',
           name: 'publishStart',
           label: 'Publish Start',
+          required: false,
           description:
-            'Optional. Date and time in Pacific time when this card can first appear.',
+            'Optional. Pacific date and time when this card can first appear. Leave unset for no start limit.',
           ui: {
-            dateFormat: true,
-            timeFormat: true,
-            parse: toTinaDatetimeDisplayValue,
-            format: (value: string) => parsePacificDatetimeField(value) ?? value
+            component: OptionalDatetimeField as never
           }
         },
         {
-          type: 'datetime',
+          type: 'string',
           name: 'publishEnd',
           label: 'Publish End',
+          required: false,
           description:
-            'Optional. Date and time in Pacific time when this card stops appearing.',
+            'Optional. Pacific date and time when this card stops appearing. Leave unset for no end limit.',
           ui: {
-            dateFormat: true,
-            timeFormat: true,
-            parse: toTinaDatetimeDisplayValue,
-            format: (value: string) => parsePacificDatetimeField(value) ?? value,
+            component: OptionalDatetimeField as never,
             validate: (value: string, allValues) =>
               comparePacificPublishDates(
                 allValues?.publishStart as string | null | undefined,

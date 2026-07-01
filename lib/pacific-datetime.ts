@@ -97,27 +97,6 @@ export function getPacificTimeParts(date: Date): {
   };
 }
 
-export function toTinaDatetimeDisplayValue(value: string): string {
-  if (!value) {
-    return '';
-  }
-
-  const date = new Date(value);
-  const dateKey = getPacificDateKeyFromValue(value);
-  const { hours, minutes, seconds, milliseconds } = getPacificTimeParts(date);
-  const [year, month, day] = dateKey.split('-').map(Number);
-
-  return new Date(
-    year,
-    month - 1,
-    day,
-    hours,
-    minutes,
-    seconds,
-    milliseconds
-  ).toISOString();
-}
-
 export function parsePacificDatetimeField(
   value?: string | null
 ): string | undefined {
@@ -145,6 +124,26 @@ export function parsePacificDatetimeField(
     seconds,
     milliseconds
   );
+}
+
+export function storedIsoToDatetimeLocalValue(iso: string): string {
+  const dateKey = getPacificDateKeyFromValue(iso);
+  const { hours, minutes } = getPacificTimeParts(new Date(iso));
+
+  return `${dateKey}T${pad(hours)}:${pad(minutes)}`;
+}
+
+export function datetimeLocalValueToStoredIso(
+  localValue: string
+): string | undefined {
+  if (!localValue) {
+    return undefined;
+  }
+
+  const [dateKey, time = '00:00'] = localValue.split('T');
+  const [hours, minutes] = time.split(':').map(Number);
+
+  return pacificWallClockToUtcIso(dateKey, hours, minutes, 0, 0);
 }
 
 export function formatPacificDatetime(
