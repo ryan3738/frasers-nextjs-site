@@ -1,4 +1,5 @@
 'use client';
+import { tinaField } from 'tinacms/dist/react';
 import { MenuSection } from './menu-section';
 import { MenuQuery } from '@/tina/__generated__/types';
 import { slugify } from '@/lib/slugify';
@@ -32,6 +33,19 @@ export const Menu = ({ menu, sections, pathName }: MenuProps) => {
             key={item}
             category={item}
             id={slugify(section?.name || '')}
+            nameField={tinaField(section, 'name')}
+            notesField={tinaField(section, 'notes')}
+            itemsWithFields={section.items?.map(menuItem =>
+              menuItem
+                ? {
+                    item: menuItem,
+                    nameField: tinaField(menuItem, 'name'),
+                    descriptionField: tinaField(menuItem, 'description'),
+                    priceField: tinaField(menuItem, 'price'),
+                    modifiersField: tinaField(menuItem, 'modifiers')
+                  }
+                : undefined
+            )}
           />
         );
       })}

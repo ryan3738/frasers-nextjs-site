@@ -7,13 +7,17 @@ interface ContactProps {
   address?: BusinessInfoQuery['businessInfo']['address'];
   phoneNumber?: BusinessInfo['phoneNumber'];
   className?: string;
+  addressField?: string;
+  phoneField?: string;
 }
 
 export function ContactInfo({
   heading,
   address,
   phoneNumber,
-  className
+  className,
+  addressField,
+  phoneField
 }: ContactProps) {
   return (
     <div className={cn('flex flex-col items-center text-center', className)}>
@@ -26,14 +30,17 @@ export function ContactInfo({
       )}
       <TypographyMuted className="mt-2 grid gap-4">
         {address && (
-          <address className="not-italic">
+          <address className="not-italic" data-tina-field={addressField}>
             {`${address.street} ${address.street2}`}
             <br />
             {`${address.city}, ${address.region} ${address.zip}`}
           </address>
         )}
         {phoneNumber && (
-          <address className="not-italic text-secondary-foreground">
+          <address
+            className="not-italic text-secondary-foreground"
+            data-tina-field={phoneField}
+          >
             <a href={`tel:${phoneNumber}`} title="Click to call">
               {phoneNumber}
             </a>

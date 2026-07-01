@@ -6,9 +6,21 @@ import { blurDataURL } from '../../components/blur-data-url';
 
 interface HeroProps {
   businessInfo?: BusinessInfoQuery['businessInfo'];
+  addressField?: string;
+  phoneField?: string;
+  hoursField?: string;
+  hourItemFields?: Array<
+    { day?: string; hours?: string } | undefined
+  >;
 }
 
-export function Hero({ businessInfo }: HeroProps) {
+export function Hero({
+  businessInfo,
+  addressField,
+  phoneField,
+  hoursField,
+  hourItemFields
+}: HeroProps) {
   if (!businessInfo) {
     return <div>No Business Info Found</div>;
   }
@@ -44,6 +56,7 @@ export function Hero({ businessInfo }: HeroProps) {
             rel="noreferrer noopener"
             title="Click to Get Directions"
             className="text-secondary-foreground"
+            data-tina-field={addressField}
           >
             {`${businessInfo?.address?.street} ${businessInfo?.address?.street2}`}
             <br />
@@ -59,11 +72,12 @@ export function Hero({ businessInfo }: HeroProps) {
             title="Click to Call"
             href={`tel:${businessInfo.phoneNumber}`}
             className="text-secondary-foreground"
+            data-tina-field={phoneField}
           >
             {businessInfo.phoneNumber}
           </a>
-          <div>
-            <Hours hours={businessInfo.hours} />
+          <div data-tina-field={hoursField}>
+            <Hours hours={businessInfo.hours} hourItemFields={hourItemFields} />
           </div>
         </div>
       </div>

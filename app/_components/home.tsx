@@ -4,9 +4,9 @@ import {
   GalleryGridQuery
 } from '@/tina/__generated__/types';
 import { Menu } from '../menu/_components/menu';
-import { GalleryGrid } from '../gallery/_components/gallery-grid';
-import { Contact } from './contact';
-import { Hero } from './hero';
+import { GalleryGridEditable } from '../gallery/_components/gallery-grid-editable';
+import { HeroEditable } from './hero-editable';
+import { ContactEditable } from './contact-editable';
 import { TypographyH1, TypographyH2 } from '@/components/ui/typography';
 
 interface HomeProps {
@@ -26,7 +26,7 @@ export const Home = ({
 
   return (
     <>
-      <Hero businessInfo={businessInfo} />
+      <HeroEditable businessInfo={businessInfo} />
       <section className="w-full max-w-7xl bg-accent/30">
         <TypographyH2 id="about" className="hidden text-center">
           About
@@ -48,14 +48,14 @@ export const Home = ({
         <TypographyH2 className="pb-6 mt-12 text-center text-accent-foreground lg:text-8xl">
           Gallery
         </TypographyH2>
-        <GalleryGrid
+        <GalleryGridEditable
           images={galleryImages || []}
           className="max-w-screen-2xl"
         />
       </section>
       <section id="contact">
         <TypographyH2 className="hidden">CONTACT</TypographyH2>
-        <Contact businessInfo={businessInfo} />
+        <ContactEditable businessInfo={businessInfo} />
       </section>
     </>
   );

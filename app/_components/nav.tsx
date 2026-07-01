@@ -3,12 +3,22 @@ import { cn } from '@/lib/utils';
 
 interface HeaderProps {
   navLinks?: NavLinks[];
+  linkFields?: Array<{ label?: string; href?: string } | undefined>;
   location?: 'top' | 'bottom';
   className?: string;
 }
 
-export const Nav = ({ navLinks, location = 'top', className }: HeaderProps) => {
+export const Nav = ({
+  navLinks,
+  linkFields,
+  location = 'top',
+  className
+}: HeaderProps) => {
   const headerLinks = navLinks?.filter(link => link.header === true);
+  const headerLinkFields = navLinks
+    ?.map((link, index) => (link.header === true ? linkFields?.[index] : undefined))
+    .filter((field): field is { label?: string; href?: string } => field != null);
+
   return (
     headerLinks &&
     headerLinks?.length > 0 && (
@@ -19,7 +29,7 @@ export const Nav = ({ navLinks, location = 'top', className }: HeaderProps) => {
           className
         )}
       >
-        <NavList links={headerLinks} />
+        <NavList links={headerLinks} linkFields={headerLinkFields} />
       </nav>
     )
   );

@@ -75,3 +75,12 @@ html {
     @apply bg-background/60 text-foreground;
   }
 }
+
+.__tina-quick-editing-enabled [data-tina-field] {
+  outline: 2px dashed rgba(254, 34, 56, 0.5);
+  cursor: pointer;
+}
+
+.__tina-quick-editing-enabled [data-tina-field]:hover {
+  outline: 2px dashed rgba(254, 34, 56, 1);
+}

@@ -1,5 +1,6 @@
 'use client';
 
+import { tinaField } from 'tinacms/dist/react';
 import { HighlightQuery } from '@/tina/__generated__/types';
 import { TinaPayload } from '@/lib/tina-page-props';
 import { useTinaWithForm } from '@/lib/use-tina-with-form';
@@ -31,8 +32,15 @@ export function HighlightClient({
       subtitle={interpolate(highlight.subtitle, templateValues)}
       imageSource={highlight.image?.src ?? ''}
       imageAlt={highlight.image?.alt ?? ''}
+      titleField={tinaField(highlight, 'title')}
+      subtitleField={tinaField(highlight, 'subtitle')}
+      imageField={tinaField(highlight, 'image')}
     >
-      <HighlightBody body={highlight.body} phoneNumber={phoneNumber} />
+      <HighlightBody
+        body={highlight.body}
+        phoneNumber={phoneNumber}
+        bodyField={tinaField(highlight, 'body')}
+      />
     </HighlightCard>
   );
 }

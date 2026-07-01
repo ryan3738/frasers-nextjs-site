@@ -8,13 +8,15 @@ interface LayoutProps {
   home?: boolean;
   businessInfo?: BusinessInfo;
   data?: any;
+  linkFields?: Array<{ label?: string; href?: string } | undefined>;
 }
 
-export const Layout = ({ data = layoutData, children }: LayoutProps) => {
+export const Layout = ({ data = layoutData, children, linkFields }: LayoutProps) => {
   return (
     <div className="grid size-full min-h-[calc(100vh-180px)] place-items-center">
       <Nav
         navLinks={data.navigation.links}
+        linkFields={linkFields}
         location="top"
         className={'hidden md:sticky md:flex'}
       />
@@ -23,10 +25,11 @@ export const Layout = ({ data = layoutData, children }: LayoutProps) => {
       </main>
       <Nav
         navLinks={data.navigation.links}
+        linkFields={linkFields}
         location="bottom"
         className="sticky md:hidden"
       />
-      <Footer navLinks={data.navigation.links} />
+      <Footer navLinks={data.navigation.links} linkFields={linkFields} />
     </div>
   );
 };
