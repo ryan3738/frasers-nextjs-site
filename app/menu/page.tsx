@@ -1,8 +1,7 @@
 import client from '@/tina/__generated__/client';
-import { Menu } from './_components/menu';
 import { notFound } from 'next/navigation';
 import { pageMetadata } from '@/lib/seo';
-import { TypographyH1 } from '@/components/ui/typography';
+import { MenuClient } from './menu-client';
 
 const menuResponse = await client.queries.menu({
   relativePath: 'dinnerMenu.json'
@@ -18,12 +17,9 @@ export const metadata = pageMetadata({
 const sections = ['Starters', 'Entrees'];
 
 export default function MenuPage() {
-  const menu = menuResponse?.data?.menu;
-  if (!menu) notFound();
-  return (
-    <>
-      <TypographyH1 className="mt-12 text-center">Menu</TypographyH1>
-      <Menu menu={menu} sections={sections} />
-    </>
-  );
+  if (!menuResponse?.data?.menu) {
+    notFound();
+  }
+
+  return <MenuClient {...menuResponse} sections={sections} />;
 }

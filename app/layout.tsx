@@ -1,7 +1,7 @@
 import Script from 'next/script';
 import '@/styles/global.css';
 import { Open_Sans } from 'next/font/google';
-import { Layout } from './_components/layout';
+import { CmsLayout } from './_components/cms-layout';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 import { rootMetadata } from '@/lib/seo';
@@ -44,7 +44,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Layout>{children}</Layout>
+          <CmsLayout>{children}</CmsLayout>
         </ThemeProvider>
       </body>
     </html>

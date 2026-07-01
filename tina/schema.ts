@@ -49,6 +49,9 @@ export const schema: Schema = {
       name: 'galleryGrid',
       path: 'content/gallery',
       format: 'json',
+      ui: {
+        router: () => '/'
+      },
       fields: [
         {
           type: 'object',
@@ -86,6 +89,9 @@ export const schema: Schema = {
       name: 'businessInfo',
       path: 'content/info',
       format: 'json',
+      ui: {
+        router: () => '/'
+      },
       fields: [
         {
           type: 'string',
@@ -111,6 +117,17 @@ export const schema: Schema = {
       name: 'menu',
       path: 'content/menus',
       format: 'json',
+      ui: {
+        router: ({ document }) => {
+          if (document._sys.filename === 'newYears') {
+            return '/menu/new-years';
+          }
+          if (document._sys.filename === 'dinnerMenu') {
+            return '/menu';
+          }
+          return undefined;
+        }
+      },
       fields: [
         {
           type: 'string',
@@ -144,6 +161,7 @@ export const schema: Schema = {
       path: 'content/highlight',
       format: 'mdx',
       ui: {
+        router: () => '/',
         beforeSubmit: async ({ values }) => ({
           ...values,
           publishStart: values.publishStart
@@ -284,6 +302,9 @@ export const schema: Schema = {
       name: 'global',
       path: 'content/global',
       format: 'json',
+      ui: {
+        router: () => '/'
+      },
       fields: [navigationSchema, themeSchema, metaSchema, footerSchema]
     }
   ]

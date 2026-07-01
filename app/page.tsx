@@ -1,9 +1,7 @@
 import { notFound } from 'next/navigation';
 import client from '../tina/__generated__/client';
-import { isHighlightVisible } from '@/lib/is-highlight-visible';
 import { pageMetadata } from '@/lib/seo';
-import { Home } from './_components/home';
-import { StructuredData } from './_components/structured-data';
+import { HomeClient } from './_components/home-client';
 
 export const metadata = pageMetadata({
   path: '/'
@@ -29,27 +27,20 @@ const highlightsResponse = await client.queries.highlightConnection({
 });
 
 export default function HomePage() {
-  const menu = menuResponse?.data?.menu;
-  const businessInfo = businessInfoResponse?.data?.businessInfo;
-  const galleryImages = galleryGridResponse?.data?.galleryGrid?.images || [];
-  const highlights =
-    highlightsResponse.data.highlightConnection.edges
-      ?.map(edge => edge?.node)
-      .filter(
-        (node): node is NonNullable<typeof node> =>
-          node != null && isHighlightVisible(node)
-      ) ?? [];
+  if (
+    !menuResponse?.data?.menu ||
+    !businessInfoResponse?.data?.businessInfo ||
+    !galleryGridResponse?.data?.galleryGrid
+  ) {
+    notFound();
+  }
 
-  if (!menu || !businessInfo || !galleryImages) notFound();
   return (
-    <>
-      <StructuredData businessInfo={businessInfo} />
-      <Home
-        menu={menu}
-        businessInfo={businessInfo}
-        galleryImages={galleryImages}
-        highlights={highlights}
-      />
-    </>
+    <HomeClient
+      menuPayload={menuResponse}
+      businessInfoPayload={businessInfoResponse}
+      galleryGridPayload={galleryGridResponse}
+      highlightsPayload={highlightsResponse}
+    />
   );
 }
