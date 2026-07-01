@@ -10,14 +10,6 @@ interface LayoutProps {
   data?: any;
 }
 
-export const meta = {
-  title: 'Frasers Gourmet Hideaway',
-  description:
-    'Full service steak and seafood restaurant in Oak Harbor, Washington | Serving Pacific Northwest inspired dishes using fresh and local ingredients.',
-  keywords: 'restaurant, steak, seafood, whidbey',
-  cardImage: '/android-chrome-512x512.png'
-};
-
 export const Layout = ({ data = layoutData, children }: LayoutProps) => {
   return (
     <div className="grid size-full min-h-[calc(100vh-180px)] place-items-center">
@@ -34,7 +26,7 @@ export const Layout = ({ data = layoutData, children }: LayoutProps) => {
         location="bottom"
         className="sticky md:hidden"
       />
-      <Footer />
+      <Footer navLinks={data.navigation.links} />
     </div>
   );
 };

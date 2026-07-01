@@ -11,7 +11,7 @@ import { Contact } from './contact';
 import { HighlightCard } from './highlight-card';
 import { HighlightBody } from './highlight-body';
 import { Hero } from './hero';
-import { TypographyH1 } from '@/components/ui/typography';
+import { TypographyH1, TypographyH2 } from '@/components/ui/typography';
 
 type HighlightNode = NonNullable<
   NonNullable<HighlightConnectionQuery['highlightConnection']['edges']>[number]
@@ -37,9 +37,9 @@ export const Home = ({
     <>
       <Hero businessInfo={businessInfo} />
       <section className="w-full max-w-7xl bg-accent/30">
-        <TypographyH1 id="about" className="hidden text-center">
+        <TypographyH2 id="about" className="hidden text-center">
           About
-        </TypographyH1>
+        </TypographyH2>
         <div className="flex flex-wrap justify-center">
           {highlights.map(highlight => (
             <HighlightCard
@@ -62,24 +62,24 @@ export const Home = ({
         id="menu"
         className="grid w-full max-w-7xl justify-items-center bg-accent/30"
       >
-        <TypographyH1 className="pb-6 mt-12 text-center text-accent-foreground lg:text-8xl">
+        <TypographyH2 className="pb-6 mt-12 text-center text-accent-foreground lg:text-8xl">
           MENU
-        </TypographyH1>
+        </TypographyH2>
         {menu && (
           <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
         )}
       </section>
       <section id="gallery" className="grid w-full justify-items-center ">
-        <TypographyH1 className="pb-6 mt-12 text-center text-accent-foreground lg:text-8xl">
+        <TypographyH2 className="pb-6 mt-12 text-center text-accent-foreground lg:text-8xl">
           Gallery
-        </TypographyH1>
+        </TypographyH2>
         <GalleryGrid
           images={galleryImages || []}
           className="max-w-screen-2xl"
         />
       </section>
       <section id="contact">
-        <TypographyH1 className="hidden">CONTACT</TypographyH1>
+        <TypographyH2 className="hidden">CONTACT</TypographyH2>
         <Contact businessInfo={businessInfo} />
       </section>
     </>

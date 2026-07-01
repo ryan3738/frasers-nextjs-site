@@ -1,5 +1,14 @@
 import { TypographyH1 } from '@/components/ui/typography';
+import { pageMetadata } from '@/lib/seo';
 import Image from 'next/image';
+
+export const metadata = pageMetadata({
+  title: '404 - Page Not Found',
+  description:
+    'The page you are looking for could not be found. Return to Frasers Gourmet Hideaway in Oak Harbor, Washington.',
+  path: '/404',
+  noIndex: true
+});
 
 export default function Custom404() {
   return (

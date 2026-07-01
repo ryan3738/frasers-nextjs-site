@@ -26,18 +26,18 @@ export function ContactInfo({
       )}
       <TypographyMuted className="mt-2 grid gap-4">
         {address && (
-          <div>
+          <address className="not-italic">
             {`${address.street} ${address.street2}`}
             <br />
             {`${address.city}, ${address.region} ${address.zip}`}
-          </div>
+          </address>
         )}
         {phoneNumber && (
-          <div className="text-secondary-foreground">
-            <a href={`tel:${phoneNumber}`} title="Click to Get Directions">
+          <address className="not-italic text-secondary-foreground">
+            <a href={`tel:${phoneNumber}`} title="Click to call">
               {phoneNumber}
             </a>
-          </div>
+          </address>
         )}
         {address?.directions && (
           <div className=" text-secondary-foreground">
