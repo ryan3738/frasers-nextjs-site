@@ -2,15 +2,12 @@
 
 import { TinaMarkdown, type TinaMarkdownContent } from 'tinacms/dist/rich-text';
 
-interface DoubleFeatureBodyProps {
+interface HighlightBodyProps {
   body?: TinaMarkdownContent | null;
   phoneNumber: string;
 }
 
-export function DoubleFeatureBody({
-  body,
-  phoneNumber
-}: DoubleFeatureBodyProps) {
+export function HighlightBody({ body, phoneNumber }: HighlightBodyProps) {
   if (!body) return null;
 
   const components = {

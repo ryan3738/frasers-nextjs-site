@@ -95,7 +95,7 @@ content/              # Tina CMS content (JSON and MDX)
   gallery/            # Gallery grid images
   info/               # Business name, contact, hours
   menus/              # Menu definitions
-  doubleFeature/      # About sections (MDX)
+  highlight/            # Homepage cards (MDX)
   global/             # Navigation, theme, meta, footer
 tina/                 # Tina CMS schema and config
 pages/api/cloudinary/ # Cloudinary media API route
@@ -107,7 +107,7 @@ Content collections are defined in `tina/schema.ts`:
 - **Gallery Grid** — photo gallery layout and images
 - **Business Info** — name, phone, email, address, hours
 - **Menu** — menu title, sections, items, and availability
-- **Double Feature** — MDX content blocks (e.g. about pages)
+- **Homepage Card** — MDX image + text blocks on the home page
 - **Blog Posts** — MDX blog content
 - **Global** — site navigation, theme, SEO meta, footer
 

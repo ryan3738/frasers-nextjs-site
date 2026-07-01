@@ -2,35 +2,33 @@ import {
   MenuQuery,
   BusinessInfoQuery,
   GalleryGridQuery,
-  DoubleFeatureConnectionQuery
+  HighlightConnectionQuery
 } from '@/tina/__generated__/types';
 import { interpolate } from '@/lib/interpolate';
 import { Menu } from '../menu/_components/menu';
 import { GalleryGrid } from '../gallery/_components/gallery-grid';
 import { Contact } from './contact';
-import { Double } from './double';
-import { DoubleFeatureBody } from './double-feature-body';
+import { HighlightCard } from './highlight-card';
+import { HighlightBody } from './highlight-body';
 import { Hero } from './hero';
 import { TypographyH1 } from '@/components/ui/typography';
 
-type DoubleFeatureNode = NonNullable<
-  NonNullable<
-    DoubleFeatureConnectionQuery['doubleFeatureConnection']['edges']
-  >[number]
+type HighlightNode = NonNullable<
+  NonNullable<HighlightConnectionQuery['highlightConnection']['edges']>[number]
 >['node'];
 
 interface HomeProps {
   menu?: MenuQuery['menu'];
   businessInfo: BusinessInfoQuery['businessInfo'];
   galleryImages?: GalleryGridQuery['galleryGrid']['images'];
-  doubleFeatures: NonNullable<DoubleFeatureNode>[];
+  highlights: NonNullable<HighlightNode>[];
 }
 
 export const Home = ({
   menu,
   businessInfo,
   galleryImages,
-  doubleFeatures
+  highlights
 }: HomeProps) => {
   const { phoneNumber } = businessInfo;
   const templateValues = { phoneNumber: phoneNumber ?? '' };
@@ -43,20 +41,20 @@ export const Home = ({
           About
         </TypographyH1>
         <div className="flex flex-wrap justify-center">
-          {doubleFeatures.map(feature => (
-            <Double
-              key={feature._sys.relativePath}
-              id={feature.elementId ?? undefined}
-              title={interpolate(feature.title, templateValues)}
-              subtitle={interpolate(feature.subtitle, templateValues)}
-              imageSource={feature.image?.src ?? ''}
-              imageAlt={feature.image?.alt ?? ''}
+          {highlights.map(highlight => (
+            <HighlightCard
+              key={highlight._sys.relativePath}
+              id={highlight.elementId ?? undefined}
+              title={interpolate(highlight.title, templateValues)}
+              subtitle={interpolate(highlight.subtitle, templateValues)}
+              imageSource={highlight.image?.src ?? ''}
+              imageAlt={highlight.image?.alt ?? ''}
             >
-              <DoubleFeatureBody
-                body={feature.body}
+              <HighlightBody
+                body={highlight.body}
                 phoneNumber={phoneNumber ?? ''}
               />
-            </Double>
+            </HighlightCard>
           ))}
         </div>
       </section>

@@ -106,9 +106,9 @@ export const schema: Schema = {
       ]
     },
     {
-      label: 'Double Feature',
-      name: 'doubleFeature',
-      path: 'content/doubleFeature',
+      label: 'Homepage Card',
+      name: 'highlight',
+      path: 'content/highlight',
       format: 'mdx',
       fields: [
         {
@@ -134,7 +134,7 @@ export const schema: Schema = {
         },
         {
           type: 'rich-text',
-          label: 'Double Feature Body',
+          label: 'Card Body',
           name: 'body',
           isBody: true,
           templates: [
