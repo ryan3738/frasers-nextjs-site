@@ -1,37 +1,28 @@
 import {
   MenuQuery,
   BusinessInfoQuery,
-  GalleryGridQuery,
-  HighlightConnectionQuery
+  GalleryGridQuery
 } from '@/tina/__generated__/types';
-import { interpolate } from '@/lib/interpolate';
 import { Menu } from '../menu/_components/menu';
 import { GalleryGrid } from '../gallery/_components/gallery-grid';
 import { Contact } from './contact';
-import { HighlightCard } from './highlight-card';
-import { HighlightBody } from './highlight-body';
 import { Hero } from './hero';
 import { TypographyH1, TypographyH2 } from '@/components/ui/typography';
-
-type HighlightNode = NonNullable<
-  NonNullable<HighlightConnectionQuery['highlightConnection']['edges']>[number]
->['node'];
 
 interface HomeProps {
   menu?: MenuQuery['menu'];
   businessInfo: BusinessInfoQuery['businessInfo'];
   galleryImages?: GalleryGridQuery['galleryGrid']['images'];
-  highlights: NonNullable<HighlightNode>[];
+  highlightsContent: React.ReactNode;
 }
 
 export const Home = ({
   menu,
   businessInfo,
   galleryImages,
-  highlights
+  highlightsContent
 }: HomeProps) => {
   const { phoneNumber } = businessInfo;
-  const templateValues = { phoneNumber: phoneNumber ?? '' };
 
   return (
     <>
@@ -40,23 +31,7 @@ export const Home = ({
         <TypographyH2 id="about" className="hidden text-center">
           About
         </TypographyH2>
-        <div className="flex flex-wrap justify-center">
-          {highlights.map(highlight => (
-            <HighlightCard
-              key={highlight._sys.relativePath}
-              id={highlight.elementId ?? undefined}
-              title={interpolate(highlight.title, templateValues)}
-              subtitle={interpolate(highlight.subtitle, templateValues)}
-              imageSource={highlight.image?.src ?? ''}
-              imageAlt={highlight.image?.alt ?? ''}
-            >
-              <HighlightBody
-                body={highlight.body}
-                phoneNumber={phoneNumber ?? ''}
-              />
-            </HighlightCard>
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-center">{highlightsContent}</div>
       </section>
       <section
         id="menu"

@@ -26,6 +26,17 @@ const highlightsResponse = await client.queries.highlightConnection({
   sort: 'order'
 });
 
+const highlightPaths =
+  highlightsResponse.data.highlightConnection.edges
+    ?.map(edge => edge?.node?._sys.relativePath)
+    .filter((path): path is string => Boolean(path)) ?? [];
+
+const highlightPayloads = await Promise.all(
+  highlightPaths.map(relativePath =>
+    client.queries.highlight({ relativePath })
+  )
+);
+
 export default function HomePage() {
   if (
     !menuResponse?.data?.menu ||
@@ -40,7 +51,8 @@ export default function HomePage() {
       menuPayload={menuResponse}
       businessInfoPayload={businessInfoResponse}
       galleryGridPayload={galleryGridResponse}
-      highlightsPayload={highlightsResponse}
+      highlightsConnectionPayload={highlightsResponse}
+      highlightPayloads={highlightPayloads}
     />
   );
 }

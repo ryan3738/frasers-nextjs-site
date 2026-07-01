@@ -1,8 +1,8 @@
 'use client';
 
-import { useTina } from 'tinacms/dist/react';
 import { MenuQuery } from '@/tina/__generated__/types';
 import { TinaPayload } from '@/lib/tina-page-props';
+import { useTinaWithForm } from '@/lib/use-tina-with-form';
 import { Menu } from '../_components/menu';
 import { TypographyH1 } from '@/components/ui/typography';
 
@@ -11,7 +11,7 @@ interface NewYearsClientProps extends TinaPayload<MenuQuery> {
 }
 
 export function NewYearsClient({ sections, ...props }: NewYearsClientProps) {
-  const { data } = useTina(props);
+  const { data } = useTinaWithForm(props);
   const menu = data.menu;
 
   if (!menu) {
