@@ -9,6 +9,23 @@ import { imageSchema } from './General';
 import { addressSchema, hoursSchema } from './BusinessInfo';
 import { Schema } from 'tinacms';
 
+function buildHighlightListLabel(values: {
+  title?: string;
+  order?: number | null;
+  showOnHomepage?: boolean;
+}): string {
+  const parts: string[] = [];
+
+  if (values.order != null) {
+    parts.push(`#${values.order}`);
+  }
+
+  parts.push(values.title?.trim() || 'Untitled');
+  parts.push(values.showOnHomepage ? 'On homepage' : 'Hidden');
+
+  return parts.join(' · ');
+}
+
 export const schema: Schema = {
   collections: [
     {
@@ -110,11 +127,24 @@ export const schema: Schema = {
       name: 'highlight',
       path: 'content/highlight',
       format: 'mdx',
+      ui: {
+        beforeSubmit: async ({ values }) => ({
+          ...values,
+          listLabel: buildHighlightListLabel(
+            values as {
+              title?: string;
+              order?: number | null;
+              showOnHomepage?: boolean;
+            }
+          )
+        })
+      },
       fields: [
         {
           type: 'string',
           label: 'Title',
-          name: 'title'
+          name: 'title',
+          required: true
         },
         {
           type: 'string',
@@ -139,6 +169,18 @@ export const schema: Schema = {
           description: 'Turn off to hide this card without deleting it.',
           ui: {
             component: 'toggle'
+          }
+        },
+        {
+          type: 'string',
+          label: 'List Label',
+          name: 'listLabel',
+          description:
+            'Used in the CMS sidebar. Updates automatically when you save.',
+          isTitle: true,
+          required: true,
+          ui: {
+            component: 'textarea'
           }
         },
         {
