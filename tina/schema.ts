@@ -128,10 +128,30 @@ export const schema: Schema = {
           name: 'elementId'
         },
         {
+          type: 'number',
+          label: 'Display Order',
+          name: 'order'
+        },
+        {
           type: 'rich-text',
           label: 'Double Feature Body',
           name: 'body',
-          isBody: true
+          isBody: true,
+          templates: [
+            {
+              name: 'PhoneNumber',
+              label: 'Phone Number',
+              fields: [
+                {
+                  type: 'string',
+                  name: 'label',
+                  label: 'Label (optional)',
+                  description:
+                    'Optional text shown before the phone number. Leave blank to show only the number.'
+                }
+              ]
+            }
+          ]
         }
       ]
     },
