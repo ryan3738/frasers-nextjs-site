@@ -1,85 +1,68 @@
-import siteData from '@/public/data/site-data.json';
 import {
   MenuQuery,
   BusinessInfoQuery,
-  GalleryGridQuery
+  GalleryGridQuery,
+  HighlightConnectionQuery
 } from '@/tina/__generated__/types';
+import { interpolate } from '@/lib/interpolate';
 import { Menu } from '../menu/_components/menu';
 import { GalleryGrid } from '../gallery/_components/gallery-grid';
 import { Contact } from './contact';
-import { Double } from './double';
+import { HighlightCard } from './highlight-card';
+import { HighlightBody } from './highlight-body';
 import { Hero } from './hero';
-import { TypographyH1, TypographyH3 } from '@/components/ui/typography';
+import { TypographyH1 } from '@/components/ui/typography';
 
-const { aboutBusiness, aboutOwner } = siteData;
+type HighlightNode = NonNullable<
+  NonNullable<HighlightConnectionQuery['highlightConnection']['edges']>[number]
+>['node'];
 
 interface HomeProps {
   menu?: MenuQuery['menu'];
   businessInfo: BusinessInfoQuery['businessInfo'];
   galleryImages?: GalleryGridQuery['galleryGrid']['images'];
+  highlights: NonNullable<HighlightNode>[];
 }
 
-export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
+export const Home = ({
+  menu,
+  businessInfo,
+  galleryImages,
+  highlights
+}: HomeProps) => {
   const { phoneNumber } = businessInfo;
+  const templateValues = { phoneNumber: phoneNumber ?? '' };
 
   return (
     <>
       <Hero businessInfo={businessInfo} />
-      <section className="w-full max-w-screen-xl bg-accent/30">
+      <section className="w-full max-w-7xl bg-accent/30">
         <TypographyH1 id="about" className="hidden text-center">
           About
         </TypographyH1>
         <div className="flex flex-wrap justify-center">
-          <Double
-            id="announcements"
-            title="Open for Dine In Service"
-            subtitle="Please call to make a reservation at 360-279-1231"
-            imageSource="/images/pig-were-back.jpg"
-            imageAlt="Pig holding a sign that says were back"
-          >
-            <div className="space-y-4">
-              <TypographyH3 className="uppercase">
-                Takeout Is Still Available
-              </TypographyH3>
-              <p>
-                Call {phoneNumber} during normal business hours to place an
-                order
-              </p>
-            </div>
-          </Double>
-          <Double
-            id="about"
-            title="Gift Cards Available"
-            subtitle={`To purchase a gift card please call us at ${phoneNumber}`}
-            imageSource="/images/gift-card-square.jpg"
-            imageAlt="frasers gift card closeup"
-          >
-            <></>
-          </Double>
-          <Double
-            id="about"
-            title={aboutBusiness.title}
-            subtitle={aboutBusiness.subtitle}
-            imageSource={aboutBusiness.src}
-            imageAlt={aboutBusiness.alt}
-          >
-            <div>{aboutBusiness.content}</div>
-          </Double>
-          <Double
-            title={aboutOwner.title}
-            subtitle={aboutOwner.subtitle}
-            imageSource={aboutOwner.src}
-            imageAlt={aboutOwner.alt}
-          >
-            <div>{aboutOwner.content}</div>
-          </Double>
+          {highlights.map(highlight => (
+            <HighlightCard
+              key={highlight._sys.relativePath}
+              id={highlight.elementId ?? undefined}
+              title={interpolate(highlight.title, templateValues)}
+              subtitle={interpolate(highlight.subtitle, templateValues)}
+              imageSource={highlight.image?.src ?? ''}
+              imageAlt={highlight.image?.alt ?? ''}
+            >
+              <HighlightBody
+                body={highlight.body}
+                phoneNumber={phoneNumber ?? ''}
+              />
+            </HighlightCard>
+          ))}
         </div>
       </section>
       <section
         id="menu"
-        className="grid w-full max-w-screen-xl justify-items-center bg-accent/30"
+        className="grid w-full max-w-7xl justify-items-center bg-accent/30"
       >
-        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground lg:text-8xl">
+        <TypographyH1 className="pb-6 mt-12 text-center text-accent-foreground lg:text-8xl">
           MENU
         </TypographyH1>
         {menu && (
@@ -87,7 +70,7 @@ export const Home = ({ menu, businessInfo, galleryImages }: HomeProps) => {
         )}
       </section>
       <section id="gallery" className="grid w-full justify-items-center ">
-        <TypographyH1 className="mt-12 pb-6 text-center text-accent-foreground lg:text-8xl">
+        <TypographyH1 className="pb-6 mt-12 text-center text-accent-foreground lg:text-8xl">
           Gallery
         </TypographyH1>
         <GalleryGrid

@@ -6,7 +6,7 @@ import {
 } from '@/components/ui/typography';
 import Image from 'next/image';
 
-interface DoubleProps {
+interface HighlightCardProps {
   children: React.ReactNode;
   title: string;
   subtitle: string;
@@ -18,7 +18,7 @@ interface DoubleProps {
   id?: string;
 }
 
-export function Double({
+export function HighlightCard({
   children,
   title,
   subtitle,
@@ -28,7 +28,7 @@ export function Double({
   rightTitle,
   rightSubtitle,
   id
-}: DoubleProps) {
+}: HighlightCardProps) {
   return (
     <div id={id} className="mt-16 flex w-full max-w-[560px] flex-col">
       {imageSource ? (

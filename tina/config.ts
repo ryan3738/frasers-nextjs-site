@@ -1,10 +1,12 @@
 import { defineConfig } from 'tinacms';
 import { schema } from './schema';
 
+// Prefer explicit override, then the branch Vercel is deploying, then local defaults.
 const branch =
   process.env.NEXT_PUBLIC_TINA_BRANCH ||
-  process.env.NEXT_PUBLIC_EDIT_BRANCH ||
+  process.env.VERCEL_GIT_COMMIT_REF ||
   process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF ||
+  process.env.NEXT_PUBLIC_EDIT_BRANCH ||
   process.env.HEAD ||
   'main';
 

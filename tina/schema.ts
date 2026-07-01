@@ -74,7 +74,7 @@ export const schema: Schema = {
       ]
     },
     {
-      label: 'Menu',
+      label: 'Menus',
       name: 'menu',
       path: 'content/menus',
       format: 'json',
@@ -106,9 +106,9 @@ export const schema: Schema = {
       ]
     },
     {
-      label: 'Double Feature',
-      name: 'doubleFeature',
-      path: 'content/doubleFeature',
+      label: 'Homepage Cards',
+      name: 'highlight',
+      path: 'content/highlight',
       format: 'mdx',
       fields: [
         {
@@ -128,10 +128,39 @@ export const schema: Schema = {
           name: 'elementId'
         },
         {
+          type: 'number',
+          label: 'Display Order',
+          name: 'order'
+        },
+        {
+          type: 'boolean',
+          label: 'Show on Homepage',
+          name: 'showOnHomepage',
+          description: 'Turn off to hide this card without deleting it.',
+          ui: {
+            component: 'toggle'
+          }
+        },
+        {
           type: 'rich-text',
-          label: 'Double Feature Body',
+          label: 'Card Body',
           name: 'body',
-          isBody: true
+          isBody: true,
+          templates: [
+            {
+              name: 'PhoneNumber',
+              label: 'Phone Number',
+              fields: [
+                {
+                  type: 'string',
+                  name: 'label',
+                  label: 'Label (optional)',
+                  description:
+                    'Optional text shown before the phone number. Leave blank to show only the number.'
+                }
+              ]
+            }
+          ]
         }
       ]
     },
