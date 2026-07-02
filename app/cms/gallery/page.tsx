@@ -4,17 +4,18 @@ import {
   assertHomePageData,
   loadHomePageData
 } from '@/lib/load-home-page-data';
-import { HomeClient } from './_components/home-client';
+import { HomeClient } from '@/app/_components/home-client';
 
 export const metadata = pageMetadata({
-  path: '/'
+  path: '/cms/gallery',
+  noIndex: true
 });
 
 export const revalidate = 3600;
 
 const homePageData = await loadHomePageData();
 
-export default function HomePage() {
+export default function CmsGalleryPreviewPage() {
   if (!assertHomePageData(homePageData)) {
     notFound();
   }

@@ -14,6 +14,14 @@ import {
 } from '../lib/is-highlight-visible';
 import { parsePacificDatetimeField } from '../lib/pacific-datetime';
 import { OptionalDatetimeField } from './components/optional-datetime-field';
+import {
+  businessPreviewPath,
+  formIdFromCollectionPath,
+  galleryPreviewPath,
+  globalPreviewPath,
+  highlightPreviewPath,
+  previewPathWithForm
+} from '../lib/preview-path';
 
 function buildHighlightListLabel(values: {
   title?: string;
@@ -50,7 +58,7 @@ export const schema: Schema = {
       path: 'content/gallery',
       format: 'json',
       ui: {
-        router: () => '/'
+        router: () => galleryPreviewPath()
       },
       fields: [
         {
@@ -90,7 +98,7 @@ export const schema: Schema = {
       path: 'content/info',
       format: 'json',
       ui: {
-        router: () => '/'
+        router: () => businessPreviewPath()
       },
       fields: [
         {
@@ -119,11 +127,19 @@ export const schema: Schema = {
       format: 'json',
       ui: {
         router: ({ document }) => {
+          const relativePath = `${document._sys.filename}.json`;
+
           if (document._sys.filename === 'newYears') {
-            return '/menu/new-years';
+            return previewPathWithForm(
+              formIdFromCollectionPath('content/menus', relativePath),
+              '/menu/new-years'
+            );
           }
           if (document._sys.filename === 'dinnerMenu') {
-            return '/menu';
+            return previewPathWithForm(
+              formIdFromCollectionPath('content/menus', relativePath),
+              '/menu'
+            );
           }
           return undefined;
         }
@@ -161,7 +177,7 @@ export const schema: Schema = {
       path: 'content/highlight',
       format: 'mdx',
       ui: {
-        router: () => '/',
+        router: ({ document }) => highlightPreviewPath(document._sys.filename),
         beforeSubmit: async ({ values }) => ({
           ...values,
           publishStart: values.publishStart
@@ -303,7 +319,7 @@ export const schema: Schema = {
       path: 'content/global',
       format: 'json',
       ui: {
-        router: () => '/'
+        router: () => globalPreviewPath()
       },
       fields: [navigationSchema, themeSchema, metaSchema, footerSchema]
     }

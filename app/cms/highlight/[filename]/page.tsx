@@ -4,17 +4,32 @@ import {
   assertHomePageData,
   loadHomePageData
 } from '@/lib/load-home-page-data';
-import { HomeClient } from './_components/home-client';
-
-export const metadata = pageMetadata({
-  path: '/'
-});
+import { HomeClient } from '@/app/_components/home-client';
 
 export const revalidate = 3600;
 
 const homePageData = await loadHomePageData();
 
-export default function HomePage() {
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ filename: string }>;
+}) {
+  const { filename } = await params;
+
+  return pageMetadata({
+    path: `/cms/highlight/${filename}`,
+    noIndex: true
+  });
+}
+
+export default async function CmsHighlightPreviewPage({
+  params
+}: {
+  params: Promise<{ filename: string }>;
+}) {
+  const { filename } = await params;
+
   if (!assertHomePageData(homePageData)) {
     notFound();
   }

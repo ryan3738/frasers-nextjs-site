@@ -3,23 +3,33 @@
 import { Suspense } from 'react';
 import { GlobalQuery } from '@/tina/__generated__/types';
 import { TinaPayload } from '@/lib/tina-page-props';
-import { useTinaWithForm } from '@/lib/use-tina-with-form';
+import { GLOBAL_FORM_ID } from '@/lib/preview-path';
+import { useActivePreviewFormId } from '@/lib/use-active-preview-form-id';
 import { LayoutEditable } from './layout-editable';
 import { PreviewFormSelector } from './preview-form-selector';
+import { TinaLive } from './tina-live';
 
 interface LayoutClientProps extends TinaPayload<GlobalQuery> {
   children: React.ReactNode;
 }
 
 export function LayoutClient({ children, ...props }: LayoutClientProps) {
-  const { data } = useTinaWithForm(props);
+  const activeFormId = useActivePreviewFormId();
 
   return (
-    <LayoutEditable global={data.global}>
-      <Suspense fallback={null}>
-        <PreviewFormSelector />
-      </Suspense>
-      {children}
-    </LayoutEditable>
+    <TinaLive
+      payload={props}
+      formId={GLOBAL_FORM_ID}
+      enabled={activeFormId === GLOBAL_FORM_ID}
+    >
+      {data => (
+        <LayoutEditable global={data.global}>
+          <Suspense fallback={null}>
+            <PreviewFormSelector />
+          </Suspense>
+          {children}
+        </LayoutEditable>
+      )}
+    </TinaLive>
   );
 }

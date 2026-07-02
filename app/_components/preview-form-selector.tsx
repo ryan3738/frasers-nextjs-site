@@ -2,23 +2,7 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useSyncExternalStore } from 'react';
-
-export const PREVIEW_FORM_PARAM = 'tinaForm';
-
-const PATH_FORM_MAP: Record<string, string> = {
-  '/menu': 'content/menus/dinnerMenu.json',
-  '/menu/new-years': 'content/menus/newYears.json'
-};
-
-const HASH_FORM_MAP: Record<string, string> = {
-  '#welcome': 'content/info/businessInfo.json',
-  '#about': 'content/highlight/aboutBusiness.mdx',
-  '#menu': 'content/menus/dinnerMenu.json',
-  '#gallery': 'content/gallery/galleryGrid.json',
-  '#contact': 'content/info/businessInfo.json'
-};
-
-const HOME_DEFAULT_FORM = 'content/info/businessInfo.json';
+import { getActivePreviewFormId } from '@/lib/preview-path';
 
 function subscribeToHash(callback: () => void) {
   window.addEventListener('hashchange', callback);
@@ -30,6 +14,9 @@ function getHash() {
 }
 
 function selectPreviewForm(formId: string) {
+  // #region agent log
+  fetch('http://127.0.0.1:7310/ingest/c4db365b-e961-468a-ac35-40eab15a1a76',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'3c9f59'},body:JSON.stringify({sessionId:'3c9f59',location:'preview-form-selector.tsx:selectPreviewForm',message:'posting user-select-form',data:{formId,href:typeof window!=='undefined'?window.location.href:null},timestamp:Date.now(),hypothesisId:'D',runId:'post-fix-2'})}).catch(()=>{});
+  // #endregion
   parent.postMessage(
     { type: 'user-select-form', formId },
     window.location.origin
@@ -42,23 +29,14 @@ export function PreviewFormSelector() {
   const hash = useSyncExternalStore(subscribeToHash, getHash, () => '');
 
   useEffect(() => {
-    const formIdFromParam = searchParams?.get(PREVIEW_FORM_PARAM);
-    if (formIdFromParam) {
-      selectPreviewForm(formIdFromParam);
-      return;
+    const formId = getActivePreviewFormId(searchParams, hash, pathname);
+    // #region agent log
+    fetch('http://127.0.0.1:7310/ingest/c4db365b-e961-468a-ac35-40eab15a1a76',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'3c9f59'},body:JSON.stringify({sessionId:'3c9f59',location:'preview-form-selector.tsx:useEffect',message:'preview URL parsed',data:{formId,pathname,hash,href:window.location.href},timestamp:Date.now(),hypothesisId:'F,G',runId:'post-fix-2'})}).catch(()=>{});
+    // #endregion
+    if (formId) {
+      selectPreviewForm(formId);
     }
-
-    const pathFormId = pathname ? PATH_FORM_MAP[pathname] : undefined;
-    if (pathFormId) {
-      selectPreviewForm(pathFormId);
-      return;
-    }
-
-    if (pathname === '/') {
-      const hashFormId = HASH_FORM_MAP[hash] ?? HOME_DEFAULT_FORM;
-      selectPreviewForm(hashFormId);
-    }
-  }, [pathname, hash, searchParams]);
+  }, [searchParams, hash, pathname]);
 
   return null;
 }
