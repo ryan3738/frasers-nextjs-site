@@ -8,7 +8,10 @@ import { Menu } from './_components/menu';
 import { TypographyH1 } from '@/components/ui/typography';
 import { TinaLive } from '@/app/_components/tina-live';
 
-const MENU_FORM_ID = formIdFromCollectionPath('content/menus', 'dinnerMenu.json');
+const MENU_FORM_ID = formIdFromCollectionPath(
+  'content/menus',
+  'dinnerMenu.json'
+);
 
 interface MenuClientProps extends TinaPayload<MenuQuery> {
   sections: string[];
@@ -33,7 +36,11 @@ export function MenuClient({ sections, ...props }: MenuClientProps) {
         return (
           <>
             <TypographyH1 className="mt-12 text-center">Menu</TypographyH1>
-            <Menu menu={menu} sections={sections} />
+            <Menu
+              menu={menu}
+              sections={sections}
+              clickToEdit={activeFormId === MENU_FORM_ID}
+            />
           </>
         );
       }}

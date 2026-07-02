@@ -11,6 +11,7 @@ import {
 import { TinaPayload } from '@/lib/tina-page-props';
 import {
   BUSINESS_INFO_FORM_ID,
+  formIdFromCollectionPath,
   GALLERY_FORM_ID,
   MENU_FORM_ID
 } from '@/lib/preview-path';
@@ -59,6 +60,13 @@ export function HomeClient({
         }
 
         if (edit) {
+          const formId = formIdFromCollectionPath(
+            'content/highlight',
+            node._sys.relativePath
+          );
+          if (activeFormId === formId) {
+            return true;
+          }
           return node.showOnHomepage === true;
         }
 
@@ -119,6 +127,7 @@ export function HomeClient({
                       businessInfo={businessInfo}
                       galleryImages={galleryImages}
                       highlightsContent={highlightsContent}
+                      activeFormId={activeFormId}
                     />
                   </>
                 );

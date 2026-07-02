@@ -6,9 +6,13 @@ import { Contact } from './contact';
 
 interface ContactEditableProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
+  clickToEdit?: boolean;
 }
 
-export function ContactEditable({ businessInfo }: ContactEditableProps) {
+export function ContactEditable({
+  businessInfo,
+  clickToEdit = false
+}: ContactEditableProps) {
   if (!businessInfo) {
     return null;
   }
@@ -16,14 +20,18 @@ export function ContactEditable({ businessInfo }: ContactEditableProps) {
   return (
     <Contact
       businessInfo={businessInfo}
-      addressField={tinaField(businessInfo, 'address')}
-      phoneField={tinaField(businessInfo, 'phoneNumber')}
-      hoursField={tinaField(businessInfo, 'hours')}
+      addressField={
+        clickToEdit ? tinaField(businessInfo, 'address') : undefined
+      }
+      phoneField={
+        clickToEdit ? tinaField(businessInfo, 'phoneNumber') : undefined
+      }
+      hoursField={clickToEdit ? tinaField(businessInfo, 'hours') : undefined}
       hourItemFields={businessInfo.hours?.map(item =>
         item
           ? {
-              day: tinaField(item, 'day'),
-              hours: tinaField(item, 'hours')
+              day: clickToEdit ? tinaField(item, 'day') : undefined,
+              hours: clickToEdit ? tinaField(item, 'hours') : undefined
             }
           : undefined
       )}

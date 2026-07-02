@@ -14,6 +14,8 @@ export const metadata = pageMetadata({
   path: '/menu'
 });
 
+export const revalidate = 3600;
+
 const sections = ['Starters', 'Entrees'];
 
 export default function MenuPage() {

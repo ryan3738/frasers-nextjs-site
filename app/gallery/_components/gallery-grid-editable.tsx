@@ -7,24 +7,30 @@ import { GalleryGrid } from './gallery-grid';
 interface GalleryGridEditableProps {
   images?: GalleryGridQuery['galleryGrid']['images'];
   className?: string;
+  clickToEdit?: boolean;
 }
 
 export function GalleryGridEditable({
   images,
-  className
+  className,
+  clickToEdit = false
 }: GalleryGridEditableProps) {
   return (
     <GalleryGrid
       images={images}
       className={className}
-      imageFields={images?.map(image =>
-        image
-          ? {
-              src: tinaField(image, 'src'),
-              alt: tinaField(image, 'alt')
-            }
+      imageFields={
+        clickToEdit
+          ? images?.map(image =>
+              image
+                ? {
+                    src: tinaField(image, 'src'),
+                    alt: tinaField(image, 'alt')
+                  }
+                : undefined
+            )
           : undefined
-      )}
+      }
     />
   );
 }

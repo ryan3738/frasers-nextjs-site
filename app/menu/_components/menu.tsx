@@ -9,9 +9,15 @@ interface MenuProps {
   sections: string[];
   pathName?: string;
   menu: MenuQuery['menu'];
+  clickToEdit?: boolean;
 }
 
-export const Menu = ({ menu, sections, pathName }: MenuProps) => {
+export const Menu = ({
+  menu,
+  sections,
+  pathName,
+  clickToEdit = false
+}: MenuProps) => {
   const pathname = usePathname();
   if (!menu) {
     return <div>No Menu Found</div>;
@@ -33,16 +39,24 @@ export const Menu = ({ menu, sections, pathName }: MenuProps) => {
             key={item}
             category={item}
             id={slugify(section?.name || '')}
-            nameField={tinaField(section, 'name')}
-            notesField={tinaField(section, 'notes')}
+            nameField={clickToEdit ? tinaField(section, 'name') : undefined}
+            notesField={clickToEdit ? tinaField(section, 'notes') : undefined}
             itemsWithFields={section.items?.map(menuItem =>
               menuItem
                 ? {
                     item: menuItem,
-                    nameField: tinaField(menuItem, 'name'),
-                    descriptionField: tinaField(menuItem, 'description'),
-                    priceField: tinaField(menuItem, 'price'),
-                    modifiersField: tinaField(menuItem, 'modifiers')
+                    nameField: clickToEdit
+                      ? tinaField(menuItem, 'name')
+                      : undefined,
+                    descriptionField: clickToEdit
+                      ? tinaField(menuItem, 'description')
+                      : undefined,
+                    priceField: clickToEdit
+                      ? tinaField(menuItem, 'price')
+                      : undefined,
+                    modifiersField: clickToEdit
+                      ? tinaField(menuItem, 'modifiers')
+                      : undefined
                   }
                 : undefined
             )}

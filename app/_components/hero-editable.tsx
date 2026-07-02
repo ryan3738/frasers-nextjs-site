@@ -6,9 +6,13 @@ import { Hero } from './hero';
 
 interface HeroEditableProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
+  clickToEdit?: boolean;
 }
 
-export function HeroEditable({ businessInfo }: HeroEditableProps) {
+export function HeroEditable({
+  businessInfo,
+  clickToEdit = false
+}: HeroEditableProps) {
   if (!businessInfo) {
     return null;
   }
@@ -16,14 +20,18 @@ export function HeroEditable({ businessInfo }: HeroEditableProps) {
   return (
     <Hero
       businessInfo={businessInfo}
-      addressField={tinaField(businessInfo, 'address')}
-      phoneField={tinaField(businessInfo, 'phoneNumber')}
-      hoursField={tinaField(businessInfo, 'hours')}
+      addressField={
+        clickToEdit ? tinaField(businessInfo, 'address') : undefined
+      }
+      phoneField={
+        clickToEdit ? tinaField(businessInfo, 'phoneNumber') : undefined
+      }
+      hoursField={clickToEdit ? tinaField(businessInfo, 'hours') : undefined}
       hourItemFields={businessInfo.hours?.map(item =>
         item
           ? {
-              day: tinaField(item, 'day'),
-              hours: tinaField(item, 'hours')
+              day: clickToEdit ? tinaField(item, 'day') : undefined,
+              hours: clickToEdit ? tinaField(item, 'hours') : undefined
             }
           : undefined
       )}

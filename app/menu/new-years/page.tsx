@@ -22,6 +22,8 @@ export const metadata = pageMetadata({
   path: '/menu/new-years'
 });
 
+export const revalidate = 3600;
+
 export default function MenuPage() {
   if (!menuResponse?.data?.menu) {
     notFound();
