@@ -15,7 +15,6 @@ export interface NavLinks {
 
 interface NavListProps {
   links: NavLinks[];
-  linkFields?: Array<{ label?: string; href?: string } | undefined>;
   showOnLarge?: boolean;
   burgerMenuLink?: boolean;
 }
@@ -25,7 +24,7 @@ function subscribeToHash(callback: () => void) {
   return () => window.removeEventListener('hashchange', callback);
 }
 
-export function NavList({ links, linkFields }: NavListProps) {
+export function NavList({ links }: NavListProps) {
   const pathName = usePathname();
   const hash = useSyncExternalStore(
     subscribeToHash,
@@ -50,9 +49,7 @@ export function NavList({ links, linkFields }: NavListProps) {
         key={link?.label || '' + index}
         asChild
       >
-        <Link href={link.href} data-tina-field={linkFields?.[index]?.label}>
-          {link?.label}
-        </Link>
+        <Link href={link.href}>{link?.label}</Link>
       </Button>
     );
   });

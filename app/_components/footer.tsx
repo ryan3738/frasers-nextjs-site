@@ -4,14 +4,10 @@ import { NavLinks } from './nav-list';
 interface FooterProps {
   children?: React.ReactNode;
   navLinks?: NavLinks[];
-  linkFields?: Array<{ label?: string; href?: string } | undefined>;
 }
 
-export default function Footer({ children, navLinks, linkFields }: FooterProps) {
+export default function Footer({ children, navLinks }: FooterProps) {
   const footerLinks = navLinks?.filter(link => link.footer === true) ?? [];
-  const footerLinkFields = navLinks
-    ?.map((link, index) => (link.footer === true ? linkFields?.[index] : undefined))
-    .filter((field): field is { label?: string; href?: string } => field != null);
 
   return (
     <footer className="grid h-fit w-full place-items-center overflow-x-auto bg-accent p-4">
@@ -21,12 +17,11 @@ export default function Footer({ children, navLinks, linkFields }: FooterProps) 
           aria-label="Footer"
           className="mb-4 flex flex-wrap items-center justify-center gap-4"
         >
-          {footerLinks.map((link, index) => (
+          {footerLinks.map(link => (
             <Link
               key={link.href}
               href={link.href}
               className="text-sm uppercase text-foreground/80 hover:text-foreground"
-              data-tina-field={footerLinkFields?.[index]?.label}
             >
               {link.label}
             </Link>

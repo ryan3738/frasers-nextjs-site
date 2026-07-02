@@ -11,7 +11,9 @@ interface MenuClientProps extends TinaPayload<MenuQuery> {
 }
 
 export function MenuClient({ sections, ...props }: MenuClientProps) {
-  const { data } = useTinaWithForm(props);
+  const { data } = useTinaWithForm(props, {
+    formId: 'content/menus/dinnerMenu.json'
+  });
   const menu = data.menu;
 
   if (!menu) {

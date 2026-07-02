@@ -11,7 +11,9 @@ interface NewYearsClientProps extends TinaPayload<MenuQuery> {
 }
 
 export function NewYearsClient({ sections, ...props }: NewYearsClientProps) {
-  const { data } = useTinaWithForm(props);
+  const { data } = useTinaWithForm(props, {
+    formId: 'content/menus/newYears.json'
+  });
   const menu = data.menu;
 
   if (!menu) {
