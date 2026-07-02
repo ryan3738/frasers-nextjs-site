@@ -1,5 +1,6 @@
 'use client';
 
+import { useEditState } from 'tinacms/dist/react';
 import { MenuQuery } from '@/tina/__generated__/types';
 import { TinaPayload } from '@/lib/tina-page-props';
 import { formIdFromCollectionPath } from '@/lib/preview-path';
@@ -18,6 +19,7 @@ interface NewYearsClientProps extends TinaPayload<MenuQuery> {
 }
 
 export function NewYearsClient({ sections, ...props }: NewYearsClientProps) {
+  const { edit } = useEditState();
   const activeFormId = useActivePreviewFormId();
 
   return (
@@ -38,7 +40,7 @@ export function NewYearsClient({ sections, ...props }: NewYearsClientProps) {
             <TypographyH1 className="mt-12 text-center">
               New Year&apos;s Eve Menu
             </TypographyH1>
-            <Menu menu={menu} sections={sections} />
+            <Menu menu={menu} sections={sections} clickToEdit={edit} />
           </>
         );
       }}

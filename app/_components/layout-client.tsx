@@ -6,6 +6,7 @@ import { TinaPayload } from '@/lib/tina-page-props';
 import { GLOBAL_FORM_ID } from '@/lib/preview-path';
 import { useActivePreviewFormId } from '@/lib/use-active-preview-form-id';
 import { LayoutEditable } from './layout-editable';
+import { PreviewClickToEdit } from './preview-click-to-edit';
 import { PreviewFormSelector } from './preview-form-selector';
 import { TinaLive } from './tina-live';
 
@@ -27,6 +28,7 @@ export function LayoutClient({ children, ...props }: LayoutClientProps) {
           <Suspense fallback={null}>
             <PreviewFormSelector />
           </Suspense>
+          <PreviewClickToEdit />
           {children}
         </LayoutEditable>
       )}

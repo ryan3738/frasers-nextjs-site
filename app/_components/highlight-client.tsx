@@ -12,6 +12,7 @@ import { HighlightBody } from './highlight-body';
 interface HighlightClientProps extends TinaPayload<HighlightQuery> {
   phoneNumber: string;
   activeFormId: string | null;
+  clickToEdit: boolean;
 }
 
 interface HighlightCardViewProps {
@@ -54,15 +55,17 @@ function HighlightCardView({
 function HighlightClientLive({
   phoneNumber,
   formId,
+  clickToEdit,
+  selectForm,
   ...payload
-}: HighlightClientProps & { formId: string }) {
-  const { data } = useTinaWithForm(payload, { formId });
+}: HighlightClientProps & { formId: string; selectForm: boolean }) {
+  const { data } = useTinaWithForm(payload, { formId, selectForm });
 
   return (
     <HighlightCardView
       highlight={data.highlight}
       phoneNumber={phoneNumber}
-      clickToEdit
+      clickToEdit={clickToEdit}
     />
   );
 }
@@ -70,6 +73,7 @@ function HighlightClientLive({
 export function HighlightClient({
   phoneNumber,
   activeFormId,
+  clickToEdit,
   ...payload
 }: HighlightClientProps) {
   const relativePath = (payload.variables as { relativePath: string })
@@ -77,12 +81,14 @@ export function HighlightClient({
   const formId = formIdFromCollectionPath('content/highlight', relativePath);
   const isActiveForm = activeFormId === formId;
 
-  if (isActiveForm) {
+  if (clickToEdit) {
     return (
       <HighlightClientLive
         phoneNumber={phoneNumber}
         activeFormId={activeFormId}
+        clickToEdit={clickToEdit}
         formId={formId}
+        selectForm={isActiveForm}
         {...payload}
       />
     );

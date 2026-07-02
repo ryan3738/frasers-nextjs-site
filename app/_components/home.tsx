@@ -3,11 +3,6 @@ import {
   BusinessInfoQuery,
   GalleryGridQuery
 } from '@/tina/__generated__/types';
-import {
-  BUSINESS_INFO_FORM_ID,
-  GALLERY_FORM_ID,
-  MENU_FORM_ID
-} from '@/lib/preview-path';
 import { Menu } from '../menu/_components/menu';
 import { GalleryGridEditable } from '../gallery/_components/gallery-grid-editable';
 import { HeroEditable } from './hero-editable';
@@ -19,7 +14,7 @@ interface HomeProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
   galleryImages?: GalleryGridQuery['galleryGrid']['images'];
   highlightsContent: React.ReactNode;
-  activeFormId: string | null;
+  clickToEdit: boolean;
 }
 
 export const Home = ({
@@ -27,16 +22,11 @@ export const Home = ({
   businessInfo,
   galleryImages,
   highlightsContent,
-  activeFormId
+  clickToEdit
 }: HomeProps) => {
-  const businessInfoClickToEdit = activeFormId === BUSINESS_INFO_FORM_ID;
-
   return (
     <>
-      <HeroEditable
-        businessInfo={businessInfo}
-        clickToEdit={businessInfoClickToEdit}
-      />
+      <HeroEditable businessInfo={businessInfo} clickToEdit={clickToEdit} />
       <section className="w-full max-w-7xl bg-accent/30">
         <TypographyH2 id="about" className="hidden text-center">
           About
@@ -55,7 +45,7 @@ export const Home = ({
             menu={menu}
             pathName="/"
             sections={['Starters', 'Entrees']}
-            clickToEdit={activeFormId === MENU_FORM_ID}
+            clickToEdit={clickToEdit}
           />
         )}
       </section>
@@ -66,15 +56,12 @@ export const Home = ({
         <GalleryGridEditable
           images={galleryImages || []}
           className="max-w-screen-2xl"
-          clickToEdit={activeFormId === GALLERY_FORM_ID}
+          clickToEdit={clickToEdit}
         />
       </section>
       <section id="contact">
         <TypographyH2 className="hidden">CONTACT</TypographyH2>
-        <ContactEditable
-          businessInfo={businessInfo}
-          clickToEdit={businessInfoClickToEdit}
-        />
+        <ContactEditable businessInfo={businessInfo} clickToEdit={clickToEdit} />
       </section>
     </>
   );

@@ -113,6 +113,7 @@ export function HomeClient({
                     <HighlightClient
                       key={relativePath}
                       activeFormId={activeFormId}
+                      clickToEdit={edit}
                       {...payload}
                       phoneNumber={phoneNumber}
                     />
@@ -127,7 +128,7 @@ export function HomeClient({
                       businessInfo={businessInfo}
                       galleryImages={galleryImages}
                       highlightsContent={highlightsContent}
-                      activeFormId={activeFormId}
+                      clickToEdit={edit}
                     />
                   </>
                 );

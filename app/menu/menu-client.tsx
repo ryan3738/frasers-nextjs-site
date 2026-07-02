@@ -1,5 +1,6 @@
 'use client';
 
+import { useEditState } from 'tinacms/dist/react';
 import { MenuQuery } from '@/tina/__generated__/types';
 import { TinaPayload } from '@/lib/tina-page-props';
 import { formIdFromCollectionPath } from '@/lib/preview-path';
@@ -18,6 +19,7 @@ interface MenuClientProps extends TinaPayload<MenuQuery> {
 }
 
 export function MenuClient({ sections, ...props }: MenuClientProps) {
+  const { edit } = useEditState();
   const activeFormId = useActivePreviewFormId();
 
   return (
@@ -39,7 +41,7 @@ export function MenuClient({ sections, ...props }: MenuClientProps) {
             <Menu
               menu={menu}
               sections={sections}
-              clickToEdit={activeFormId === MENU_FORM_ID}
+              clickToEdit={edit}
             />
           </>
         );
