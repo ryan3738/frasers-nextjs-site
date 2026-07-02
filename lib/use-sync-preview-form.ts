@@ -15,20 +15,21 @@ function selectPreviewForm(formId: string) {
   );
 }
 
-export function PreviewFormSelector() {
+export function useSyncPreviewForm(): string | null {
   const pathname = usePathname();
   const { hash, search } = useBrowserLocation();
 
-  useEffect(() => {
-    const formId = getActivePreviewFormId(
-      locationSearchParams(search),
-      hash,
-      pathname
-    );
-    if (formId) {
-      selectPreviewForm(formId);
-    }
-  }, [search, hash, pathname]);
+  const activeFormId = getActivePreviewFormId(
+    locationSearchParams(search),
+    hash,
+    pathname
+  );
 
-  return null;
+  useEffect(() => {
+    if (activeFormId) {
+      selectPreviewForm(activeFormId);
+    }
+  }, [activeFormId]);
+
+  return activeFormId;
 }

@@ -14,19 +14,17 @@ interface HomeProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
   galleryImages?: GalleryGridQuery['galleryGrid']['images'];
   highlightsContent: React.ReactNode;
-  clickToEdit: boolean;
 }
 
 export const Home = ({
   menu,
   businessInfo,
   galleryImages,
-  highlightsContent,
-  clickToEdit
+  highlightsContent
 }: HomeProps) => {
   return (
     <>
-      <HeroEditable businessInfo={businessInfo} clickToEdit={clickToEdit} />
+      <HeroEditable businessInfo={businessInfo} />
       <section className="w-full max-w-7xl bg-accent/30">
         <TypographyH2 id="about" className="hidden text-center">
           About
@@ -41,12 +39,7 @@ export const Home = ({
           MENU
         </TypographyH2>
         {menu && (
-          <Menu
-            menu={menu}
-            pathName="/"
-            sections={['Starters', 'Entrees']}
-            clickToEdit={clickToEdit}
-          />
+          <Menu menu={menu} pathName="/" sections={['Starters', 'Entrees']} />
         )}
       </section>
       <section id="gallery" className="grid w-full justify-items-center ">
@@ -56,12 +49,11 @@ export const Home = ({
         <GalleryGridEditable
           images={galleryImages || []}
           className="max-w-screen-2xl"
-          clickToEdit={clickToEdit}
         />
       </section>
       <section id="contact">
         <TypographyH2 className="hidden">CONTACT</TypographyH2>
-        <ContactEditable businessInfo={businessInfo} clickToEdit={clickToEdit} />
+        <ContactEditable businessInfo={businessInfo} />
       </section>
     </>
   );

@@ -1,26 +1,26 @@
 'use client';
 
-import { tinaField } from 'tinacms/dist/react';
+import { useEditState, tinaField } from 'tinacms/dist/react';
 import { GalleryGridQuery } from '@/tina/__generated__/types';
 import { GalleryGrid } from './gallery-grid';
 
 interface GalleryGridEditableProps {
   images?: GalleryGridQuery['galleryGrid']['images'];
   className?: string;
-  clickToEdit?: boolean;
 }
 
 export function GalleryGridEditable({
   images,
-  className,
-  clickToEdit = false
+  className
 }: GalleryGridEditableProps) {
+  const { edit } = useEditState();
+
   return (
     <GalleryGrid
       images={images}
       className={className}
       imageFields={
-        clickToEdit
+        edit
           ? images?.map(image =>
               image
                 ? {

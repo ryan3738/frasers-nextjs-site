@@ -8,26 +8,6 @@ const QUICK_EDIT_CSS = `
     outline: 2px solid rgba(34,150,254,1);
     cursor: pointer;
   }
-  [data-tina-field-overlay] {
-    outline: 2px dashed rgba(34,150,254,0.5);
-    position: relative;
-  }
-  [data-tina-field-overlay]:hover {
-    cursor: pointer;
-    outline: 2px solid rgba(34,150,254,1);
-  }
-  [data-tina-field-overlay]::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: 20;
-    transition: opacity ease-out 150ms;
-    background-color: rgba(34,150,254,0.3);
-    opacity: 0;
-  }
-  [data-tina-field-overlay]:hover::after {
-    opacity: 1;
-  }
 `;
 
 const QUICK_EDIT_BODY_CLASS = '__tina-quick-editing-enabled';
@@ -46,7 +26,7 @@ function readTinaField(el: Element): string | null {
   return null;
 }
 
-export function resolvePreviewFieldName(target: EventTarget | null): string | null {
+function resolvePreviewFieldName(target: EventTarget | null): string | null {
   if (!(target instanceof Element)) {
     return null;
   }
@@ -56,7 +36,7 @@ export function resolvePreviewFieldName(target: EventTarget | null): string | nu
     return direct;
   }
 
-  const ancestor = target.closest('[data-tina-field], [data-tina-field-overlay]');
+  const ancestor = target.closest('[data-tina-field]');
   if (!ancestor) {
     return null;
   }

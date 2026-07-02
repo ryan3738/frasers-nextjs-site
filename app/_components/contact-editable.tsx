@@ -1,40 +1,22 @@
 'use client';
 
-import { tinaField } from 'tinacms/dist/react';
+import { useEditState } from 'tinacms/dist/react';
 import { BusinessInfoQuery } from '@/tina/__generated__/types';
+import { businessInfoTinaFields } from '@/lib/business-info-tina-fields';
 import { Contact } from './contact';
 
 interface ContactEditableProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
-  clickToEdit?: boolean;
 }
 
-export function ContactEditable({
-  businessInfo,
-  clickToEdit = false
-}: ContactEditableProps) {
+export function ContactEditable({ businessInfo }: ContactEditableProps) {
+  const { edit } = useEditState();
+
   if (!businessInfo) {
     return null;
   }
 
-  return (
-    <Contact
-      businessInfo={businessInfo}
-      addressField={
-        clickToEdit ? tinaField(businessInfo, 'address') : undefined
-      }
-      phoneField={
-        clickToEdit ? tinaField(businessInfo, 'phoneNumber') : undefined
-      }
-      hoursField={clickToEdit ? tinaField(businessInfo, 'hours') : undefined}
-      hourItemFields={businessInfo.hours?.map(item =>
-        item
-          ? {
-              day: clickToEdit ? tinaField(item, 'day') : undefined,
-              hours: clickToEdit ? tinaField(item, 'hours') : undefined
-            }
-          : undefined
-      )}
-    />
-  );
+  const fields = businessInfoTinaFields(businessInfo, edit);
+
+  return <Contact businessInfo={businessInfo} {...fields} />;
 }

@@ -2,7 +2,7 @@
 
 import { useEditState } from 'tinacms/dist/react';
 import { TinaPayload } from '@/lib/tina-page-props';
-import { useTinaWithForm } from '@/lib/use-tina-with-form';
+import { useTinaLiveData } from '@/lib/use-tina-live-data';
 
 interface TinaLiveProps<T extends object> {
   payload: TinaPayload<T>;
@@ -14,10 +14,10 @@ interface TinaLiveProps<T extends object> {
 function TinaLiveInner<T extends object>({
   payload,
   formId,
-  selectForm,
+  enabled,
   children
-}: Omit<TinaLiveProps<T>, 'enabled'> & { selectForm: boolean }) {
-  const { data } = useTinaWithForm(payload, { formId, selectForm });
+}: TinaLiveProps<T>) {
+  const data = useTinaLiveData(payload, formId, enabled);
   return <>{children(data)}</>;
 }
 
@@ -34,11 +34,7 @@ export function TinaLive<T extends object>({
   }
 
   return (
-    <TinaLiveInner
-      payload={payload}
-      formId={formId}
-      selectForm={enabled}
-    >
+    <TinaLiveInner payload={payload} formId={formId} enabled={enabled}>
       {children}
     </TinaLiveInner>
   );

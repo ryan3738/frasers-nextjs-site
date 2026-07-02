@@ -27,12 +27,28 @@ export const MENU_FORM_ID = formIdFromCollectionPath(
   'content/menus',
   'dinnerMenu.json'
 );
+export const NEW_YEARS_FORM_ID = formIdFromCollectionPath(
+  'content/menus',
+  'newYears.json'
+);
+
+export function shouldSelectForm(
+  activeFormId: string | null,
+  formId: string,
+  permissiveWhenEmpty = false
+): boolean {
+  if (activeFormId === formId) {
+    return true;
+  }
+
+  return permissiveWhenEmpty && activeFormId === null;
+}
 
 export function previewPathWithForm(formId: string, path = '/'): string {
   return `${path}#${PREVIEW_FORM_PARAM}=${encodeURIComponent(formId)}`;
 }
 
-export function formIdFromHighlightFilename(filename: string): string {
+function formIdFromHighlightFilename(filename: string): string {
   return formIdFromCollectionPath('content/highlight', `${filename}.mdx`);
 }
 

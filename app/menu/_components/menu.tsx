@@ -1,5 +1,5 @@
 'use client';
-import { tinaField } from 'tinacms/dist/react';
+import { useEditState, tinaField } from 'tinacms/dist/react';
 import { MenuSection } from './menu-section';
 import { MenuQuery } from '@/tina/__generated__/types';
 import { slugify } from '@/lib/slugify';
@@ -9,25 +9,16 @@ interface MenuProps {
   sections: string[];
   pathName?: string;
   menu: MenuQuery['menu'];
-  clickToEdit?: boolean;
 }
 
-export const Menu = ({
-  menu,
-  sections,
-  pathName,
-  clickToEdit = false
-}: MenuProps) => {
+export const Menu = ({ menu, sections, pathName }: MenuProps) => {
+  const { edit } = useEditState();
   const pathname = usePathname();
+
   if (!menu) {
     return <div>No Menu Found</div>;
   }
-  const links = menu?.sections?.map(section => {
-    return {
-      href: `${pathName || pathname}#${slugify(section?.name || '')}`,
-      label: section?.name
-    };
-  });
+
   return (
     <>
       {sections.map(item => {
@@ -39,22 +30,18 @@ export const Menu = ({
             key={item}
             category={item}
             id={slugify(section?.name || '')}
-            nameField={clickToEdit ? tinaField(section, 'name') : undefined}
-            notesField={clickToEdit ? tinaField(section, 'notes') : undefined}
+            nameField={edit ? tinaField(section, 'name') : undefined}
+            notesField={edit ? tinaField(section, 'notes') : undefined}
             itemsWithFields={section.items?.map(menuItem =>
               menuItem
                 ? {
                     item: menuItem,
-                    nameField: clickToEdit
-                      ? tinaField(menuItem, 'name')
-                      : undefined,
-                    descriptionField: clickToEdit
+                    nameField: edit ? tinaField(menuItem, 'name') : undefined,
+                    descriptionField: edit
                       ? tinaField(menuItem, 'description')
                       : undefined,
-                    priceField: clickToEdit
-                      ? tinaField(menuItem, 'price')
-                      : undefined,
-                    modifiersField: clickToEdit
+                    priceField: edit ? tinaField(menuItem, 'price') : undefined,
+                    modifiersField: edit
                       ? tinaField(menuItem, 'modifiers')
                       : undefined
                   }
@@ -63,12 +50,6 @@ export const Menu = ({
           />
         );
       })}
-      {/* <Header
-        showHomeLink={false}
-        navLinks={links || []}
-        position="sticky"
-        location="bottom"
-      /> */}
     </>
   );
 };

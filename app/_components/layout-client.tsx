@@ -1,13 +1,13 @@
 'use client';
 
-import { Suspense } from 'react';
+import { useEffect } from 'react';
 import { GlobalQuery } from '@/tina/__generated__/types';
+import { bindPreviewClickToEdit } from '@/lib/preview-click-to-edit';
 import { TinaPayload } from '@/lib/tina-page-props';
-import { GLOBAL_FORM_ID } from '@/lib/preview-path';
-import { useActivePreviewFormId } from '@/lib/use-active-preview-form-id';
-import { LayoutEditable } from './layout-editable';
-import { PreviewClickToEdit } from './preview-click-to-edit';
-import { PreviewFormSelector } from './preview-form-selector';
+import { GLOBAL_FORM_ID, shouldSelectForm } from '@/lib/preview-path';
+import { useSyncPreviewForm } from '@/lib/use-sync-preview-form';
+import { useEditState } from 'tinacms/dist/react';
+import { Layout } from './layout';
 import { TinaLive } from './tina-live';
 
 interface LayoutClientProps extends TinaPayload<GlobalQuery> {
@@ -15,23 +15,24 @@ interface LayoutClientProps extends TinaPayload<GlobalQuery> {
 }
 
 export function LayoutClient({ children, ...props }: LayoutClientProps) {
-  const activeFormId = useActivePreviewFormId();
+  const { edit } = useEditState();
+  const activeFormId = useSyncPreviewForm();
+
+  useEffect(() => {
+    if (!edit) {
+      return;
+    }
+
+    return bindPreviewClickToEdit();
+  }, [edit]);
 
   return (
     <TinaLive
       payload={props}
       formId={GLOBAL_FORM_ID}
-      enabled={activeFormId === GLOBAL_FORM_ID}
+      enabled={shouldSelectForm(activeFormId, GLOBAL_FORM_ID)}
     >
-      {data => (
-        <LayoutEditable global={data.global}>
-          <Suspense fallback={null}>
-            <PreviewFormSelector />
-          </Suspense>
-          <PreviewClickToEdit />
-          {children}
-        </LayoutEditable>
-      )}
+      {data => <Layout data={data.global}>{children}</Layout>}
     </TinaLive>
   );
 }
