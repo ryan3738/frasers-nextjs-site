@@ -9,9 +9,7 @@ interface HeroProps {
   addressField?: string;
   phoneField?: string;
   hoursField?: string;
-  hourItemFields?: Array<
-    { day?: string; hours?: string } | undefined
-  >;
+  hourItemFields?: Array<{ day?: string; hours?: string } | undefined>;
 }
 
 export function Hero({
@@ -28,25 +26,28 @@ export function Hero({
   return (
     <div
       id="welcome"
-      className="grid w-full max-w-screen-xl place-items-center  bg-star-pattern text-center md:bg-hero-image md:bg-cover md:bg-center md:bg-no-repeat"
+      className="grid w-full text-center max-w-7xl place-items-center bg-star-pattern md:bg-hero-image md:bg-cover md:bg-center md:bg-no-repeat"
     >
       <div
         id="welcome-box"
         className="my-4 grid w-full min-w-[250px] max-w-[450px] place-items-center bg-background/95 bg-star-pattern p-4"
       >
-        <div className="flex w-full flex-col content-stretch items-center justify-evenly gap-5 p-4 outline outline-1 outline-accent-foreground ">
+        <div className="flex flex-col items-center w-full gap-5 p-4 content-stretch justify-evenly outline-1 outline-accent-foreground">
           <p className="mb-0 text-lg tracking-super-wide">Est. | 2006</p>
-          <TypographyH1 className="sr-only">Frasers Gourmet Hideaway</TypographyH1>
-          <div className="m-auto block h-auto w-full text-secondary-foreground">
+          <TypographyH1 className="sr-only">
+            Frasers Gourmet Hideaway
+          </TypographyH1>
+          <div className="relative w-full m-auto aspect-228/104 shrink-0 text-secondary-foreground">
             <Image
               src="/images/frasers-logo.png"
               title="Frasers"
               alt="Frasers Gourmet Hideaway Logo"
+              fill
+              priority
+              sizes="(max-width: 450px) 100vw, 450px"
               placeholder="blur"
               blurDataURL={blurDataURL}
-              width={228}
-              height={104}
-              className="h-auto w-full"
+              className="object-contain"
             />
           </div>
           {/* <h6>HOME OF EXQUISITE<br />TASTES AND SERVICE</h6> */}

@@ -21,7 +21,7 @@ export function Hours({ hours, hoursField, hourItemFields }: HoursProps) {
           {hours.map((item, index) => (
             <div
               key={item?.day}
-              className="mb-6 mt-2 flex flex-col items-center"
+              className="mb-6 mt-2 flex min-h-[3.25rem] flex-col items-center justify-center"
             >
               <div>
                 <strong className="uppercase" data-tina-field={hourItemFields?.[index]?.day}>

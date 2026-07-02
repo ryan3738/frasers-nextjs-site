@@ -10,7 +10,8 @@ export const metadata = rootMetadata();
 
 const fontSans = Open_Sans({
   subsets: ['latin'],
-  variable: '--font-sans'
+  variable: '--font-sans',
+  adjustFontFallback: true
 });
 
 export default function RootLayout({
@@ -19,7 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="overflow-y-scroll" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={cn('dark overflow-y-scroll')}
+      suppressHydrationWarning
+    >
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
         strategy="afterInteractive"
@@ -41,7 +46,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
         >
           <CmsLayout>{children}</CmsLayout>
