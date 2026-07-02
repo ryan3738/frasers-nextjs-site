@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { useEditState } from 'tinacms/dist/react';
 import {
   BusinessInfoQuery,
@@ -43,12 +42,6 @@ export function HomeClient({
 }: HomeClientProps) {
   const { edit } = useEditState();
   const activeFormId = useActivePreviewFormId();
-
-  useEffect(() => {
-    // #region agent log
-    fetch('http://127.0.0.1:7310/ingest/c4db365b-e961-468a-ac35-40eab15a1a76',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'3c9f59'},body:JSON.stringify({sessionId:'3c9f59',location:'home-client.tsx:activeFormId',message:'active preview form resolved',data:{activeFormId,href:window.location.href},timestamp:Date.now(),hypothesisId:'B,E',runId:'post-fix'})}).catch(()=>{});
-    // #endregion
-  }, [activeFormId]);
 
   const highlightPayloadByPath = new Map(
     highlightPayloads.map(payload => [

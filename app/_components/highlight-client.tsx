@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { tinaField } from 'tinacms/dist/react';
 import { HighlightQuery } from '@/tina/__generated__/types';
 import { TinaPayload } from '@/lib/tina-page-props';
@@ -77,12 +76,6 @@ export function HighlightClient({
     .relativePath;
   const formId = formIdFromCollectionPath('content/highlight', relativePath);
   const isActiveForm = activeFormId === formId;
-
-  useEffect(() => {
-    // #region agent log
-    fetch('http://127.0.0.1:7310/ingest/c4db365b-e961-468a-ac35-40eab15a1a76',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'3c9f59'},body:JSON.stringify({sessionId:'3c9f59',location:'highlight-client.tsx:mount',message:'HighlightClient render mode',data:{relativePath,formId,activeFormId,isActiveForm,title:payload.data.highlight?.title},timestamp:Date.now(),hypothesisId:'C',runId:'post-fix'})}).catch(()=>{});
-    // #endregion
-  }, [relativePath, formId, activeFormId, isActiveForm, payload.data.highlight?.title]);
 
   if (isActiveForm) {
     return (
