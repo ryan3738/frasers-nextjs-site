@@ -4,19 +4,35 @@ import { MenuSectionsItems } from '@/tina/__generated__/types';
 
 interface MenuItemCardProps {
   item: MenuSectionsItems;
+  nameField?: string;
+  descriptionField?: string;
+  priceField?: string;
+  modifiersField?: string;
 }
 
-export const MenuItemCard = ({ item }: MenuItemCardProps) => {
+export const MenuItemCard = ({
+  item,
+  nameField,
+  descriptionField,
+  priceField,
+  modifiersField
+}: MenuItemCardProps) => {
   return (
     <Card key={item.name} className="bg-accent/50">
       <CardHeader>
-        <TypographyH3 className="uppercase text-accent-foreground">
+        <TypographyH3
+          className="uppercase text-accent-foreground"
+          data-tina-field={nameField}
+        >
           {item.name}
         </TypographyH3>
       </CardHeader>
       <CardContent>
         {item.description ? (
-          <div dangerouslySetInnerHTML={{ __html: item.description }} />
+          <div
+            data-tina-field={descriptionField}
+            dangerouslySetInnerHTML={{ __html: item.description }}
+          />
         ) : (
           ''
         )}
@@ -24,12 +40,14 @@ export const MenuItemCard = ({ item }: MenuItemCardProps) => {
           <div
             className="mt-4 text-accent-foreground"
             aria-label={`$${item.price}`}
+            data-tina-field={priceField}
           >
             {item.price}
           </div>
         )}
-        {item.modifiers
-          ? item.modifiers.map(modifier => {
+        {item.modifiers ? (
+          <div data-tina-field={modifiersField}>
+            {item.modifiers.map(modifier => {
               return (
                 <div key={modifier?.name} className="mt-4 text-sm uppercase">
                   {modifier?.name}&nbsp;
@@ -43,8 +61,11 @@ export const MenuItemCard = ({ item }: MenuItemCardProps) => {
                   )}
                 </div>
               );
-            })
-          : ''}
+            })}
+          </div>
+        ) : (
+          ''
+        )}
         {item.dietary ? (
           <div className="mt-4 text-xs uppercase leading-5">
             {item.dietary.map((preference, index) => {

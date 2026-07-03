@@ -16,6 +16,9 @@ interface HighlightCardProps {
   rightTitle?: string;
   rightSubtitle?: string;
   id?: string;
+  titleField?: string;
+  subtitleField?: string;
+  imageField?: string;
 }
 
 export function HighlightCard({
@@ -27,12 +30,15 @@ export function HighlightCard({
   rightText,
   rightTitle,
   rightSubtitle,
-  id
+  id,
+  titleField,
+  subtitleField,
+  imageField
 }: HighlightCardProps) {
   return (
     <div id={id} className="mt-16 flex w-full max-w-[560px] flex-col">
       {imageSource ? (
-        <div className="mx-3">
+        <div className="mx-3" data-tina-field={imageField}>
           <Image
             src={imageSource}
             alt={imageAlt}
@@ -58,12 +64,17 @@ export function HighlightCard({
       )}
       <div className="mx-3 mb-20 mt-1 h-full space-y-4 bg-accent/50 p-6">
         {title && (
-          <TypographyH2 className="uppercase text-accent-foreground">
+          <TypographyH2
+            className="uppercase text-accent-foreground"
+            data-tina-field={titleField}
+          >
             {title}
           </TypographyH2>
         )}
         {subtitle && (
-          <TypographyH3 className="uppercase">{subtitle}</TypographyH3>
+          <TypographyH3 className="uppercase" data-tina-field={subtitleField}>
+            {subtitle}
+          </TypographyH3>
         )}
         <TypographyMuted className="text-lg">{children}</TypographyMuted>
       </div>

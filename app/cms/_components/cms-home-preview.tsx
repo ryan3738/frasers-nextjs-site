@@ -1,20 +1,13 @@
 import { notFound } from 'next/navigation';
-import { pageMetadata } from '@/lib/seo';
 import {
   assertHomePageData,
   loadHomePageData
 } from '@/lib/load-home-page-data';
-import { HomeClient } from './_components/home-client';
-
-export const metadata = pageMetadata({
-  path: '/'
-});
-
-export const revalidate = 3600;
+import { HomeClient } from '@/app/_components/home-client';
 
 const homePageData = await loadHomePageData();
 
-export default function HomePage() {
+export function CmsHomePreview() {
   if (!assertHomePageData(homePageData)) {
     notFound();
   }

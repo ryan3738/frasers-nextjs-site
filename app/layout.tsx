@@ -1,7 +1,7 @@
 import Script from 'next/script';
 import '@/styles/global.css';
 import { Open_Sans } from 'next/font/google';
-import { Layout } from './_components/layout';
+import { CmsLayout } from './_components/cms-layout';
 import { ThemeProvider } from '@/components/theme-provider';
 import { cn } from '@/lib/utils';
 import { rootMetadata } from '@/lib/seo';
@@ -10,7 +10,8 @@ export const metadata = rootMetadata();
 
 const fontSans = Open_Sans({
   subsets: ['latin'],
-  variable: '--font-sans'
+  variable: '--font-sans',
+  adjustFontFallback: true
 });
 
 export default function RootLayout({
@@ -19,7 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="overflow-y-scroll" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={cn('dark overflow-y-scroll')}
+      suppressHydrationWarning
+    >
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-YS529TE94E"
         strategy="afterInteractive"
@@ -41,10 +46,10 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          enableSystem
+          enableSystem={false}
           disableTransitionOnChange
         >
-          <Layout>{children}</Layout>
+          <CmsLayout>{children}</CmsLayout>
         </ThemeProvider>
       </body>
     </html>

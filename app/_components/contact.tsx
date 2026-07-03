@@ -7,9 +7,21 @@ import { TypographyH3 } from '@/components/ui/typography';
 
 interface ContactProps {
   businessInfo: BusinessInfoQuery['businessInfo'];
+  addressField?: string;
+  phoneField?: string;
+  hoursField?: string;
+  hourItemFields?: Array<
+    { day?: string; hours?: string } | undefined
+  >;
 }
 
-export function Contact({ businessInfo }: ContactProps) {
+export function Contact({
+  businessInfo,
+  addressField,
+  phoneField,
+  hoursField,
+  hourItemFields
+}: ContactProps) {
   return (
     <div className="flex flex-col justify-center pb-4 pt-8">
       <div
@@ -20,9 +32,15 @@ export function Contact({ businessInfo }: ContactProps) {
           heading="Location"
           address={businessInfo.address}
           phoneNumber={businessInfo.phoneNumber}
+          addressField={addressField}
+          phoneField={phoneField}
         />
 
-        <Hours hours={businessInfo.hours} />
+        <Hours
+          hours={businessInfo.hours}
+          hoursField={hoursField}
+          hourItemFields={hourItemFields}
+        />
       </div>
       <div className="m-3 grid place-items-center gap-4">
         <NewsLetter />

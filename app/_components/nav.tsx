@@ -9,6 +9,7 @@ interface HeaderProps {
 
 export const Nav = ({ navLinks, location = 'top', className }: HeaderProps) => {
   const headerLinks = navLinks?.filter(link => link.header === true);
+
   return (
     headerLinks &&
     headerLinks?.length > 0 && (

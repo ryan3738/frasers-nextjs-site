@@ -14,6 +14,14 @@ import {
 } from '../lib/is-highlight-visible';
 import { parsePacificDatetimeField } from '../lib/pacific-datetime';
 import { OptionalDatetimeField } from './components/optional-datetime-field';
+import {
+  businessPreviewPath,
+  formIdFromCollectionPath,
+  galleryPreviewPath,
+  globalPreviewPath,
+  highlightPreviewPath,
+  previewPathWithForm
+} from '../lib/preview-path';
 
 function buildHighlightListLabel(values: {
   title?: string;
@@ -49,6 +57,9 @@ export const schema: Schema = {
       name: 'galleryGrid',
       path: 'content/gallery',
       format: 'json',
+      ui: {
+        router: () => galleryPreviewPath()
+      },
       fields: [
         {
           type: 'object',
@@ -86,6 +97,9 @@ export const schema: Schema = {
       name: 'businessInfo',
       path: 'content/info',
       format: 'json',
+      ui: {
+        router: () => businessPreviewPath()
+      },
       fields: [
         {
           type: 'string',
@@ -111,6 +125,25 @@ export const schema: Schema = {
       name: 'menu',
       path: 'content/menus',
       format: 'json',
+      ui: {
+        router: ({ document }) => {
+          const relativePath = `${document._sys.filename}.json`;
+
+          if (document._sys.filename === 'newYears') {
+            return previewPathWithForm(
+              formIdFromCollectionPath('content/menus', relativePath),
+              '/menu/new-years'
+            );
+          }
+          if (document._sys.filename === 'dinnerMenu') {
+            return previewPathWithForm(
+              formIdFromCollectionPath('content/menus', relativePath),
+              '/menu'
+            );
+          }
+          return undefined;
+        }
+      },
       fields: [
         {
           type: 'string',
@@ -144,6 +177,7 @@ export const schema: Schema = {
       path: 'content/highlight',
       format: 'mdx',
       ui: {
+        router: ({ document }) => highlightPreviewPath(document._sys.filename),
         beforeSubmit: async ({ values }) => ({
           ...values,
           publishStart: values.publishStart
@@ -284,6 +318,9 @@ export const schema: Schema = {
       name: 'global',
       path: 'content/global',
       format: 'json',
+      ui: {
+        router: () => globalPreviewPath()
+      },
       fields: [navigationSchema, themeSchema, metaSchema, footerSchema]
     }
   ]

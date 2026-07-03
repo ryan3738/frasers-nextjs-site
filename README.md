@@ -73,7 +73,7 @@ pnpm dev
 This starts Tina CMS and Next.js together on **https://localhost:3100** (HTTPS is enabled for local development).
 
 - **Site:** https://localhost:3100
-- **Admin panel:** https://localhost:3100/admin — log in to edit content. When logged in, the CMS appears as a side drawer. Changes preview live on the site; pressing save commits them to the git branch configured in your environment variables.
+- **Admin panel:** https://localhost:3100/admin — log in to edit content. Click any document in a collection (Business Info, Menus, Homepage Cards, etc.) to open the **visual editor** with a live site preview iframe. Edits update in the preview as you type; press save to commit changes to the git branch configured in your environment variables. Blog Posts use the form-only editor (no public page yet).
 - **Log out:** https://localhost:3100/admin/logout
 
 ## Scripts

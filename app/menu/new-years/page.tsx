@@ -1,8 +1,7 @@
 import client from '@/tina/__generated__/client';
-import { Menu } from '../_components/menu';
 import { notFound } from 'next/navigation';
 import { pageMetadata } from '@/lib/seo';
-import { TypographyH1 } from '@/components/ui/typography';
+import { NewYearsClient } from './new-years-client';
 
 const sections = [
   'Amuse Bouche',
@@ -23,13 +22,12 @@ export const metadata = pageMetadata({
   path: '/menu/new-years'
 });
 
+export const revalidate = 3600;
+
 export default function MenuPage() {
-  const menu = menuResponse?.data?.menu;
-  if (!menu) notFound();
-  return (
-    <>
-      <TypographyH1 className="mt-12 text-center">New Year&apos;s Eve Menu</TypographyH1>
-      <Menu menu={menu} sections={sections} />
-    </>
-  );
+  if (!menuResponse?.data?.menu) {
+    notFound();
+  }
+
+  return <NewYearsClient {...menuResponse} sections={sections} />;
 }
