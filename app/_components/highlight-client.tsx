@@ -7,6 +7,7 @@ import { formIdFromCollectionPath, shouldSelectForm } from '@/lib/preview-path';
 import { interpolate } from '@/lib/interpolate';
 import { HighlightCard } from './highlight-card';
 import { HighlightBody } from './highlight-body';
+import { useVisualEditMode } from './preview-mode';
 import { TinaLive } from './tina-live';
 
 interface HighlightClientProps extends TinaPayload<HighlightQuery> {
@@ -21,7 +22,7 @@ function HighlightCardView({
   highlight: HighlightQuery['highlight'];
   phoneNumber: string;
 }) {
-  const { edit } = useEditState();
+  const { isVisualEditing } = useVisualEditMode();
 
   if (!highlight) {
     return null;
@@ -36,14 +37,16 @@ function HighlightCardView({
       subtitle={interpolate(highlight.subtitle, templateValues)}
       imageSource={highlight.image?.src ?? ''}
       imageAlt={highlight.image?.alt ?? ''}
-      titleField={edit ? tinaField(highlight, 'title') : undefined}
-      subtitleField={edit ? tinaField(highlight, 'subtitle') : undefined}
-      imageField={edit ? tinaField(highlight, 'image') : undefined}
+      titleField={isVisualEditing ? tinaField(highlight, 'title') : undefined}
+      subtitleField={
+        isVisualEditing ? tinaField(highlight, 'subtitle') : undefined
+      }
+      imageField={isVisualEditing ? tinaField(highlight, 'image') : undefined}
     >
       <HighlightBody
         body={highlight.body}
         phoneNumber={phoneNumber}
-        bodyField={edit ? tinaField(highlight, 'body') : undefined}
+        bodyField={isVisualEditing ? tinaField(highlight, 'body') : undefined}
       />
     </HighlightCard>
   );

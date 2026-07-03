@@ -22,6 +22,7 @@ import { isHighlightVisible } from '@/lib/is-highlight-visible';
 import { Home } from './home';
 import { StructuredData } from './structured-data';
 import { HighlightClient } from './highlight-client';
+import { useVisualEditMode } from './preview-mode';
 
 type HighlightNode = NonNullable<
   NonNullable<HighlightConnectionQuery['highlightConnection']['edges']>[number]
@@ -140,6 +141,7 @@ export function HomeClient({
   highlightPayloads
 }: HomeClientProps) {
   const { edit } = useEditState();
+  const { isVisualEditing } = useVisualEditMode();
   const activeFormId = useSyncPreviewForm();
 
   const highlightPayloadByPath = new Map(
@@ -157,7 +159,7 @@ export function HomeClient({
           return false;
         }
 
-        if (edit) {
+        if (isVisualEditing) {
           const formId = formIdFromCollectionPath(
             'content/highlight',
             node._sys.relativePath

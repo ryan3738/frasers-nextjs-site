@@ -1,7 +1,8 @@
 'use client';
 
-import { useEditState, tinaField } from 'tinacms/dist/react';
+import { tinaField } from 'tinacms/dist/react';
 import { GalleryGridQuery } from '@/tina/__generated__/types';
+import { useVisualEditMode } from '@/app/_components/preview-mode';
 import { GalleryGrid } from './gallery-grid';
 
 interface GalleryGridEditableProps {
@@ -13,14 +14,14 @@ export function GalleryGridEditable({
   images,
   className
 }: GalleryGridEditableProps) {
-  const { edit } = useEditState();
+  const { isVisualEditing } = useVisualEditMode();
 
   return (
     <GalleryGrid
       images={images}
       className={className}
       imageFields={
-        edit
+        isVisualEditing
           ? images?.map(image =>
               image
                 ? {

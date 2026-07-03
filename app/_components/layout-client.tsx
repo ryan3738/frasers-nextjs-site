@@ -6,25 +6,25 @@ import { bindPreviewClickToEdit } from '@/lib/preview-click-to-edit';
 import { TinaPayload } from '@/lib/tina-page-props';
 import { GLOBAL_FORM_ID, shouldSelectForm } from '@/lib/preview-path';
 import { useSyncPreviewForm } from '@/lib/use-sync-preview-form';
-import { useEditState } from 'tinacms/dist/react';
 import { Layout } from './layout';
+import { PreviewModeProvider, useVisualEditMode } from './preview-mode';
 import { TinaLive } from './tina-live';
 
 interface LayoutClientProps extends TinaPayload<GlobalQuery> {
   children: React.ReactNode;
 }
 
-export function LayoutClient({ children, ...props }: LayoutClientProps) {
-  const { edit } = useEditState();
+function LayoutClientInner({ children, ...props }: LayoutClientProps) {
+  const { isVisualEditing } = useVisualEditMode();
   const activeFormId = useSyncPreviewForm();
 
   useEffect(() => {
-    if (!edit) {
+    if (!isVisualEditing) {
       return;
     }
 
     return bindPreviewClickToEdit();
-  }, [edit]);
+  }, [isVisualEditing]);
 
   return (
     <TinaLive
@@ -34,5 +34,13 @@ export function LayoutClient({ children, ...props }: LayoutClientProps) {
     >
       {data => <Layout data={data.global}>{children}</Layout>}
     </TinaLive>
+  );
+}
+
+export function LayoutClient({ children, ...props }: LayoutClientProps) {
+  return (
+    <PreviewModeProvider>
+      <LayoutClientInner {...props}>{children}</LayoutClientInner>
+    </PreviewModeProvider>
   );
 }
